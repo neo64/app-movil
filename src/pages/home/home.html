@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ferrus & Bratos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="card-background-page" >
+	<ion-list *ngFor="let card of cards">
+		<ion-card (click)="openPage(card.url, card.tipo)">
+			<img src="{{card.image}}"/>
+			<div [style.color]="card.colorTitle" class="card-title">{{card.title}}</div>
+			<div [style.color]="card.colorSubTitle" class="card-subtitle">{{card.subTitle}}</div>
+		</ion-card>
+	</ion-list>	
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Documentos administrativos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list>	  
+		<button ion-item style="margin:0" *ngFor="let doc of docs" (click)="openPdf(doc.url)">		
+		<ion-avatar item-start>
+		  <i class="{{doc.icono}}" style="font-size: 4rem;color:#81a7d4;"></i>
+		</ion-avatar>		
+		<h2>{{doc.nombre}}</h2>    
+		<p>{{doc.descripcion}}</p>		
+	  </button>	  
+	</ion-list>
+</ion-content>

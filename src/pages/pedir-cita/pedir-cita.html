@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pedir cita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<form #form="ngForm" (ngSubmit)="searchCita(form);showLoading('Buscando citas');" novalidate style="margin-bottom:5rem;">
+		<ion-item>
+			<ion-label>Doctor</ion-label>
+			<ion-select required  (ngModelChange)="drSeleccionado($event)" [(ngModel)]="dr" name="dr" okText="OK" cancelText="CANCELAR">
+				<ion-option *ngFor="let d of doctores" [value]="d.agenda">{{d.usuario}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label>Tratamiento</ion-label>
+			<ion-select required="yes"  [(ngModel)]="tto" name="tto" disabled="{{!isDrSelected}}" okText="OK" cancelText="CANCELAR">
+				<ion-option *ngFor="let t of tratamientos" [value]="t.Descripcio">{{t.Descripcio}}</ion-option>
+			</ion-select>
+		</ion-item>
+		<ion-item>
+			<ion-label>Fecha</ion-label>
+			<ion-datetime required  name="date" displayFormat="DD/MM/YYYY" [(ngModel)]="date" doneText="OK" cancelText="CANCELAR"></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-label>Hora</ion-label>
+			<ion-datetime required  name="hour" displayFormat="HH:mm" [(ngModel)]="hour" doneText="OK" cancelText="CANCELAR"></ion-datetime>
+		</ion-item>
+		<ion-item>
+			<ion-label>Preferencia de dias</ion-label>
+			<ion-select [(ngModel)]="dias" name="dias" multiple="true" okText="OK" cancelText="CANCELAR">
+				<ion-option value="lm">Lunes mañana</ion-option>
+				<ion-option value="lt">Lunes tarde</ion-option>
+				<ion-option value="mm">Martes mañana</ion-option>
+				<ion-option value="mt">Martes tarde</ion-option>
+				<ion-option value="xm">Miercoles mañana</ion-option>
+				<ion-option value="xt">Miercoles tarde</ion-option>
+				<ion-option value="jm">Jueves mañana</ion-option>
+				<ion-option value="jt">Jueves tarde</ion-option>
+				<ion-option value="vm">Viernes mañana</ion-option>
+				<ion-option value="vt">Viernes tarde</ion-option>
+			</ion-select>
+		</ion-item>	
+		
+		<button ion-button type="submit" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-search"></i>  Buscar</button>
+	</form>
+	<div *ngIf="show">
+		<div *ngFor="let item of citasBuscador; let i=index">
+			<ion-card>
+				<div *ngIf="i<5">
+					<ion-card-content >	
+						<p class="left" style="color:#5f5f62 !important"><!--<i style="width: 3%;" class="fas fa-calendar-alt marginRight" aria-hidden="true"></i>--> {{item.fecha}} </p>
+						<p class="left" style="font-size: 14px;margin-top: -0.55em;color:#5f5f62 !important">{{item.diaSemana}}</p>
+						<hr>
+						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="far fa-clock marginRight primary" aria-hidden="true"></i> {{item.fIniDr}} </p>
+						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-user-md marginRight primary" aria-hidden="true"></i> {{item.nombreDr}}</p>
+						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-notes-medical marginRight primary" aria-hidden="true"></i> {{tto}} </p>
+					</ion-card-content>		
+					<ion-row class="cardfooter" style="font-size: 1.6rem;border-top: 1px solid lightgrey;">
+						<ion-col class="left primary">
+							<i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Solicitar
+						</ion-col>
+					</ion-row>
+				</div>
+			</ion-card>  
+		</div>
+	</div>
+	<div *ngIf="error">
+		<ion-card>
+			<ion-card-content>						
+				<p class="center" >{{errorMsg}}</p>
+				<p class="center" style="font-size: 16px;margin-top: -0.55em;color:#5f5f62 !important">{{subErrorMsg}}</p>
+			</ion-card-content>		 
+		</ion-card>  
+	</div>
+</ion-content>

@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Consultar citas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>  
+	<ion-tabs #myTab tabsPlacement="top" selectedIndex="1">
+		<ion-tab [root]="tabAnteriores" tabTitle="Pasadas" tabIcon="information-circle"></ion-tab>					
+		<ion-tab [root]="tabFuturas" tabTitle="Futuras" tabIcon="contacts" ></ion-tab>
+	</ion-tabs>
+</ion-content>

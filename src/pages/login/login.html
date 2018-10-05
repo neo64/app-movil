@@ -1,0 +1,20 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-content class="bg">
+	<div class="login">
+		<div class="login-top">
+			<img src="assets/imgs/icon.png">
+		</div>
+		<div class="login-bottom">
+			<form #registerForm="ngForm">
+				<input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required=" ">					
+				<input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required=" ">						
+				 <button ion-button class="submit-btn" full type="submit" (click)="login()" [disabled]="!registerForm.form.valid">Entrar</button>
+			</form>			
+		</div>
+	</div>
+</ion-content>

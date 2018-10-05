@@ -1,0 +1,61 @@
+<ion-header>
+	<ion-navbar color="primary">
+		<ion-title>Perfil</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<ion-list> 
+	  <ion-item>
+		<ion-label color="primary" stacked>Email</ion-label>
+		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Nombre</ion-label>
+		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Apellidos</ion-label>
+		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>DNI</ion-label>
+		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Fecha nacimiento</ion-label>
+		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Dirección</ion-label>
+		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Localidad</ion-label>
+		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Provincia</ion-label>
+		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Teléfono móvil</ion-label>
+		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Teléfono fijo</ion-label>
+		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Alergias</ion-label>
+		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input>
+	  </ion-item>
+	  <ion-item>
+		<ion-label color="primary" stacked>Medicacion</ion-label>
+		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input>
+	  </ion-item>
+	  <ion-item>  
+	  </ion-item>
+	</ion-list>
+	<button ion-button type="submit" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Actualizar datos</button>
+</ion-content>

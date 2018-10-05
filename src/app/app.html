@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+	<ion-content>
+		<div class="imgTop">
+			<div class="imgPerfilDiv">
+				<img onError="this.src='assets/imgs/person.png';this.style.background='white';this.style.borderRadius='50%';this.style.border='2rem solid white;'" src="https://ui-avatars.com/api/?name={{ menuData.nombre }} {{ menuData.inicial }}&size=256&rounded=true&background={{ menuData.color }}" class="imgPerfil" />
+				<p class="pPerfil" >{{ menuData.nombre }} {{ menuData.apellidos }}</p>
+				<p class="iPerfil"><i>{{ menuData.email }}</i></p>
+			</div>
+		</div>
+		<ion-list>
+			<button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+				<i class="{{p.icon}} {{p.color}} marginRight" aria-hidden="true"></i> {{p.title}}
+			</button>
+			<button menuClose ion-item (click)="clickLogout()">
+				<i class="fas fa-sign-out-alt marginRight primary" aria-hidden="true"></i>  Salir
+			</button>
+		</ion-list>
+	</ion-content>
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
