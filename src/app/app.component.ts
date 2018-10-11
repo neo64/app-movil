@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { RestProvider } from '../providers/rest/rest';
 
 import { HomePage } from '../pages/home/home';
+import { MiSaludPage } from '../pages/mi-salud/mi-salud';
 import { TabConsultarCitas } from '../pages/tabConsultarCitas/tabConsultarCitas';
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { LoginPage } from '../pages/login/login';
@@ -14,6 +15,7 @@ import { ProfilePage } from '../pages/profile/profile';
 import { DocFirmadosPage } from '../pages/doc-firmados/doc-firmados';
 //import { AccesoResultadosPage } from '../pages/acceso-resultados/acceso-resultados';
 import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { ConsejosPersonalizadosPage } from '../pages/consejos-personalizados/consejos-personalizados';
 
 import * as firebase from 'firebase/app';
 import { FCM } from '@ionic-native/fcm';
@@ -45,6 +47,7 @@ export class MyApp {
 		// used for an example of ngFor and navigation
 		this.pages = [
 		  { title: 'Inicio', icon: 'fa fa-home', color: 'primary', component: HomePage },
+		  { title: 'Mi salud', icon: 'fas fa-heartbeat', color: 'primary', component: MiSaludPage },
 		  { title: 'Perfil', icon: 'fas fa-user', color: 'primary', component: ProfilePage },
 		  { title: 'Cambiar contraseña', icon: 'fas fa-unlock-alt', color: 'primary', component: ChangePasswordPage },
 		  { title: 'Consultar citas',  icon: 'far fa-calendar-alt', color: 'primary', component: TabConsultarCitas },
@@ -178,11 +181,15 @@ export class MyApp {
 				this.nav.setRoot(TabConsultarCitas);
 			if(page == "ChatPage")
 				this.nav.setRoot(ChatPage);
+			if(page == "ConsejosPersonalizadosPage")
+				this.nav.setRoot(ConsejosPersonalizadosPage);
 		}else{
 			if(page == "TabConsultarCitas")
 				this.nav.push(TabConsultarCitas);
 			if(page == "ChatPage")
 				this.nav.push(ChatPage);
+			if(page == "ConsejosPersonalizadosPage")
+				this.nav.push(ConsejosPersonalizadosPage);
 		}			  
 	}
 

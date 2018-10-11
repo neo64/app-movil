@@ -14,6 +14,54 @@ export class RestProvider {
 	
 	constructor(public http: HttpClient) {
 
+	}	
+	
+	getConsejosPersonalizados(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getConsejosPersonalizados', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	getRecall(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getRecall', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	getCardsMiSalud(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getCardsMiSalud', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
 	}
 	
 	getCardsHome(){		 				
@@ -46,8 +94,7 @@ export class RestProvider {
 		});
 	}
 	
-	enviarTokenNotifications(token){
-		 				
+	enviarTokenNotifications(token){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/setNotificationsToken', false, {
 				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
@@ -80,12 +127,28 @@ export class RestProvider {
 		});
 	}
 	
-	gestionarCita(accion, fecha, hora){
-		 				
+	gestionarCita(accion, fecha, hora){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/gestionarCita', false, {
 				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
 				params: new HttpParams().set('accion', accion).set('fecha', fecha).set('hora', hora)
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	solicitarCita(fecha, hora, doctor, tratamiento){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/solicitarCita', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams().set('doctor', doctor).set('fecha', fecha).set('hora', hora).set('tratamiento', tratamiento)
 			})
 			.subscribe(res => {	
 				resolve(res);

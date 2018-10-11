@@ -27,6 +27,8 @@ export class ConsultarCitasFuturasPage {
 				});
 			})	
 		 }
+		 
+		this.events.publish("user:logged");
 	}
 	
 	/**
@@ -100,7 +102,7 @@ export class ConsultarCitasFuturasPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.events.publish("user:Unauthorized");	
 			}else{
-				this.showError("ERROR",data['message']);					
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");					
 			}			
 		}).catch(e => {
 			this.loading.dismiss();

@@ -1,0 +1,62 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Higiene</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+	<ion-grid>
+		<ion-row>
+			<ion-col col-5>
+				Última higiene
+			</ion-col>
+			<ion-col col-7>{{recall.ultima}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-5>
+				Fecha prevista
+			</ion-col>
+			<ion-col col-7>{{recall.planificada}}</ion-col>
+		</ion-row>
+		<ion-row>
+			<ion-col col-5>
+				Fecha cita
+			</ion-col>
+			<ion-col col-7>{{recall.proxima}}</ion-col>
+		</ion-row>
+	</ion-grid>
+	
+	<div *ngIf="recall.proxima !== 'Sin cita' ">
+		<ion-card>			
+			<ion-card-content>
+				<button ion-button icon-only class="botonMas" (click)="presentPopover($event, recall.fechaDecimal, recall.horaDecimal)">
+					<ion-icon name="more"></ion-icon>
+				</button>			
+				<p class="left" style="color:#5f5f62 !important"><!--<i style="width: 3%;" class="fas fa-calendar-alt marginRight" aria-hidden="true"></i>--> {{recall.proxima}} </p>
+				<p class="left" style="font-size: 14px;margin-top: -0.55em;color:#5f5f62 !important">{{recall.diaSemana}}</p>
+				<hr>
+				<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="far fa-clock marginRight primary" aria-hidden="true"></i> {{recall.hora}} </p>
+				<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-user-md marginRight primary" aria-hidden="true"></i> {{recall.usuario}}</p>
+				<p style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-notes-medical marginRight  primary" aria-hidden="true"></i> {{recall.tratamiento}} </p>
+			</ion-card-content>		
+			<ion-row class="cardfooter" style="font-size: 1.6rem;border-top: 1px solid lightgrey;">
+				<ion-col class="left primary" (click)="addEvent(recall.timestampINI,recall.timestampFIN)">
+					<i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Calendario
+				</ion-col>
+			</ion-row>			
+		</ion-card>     
+	</div>
+	
+	<ion-list *ngIf="recall.banner == true" class="card-background-page" style="position: fixed;bottom: 0;left:0">
+		<ion-card (click)="openPage(recall.url, recall.tipo)">
+			<img src="{{recall.image}}"/>
+			<div [style.color]="recall.colorTitle" class="card-title">{{recall.title}}</div>
+			<div [style.color]="recall.colorSubTitle" class="card-subtitle">{{recall.subTitle}}</div>
+		</ion-card>
+	</ion-list>	
+
+</ion-content>

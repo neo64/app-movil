@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, Loading, LoadingController, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, Loading, LoadingController, AlertController, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 
@@ -15,9 +15,10 @@ export class ProfilePage {
 	loading: Loading;			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	loadingPresented = false;	// Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
 	
-	constructor(private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
+	constructor(public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
 		this.getProfile();		// Llamada a la funcion para obtener el perfil del paciente
+		this.events.publish("user:logged");
 	}	
 
 	/**
@@ -39,7 +40,7 @@ export class ProfilePage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);
 			}else{				
-				this.showError("ERROR",data['message']);
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 			}			
 		}).catch(e => {
 			this.loading.dismiss();

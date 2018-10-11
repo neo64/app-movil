@@ -1,0 +1,27 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Consejo de {{data.Doctor}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page" >
+	<ion-list>
+		<ion-card style="min-height: 8rem;">
+			<ion-row>
+				<ion-col col-2>
+					<img onError="this.src='assets/imgs/person.png'" [src]="domSanitizer.bypassSecurityTrustUrl(data.Img)" class="img-round">
+				</ion-col>
+				<ion-col col-10>
+					<div class="card-title">{{data.Doctor}}</div>
+					<div class="card-subtitle">{{data.Tratamiento}}</div>
+					<div class="card-subtitle-date">{{data.Fecha | date: 'dd/MM/yyyy' }}</div>
+				</ion-col>				
+			</ion-row>				
+			<ion-row padding style="text-align: justify;" [innerHtml]="data.Texto"></ion-row>
+		</ion-card>
+	</ion-list>	
+</ion-content>

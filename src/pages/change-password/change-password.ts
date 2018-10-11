@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Loading, AlertController,LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Loading, AlertController,LoadingController, Events } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
@@ -15,8 +15,9 @@ export class ChangePasswordPage {
 	loading: 	Loading;	// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	data 		= { pass1: '', pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
 
-	constructor(private loadingCtrl: LoadingController,public restProvider: RestProvider, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
+	constructor(public events: Events, private loadingCtrl: LoadingController,public restProvider: RestProvider, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
 		this.isFirst = navParams.get('first');
+		this.events.publish("user:logged");
 	}
 	
 	/**
@@ -48,13 +49,13 @@ export class ChangePasswordPage {
 					this.showError("¡Bien!","La contraseña ha sido cambiada con éxito");		
 					this.navCtrl.setRoot(HomePage);
 				}else{
-					this.showError("ERROR",data['message']);
+					this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 				}					
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);
 			}else{
-				this.showError("ERROR",data['message']);
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 			}					
 		});
 				

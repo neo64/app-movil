@@ -1,0 +1,32 @@
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Consejos personalizados</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="card-background-page" >
+	<ion-list *ngFor="let card of cards">
+		<ion-card (click)="openPage(card)" style="min-height: 8rem;">
+			<ion-row>
+				<ion-col col-2>
+					<img onError="this.src='assets/imgs/person.png'" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" class="img-round">
+				</ion-col>
+				<ion-col col-10>
+					<div class="card-title">{{card.Doctor}}</div>
+					<div class="card-subtitle">{{card.Tratamiento}}</div>
+					<div class="card-subtitle-date">{{card.Fecha | date: 'dd/MM/yyyy' }}</div>
+				</ion-col>				
+			</ion-row>
+		</ion-card>
+	</ion-list>
+	<ion-list *ngIf="cards == false" style="min-height: 8rem;">
+		<ion-card style="min-height: 8rem;" padding center>
+			<div class="card-title" style="text-align: center;width: 100%;margin-top: 1rem;">Ups!</div>
+			<div class="card-subtitle" style="text-align: center;width: 100%;margin-top: 1rem;">No hemos podido encontrar consejos para tí.</div>
+		</ion-card>
+	</ion-list>
+</ion-content>

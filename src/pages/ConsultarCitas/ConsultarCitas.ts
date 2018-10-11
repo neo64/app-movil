@@ -15,7 +15,8 @@ export class ConsultarCitas {
 		
 	constructor(public events: Events, private alertCtrl: AlertController, public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController) {
 		this.showLoading();
-		this.getCitas();				
+		this.getCitas();
+		this.events.publish("user:logged");
 	}
 
 	/**
@@ -37,7 +38,7 @@ export class ConsultarCitas {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");		
 				this.events.publish("user:Unauthorized");				
 			}else{
-				this.showError("ERROR",data['message']);							
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");							
 			}			
 		}).catch(e => {
 			this.loading.dismiss();

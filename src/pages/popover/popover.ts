@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, ViewController, NavParams, AlertController, Loading, LoadingController, NavController } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams, AlertController, Loading, LoadingController, NavController, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 
@@ -15,9 +15,10 @@ export class PopoverPage {
 	fecha 		= "";	// Fecha que será obtenida por parámetro
 	hora 		= "";	// Hora que será obtenida por parámetro
 
-	constructor(public navCtrl: NavController, private alertCtrl: AlertController, public restProvider: RestProvider, public viewCtrl: ViewController, public navParams: NavParams, private loadingCtrl: LoadingController) {
+	constructor(public events: Events, public navCtrl: NavController, private alertCtrl: AlertController, public restProvider: RestProvider, public viewCtrl: ViewController, public navParams: NavParams, private loadingCtrl: LoadingController) {
 		this.fecha 	= this.navParams.get("fecha");
 		this.hora 	= this.navParams.get("hora");
+		this.events.publish("user:logged");
 	}
 	
 	/**
@@ -72,7 +73,7 @@ export class PopoverPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);					
 			}else{
-				this.showError("¡Atención!",data['message']);
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 			}			
 		}).catch(e => {
 			this.showError("ERROR","Hubo un error al gestionar tu cita.");	

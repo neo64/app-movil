@@ -22,7 +22,10 @@ import { DocFirmadosPage } from '../pages/doc-firmados/doc-firmados';
 import { ProfilePage } from '../pages/profile/profile';
 import { EmojiProvider } from '../providers/emoji/emoji';
 import { EmojiPickerComponentModule } from "../components/emoji-picker/emoji-picker.module";
-
+import { MiSaludPage } from '../pages/mi-salud/mi-salud';
+import { RecallPage } from '../pages/recall/recall';
+import { ConsejosPersonalizadosPage } from '../pages/consejos-personalizados/consejos-personalizados';
+import { ConsejosDetailPage } from '../pages/consejos-detail/consejos-detail';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -49,7 +52,11 @@ import { FileOpener } from '@ionic-native/file-opener';
 	PopoverPage,
 	LoginPage,
 	DocFirmadosPage,
+	RecallPage,
+	ConsejosPersonalizadosPage,
+	ConsejosDetailPage,
 	ProfilePage,
+	MiSaludPage,
 //	AccesoResultadosPage,
 	ChatPage
   ],
@@ -75,6 +82,10 @@ import { FileOpener } from '@ionic-native/file-opener';
 	PopoverPage,
     TabConsultarCitas,
 	DocFirmadosPage,
+	MiSaludPage,
+	RecallPage,
+	ConsejosPersonalizadosPage,
+	ConsejosDetailPage,
 	ProfilePage,
 //	AccesoResultadosPage,
 	ChatPage

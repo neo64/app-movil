@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, Loading, LoadingController, ToastController, AlertController  } from 'ionic-angular';
+import { IonicPage, NavController, Loading, LoadingController, ToastController, AlertController, Events} from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
@@ -16,9 +16,10 @@ export class DocFirmadosPage {
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	docs 		= new Array();	// Array donde se almacenan los objetos del tipo documento descargados del servidor.
 
-	constructor(private alertCtrl: AlertController, private toastCtrl: ToastController, private fileOpener: FileOpener, private file: File, public restProvider: RestProvider, private loadingCtrl: LoadingController, public navCtrl: NavController) {
+	constructor(public events: Events, private alertCtrl: AlertController, private toastCtrl: ToastController, private fileOpener: FileOpener, private file: File, public restProvider: RestProvider, private loadingCtrl: LoadingController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getDocFirmados();
+		this.events.publish("user:logged");
 	}
 	  
 	/**
@@ -106,7 +107,7 @@ export class DocFirmadosPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
 			}else{
-				this.showError("ERROR",data['message']);						
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");						
 			}			
 		}).catch(e => {
 			this.loading.dismiss();

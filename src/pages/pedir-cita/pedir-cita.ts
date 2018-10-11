@@ -22,6 +22,7 @@ export class PedirCitaPage {
 	constructor(private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
 		this.showLoading();
 		this.getDoctors();
+		this.events.publish("user:logged");
 	}
   
 	/**
@@ -47,13 +48,12 @@ export class PedirCitaPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);
 			}else{
-				this.showError("¡Atención!",data['message']);
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 			}			
 		}).catch(e => {
 			this.loading.dismiss();
 			console.log(e);
-		});
-				
+		});				
 	}
 	
 	drSeleccionado(e){
@@ -80,7 +80,7 @@ export class PedirCitaPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
 			}else{
-				this.showError("¡Atención!",data['message']);
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 			}			
 		}).catch(e => {
 			this.loading.dismiss();
@@ -106,11 +106,36 @@ export class PedirCitaPage {
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
 			}else{
-				this.showError("¡Atención!",data['message']);	
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");	
 			}			
 		}).catch(e => {
 			this.loading.dismiss();
 		});		
+	}
+	
+	/**
+	* 	Función que envía un E-mail a recepción para que estas
+	*	inserten la cita desde el buscador.
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	solicitarCita(fecha, hora, doctor, tratamiento){
+		this.showLoading('Solicitando cita ...');
+		this.restProvider.solicitarCita(fecha, hora, doctor, tratamiento).then(data => {
+			if(typeof data != "undefined" &&  data['status'] == 1){					
+				this.showError("¡Atención!",data['message']);					
+			}else if(data.status == 401){
+				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
+				this.navCtrl.setRoot(LoginPage);				
+			}else{
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");	
+			}			
+		}).catch(e => {
+			this.loading.dismiss();
+		});
 	}
 	
 	/**
@@ -143,7 +168,7 @@ export class PedirCitaPage {
 		this.loading.dismiss();	
 		let alert = this.alertCtrl.create({
 			title: title,
-			subTitle: text,
+			message: text,
 			buttons: ['OK']
 		});
 		alert.present();

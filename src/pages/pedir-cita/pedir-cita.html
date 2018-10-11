@@ -53,7 +53,7 @@
 			<ion-card>
 				<div *ngIf="i<5">
 					<ion-card-content >	
-						<p class="left" style="color:#5f5f62 !important"><!--<i style="width: 3%;" class="fas fa-calendar-alt marginRight" aria-hidden="true"></i>--> {{item.fecha}} </p>
+						<p class="left" style="color:#5f5f62 !important">{{item.fecha}} </p>
 						<p class="left" style="font-size: 14px;margin-top: -0.55em;color:#5f5f62 !important">{{item.diaSemana}}</p>
 						<hr>
 						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="far fa-clock marginRight primary" aria-hidden="true"></i> {{item.fIniDr}} </p>
@@ -61,20 +61,12 @@
 						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-notes-medical marginRight primary" aria-hidden="true"></i> {{tto}} </p>
 					</ion-card-content>		
 					<ion-row class="cardfooter" style="font-size: 1.6rem;border-top: 1px solid lightgrey;">
-						<ion-col class="left primary">
-							<i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Solicitar
+						<ion-col class="left primary" >
+							<span (click)="solicitarCita(item.fecha,item.fIniDr,item.nombreDr,tto)"><i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Solicitar</span>
 						</ion-col>
 					</ion-row>
 				</div>
 			</ion-card>  
 		</div>
-	</div>
-	<div *ngIf="error">
-		<ion-card>
-			<ion-card-content>						
-				<p class="center" >{{errorMsg}}</p>
-				<p class="center" style="font-size: 16px;margin-top: -0.55em;color:#5f5f62 !important">{{subErrorMsg}}</p>
-			</ion-card-content>		 
-		</ion-card>  
 	</div>
 </ion-content>

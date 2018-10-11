@@ -1,0 +1,29 @@
+page-mi-salud {
+		
+	.card-background-page {
+
+	  ion-card {
+		position: relative;
+		text-align: center;
+		max-height: 32%;
+	  }
+
+	  .card-title {
+		position: absolute;
+		top: 3rem;
+		font-size: 2.0em;
+		width: 100%;
+		font-weight: bold;
+		color: #000;
+	  }
+
+	  .card-subtitle {
+		font-size: 1.0em;
+		position: absolute;
+		top: 6rem;
+		width: 100%;
+		color: #000;
+	  }
+
+	}
+}
