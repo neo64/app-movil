@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController, Loading, ToastController, LoadingController, AlertController, Events} from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Loading, ToastController, LoadingController, AlertController, Events, Slides} from 'ionic-angular';
 
 import { LoginPage } from '../login/login';
 
@@ -36,6 +36,8 @@ import { CallNumber } from '@ionic-native/call-number';
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+	@ViewChild('slides') slides: Slides;
 	
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
@@ -64,6 +66,13 @@ export class HomePage {
 		this.callNumber.callNumber("+34917681812", true)
   			.then(res => console.log('Launched dialer!', res))
   			.catch(err => console.log('Error launching dialer', err));
+	}
+
+	next() {
+		if(this.slides.isEnd())
+	    	this.slides.slidePrev();
+	    else
+	    	this.slides.slideNext();
 	}
   
 	openPage(page, tipo) {

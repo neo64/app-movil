@@ -63,10 +63,11 @@
 
 <div class="menu" style="margin: 20% 10%;">
 	<ion-row>
-		<h1>Menú</h1>
+		<h1 col-9>Menú</h1>
+		<p col-3 style="text-align:right;padding-top: 20px;" (click)="next()">Ver más</p>
 	</ion-row>
 	<ion-row class="square" style="margin: 0px -13% 0px -17%;">
-		<ion-slides pager style="    height: 250%;">
+		<ion-slides #slides pager style="height: 250%;">
 			<div *ngFor="let c of cardsMenu; let i=index">
 				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">
 					<ion-row style="margin: 15% 8% 15% 12%">
