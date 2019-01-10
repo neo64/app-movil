@@ -1,0 +1,26 @@
+fb-button-icon {
+	
+	button{
+		background: white;
+		border-radius: 2rem;
+		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
+		height: -webkit-fill-available;
+		width: 100%;
+
+		&.active{
+			background: map-get($colors, secondary);
+			color: white;
+		}
+	}
+	
+	p{
+		color: black;
+		font-weight: 400;
+    	font-size: 1.2rem;
+    	&.active{
+			color: white;
+		}
+	}
+
+
+}

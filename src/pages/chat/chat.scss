@@ -3,6 +3,10 @@ page-chat {
   $userBackgroundColor: #81a7d4;
   $toUserBackgroundColor: #fff;
 
+  .chatB {
+    margin-top: -.2rem;
+  }
+
   ion-content .scroll-content {
     background-color: #f5f5f5;
   }

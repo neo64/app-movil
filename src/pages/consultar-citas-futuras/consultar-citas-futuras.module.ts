@@ -4,7 +4,7 @@ import { ConsultarCitasFuturasPage } from './consultar-citas-futuras';
 
 @NgModule({
   declarations: [
-    ConsultarCitasFuturasPage,
+    //ConsultarCitasFuturasPage,
   ],
   imports: [
     IonicPageModule.forChild(ConsultarCitasFuturasPage),

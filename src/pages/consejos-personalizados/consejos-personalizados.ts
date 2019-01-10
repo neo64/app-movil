@@ -12,8 +12,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ConsejosPersonalizadosPage {
 
-	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
-	cards 		= true;			// True para que no aparezca el código de consejos no encontrados
+	loading: 		Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
+	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
+	showCardError	= false;
 	
 	constructor(private domSanitizer: DomSanitizer, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
@@ -31,7 +32,7 @@ export class ConsejosPersonalizadosPage {
 	*/ 
 	openPage(info) {
 		this.navCtrl.push(ConsejosDetailPage, {
-		  data: info
+		  'data': info
 		});
 	}
 	
@@ -45,13 +46,18 @@ export class ConsejosPersonalizadosPage {
 	* 	@return None 
 	*/ 
 	getConsejosPersonalizados(){
-		this.cards = new Array(); // Inicializo el array porque antes era True para no mostrar HTML
 		this.restProvider.getConsejosPersonalizados().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				for (var key in data['data']) {
+					if(key == "Img")
+						data['data'][key] = this.domSanitizer.bypassSecurityTrustUrl(data['data'][key]);
 					this.cards.push(data['data'][key]);
-				}	
-				console.log(data['data']);
+				}
+				
+				if (typeof this.cards === 'undefined' || this.cards.length <= 0){
+					this.showCardError= true;
+				}
+				
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");

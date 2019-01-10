@@ -1,0 +1,38 @@
+page-instrucciones {
+	.img-round{
+		border-radius: 50%;
+		margin-left: 0.4rem;
+		margin-top: 1rem;
+	}
+	
+	.card-background-page {
+
+	  ion-card {
+		position: relative;
+		text-align: center;
+		max-height: 32%;
+	  }
+
+	  .card-title {
+		position: absolute;		
+		font-size: 1.3em;	
+		color: #000;
+		top: 1rem;	
+		text-align: left;
+	  }
+
+	  .card-subtitle {
+		font-size: 1.0em;
+		position: absolute;
+		top: 3.5rem;		
+		color: #000;
+	  }
+	  
+	  .card-subtitle-date {
+		font-size: 1.2rem;
+		position: absolute;
+		top: 5.5rem;		
+		color: #000;
+	  }
+	}
+}

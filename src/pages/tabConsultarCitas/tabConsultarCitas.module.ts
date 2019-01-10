@@ -4,7 +4,7 @@ import { TabConsultarCitas } from './tabConsultarCitas';
 
 @NgModule({
   declarations: [
-    TabConsultarCitas,
+    //TabConsultarCitas,
   ],
   imports: [
     IonicPageModule.forChild(TabConsultarCitas)

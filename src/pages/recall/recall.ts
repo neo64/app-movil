@@ -4,6 +4,8 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { Calendar } from '@ionic-native/calendar';
 import { PopoverPage } from '../../pages/popover/popover';
+import { DomSanitizer } from '@angular/platform-browser';
+
 
 @IonicPage()
 @Component({
@@ -13,9 +15,12 @@ import { PopoverPage } from '../../pages/popover/popover';
 export class RecallPage {
 
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
-	recall 	= Array();
+	recall 		= Array();
+	fechaProx 	= "";
+	showPlanificada = false;
+	showMessage = true;
 	
-	constructor(private calendar: Calendar, public popoverCtrl: PopoverController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+	constructor(private domSanitizer: DomSanitizer, private calendar: Calendar, public popoverCtrl: PopoverController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getRecall();
 		this.events.publish("user:logged");	
@@ -81,8 +86,16 @@ export class RecallPage {
 	getRecall(){
 		this.restProvider.getRecall().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
-				this.recall = data['data'];	
-				console.log(this.recall);
+				this.recall = data['data']['data'];
+				console.log(data['data']);
+				if(data['data']['planificada']){
+					this.showPlanificada = true;
+					this.fechaProx = data['data']['planificada'];
+				}
+
+				if(data['data']['fechaFutura']){
+					this.showMessage = false;
+				}
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");

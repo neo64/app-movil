@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @IonicPage()
@@ -10,8 +10,13 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ConsejosDetailPage {
 
 	data = Array();
-	constructor(private domSanitizer: DomSanitizer, public navCtrl: NavController, public navParams: NavParams) {
-		this.data = navParams.get('data');
+	constructor(private domSanitizer: DomSanitizer, public navParams: NavParams) {
+		
+	}
+
+	ionViewDidLoad() { 
+		this.data = this.navParams.get('data');
+		this.domSanitizer.bypassSecurityTrustUrl(this.data['Img']);
 	}
 
 }

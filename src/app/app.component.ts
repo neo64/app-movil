@@ -1,23 +1,33 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform, Events, AlertController } from 'ionic-angular';
+import { Nav, Platform, Events, AlertController, Loading, LoadingController } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { RestProvider } from '../providers/rest/rest';
 
 import { HomePage } from '../pages/home/home';
+import { LoginPage } from '../pages/login/login';
+
+// Páginas del menú
 import { MiSaludPage } from '../pages/mi-salud/mi-salud';
+import { MiPerfilPage } from '../pages/mi-perfil/mi-perfil';
+import { MisDocumentosPage } from '../pages/mis-documentos/mis-documentos';
+import { MisCitasPage } from '../pages/mis-citas/mis-citas';
+import { ChatPage } from '../pages/chat/chat';
+import { SugerenciasPage } from '../pages/sugerencias/sugerencias';
+
+// Páginas de navegación
+import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { ProfilePage } from '../pages/profile/profile';
 import { TabConsultarCitas } from '../pages/tabConsultarCitas/tabConsultarCitas';
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
-import { LoginPage } from '../pages/login/login';
-import { ChatPage } from '../pages/chat/chat';
-import { ProfilePage } from '../pages/profile/profile';
-import { DocFirmadosPage } from '../pages/doc-firmados/doc-firmados';
-//import { AccesoResultadosPage } from '../pages/acceso-resultados/acceso-resultados';
-import { ChangePasswordPage } from '../pages/change-password/change-password';
+import { DocumentosContablesPage } from '../pages/documentos-contables/documentos-contables';
+import { PresupuestosPage } from '../pages/presupuestos/presupuestos';
+import { RecallPage } from '../pages/recall/recall';
 import { ConsejosPersonalizadosPage } from '../pages/consejos-personalizados/consejos-personalizados';
+import { InstruccionesPage } from '../pages/instrucciones/instrucciones';
 
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
 import { FCM } from '@ionic-native/fcm';
 
 const config = {
@@ -28,11 +38,9 @@ const config = {
   storageBucket: 'fbapp-8a8e5.appspot.com',
 };
 
-
 @Component({
   templateUrl: 'app.html'
 })
-
 
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
@@ -40,26 +48,29 @@ export class MyApp {
 	rootPage: any = LoginPage;  
 	pages: 	Array<{title: string, icon: string, color: string, component: any}>;
 	menuData = new Array();
-
-	constructor(private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+	loading: 		Loading; 			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
+	constructor(private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
 		this.initializeApp();		
 	
 		// used for an example of ngFor and navigation
 		this.pages = [
 		  { title: 'Inicio', icon: 'fa fa-home', color: 'primary', component: HomePage },
 		  { title: 'Mi salud', icon: 'fas fa-heartbeat', color: 'primary', component: MiSaludPage },
-		  { title: 'Perfil', icon: 'fas fa-user', color: 'primary', component: ProfilePage },
-		  { title: 'Cambiar contraseña', icon: 'fas fa-unlock-alt', color: 'primary', component: ChangePasswordPage },
-		  { title: 'Consultar citas',  icon: 'far fa-calendar-alt', color: 'primary', component: TabConsultarCitas },
-		  { title: 'Pedir cita',  icon: 'far fa-calendar-alt', color: 'primary', component: PedirCitaPage },
+		  { title: 'Mis citas', icon: 'fas fa-calendar-alt', color: 'primary', component: MisCitasPage },
+		  { title: 'Mis documentos',  icon: 'fas fa-file-alt', color: 'primary', component: MisDocumentosPage },
+		  { title: 'Mi perfil', icon: 'fas fa-user', color: 'primary', component: MiPerfilPage },	  
 		  { title: 'Chat',  icon: 'fas fa-comments', color: 'primary', component: ChatPage },
-		  { title: 'Documentos administrativos',  icon: 'fas fa-signature', color: 'primary', component: DocFirmadosPage },
-		  //{ title: 'Pruebas diagnosticas',  icon: 'far fa-list-alt', color: 'primary', component: AccesoResultadosPage }
+		  { title: 'Sugerencias',  icon: 'fas fa-thumbs-up', color: 'primary', component: SugerenciasPage }
 		];	
   }
 
 	initializeApp() {
 		this.platform.ready().then(() => {
+			
+			this.events.subscribe("user:logged", () => {				
+				this.getDataMenu();
+			});
+			
 			//Notifications
 			if (this.platform.is('cordova')) {
 				this.fcm.subscribeToTopic('all');
@@ -67,8 +78,10 @@ export class MyApp {
 					this.enviarTokenNotifications(token);
 				})
 				this.fcm.onNotification().subscribe(data=>{
-					if(data.wasTapped){
-						setTimeout( () => { this.openPageStrig(data.click_action, true); }, 100 );		
+					if(data.wasTapped){						
+						setTimeout( () => {							
+							this.openPageStrig(data.click_action, true); 
+						}, 300 );		
 					} else {
 						if(data.showDialog == "true")
 							this.showError(data.title, data.subTitle, data.textButton, data.click_action);
@@ -78,14 +91,28 @@ export class MyApp {
 					this.enviarTokenNotifications(token);
 				});
 				//end notifications.
-			}
-			
-			this.events.subscribe("user:logged", () => {				
-				this.getDataMenu();
-			});     
+			}		
+			     
 		});
 		firebase.initializeApp(config);
   }
+  
+	/**
+	* 	Función que muestra el ProgressBar cuando alguna acción
+	*	se está ejecutando en primer plano.
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	showLoading() {
+		this.loading = this.loadingCtrl.create({
+			content: 'Cargando información...',			
+			dismissOnPageChange: false
+		});
+		this.loading.present();
+	}
   
 	/**
 	* 	Función que muestra una alerta con el titulo
@@ -176,20 +203,68 @@ export class MyApp {
 	* 	@return None 
 	*/ 
 	openPageStrig(page, tipo){
-		if(tipo){
-			if(page == "TabConsultarCitas")
-				this.nav.setRoot(TabConsultarCitas);
-			if(page == "ChatPage")
+		if(tipo){			
+			if(page == "MiSalud")
+				this.nav.setRoot(MiSaludPage);
+			else if(page == "MiPerfil")
+				this.nav.setRoot(MiPerfilPage);
+			else if(page == "MisDocumentos")
+				this.nav.setRoot(MisDocumentosPage);
+			else if(page == "MisCitas")
+				this.nav.setRoot(MisCitasPage);
+			else if(page == "Chat")
 				this.nav.setRoot(ChatPage);
-			if(page == "ConsejosPersonalizadosPage")
+			else if(page == "Sugerencias")
+				this.nav.setRoot(SugerenciasPage);	
+			else if(page == "Higiene")
+				this.nav.setRoot(RecallPage);	
+			else if(page == "Perfil")
+				this.nav.setRoot(ProfilePage);						
+			else if(page == "Password")
+				this.nav.setRoot(ChangePasswordPage);						
+			else if(page == "DocContables")
+				this.nav.setRoot(DocumentosContablesPage);						
+			else if(page == "DocPresupuestos")
+				this.nav.setRoot(PresupuestosPage);						
+			else if(page == "Citas")
+				this.nav.setRoot(TabConsultarCitas);						
+			else if(page == "PedirCita")
+				this.nav.setRoot(PedirCitaPage);
+			else if(page == "ConsejosPersonalizados")
 				this.nav.setRoot(ConsejosPersonalizadosPage);
+			else if(page == "Instrucciones")
+				this.nav.setRoot(InstruccionesPage);
 		}else{
-			if(page == "TabConsultarCitas")
-				this.nav.push(TabConsultarCitas);
-			if(page == "ChatPage")
+			if(page == "MiSalud")
+				this.nav.push(MiSaludPage);
+			else if(page == "MiPerfil")
+				this.nav.push(MiPerfilPage);
+			else if(page == "MisDocumentos")
+				this.nav.push(MisDocumentosPage);
+			else if(page == "MisCitas")
+				this.nav.push(MisCitasPage);
+			else if(page == "Chat")
 				this.nav.push(ChatPage);
-			if(page == "ConsejosPersonalizadosPage")
+			else if(page == "Sugerencias")
+				this.nav.push(SugerenciasPage);	
+			else if(page == "Higiene")
+				this.nav.push(RecallPage);	
+			else if(page == "Perfil")
+				this.nav.push(ProfilePage);						
+			else if(page == "Password")
+				this.nav.push(ChangePasswordPage);						
+			else if(page == "DocContables")
+				this.nav.push(DocumentosContablesPage);						
+			else if(page == "DocPresupuestos")
+				this.nav.push(PresupuestosPage);						
+			else if(page == "Citas")
+				this.nav.push(TabConsultarCitas);						
+			else if(page == "PedirCita")
+				this.nav.push(PedirCitaPage);
+			else if(page == "ConsejosPersonalizados")
 				this.nav.push(ConsejosPersonalizadosPage);
+			else if(page == "Instrucciones")
+				this.nav.push(InstruccionesPage);
 		}			  
 	}
 

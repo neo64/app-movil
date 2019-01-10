@@ -41,24 +41,22 @@ export class ChangePasswordPage {
 		}else if (this.data.pass3 != this.data.pass2){
 			this.showError("ERROR","La nuevas nuevas contraseñas deben ser iguales.");	
 			return;
-		}
-				
-		this.restProvider.actualizarPass(this.data.pass1,this.data.pass2,this.data.pass3).then(data => {
-			if(typeof data != "undefined" && data['status'] == 1){					
-				if(data['error'] == 0){ 
-					this.showError("¡Bien!","La contraseña ha sido cambiada con éxito");		
-					this.navCtrl.setRoot(HomePage);
+		}else{
+			this.restProvider.actualizarPass(this.data.pass1,this.data.pass2,this.data.pass3).then(data => {
+				if(typeof data != "undefined" && data['status'] == 1){					
+					if(data['error'] == 0){ 
+						this.showError("¡Bien!","La contraseña ha sido cambiada con éxito", true);		
+					}else{
+						this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+					}					
+				}else if(data.status == 401){
+					this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
+					this.navCtrl.setRoot(LoginPage);
 				}else{
 					this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
 				}					
-			}else if(data.status == 401){
-				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
-				this.navCtrl.setRoot(LoginPage);
-			}else{
-				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-			}					
-		});
-				
+			});
+		}	
 	}  
 	
 	/**
@@ -88,12 +86,19 @@ export class ChangePasswordPage {
 	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
 	* 	
 	*/
-	showError(title,text) {
+	showError(title,text, redirect = false) {
 		this.loading.dismiss();
 		let alert = this.alertCtrl.create({
 			title: title,
 			subTitle: text,
-			buttons: ['OK']
+			buttons:  [{
+				text: 'OK',
+				role: 'OK',
+				handler: () => {
+				  if(redirect)
+					this.navCtrl.setRoot(HomePage);  
+				}
+			}]
 		});
 		alert.present();
 	}

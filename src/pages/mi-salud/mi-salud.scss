@@ -1,5 +1,5 @@
 page-mi-salud {
-		
+	
 	.card-background-page {
 
 	  ion-card {
@@ -8,22 +8,39 @@ page-mi-salud {
 		max-height: 32%;
 	  }
 
-	  .card-title {
+	@media (max-width: 400px) {
+        .card-title {
+			font-size: 1.1em;
+	  	}
+	  	.card-subtitle {
+			font-size: .9em;
+		}
+    }
+
+    @media (min-width: 400px) {
+        .card-title {
+			font-size: 1.3em;
+	  	}
+	  	.card-subtitle {
+			font-size: 1.0em;
+		}
+    }
+
+  	  .card-title {
 		position: absolute;
-		top: 3rem;
-		font-size: 2.0em;
-		width: 100%;
-		font-weight: bold;
+		top: 4.5rem; /* 60% */
 		color: #000;
+		text-align: left;
+		text-transform: uppercase;
+    	letter-spacing: 2px;
 	  }
 
 	  .card-subtitle {
-		font-size: 1.0em;
 		position: absolute;
-		top: 6rem;
-		width: 100%;
+		top: 7rem; /* 78% */
 		color: #000;
+		text-align: left;
+		max-width: 66%;
 	  }
-
 	}
 }

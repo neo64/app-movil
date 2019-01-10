@@ -15,6 +15,7 @@ export class ConsultarCitasFuturasPage {
 	loading: 	Loading;		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	citas 		= new Array();	// Array con todas las citas futuras del paciente.
 	calendars 	= [];			// Array con la información de la cita para almacenar en el calendario.
+	showMessage = false;
 	
 	constructor(public events: Events, private alertCtrl: AlertController, public popoverCtrl: PopoverController, private calendar: Calendar,  public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private plt: Platform) {
 		this.showLoading();
@@ -55,20 +56,27 @@ export class ConsultarCitasFuturasPage {
 	* 	@return None 
 	*/
 	addEvent(timestampINI,timestampFIN) {
-		this.showLoading("Añadiendo al calendario")		
 		
 		let dateINI 	= new Date(parseInt(timestampINI));
 		let dateFIN 	= new Date(parseInt(timestampFIN));
-		let titulo 		= 'Cita en clínica dental Ferrus & Bratos';
+		let titulo 		= 'Cita en Clínica Dental Ferrus&Bratos';
 		let direccion 	= 'C/ Caleruega 67 3ª Planta. 28033 Madrid';
 		
-		let options = { calendarId: 1, calendarName: "Clínica Ferrus & Bratos", url: 'http://clinicaferrusbratos.com', firstReminderMinutes: 15 };
+		let options = { calendarId: 1, url: 'http://clinicaferrusbratos.com', firstReminderMinutes: 15 };
 	 
-		this.calendar.createEventInteractivelyWithOptions(titulo, direccion, '', dateINI, dateFIN, options).then(res => {
-			this.loading.dismiss();
-		}, err => {
-		  this.loading.dismiss();
-		});
+		this.calendar.createEventInteractivelyWithOptions(titulo, direccion, '', dateINI, dateFIN, options)
+		.then(
+			res => { 
+				//this.showError("¡Bien!", "La cita ha sido añadida al calendario." + res);
+			}, 	
+			err => {
+				this.showError("ERROR", "No ha sido posible añadir la cita al calendario.");
+			}
+		).catch( 
+			e => { 
+				this.showError("ERROR", "No ha sido posible añadir la cita al calendario.");
+			}
+		);
 	}
 	
 	/**
@@ -94,9 +102,18 @@ export class ConsultarCitasFuturasPage {
 	getCitas(){
 		this.restProvider.getCitasFuturas().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
-				for (var key in data['data']) {
-					this.citas.push(data['data'][key]);
-				}
+
+				console.log(data);
+
+				if(data['code'] == '105260'){ 
+					this.showMessage = true;
+					this.citas = data['data'];
+				}else{
+					for (var key in data['data']) {
+						this.citas.push(data['data'][key]);
+					}
+				}				
+
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");

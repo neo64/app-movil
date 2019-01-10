@@ -19,7 +19,33 @@ export class ProfilePage {
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
 		this.getProfile();		// Llamada a la funcion para obtener el perfil del paciente
 		this.events.publish("user:logged");
-	}	
+	}
+
+	/**
+	* 	Función que actualiza los datos personales 
+	*	del paciente y envía un correo a citas@...
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	setProfile(){
+		this.restProvider.setProfile(this.data).then(d => {
+			if(typeof d != "undefined" &&  d['status'] == 1){
+				this.showError("¡Bien!",d['data']);
+				this.loading.dismiss();
+			}else if(d.status == 401){				
+				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
+				this.navCtrl.setRoot(LoginPage);
+			}else{				
+				this.showError("¡Atención!","<p>" + d['message'] + "<br/><br/>[Code: " + d['code'] + "]</p>");
+			}			
+		}).catch(e => {
+			this.loading.dismiss();
+			console.log(e);
+		});
+	}
 
 	/**
 	* 	Función que obtiene todos los datos personales del 

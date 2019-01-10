@@ -4,7 +4,7 @@ import { PedirCitaPage } from './pedir-cita';
 
 @NgModule({
   declarations: [
-    PedirCitaPage,
+    //PedirCitaPage,
   ],
   imports: [
     IonicPageModule.forChild(PedirCitaPage),

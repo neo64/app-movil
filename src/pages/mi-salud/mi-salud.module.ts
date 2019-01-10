@@ -4,7 +4,7 @@ import { MiSaludPage } from './mi-salud';
 
 @NgModule({
   declarations: [
-    MiSaludPage,
+    //MiSaludPage,
   ],
   imports: [
     IonicPageModule.forChild(MiSaludPage),

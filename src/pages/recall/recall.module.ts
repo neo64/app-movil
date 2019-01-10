@@ -4,7 +4,7 @@ import { RecallPage } from './recall';
 
 @NgModule({
   declarations: [
-    RecallPage,
+    //RecallPage,
   ],
   imports: [
     IonicPageModule.forChild(RecallPage),

@@ -17,7 +17,7 @@ export class PedirCitaPage {
 	doctores 			= [];		// Array donde se almacenan todos los Drs.
 	tratamientos 		= [];		// Array donde se almacenan todos los tratamientos asociados a ese doctor.
 	citasBuscador 		= [];		// Array donde se almacenan todas las citas que ha devuelto el buscador.
-	tto 				= "";		// String donde se almacena el tratamiento seleccionado.
+	ttoSelect 			= "";		// String donde se almacena el tratamiento seleccionado.
 		
 	constructor(private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
 		this.showLoading();
@@ -37,13 +37,21 @@ export class PedirCitaPage {
 	searchCita(formulario) {
 		this.citasBuscador = []; // Limpio las citas anteriores por si se pulsa el botón dos veces.
 		
-		this.restProvider.searchCita(formulario.form.value.date, formulario.form.value.hour, formulario.form.value.dr, formulario.form.value.tto, formulario.form.value.dias).then(data => {
+		console.log(formulario);
+
+		this.restProvider.searchCita(formulario.form.value.date, formulario.form.value.hour, formulario.form.value.dr, formulario.form.value.tto.IdOpc, formulario.form.value.dias).then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
-				if(Array.isArray(JSON.parse(data['data'])))
+				if(JSON.parse(data['data']).length > 0){
 					this.citasBuscador = JSON.parse(data['data']);
-				this.tto = 	formulario.form.value.tto;	
+					this.show = true;
+					this.ttoSelect = 	formulario.form.value.tto.Descripcio;
+				}else{
+					this.show = false;
+				}
+
+				
 				this.loading.dismiss();
-				this.show = true;
+				
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);

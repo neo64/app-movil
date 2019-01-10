@@ -4,7 +4,7 @@ import { DocFirmadosPage } from './doc-firmados';
 
 @NgModule({
   declarations: [
-    DocFirmadosPage,
+    //DocFirmadosPage,
   ],
   imports: [
     IonicPageModule.forChild(DocFirmadosPage),

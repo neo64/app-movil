@@ -102,7 +102,7 @@ export class DocFirmadosPage {
 				for (var key in data['data']) {
 					this.docs.push(data['data'][key]);
 				}
-				this.loading.dismiss();
+				//this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				

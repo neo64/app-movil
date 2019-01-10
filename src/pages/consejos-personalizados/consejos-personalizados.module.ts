@@ -4,7 +4,7 @@ import { ConsejosPersonalizadosPage } from './consejos-personalizados';
 
 @NgModule({
   declarations: [
-    ConsejosPersonalizadosPage,
+    //ConsejosPersonalizadosPage,
   ],
   imports: [
     IonicPageModule.forChild(ConsejosPersonalizadosPage),

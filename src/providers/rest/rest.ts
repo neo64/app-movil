@@ -16,6 +16,136 @@ export class RestProvider {
 
 	}	
 	
+	setSugerencia(data){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/setSugerencia', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams()
+					.set('nombre', 		data.nombre)
+					.set('email', 		data.email)
+					.set('telefono', 	data.movil)
+					.set('texto', 		data.texto)					
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	setProfile(data){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/setProfile', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams()
+					.set('email', 		data.Email)
+					.set('nombre', 		data.Nombre)
+					.set('apellidos', 	data.Apellidos)
+					.set('dni', 		data.DNI)
+					.set('fnacimiento', data.FecNacim)
+					.set('direccion', 	data.Direccion)
+					.set('localidad', 	data.Localidad)
+					.set('provincia', 	data.Provincia)
+					.set('movil', 		data.TelMovil)
+					.set('fijo', 		data.Tel1)
+					.set('alergias', 	data.Alergias)
+					.set('medicacion', 	data.Medicacion)
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	solicitarFactura(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/solicitarFactura', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
+	getInstrucciones(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getInstrucciones', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	getPlanEconomico(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getPlanEconomico', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
+	getPresupuestos(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getPresupuestos', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
+	getDocumentosContables(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getDocumentosContables', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
 	getConsejosPersonalizados(){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/getConsejosPersonalizados', false, {
@@ -80,9 +210,25 @@ export class RestProvider {
 		});
 	}
 	
+	getTimeStamp(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.get(this.apiUrl+'/getTimeStamp', {})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+	
 	getTimeServer(){		 				
 		return new Promise((resolve, reject) => {
-			this.http.get(this.apiUrl+'/getTimeServer')
+			this.http.post(this.apiUrl+'/getTimeServer', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
 			.subscribe(res => {	
 				resolve(res);
 			}, (err) => {				
@@ -127,6 +273,23 @@ export class RestProvider {
 		});
 	}
 	
+	getPlanEconomicoDetail(n){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getPlanEconomicoDetail', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams().set('n', n)
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
 	gestionarCita(accion, fecha, hora){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/gestionarCita', false, {

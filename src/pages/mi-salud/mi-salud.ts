@@ -3,9 +3,11 @@ import { IonicPage, NavController, Loading, ToastController, LoadingController, 
 import { RestProvider } from '../../providers/rest/rest';
 import { RecallPage } from '../../pages/recall/recall';
 import { LoginPage } from '../../pages/login/login';
+import { InstruccionesPage } from '../../pages/instrucciones/instrucciones';
 import { ConsejosPersonalizadosPage } from '../../pages/consejos-personalizados/consejos-personalizados';
 
 @IonicPage()
+
 @Component({
   selector: 'page-mi-salud',
   templateUrl: 'mi-salud.html',
@@ -27,8 +29,8 @@ export class MiSaludPage {
 				this.navCtrl.push(RecallPage);
 			else if(page == "ConsejosPersonalizados")
 				this.navCtrl.push(ConsejosPersonalizadosPage);
-			/*else if(page == "Consentimientos")
-				this.navCtrl.push(ConsentimientosPage);		*/
+			else if(page == "Instrucciones")
+				this.navCtrl.push(InstruccionesPage);		
 			else
 				this.presentToast("La página no está disponible.");
 		}else if(tipo == "web"){

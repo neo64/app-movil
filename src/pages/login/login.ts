@@ -17,18 +17,27 @@ export class LoginPage {
 			   
 	constructor(public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 				
-		var expires = new Date(Number(window.localStorage.getItem("expires"))); // Obtengo fecha de expiración del token si la hubiese
 		var timeNow = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
-
+		var expires = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
+		
 		// Compruebo si la fecha de expiración es posterior
 		// a la fecha actual del sistema, si es así redirijo
 		// a la página de home.
 		this.restProvider.getTimeServer().then(data => {
 			
-			if(typeof data != "undefined" && data['status'] == 1)
+			if(typeof data != "undefined" && data['status'] == 1){
 				timeNow = new Date(Number(data['timeStamp']));
+				expires = new Date(Number(data['expires']));
+			}
 			
-			if(expires && expires > timeNow){
+			// INICIO DEBUG para Firebase
+			//window.localStorage.setItem("idPac", "9900");					
+			//window.localStorage.setItem("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDI2NTAyNDUsImV4cCI6MTU0NTI0MjI0NSwianRpIjoidzZlUXlQVVhzYUpCbjBNN3lMY29pIiwic3ViIjoibG9naW4ifQ.Fh-DbVtCWekIV2bmA2HaQZytCJMuoBbrCBiSk9ZFAWg");				
+			//window.localStorage.setItem("expires", "1545242245000");
+			//this.nav.setRoot(HomePage);
+			// FIN DEBUG para Firebase
+			
+			if(expires > timeNow){
 				this.events.publish("user:logged");	
 				this.nav.setRoot(HomePage);	
 			}		
@@ -68,7 +77,10 @@ export class LoginPage {
 					this.nav.setRoot(HomePage);
 				
 			}else{
-				this.showError("ERROR " + data['code'],"Acceso Denegado");			
+				if(typeof data['code'] != "undefined")
+					this.showError("ERROR " + data['code'],"Acceso Denegado");			
+				else
+					this.showError("ERROR","Acceso Denegado");			
 			}
 		});
 		
@@ -91,7 +103,7 @@ export class LoginPage {
 		this.loading.present();
 	}
 	
-		/**
+	/**
 	* 	Función que muestra una alerta con el titulo
 	*	y el texto pasado por parámetro.
 	*
