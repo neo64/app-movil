@@ -21,8 +21,75 @@ export class PlanEconomicoDetailPage {
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
 	numPlan 		= 0;
+	tituloSubtitulo = [{titulo : "Plan Económico", subtitulo: ""}];
+	importes 		= new Array();
+
+	public lineChartDataPagado:Array<any> = [
+	  {	data: [12, 19, 3, 5, 2, 3]} 
+	];	
+
+	public lineChartDataPendiente:Array<any> = [
+	  {	data: [20, 18, 12, 5, 4,3] }
+	];	
+
+	public lineChartDataTotal:Array<any> = [
+	  {	data: [20, 18, 12, 5, 4,3] }
+	];
+
+	public lineChartColorsPagado:Array<any> = [{ // white
+	    backgroundColor: 'rgba(243,167,201, 0.8)',
+	    borderColor: 'rgba(237, 122, 173, 1)',
+	    pointBackgroundColor: 'rgba(237, 122, 173, 1)',
+	    pointBorderColor: '#fff',
+	    pointHoverBackgroundColor: '#fff',
+	    pointHoverBorderColor: 'rgba(237, 122, 173, 1)',
+	    borderWidth: 1
+	}]
+
+	public lineChartColorsPendiente:Array<any> = [{ // white
+	    backgroundColor: 'rgba(255,255,255,1)',
+	    borderColor: 'rgba(237, 122, 173, 1)',
+	    pointBackgroundColor: 'rgba(255,255,255,1)',
+	    pointBorderColor: '#fff',
+	    pointHoverBackgroundColor: '#fff',
+	    pointHoverBorderColor: 'rgba(255,255,255,0)',
+	    borderWidth: 1
+	}]
+
+	public lineChartColorsTotal:Array<any> = [{ // white
+	    backgroundColor: 'rgba(243,167,201, 0.8)',
+	    borderColor: 'rgba(237, 122, 173, 1)',
+	    pointBackgroundColor: 'rgba(237, 122, 173, 1)',
+	    pointBorderColor: '#fff',
+	    pointHoverBackgroundColor: '#fff',
+	    pointHoverBorderColor: 'rgba(237, 122, 173, 1)',
+	    borderWidth: 1
+	}]
+
+	public lineChartOptions:any = {
+		legend: false,
+        responsive : true,
+        maintainAspectRatio: true, 
+        elements: { 
+        	point: {
+          	radius: 0,
+          	hitRadius: 5, 
+            hoverRadius: 5 
+          } 
+        },
+        scales: {
+            xAxes: [{display: false,}],
+            yAxes: [{
+            		display: false,
+                ticks: {beginAtZero: true,},
+            }]
+        }
+	};
+
+	public lineChartType:string = 'line';
 
   	constructor(public navParams: NavParams, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+  	
   	}
 
   	ionViewDidLoad() {
@@ -43,7 +110,6 @@ export class PlanEconomicoDetailPage {
 	*/ 
 	getPlanEconomicoDetail(n){
 		this.restProvider.getPlanEconomicoDetail(n).then(data => {
-			console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				
 				if (typeof this.cards === 'undefined' || this.cards.length <= 0){
@@ -53,7 +119,10 @@ export class PlanEconomicoDetailPage {
 				for (var key in data['data']) {
 					this.cards.push(data['data'][key]);
 					this.showCardError = false;
+					this.tituloSubtitulo = [{titulo : "Plan Económico", subtitulo: data['data'][key]['nombre'] }];
 				}
+
+				this.importes = data['importes'];
 				
 				this.loading.dismiss();
 				

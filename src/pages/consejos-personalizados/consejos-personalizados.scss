@@ -5,4 +5,13 @@ page-consejos-personalizados {
 		margin-left: -15%;
 		z-index: 0;
 	}
+
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
+	}
+
+	.toolbar-background-md{
+		background: white;
+	}
 }

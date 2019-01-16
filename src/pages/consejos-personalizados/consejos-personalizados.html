@@ -8,9 +8,13 @@
 </ion-header>
 <ion-content padding>
 	
-	<fb-titulo-subtitulo [name]="tituloSubtitulo" ></fb-titulo-subtitulo>
+	<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
 
-	<p>contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>	 
+	<br />
+
+    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>
+
+    <br />	 
 
 	<div *ngFor="let card of cards">
 		<div class="fb-card -v1">
@@ -28,11 +32,10 @@
                     </div>
                 </div>
                 <div class="right">
-                    <a class="fb-btn -rounded -bg-pink" href="">
-                        <svg height="512" viewbox="0 0 129 129" width="512" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M40.4 121.3c-.8.8-1.8 1.2-2.9 1.2s-2.1-.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8 0l53.9 53.9c1.6 1.6 1.6 4.2 0 5.8l-53.9 53.9z" fill="#FFF">
-                            </path>
-                        </svg>
+                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
+                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
+                        </svg> 
                     </a>
                 </div>
             </div>

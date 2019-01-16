@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Loading, ToastController, LoadingController, AlertController, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
-import { RecallPage } from '../../pages/recall/recall';
+import { PlanEconomicoPage } from '../../pages/plan-economico/plan-economico';
 import { LoginPage } from '../../pages/login/login';
-import { InstruccionesPage } from '../../pages/instrucciones/instrucciones';
-import { ConsejosPersonalizadosPage } from '../../pages/consejos-personalizados/consejos-personalizados';
+import { PresupuestosPage } from '../../pages/presupuestos/presupuestos';
+import { DocumentosContablesPage } from '../../pages/documentos-contables/documentos-contables';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -27,14 +27,14 @@ export class MisDocumentosPage {
 	
 	openPage(page, tipo) {
 		if(tipo == "page"){
-			if(page == "Recall")
-				this.navCtrl.push(RecallPage);
-			else if(page == "ConsejosPersonalizados")
-				this.navCtrl.push(ConsejosPersonalizadosPage);
-			else if(page == "Instrucciones")
-				this.navCtrl.push(InstruccionesPage);		
+			if(page == "Presupuestos")
+				this.navCtrl.push(PresupuestosPage);
+			else if(page == "Contables")
+				this.navCtrl.push(DocumentosContablesPage);
+			else if(page == "Domiciliaciones")
+				this.navCtrl.push(PlanEconomicoPage);		
 			else
-				this.presentToast("La página no está disponible.");
+				this.presentToast("La página " + page + " no está disponible.");
 		}else if(tipo == "web"){
 			window.open(page, '_system', 'location=yes');
 		}

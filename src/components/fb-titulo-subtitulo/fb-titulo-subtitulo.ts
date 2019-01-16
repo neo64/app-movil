@@ -12,8 +12,7 @@ import { Component, Input } from '@angular/core';
 })
 export class FbTituloSubtituloComponent {
 
-  	@Input('name') object; 
-  	svg: any;
+  	@Input('info') object;
 
 	constructor() {
 		

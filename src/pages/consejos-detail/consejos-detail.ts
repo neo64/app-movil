@@ -9,7 +9,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class ConsejosDetailPage {
 
-	data = Array();
+	data 			= Array();
+	tituloSubtitulo = Array();
 	constructor(private domSanitizer: DomSanitizer, public navParams: NavParams) {
 		
 	}
@@ -17,6 +18,6 @@ export class ConsejosDetailPage {
 	ionViewDidLoad() { 
 		this.data = this.navParams.get('data');
 		this.domSanitizer.bypassSecurityTrustUrl(this.data['Img']);
+		this.tituloSubtitulo = [{titulo : this.data['Doctor'], subtitulo: this.data['Tratamiento']}];
 	}
-
 }

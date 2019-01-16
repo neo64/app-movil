@@ -1,39 +1,16 @@
 page-plan-economico {
-	.img-round{
-		border-radius: 50%;
-		margin-left: 0.4rem;
-		margin-top: 1rem;
+	ion-title{
+		text-align:center;
+		margin-left: -15%;
+		z-index: 0;
 	}
-	
-	.card-background-page {
 
-	  ion-card {
-		position: relative;
-		text-align: center;
-		max-height: 32%;
-	  }
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
+	}
 
-	  .card-title {
-		position: absolute;		
-		font-size: 1.3em;	
-		color: #000;
-		top: 1rem;	
-		text-align: left;
-	  }
-
-	  .card-subtitle {
-		font-size: 1.0em;
-		position: absolute;
-		top: 3.5rem;		
-		color: #000;
-	  }
-	  
-	  .card-subtitle-date {
-		font-size: 1.2rem;
-		position: absolute;
-		top: 5.5rem;		
-		color: #000;
-	  }
-
+	.toolbar-background-md{
+		background: white;
 	}
 }

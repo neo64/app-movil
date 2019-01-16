@@ -1,19 +1,16 @@
 page-plan-economico-detail {
-	.header .col {
-	    background-color:lightgrey;
+	ion-title{
+		text-align:center;
+		margin-left: -15%;
+		z-index: 0;
 	}
 
-	.col {
-	    border: solid 1px grey;
-	    border-bottom-style: none;
-	    border-right-style: none;
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
 	}
 
-	.col:last-child {
-	    border-right: solid 1px grey;
-	}
-
-	.row:last-child .col {
-	    border-bottom: solid 1px grey;
+	.toolbar-background-md{
+		background: white;
 	}
 }

@@ -55,8 +55,7 @@ import { FbTituloSubtituloComponent } from '../components/fb-titulo-subtitulo/fb
 
 import { CallNumber } from '@ionic-native/call-number';
 
-
-
+import { ChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -89,6 +88,7 @@ import { CallNumber } from '@ionic-native/call-number';
 	FbTituloSubtituloComponent
   ],
   imports: [
+  	ChartsModule,
     BrowserModule,
 	HttpClientModule,
 	EmojiPickerComponentModule,

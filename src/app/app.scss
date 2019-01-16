@@ -117,15 +117,15 @@ body {
     box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37)
   }
   & .card_title {
-    font-size: 1rem;
+    font-size: 1.8rem;
     font-weight: bold;
-    letter-spacing: 1;
+    letter-spacing: 1.5px;
     color: map-get($colors, grey-dark);
   }
   & .card_subtitle {
     color: map-get($colors, grey-medium);
-    margin-top: 0.5rem;
-    font-size: 0.8rem;
+    margin-bottom: 0.1rem;
+    font-size: 1.4rem;
   }
   & .card_row {
     display: flex;
@@ -203,13 +203,13 @@ body {
     .right {
       flex: 1 35%;
       & .card_title {
-        font-size: 1rem;
+        font-size: 1.5rem;
       }
     }
     .left {
       flex: 0 10%;
       & .card_title {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
         font-weight: normal;
       }
     }
@@ -309,10 +309,10 @@ body {
     & .card_subtitle {
       margin-top: 0;
       margin-bottom: 0.5rem;
-      font-size: 0.6rem;
+      font-size: 1.6rem;
     }
     & .card_title {
-      font-size: 0.9rem;
+      font-size: 1.5rem;
     }
     & .card_graph {
       border-radius: 0 0 10px 10px;
@@ -382,6 +382,10 @@ body {
   background-color: map-get($colors, pink-dark)!important;
 }
 
+.-bg-pink-light {
+  background-color: map-get($colors, pink)!important;
+}
+
 .-bg-blue {
   background-color: map-get($colors, blue)!important;
 }
@@ -431,4 +435,24 @@ body {
     width: 100%;
     border-radius: 50%;
   }
+}
+
+.title {
+  color: map-get($colors, pink-dark);
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: map-get($colors, black);
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0 0 2rem;
+}
+
+p {
+  color: map-get($colors, grey-dark);
+  font-size: 1.4rem;
+  line-height: 1.8rem;
 }

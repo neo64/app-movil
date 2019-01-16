@@ -21,6 +21,7 @@ export class PlanEconomicoPage {
 	loading: 		Loading; 			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
+	tituloSubtitulo = [{titulo : "Mis Domiciliaciones", subtitulo: "de tratamientos"}];
 
   	constructor(private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
@@ -53,7 +54,6 @@ export class PlanEconomicoPage {
 	*/ 
 	getPlanEconomico(){
 		this.restProvider.getPlanEconomico().then(data => {
-			console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				
 				if (typeof this.cards === 'undefined' || this.cards.length <= 0){

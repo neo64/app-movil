@@ -15,13 +15,12 @@ export class ConsejosPersonalizadosPage {
 	loading: 		Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
-	tituloSubtitulo = new Array();
+	tituloSubtitulo = [{titulo : "Mis Consejos", subtitulo: "de los doctores"}];
 
 	constructor(private domSanitizer: DomSanitizer, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getConsejosPersonalizados();
 		this.events.publish("user:logged");
-		this.tituloSubtitulo = [{titulo : "Mis Consejos", subtitulo: "de los doctores"}];
 	}
 	
 	/**
