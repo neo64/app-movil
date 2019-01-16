@@ -36,6 +36,23 @@ export class RestProvider {
 			return e;
 		});
 	}
+
+	setImageProfile(data){
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/setImageProfile', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams().set('image', data)					
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
 	
 	setProfile(data){		 				
 		return new Promise((resolve, reject) => {
@@ -181,6 +198,22 @@ export class RestProvider {
 	getCardsMiSalud(){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/getCardsMiSalud', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
+	getCardsMisDocumentos(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getCardsMisDocumentos', false, {
 				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
 			})
 			.subscribe(res => {	

@@ -106,3 +106,329 @@ body {
     font-family: theinhardtregular !important;
     letter-spacing: 1.5px;
 }
+
+.fb-card {
+  margin: 1.5rem 0;
+  padding: 1.2rem 1rem;
+  background-color: map-get($colors, white);
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  & .btn.-rounded {
+    box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37)
+  }
+  & .card_title {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 1;
+    color: map-get($colors, grey-dark);
+  }
+  & .card_subtitle {
+    color: map-get($colors, grey-medium);
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+  }
+  & .card_row {
+    display: flex;
+  }
+  & .card_separator {
+    height: 1px;
+    background-color: map-get($colors, grey);
+    margin: 0.8rem 0;
+    position: relative;
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+  & .card_time {
+    text-align: center;
+    color: map-get($colors, pink-dark);
+    font-size: 2.5rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    & span {
+      font-weight: normal;
+      font-size: 0.8rem;
+    }
+  }
+  & .card_paragraph {
+    margin-top: 1.5rem;
+  }
+  /*
+   * V1. Card a 3 columnas con avatar o icono a la izq, contenido en centro y boton derecha
+   */
+  &.-v1,
+  &.-v3,
+  &.-v4 {
+    display: flex;
+    .left,
+    .right {
+      flex: 0 10%;
+      display: flex;
+      align-items: center;
+    }
+    .left {
+      justify-content: start;
+    }
+    .right {
+      justify-content: flex-end;
+    }
+    .center {
+      flex: 1 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+    .avatar {
+      width: 40px;
+    }
+  }
+  /*
+   * V2. Card para presupuestos y facturas
+   */
+  &.-v2 {
+    .left {
+      flex: 1 70%;
+    }
+    .right {
+      flex: 0 30%;
+      display: flex;
+      justify-content: flex-end;
+    }
+    .-price {
+      font-size: 1.5rem;
+    }
+  }
+  &.-v3 {
+    display: block;
+    .right {
+      flex: 1 35%;
+      & .card_title {
+        font-size: 1rem;
+      }
+    }
+    .left {
+      flex: 0 10%;
+      & .card_title {
+        font-size: 1.5rem;
+        font-weight: normal;
+      }
+    }
+    .center {
+      flex: 0 45%;
+    }
+  }
+  &.-v4 {
+    & .card_title {
+      font-size: 0.9rem;
+    }
+  }
+  &.-vfaq {
+    padding: 2rem;
+    line-height: 1.3rem;
+    & .card_title {
+      letter-spacing: 1.5;
+      font-weight: normal;
+    }
+  }
+  &.-vcita {
+    & .card_content {
+      margin-left: -1rem;
+      margin-right: -1rem;
+      margin-bottom: -1.2rem;
+      padding: 1.2rem 1rem;
+    }
+    & .card_label {
+      text-transform: uppercase;
+      font-size: 0.6rem;
+      color: map-get($colors, grey-medium);
+      margin-bottom: 0.7rem;
+    }
+    & .card_title {
+      font-size: 1.4rem;
+      font-weight: normal;
+    }
+    & .card_subtitle {
+      margin-top: 0;
+    }
+    & .left,
+    & .right {
+      flex: 0 50%;
+      display: flex;
+      flex-direction: column;
+    }
+    & .left {
+      justify-content: center;
+      border-right: 1px solid map-get($colors, grey);
+      padding: 1rem 0.5rem 1rem 0;
+    }
+    & .right {
+      padding: 1rem 0 1rem 1rem;
+    }
+    & .card_time {
+      font-size: 2rem;
+      margin: 0.3rem 0;
+      & span {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 4;
+        line-height: 2px;
+      }
+    }
+    & .card_separator {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    & .avatar {
+      width: 30px;
+      & svg {
+        fill: map-get($colors, pink-dark);
+      }
+    }
+    & .card_container {
+      display: flex;
+      & .card_title {
+        font-size: 1.1rem;
+        margin-left: 1rem;
+      }
+      & .card_subtitle {
+        font-size: 0.6rem;
+        margin-left: 0.5rem;
+      }
+    }
+    & .card_estado {
+      padding: 0.7rem 0 0.7rem 0.7rem;
+      border-left: 3px solid map-get($colors, pink-dark);
+      color: map-get($colors, grey-dark);
+      font-size: 1.1rem;
+    }
+  }
+  &.-vgraph {
+    padding: 0rem;
+    flex: 0 25%;
+    width: 30%;
+    & .card_subtitle {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 0.6rem;
+    }
+    & .card_title {
+      font-size: 0.9rem;
+    }
+    & .card_graph {
+      border-radius: 0 0 10px 10px;
+      overflow: hidden;
+      height: 50px;
+    }
+  }
+}
+
+.card_container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fb-btn {
+  display: block;
+  &.-rounded {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    & svg {
+      height: 100%;
+      width: 50%;
+    }
+  }
+  &.-pill {
+    border-radius: 40px;
+    background-color:  map-get($colors, pink);
+    color: map-get($colors, white);
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.3rem 0.6rem;
+    text-decoration: none;
+    flex: 1;
+    text-align: center;
+    margin: 0 0.2rem;
+    &.-anular {
+      border: 2px solid #EE7177;
+      color: #EE7177;
+      background-color: map-get($colors, white);
+    }
+    &.-cambiar {
+      border: 2px solid #ECB964;
+      color: #ECB964;
+      background-color:  map-get($colors, white);
+    }
+    &.-confirmar {
+      background-color: #2ED573;
+      padding: 0.7rem 0.7rem;
+      font-size: 0.9rem;
+      box-shadow: 4px 10px 41px 0px rgba(46, 213, 115, 0.37);
+    }
+  }
+}
+
+/*
+ * Colores de fondo
+ */
+
+.-bg-grey {
+  background-color: map-get($colors, grey-light)!important;
+}
+
+.-bg-pink {
+  background-color: map-get($colors, pink-dark)!important;
+}
+
+.-bg-blue {
+  background-color: map-get($colors, blue)!important;
+}
+
+.-bg-black {
+  background-color: map-get($colors, black)!important;
+}
+
+.-bg-white {
+  background-color: map-get($colors, white)!important;
+}
+
+/*
+ * Colores de frente
+ */
+
+.-pink {
+  color: map-get($colors, pink-dark)!important;
+}
+
+.-blue {
+  color: map-get($colors, blue)!important;
+}
+
+.-grey {
+  color: map-get($colors, grey)!important;
+}
+
+.-grey-medium {
+  color: map-get($colors, grey-medium)!important;
+}
+
+.-white {
+  color: map-get($colors, white)!important;
+}
+
+.-black {
+  color: map-get($colors, black)!important;
+}
+
+.-gradient {
+  background: linear-gradient(110deg, map-get($colors, blue) 20%, map-get($colors, pink) 100%);
+}
+
+.avatar {
+  & img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}

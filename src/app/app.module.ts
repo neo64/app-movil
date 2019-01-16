@@ -51,6 +51,7 @@ import { FileOpener } from '@ionic-native/file-opener';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 import { FbButtonIconComponent } from '../components/fb-button-icon/fb-button-icon';
+import { FbTituloSubtituloComponent } from '../components/fb-titulo-subtitulo/fb-titulo-subtitulo';
 
 import { CallNumber } from '@ionic-native/call-number';
 
@@ -84,7 +85,8 @@ import { CallNumber } from '@ionic-native/call-number';
 	MisDocumentosPage,
 	SugerenciasPage,
 	ChatPage,
-	FbButtonIconComponent
+	FbButtonIconComponent,
+	FbTituloSubtituloComponent
   ],
   imports: [
     BrowserModule,

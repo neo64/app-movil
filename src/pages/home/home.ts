@@ -25,8 +25,10 @@ import { InstruccionesPage } from '../instrucciones/instrucciones';
 // Proveedor de API
 import { RestProvider } from '../../providers/rest/rest';
 
+// Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
 
+// Para abrir la aplicación de llamadas nativa.
 import { CallNumber } from '@ionic-native/call-number';
 
 
@@ -41,39 +43,49 @@ export class HomePage {
 	
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
-
-	cardsMenu = [
-	      { name:"MIS CITAS", svg:"citas", openPage: "MisCitas", class: 'active', tipo : 'page' },
-	      { name:"CHAT", svg:"chat", openPage: "Chat", class: '' , tipo : 'page'},
-	      { name:"MI SALUD", svg:"salud", openPage: "MiSalud", class: '' , tipo : 'page'},
-	      { name:"MI PERFIL", svg:"perfil", openPage: "MiPerfil", class: '' , tipo : 'page'},	      
-	      { name:"DOCUMENTOS", svg:"documentos", openPage: "MisDocumentos", class: '' , tipo : 'page'},	      
-	      { name:"FAQ", svg:"preguntas", openPage: "preguntasFrecuentes", class: '' , tipo : 'page'},	      
-	      { name:"WEB", svg:"salud", openPage: "http://www.clinicaferrusbratos.com", class: 'active' , tipo : 'web'},
-	      { name:"COMO LLEGAR", svg:"salud", openPage: "http://www.clinicaferrusbratos.com/como-llegar", class: '' , tipo : 'web'},
-	      { name:"SUGERENCIAS", svg:"perfil", openPage: "http://www.clinicaferrusbratos.com/como-llegar", class: '' , tipo : 'web'},
-	      { name:"OTRO MENU", svg:"documentos", openPage: "http://www.clinicaferrusbratos.com/como-llegar", class: '' , tipo : 'web'},
-	    ];
-
-
+	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
+	
 	constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getCardsHome();
 		this.events.publish("user:logged");
 	}
 
+	/**
+	* 	Función que abre la aplicación de llamadas para
+	*	efectuar una llamada a la clínica
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
 	callClinica(){
-		this.callNumber.callNumber("+34917681812", true)
-  			.then(res => console.log('Launched dialer!', res))
-  			.catch(err => console.log('Error launching dialer', err));
+		this.callNumber.callNumber("+34917681812", true).catch(err => console.log('Error launching dialer', err));
 	}
 
+	/**
+	* 	Función que mueve los elementos del menú en forma
+	*	de slider para poder albergar más elementos
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
 	next() {
 		if(this.slides.isEnd())
 	    	this.slides.slidePrev();
 	    else
 	    	this.slides.slideNext();
 	}
+
+	/**
+	* 	Función que abre una página o una web dependiendo
+	*	de los parámetros que se les introduzca.
+	*
+	* 	@param String page a la que redirigir.
+	* 	@param String tipo si es pagina o web.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
   
 	openPage(page, tipo) {
 		if(tipo === "page"){
@@ -151,8 +163,13 @@ export class HomePage {
 	getCardsHome(){
 		this.restProvider.getCardsHome().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
-				for (var key in data['data']) {
-					this.cards.push(data['data'][key]);
+				if(data['data']['cards']){
+					for (var i in data['data']['cards']) {
+						this.cards.push(data['data']['cards'][i]);
+					}
+				}
+				for (var j in data['data']['menu']) {
+					this.cardsMenu.push(data['data']['menu'][j]);
 				}
 				this.loading.dismiss();
 			}else if(data.status == 401){

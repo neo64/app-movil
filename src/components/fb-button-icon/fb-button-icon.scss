@@ -2,7 +2,7 @@ fb-button-icon {
 	
 	button{
 		background: white;
-		border-radius: 2rem;
+		border-radius: 6px;
 		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
 		height: -webkit-fill-available;
 		width: 100%;
@@ -17,9 +17,16 @@ fb-button-icon {
 		color: black;
 		font-weight: 400;
     	font-size: 1.2rem;
+    	margin-top: 5%;
     	&.active{
 			color: white;
 		}
+	}
+
+	.btn-large{
+    	font-size: 1.6rem;
+    	margin-top: 2rem;
+    	line-height: 1.8rem;
 	}
 
 

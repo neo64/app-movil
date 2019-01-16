@@ -23,7 +23,7 @@
 	<ion-slides pager style="margin-left: -10%;" spaceBetween="-100" *ngIf="cards?.length > 0" >
   		<ion-slide class="slide" *ngFor="let card of cards">
 	    	<ion-row>
-	    		<ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 15px 0 0 15px;">
+	    		<ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;">
 	    			<ion-row style="position: fixed; top: 10%; color: white;">
 	    				<ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row>
 	    				<ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row>
@@ -32,7 +32,7 @@
 	    				<ion-col>{{card.hora}}</ion-col>
 	    			</ion-row>
 	    		</ion-col>
-	    		<ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 15px 15px 0;">
+	    		<ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;">
 	    			<ion-row style="margin-top: -4%;">
 	    				<ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col>
 	    			</ion-row>

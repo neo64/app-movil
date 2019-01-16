@@ -6,6 +6,9 @@ import { LoginPage } from '../../pages/login/login';
 import { InstruccionesPage } from '../../pages/instrucciones/instrucciones';
 import { ConsejosPersonalizadosPage } from '../../pages/consejos-personalizados/consejos-personalizados';
 
+// Para aceptar HTML desde la API
+import { DomSanitizer } from '@angular/platform-browser';
+
 @IonicPage()
 
 @Component({
@@ -16,8 +19,9 @@ export class MiSaludPage {
 
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
+	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
 
-	constructor( private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+	constructor(private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getCardsMiSalud();
 		this.events.publish("user:logged");
@@ -50,8 +54,13 @@ export class MiSaludPage {
 	getCardsMiSalud(){
 		this.restProvider.getCardsMiSalud().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
-				for (var key in data['data']) {
-					this.cards.push(data['data'][key]);
+				if(data['data']['cards']){
+					for (var i in data['data']['cards']) {
+						this.cards.push(data['data']['cards'][i]);
+					}
+				}
+				for (var j in data['data']['menu']) {
+					this.cardsMenu.push(data['data']['menu'][j]);
 				}				
 				this.loading.dismiss();
 			}else if(data.status == 401){
