@@ -1,7 +1,9 @@
-import { Component, } from '@angular/core';
-import { NavController, Loading, LoadingController, AlertController, Events } from 'ionic-angular';
+import { Component,ViewChild } from '@angular/core';
+import { NavController, Loading, LoadingController, AlertController, Events, Slides } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 
+// Para aceptar HTML desde la API
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
 	selector: 'page-list',
@@ -10,14 +12,31 @@ import { RestProvider } from '../../providers/rest/rest';
 
 export class ConsultarCitas {
 
+	@ViewChild('slides') slides: Slides;
+
 	loading: 	Loading;		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	citas 		= new Array();	// Array con todas las citas futuras del paciente.
 		
-	constructor(public events: Events, private alertCtrl: AlertController, public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController) {
+	constructor(private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController) {
 		this.showLoading();
 		this.getCitas();
 		this.events.publish("user:logged");
 	}
+
+	/**
+	* 	Función que mueve los elementos del menú en forma
+	*	de slider para poder albergar más elementos
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
+	next() {
+		if(this.slides.isEnd())
+	    	this.slides.slidePrev();
+	    else
+	    	this.slides.slideNext();
+	}
+	   
 
 	/**
 	* 	Función que obtiene las citas pasadas del paciente

@@ -42616,6 +42616,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  padding: 2% 0 2% 0;
 }
 
 .fb-card .card_separator {
@@ -42791,14 +42792,15 @@ body {
 
 .fb-card.-vcita .card_label {
   text-transform: uppercase;
-  font-size: 0.6rem;
+  font-size: 1rem;
+  text-align: left;
   color: #858585;
   margin-bottom: 0.7rem;
 }
 
 .fb-card.-vcita .card_title {
-  font-size: 1.4rem;
   font-weight: normal;
+  text-align: left;
 }
 
 .fb-card.-vcita .card_subtitle {
@@ -42836,15 +42838,16 @@ body {
 }
 
 .fb-card.-vcita .card_time {
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin: 0.3rem 0;
 }
 
 .fb-card.-vcita .card_time span {
   display: block;
   text-transform: uppercase;
-  letter-spacing: 4;
+  letter-spacing: 4px;
   line-height: 2px;
+  font-size: 1rem;
 }
 
 .fb-card.-vcita .card_separator {
@@ -42868,20 +42871,23 @@ body {
 }
 
 .fb-card.-vcita .card_container .card_title {
-  font-size: 1.1rem;
   margin-left: 1rem;
+  font-size: 1.4rem;
+  text-align: left;
 }
 
 .fb-card.-vcita .card_container .card_subtitle {
-  font-size: 0.6rem;
+  font-size: 1rem;
   margin-left: 0.5rem;
+  text-align: left;
 }
 
 .fb-card.-vcita .card_estado {
   padding: 0.7rem 0 0.7rem 0.7rem;
   border-left: 3px solid #ed7aad;
   color: #595959;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
+  text-align: left;
 }
 
 .fb-card.-vgraph {
@@ -42947,9 +42953,9 @@ body {
   border-radius: 40px;
   background-color: #f3a7c9;
   color: #fff;
-  font-size: 0.8rem;
+  font-size: 1.2rem;
   font-weight: bold;
-  padding: 0.3rem 0.6rem;
+  padding: 0.5rem 1rem;
   text-decoration: none;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -43397,18 +43403,6 @@ page-consejos-personalizados .toolbar-background-md {
   background: white;
 }
 
-page-consultar-citas-futuras .Anulada {
-  color: #ff4444;
-}
-
-page-consultar-citas-futuras .Finalizada {
-  color: #0e5938;
-}
-
-page-consultar-citas-futuras .Fallada {
-  color: #ff4444;
-}
-
 page-doc-firmados .label-md {
   margin: 13px 8px 13px 0px;
   padding: 2px;
@@ -43718,7 +43712,7 @@ page-mi-perfil .nombre {
 
 page-mi-perfil .apellidos {
   font-size: 3rem;
-  margin: 0 0 0 10%;
+  margin: 5% 0 0 10%;
 }
 
 page-mi-perfil .row30 {
@@ -44174,11 +44168,77 @@ page-sugerencias .list-md > .item-block:last-child ion-label, page-sugerencias .
   margin-right: 0;
 }
 
-tabConsultarCitas .tabbar {
-  opacity: 1 !important;
-  min-height: 6rem;
+tabConsultarCitas ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-tabConsultarCitas .card-md p {
-  font-size: 20px;
+tabConsultarCitas .back-button.show-back-button {
+  z-index: 1111;
+}
+
+tabConsultarCitas ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+tabConsultarCitas .toolbar-background-md {
+  background: white;
+}
+
+tabConsultarCitas .tabs-md .tab-button[aria-selected=true] {
+  border-bottom: 2px solid #ed7aad;
+  color: #38383b;
+}
+
+tabConsultarCitas .tabs-md .tab-button {
+  border-bottom: 2px solid #e1e1e1;
+  color: #e1e1e1;
+  padding-top: 5% !important;
+}
+
+tabConsultarCitas .tabbar {
+  padding: 0rem 4rem 0rem 4rem;
+  background: white !important;
+  margin-top: -1rem;
+}
+
+tabConsultarCitas .header-md::after, tabConsultarCitas .tabs-md[tabsPlacement="top"] > .tabbar::after, tabConsultarCitas .footer-md::before, tabConsultarCitas .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+tabConsultarCitas ion-slides {
+  margin-top: 0px;
+}
+
+tabConsultarCitas ion-slide {
+  padding: 0 60px;
+}
+
+tabConsultarCitas .swiper-slide {
+  height: 80%;
+  padding: 0rem 6rem 0rem 4rem;
+}
+
+tabConsultarCitas swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 0;
+}
+
+tabConsultarCitas .swiper-pagination-bullet-active {
+  background: #f3a7c9;
+  opacity: 1;
+}
+
+tabConsultarCitas .swiper-pagination-fraction, tabConsultarCitas .swiper-pagination-custom, tabConsultarCitas .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 15%;
+  display: block !important;
+}
+
+tabConsultarCitas .slide-zoom {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
