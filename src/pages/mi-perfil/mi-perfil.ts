@@ -238,7 +238,7 @@ export class MiPerfilPage {
 	showLoading(txt = 'Cargando información...') {
 		this.loading = this.loadingCtrl.create({
 			content: txt,			
-			dismissOnPageChange: true
+			dismissOnPageChange: false
 		});
 		this.loading.present();
 		this.loadingPresented = true;

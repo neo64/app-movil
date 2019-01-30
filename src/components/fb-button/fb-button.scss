@@ -1,0 +1,27 @@
+fb-button {
+	
+	button{
+		background: white;
+		border-radius: 2px;
+		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
+		height: -webkit-fill-available;
+		width: 100%;
+		color: map-get($colors, pink-dark);
+		border: 1px solid map-get($colors, pink-dark);
+
+		&.active{
+			background: map-get($colors, pink-dark);
+			color: white;
+		}
+	}
+
+	p{
+		color: map-get($colors, pink-dark);
+		font-weight: 400;
+    	font-size: 1.2rem;
+    	margin-top: 8%;
+    	&.active{
+			color: white;
+		}
+	}
+}

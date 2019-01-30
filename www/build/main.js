@@ -1,6 +1,6 @@
-webpackJsonp([21],{
+webpackJsonp([24],{
 
-/***/ 101:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8,8 +8,8 @@ webpackJsonp([21],{
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -221,7 +221,7 @@ var InstruccionesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -229,8 +229,8 @@ var InstruccionesPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_consejos_detail_consejos_detail__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_consejos_detail_consejos_detail__ = __webpack_require__(222);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -358,7 +358,7 @@ var ConsejosPersonalizadosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -366,7 +366,7 @@ var ConsejosPersonalizadosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -522,7 +522,7 @@ var ProfilePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 104:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -530,8 +530,8 @@ var ProfilePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -762,7 +762,7 @@ var PresupuestosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 105:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -770,8 +770,8 @@ var PresupuestosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1020,228 +1020,16 @@ var DocumentosContablesPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 106:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-var PedirCitaPage = /** @class */ (function () {
-    function PedirCitaPage(alertCtrl, events, loadingCtrl, restProvider, navCtrl, navParams) {
-        this.alertCtrl = alertCtrl;
-        this.events = events;
-        this.loadingCtrl = loadingCtrl;
-        this.restProvider = restProvider;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.show = true; // Variable de tipo Booleano que cuando "true" ha obtenido citas del buscador.
-        this.isDrSelected = false; // Variable de tipo Booleano que detecta si se ha seleccionado un doctor o no.
-        this.doctores = []; // Array donde se almacenan todos los Drs.
-        this.tratamientos = []; // Array donde se almacenan todos los tratamientos asociados a ese doctor.
-        this.citasBuscador = []; // Array donde se almacenan todas las citas que ha devuelto el buscador.
-        this.ttoSelect = ""; // String donde se almacena el tratamiento seleccionado.
-        this.showLoading();
-        this.getDoctors();
-        this.events.publish("user:logged");
-    }
-    /**
-    * 	Función que obtiene todas las citas disponibles
-    * 	en la agenda ( conectada con el buscador )
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.searchCita = function (formulario) {
-        var _this = this;
-        this.citasBuscador = []; // Limpio las citas anteriores por si se pulsa el botón dos veces.
-        console.log(formulario);
-        this.restProvider.searchCita(formulario.form.value.date, formulario.form.value.hour, formulario.form.value.dr, formulario.form.value.tto.IdOpc, formulario.form.value.dias).then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                if (JSON.parse(data['data']).length > 0) {
-                    _this.citasBuscador = JSON.parse(data['data']);
-                    _this.show = true;
-                    _this.ttoSelect = formulario.form.value.tto.Descripcio;
-                }
-                else {
-                    _this.show = false;
-                }
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-            console.log(e);
-        });
-    };
-    PedirCitaPage.prototype.drSeleccionado = function (e) {
-        this.isDrSelected = true;
-        this.showLoading();
-        this.getTratamientos(e);
-    };
-    /**
-    * 	Función que obtiene todos los tratamientos asignados
-    *	al doctor seleccionado.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.getTratamientos = function (e) {
-        var _this = this;
-        this.restProvider.getTratamientos(e).then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                _this.tratamientos = data['data'];
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-            console.log(e);
-        });
-    };
-    /**
-    * 	Función que obtiene todos los doctores a los que se
-    *	les puede asignar una cita desde la aplicación móvil
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.getDoctors = function () {
-        var _this = this;
-        this.restProvider.getDoctors().then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                _this.doctores = data['data'];
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-        });
-    };
-    /**
-    * 	Función que envía un E-mail a recepción para que estas
-    *	inserten la cita desde el buscador.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.solicitarCita = function (fecha, hora, doctor, tratamiento) {
-        var _this = this;
-        this.showLoading('Solicitando cita ...');
-        this.restProvider.solicitarCita(fecha, hora, doctor, tratamiento).then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                _this.showError("¡Atención!", data['message']);
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-        });
-    };
-    /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.showLoading = function (cont) {
-        if (cont === void 0) { cont = 'Cargando información...'; }
-        this.loading = this.loadingCtrl.create({
-            content: cont
-        });
-        this.loading.present();
-    };
-    /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    PedirCitaPage.prototype.showError = function (title, text) {
-        this.loading.dismiss();
-        var alert = this.alertCtrl.create({
-            title: title,
-            message: text,
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    PedirCitaPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<div>\n		<ion-card detail-none  style="margin: 0px 0px 15px 0px;width:100%;    background: #c3e6cb;    color: #155724;    text-align: justify;    padding: 1.5rem;    border-radius: 1rem;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:100%;height:100%;float:left;">\n					Los campos de fecha, hora y preferencia de dias son opcionales, si no se rellenan se obtendrá la primera cita disponible.\n				</div>				\n			</div>\n		</ion-card>\n	</div>\n	<form #form="ngForm" (ngSubmit)="searchCita(form);showLoading(\'Buscando citas\');" novalidate style="margin-bottom:5rem;">\n		<ion-item>\n			<ion-label>Higienista</ion-label>\n			<ion-select required interface="action-sheet" (ngModelChange)="drSeleccionado($event)" [(ngModel)]="dr" name="dr" okText="OK" cancelText="Cancelar">\n				<ion-option [value]="cualquiera" selected>Sin preferencia</ion-option>\n				<ion-option *ngFor="let d of doctores" [value]="d.agenda">{{d.usuario}}</ion-option>\n			</ion-select>\n		</ion-item>\n		<ion-item>\n			<ion-label>Tratamiento</ion-label>\n			<ion-select required="yes" interface="action-sheet" [(ngModel)]="tto" name="tto" disabled="{{!isDrSelected}}" okText="OK" cancelText="CANCELAR">\n				<ion-option *ngFor="let t of tratamientos" [value]="t">{{t.Descripcio}}</ion-option>\n			</ion-select>\n		</ion-item>\n		<ion-item>\n			<ion-label>Fecha</ion-label>\n			<ion-datetime min="2018" max="2020"  name="date" displayFormat="DD/MM/YYYY" [(ngModel)]="date" doneText="OK" cancelText="CANCELAR"></ion-datetime>\n		</ion-item>\n		<ion-item>\n			<ion-label>Hora</ion-label>\n			<ion-datetime required min="09:30" max="20:30" name="hour" displayFormat="HH:mm" [(ngModel)]="hour" doneText="OK" cancelText="CANCELAR"></ion-datetime>\n		</ion-item>\n		<ion-item>\n			<ion-label>Preferencia de dias</ion-label>\n			<ion-select [(ngModel)]="dias" name="dias" multiple="true" okText="OK" cancelText="CANCELAR">\n				<ion-option value="lm">Lunes mañana</ion-option>\n				<ion-option value="lt">Lunes tarde</ion-option>\n				<ion-option value="mm">Martes mañana</ion-option>\n				<ion-option value="mt">Martes tarde</ion-option>\n				<ion-option value="xm">Miercoles mañana</ion-option>\n				<ion-option value="xt">Miercoles tarde</ion-option>\n				<ion-option value="jm">Jueves mañana</ion-option>\n				<ion-option value="jt">Jueves tarde</ion-option>\n				<ion-option value="vm">Viernes mañana</ion-option>\n				<ion-option value="vt">Viernes tarde</ion-option>\n			</ion-select>\n		</ion-item>	\n		\n		<button ion-button type="submit" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-search"></i>  Buscar</button>\n	</form>\n	<div *ngIf="show">\n		<div *ngFor="let item of citasBuscador; let i=index">\n			<ion-card>\n				<div *ngIf="i<5">\n					<ion-card-content >	\n						<p class="left" style="color:#5f5f62 !important">{{item.fecha}} </p>\n						<p class="left" style="font-size: 14px;margin-top: -0.55em;color:#5f5f62 !important">{{item.diaSemana}}</p>\n						<hr>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="far fa-clock marginRight primary" aria-hidden="true"></i> {{item.fIniDr}} - {{item.fFinDr}}</p>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-user-md marginRight primary" aria-hidden="true"></i> {{item.nombreDr}}</p>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-notes-medical marginRight primary" aria-hidden="true"></i> {{ttoSelect}} </p>\n					</ion-card-content>		\n					<ion-row class="cardfooter" style="font-size: 1.6rem;border-top: 1px solid lightgrey;">\n						<ion-col class="left primary" >\n							<span (click)="solicitarCita(item.fecha,item.fIniDr,item.nombreDr,ttoSelect)"><i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Solicitar</span>\n						</ion-col>\n					</ion-row>\n				</div>\n			</ion-card>  \n		</div>\n	</div>\n	<div *ngIf="show != true">\n		<ion-card detail-none  style="margin: 15px 0px 15px 0px;width:100%;    background: #ebcccc;    color: #a94442;    text-align: center;    padding: 1.5rem;    border-radius: 1rem;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:100%;height:100%;float:left;">\n					No hemos encontrado citas con los criterios de búsqueda.\n				</div>				\n			</div>\n		</ion-card>\n	</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
-    ], PedirCitaPage);
-    return PedirCitaPage;
-}());
-
-//# sourceMappingURL=pedir-cita.js.map
-
-/***/ }),
-
-/***/ 122:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabConsultarCitas; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1267,23 +1055,6 @@ var TabConsultarCitas = /** @class */ (function () {
             _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */]);
         });
     }
-    /**
-    * 	Función que obtiene en que dirección se ha movido
-    *	el dedo para seleccionar una Tab u otra.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    TabConsultarCitas.prototype.swipe = function (event) {
-        if (event.direction === 2) {
-            this.tabs.select(1);
-        }
-        if (event.direction === 4) {
-            this.tabs.select(0);
-        }
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])("myTab"),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* Tabs */])
@@ -1309,10 +1080,10 @@ var TabConsultarCitas = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recall_recall__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_instrucciones_instrucciones__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recall_recall__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_instrucciones_instrucciones__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1473,7 +1244,7 @@ var MiSaludPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1617,11 +1388,11 @@ var PopoverPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__change_password_change_password__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__change_password_change_password__ = __webpack_require__(75);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1853,7 +1624,7 @@ var MiPerfilPage = /** @class */ (function () {
         if (txt === void 0) { txt = 'Cargando información...'; }
         this.loading = this.loadingCtrl.create({
             content: txt,
-            dismissOnPageChange: true
+            dismissOnPageChange: false
         });
         this.loading.present();
         this.loadingPresented = true;
@@ -1898,10 +1669,10 @@ var MiPerfilPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_plan_economico_plan_economico__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_presupuestos_presupuestos__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_documentos_contables_documentos_contables__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_plan_economico_plan_economico__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_presupuestos_presupuestos__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_documentos_contables_documentos_contables__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2061,9 +1832,9 @@ var MisDocumentosPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MisCitasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pedir_cita_pedir_cita__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_recall_recall__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_recall_recall__ = __webpack_require__(66);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2114,17 +1885,69 @@ var MisCitasPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabHigienesPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_recall_recall__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(19);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var TabHigienesPage = /** @class */ (function () {
+    function TabHigienesPage(events, navCtrl) {
+        var _this = this;
+        this.events = events;
+        this.navCtrl = navCtrl;
+        this.tabFuturas = __WEBPACK_IMPORTED_MODULE_2__pages_recall_recall__["a" /* RecallPage */]; // Página de citas futuras
+        this.tabAnteriores = __WEBPACK_IMPORTED_MODULE_3__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */]; // Página de citas pasadas
+        events.subscribe("user:Unauthorized", function () {
+            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */]);
+        });
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])("myTab"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["y" /* Tabs */])
+    ], TabHigienesPage.prototype, "tabs", void 0);
+    TabHigienesPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-tab-higienes',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/tab-higienes/tab-higienes.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Higienes</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>       \n  <ion-tabs #myTab tabsPlacement="top" selectedIndex="1">\n    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>          \n    <ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>\n  </ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/tab-higienes/tab-higienes.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
+    ], TabHigienesPage);
+    return TabHigienesPage;
+}());
+
+//# sourceMappingURL=tab-higienes.js.map
+
+/***/ }),
+
+/***/ 144:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
 /* unused harmony export snapshotToArray */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(674);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(676);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_Firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(186);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(187);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(62);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2568,7 +2391,7 @@ var snapshotToArray = function (snapshot, nickname, vb, firstOpen, offStatus) {
 
 /***/ }),
 
-/***/ 144:
+/***/ 145:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2576,8 +2399,8 @@ var snapshotToArray = function (snapshot, nickname, vb, firstOpen, offStatus) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(94);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2690,7 +2513,7 @@ var SugerenciasPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3253,7 +3076,7 @@ var RestProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 20:
+/***/ 19:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3261,8 +3084,8 @@ var RestProvider = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_change_password_change_password__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_change_password_change_password__ = __webpack_require__(75);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3391,7 +3214,7 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3436,7 +3259,7 @@ var ConsejosDetailPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3444,8 +3267,8 @@ var ConsejosDetailPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(224);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3596,7 +3419,7 @@ var PlanEconomicoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 223:
+/***/ 224:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3604,7 +3427,7 @@ var PlanEconomicoPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3805,7 +3628,52 @@ var PlanEconomicoDetailPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 224:
+/***/ 225:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecallPasadasPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the RecallPasadasPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var RecallPasadasPage = /** @class */ (function () {
+    function RecallPasadasPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+    }
+    RecallPasadasPage.prototype.ionViewDidLoad = function () {
+        console.log('ionViewDidLoad RecallPasadasPage');
+    };
+    RecallPasadasPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-recall-pasadas',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/recall-pasadas/recall-pasadas.html"*/'<!--\n  Generated template for the RecallPasadasPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>recallPasadas</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/recall-pasadas/recall-pasadas.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], RecallPasadasPage);
+    return RecallPasadasPage;
+}());
+
+//# sourceMappingURL=recall-pasadas.js.map
+
+/***/ }),
+
+/***/ 226:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3839,7 +3707,7 @@ var EmojiProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 257:
+/***/ 259:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -3852,96 +3720,108 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 257;
+webpackEmptyAsyncContext.id = 259;
 
 /***/ }),
 
-/***/ 298:
+/***/ 300:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/acceso-resultados/acceso-resultados.module": [
-		830,
+		833,
 		0
 	],
 	"../pages/change-password/change-password.module": [
-		831,
-		20
+		834,
+		23
 	],
 	"../pages/chat/chat.module": [
-		834,
-		19
+		835,
+		22
 	],
 	"../pages/consejos-detail/consejos-detail.module": [
-		832,
-		18
+		836,
+		21
 	],
 	"../pages/consejos-personalizados/consejos-personalizados.module": [
-		833,
-		17
+		837,
+		20
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
-		835,
-		16
+		838,
+		19
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		836,
-		15
+		839,
+		18
 	],
 	"../pages/instrucciones/instrucciones.module": [
-		837,
-		14
+		840,
+		17
 	],
 	"../pages/login/login.module": [
-		838,
-		13
+		841,
+		16
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
-		839,
-		12
+		842,
+		15
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		840,
-		11
+		843,
+		14
 	],
 	"../pages/mis-citas/mis-citas.module": [
-		841,
-		10
+		844,
+		13
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
-		842,
-		9
+		845,
+		12
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
-		843,
-		8
+		846,
+		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		845,
-		7
+		847,
+		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
-		844,
-		6
+		848,
+		9
 	],
 	"../pages/popover/popover.module": [
-		846,
-		5
+		849,
+		8
 	],
 	"../pages/presupuestos/presupuestos.module": [
-		847,
-		4
+		850,
+		7
 	],
 	"../pages/profile/profile.module": [
-		848,
-		3
+		851,
+		6
+	],
+	"../pages/recall-pasadas/recall-pasadas.module": [
+		852,
+		5
 	],
 	"../pages/recall/recall.module": [
-		849,
-		2
+		853,
+		4
 	],
 	"../pages/sugerencias/sugerencias.module": [
-		850,
+		854,
+		3
+	],
+	"../pages/tab-higienes/tab-higienes.module": [
+		855,
+		2
+	],
+	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
+		856,
 		1
 	]
 };
@@ -3956,12 +3836,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 298;
+webpackAsyncContext.id = 300;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 301:
+/***/ 303:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3969,7 +3849,9 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tab_higienes_tab_higienes__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3982,10 +3864,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 // Para aceptar HTML desde la API
 
 var ConsultarCitas = /** @class */ (function () {
-    function ConsultarCitas(domSanitizer, events, alertCtrl, navCtrl, restProvider, loadingCtrl) {
+    function ConsultarCitas(app, toastCtrl, domSanitizer, events, alertCtrl, navCtrl, restProvider, loadingCtrl) {
+        this.app = app;
+        this.toastCtrl = toastCtrl;
         this.domSanitizer = domSanitizer;
         this.events = events;
         this.alertCtrl = alertCtrl;
@@ -3993,22 +3879,57 @@ var ConsultarCitas = /** @class */ (function () {
         this.restProvider = restProvider;
         this.loadingCtrl = loadingCtrl;
         this.citas = new Array(); // Array con todas las citas futuras del paciente.
+        this.bHigienes = { name: 'MIS HIGIENES', svg: '', openPage: 'Higiene', class: '', tipo: 'page', gradiente: '' };
+        this.bPedirCita = { name: 'PEDIR CITA', svg: '', openPage: 'PedirCita', class: 'active', tipo: 'page', gradiente: '' };
         this.showLoading();
         this.getCitas();
         this.events.publish("user:logged");
     }
     /**
-    * 	Función que mueve los elementos del menú en forma
-    *	de slider para poder albergar más elementos
+    * 	Función que abre una página o una web dependiendo
+    *	de los parámetros que se les introduzca.
+    *
+    * 	@param String page a la que redirigir.
+    * 	@param String tipo si es pagina o web.
     *
     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
     *
     */
-    ConsultarCitas.prototype.next = function () {
-        if (this.slides.isEnd())
-            this.slides.slidePrev();
-        else
-            this.slides.slideNext();
+    ConsultarCitas.prototype.openPage = function (page, tipo) {
+        if (tipo === "page") {
+            if (page == "Higiene")
+                this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_3__tab_higienes_tab_higienes__["a" /* TabHigienesPage */]);
+            else if (page == "PedirCita")
+                this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_4__pedir_cita_pedir_cita__["a" /* PedirCitaPage */]);
+            else
+                this.presentToast("La página no está disponible.");
+        }
+        else if (tipo == "web") {
+            window.open(page, '_system', 'location=yes');
+        }
+        else {
+            this.presentToast("La página '" + page + "' de tipo '" + tipo + "' no está disponible.");
+        }
+    };
+    /**
+    * 	Función que muestra un Toast con la información
+    *	referente a la acción del usuario.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ConsultarCitas.prototype.presentToast = function (txt) {
+        var toast = this.toastCtrl.create({
+            message: txt,
+            duration: 3000,
+            position: 'bottom',
+            showCloseButton: true,
+            closeButtonText: 'OK'
+        });
+        toast.present();
     };
     /**
     * 	Función que obtiene las citas pasadas del paciente
@@ -4096,15 +4017,11 @@ var ConsultarCitas = /** @class */ (function () {
             this.getCitas();
         }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('slides'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["x" /* Slides */])
-    ], ConsultarCitas.prototype, "slides", void 0);
     ConsultarCitas = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/'<ion-content>\n	<p col-10 style="text-align:right;    margin-bottom: 0;" (click)="next()">Ver más</p>\n	<ion-slides pager spaceBetween="-75" #slides>\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row" style="margin-bottom:1rem;">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div style="margin-bottom:1rem;">\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>			        \n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/'<ion-content>\n	<ion-slides spaceBetween="-75">\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>			        \n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], ConsultarCitas);
     return ConsultarCitas;
 }());
@@ -4113,7 +4030,7 @@ var ConsultarCitas = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 302:
+/***/ 304:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4122,8 +4039,10 @@ var ConsultarCitas = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_popover_popover__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tab_higienes_tab_higienes__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4138,11 +4057,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
 // Para aceptar HTML desde la API
 
 var ConsultarCitasFuturasPage = /** @class */ (function () {
-    function ConsultarCitasFuturasPage(domSanitizer, events, alertCtrl, popoverCtrl, calendar, navCtrl, restProvider, loadingCtrl, plt) {
+    function ConsultarCitasFuturasPage(app, toastCtrl, domSanitizer, events, alertCtrl, popoverCtrl, calendar, navCtrl, restProvider, loadingCtrl, plt) {
         var _this = this;
+        this.app = app;
+        this.toastCtrl = toastCtrl;
         this.domSanitizer = domSanitizer;
         this.events = events;
         this.alertCtrl = alertCtrl;
@@ -4157,6 +4080,8 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
         this.showMessage = false;
         this.fecha = ""; // Fecha que será obtenida por parámetro
         this.hora = ""; // Hora que será obtenida por parámetro
+        this.bHigienes = { name: 'MIS HIGIENES', svg: '', openPage: 'Higiene', class: '', tipo: 'page', gradiente: '' };
+        this.bPedirCita = { name: 'PEDIR CITA', svg: '', openPage: 'PedirCita', class: 'active', tipo: 'page', gradiente: '' };
         this.showLoading();
         this.getCitas();
         if (this.plt.is('cordova')) {
@@ -4168,6 +4093,52 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
         }
         this.events.publish("user:logged");
     }
+    /**
+    * 	Función que abre una página o una web dependiendo
+    *	de los parámetros que se les introduzca.
+    *
+    * 	@param String page a la que redirigir.
+    * 	@param String tipo si es pagina o web.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ConsultarCitasFuturasPage.prototype.openPage = function (page, tipo) {
+        if (tipo === "page") {
+            if (page == "Higiene")
+                this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_5__tab_higienes_tab_higienes__["a" /* TabHigienesPage */]);
+            else if (page == "PedirCita")
+                this.app.getRootNav().push(__WEBPACK_IMPORTED_MODULE_6__pedir_cita_pedir_cita__["a" /* PedirCitaPage */]);
+            else
+                this.presentToast("La página no está disponible.");
+        }
+        else if (tipo == "web") {
+            window.open(page, '_system', 'location=yes');
+        }
+        else {
+            this.presentToast("La página '" + page + "' de tipo '" + tipo + "' no está disponible.");
+        }
+    };
+    /**
+    * 	Función que muestra un Toast con la información
+    *	referente a la acción del usuario.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ConsultarCitasFuturasPage.prototype.presentToast = function (txt) {
+        var toast = this.toastCtrl.create({
+            message: txt,
+            duration: 3000,
+            position: 'bottom',
+            showCloseButton: true,
+            closeButtonText: 'OK'
+        });
+        toast.present();
+    };
     /**
     * 	Función que muestra una alerta para confirmar o
     *	anular la acción requerida.
@@ -4225,19 +4196,6 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
         }).catch(function (e) {
             _this.showError("ERROR", "Hubo un error al gestionar tu cita.");
         });
-    };
-    /**
-    * 	Función que mueve los elementos del menú en forma
-    *	de slider para poder albergar más elementos
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ConsultarCitasFuturasPage.prototype.next = function () {
-        if (this.slides.isEnd())
-            this.slides.slidePrev();
-        else
-            this.slides.slideNext();
     };
     /**
     * 	Función que muestra un pop-up para gestionar la cita.
@@ -4336,7 +4294,7 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
         if (text === void 0) { text = 'Cargando información...'; }
         this.loading = this.loadingCtrl.create({
             content: text,
-            dismissOnPageChange: true
+            dismissOnPageChange: false
         });
         this.loading.present();
     };
@@ -4371,24 +4329,20 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
     */
     ConsultarCitasFuturasPage.prototype.swipe = function (e) {
         if (e.direction == '2') {
-            this.navCtrl.parent.select(1);
+            this.app.getRootNav().parent.select(1);
         }
         else if (e.direction == '4') {
-            this.navCtrl.parent.select(0);
+            this.app.getRootNav().parent.select(0);
         }
         else if (e.direction == '1') {
             this.getCitas();
         }
     };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('slides'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["x" /* Slides */])
-    ], ConsultarCitasFuturasPage.prototype, "slides", void 0);
     ConsultarCitasFuturasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/'<ion-content>\n	<p col-10 style="text-align:right;    margin-bottom: 0;" (click)="next()">Ver más</p>\n	<ion-slides pager spaceBetween="-75" #slides>\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row" style="margin-bottom:1rem;">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div style="margin-bottom:1rem;">\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Dirección\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle">\n			                        Calle de Caleruega, 67\n			                        <br />\n			                        3ª Planta A\n			                        <br />\n			                        28033 - Madrid\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Calendario\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n			                        Haz\n			                        <span class="-pink">\n			                            click\n			                        </span>\n			                        para añadir\n			                        <br />\n			                            la cita a tu calendario\n			                    </div>\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div style="width:100%;">\n			                <div class="card_label" style="margin-top:1rem;">\n			                    Gestiona tu cita\n			                </div>\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n			                        Anular\n			                    </a>\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n			                        Confirmar\n			                    </a>			                    \n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n			                        Cambiar\n			                    </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/'<ion-content>\n	<ion-slides spaceBetween="-75">\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Dirección\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle">\n			                        Calle de Caleruega, 67\n			                        <br />\n			                        3ª Planta A\n			                        <br />\n			                        28033 - Madrid\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Calendario\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n			                        Haz\n			                        <span class="-pink">\n			                            click\n			                        </span>\n			                        para añadir\n			                        <br />\n			                            la cita a tu calendario\n			                    </div>\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div style="width:100%;">\n			                <div class="card_label" style="margin-top:1rem;">\n			                    Gestiona tu cita\n			                </div>\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n			                        Anular\n			                    </a>\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n			                        Confirmar\n			                    </a>			                    \n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n			                        Cambiar\n			                    </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */]])
     ], ConsultarCitasFuturasPage);
     return ConsultarCitasFuturasPage;
 }());
@@ -4397,14 +4351,14 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 528:
+/***/ 530:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(751);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(753);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4437,7 +4391,7 @@ var EmojiPickerComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 529:
+/***/ 531:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4446,8 +4400,8 @@ var EmojiPickerComponentModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4633,13 +4587,13 @@ var DocFirmadosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 530:
+/***/ 532:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(531);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(645);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(533);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(647);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -4647,7 +4601,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 645:
+/***/ 647:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4655,57 +4609,63 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(24);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(768);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(347);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(769);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(301);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pedir_cita_pedir_cita__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_change_password_change_password__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(302);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__ionic_native_calendar__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_popover_popover__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_chat_chat__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_instrucciones_instrucciones__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_doc_firmados_doc_firmados__ = __webpack_require__(529);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_profile_profile__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_emoji_emoji__ = __webpack_require__(224);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__components_emoji_picker_emoji_picker_module__ = __webpack_require__(528);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_sugerencias_sugerencias__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_mi_salud_mi_salud__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_mi_perfil_mi_perfil__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_mis_citas_mis_citas__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mis_documentos_mis_documentos__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_recall_recall__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_consejos_detail_consejos_detail__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_documentos_contables_documentos_contables__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_presupuestos_presupuestos__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_plan_economico_plan_economico__ = __webpack_require__(222);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_status_bar__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__ionic_native_splash_screen__ = __webpack_require__(391);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_fcm__ = __webpack_require__(392);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__ionic_native_camera__ = __webpack_require__(186);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39_ionic_img_viewer__ = __webpack_require__(776);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_file__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__ionic_native_file_opener__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_photo_viewer__ = __webpack_require__(348);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__components_fb_button_icon_fb_button_icon__ = __webpack_require__(783);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__ionic_native_call_number__ = __webpack_require__(349);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46_ng2_charts__ = __webpack_require__(785);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_46_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(301);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__app_component__ = __webpack_require__(771);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(303);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tab_higienes_tab_higienes__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(304);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__ionic_native_calendar__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_popover_popover__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_chat_chat__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_instrucciones_instrucciones__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_doc_firmados_doc_firmados__ = __webpack_require__(531);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_profile_profile__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__providers_emoji_emoji__ = __webpack_require__(226);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__components_emoji_picker_emoji_picker_module__ = __webpack_require__(530);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_sugerencias_sugerencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_mi_salud_mi_salud__ = __webpack_require__(138);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_mi_perfil_mi_perfil__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mis_citas_mis_citas__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_mis_documentos_mis_documentos__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_recall_recall__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(225);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_consejos_detail_consejos_detail__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_documentos_contables_documentos_contables__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_presupuestos_presupuestos__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_plan_economico_plan_economico__ = __webpack_require__(223);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__ionic_native_status_bar__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__ionic_native_splash_screen__ = __webpack_require__(393);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__providers_rest_rest__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__ionic_native_fcm__ = __webpack_require__(394);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__ionic_native_camera__ = __webpack_require__(187);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41_ionic_img_viewer__ = __webpack_require__(778);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__ionic_native_file__ = __webpack_require__(62);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__ionic_native_file_opener__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__ionic_native_photo_viewer__ = __webpack_require__(350);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__components_fb_button_icon_fb_button_icon__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__components_fb_button_fb_button__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(787);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__ionic_native_call_number__ = __webpack_require__(351);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49_ng2_charts__ = __webpack_require__(788);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_49_ng2_charts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
 
 
 
@@ -4764,35 +4724,38 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_popover_popover__["a" /* PopoverPage */],
                 __WEBPACK_IMPORTED_MODULE_7__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_chat_chat__["a" /* ChatPage */],
-                __WEBPACK_IMPORTED_MODULE_43__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
-                __WEBPACK_IMPORTED_MODULE_44__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */]
+                __WEBPACK_IMPORTED_MODULE_19__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_45__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
+                __WEBPACK_IMPORTED_MODULE_47__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */],
+                __WEBPACK_IMPORTED_MODULE_46__components_fb_button_fb_button__["a" /* FbButtonComponent */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_46_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_49_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_21__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
-                __WEBPACK_IMPORTED_MODULE_39_ionic_img_viewer__["a" /* IonicImageViewerModule */],
+                __WEBPACK_IMPORTED_MODULE_22__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_41_ionic_img_viewer__["a" /* IonicImageViewerModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_6__app_component__["a" /* MyApp */], {
                     backButtonText: '',
                     backButtonIcon: 'ios-arrow-back',
@@ -4801,9 +4764,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/acceso-resultados/acceso-resultados.module#AccesoResultadosPageModule', name: 'AccesoResultadosPage', segment: 'acceso-resultados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
@@ -4813,16 +4776,19 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_23__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_24__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */]
@@ -4834,42 +4800,44 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_popover_popover__["a" /* PopoverPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_chat_chat__["a" /* ChatPage */]
+                __WEBPACK_IMPORTED_MODULE_12__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_chat_chat__["a" /* ChatPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */],
-                __WEBPACK_IMPORTED_MODULE_42__ionic_native_photo_viewer__["a" /* PhotoViewer */],
-                __WEBPACK_IMPORTED_MODULE_37__ionic_native_fcm__["a" /* FCM */],
-                __WEBPACK_IMPORTED_MODULE_20__providers_emoji_emoji__["a" /* EmojiProvider */],
-                __WEBPACK_IMPORTED_MODULE_34__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_35__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_44__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+                __WEBPACK_IMPORTED_MODULE_39__ionic_native_fcm__["a" /* FCM */],
+                __WEBPACK_IMPORTED_MODULE_21__providers_emoji_emoji__["a" /* EmojiProvider */],
+                __WEBPACK_IMPORTED_MODULE_36__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_37__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_36__providers_rest_rest__["a" /* RestProvider */],
-                __WEBPACK_IMPORTED_MODULE_14__ionic_native_calendar__["a" /* Calendar */],
+                __WEBPACK_IMPORTED_MODULE_38__providers_rest_rest__["a" /* RestProvider */],
+                __WEBPACK_IMPORTED_MODULE_15__ionic_native_calendar__["a" /* Calendar */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */],
-                __WEBPACK_IMPORTED_MODULE_40__ionic_native_file__["a" /* File */],
-                __WEBPACK_IMPORTED_MODULE_38__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_41__ionic_native_file_opener__["a" /* FileOpener */],
-                __WEBPACK_IMPORTED_MODULE_45__ionic_native_call_number__["a" /* CallNumber */]
+                __WEBPACK_IMPORTED_MODULE_42__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_40__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_43__ionic_native_file_opener__["a" /* FileOpener */],
+                __WEBPACK_IMPORTED_MODULE_48__ionic_native_call_number__["a" /* CallNumber */]
             ]
         })
     ], AppModule);
@@ -4880,16 +4848,456 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 73:
+/***/ 66:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecallPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(185);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_popover_popover__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(24);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+var RecallPage = /** @class */ (function () {
+    function RecallPage(domSanitizer, calendar, popoverCtrl, events, restProvider, loadingCtrl, alertCtrl, navCtrl) {
+        this.domSanitizer = domSanitizer;
+        this.calendar = calendar;
+        this.popoverCtrl = popoverCtrl;
+        this.events = events;
+        this.restProvider = restProvider;
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.recall = Array();
+        this.fechaProx = "";
+        this.showPlanificada = false;
+        this.showMessage = true;
+        this.showLoading();
+        this.getRecall();
+        this.events.publish("user:logged");
+    }
+    RecallPage.prototype.openPage = function (page, tipo) {
+        if (tipo == "page") {
+        }
+        else if (tipo == "web") {
+            window.open(page, '_system', 'location=yes');
+        }
+    };
+    /**
+    * 	Función que añade al calendario una cita.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    RecallPage.prototype.addEvent = function (timestampINI, timestampFIN) {
+        var _this = this;
+        this.showLoading("Añadiendo al calendario");
+        var dateINI = new Date(parseInt(timestampINI));
+        var dateFIN = new Date(parseInt(timestampFIN));
+        var titulo = 'Cita en clínica dental Ferrus & Bratos';
+        var direccion = 'C/ Caleruega 67 3ª Planta. 28033 Madrid';
+        var options = { calendarId: 1, calendarName: "Clínica Ferrus & Bratos", url: 'http://clinicaferrusbratos.com', firstReminderMinutes: 15 };
+        this.calendar.createEventInteractivelyWithOptions(titulo, direccion, '', dateINI, dateFIN, options).then(function (res) {
+            _this.loading.dismiss();
+        }, function (err) {
+            _this.loading.dismiss();
+        });
+    };
+    /**
+    * 	Función que muestra un pop-up para gestionar la cita.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    RecallPage.prototype.presentPopover = function (myEvent, fecha, hora) {
+        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_5__pages_popover_popover__["a" /* PopoverPage */], { fecha: fecha, hora: hora });
+        popover.present({
+            ev: myEvent
+        });
+    };
+    /**
+    * 	Función que muestra una alerta para confirmar o
+    *	anular la acción requerida.
+    *
+    * 	@param String Accion de gestión de la cita (Anulada, Cambio o Confirmada)
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    RecallPage.prototype.presentConfirm = function (action, fechaDecimal, horaDecimal) {
+        var _this = this;
+        var alert = this.alertCtrl.create({
+            title: 'Confirmación requerida',
+            message: '¿Quieres ' + action + ' la cita?',
+            buttons: [{ text: 'CANCELAR', role: 'cancel' }, {
+                    text: action,
+                    handler: function () {
+                        _this.showLoading("Gestionando la cita ...");
+                        _this.gestionarCita(action, fechaDecimal, horaDecimal);
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    /**
+    * 	Función que muestra gestiona la cita haciendo
+    *	uso de la API del sistema
+    *
+    * 	@param String Tipo de gestión de la cita (Anulada, Cambio o Confirmada)
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    RecallPage.prototype.gestionarCita = function (tipo, fechaDecimal, horaDecimal) {
+        var _this = this;
+        var textoAlert = "";
+        if (tipo == "anular")
+            textoAlert = "Hemos anulado tu cita.";
+        else if (tipo == "cambiar")
+            textoAlert = "Nos pondremos en contacto contigo para cambiar la cita.";
+        else if (tipo == "confirmar")
+            textoAlert = "Hemos confirmado tu cita.";
+        this.restProvider.gestionarCita(tipo, fechaDecimal, horaDecimal).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.showError("Información", textoAlert);
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.events.publish("user:Unauthorized");
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.showError("ERROR", "Hubo un error al gestionar tu cita.");
+        });
+    };
+    /**
+    * 	Función que obtiene las higienes y recall
+    *	del paciente
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    RecallPage.prototype.getRecall = function () {
+        var _this = this;
+        this.restProvider.getRecall().then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.recall = data['data']['data'];
+                if (data['data']['fechaFutura']) {
+                    _this.showMessage = false;
+                }
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+                console.log(data['message']);
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+            console.log(e);
+        });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    RecallPage.prototype.showLoading = function (txt) {
+        if (txt === void 0) { txt = 'Cargando información...'; }
+        this.loading = this.loadingCtrl.create({
+            content: txt,
+            dismissOnPageChange: false
+        });
+        this.loading.present();
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    RecallPage.prototype.showError = function (title, text) {
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: text,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    RecallPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-recall',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/'<ion-content>\n	<ion-slides spaceBetween="-75">\n		<ion-slide *ngFor="let item of recall">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Dirección\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle">\n			                        Calle de Caleruega, 67\n			                        <br />\n			                        3ª Planta A\n			                        <br />\n			                        28033 - Madrid\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Calendario\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n			                        Haz\n			                        <span class="-pink">\n			                            click\n			                        </span>\n			                        para añadir\n			                        <br />\n			                            la cita a tu calendario\n			                    </div>\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div style="width:100%;">\n			                <div class="card_label" style="margin-top:1rem;">\n			                    Gestiona tu cita\n			                </div>\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n			                        Anular\n			                    </a>\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n			                        Confirmar\n			                    </a>			                    \n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n			                        Cambiar\n			                    </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<ion-row padding>\n	<div class="fb-card -v4">\n                <div class="left">\n                    <div class="avatar">\n                        <img alt="" src="https://api.adorable.io/avatars/200/abott@adorable.png">\n                    </div>\n                </div>\n                <div class="center" style="justify-content: space-evenly;">\n                    <div class="card_title">\n                        Tu última higiene fue hace:\n                    </div>\n                    <div class="card_subtitle">\n                        Se recomienda una higiene cada 12m\n                    </div>\n                </div>\n                <div class="right">\n                    <div class="card_time">\n                        21\n                        <span>\n                            meses\n                        </span>\n                    </div>\n                </div>\n            </div>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
+    ], RecallPage);
+    return RecallPage;
+}());
+
+//# sourceMappingURL=recall.js.map
+
+/***/ }),
+
+/***/ 67:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(19);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PedirCitaPage = /** @class */ (function () {
+    function PedirCitaPage(alertCtrl, events, loadingCtrl, restProvider, navCtrl, navParams) {
+        this.alertCtrl = alertCtrl;
+        this.events = events;
+        this.loadingCtrl = loadingCtrl;
+        this.restProvider = restProvider;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.show = true; // Variable de tipo Booleano que cuando "true" ha obtenido citas del buscador.
+        this.isDrSelected = false; // Variable de tipo Booleano que detecta si se ha seleccionado un doctor o no.
+        this.doctores = []; // Array donde se almacenan todos los Drs.
+        this.tratamientos = []; // Array donde se almacenan todos los tratamientos asociados a ese doctor.
+        this.citasBuscador = []; // Array donde se almacenan todas las citas que ha devuelto el buscador.
+        this.ttoSelect = ""; // String donde se almacena el tratamiento seleccionado.
+        this.showLoading();
+        this.getDoctors();
+        this.events.publish("user:logged");
+    }
+    /**
+    * 	Función que obtiene todas las citas disponibles
+    * 	en la agenda ( conectada con el buscador )
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPage.prototype.searchCita = function (formulario) {
+        var _this = this;
+        this.citasBuscador = []; // Limpio las citas anteriores por si se pulsa el botón dos veces.
+        console.log(formulario);
+        this.restProvider.searchCita(formulario.form.value.date, formulario.form.value.hour, formulario.form.value.dr, formulario.form.value.tto.IdOpc, formulario.form.value.dias).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                if (JSON.parse(data['data']).length > 0) {
+                    _this.citasBuscador = JSON.parse(data['data']);
+                    _this.show = true;
+                    _this.ttoSelect = formulario.form.value.tto.Descripcio;
+                }
+                else {
+                    _this.show = false;
+                }
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+            console.log(e);
+        });
+    };
+    PedirCitaPage.prototype.drSeleccionado = function (e) {
+        this.isDrSelected = true;
+        this.showLoading();
+        this.getTratamientos(e);
+    };
+    /**
+    * 	Función que obtiene todos los tratamientos asignados
+    *	al doctor seleccionado.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPage.prototype.getTratamientos = function (e) {
+        var _this = this;
+        this.restProvider.getTratamientos(e).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.tratamientos = data['data'];
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+            console.log(e);
+        });
+    };
+    /**
+    * 	Función que obtiene todos los doctores a los que se
+    *	les puede asignar una cita desde la aplicación móvil
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPage.prototype.getDoctors = function () {
+        var _this = this;
+        this.restProvider.getDoctors().then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.doctores = data['data'];
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+        });
+    };
+    /**
+    * 	Función que envía un E-mail a recepción para que estas
+    *	inserten la cita desde el buscador.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPage.prototype.solicitarCita = function (fecha, hora, doctor, tratamiento) {
+        var _this = this;
+        this.showLoading('Solicitando cita ...');
+        this.restProvider.solicitarCita(fecha, hora, doctor, tratamiento).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.showError("¡Atención!", data['message']);
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+        });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPage.prototype.showLoading = function (cont) {
+        if (cont === void 0) { cont = 'Cargando información...'; }
+        this.loading = this.loadingCtrl.create({
+            content: cont
+        });
+        this.loading.present();
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    PedirCitaPage.prototype.showError = function (title, text) {
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: text,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    PedirCitaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content padding>\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<div>\n		<ion-card detail-none  style="margin: 0px 0px 15px 0px;width:100%;    background: #c3e6cb;    color: #155724;    text-align: justify;    padding: 1.5rem;    border-radius: 1rem;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:100%;height:100%;float:left;">\n					Los campos de fecha, hora y preferencia de dias son opcionales, si no se rellenan se obtendrá la primera cita disponible.\n				</div>				\n			</div>\n		</ion-card>\n	</div>\n	<form #form="ngForm" (ngSubmit)="searchCita(form);showLoading(\'Buscando citas\');" novalidate style="margin-bottom:5rem;">\n		<ion-item>\n			<ion-label>Higienista</ion-label>\n			<ion-select required interface="action-sheet" (ngModelChange)="drSeleccionado($event)" [(ngModel)]="dr" name="dr" okText="OK" cancelText="Cancelar">\n				<ion-option [value]="cualquiera" selected>Sin preferencia</ion-option>\n				<ion-option *ngFor="let d of doctores" [value]="d.agenda">{{d.usuario}}</ion-option>\n			</ion-select>\n		</ion-item>\n		<ion-item>\n			<ion-label>Tratamiento</ion-label>\n			<ion-select required="yes" interface="action-sheet" [(ngModel)]="tto" name="tto" disabled="{{!isDrSelected}}" okText="OK" cancelText="CANCELAR">\n				<ion-option *ngFor="let t of tratamientos" [value]="t">{{t.Descripcio}}</ion-option>\n			</ion-select>\n		</ion-item>\n		<ion-item>\n			<ion-label>Fecha</ion-label>\n			<ion-datetime min="2018" max="2020"  name="date" displayFormat="DD/MM/YYYY" [(ngModel)]="date" doneText="OK" cancelText="CANCELAR"></ion-datetime>\n		</ion-item>\n		<ion-item>\n			<ion-label>Hora</ion-label>\n			<ion-datetime required min="09:30" max="20:30" name="hour" displayFormat="HH:mm" [(ngModel)]="hour" doneText="OK" cancelText="CANCELAR"></ion-datetime>\n		</ion-item>\n		<ion-item>\n			<ion-label>Preferencia de dias</ion-label>\n			<ion-select [(ngModel)]="dias" name="dias" multiple="true" okText="OK" cancelText="CANCELAR">\n				<ion-option value="lm">Lunes mañana</ion-option>\n				<ion-option value="lt">Lunes tarde</ion-option>\n				<ion-option value="mm">Martes mañana</ion-option>\n				<ion-option value="mt">Martes tarde</ion-option>\n				<ion-option value="xm">Miercoles mañana</ion-option>\n				<ion-option value="xt">Miercoles tarde</ion-option>\n				<ion-option value="jm">Jueves mañana</ion-option>\n				<ion-option value="jt">Jueves tarde</ion-option>\n				<ion-option value="vm">Viernes mañana</ion-option>\n				<ion-option value="vt">Viernes tarde</ion-option>\n			</ion-select>\n		</ion-item>	\n		\n		<button ion-button type="submit" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-search"></i>  Buscar</button>\n	</form>\n	<div *ngIf="show">\n		<div *ngFor="let item of citasBuscador; let i=index">\n			<ion-card>\n				<div *ngIf="i<5">\n					<ion-card-content >	\n						<p class="left" style="color:#5f5f62 !important">{{item.fecha}} </p>\n						<p class="left" style="font-size: 14px;margin-top: -0.55em;color:#5f5f62 !important">{{item.diaSemana}}</p>\n						<hr>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="far fa-clock marginRight primary" aria-hidden="true"></i> {{item.fIniDr}} - {{item.fFinDr}}</p>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-user-md marginRight primary" aria-hidden="true"></i> {{item.nombreDr}}</p>\n						<p class="left" style="color:#5f5f62 !important"><i style="width: 3%;" class="fas fa-notes-medical marginRight primary" aria-hidden="true"></i> {{ttoSelect}} </p>\n					</ion-card-content>		\n					<ion-row class="cardfooter" style="font-size: 1.6rem;border-top: 1px solid lightgrey;">\n						<ion-col class="left primary" >\n							<span (click)="solicitarCita(item.fecha,item.fIniDr,item.nombreDr,ttoSelect)"><i style="margin-right: 0.2rem;height: 3rem; margin-top: 1.5rem; margin-left: 1rem;" class="fas fa-plus marginRight primary" aria-hidden="true"></i> Solicitar</span>\n						</ion-col>\n					</ion-row>\n				</div>\n			</ion-card>  \n		</div>\n	</div>\n	<div *ngIf="show != true">\n		<ion-card detail-none  style="margin: 15px 0px 15px 0px;width:100%;    background: #ebcccc;    color: #a94442;    text-align: center;    padding: 1.5rem;    border-radius: 1rem;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:100%;height:100%;float:left;">\n					No hemos encontrado citas con los criterios de búsqueda.\n				</div>				\n			</div>\n		</ion-card>\n	</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], PedirCitaPage);
+    return PedirCitaPage;
+}());
+
+//# sourceMappingURL=pedir-cita.js.map
+
+/***/ }),
+
+/***/ 75:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangePasswordPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(94);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(19);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5019,189 +5427,14 @@ var ChangePasswordPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 74:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecallPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(184);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_popover_popover__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(24);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-var RecallPage = /** @class */ (function () {
-    function RecallPage(domSanitizer, calendar, popoverCtrl, events, restProvider, loadingCtrl, alertCtrl, navCtrl) {
-        this.domSanitizer = domSanitizer;
-        this.calendar = calendar;
-        this.popoverCtrl = popoverCtrl;
-        this.events = events;
-        this.restProvider = restProvider;
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
-        this.navCtrl = navCtrl;
-        this.recall = Array();
-        this.fechaProx = "";
-        this.showPlanificada = false;
-        this.showMessage = true;
-        this.showLoading();
-        this.getRecall();
-        this.events.publish("user:logged");
-    }
-    RecallPage.prototype.openPage = function (page, tipo) {
-        if (tipo == "page") {
-        }
-        else if (tipo == "web") {
-            window.open(page, '_system', 'location=yes');
-        }
-    };
-    /**
-    * 	Función que añade al calendario una cita.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    RecallPage.prototype.addEvent = function (timestampINI, timestampFIN) {
-        var _this = this;
-        this.showLoading("Añadiendo al calendario");
-        var dateINI = new Date(parseInt(timestampINI));
-        var dateFIN = new Date(parseInt(timestampFIN));
-        var titulo = 'Cita en clínica dental Ferrus & Bratos';
-        var direccion = 'C/ Caleruega 67 3ª Planta. 28033 Madrid';
-        var options = { calendarId: 1, calendarName: "Clínica Ferrus & Bratos", url: 'http://clinicaferrusbratos.com', firstReminderMinutes: 15 };
-        this.calendar.createEventInteractivelyWithOptions(titulo, direccion, '', dateINI, dateFIN, options).then(function (res) {
-            _this.loading.dismiss();
-        }, function (err) {
-            _this.loading.dismiss();
-        });
-    };
-    /**
-    * 	Función que muestra un pop-up para gestionar la cita.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    RecallPage.prototype.presentPopover = function (myEvent, fecha, hora) {
-        var popover = this.popoverCtrl.create(__WEBPACK_IMPORTED_MODULE_5__pages_popover_popover__["a" /* PopoverPage */], { fecha: fecha, hora: hora });
-        popover.present({
-            ev: myEvent
-        });
-    };
-    /**
-    * 	Función que obtiene las higienes y recall
-    *	del paciente
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    RecallPage.prototype.getRecall = function () {
-        var _this = this;
-        this.restProvider.getRecall().then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                _this.recall = data['data']['data'];
-                console.log(data['data']);
-                if (data['data']['planificada']) {
-                    _this.showPlanificada = true;
-                    _this.fechaProx = data['data']['planificada'];
-                }
-                if (data['data']['fechaFutura']) {
-                    _this.showMessage = false;
-                }
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-                console.log(data['message']);
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-            console.log(e);
-        });
-    };
-    /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    RecallPage.prototype.showLoading = function (txt) {
-        if (txt === void 0) { txt = 'Cargando información...'; }
-        this.loading = this.loadingCtrl.create({
-            content: txt,
-            dismissOnPageChange: false
-        });
-        this.loading.present();
-    };
-    /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    RecallPage.prototype.showError = function (title, text) {
-        this.loading.dismiss();
-        var alert = this.alertCtrl.create({
-            title: title,
-            subTitle: text,
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    RecallPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-recall',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Higiene</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page" >\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n 	<!-- Gradiente -->\n  	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient2" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<ion-list style="padding: 0rem 2rem 0rem 2rem;margin: -15px 0 16px !important;">\n		<div *ngIf="showMessage == true">\n			<ion-card detail-none *ngIf="showPlanificada == true" style="margin: 15px 0px 15px 0px;width:100%;    background: #c3e6cb;    color: #155724;    text-align: center;    padding: 1.5rem;    border-radius: 1rem;">\n				<div style="width: 100%;    height: 100%;">\n					<div style="width:100%;height:100%;float:left;">\n						Tu higiene está planificada para el {{fechaProx}}\n					</div>				\n				</div>\n			</ion-card>\n\n			<ion-card detail-none *ngIf="showPlanificada != true" style="margin: 15px 0px 15px 0px;width:100%;    background: #ebcccc;    color: #a94442;    text-align: center;    padding: 1.5rem;    border-radius: 1rem;">\n				<div style="width: 100%;    height: 100%;">\n					<div style="width:100%;height:100%;float:left;">\n						No tienes higienes futuras, ponte en contacto con nosotros para planificar una cita.\n					</div>				\n				</div>\n			</ion-card>\n		</div>\n		<ion-card detail-none *ngFor="let card of recall" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:25%;height:100%;float:left;">\n					<img onError="this.src=\'assets/imgs/person.png\'" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" class="img-round" style="    width: 70%;    margin: 3rem 0 0 2rem;">\n				</div>\n				<div style="width:50%;height:100%;float:left;">\n					<div class="card-title" style="margin-top: 2rem;">{{card.usuario}}</div>\n					<div class="card-subtitle" style="margin-top: 2rem;">{{card.tratamiento}}</div>\n					<div class="card-subtitle-date" style="margin-top: 2rem;">{{card.diaSemana}} {{card.estadoRecall}} </div>\n				</div>\n			</div>\n		</ion-card>\n	</ion-list>\n	<ion-list *ngIf="showCardError == true" style="min-height: 8rem;">\n		<ion-card style="min-height: 8rem;" padding center>\n			<div class="card-title" style="text-align: center;width: 100%;margin-top: 1rem;">Ups!</div>\n			<div class="card-subtitle" style="text-align: center;width: 100%;margin-top: 1rem;">No hemos podido encontrar consejos para tí.</div>\n		</ion-card>\n	</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
-    ], RecallPage);
-    return RecallPage;
-}());
-
-//# sourceMappingURL=recall.js.map
-
-/***/ }),
-
-/***/ 751:
+/***/ 753:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export EMOJI_PICKER_VALUE_ACCESSOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(226);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(42);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -5255,36 +5488,36 @@ var EmojiPickerComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 769:
+/***/ 771:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(390);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(391);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(393);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_mi_salud_mi_salud__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_mi_perfil_mi_perfil__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_mis_documentos_mis_documentos__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mis_citas_mis_citas__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_profile_profile__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_pedir_cita__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_documentos_contables_documentos_contables__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_presupuestos_presupuestos__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_recall_recall__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_instrucciones_instrucciones__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(770);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_profile_profile__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_documentos_contables_documentos_contables__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_presupuestos_presupuestos__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_recall_recall__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_instrucciones_instrucciones__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(772);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(392);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(394);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5612,7 +5845,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 783:
+/***/ 785:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5681,7 +5914,49 @@ var FbButtonIconComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 784:
+/***/ 786:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FbButtonComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+/**
+ * Generated class for the FbButtonComponent component.
+ *
+ * See https://angular.io/api/core/Component for more info on Angular
+ * Components.
+ */
+var FbButtonComponent = /** @class */ (function () {
+    function FbButtonComponent() {
+    }
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('name'),
+        __metadata("design:type", Object)
+    ], FbButtonComponent.prototype, "name", void 0);
+    FbButtonComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'fb-button',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-button/fb-button.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n<button [class]="name.class">\n	<p [class]="name.class">{{ name.name }}</p>\n</button>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-button/fb-button.html"*/
+        }),
+        __metadata("design:paramtypes", [])
+    ], FbButtonComponent);
+    return FbButtonComponent;
+}());
+
+//# sourceMappingURL=fb-button.js.map
+
+/***/ }),
+
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5723,258 +5998,258 @@ var FbTituloSubtituloComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 811:
+/***/ 814:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 404,
-	"./af.js": 404,
-	"./ar": 405,
-	"./ar-dz": 406,
-	"./ar-dz.js": 406,
-	"./ar-kw": 407,
-	"./ar-kw.js": 407,
-	"./ar-ly": 408,
-	"./ar-ly.js": 408,
-	"./ar-ma": 409,
-	"./ar-ma.js": 409,
-	"./ar-sa": 410,
-	"./ar-sa.js": 410,
-	"./ar-tn": 411,
-	"./ar-tn.js": 411,
-	"./ar.js": 405,
-	"./az": 412,
-	"./az.js": 412,
-	"./be": 413,
-	"./be.js": 413,
-	"./bg": 414,
-	"./bg.js": 414,
-	"./bm": 415,
-	"./bm.js": 415,
-	"./bn": 416,
-	"./bn.js": 416,
-	"./bo": 417,
-	"./bo.js": 417,
-	"./br": 418,
-	"./br.js": 418,
-	"./bs": 419,
-	"./bs.js": 419,
-	"./ca": 420,
-	"./ca.js": 420,
-	"./cs": 421,
-	"./cs.js": 421,
-	"./cv": 422,
-	"./cv.js": 422,
-	"./cy": 423,
-	"./cy.js": 423,
-	"./da": 424,
-	"./da.js": 424,
-	"./de": 425,
-	"./de-at": 426,
-	"./de-at.js": 426,
-	"./de-ch": 427,
-	"./de-ch.js": 427,
-	"./de.js": 425,
-	"./dv": 428,
-	"./dv.js": 428,
-	"./el": 429,
-	"./el.js": 429,
-	"./en-au": 430,
-	"./en-au.js": 430,
-	"./en-ca": 431,
-	"./en-ca.js": 431,
-	"./en-gb": 432,
-	"./en-gb.js": 432,
-	"./en-ie": 433,
-	"./en-ie.js": 433,
-	"./en-il": 434,
-	"./en-il.js": 434,
-	"./en-nz": 435,
-	"./en-nz.js": 435,
-	"./eo": 436,
-	"./eo.js": 436,
-	"./es": 437,
-	"./es-do": 438,
-	"./es-do.js": 438,
-	"./es-us": 439,
-	"./es-us.js": 439,
-	"./es.js": 437,
-	"./et": 440,
-	"./et.js": 440,
-	"./eu": 441,
-	"./eu.js": 441,
-	"./fa": 442,
-	"./fa.js": 442,
-	"./fi": 443,
-	"./fi.js": 443,
-	"./fo": 444,
-	"./fo.js": 444,
-	"./fr": 445,
-	"./fr-ca": 446,
-	"./fr-ca.js": 446,
-	"./fr-ch": 447,
-	"./fr-ch.js": 447,
-	"./fr.js": 445,
-	"./fy": 448,
-	"./fy.js": 448,
-	"./gd": 449,
-	"./gd.js": 449,
-	"./gl": 450,
-	"./gl.js": 450,
-	"./gom-latn": 451,
-	"./gom-latn.js": 451,
-	"./gu": 452,
-	"./gu.js": 452,
-	"./he": 453,
-	"./he.js": 453,
-	"./hi": 454,
-	"./hi.js": 454,
-	"./hr": 455,
-	"./hr.js": 455,
-	"./hu": 456,
-	"./hu.js": 456,
-	"./hy-am": 457,
-	"./hy-am.js": 457,
-	"./id": 458,
-	"./id.js": 458,
-	"./is": 459,
-	"./is.js": 459,
-	"./it": 460,
-	"./it.js": 460,
-	"./ja": 461,
-	"./ja.js": 461,
-	"./jv": 462,
-	"./jv.js": 462,
-	"./ka": 463,
-	"./ka.js": 463,
-	"./kk": 464,
-	"./kk.js": 464,
-	"./km": 465,
-	"./km.js": 465,
-	"./kn": 466,
-	"./kn.js": 466,
-	"./ko": 467,
-	"./ko.js": 467,
-	"./ku": 468,
-	"./ku.js": 468,
-	"./ky": 469,
-	"./ky.js": 469,
-	"./lb": 470,
-	"./lb.js": 470,
-	"./lo": 471,
-	"./lo.js": 471,
-	"./lt": 472,
-	"./lt.js": 472,
-	"./lv": 473,
-	"./lv.js": 473,
-	"./me": 474,
-	"./me.js": 474,
-	"./mi": 475,
-	"./mi.js": 475,
-	"./mk": 476,
-	"./mk.js": 476,
-	"./ml": 477,
-	"./ml.js": 477,
-	"./mn": 478,
-	"./mn.js": 478,
-	"./mr": 479,
-	"./mr.js": 479,
-	"./ms": 480,
-	"./ms-my": 481,
-	"./ms-my.js": 481,
-	"./ms.js": 480,
-	"./mt": 482,
-	"./mt.js": 482,
-	"./my": 483,
-	"./my.js": 483,
-	"./nb": 484,
-	"./nb.js": 484,
-	"./ne": 485,
-	"./ne.js": 485,
-	"./nl": 486,
-	"./nl-be": 487,
-	"./nl-be.js": 487,
-	"./nl.js": 486,
-	"./nn": 488,
-	"./nn.js": 488,
-	"./pa-in": 489,
-	"./pa-in.js": 489,
-	"./pl": 490,
-	"./pl.js": 490,
-	"./pt": 491,
-	"./pt-br": 492,
-	"./pt-br.js": 492,
-	"./pt.js": 491,
-	"./ro": 493,
-	"./ro.js": 493,
-	"./ru": 494,
-	"./ru.js": 494,
-	"./sd": 495,
-	"./sd.js": 495,
-	"./se": 496,
-	"./se.js": 496,
-	"./si": 497,
-	"./si.js": 497,
-	"./sk": 498,
-	"./sk.js": 498,
-	"./sl": 499,
-	"./sl.js": 499,
-	"./sq": 500,
-	"./sq.js": 500,
-	"./sr": 501,
-	"./sr-cyrl": 502,
-	"./sr-cyrl.js": 502,
-	"./sr.js": 501,
-	"./ss": 503,
-	"./ss.js": 503,
-	"./sv": 504,
-	"./sv.js": 504,
-	"./sw": 505,
-	"./sw.js": 505,
-	"./ta": 506,
-	"./ta.js": 506,
-	"./te": 507,
-	"./te.js": 507,
-	"./tet": 508,
-	"./tet.js": 508,
-	"./tg": 509,
-	"./tg.js": 509,
-	"./th": 510,
-	"./th.js": 510,
-	"./tl-ph": 511,
-	"./tl-ph.js": 511,
-	"./tlh": 512,
-	"./tlh.js": 512,
-	"./tr": 513,
-	"./tr.js": 513,
-	"./tzl": 514,
-	"./tzl.js": 514,
-	"./tzm": 515,
-	"./tzm-latn": 516,
-	"./tzm-latn.js": 516,
-	"./tzm.js": 515,
-	"./ug-cn": 517,
-	"./ug-cn.js": 517,
-	"./uk": 518,
-	"./uk.js": 518,
-	"./ur": 519,
-	"./ur.js": 519,
-	"./uz": 520,
-	"./uz-latn": 521,
-	"./uz-latn.js": 521,
-	"./uz.js": 520,
-	"./vi": 522,
-	"./vi.js": 522,
-	"./x-pseudo": 523,
-	"./x-pseudo.js": 523,
-	"./yo": 524,
-	"./yo.js": 524,
-	"./zh-cn": 525,
-	"./zh-cn.js": 525,
-	"./zh-hk": 526,
-	"./zh-hk.js": 526,
-	"./zh-tw": 527,
-	"./zh-tw.js": 527
+	"./af": 406,
+	"./af.js": 406,
+	"./ar": 407,
+	"./ar-dz": 408,
+	"./ar-dz.js": 408,
+	"./ar-kw": 409,
+	"./ar-kw.js": 409,
+	"./ar-ly": 410,
+	"./ar-ly.js": 410,
+	"./ar-ma": 411,
+	"./ar-ma.js": 411,
+	"./ar-sa": 412,
+	"./ar-sa.js": 412,
+	"./ar-tn": 413,
+	"./ar-tn.js": 413,
+	"./ar.js": 407,
+	"./az": 414,
+	"./az.js": 414,
+	"./be": 415,
+	"./be.js": 415,
+	"./bg": 416,
+	"./bg.js": 416,
+	"./bm": 417,
+	"./bm.js": 417,
+	"./bn": 418,
+	"./bn.js": 418,
+	"./bo": 419,
+	"./bo.js": 419,
+	"./br": 420,
+	"./br.js": 420,
+	"./bs": 421,
+	"./bs.js": 421,
+	"./ca": 422,
+	"./ca.js": 422,
+	"./cs": 423,
+	"./cs.js": 423,
+	"./cv": 424,
+	"./cv.js": 424,
+	"./cy": 425,
+	"./cy.js": 425,
+	"./da": 426,
+	"./da.js": 426,
+	"./de": 427,
+	"./de-at": 428,
+	"./de-at.js": 428,
+	"./de-ch": 429,
+	"./de-ch.js": 429,
+	"./de.js": 427,
+	"./dv": 430,
+	"./dv.js": 430,
+	"./el": 431,
+	"./el.js": 431,
+	"./en-au": 432,
+	"./en-au.js": 432,
+	"./en-ca": 433,
+	"./en-ca.js": 433,
+	"./en-gb": 434,
+	"./en-gb.js": 434,
+	"./en-ie": 435,
+	"./en-ie.js": 435,
+	"./en-il": 436,
+	"./en-il.js": 436,
+	"./en-nz": 437,
+	"./en-nz.js": 437,
+	"./eo": 438,
+	"./eo.js": 438,
+	"./es": 439,
+	"./es-do": 440,
+	"./es-do.js": 440,
+	"./es-us": 441,
+	"./es-us.js": 441,
+	"./es.js": 439,
+	"./et": 442,
+	"./et.js": 442,
+	"./eu": 443,
+	"./eu.js": 443,
+	"./fa": 444,
+	"./fa.js": 444,
+	"./fi": 445,
+	"./fi.js": 445,
+	"./fo": 446,
+	"./fo.js": 446,
+	"./fr": 447,
+	"./fr-ca": 448,
+	"./fr-ca.js": 448,
+	"./fr-ch": 449,
+	"./fr-ch.js": 449,
+	"./fr.js": 447,
+	"./fy": 450,
+	"./fy.js": 450,
+	"./gd": 451,
+	"./gd.js": 451,
+	"./gl": 452,
+	"./gl.js": 452,
+	"./gom-latn": 453,
+	"./gom-latn.js": 453,
+	"./gu": 454,
+	"./gu.js": 454,
+	"./he": 455,
+	"./he.js": 455,
+	"./hi": 456,
+	"./hi.js": 456,
+	"./hr": 457,
+	"./hr.js": 457,
+	"./hu": 458,
+	"./hu.js": 458,
+	"./hy-am": 459,
+	"./hy-am.js": 459,
+	"./id": 460,
+	"./id.js": 460,
+	"./is": 461,
+	"./is.js": 461,
+	"./it": 462,
+	"./it.js": 462,
+	"./ja": 463,
+	"./ja.js": 463,
+	"./jv": 464,
+	"./jv.js": 464,
+	"./ka": 465,
+	"./ka.js": 465,
+	"./kk": 466,
+	"./kk.js": 466,
+	"./km": 467,
+	"./km.js": 467,
+	"./kn": 468,
+	"./kn.js": 468,
+	"./ko": 469,
+	"./ko.js": 469,
+	"./ku": 470,
+	"./ku.js": 470,
+	"./ky": 471,
+	"./ky.js": 471,
+	"./lb": 472,
+	"./lb.js": 472,
+	"./lo": 473,
+	"./lo.js": 473,
+	"./lt": 474,
+	"./lt.js": 474,
+	"./lv": 475,
+	"./lv.js": 475,
+	"./me": 476,
+	"./me.js": 476,
+	"./mi": 477,
+	"./mi.js": 477,
+	"./mk": 478,
+	"./mk.js": 478,
+	"./ml": 479,
+	"./ml.js": 479,
+	"./mn": 480,
+	"./mn.js": 480,
+	"./mr": 481,
+	"./mr.js": 481,
+	"./ms": 482,
+	"./ms-my": 483,
+	"./ms-my.js": 483,
+	"./ms.js": 482,
+	"./mt": 484,
+	"./mt.js": 484,
+	"./my": 485,
+	"./my.js": 485,
+	"./nb": 486,
+	"./nb.js": 486,
+	"./ne": 487,
+	"./ne.js": 487,
+	"./nl": 488,
+	"./nl-be": 489,
+	"./nl-be.js": 489,
+	"./nl.js": 488,
+	"./nn": 490,
+	"./nn.js": 490,
+	"./pa-in": 491,
+	"./pa-in.js": 491,
+	"./pl": 492,
+	"./pl.js": 492,
+	"./pt": 493,
+	"./pt-br": 494,
+	"./pt-br.js": 494,
+	"./pt.js": 493,
+	"./ro": 495,
+	"./ro.js": 495,
+	"./ru": 496,
+	"./ru.js": 496,
+	"./sd": 497,
+	"./sd.js": 497,
+	"./se": 498,
+	"./se.js": 498,
+	"./si": 499,
+	"./si.js": 499,
+	"./sk": 500,
+	"./sk.js": 500,
+	"./sl": 501,
+	"./sl.js": 501,
+	"./sq": 502,
+	"./sq.js": 502,
+	"./sr": 503,
+	"./sr-cyrl": 504,
+	"./sr-cyrl.js": 504,
+	"./sr.js": 503,
+	"./ss": 505,
+	"./ss.js": 505,
+	"./sv": 506,
+	"./sv.js": 506,
+	"./sw": 507,
+	"./sw.js": 507,
+	"./ta": 508,
+	"./ta.js": 508,
+	"./te": 509,
+	"./te.js": 509,
+	"./tet": 510,
+	"./tet.js": 510,
+	"./tg": 511,
+	"./tg.js": 511,
+	"./th": 512,
+	"./th.js": 512,
+	"./tl-ph": 513,
+	"./tl-ph.js": 513,
+	"./tlh": 514,
+	"./tlh.js": 514,
+	"./tr": 515,
+	"./tr.js": 515,
+	"./tzl": 516,
+	"./tzl.js": 516,
+	"./tzm": 517,
+	"./tzm-latn": 518,
+	"./tzm-latn.js": 518,
+	"./tzm.js": 517,
+	"./ug-cn": 519,
+	"./ug-cn.js": 519,
+	"./uk": 520,
+	"./uk.js": 520,
+	"./ur": 521,
+	"./ur.js": 521,
+	"./uz": 522,
+	"./uz-latn": 523,
+	"./uz-latn.js": 523,
+	"./uz.js": 522,
+	"./vi": 524,
+	"./vi.js": 524,
+	"./x-pseudo": 525,
+	"./x-pseudo.js": 525,
+	"./yo": 526,
+	"./yo.js": 526,
+	"./zh-cn": 527,
+	"./zh-cn.js": 527,
+	"./zh-hk": 528,
+	"./zh-hk.js": 528,
+	"./zh-tw": 529,
+	"./zh-tw.js": 529
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -5990,36 +6265,36 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 811;
+webpackContext.id = 814;
 
 /***/ }),
 
-/***/ 93:
+/***/ 94:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mi_salud_mi_salud__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mi_perfil_mi_perfil__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mis_documentos_mis_documentos__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mis_citas_mis_citas__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__chat_chat__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sugerencias_sugerencias__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__change_password_change_password__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__profile_profile__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pedir_cita_pedir_cita__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__documentos_contables_documentos_contables__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__presupuestos_presupuestos__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__recall_recall__ = __webpack_require__(74);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__consejos_personalizados_consejos_personalizados__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__instrucciones_instrucciones__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__chat_chat__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sugerencias_sugerencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__change_password_change_password__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__profile_profile__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pedir_cita_pedir_cita__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__documentos_contables_documentos_contables__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__presupuestos_presupuestos__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__recall_recall__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__consejos_personalizados_consejos_personalizados__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__instrucciones_instrucciones__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_rest_rest__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_call_number__ = __webpack_require__(349);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_call_number__ = __webpack_require__(351);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6253,5 +6528,5 @@ var HomePage = /** @class */ (function () {
 
 /***/ })
 
-},[530]);
+},[532]);
 //# sourceMappingURL=main.js.map

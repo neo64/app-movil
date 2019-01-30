@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Mis Higienes</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>       
+  <ion-tabs #myTab tabsPlacement="top" selectedIndex="1">
+    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>          
+    <ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>
+  </ion-tabs>
+</ion-content>

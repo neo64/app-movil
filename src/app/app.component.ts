@@ -24,6 +24,7 @@ import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { DocumentosContablesPage } from '../pages/documentos-contables/documentos-contables';
 import { PresupuestosPage } from '../pages/presupuestos/presupuestos';
 import { RecallPage } from '../pages/recall/recall';
+import { RecallPasadasPage } from '../pages/recall-pasadas/recall-pasadas';
 import { ConsejosPersonalizadosPage } from '../pages/consejos-personalizados/consejos-personalizados';
 import { InstruccionesPage } from '../pages/instrucciones/instrucciones';
 

@@ -1,11 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FbButtonIconComponent } from './fb-button-icon/fb-button-icon';
 import { FbTituloSubtituloComponent } from './fb-titulo-subtitulo/fb-titulo-subtitulo';
+import { FbButtonComponent } from './fb-button/fb-button';
 @NgModule({
 	declarations: [FbButtonIconComponent,
-    FbTituloSubtituloComponent],
+    FbTituloSubtituloComponent,
+    FbButtonComponent],
 	imports: [],
 	exports: [FbButtonIconComponent,
-    FbTituloSubtituloComponent]
+    FbTituloSubtituloComponent,
+    FbButtonComponent]
 })
 export class ComponentsModule {}

@@ -42616,7 +42616,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 2% 0 2% 0;
+  padding: 0% 0 2% 0;
 }
 
 .fb-card .card_separator {
@@ -42638,7 +42638,7 @@ body {
 
 .fb-card .card_time span {
   font-weight: normal;
-  font-size: 0.8rem;
+  font-size: 1.6rem;
 }
 
 .fb-card .card_paragraph {
@@ -42770,7 +42770,7 @@ body {
 }
 
 .fb-card.-v4 .card_title {
-  font-size: 0.9rem;
+  font-size: 1.6rem;
 }
 
 .fb-card.-vfaq {
@@ -42787,7 +42787,7 @@ body {
   margin-left: -1rem;
   margin-right: -1rem;
   margin-bottom: -1.2rem;
-  padding: 1.2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .fb-card.-vcita .card_label {
@@ -42795,7 +42795,7 @@ body {
   font-size: 1rem;
   text-align: left;
   color: #858585;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 .fb-card.-vcita .card_title {
@@ -42830,7 +42830,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   border-right: 1px solid #e1e1e1;
-  padding: 1rem 0.5rem 1rem 0;
+  padding: 0rem 0.5rem 0rem 0;
 }
 
 .fb-card.-vcita .right {
@@ -43088,6 +43088,33 @@ emoji-picker .emoji-picker .emoji-items .emoji-item {
   line-height: 42px;
   text-align: center;
   margin-bottom: 10px;
+}
+
+fb-button button {
+  background: white;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  height: -webkit-fill-available;
+  width: 100%;
+  color: #ed7aad;
+  border: 1px solid #ed7aad;
+}
+
+fb-button button.active {
+  background: #ed7aad;
+  color: white;
+}
+
+fb-button p {
+  color: #ed7aad;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 8%;
+}
+
+fb-button p.active {
+  color: white;
 }
 
 fb-button-icon button {
@@ -44168,6 +44195,68 @@ page-sugerencias .list-md > .item-block:last-child ion-label, page-sugerencias .
   margin-right: 0;
 }
 
+page-tab-higienes ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-tab-higienes .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-tab-higienes ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-tab-higienes .toolbar-background-md {
+  background: white;
+}
+
+page-tab-higienes .tabs-md .tab-button[aria-selected=true] {
+  border-bottom: 2px solid #ed7aad;
+  color: #38383b;
+}
+
+page-tab-higienes .tabs-md .tab-button {
+  border-bottom: 2px solid #e1e1e1;
+  color: #e1e1e1;
+  padding-top: 5% !important;
+}
+
+page-tab-higienes .tabbar {
+  padding: 0rem 4rem 0rem 4rem;
+  background: white !important;
+  margin-top: -6%;
+}
+
+page-tab-higienes .header-md::after, page-tab-higienes .tabs-md[tabsPlacement="top"] > .tabbar::after, page-tab-higienes .footer-md::before, page-tab-higienes .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-tab-higienes ion-slides {
+  margin-top: 0px;
+  height: auto;
+}
+
+page-tab-higienes ion-slide {
+  padding: 0 60px;
+}
+
+page-tab-higienes .swiper-slide {
+  height: 80%;
+  padding: 0rem 6rem 0rem 4rem;
+}
+
+page-tab-higienes .slide-zoom {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 tabConsultarCitas ion-title {
   text-align: center;
   margin-left: -15%;
@@ -44201,7 +44290,7 @@ tabConsultarCitas .tabs-md .tab-button {
 tabConsultarCitas .tabbar {
   padding: 0rem 4rem 0rem 4rem;
   background: white !important;
-  margin-top: -1rem;
+  margin-top: -6%;
 }
 
 tabConsultarCitas .header-md::after, tabConsultarCitas .tabs-md[tabsPlacement="top"] > .tabbar::after, tabConsultarCitas .footer-md::before, tabConsultarCitas .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
@@ -44211,6 +44300,7 @@ tabConsultarCitas .header-md::after, tabConsultarCitas .tabs-md[tabsPlacement="t
 
 tabConsultarCitas ion-slides {
   margin-top: 0px;
+  height: auto;
 }
 
 tabConsultarCitas ion-slide {
@@ -44220,20 +44310,6 @@ tabConsultarCitas ion-slide {
 tabConsultarCitas .swiper-slide {
   height: 80%;
   padding: 0rem 6rem 0rem 4rem;
-}
-
-tabConsultarCitas swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
-}
-
-tabConsultarCitas .swiper-pagination-bullet-active {
-  background: #f3a7c9;
-  opacity: 1;
-}
-
-tabConsultarCitas .swiper-pagination-fraction, tabConsultarCitas .swiper-pagination-custom, tabConsultarCitas .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 15%;
-  display: block !important;
 }
 
 tabConsultarCitas .slide-zoom {

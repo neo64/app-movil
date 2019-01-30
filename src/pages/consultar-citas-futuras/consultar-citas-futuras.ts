@@ -1,8 +1,12 @@
 import { Component, ViewChild} from '@angular/core';
-import { NavController, Loading, LoadingController, Platform, PopoverController, AlertController, Events, Slides  } from 'ionic-angular';
+import { App, NavController, Loading, ToastController, LoadingController, Platform, PopoverController, AlertController, Events  } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { PopoverPage } from '../../pages/popover/popover';
 import { Calendar } from '@ionic-native/calendar';
+
+import { TabHigienesPage } from '../tab-higienes/tab-higienes';
+import { PedirCitaPage } from '../pedir-cita/pedir-cita';
+
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -14,9 +18,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class ConsultarCitasFuturasPage {
 
-	@ViewChild('slides') slides: Slides;
-
-
 	loading: 	Loading;		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	citas 		= new Array();	// Array con todas las citas futuras del paciente.
 	calendars 	= [];			// Array con la información de la cita para almacenar en el calendario.
@@ -24,8 +25,10 @@ export class ConsultarCitasFuturasPage {
 	fecha 		= "";			// Fecha que será obtenida por parámetro
 	hora 		= "";			// Hora que será obtenida por parámetro
 
+	bHigienes 	= {name : 'MIS HIGIENES', svg: '', openPage : 'Higiene', class : '', tipo : 'page', gradiente: ''};
+	bPedirCita 	= {name : 'PEDIR CITA', svg: '', openPage : 'PedirCita', class : 'active', tipo : 'page', gradiente: ''};
 	
-	constructor(private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public popoverCtrl: PopoverController, private calendar: Calendar,  public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private plt: Platform) {
+	constructor(private app : App, private toastCtrl: ToastController, private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public popoverCtrl: PopoverController, private calendar: Calendar,  public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private plt: Platform) {
 		this.showLoading();
 		this.getCitas();
 		
@@ -38,6 +41,52 @@ export class ConsultarCitasFuturasPage {
 		 }
 		
 		this.events.publish("user:logged");
+	}
+
+	/**
+	* 	Función que abre una página o una web dependiendo
+	*	de los parámetros que se les introduzca.
+	*
+	* 	@param String page a la que redirigir.
+	* 	@param String tipo si es pagina o web.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/  
+	openPage(page, tipo) {
+		if(tipo === "page"){
+			if(page == "Higiene")
+				this.app.getRootNav().push(TabHigienesPage);				
+			else if(page == "PedirCita")
+				this.app.getRootNav().push(PedirCitaPage);			
+			else
+				this.presentToast("La página no está disponible.");			
+		}else if(tipo == "web"){
+			window.open(page, '_system', 'location=yes');
+		}else{
+			this.presentToast("La página '"+page+"' de tipo '"+tipo+"' no está disponible.");
+		}		
+	}
+
+	/**
+	* 	Función que muestra un Toast con la información
+	*	referente a la acción del usuario.
+	*
+	* 	@param String Titulo de la alerta.
+	* 	@param String Texto de la alerta.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
+	presentToast(txt) {
+		let toast = this.toastCtrl.create({
+			message: txt,
+			duration: 3000,
+			position: 'bottom',
+			showCloseButton: true,
+			closeButtonText: 'OK'
+		});
+		toast.present();
 	}
 
 	/**
@@ -96,20 +145,6 @@ export class ConsultarCitasFuturasPage {
 		}).catch(e => {
 			this.showError("ERROR","Hubo un error al gestionar tu cita.");	
 		});		
-	}
-
-	/**
-	* 	Función que mueve los elementos del menú en forma
-	*	de slider para poder albergar más elementos
-	* 
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	
-	*/
-	next() {
-		if(this.slides.isEnd())
-	    	this.slides.slidePrev();
-	    else
-	    	this.slides.slideNext();
 	}
 	
 	/**
@@ -189,8 +224,7 @@ export class ConsultarCitasFuturasPage {
 					for (var key in data['data']) {
 						this.citas.push(data['data'][key]);
 					}
-				}				
-
+				}
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
@@ -216,7 +250,7 @@ export class ConsultarCitasFuturasPage {
 	showLoading(text = 'Cargando información...') {
 		this.loading = this.loadingCtrl.create({
 			content: text,			
-			dismissOnPageChange: true
+			dismissOnPageChange: false
 		});
 		this.loading.present();
 	}
@@ -253,9 +287,9 @@ export class ConsultarCitasFuturasPage {
 	*/
 	swipe(e) {
 		if(e.direction == '2'){
-			this.navCtrl.parent.select(1);
+			this.app.getRootNav().parent.select(1);
 		}else if(e.direction == '4'){
-			this.navCtrl.parent.select(0);
+			this.app.getRootNav().parent.select(0);
 		}else if(e.direction == '1'){
 			this.getCitas();
 		}

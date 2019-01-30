@@ -32,7 +32,7 @@ tabConsultarCitas {
 	.tabbar{
 		padding: 0rem 4rem 0rem 4rem;
 	    background: white !important;
-	    margin-top: -1rem;
+	    margin-top: -6%;
 	}
 
 	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
@@ -42,6 +42,7 @@ tabConsultarCitas {
 
 	ion-slides {
 	    margin-top: 0px;
+	    height: auto;
 	}
 
 	ion-slide {
@@ -51,20 +52,6 @@ tabConsultarCitas {
 	.swiper-slide{
 		height: 80%;
 		padding: 0rem 6rem 0rem 4rem;
-	}
-
-	swiper-container-horizontal > .swiper-pagination-bullets {
-	    bottom: 0;
-	}
-
-	.swiper-pagination-bullet-active {
-	    background: map-get($colors, secondary);
-	    opacity: 1;
-	}
-
-	.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-container-horizontal > .swiper-pagination-bullets {
-		bottom: 15%;
-		display: block !important;
 	}
 
 	.slide-zoom {

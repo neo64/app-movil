@@ -1,9 +1,8 @@
 <ion-content>
-	<p col-10 style="text-align:right;    margin-bottom: 0;" (click)="next()">Ver más</p>
-	<ion-slides pager spaceBetween="-75" #slides>
+	<ion-slides spaceBetween="-75">
 		<ion-slide *ngFor="let item of citas">
 			<div class="fb-card -vcita -gradient">
-			    <div class="card_row" style="margin-bottom:1rem;">
+			    <div class="card_row">
 			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
 			            <div class="card_subtitle -white" style="font-size: 1.4rem;">
 			                {{item.diaSemana}}
@@ -37,7 +36,7 @@
 			    </div>
 			    <div class="card_content -bg-white">
 			        <div class="card_row">
-			            <div style="margin-bottom:1rem;">
+			            <div>
 			                <div class="card_label">
 			                    Tratamiento
 			                </div>
@@ -75,4 +74,8 @@
 			</div>
 		</ion-slide>
 	</ion-slides>
+	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">
+		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>
+		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>
+	</ion-row>
 </ion-content>

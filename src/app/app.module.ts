@@ -12,6 +12,7 @@ import { HomePage } from '../pages/home/home';
 import { ConsultarCitas } from '../pages/ConsultarCitas/ConsultarCitas';
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { TabConsultarCitas } from '../pages/tabConsultarCitas/tabConsultarCitas';
+import { TabHigienesPage } from '../pages/tab-higienes/tab-higienes';
 import { ChangePasswordPage } from '../pages/change-password/change-password';
 import { ConsultarCitasFuturasPage } from '../pages/consultar-citas-futuras/consultar-citas-futuras';
 import { Calendar } from '@ionic-native/calendar';
@@ -29,6 +30,7 @@ import { MisCitasPage } from '../pages/mis-citas/mis-citas';
 import { MisDocumentosPage } from '../pages/mis-documentos/mis-documentos';
 
 import { RecallPage } from '../pages/recall/recall';
+import { RecallPasadasPage } from '../pages/recall-pasadas/recall-pasadas';
 import { ConsejosPersonalizadosPage } from '../pages/consejos-personalizados/consejos-personalizados';
 import { ConsejosDetailPage } from '../pages/consejos-detail/consejos-detail';
 import { DocumentosContablesPage } from '../pages/documentos-contables/documentos-contables';
@@ -51,6 +53,7 @@ import { FileOpener } from '@ionic-native/file-opener';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 import { FbButtonIconComponent } from '../components/fb-button-icon/fb-button-icon';
+import { FbButtonComponent } from '../components/fb-button/fb-button';
 import { FbTituloSubtituloComponent } from '../components/fb-titulo-subtitulo/fb-titulo-subtitulo';
 
 import { CallNumber } from '@ionic-native/call-number';
@@ -64,12 +67,14 @@ import { ChartsModule } from 'ng2-charts';
     ConsultarCitas,
 	PedirCitaPage,
     TabConsultarCitas,
+    TabHigienesPage,
 	ConsultarCitasFuturasPage,
 	ChangePasswordPage,
 	PopoverPage,
 	LoginPage,
 	DocFirmadosPage,
 	RecallPage,
+	RecallPasadasPage,
 	ConsejosPersonalizadosPage,
 	ConsejosDetailPage,
 	DocumentosContablesPage,
@@ -85,7 +90,8 @@ import { ChartsModule } from 'ng2-charts';
 	SugerenciasPage,
 	ChatPage,
 	FbButtonIconComponent,
-	FbTituloSubtituloComponent
+	FbTituloSubtituloComponent,
+	FbButtonComponent
   ],
   imports: [
   	ChartsModule,
@@ -114,6 +120,7 @@ import { ChartsModule } from 'ng2-charts';
 	ChangePasswordPage,
 	PopoverPage,
     TabConsultarCitas,
+    TabHigienesPage,
 	DocFirmadosPage,
 	MiSaludPage,
 	InstruccionesPage,
@@ -122,6 +129,7 @@ import { ChartsModule } from 'ng2-charts';
 	MisDocumentosPage,
 	SugerenciasPage,
 	RecallPage,
+	RecallPasadasPage,
 	ConsejosPersonalizadosPage,
 	ConsejosDetailPage,
 	DocumentosContablesPage,

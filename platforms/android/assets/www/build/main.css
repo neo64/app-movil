@@ -42616,7 +42616,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  padding: 2% 0 2% 0;
+  padding: 0% 0 2% 0;
 }
 
 .fb-card .card_separator {
@@ -42787,7 +42787,7 @@ body {
   margin-left: -1rem;
   margin-right: -1rem;
   margin-bottom: -1.2rem;
-  padding: 1.2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .fb-card.-vcita .card_label {
@@ -42795,7 +42795,7 @@ body {
   font-size: 1rem;
   text-align: left;
   color: #858585;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.6rem;
 }
 
 .fb-card.-vcita .card_title {
@@ -42830,7 +42830,7 @@ body {
   -ms-flex-pack: center;
   justify-content: center;
   border-right: 1px solid #e1e1e1;
-  padding: 1rem 0.5rem 1rem 0;
+  padding: 0rem 0.5rem 0rem 0;
 }
 
 .fb-card.-vcita .right {
@@ -44201,7 +44201,7 @@ tabConsultarCitas .tabs-md .tab-button {
 tabConsultarCitas .tabbar {
   padding: 0rem 4rem 0rem 4rem;
   background: white !important;
-  margin-top: -1rem;
+  margin-top: -6%;
 }
 
 tabConsultarCitas .header-md::after, tabConsultarCitas .tabs-md[tabsPlacement="top"] > .tabbar::after, tabConsultarCitas .footer-md::before, tabConsultarCitas .tabs-md[tabsPlacement="bottom"] > .tabbar::before {

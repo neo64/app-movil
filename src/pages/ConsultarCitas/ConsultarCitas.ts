@@ -1,6 +1,9 @@
 import { Component,ViewChild } from '@angular/core';
-import { NavController, Loading, LoadingController, AlertController, Events, Slides } from 'ionic-angular';
+import { App, NavController, Loading, ToastController, LoadingController, AlertController, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
+
+import { TabHigienesPage } from '../tab-higienes/tab-higienes';
+import { PedirCitaPage } from '../pedir-cita/pedir-cita';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -12,31 +15,63 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 export class ConsultarCitas {
 
-	@ViewChild('slides') slides: Slides;
-
 	loading: 	Loading;		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	citas 		= new Array();	// Array con todas las citas futuras del paciente.
 		
-	constructor(private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController) {
+	bHigienes 	= {name : 'MIS HIGIENES', svg: '', openPage : 'Higiene', class : '', tipo : 'page', gradiente: ''};
+	bPedirCita 	= {name : 'PEDIR CITA', svg: '', openPage : 'PedirCita', class : 'active', tipo : 'page', gradiente: ''};
+	
+	constructor(private app : App, private toastCtrl: ToastController, private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController) {
 		this.showLoading();
 		this.getCitas();
 		this.events.publish("user:logged");
 	}
 
 	/**
-	* 	Función que mueve los elementos del menú en forma
-	*	de slider para poder albergar más elementos
+	* 	Función que abre una página o una web dependiendo
+	*	de los parámetros que se les introduzca.
+	*
+	* 	@param String page a la que redirigir.
+	* 	@param String tipo si es pagina o web.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/  
+	openPage(page, tipo) {
+		if(tipo === "page"){
+			if(page == "Higiene")
+				this.app.getRootNav().push(TabHigienesPage);				
+			else if(page == "PedirCita")
+				this.app.getRootNav().push(PedirCitaPage);			
+			else
+				this.presentToast("La página no está disponible.");			
+		}else if(tipo == "web"){
+			window.open(page, '_system', 'location=yes');
+		}else{
+			this.presentToast("La página '"+page+"' de tipo '"+tipo+"' no está disponible.");
+		}		
+	}	
+
+	/**
+	* 	Función que muestra un Toast con la información
+	*	referente a la acción del usuario.
+	*
+	* 	@param String Titulo de la alerta.
+	* 	@param String Texto de la alerta.
 	* 
 	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
 	* 	
 	*/
-	next() {
-		if(this.slides.isEnd())
-	    	this.slides.slidePrev();
-	    else
-	    	this.slides.slideNext();
-	}
-	   
+	presentToast(txt) {
+		let toast = this.toastCtrl.create({
+			message: txt,
+			duration: 3000,
+			position: 'bottom',
+			showCloseButton: true,
+			closeButtonText: 'OK'
+		});
+		toast.present();
+	}   
 
 	/**
 	* 	Función que obtiene las citas pasadas del paciente
