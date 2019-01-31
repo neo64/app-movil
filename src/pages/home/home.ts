@@ -44,7 +44,8 @@ export class HomePage {
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
-	
+	bPedirCita 	= {name : 'PEDIR CITA', svg: '', openPage : 'PedirCita', class : 'active', tipo : 'page', gradiente: ''};
+
 	constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getCardsHome();

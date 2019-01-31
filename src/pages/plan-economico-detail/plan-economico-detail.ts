@@ -21,7 +21,7 @@ export class PlanEconomicoDetailPage {
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
 	numPlan 		= 0;
-	tituloSubtitulo = [{titulo : "Plan Económico", subtitulo: ""}];
+	tituloSubtitulo = {titulo : "Plan Económico", subtitulo: ""};
 	importes 		= new Array();
 
 	public lineChartDataPagado:Array<any> = [
@@ -119,7 +119,7 @@ export class PlanEconomicoDetailPage {
 				for (var key in data['data']) {
 					this.cards.push(data['data'][key]);
 					this.showCardError = false;
-					this.tituloSubtitulo = [{titulo : "Plan Económico", subtitulo: data['data'][key]['nombre'] }];
+					this.tituloSubtitulo = {titulo : "Plan Económico", subtitulo: data['data'][key]['nombre'] };
 				}
 
 				this.importes = data['importes'];

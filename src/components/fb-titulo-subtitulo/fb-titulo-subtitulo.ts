@@ -15,7 +15,6 @@ export class FbTituloSubtituloComponent {
   	@Input('info') object;
 
 	constructor() {
-		
 	}
 
 }

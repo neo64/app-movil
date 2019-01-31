@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Loading, ToastController, LoadingController, AlertController, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
-import { RecallPage } from '../../pages/recall/recall';
+import { TabHigienesPage } from '../../pages/tab-higienes/tab-higienes';
 import { LoginPage } from '../../pages/login/login';
 import { InstruccionesPage } from '../../pages/instrucciones/instrucciones';
 import { ConsejosPersonalizadosPage } from '../../pages/consejos-personalizados/consejos-personalizados';
@@ -30,7 +30,7 @@ export class MiSaludPage {
 	openPage(page, tipo) {
 		if(tipo == "page"){
 			if(page == "Recall")
-				this.navCtrl.push(RecallPage);
+				this.navCtrl.push(TabHigienesPage);
 			else if(page == "ConsejosPersonalizados")
 				this.navCtrl.push(ConsejosPersonalizadosPage);
 			else if(page == "Instrucciones")

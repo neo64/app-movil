@@ -24,7 +24,7 @@ export class PresupuestosPage {
 	loading: 		Loading; 			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
-	tituloSubtitulo = [{titulo : "Mis Presupuestos", subtitulo: "de tratamientos"}];
+	tituloSubtitulo = {titulo : "Mis Presupuestos", subtitulo: "de tratamientos"};
 	
 	constructor(private toastCtrl: ToastController, private file: File, private fileOpener: FileOpener, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();

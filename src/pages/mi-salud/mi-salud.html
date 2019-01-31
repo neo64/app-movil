@@ -38,17 +38,9 @@
 	    	</ion-row>
 	  	</ion-slide>
 	</ion-slides>
-	<ion-slides pager style="margin-left: -10%;" spaceBetween="-100" *ngIf="cards?.length <= 0" >
-  		<ion-slide class="slide" (click)="openPage('PedirCita', 'page')">
-	    	<ion-row>	    		
-	    		<ion-col col-12 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 15px 15px 0;">
-	    			<ion-row>
-	    				<ion-col style="color:white; font-size: 2.5rem;    margin-top: 6%;">PEDIR</ion-col>
-	    			</ion-row>	    			
-	    		</ion-col>
-	    	</ion-row>
-	  	</ion-slide>
-	</ion-slides>
+	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">
+  		<p> Actualmente no tienes citas </p>
+	</div>
 </div>
 
 <!-- Gradiente -->

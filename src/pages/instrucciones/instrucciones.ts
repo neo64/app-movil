@@ -22,7 +22,7 @@ export class InstruccionesPage {
 	loading: 		Loading; 			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
-	tituloSubtitulo = [{titulo : "Mis Instrucciones", subtitulo: "de tratamiento"}];
+	tituloSubtitulo = {titulo : "Mis Instrucciones", subtitulo: "de tratamiento"};
 	
 	constructor(private toastCtrl: ToastController, private file: File, private fileOpener: FileOpener, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
@@ -63,7 +63,7 @@ export class InstruccionesPage {
 			}			
 		}).catch(e => {
 			this.loading.dismiss();
-			console.log(e);
+			//console.log(e);
 		});		
 	}
 	

@@ -1,18 +1,85 @@
-<!--
-  Generated template for the RecallPasadasPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>recallPasadas</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
 <ion-content padding>
-
+	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaPasada == true">
+		<ion-slide *ngFor="let item of recall">
+			<div class="fb-card -vcita -gradient">
+			    <div class="card_row">
+			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
+			            <div class="card_subtitle -white" style="font-size: 1.4rem;">
+			                {{item.diaSemana}}
+			            </div>
+			            <div class="card_time -white">
+			                {{item.dia}}
+			                <span>
+			                {{item.mes}}
+			                </span>
+			            </div>
+			            <div class="card_subtitle -white" style="font-size:1rem;">
+			                {{item.ano}}
+			            </div>
+			        </div>
+			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">
+			            <div style="display:flex;flex-direction:column;align-items: flex-end;">
+			                <div class="card_time -white">
+			                    {{item.hora}}
+			                    <span style="display:inline;">
+			                        H
+			                    </span>
+			                </div>
+			                <div class="card_subtitle -white">
+			                    Duración:
+			                    <span>
+			                        {{item.Duracion}}'
+			                    </span>
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			    <div class="card_content -bg-white">
+			        <div class="card_row">
+			            <div>
+			                <div class="card_label">
+			                    Tratamiento
+			                </div>
+			                <div class="card_title">
+			                   {{item.tratamiento}}
+			                </div>
+			            </div>
+			        </div>
+			        <div class="card_separator">
+			        </div>
+			        <div class="card_row">
+			            <div class="left">
+			                <div class="card_label">
+			                    Profesional
+			                </div>
+			                <div class="card_container">
+			                    <div class="avatar">
+			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />
+			                    </div>
+			                    <div class="card_title">
+			                       {{item.usuario}}
+			                    </div>
+			                </div>
+			            </div>
+			            <div class="right">
+			                <div class="card_label">
+			                    Estado de la cita
+			                </div>
+			                <div class="card_estado">
+			                     {{item.situacion}}
+			                </div>
+			            </div>
+			        </div>
+			    </div>
+			</div>
+		</ion-slide>
+	</ion-slides>
+	<div padding *ngIf="infoR.fechaPasada != true">
+		<fb-titulo-subtitulo [info]="infoR" ></fb-titulo-subtitulo>
+		<p>{{infoR.texto}}</p>
+		<br />
+		<p style=" max-height: 10rem;">
+			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>
+		</p>
+	</div>
 </ion-content>

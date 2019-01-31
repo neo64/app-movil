@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, PopoverController } from 'ionic-angular';
+import { IonicPage, App, NavController, Loading, LoadingController, AlertController, Events, PopoverController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
+import { PedirCitaPage } from '../../pages/pedir-cita/pedir-cita';
 import { Calendar } from '@ionic-native/calendar';
 import { PopoverPage } from '../../pages/popover/popover';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -14,13 +15,12 @@ import { DomSanitizer } from '@angular/platform-browser';
 })
 export class RecallPage {
 
-	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
-	recall 		= Array();
-	fechaProx 	= "";
-	showPlanificada = false;
-	showMessage = true;
+	loading: 		Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
+	recall 			= Array();
+	infoR 			= {fechaFutura: false};
+	botonPedirCita	= {name: 'PEDIR CITA DE HIGIENE', svg: 'citas', openPage: 'PedirCita', tipo: 'page', gradiente: '', class: 'active'};
 	
-	constructor(private domSanitizer: DomSanitizer, private calendar: Calendar, public popoverCtrl: PopoverController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+	constructor(private app : App, private domSanitizer: DomSanitizer, private calendar: Calendar, public popoverCtrl: PopoverController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getRecall();
 		this.events.publish("user:logged");	
@@ -28,7 +28,8 @@ export class RecallPage {
 	
 	openPage(page, tipo) {
 		if(tipo == "page"){
-			
+			if(page == "PedirCita")
+				this.app.getRootNav().push(PedirCitaPage);
 		}else if(tipo == "web"){
 			window.open(page, '_system', 'location=yes');
 		}		
@@ -145,9 +146,7 @@ export class RecallPage {
 		this.restProvider.getRecall().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				this.recall = data['data']['data'];
-				if(data['data']['fechaFutura']){
-					this.showMessage = false;
-				}
+				this.infoR 	= data['data'];				
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
