@@ -858,6 +858,7 @@ var DocumentosContablesPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.cards = new Array(); // Array donde se almacenan los objetos del tipo card descargados del servidor.
         this.showCardError = false;
+        this.tituloSubtitulo = { titulo: "Documentos contables", subtitulo: "de tratamientos" };
         this.showLoading();
         this.getDocumentosContables();
         this.events.publish("user:logged");
@@ -1061,7 +1062,7 @@ var DocumentosContablesPage = /** @class */ (function () {
     };
     DocumentosContablesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-documentos-contables',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Documentos contables</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content class="card-background-page" >\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<!-- Gradiente -->\n  	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<ion-list *ngIf="showCardError == true" style="min-height: 8rem;margin: 15px 15px -20px 15px;">\n		<ion-card detail-none  style="margin: 15px 0px 15px 0px;width:100%;    background: #ebcccc;    color: #a94442;    text-align: center;    padding: 1.5rem;    border-radius: 1rem;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:100%;height:100%;float:left;">\n					No hemos podido encontrar documentos para tí.\n				</div>				\n			</div>\n		</ion-card>\n	</ion-list>\n	<ion-list style="min-height: 7rem;margin: 20px;">\n		<button ion-button (click)="solicitarFactura()" type="submit" block style="margin: 15px 0px 15px 0px;width:100%;"><i style="margin-right: 0.5rem;" class="fas fa-plus"></i>  Solicitar factura</button>\n	</ion-list>\n	<ion-list style="padding: 0rem 2rem 0rem 2rem;margin: -15px 0 16px !important;">	 \n		<ion-card detail-none *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.numDoc)" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:25%;height:100%;float:left;">\n					<svg style="    height: 5rem;    margin: 3.5rem 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="url(#fb-shadow-gradient5)" stroke="none"> <path d="M47.5 26.8H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M21.7 20.6H32c.6 0 1-.5 1-1 0-.6-.5-1-1-1H21.7c-.6 0-1 .5-1 1-.1.6.4 1 1 1zm0 0M47.5 35.1H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M47.5 43.4H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm0 0M47.5 51.6H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0"/><path d="M51.6 16.1V1H7.2v56.8h5.2V63h44.4V21.2l-5.2-5.1zm-9.3-6.4l10.9 10.9H42.3V9.7zm-33 46.1V3.1h40.3V14l-7.8-7.8H12.4v49.6H9.3zm5.1 5.1V8.2h25.8v14.5h14.5v38.2H14.4zm0 0"></path> </g> </svg>\n				</div>\n				<div style="width:50%;height:100%;float:left;">\n					<div class="card-title" style="margin-top: 2rem;">{{card.tipo}}</div>\n					<div class="card-subtitle" style="margin-top: 2rem;">{{card.fecha}}</div>\n					<div class="card-subtitle-date" style="margin-top: 2rem;">{{card.total}}€</div>\n				</div>\n				<div style="width:25%;height:100%;float:left;">\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    margin: 4.5rem 0 0 .6rem;">\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n						</svg>\n					</span>\n				</div>\n			</div>\n		</ion-card>  \n	</ion-list>	\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/,
+            selector: 'page-documentos-contables',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Documentos contables</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n	<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	<br />\n\n    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n    <br />	 \n\n	<div *ngFor="let card of cards">\n        <div class="fb-card -v2">\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title">\n                        {{card.tipo}}\n                    </div>\n                    <div class="card_subtitle">\n                       {{card.fecha}}\n                    </div>\n                </div>                \n            </div>\n            <div class="card_separator">\n            </div>\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title -price" style="    margin-top: 5%;">\n                        {{card.total}} €\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="createAndOpenPDF(card.html, card.numDoc)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n        </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], DocumentosContablesPage);
@@ -2007,14 +2008,13 @@ var ChatPage = /** @class */ (function () {
                 timeNow = new Date(Number(data['timeStamp']));
                 if (timeNow.getDay() == 0 || timeNow.getDay() == 6) {
                     mostrarError = true;
-                    console.log(timeNow.getDay());
                 }
                 else if (timeNow.getDay() == 5) {
-                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 19) {
-                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 30) {
+                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 20) {
+                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
                             mostrarError = false;
                         }
-                        else if (timeNow.getHours() == 19 && timeNow.getMinutes() <= 30) {
+                        else if (timeNow.getHours() == 20 && timeNow.getMinutes() <= 0) {
                             mostrarError = false;
                         }
                         else {
@@ -2023,11 +2023,11 @@ var ChatPage = /** @class */ (function () {
                     }
                 }
                 else {
-                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 20) {
-                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 30) {
+                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 21) {
+                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
                             mostrarError = false;
                         }
-                        else if (timeNow.getHours() == 20 && timeNow.getMinutes() <= 30) {
+                        else if (timeNow.getHours() == 21 && timeNow.getMinutes() <= 0) {
                             mostrarError = false;
                         }
                         else {
@@ -2296,7 +2296,7 @@ var ChatPage = /** @class */ (function () {
     *
     */
     ChatPage.prototype.ionViewDidEnter = function () {
-        console.log("ENTRA EN CHAT");
+        //console.log("ENTRA EN CHAT");
         __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
             date: "Online",
         });
@@ -2313,7 +2313,7 @@ var ChatPage = /** @class */ (function () {
     */
     ChatPage.prototype.ionViewWillLeave = function () {
         this.offStatus = true;
-        console.log("SALE EN CHAT");
+        //console.log("SALE EN CHAT");
         __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
             date: Date(),
         });
@@ -2382,7 +2382,7 @@ var snapshotToArray = function (snapshot, nickname, vb, firstOpen, offStatus) {
         }
     });
     if (!firstOpen && !offStatus && lastElemenmt == "atPaciente") {
-        console.log("VIBRA - " + firstOpen);
+        //console.log("VIBRA - " + firstOpen);
         vb.vibrate(500);
     }
     return returnArr;
@@ -3125,6 +3125,8 @@ var LoginPage = /** @class */ (function () {
         this.alertCtrl = alertCtrl;
         this.loadingCtrl = loadingCtrl;
         this.registerCredentials = { email: '', password: '' }; // Array con los campos del formulario
+        this.bCrearCuenta = { name: 'Crear cuenta', svg: '', openPage: 'crearCuenta', class: 'active login', tipo: 'page', gradiente: '' };
+        this.bIniciarSesion = { name: 'Iniciar sesión', svg: '', openPage: 'IniciarSesion', class: 'login', tipo: 'page', gradiente: '' };
         var timeNow = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
         var expires = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
         // Compruebo si la fecha de expiración es posterior
@@ -3135,12 +3137,6 @@ var LoginPage = /** @class */ (function () {
                 timeNow = new Date(Number(data['timeStamp']));
                 expires = new Date(Number(data['expires']));
             }
-            // INICIO DEBUG para Firebase
-            //window.localStorage.setItem("idPac", "9900");					
-            //window.localStorage.setItem("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDI2NTAyNDUsImV4cCI6MTU0NTI0MjI0NSwianRpIjoidzZlUXlQVVhzYUpCbjBNN3lMY29pIiwic3ViIjoibG9naW4ifQ.Fh-DbVtCWekIV2bmA2HaQZytCJMuoBbrCBiSk9ZFAWg");				
-            //window.localStorage.setItem("expires", "1545242245000");
-            //this.nav.setRoot(HomePage);
-            // FIN DEBUG para Firebase
             if (expires > timeNow) {
                 _this.events.publish("user:logged");
                 _this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_home_home__["a" /* HomePage */]);
@@ -3219,7 +3215,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/'<!--\n  Generated template for the LoginPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-content class="bg">\n	<div class="login">\n		<div class="login-top">\n			<img src="assets/imgs/icon.png">\n		</div>\n		<div class="login-bottom">\n			<form #registerForm="ngForm">\n				<input type="text" placeholder="Email" name="email" [(ngModel)]="registerCredentials.email" required=" ">					\n				<input type="password" placeholder="Password" name="password" [(ngModel)]="registerCredentials.password" required=" ">						\n				 <button ion-button class="submit-btn" full type="submit" (click)="login()" [disabled]="!registerForm.form.valid">Entrar</button>\n			</form>			\n		</div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/'<ion-content padding>\n	<div>\n		<h1>Bienvenido a <span>F&B</span></h1>\n	</div>\n	<div style="    text-align: center;">\n		<img src="assets/imgs/logo.png" style="width: 75%;">\n	</div>\n</ion-content>\n<ion-footer>\n	<div class="buttons">\n		<fb-button [name]="bCrearCuenta" [class]="bCrearCuenta.class" (click)="openPage(bCrearCuenta.openPage,bCrearCuenta.tipo)"> </fb-button>\n		<p class="line"><span>o</span></p>\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n		<p>\n			<a href="https://www.clinicaferrusbratos.com/aviso-legal/">Terminos de servicio</a>\n		</p>\n	</div>\n</ion-footer>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* LoadingController */]])
     ], LoginPage);

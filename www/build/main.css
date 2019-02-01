@@ -43284,6 +43284,13 @@ fb-button p.active {
   color: white;
 }
 
+fb-button .login {
+  font-size: 1.8rem;
+  margin: 0;
+  border: none;
+  color: #38383b;
+}
+
 fb-button-icon button {
   background: white;
   border-radius: 6px;
@@ -43601,38 +43608,19 @@ page-doc-firmados .label-md {
   padding: 2px;
 }
 
-page-documentos-contables .img-round {
-  border-radius: 50%;
-  margin-left: 0.4rem;
-  margin-top: 1rem;
-}
-
-page-documentos-contables .card-background-page ion-card {
-  position: relative;
+page-documentos-contables ion-title {
   text-align: center;
-  max-height: 32%;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-documentos-contables .card-background-page .card-title {
-  position: absolute;
-  font-size: 1.3em;
-  color: #000;
-  top: 1rem;
-  text-align: left;
+page-documentos-contables ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
 }
 
-page-documentos-contables .card-background-page .card-subtitle {
-  font-size: 1.0em;
-  position: absolute;
-  top: 3.5rem;
-  color: #000;
-}
-
-page-documentos-contables .card-background-page .card-subtitle-date {
-  font-size: 1.2rem;
-  position: absolute;
-  top: 5.5rem;
-  color: #000;
+page-documentos-contables .toolbar-background-md {
+  background: white;
 }
 
 page-home .back {
@@ -43755,67 +43743,82 @@ page-instrucciones .toolbar-background-md {
   background: white;
 }
 
-page-login .bg {
-  background: #81a7d4;
+page-login h1 {
+  font-weight: 700;
+  text-align: center;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  color: #38383b;
 }
 
-page-login .login {
-  width: 80%;
+page-login span {
+  color: #ed7aad;
+}
+
+page-login p {
+  text-align: center;
+  color: #858585;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+page-login .buttons {
+  max-height: 5rem;
+  max-width: 75%;
+  text-align: center;
   margin: 0 auto;
-  background: #fff;
-  padding: 3em;
+}
+
+page-login .footer-md::before, page-login .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login ion-footer {
+  height: 30%;
+}
+
+page-login .scroll-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-login p.line {
   position: relative;
-  border-radius: 5px;
-  top: 20%;
+  z-index: 1;
+  padding: 2rem;
 }
 
-page-login .login-top {
-  width: 60%;
+page-login p.line:before {
+  border-top: 1px solid #e1e1e1;
+  content: "";
   margin: 0 auto;
+  /* this centers the line to the full width specified */
+  position: absolute;
+  /* positioning must be absolute here, and relative positioning must be applied to the parent */
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
 }
 
-page-login .login-bottom input[type="text"] {
-  font-size: 1.2em;
-  width: 100%;
-  padding: .6em .8em;
-  outline: none;
-  background: #81a7d4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin-bottom: 2rem;
-}
-
-page-login .login-bottom input[type="password"] {
-  font-size: 1.2em;
-  width: 100%;
-  padding: .6em 1em;
-  outline: none;
-  background: #81a7d4;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin-bottom: 2rem;
-}
-
-page-login .login-bottom input[type="submit"] {
-  font-size: 1.5em;
-  padding: .3em .3em;
-  width: 45%;
-  border: none;
-  text-transform: capitalize;
-  outline: none;
-  border-radius: 5px;
-  background: #f1a6c7;
-  color: #fff;
-  cursor: pointer;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin: 0 auto;
-  display: block;
+page-login p.line span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: #fff;
+  padding: 0 15px;
+  color: #858585;
 }
 
 page-mi-perfil ion-title {

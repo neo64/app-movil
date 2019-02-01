@@ -54,24 +54,23 @@ export class ChatPage {
 
 				if(timeNow.getDay() == 0 || timeNow.getDay() == 6){
 					mostrarError = true;
-					console.log(timeNow.getDay());
 				}else if(timeNow.getDay() == 5){
-					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 19){
+					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 20){
 
-						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 30){
+						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 0){
 							mostrarError = false;
-						}else if(timeNow.getHours() == 19 && timeNow.getMinutes() <= 30){
+						}else if(timeNow.getHours() == 20 && timeNow.getMinutes() <= 0){
 							mostrarError = false;
 						}else{
 							mostrarError = true;
 						}					
 					}
 				}else{
-					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 20){
+					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 21){
 
-						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 30){
+						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 0){
 							mostrarError = false;
-						}else if(timeNow.getHours() == 20 && timeNow.getMinutes() <= 30){
+						}else if(timeNow.getHours() == 21 && timeNow.getMinutes() <= 0){
 							mostrarError = false;
 						}else{
 							mostrarError = true;
@@ -368,7 +367,7 @@ export class ChatPage {
 	* 	
 	*/
 	ionViewDidEnter() {
-		console.log("ENTRA EN CHAT");
+		//console.log("ENTRA EN CHAT");
 		firebase.database().ref(this.nickname + "/ultimaConexion").set({
 			date:	"Online",
 		});
@@ -386,7 +385,7 @@ export class ChatPage {
 	*/ 
 	ionViewWillLeave() {
 		this.offStatus = true;
-		console.log("SALE EN CHAT");
+		//console.log("SALE EN CHAT");
 		firebase.database().ref(this.nickname + "/ultimaConexion").set({
 			date:	Date(),
 		});
@@ -444,7 +443,7 @@ export const snapshotToArray = (snapshot,nickname,vb,firstOpen, offStatus) => {
     });
 	
 	if(!firstOpen && !offStatus && lastElemenmt == "atPaciente"){
-		console.log("VIBRA - " + firstOpen);
+		//console.log("VIBRA - " + firstOpen);
 		vb.vibrate(500);
 	}	
     

@@ -1,66 +1,64 @@
 page-login {
+
  
-	.bg{
-		background: #81a7d4;
-	}
-	
-	.login {
-		width: 80%;
-		margin: 0 auto;
-		background: #fff;
-		padding: 3em;
-		position: relative;
-		border-radius: 5px;
-		top: 20%;
-	}
-	
-	.login-top {
-		width: 60%;
-		margin: 0 auto;
-	}
-	
-	.login-bottom input[type="text"] {
-		font-size: 1.2em;
-		width: 100%;
-		padding: .6em .8em;
-		outline: none;
-		background: #81a7d4;
-		color:white;
-		border: none;
-		border-radius: 5px;
+	h1{
+		font-weight: 700;
 		text-align: center;
-		font-family: 'PT Sans Narrow', sans-serif;
-		margin-bottom: 2rem;
+		line-height: 26px;
+		letter-spacing: 1.5px;
+		color: map-get($colors, black);
+	}& span{
+		color: map-get($colors, pink-dark);
 	}
-	
-	.login-bottom input[type="password"] {
-		font-size: 1.2em;
-		width: 100%;
-		padding: .6em 1em;
-		outline: none;
-		background: #81a7d4;
-		color:white;
-		border: none;
-		border-radius: 5px;
+
+	p{
 		text-align: center;
-		font-family: 'PT Sans Narrow', sans-serif;
-		margin-bottom: 2rem;
+		color: map-get($colors, grey-medium);
+		line-height: 20px;
+		letter-spacing: 1.5px;
 	}
-	
-	.login-bottom input[type="submit"] {
-		font-size: 1.5em;
-		padding: .3em .3em;
-		width: 45%;
-		border: none;
-		text-transform: capitalize;
-		outline: none;
-		border-radius: 5px;
-		background: #f1a6c7;
-		color: #fff;
-		cursor: pointer;
-		font-family: 'PT Sans Narrow', sans-serif;
-		margin: 0 auto;
-		display: block;
+
+	.buttons{
+	    max-height: 5rem;
+	    max-width: 75%;
+	    text-align: center;
+	    margin: 0 auto;
+	}
+
+	.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+	    height: 0px;
+	}
+
+	ion-footer{
+		height: 30%;
+	}
+
+	.scroll-content{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	p.line {
+	    position: relative;
+	    z-index: 1;
+	    padding: 2rem;
+	    &:before {
+	        border-top: 1px solid map-get($colors, grey);
+	        content:"";
+	        margin: 0 auto; /* this centers the line to the full width specified */
+	        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+	        top: 50%; left: 0; right: 0; bottom: 0;
+	        width: 95%;
+	        z-index: -1;
+	    }
+
+	    span { 
+	        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+	        background: #fff; 
+	        padding: 0 15px; 
+	        color: map-get($colors, grey-medium);
+	    }
 	}
  
 }

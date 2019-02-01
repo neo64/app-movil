@@ -14,7 +14,10 @@ export class LoginPage {
 
 	loading: Loading;									// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	registerCredentials = { email: '', password: '' };	// Array con los campos del formulario
-			   
+	bCrearCuenta 	= {name : 'Crear cuenta', svg: '', openPage : 'crearCuenta', class : 'active login', tipo : 'page', gradiente: ''};
+	bIniciarSesion 	= {name : 'Iniciar sesión', svg: '', openPage : 'IniciarSesion', class : 'login', tipo : 'page', gradiente: ''};
+
+
 	constructor(public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 				
 		var timeNow = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
@@ -29,13 +32,6 @@ export class LoginPage {
 				timeNow = new Date(Number(data['timeStamp']));
 				expires = new Date(Number(data['expires']));
 			}
-			
-			// INICIO DEBUG para Firebase
-			//window.localStorage.setItem("idPac", "9900");					
-			//window.localStorage.setItem("token", "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NDI2NTAyNDUsImV4cCI6MTU0NTI0MjI0NSwianRpIjoidzZlUXlQVVhzYUpCbjBNN3lMY29pIiwic3ViIjoibG9naW4ifQ.Fh-DbVtCWekIV2bmA2HaQZytCJMuoBbrCBiSk9ZFAWg");				
-			//window.localStorage.setItem("expires", "1545242245000");
-			//this.nav.setRoot(HomePage);
-			// FIN DEBUG para Firebase
 			
 			if(expires > timeNow){
 				this.events.publish("user:logged");	

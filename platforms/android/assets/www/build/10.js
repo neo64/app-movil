@@ -1,14 +1,14 @@
 webpackJsonp([10],{
 
-/***/ 841:
+/***/ 847:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MisCitasPageModule", function() { return MisCitasPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlanEconomicoDetailPageModule", function() { return PlanEconomicoDetailPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mis_citas__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__ = __webpack_require__(225);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var MisCitasPageModule = /** @class */ (function () {
-    function MisCitasPageModule() {
+var PlanEconomicoDetailPageModule = /** @class */ (function () {
+    function PlanEconomicoDetailPageModule() {
     }
-    MisCitasPageModule = __decorate([
+    PlanEconomicoDetailPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //MisCitasPage,
+                __WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mis_citas__["a" /* MisCitasPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__["a" /* PlanEconomicoDetailPage */]),
             ],
         })
-    ], MisCitasPageModule);
-    return MisCitasPageModule;
+    ], PlanEconomicoDetailPageModule);
+    return PlanEconomicoDetailPageModule;
 }());
 
-//# sourceMappingURL=mis-citas.module.js.map
+//# sourceMappingURL=plan-economico-detail.module.js.map
 
 /***/ })
 

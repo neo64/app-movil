@@ -24,7 +24,8 @@ export class DocumentosContablesPage {
 	loading: 		Loading; 			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 			= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	showCardError	= false;
-	
+	tituloSubtitulo = {titulo : "Documentos contables", subtitulo: "de tratamientos"};
+
 	constructor(private toastCtrl: ToastController, private file: File, private fileOpener: FileOpener, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getDocumentosContables();
@@ -81,7 +82,6 @@ export class DocumentosContablesPage {
 	getDocumentosContables(){
 		this.restProvider.getDocumentosContables().then(data => {
 			if(typeof data != "undefined" &&  data['status'] == 1){				
-				
 				if (typeof this.cards === 'undefined' || this.cards.length <= 0){
 					this.showCardError = true;
 				}
