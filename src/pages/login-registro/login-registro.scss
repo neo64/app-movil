@@ -1,0 +1,18 @@
+page-login-registro {
+	.olvido{
+	    text-align: right;
+    	color: map-get($colors, pink-dark);
+		padding-right: 6%;
+	}
+
+	.list-md .item-input:last-child {
+	    border-bottom: 1px solid #dedede;
+	    padding-left: 0px;
+	    margin-left: 16px;
+	    width: 90%;
+	}
+
+	.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+	    height: 0px;
+	}
+}

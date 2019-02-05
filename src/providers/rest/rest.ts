@@ -16,6 +16,23 @@ export class RestProvider {
 
 	}	
 	
+	sendPIN(dni){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/sendPIN', false, {
+				headers: new HttpHeaders(),
+				params: new HttpParams().set('dni', dni)				
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
 	setSugerencia(data){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/setSugerencia', false, {

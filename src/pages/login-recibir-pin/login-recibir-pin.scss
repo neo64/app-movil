@@ -1,0 +1,30 @@
+page-login-recibir-pin {
+	ion-title{
+		text-align:center;
+		margin-left: -15%;
+		z-index: 0;
+	}
+
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
+	}
+
+	.toolbar-background-md{
+		background: white;
+	}
+
+	.olvido{
+	    text-align: right;
+    	color: map-get($colors, pink-dark);
+		padding-right: 6%;
+	}
+
+	span{
+		color: map-get($colors, pink-dark);
+	}
+
+	.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+	    height: 0px;
+	}
+}

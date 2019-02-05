@@ -1,0 +1,31 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Introduce el PIN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<p>
+		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.data.tipo }}: <span>{{ data.data.direccion }}</span>
+	</p>
+	<br />
+	<ion-list>
+		<ion-item style=" width: 94%;">
+			<ion-label stacked>PIN</ion-label>
+			<ion-input type="text" [(ngModel)]="registerCredentials.digitos"></ion-input>
+		</ion-item>
+		<p class="olvido">Nº de 6 dígitos</p>		
+	</ion-list>
+	<div style="max-height:5rem; width: 80%; margin: 0 auto;">
+		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>
+	</div>
+	<ion-footer>
+		<p style="text-align: center;">
+			No lo he recibido.<br/>
+			<a (click)="reEnviarPIN()">Reenviar PIN</a>
+		</p>
+	</ion-footer>
+</ion-content>

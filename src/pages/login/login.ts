@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { RestProvider } from '../../providers/rest/rest';
-import { NavController, Loading, IonicPage, LoadingController, AlertController, Events  } from 'ionic-angular';
+import { NavController, Loading, ToastController, IonicPage, LoadingController, AlertController, Events  } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { ChangePasswordPage } from '../../pages/change-password/change-password';
+import { LoginTabPage } from '../../pages/login-tab/login-tab';
 
 @IonicPage()
 @Component({
@@ -14,11 +15,11 @@ export class LoginPage {
 
 	loading: Loading;									// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	registerCredentials = { email: '', password: '' };	// Array con los campos del formulario
-	bCrearCuenta 	= {name : 'Crear cuenta', svg: '', openPage : 'crearCuenta', class : 'active login', tipo : 'page', gradiente: ''};
-	bIniciarSesion 	= {name : 'Iniciar sesión', svg: '', openPage : 'IniciarSesion', class : 'login', tipo : 'page', gradiente: ''};
+	bCrearCuenta 	= {name : 'Crear cuenta', svg: '', openPage : 'Registro', class : 'active login', tipo : 'page', gradiente: ''};
+	bIniciarSesion 	= {name : 'Iniciar sesión', svg: '', openPage : 'Login', class : 'login', tipo : 'page', gradiente: ''};
 
 
-	constructor(public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+	constructor(private toastCtrl: ToastController, public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 				
 		var timeNow = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
 		var expires = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
@@ -38,6 +39,52 @@ export class LoginPage {
 				this.nav.setRoot(HomePage);	
 			}		
 		});
+	}
+
+	/**
+	* 	Función que abre una página o una web dependiendo
+	*	de los parámetros que se les introduzca.
+	*
+	* 	@param String page a la que redirigir.
+	* 	@param String tipo si es pagina o web.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/  
+	openPage(page, tipo) {
+		if(tipo === "page"){
+			if(page == "Login")
+				this.nav.push(LoginTabPage, { pageDefault: "0" } );				
+			else if(page == "Registro")
+				this.nav.push(LoginTabPage, { pageDefault: "1" });			
+			else
+				this.presentToast("La página no está disponible.");			
+		}else if(tipo == "web"){
+			window.open(page, '_system', 'location=yes');
+		}else{
+			this.presentToast("La página '"+page+"' de tipo '"+tipo+"' no está disponible.");
+		}		
+	}
+
+	/**
+	* 	Función que muestra un Toast con la información
+	*	referente a la acción del usuario.
+	*
+	* 	@param String Titulo de la alerta.
+	* 	@param String Texto de la alerta.
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
+	presentToast(txt) {
+		let toast = this.toastCtrl.create({
+			message: txt,
+			duration: 3000,
+			position: 'bottom',
+			showCloseButton: true,
+			closeButtonText: 'OK'
+		});
+		toast.present();
 	}
 	
 	/**

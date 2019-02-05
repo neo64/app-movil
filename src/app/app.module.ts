@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from 'ionic-angular';
@@ -28,6 +29,13 @@ import { MiSaludPage } from '../pages/mi-salud/mi-salud';
 import { MiPerfilPage } from '../pages/mi-perfil/mi-perfil';
 import { MisCitasPage } from '../pages/mis-citas/mis-citas';
 import { MisDocumentosPage } from '../pages/mis-documentos/mis-documentos';
+
+import { LoginInputPage } from '../pages/login-input/login-input';
+import { LoginRegistroPage } from '../pages/login-registro/login-registro';
+import { LoginTabPage } from '../pages/login-tab/login-tab';
+import { LoginRecibirPinPage } from '../pages/login-recibir-pin/login-recibir-pin';
+import { LoginErrorPinPage } from '../pages/login-error-pin/login-error-pin';
+import { LoginYaRegistradoPage } from '../pages/login-ya-registrado/login-ya-registrado';
 
 import { RecallPage } from '../pages/recall/recall';
 import { RecallPasadasPage } from '../pages/recall-pasadas/recall-pasadas';
@@ -79,6 +87,12 @@ import { ChartsModule } from 'ng2-charts';
 	ConsejosDetailPage,
 	DocumentosContablesPage,
 	PresupuestosPage,
+	LoginInputPage,
+	LoginTabPage,
+	LoginRegistroPage,
+	LoginRecibirPinPage,
+	LoginErrorPinPage,
+	LoginYaRegistradoPage,
 	PlanEconomicoPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
@@ -135,6 +149,12 @@ import { ChartsModule } from 'ng2-charts';
 	DocumentosContablesPage,
 	PresupuestosPage,
 	PlanEconomicoPage,
+	LoginInputPage,
+	LoginRegistroPage,
+	LoginTabPage,
+	LoginRecibirPinPage,
+	LoginErrorPinPage,
+	LoginYaRegistradoPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
 	ChatPage

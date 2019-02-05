@@ -43821,6 +43821,131 @@ page-login p.line span {
   color: #858585;
 }
 
+page-login-input .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-input .list-md .item-input:last-child {
+  border-bottom: 1px solid #dedede;
+  padding-left: 0px;
+  margin-left: 16px;
+  width: 90%;
+}
+
+page-login-input .footer-md::before, page-login-input .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-recibir-pin ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-login-recibir-pin ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-recibir-pin .toolbar-background-md {
+  background: white;
+}
+
+page-login-recibir-pin .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-recibir-pin span {
+  color: #ed7aad;
+}
+
+page-login-recibir-pin .footer-md::before, page-login-recibir-pin .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-registro .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-registro .list-md .item-input:last-child {
+  border-bottom: 1px solid #dedede;
+  padding-left: 0px;
+  margin-left: 16px;
+  width: 90%;
+}
+
+page-login-registro .footer-md::before, page-login-registro .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-tab ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-login-tab .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-login-tab ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-tab .toolbar-background-md {
+  background: white;
+}
+
+page-login-tab .tabs-md .tab-button[aria-selected=true] {
+  border-bottom: 2px solid #ed7aad;
+  color: #38383b;
+}
+
+page-login-tab .tabs-md .tab-button {
+  border-bottom: 2px solid #e1e1e1;
+  color: #e1e1e1;
+  padding-top: 5% !important;
+}
+
+page-login-tab .tabbar {
+  padding: 0rem 4rem 0rem 4rem;
+  background: white !important;
+  margin-top: -6%;
+}
+
+page-login-tab .header-md::after, page-login-tab .tabs-md[tabsPlacement="top"] > .tabbar::after, page-login-tab .footer-md::before, page-login-tab .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-login-tab ion-slides {
+  margin-top: 0px;
+  height: auto;
+}
+
+page-login-tab ion-slide {
+  padding: 0 60px;
+}
+
+page-login-tab .swiper-slide {
+  height: 80%;
+  padding: 0rem 6rem 0rem 4rem;
+}
+
+page-login-tab .slide-zoom {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 page-mi-perfil ion-title {
   text-align: center;
   margin-left: -15%;

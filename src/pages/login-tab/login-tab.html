@@ -1,0 +1,15 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>       
+	<ion-tabs #myTab tabsPlacement="top" selectedIndex="{{ pageDefault }}">
+		<ion-tab [root]="tabLogin" tabTitle="Iniciar sesión" ></ion-tab>					
+		<ion-tab [root]="tabRegistro" tabTitle="Crear cuenta" ></ion-tab>
+	</ion-tabs>
+</ion-content>
