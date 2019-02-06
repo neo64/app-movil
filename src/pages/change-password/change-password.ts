@@ -13,7 +13,10 @@ export class ChangePasswordPage {
 	
 	isFirst 	= false;	// Indica si es la primera vez que entra en la App, y debe cambiar la contraseña
 	loading: 	Loading;	// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
-	data 		= { pass1: '', pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
+	data 		= { /*pass1: '', */pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
+	bGuardar 	= {name : 'Guardar contraseña', svg: '', openPage : 'Login', class : 'active login', tipo : 'page', gradiente: ''};
+	tituloSubtitulo  = {titulo : "Crea tu contraseña", subtitulo: "para acceder a la App"};
+
 
 	constructor(public events: Events, private loadingCtrl: LoadingController,public restProvider: RestProvider, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
 		this.isFirst = navParams.get('first');
@@ -32,17 +35,17 @@ export class ChangePasswordPage {
 	*/
 	actualizarPass(){		
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
-		if(this.data.pass1 == "" || this.data.pass2 == "" || this.data.pass3 == ""){
+		if(/*this.data.pass1 == "" || */this.data.pass2 == "" || this.data.pass3 == ""){
 			this.showError("ERROR","Los campos no pueden estar vacios.");	
 			return;
-		}else if (this.data.pass1 == this.data.pass2){
-			this.showError("ERROR","La nueva contraseña no puede ser igual que la anterior.");	
-			return;
+		//}else if (this.data.pass1 == this.data.pass2){
+		//	this.showError("ERROR","La nueva contraseña no puede ser igual que la anterior.");	
+		//	return;
 		}else if (this.data.pass3 != this.data.pass2){
 			this.showError("ERROR","La nuevas nuevas contraseñas deben ser iguales.");	
 			return;
 		}else{
-			this.restProvider.actualizarPass(this.data.pass1,this.data.pass2,this.data.pass3).then(data => {
+			this.restProvider.actualizarPass(/*this.data.pass1,*/this.data.pass2,this.data.pass3).then(data => {
 				if(typeof data != "undefined" && data['status'] == 1){					
 					if(data['error'] == 0){ 
 						this.showError("¡Bien!","La contraseña ha sido cambiada con éxito", true);		

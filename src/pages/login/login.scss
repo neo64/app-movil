@@ -42,7 +42,7 @@ page-login {
 	p.line {
 	    position: relative;
 	    z-index: 1;
-	    padding: 2rem;
+
 	    &:before {
 	        border-top: 1px solid map-get($colors, grey);
 	        content:"";

@@ -43284,6 +43284,13 @@ fb-button p.active {
   color: white;
 }
 
+fb-button .login {
+  font-size: 1.8rem;
+  margin: 0;
+  border: none;
+  color: #38383b;
+}
+
 fb-button-icon button {
   background: white;
   border-radius: 6px;
@@ -43378,41 +43385,44 @@ page-list .botonMas {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
 }
 
-page-change-password .item-md {
-  padding-right: 16px;
+page-change-password ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-change-password .item-input.input-has-focus:last-child {
-  border-bottom-color: #81a7d4 !important;
-  -webkit-box-shadow: inset 0 1px 0 0 #81a7d4 !important;
-  box-shadow: inset 0 0px 0 0 #81a7d4 !important;
-  border-bottom: 0 solid #dedede !important;
+page-change-password ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
 }
 
-page-change-password .item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, page-change-password .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
-  border-bottom-color: #81a7d4 !important;
-  -webkit-box-shadow: inset 0 -1px 0 0 #81a7d4 !important;
-  box-shadow: inset 0 0px 0 0 #81a7d4 !important;
+page-change-password .toolbar-background-md {
+  background: white;
 }
 
-page-change-password .list-md .item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child, page-change-password .list-md .item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus):last-child {
-  border-bottom-color: #81a7d4;
-  -webkit-box-shadow: inset 0 -0px 0 0 #81a7d4;
-  box-shadow: inset 0 -0px 0 0 #81a7d4;
-  border-bottom: 0 solid #dedede;
+page-change-password .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-change-password span {
+  color: #ed7aad;
+}
+
+page-change-password .footer-md::before, page-change-password .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
 }
 
 page-change-password .list-md .item-input:last-child {
-  border-bottom: 0 solid #dedede;
-  border-bottom: 0 solid #dedede;
+  border-bottom: 1px solid #dedede;
+  padding-left: 0px;
+  margin-left: 16px;
+  width: 90%;
 }
 
-page-change-password .alert-danger {
-  background: #ebcccc;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  color: #a94442;
-  text-align: center;
+page-change-password .footer-md::before, page-change-password .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
 }
 
 page-chat {
@@ -43601,38 +43611,19 @@ page-doc-firmados .label-md {
   padding: 2px;
 }
 
-page-documentos-contables .img-round {
-  border-radius: 50%;
-  margin-left: 0.4rem;
-  margin-top: 1rem;
-}
-
-page-documentos-contables .card-background-page ion-card {
-  position: relative;
+page-documentos-contables ion-title {
   text-align: center;
-  max-height: 32%;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-documentos-contables .card-background-page .card-title {
-  position: absolute;
-  font-size: 1.3em;
-  color: #000;
-  top: 1rem;
-  text-align: left;
+page-documentos-contables ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
 }
 
-page-documentos-contables .card-background-page .card-subtitle {
-  font-size: 1.0em;
-  position: absolute;
-  top: 3.5rem;
-  color: #000;
-}
-
-page-documentos-contables .card-background-page .card-subtitle-date {
-  font-size: 1.2rem;
-  position: absolute;
-  top: 5.5rem;
-  color: #000;
+page-documentos-contables .toolbar-background-md {
+  background: white;
 }
 
 page-home .back {
@@ -43755,67 +43746,327 @@ page-instrucciones .toolbar-background-md {
   background: white;
 }
 
-page-login .bg {
-  background: #81a7d4;
+page-login h1 {
+  font-weight: 700;
+  text-align: center;
+  line-height: 26px;
+  letter-spacing: 1.5px;
+  color: #38383b;
 }
 
-page-login .login {
-  width: 80%;
+page-login span {
+  color: #ed7aad;
+}
+
+page-login p {
+  text-align: center;
+  color: #858585;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+page-login .buttons {
+  max-height: 5rem;
+  max-width: 75%;
+  text-align: center;
   margin: 0 auto;
-  background: #fff;
-  padding: 3em;
+}
+
+page-login .footer-md::before, page-login .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login ion-footer {
+  height: 30%;
+}
+
+page-login .scroll-content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+page-login p.line {
   position: relative;
-  border-radius: 5px;
-  top: 20%;
+  z-index: 1;
 }
 
-page-login .login-top {
-  width: 60%;
+page-login p.line:before {
+  border-top: 1px solid #e1e1e1;
+  content: "";
   margin: 0 auto;
+  /* this centers the line to the full width specified */
+  position: absolute;
+  /* positioning must be absolute here, and relative positioning must be applied to the parent */
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
 }
 
-page-login .login-bottom input[type="text"] {
-  font-size: 1.2em;
-  width: 100%;
-  padding: .6em .8em;
-  outline: none;
-  background: #81a7d4;
-  color: white;
-  border: none;
-  border-radius: 5px;
+page-login p.line span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: #fff;
+  padding: 0 15px;
+  color: #858585;
+}
+
+page-login-error-pin ion-title {
   text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin-bottom: 2rem;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-login .login-bottom input[type="password"] {
-  font-size: 1.2em;
-  width: 100%;
-  padding: .6em 1em;
-  outline: none;
-  background: #81a7d4;
-  color: white;
-  border: none;
-  border-radius: 5px;
+page-login-error-pin ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-error-pin .toolbar-background-md {
+  background: white;
+}
+
+page-login-error-pin .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-error-pin span {
+  color: #ed7aad;
+}
+
+page-login-error-pin .footer-md::before, page-login-error-pin .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-input .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-input .list-md .item-input:last-child {
+  border-bottom: 1px solid #dedede;
+  padding-left: 0px;
+  margin-left: 16px;
+  width: 90%;
+}
+
+page-login-input .footer-md::before, page-login-input .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-recibir-pin ion-title {
   text-align: center;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin-bottom: 2rem;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-login .login-bottom input[type="submit"] {
-  font-size: 1.5em;
-  padding: .3em .3em;
-  width: 45%;
-  border: none;
-  text-transform: capitalize;
-  outline: none;
-  border-radius: 5px;
-  background: #f1a6c7;
-  color: #fff;
-  cursor: pointer;
-  font-family: 'PT Sans Narrow', sans-serif;
-  margin: 0 auto;
+page-login-recibir-pin ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-recibir-pin .toolbar-background-md {
+  background: white;
+}
+
+page-login-recibir-pin .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-recibir-pin span {
+  color: #ed7aad;
+}
+
+page-login-recibir-pin .footer-md::before, page-login-recibir-pin .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-reenviar ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-login-reenviar ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-reenviar .toolbar-background-md {
+  background: white;
+}
+
+page-login-reenviar .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-reenviar span {
+  color: #ed7aad;
+}
+
+page-login-reenviar .footer-md::before, page-login-reenviar .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-registro .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-registro .list-md .item-input:last-child {
+  border-bottom: 1px solid #dedede;
+  padding-left: 0px;
+  margin-left: 16px;
+  width: 90%;
+}
+
+page-login-registro .footer-md::before, page-login-registro .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-tab ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-login-tab .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-login-tab ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-tab .toolbar-background-md {
+  background: white;
+}
+
+page-login-tab .tabs-md .tab-button[aria-selected=true] {
+  border-bottom: 2px solid #ed7aad;
+  color: #38383b;
+}
+
+page-login-tab .tabs-md .tab-button {
+  border-bottom: 2px solid #e1e1e1;
+  color: #e1e1e1;
+  padding-top: 5% !important;
+}
+
+page-login-tab .tabbar {
+  padding: 0rem 4rem 0rem 4rem;
+  background: white !important;
+  margin-top: -6%;
+}
+
+page-login-tab .header-md::after, page-login-tab .tabs-md[tabsPlacement="top"] > .tabbar::after, page-login-tab .footer-md::before, page-login-tab .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-login-tab ion-slides {
+  margin-top: 0px;
+  height: auto;
+}
+
+page-login-tab ion-slide {
+  padding: 0 60px;
+}
+
+page-login-tab .swiper-slide {
+  height: 80%;
+  padding: 0rem 6rem 0rem 4rem;
+}
+
+page-login-tab .slide-zoom {
+  text-align: center;
   display: block;
+  width: 100%;
+  height: 100%;
+}
+
+page-login-ya-registrado ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-login-ya-registrado ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-login-ya-registrado .toolbar-background-md {
+  background: white;
+}
+
+page-login-ya-registrado .olvido {
+  text-align: right;
+  color: #ed7aad;
+  padding-right: 6%;
+}
+
+page-login-ya-registrado span {
+  color: #ed7aad;
+}
+
+page-login-ya-registrado .footer-md::before, page-login-ya-registrado .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  height: 0px;
+}
+
+page-login-ya-registrado p {
+  text-align: center;
+  color: #858585;
+  line-height: 20px;
+  letter-spacing: 1.5px;
+}
+
+page-login-ya-registrado p.line {
+  position: relative;
+  z-index: 1;
+}
+
+page-login-ya-registrado p.line:before {
+  border-top: 1px solid #e1e1e1;
+  content: "";
+  margin: 0 auto;
+  /* this centers the line to the full width specified */
+  position: absolute;
+  /* positioning must be absolute here, and relative positioning must be applied to the parent */
+  top: 50%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 95%;
+  z-index: -1;
+}
+
+page-login-ya-registrado p.line span {
+  /* to hide the lines from behind the text, you have to set the background color the same as the container */
+  background: #fff;
+  padding: 0 15px;
+  color: #858585;
 }
 
 page-mi-perfil ion-title {

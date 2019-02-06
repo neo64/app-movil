@@ -64,6 +64,12 @@
     },
     "mx.ferreyra.callnumber": {
       "PACKAGE_NAME": "com.ferrusbratos.app"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "com.ferrusbratos.app"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.ferrusbratos.app"
     }
   },
   "dependent_plugins": {}

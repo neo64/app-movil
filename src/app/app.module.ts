@@ -7,6 +7,9 @@ import { NativeStorage } from '@ionic-native/native-storage';
 
 import { Vibration } from '@ionic-native/vibration';
 
+import { AndroidPermissions} from '@ionic-native/android-permissions';
+
+
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
@@ -36,6 +39,8 @@ import { LoginTabPage } from '../pages/login-tab/login-tab';
 import { LoginRecibirPinPage } from '../pages/login-recibir-pin/login-recibir-pin';
 import { LoginErrorPinPage } from '../pages/login-error-pin/login-error-pin';
 import { LoginYaRegistradoPage } from '../pages/login-ya-registrado/login-ya-registrado';
+import { LoginReenviarPage } from '../pages/login-reenviar/login-reenviar';
+
 
 import { RecallPage } from '../pages/recall/recall';
 import { RecallPasadasPage } from '../pages/recall-pasadas/recall-pasadas';
@@ -93,6 +98,7 @@ import { ChartsModule } from 'ng2-charts';
 	LoginRecibirPinPage,
 	LoginErrorPinPage,
 	LoginYaRegistradoPage,
+	LoginReenviarPage,
 	PlanEconomicoPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
@@ -155,11 +161,13 @@ import { ChartsModule } from 'ng2-charts';
 	LoginRecibirPinPage,
 	LoginErrorPinPage,
 	LoginYaRegistradoPage,
+	LoginReenviarPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
 	ChatPage
   ],
   providers: [
+  	AndroidPermissions,
 	NativeStorage ,
 	PhotoViewer,
 	FCM,

@@ -7,6 +7,7 @@ import { LoginRecibirPinPage } from '../../pages/login-recibir-pin/login-recibir
 import { LoginErrorPinPage } from '../../pages/login-error-pin/login-error-pin';
 import { LoginYaRegistradoPage } from '../../pages/login-ya-registrado/login-ya-registrado';
 
+import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 /**
  * Generated class for the LoginRegistroPage page.
@@ -27,9 +28,18 @@ export class LoginRegistroPage {
 	bCrear 	= {name : 'Siguiente', svg: '', openPage : 'PedirCita', class : 'active login', tipo : 'page', gradiente: ''};
 	registerCredentials = { email: '', password: '' };	// Array con los campos del formulario
 
- 	constructor(private app : App, public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+ 	constructor( public androidPermissions: AndroidPermissions, private app : App, public navCtrl: NavController, public navParams: NavParams, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
   	
   	}
+
+  	ionViewWillEnter(){
+		this.androidPermissions.checkPermission(this.androidPermissions.PERMISSION.READ_SMS).then(
+		  success => console.log('Permission granted'),
+		err => this.androidPermissions.requestPermission(this.androidPermissions.PERMISSION.READ_SMS)
+		);
+
+		this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.READ_SMS]);
+	}
 
   	siguiente(){
   		var dni = this.registerCredentials.email;
@@ -38,17 +48,21 @@ export class LoginRegistroPage {
 			alert("Debes rellenar el campo DNI");
 			return;
 		}
+
+		//this.app.getRootNav().push(LoginRecibirPinPage, { dni: dni });		
 		
 		this.showLoading();
-		this.restProvider.sendPIN(dni).then(data => {
-			console.log(data);
-			this.loading.dismiss();
+		this.restProvider.checkDNI(dni).then(data => {
+	
 			if(typeof data != "undefined" && data['status'] == 1){				
-				this.app.getRootNav().push(LoginRecibirPinPage, { data: data });				
+				this.app.getRootNav().push(LoginRecibirPinPage, { dni: dni });
+				this.loading.dismiss();				
 			}else if(typeof data != "undefined" && data['status'] == 2){
 				this.app.getRootNav().push(LoginErrorPinPage);
+				this.loading.dismiss();
 			}else if(typeof data != "undefined" && data['status'] == 3){
-				this.app.getRootNav().push(LoginYaRegistradoPage);
+				this.app.getRootNav().push(LoginYaRegistradoPage, {dni : dni});
+				this.loading.dismiss();
 			}else{
 				if(typeof data['code'] != "undefined")
 					this.showError("ERROR " + data['code'],"Acceso Denegado");			
@@ -56,6 +70,7 @@ export class LoginRegistroPage {
 					this.showError("ERROR","Acceso Denegado");			
 			}
 		});
+		
   	}
 
   	/**
