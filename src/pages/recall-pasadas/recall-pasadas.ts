@@ -44,7 +44,6 @@ export class RecallPasadasPage {
 	*/ 
 	getRecallPasadas(){
 		this.restProvider.getRecallPasadas().then(data => {
-			console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				this.recall = data['data']['data'];
 				this.infoR 	= data['data'];				

@@ -5,6 +5,10 @@ page-documentos-contables {
 		z-index: 0;
 	}
 
+	.back-button.show-back-button {
+	    z-index: 1111;
+	}
+
 	ion-icon{
 		color: map-get($colors, secondary);
 		font-size: 2em;		

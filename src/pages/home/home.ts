@@ -47,7 +47,7 @@ export class HomePage {
 	bPedirCita 	= {name : 'PEDIR CITA', svg: '', openPage : 'PedirCita', class : 'active', tipo : 'page', gradiente: ''};
 
 	constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
-		this.showLoading();
+		//this.showLoading();
 		this.getCardsHome();
 		this.events.publish("user:logged");
 	}
@@ -172,7 +172,7 @@ export class HomePage {
 				for (var j in data['data']['menu']) {
 					this.cardsMenu.push(data['data']['menu'][j]);
 				}
-				this.loading.dismiss();
+				//this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
@@ -180,7 +180,7 @@ export class HomePage {
 				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");						
 			}			
 		}).catch(e => {
-			this.loading.dismiss();
+			//this.loading.dismiss();
 			console.log(e);
 		});		
 	}

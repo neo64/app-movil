@@ -8,7 +8,7 @@
 </ion-header>
 <ion-content padding>
 
-	<ion-row>
+	<ion-row style=" margin: 2rem;">
 		<ion-col col-8 style="padding-top:4rem;">
 			<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
 		</ion-col>
@@ -17,10 +17,8 @@
 		</ion-col>
 	</ion-row>
 
-	<p><b>{{ data.Fecha }}</b></p>
+	<p style=" margin: 2rem;"><b>{{ data.Fecha }}</b></p>
 
-	<br />
-
-	<p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)"></p>
+	<p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)" style=" margin: 2rem;"></p>
 
 </ion-content>

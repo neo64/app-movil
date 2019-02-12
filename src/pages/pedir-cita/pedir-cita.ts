@@ -19,10 +19,22 @@ export class PedirCitaPage {
 	citasBuscador 		= [];		// Array donde se almacenan todas las citas que ha devuelto el buscador.
 	ttoSelect 			= "";		// String donde se almacena el tratamiento seleccionado.
 		
+	bSiguiente 	= {name : 'Siguiente', svg: '', openPage : 'PedirCita', class : 'active login', tipo : 'page', gradiente: ''};
+	tituloSubtitulo = {titulo : "Elige el tratamiento", subtitulo: "de la cita"};
+
+
 	constructor(private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
 		this.showLoading();
-		this.getDoctors();
+		//this.getDoctors();
+		this.getTratamientos(false);
 		this.events.publish("user:logged");
+	}
+
+	selectTto(e){
+		
+		e.class = 'active';
+		e.name	= e;
+		
 	}
   
 	/**
@@ -81,6 +93,7 @@ export class PedirCitaPage {
 	*/	
 	getTratamientos(e){
 		this.restProvider.getTratamientos(e).then(data => {
+			console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				this.tratamientos = data['data'];				
 				this.loading.dismiss();

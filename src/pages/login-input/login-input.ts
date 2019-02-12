@@ -54,6 +54,8 @@ export class LoginInputPage {
 		this.restProvider.login(user,pass).then(data => {
 			if(typeof data != "undefined" && data['status'] == 1){
 				
+				this.loading.dismiss();
+				
 				window.localStorage.setItem("idPac", data['idPac']);					
 				window.localStorage.setItem("token", data['token']);				
 				window.localStorage.setItem("expires", data['expires']);

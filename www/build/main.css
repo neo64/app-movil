@@ -43582,6 +43582,10 @@ page-consejos-detail ion-title {
   z-index: 0;
 }
 
+page-consejos-detail .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-consejos-detail ion-icon {
   color: #f3a7c9;
   font-size: 2em;
@@ -43595,6 +43599,10 @@ page-consejos-personalizados ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-consejos-personalizados .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-consejos-personalizados ion-icon {
@@ -43615,6 +43623,10 @@ page-documentos-contables ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-documentos-contables .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-documentos-contables ion-icon {
@@ -43735,6 +43747,10 @@ page-instrucciones ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-instrucciones .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-instrucciones ion-icon {
@@ -44194,6 +44210,7 @@ page-mi-salud .back {
 
 page-mi-salud .back-button.show-back-button {
   color: white;
+  z-index: 1111;
 }
 
 page-mi-salud ion-header .toolbar {
@@ -44348,6 +44365,7 @@ page-mis-documentos .back {
 
 page-mis-documentos .back-button.show-back-button {
   color: white;
+  z-index: 1111;
 }
 
 page-mis-documentos ion-header .toolbar {
@@ -44447,30 +44465,38 @@ page-mis-documentos .cien {
   width: 100%;
 }
 
-page-pedir-cita .card-md p {
-  font-size: 20px;
-}
-
-page-pedir-cita .left {
-  text-align: left;
-}
-
-page-pedir-cita .center {
+page-pedir-cita ion-title {
   text-align: center;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-pedir-cita .right {
-  text-align: right;
+page-pedir-cita .back-button.show-back-button {
+  z-index: 1111;
 }
 
-page-pedir-cita ion-select {
-  max-width: 70%;
+page-pedir-cita ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita .header-md::after, page-pedir-cita .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita .footer-md::before, page-pedir-cita .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
 }
 
 page-plan-economico ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-plan-economico .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-plan-economico ion-icon {
@@ -44488,6 +44514,10 @@ page-plan-economico-detail ion-title {
   z-index: 0;
 }
 
+page-plan-economico-detail .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-plan-economico-detail ion-icon {
   color: #f3a7c9;
   font-size: 2em;
@@ -44501,6 +44531,10 @@ page-presupuestos ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-presupuestos .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-presupuestos ion-icon {

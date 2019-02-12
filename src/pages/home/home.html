@@ -62,7 +62,7 @@
 		<ion-slides #slides pager style="height: 250%;">
 			<div *ngFor="let c of cardsMenu; let i=index">
 				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">
-					<ion-row style="margin: 15% 8% 15% 12%">
+					<ion-row style="margin: 11% 8% 11% 12%">
 						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>
 							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
 						</div>

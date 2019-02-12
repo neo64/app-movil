@@ -8,15 +8,13 @@
 </ion-header>
 <ion-content padding>
 	
-	<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+	<div style=" margin: 2rem;">
+        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+    </div>
 
-	<br />
+    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>
 
-    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>
-
-    <br />	 
-
-	<div *ngFor="let card of cards">
+	<div *ngFor="let card of cards" style=" margin: 2rem;">
         <div class="fb-card -v2">
             <div class="card_row">
                 <div class="left">
