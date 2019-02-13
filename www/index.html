@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-  <script data-ionic="inject">
-    (function(w){var i=w.Ionic=w.Ionic||{};i.version='^3.9.2';i.angular='^4.1.2';i.staticDir='build/';})(window);
-  </script>
   <meta charset="UTF-8">
   <title>Ionic App</title>
   <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,8 +14,7 @@
   <!-- add to homescreen for ios -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-  
+ 
 
   <!-- un-comment this code to enable service worker
   <script>
@@ -36,15 +32,12 @@
 </head>
 <body>
 
+  <!-- Gradiente -->
+  <svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-gradient" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>
+  <!-- Fin Gradiente -->  
+
   <!-- Ionic's root component and where the app will load -->
   <ion-app></ion-app>
-
-  <ion-fab bottom right edge>
-    <button ion-fab><i class="fas fa-question-circle"></i></button>
-    <ion-fab-list>
-      <button ion-fab><ion-icon name="add"></ion-icon></button>
-    </ion-fab-list>
-  </ion-fab>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>

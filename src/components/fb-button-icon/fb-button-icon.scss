@@ -29,5 +29,10 @@ fb-button-icon {
     	line-height: 1.8rem;
 	}
 
+	fill: url(#fb-gradient);
+
+	.active{
+		fill: white;
+	}
 
 }

@@ -25,18 +25,28 @@ export class PedirCitaPage {
 
 	constructor(private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
 		this.showLoading();
-		//this.getDoctors();
 		this.getTratamientos(false);
 		this.events.publish("user:logged");
 	}
 
-	selectTto(e){
-		
-		e.class = 'active';
-		e.name	= e;
-		
+	selectTto(e){		
+
+		for (var x in this.tratamientos){
+			if(this.tratamientos[x].IdOpc == e.IdOpc)
+				this.tratamientos[x].class = "active";
+			else
+				this.tratamientos[x].class = "";
+		}
+		this.ttoSelect = e.IdOpc;
 	}
   
+
+	siguiente(){
+		alert("voy a la siguiente página con el tto:" + this.ttoSelect);
+	}
+
+
+
 	/**
 	* 	Función que obtiene todas las citas disponibles
 	* 	en la agenda ( conectada con el buscador )

@@ -43291,6 +43291,10 @@ fb-button .login {
   color: #38383b;
 }
 
+fb-button-icon {
+  fill: url(#fb-gradient);
+}
+
 fb-button-icon button {
   background: white;
   border-radius: 6px;
@@ -43320,6 +43324,10 @@ fb-button-icon .btn-large {
   font-size: 1.6rem;
   margin-top: 2rem;
   line-height: 1.8rem;
+}
+
+fb-button-icon .active {
+  fill: white;
 }
 
 fb-titulo-subtitulo h1 {
