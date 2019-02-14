@@ -1,0 +1,56 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Pedir nueva cita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<div style=" margin: 2rem;">
+	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+    </div>
+
+    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
+    <p style=" margin: 0 0 0 1rem;">Elije el profesional</p>
+    <ion-slides spaceBetween="-240" style=" height: 25%;margin-bottom: -2rem;">
+  		<ion-slide class="slide" *ngFor="let card of doctores" style="width: 30%" (click)="selectDr(card)">
+  			<ion-row>
+	    		<button [class]="card.class + ' button'" style="height: 10rem; width: 35%; margin: 2rem -11rem 5rem 1rem;">
+	    			<p><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;margin-top: -3rem;"/></p>
+	    		</button>
+	    		<p [class]="card.class" style="margin-top: 20%;z-index: 11;width: 23%; margin-bottom: 5rem;" >{{ card.usuario }}</p>
+	    	</ion-row>
+	  	</ion-slide>
+	</ion-slides>
+
+	<p style=" margin: 0 0 0 1rem;">Preferencia de días</p>
+	<ion-slides spaceBetween="-260" style=" height: 15%;margin-bottom: -2rem;">
+  		<ion-slide class="slide" *ngFor="let card of diasSemana" style="width: 40%">
+  			<ion-row>
+	    		<button [class]="card.class + ' button'" (click)="selectDia(card)" style="height: 5rem; width: 30%; margin: 2rem -11rem 5rem 1rem;">
+	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>
+	    		</button>	    		
+	    	</ion-row>
+	  	</ion-slide>
+	</ion-slides>
+
+	<p style=" margin: 0 0 0 1rem;">A partir de las:</p>
+	<ion-slides spaceBetween="-260" style=" height: 15%;margin-bottom: -2rem;">
+  		<ion-slide class="slide" *ngFor="let card of horasDia" style="width: 40%">
+  			<ion-row>
+	    		<button [class]="card.class + ' button'" (click)="selectHora(card)" style="height: 5rem; width: 30%; margin: 2rem -11rem 5rem 1rem;">
+	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.hora }}</p>
+	    		</button>	    		
+	    	</ion-row>
+	  	</ion-slide>
+	</ion-slides>
+
+	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 0 0 0;">
+		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" ((click)="anterior()" ></fb-button></ion-col>
+		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
+	</ion-row>
+
+</ion-content>

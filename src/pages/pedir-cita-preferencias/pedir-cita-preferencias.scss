@@ -1,0 +1,62 @@
+page-pedir-cita-preferencias {
+
+	ion-title{
+		text-align:center;
+		margin-left: -15%;
+		z-index: 0;
+	}
+
+	.back-button.show-back-button{
+		z-index: 1111;
+	}
+
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
+	}
+
+	.toolbar-background-md{
+		background: white;
+	}
+
+	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+		background-image: none !important; 
+		width: 0%;
+	}
+
+	.button{
+		background: white;
+		border-radius: 6px;
+		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
+		height: -webkit-fill-available;
+		width: 100%;
+
+		&.active{
+			background: map-get($colors, pink-dark);
+			color: white;
+		}
+	}
+	
+	p{
+		color: black;
+		font-weight: 400;
+    	font-size: 1.2rem;
+    	margin-top: 5%;
+    	&.active{
+			color: white;
+		}
+	}
+
+	.btn-large{
+    	font-size: 1.6rem;
+    	margin-top: 2rem;
+    	line-height: 1.8rem;
+	}
+
+	fill: url(#fb-gradient);
+
+	.active{
+		fill: white;
+	}
+	
+}

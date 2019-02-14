@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Elige tu cita</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<div style=" margin: 2rem;">
+	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+    </div>
+
+    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
+
+    <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
+		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" ((click)="anterior()" ></fb-button></ion-col>
+		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
+	</ion-row>
+
+</ion-content>

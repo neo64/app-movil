@@ -44497,6 +44497,69 @@ page-pedir-cita .header-md::after, page-pedir-cita .tabs-md[tabsPlacement="top"]
   width: 0%;
 }
 
+page-pedir-cita-preferencias {
+  fill: url(#fb-gradient);
+}
+
+page-pedir-cita-preferencias ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-pedir-cita-preferencias .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-pedir-cita-preferencias ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita-preferencias .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita-preferencias .header-md::after, page-pedir-cita-preferencias .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita-preferencias .footer-md::before, page-pedir-cita-preferencias .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-pedir-cita-preferencias .button {
+  background: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  height: -webkit-fill-available;
+  width: 100%;
+}
+
+page-pedir-cita-preferencias .button.active {
+  background: #ed7aad;
+  color: white;
+}
+
+page-pedir-cita-preferencias p {
+  color: black;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 5%;
+}
+
+page-pedir-cita-preferencias p.active {
+  color: white;
+}
+
+page-pedir-cita-preferencias .btn-large {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  line-height: 1.8rem;
+}
+
+page-pedir-cita-preferencias .active {
+  fill: white;
+}
+
 page-plan-economico ion-title {
   text-align: center;
   margin-left: -15%;
