@@ -1,14 +1,16 @@
 webpackJsonp([31],{
 
-/***/ 843:
+/***/ 845:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangePasswordPageModule", function() { return ChangePasswordPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChatPageModule", function() { return ChatPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__chat__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_emoji_picker_emoji_picker_module__ = __webpack_require__(540);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_emoji_emoji__ = __webpack_require__(236);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +20,29 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ChangePasswordPageModule = /** @class */ (function () {
-    function ChangePasswordPageModule() {
+
+
+var ChatPageModule = /** @class */ (function () {
+    function ChatPageModule() {
     }
-    ChangePasswordPageModule = __decorate([
+    ChatPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //ChangePasswordPage,
+            //ChatPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__change_password__["a" /* ChangePasswordPage */]),
+                __WEBPACK_IMPORTED_MODULE_3__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__chat__["a" /* ChatPage */]),
             ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__providers_emoji_emoji__["a" /* EmojiProvider */]
+            ]
         })
-    ], ChangePasswordPageModule);
-    return ChangePasswordPageModule;
+    ], ChatPageModule);
+    return ChatPageModule;
 }());
 
-//# sourceMappingURL=change-password.module.js.map
+//# sourceMappingURL=chat.module.js.map
 
 /***/ })
 

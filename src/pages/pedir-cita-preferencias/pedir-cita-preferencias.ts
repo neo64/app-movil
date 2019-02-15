@@ -22,7 +22,7 @@ export class PedirCitaPreferenciasPage {
 	diasSemana 			= [{dia : "Lunes", class : ""}, {dia : "Martes", class : ""}, {dia : "Miércoles", class : ""}, {dia : "Jueves", class : ""}, {dia : "Viernes", class : ""}];
 	horasDia 			= [{hora : "09:30", class : ""}, {hora : "10:00", class : ""}, {hora : "11:00", class : ""}, {hora : "12:00", class : ""}, {hora : "13:00", class : ""}, {hora : "14:00", class : ""}, {hora : "15:00", class : ""}, {hora : "16:00", class : ""}, {hora : "17:00", class : ""}, {hora : "18:00", class : ""}, {hora : "19:00", class : ""}, {hora : "20:00", class : ""},];
 
-	drSelect			= 0;	
+	drSelect			= "Sin preferencia";	
 	diaSelect			= [];
 	horaSelect 			= "09:30";
 

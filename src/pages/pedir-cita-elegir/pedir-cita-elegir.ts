@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Events, LoadingController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, Events, LoadingController, Loading } from 'ionic-angular';
 
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { PedirCitaPreferenciasPage } from '../../pages/pedir-cita-preferencias/pedir-cita-preferencias';
 
+// Para aceptar HTML desde la API
+import { DomSanitizer } from '@angular/platform-browser';
 
 @IonicPage()
 @Component({
@@ -17,16 +19,18 @@ export class PedirCitaElegirPage {
 
 	bSiguiente 			= {name : 'Siguiente', svg: '', openPage : '', class : 'active login', tipo : '', gradiente: ''};
 	bAnterior 			= {name : 'Anterior', svg: '', openPage : '', class : 'login', tipo : '', gradiente: ''};
+	tituloSubtitulo 	= {titulo : "Elige tu cita", subtitulo: "de la cita"};
+
 	citasBuscador 		= [];
 
-  	constructor(private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
+  	constructor(private domSanitizer: DomSanitizer, private alertCtrl: AlertController, public events: Events, private loadingCtrl: LoadingController, public restProvider: RestProvider,public navCtrl: NavController, public navParams: NavParams) {
   		this.showLoading();
 		this.searchCita(this.navParams.get('dia'), this.navParams.get('hora'), this.navParams.get('dr'), this.navParams.get('tto'));
 		this.events.publish("user:logged");
   	}
 
   	siguiente(){
-		console.log("a reservar !!!");
+		alert("a reservar !!!");
 	}
 
 	anterior(){
@@ -46,9 +50,10 @@ export class PedirCitaElegirPage {
 	*/
 	searchCita(dia, hora, dr, tto) {		
 		this.restProvider.searchCita(dia, hora, dr, tto).then(data => {
+			//console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				if(JSON.parse(data['data']).length > 0){
-					this.citasBuscador = data['data'];
+					this.citasBuscador = JSON.parse(data['data']);
 				}else{
 				}				
 				this.loading.dismiss();

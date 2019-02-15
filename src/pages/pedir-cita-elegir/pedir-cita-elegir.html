@@ -15,8 +15,84 @@
 
     <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
 
+    <ion-slides spaceBetween="-75">
+    <ion-slide *ngFor="let item of citasBuscador">
+      <div class="fb-card -vcita -gradient">
+          <div class="card_row">
+              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
+                  <div class="card_subtitle -white" style="font-size: 1.4rem;">
+                      {{item.diaSemana}}
+                  </div>
+                  <div class="card_time -white">
+                      {{item.dia}}
+                      <span>
+                      {{item.mes}}
+                      </span>
+                  </div>
+                  <div class="card_subtitle -white" style="font-size:1rem;">
+                      {{item.ano}}
+                  </div>
+              </div>
+              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">
+                  <div style="display:flex;flex-direction:column;align-items: flex-end;">
+                      <div class="card_time -white">
+                          {{item.hora}}
+                          <span style="display:inline;">
+                              H
+                          </span>
+                      </div>
+                      <div class="card_subtitle -white">
+                          Duración:
+                          <span>
+                              {{item.Duracion}}'
+                          </span>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="card_content -bg-white">
+              <div class="card_row">
+                  <div>
+                      <div class="card_label">
+                          Tratamiento
+                      </div>
+                      <div class="card_title">
+                         {{item.tratamiento}}
+                      </div>
+                  </div>
+              </div>
+              <div class="card_separator">
+              </div>
+              <div class="card_row">
+                  <div class="left">
+                      <div class="card_label">
+                          Profesional
+                      </div>
+                      <div class="card_container">
+                          <div class="avatar">
+                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />
+                          </div>
+                          <div class="card_title">
+                             {{item.usuario}}
+                          </div>
+                      </div>
+                  </div>
+                  <div class="right">
+                      <div class="card_label">
+                          Estado de la cita
+                      </div>
+                      <div class="card_estado">
+                          RESERVAR
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
+
     <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
-		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" ((click)="anterior()" ></fb-button></ion-col>
+		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>
 		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
 	</ion-row>
 
