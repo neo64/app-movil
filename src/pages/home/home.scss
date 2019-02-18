@@ -1,7 +1,6 @@
 page-home {
   background-color: white;
   .back {
-    //margin: -25%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -55,11 +54,6 @@ page-home {
     //padding: 0 60px;
     margin-bottom: 2rem;
   }
-  .swiper-slide {
-    // height: 80%;
-    //margin-top: 2%;
-    //padding: 0 20px;
-  }
   .swiper-container {
     overflow: visible;
   }
@@ -76,9 +70,6 @@ page-home {
   }
   .bar-button-menutoggle-md {
     color: white;
-  }
-  .square {
-    //height: 10rem;
   }
   .tratamiento {
     overflow: hidden;
@@ -114,64 +105,6 @@ page-home {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 45vh;
-  }
-  .cardCita {
-    background-color: hsla(0, 0%, 100%, 0.3);
-    border-radius: 6px;
-    display: flex;
-    flex-direction: row;
-    height: 23vh;
-    color: white;
-    &__left {
-      flex: 0 25%;
-      padding: 1.5rem 1rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background-color: rgba(255, 255, 255, 0.15);
-      border-radius: 6px 0 0 6px;
-    }
-    &__right {
-      flex: 1 75%;
-      display: flex;
-      padding: 1.5rem 1rem 0.5rem;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    &__date {}
-    &__day {
-      font-size: 3.5rem;
-      font-weight: bold;
-      line-height: 3rem;
-    }
-    &__month {
-      font-size: 1.5rem;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-    }
-    &__hour {
-      color: white;
-      font-size: 1.5rem;
-    }
-    &__tto {
-      letter-spacing: 3px;
-    }
-    &__dr {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
-    &__avatar {
-      flex: 0 27%;
-      display: flex;
-      align-items: center;
-    }
-    &__drname {
-      flex: 1 73%;
-      font-size: 1.5rem;
-      text-align: left;
-      margin-left: 1rem;
-    }
+    height: 42vh;
   }
 }
