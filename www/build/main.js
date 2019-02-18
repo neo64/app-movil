@@ -1834,7 +1834,7 @@ var PedirCitaPreferenciasPage = /** @class */ (function () {
     };
     PedirCitaPreferenciasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita-preferencias',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n    <p style=" margin: 0 0 0 4rem;">Elije el profesional</p>\n    <ion-slides slidesPerView="3" style=" height: 25%;margin-bottom: -5rem; margin-left: 0.5rem; margin-right: 0.5rem;">\n  		<ion-slide class="slide" *ngFor="let card of doctores" style="width: 40%" (click)="selectDr(card)">\n  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">\n	    		<button [class]="card.class + \' button\'" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">\n	    			<p style="margin:10% 0%"><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>\n	    			<p [class]="card.class" style="white-space: normal;    line-height: 1.5rem;    margin-top: -7%;" >{{ card.usuario }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 1rem 0 0px 4rem;">Preferencia de días</p>\n	<ion-slides slidesPerView="3" style=" height: 15%;margin-bottom: -3rem; margin-left: 0.5rem; margin-right: 0.5rem;">\n  		<ion-slide class="slide" *ngFor="let card of diasSemana" style="width: 40%">\n  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">\n	    		<button [class]="card.class + \' button\'" (click)="selectDia(card)" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 1rem 0 0px 4rem;">A partir de las</p>\n	<ion-slides slidesPerView="3" style=" height: 15%;margin-bottom: -3rem; margin-left: 0.5rem; margin-right: 0.5rem;">\n  		<ion-slide class="slide" *ngFor="let card of horasDia" style="width: 40%">\n  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">\n	    		<button [class]="card.class + \' button\'" (click)="selectHora(card)" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.hora }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/,
+            selector: 'page-pedir-cita-preferencias',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n    <p style=" margin: 0 0 0 4rem;">Elije el profesional</p>\n    <ion-slides centeredSlides="true"  slidesPerView="3.3" slidesOffsetBefore="20" spaceBetween="18">\n  		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">\n  			<ion-row>\n	    		<button [class]="card.class + \' button\'">\n	    			<p><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>\n	    			<p [class]="card.class">{{ card.usuario }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 1rem 0 0px 4rem;">Preferencia de días</p>\n	<ion-slides slidesPerView="3" style=" height: 15%;margin-bottom: -3rem; margin-left: 0.5rem; margin-right: 0.5rem;">\n  		<ion-slide class="slide" *ngFor="let card of diasSemana" style="width: 40%">\n  			<ion-row style=" padding: 1rem;">\n	    		<button [class]="card.class + \' button\'" (click)="selectDia(card)" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 1rem 0 0px 4rem;">A partir de las</p>\n	<ion-slides slidesPerView="3" style=" height: 15%;margin-bottom: -3rem; margin-left: 0.5rem; margin-right: 0.5rem;">\n  		<ion-slide class="slide" *ngFor="let card of horasDia" style="width: 40%">\n  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">\n	    		<button [class]="card.class + \' button\'" (click)="selectHora(card)" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.hora }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">2 de 4</p>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaPreferenciasPage);
@@ -4318,7 +4318,7 @@ var PedirCitaElegirPage = /** @class */ (function () {
     };
     PedirCitaElegirPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita-elegir',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Elige tu cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <ion-slides spaceBetween="-75">\n    <ion-slide *ngFor="let item of citasBuscador">\n      <div class="fb-card -vcita -gradient">\n          <div class="card_row">\n              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n                      {{item.diaSemana}}\n                  </div>\n                  <div class="card_time -white">\n                      {{item.dia}}\n                      <span>\n                      {{item.mes}}\n                      </span>\n                  </div>\n                  <div class="card_subtitle -white" style="font-size:1rem;">\n                      {{item.ano}}\n                  </div>\n              </div>\n              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n                      <div class="card_time -white">\n                          {{item.hora}}\n                          <span style="display:inline;">\n                              H\n                          </span>\n                      </div>\n                      <div class="card_subtitle -white">\n                          Duración:\n                          <span>\n                              {{item.Duracion}}\'\n                          </span>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class="card_content -bg-white">\n              <div class="card_row">\n                  <div>\n                      <div class="card_label">\n                          Tratamiento\n                      </div>\n                      <div class="card_title">\n                         {{item.tratamiento}}\n                      </div>\n                  </div>\n              </div>\n              <div class="card_separator">\n              </div>\n              <div class="card_row">\n                  <div class="left">\n                      <div class="card_label">\n                          Profesional\n                      </div>\n                      <div class="card_container">\n                          <div class="avatar">\n                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n                          </div>\n                          <div class="card_title">\n                             {{item.usuario}}\n                          </div>\n                      </div>\n                  </div>\n                  <div class="right">\n                      <div class="card_label">\n                          Estado de la cita\n                      </div>\n                      <div class="card_estado">\n                          RESERVAR\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n    </ion-slide>\n  </ion-slides>\n\n    <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/,
+            selector: 'page-pedir-cita-elegir',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Elige tu cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n	<div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">\n    <ion-slide *ngFor="let item of citasBuscador">\n      <div class="fb-card -vcita -gradient">\n          <div class="card_row">\n              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n                      {{item.diaSemana}}\n                  </div>\n                  <div class="card_time -white">\n                      {{item.dia}}\n                      <span>\n                      {{item.mes}}\n                      </span>\n                  </div>\n                  <div class="card_subtitle -white" style="font-size:1rem;">\n                      {{item.ano}}\n                  </div>\n              </div>\n              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n                      <div class="card_time -white">\n                          {{item.hora}}\n                          <span style="display:inline;">\n                              H\n                          </span>\n                      </div>\n                      <div class="card_subtitle -white">\n                          Duración:\n                          <span>\n                              {{item.Duracion}}\'\n                          </span>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class="card_content -bg-white">\n              <div class="card_row">\n                  <div>\n                      <div class="card_label">\n                          Tratamiento\n                      </div>\n                      <div class="card_title">\n                         {{item.tratamiento}}\n                      </div>\n                  </div>\n              </div>\n              <div class="card_separator">\n              </div>\n              <div class="card_row">\n                  <div class="left">\n                      <div class="card_label">\n                          Profesional\n                      </div>\n                      <div class="card_container">\n                          <div class="avatar">\n                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n                          </div>\n                          <div class="card_title">\n                             {{item.usuario}}\n                          </div>\n                      </div>\n                  </div>\n                  <div class="right">\n                      <div class="card_label">\n                          Estado de la cita\n                      </div>\n                      <div class="card_estado">\n                          <a class="fb-btn -pill -confirmar" (click)="solicitarCita(item);">\n                            Reservar    \n                          </a>\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n    </ion-slide>\n  </ion-slides>\n\n    <p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">3 de 4</p>\n\n    <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaElegirPage);
@@ -4930,135 +4930,139 @@ webpackEmptyAsyncContext.id = 269;
 var map = {
 	"../pages/acceso-resultados/acceso-resultados.module": [
 		843,
-		0
+		36
 	],
 	"../pages/change-password/change-password.module": [
 		844,
-		32
+		68
 	],
 	"../pages/chat/chat.module": [
 		845,
-		31
+		67
 	],
 	"../pages/consejos-detail/consejos-detail.module": [
 		846,
-		30
+		66
 	],
 	"../pages/consejos-personalizados/consejos-personalizados.module": [
 		847,
-		29
+		65
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
 		848,
-		28
+		64
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
 		849,
-		27
+		63
 	],
 	"../pages/instrucciones/instrucciones.module": [
 		850,
-		26
+		62
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
 		851,
-		25
+		61
 	],
 	"../pages/login-input/login-input.module": [
 		852,
-		24
+		60
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
 		853,
-		23
+		59
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
 		854,
-		22
+		58
 	],
 	"../pages/login-registro/login-registro.module": [
 		855,
-		21
+		57
 	],
 	"../pages/login-tab/login-tab.module": [
 		857,
-		20
+		56
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
 		856,
-		19
+		55
 	],
 	"../pages/login/login.module": [
 		858,
-		18
+		54
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
 		859,
-		17
+		53
 	],
 	"../pages/mi-salud/mi-salud.module": [
 		861,
-		16
+		52
 	],
 	"../pages/mis-citas/mis-citas.module": [
 		860,
-		15
+		51
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
 		862,
-		14
+		50
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
 		863,
-		13
+		49
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
 		865,
-		12
+		48
+	],
+	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
+		877,
+		35
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
 		864,
-		11
+		47
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
 		866,
-		10
+		46
 	],
 	"../pages/plan-economico/plan-economico.module": [
 		867,
-		9
+		45
 	],
 	"../pages/popover/popover.module": [
 		868,
-		8
+		44
 	],
 	"../pages/presupuestos/presupuestos.module": [
 		869,
-		7
+		43
 	],
 	"../pages/profile/profile.module": [
 		871,
-		6
+		42
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
 		870,
-		5
+		41
 	],
 	"../pages/recall/recall.module": [
 		873,
-		4
+		40
 	],
 	"../pages/sugerencias/sugerencias.module": [
 		872,
-		3
+		39
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
 		874,
-		2
+		38
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
 		875,
-		1
+		37
 	]
 };
 function webpackAsyncContext(req) {
@@ -5733,7 +5737,7 @@ var PedirCitaPage = /** @class */ (function () {
     };
     PedirCitaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- Gradiente -->\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<!-- Fin Gradiente -->    \n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <div class="row" id="listadoTratamientos">\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n		</div>\n	</div>\n\n	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
+            selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- Gradiente -->\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<!-- Fin Gradiente -->    \n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <div class="row" id="listadoTratamientos">\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n		</div>\n	</div>\n\n	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>\n\n	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaPage);

@@ -15,12 +15,12 @@
 
     <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
     <p style=" margin: 0 0 0 4rem;">Elije el profesional</p>
-    <ion-slides slidesPerView="3" style=" height: 25%;margin-bottom: -5rem; margin-left: 0.5rem; margin-right: 0.5rem;">
-  		<ion-slide class="slide" *ngFor="let card of doctores" style="width: 40%" (click)="selectDr(card)">
-  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">
-	    		<button [class]="card.class + ' button'" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">
-	    			<p style="margin:10% 0%"><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>
-	    			<p [class]="card.class" style="white-space: normal;    line-height: 1.5rem;    margin-top: -7%;" >{{ card.usuario }}</p>
+    <ion-slides centeredSlides="true"  slidesPerView="3.3" slidesOffsetBefore="20" spaceBetween="18">
+  		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">
+  			<ion-row>
+	    		<button [class]="card.class + ' button'">
+	    			<p><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>
+	    			<p [class]="card.class">{{ card.usuario }}</p>
 	    		</button>	    		
 	    	</ion-row>
 	  	</ion-slide>
@@ -29,7 +29,7 @@
 	<p style=" margin: 1rem 0 0px 4rem;">Preferencia de días</p>
 	<ion-slides slidesPerView="3" style=" height: 15%;margin-bottom: -3rem; margin-left: 0.5rem; margin-right: 0.5rem;">
   		<ion-slide class="slide" *ngFor="let card of diasSemana" style="width: 40%">
-  			<ion-row style=" padding-right: 1rem;padding-left: 1rem;">
+  			<ion-row style=" padding: 1rem;">
 	    		<button [class]="card.class + ' button'" (click)="selectDia(card)" style="height: 100%; margin: 0rem 0rem 4rem 0rem;">
 	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>
 	    		</button>	    		
@@ -47,6 +47,8 @@
 	    	</ion-row>
 	  	</ion-slide>
 	</ion-slides>
+
+	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">2 de 4</p>
 
 	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">
 		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>

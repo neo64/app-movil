@@ -15,7 +15,7 @@
 
     <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
 
-    <ion-slides spaceBetween="-75">
+    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">
     <ion-slide *ngFor="let item of citasBuscador">
       <div class="fb-card -vcita -gradient">
           <div class="card_row">
@@ -82,7 +82,9 @@
                           Estado de la cita
                       </div>
                       <div class="card_estado">
-                          RESERVAR
+                          <a class="fb-btn -pill -confirmar" (click)="solicitarCita(item);">
+                            Reservar    
+                          </a>
                       </div>
                   </div>
               </div>
@@ -91,9 +93,10 @@
     </ion-slide>
   </ion-slides>
 
+    <p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">3 de 4</p>
+
     <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
 		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>
-		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
 	</ion-row>
 
 </ion-content>
