@@ -4,6 +4,7 @@ import { IonicPage, NavController, NavParams, AlertController, Events, LoadingCo
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { PedirCitaPreferenciasPage } from '../../pages/pedir-cita-preferencias/pedir-cita-preferencias';
+import { PedirCitaReservaPage } from '../../pages/pedir-cita-reserva/pedir-cita-reserva';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -29,9 +30,6 @@ export class PedirCitaElegirPage {
 		this.events.publish("user:logged");
   	}
 
-  	siguiente(){
-		alert("a reservar !!!");
-	}
 
 	anterior(){
 		this.navCtrl.push(PedirCitaPreferenciasPage, {
@@ -68,6 +66,35 @@ export class PedirCitaElegirPage {
 			this.loading.dismiss();
 			console.log(e);
 		});				
+	}
+
+	/**
+	* 	Función que envía un E-mail a recepción para que estas
+	*	inserten la cita desde el buscador.
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	solicitarCita(item){		
+
+		this.showLoading('Solicitando cita ...');
+		this.restProvider.solicitarCita(item.fecha, item.hora, item.usuario, item.tratamiento).then(data => {
+			if(typeof data != "undefined" &&  data['status'] == 1){
+				this.loading.dismiss();
+				this.navCtrl.push(PedirCitaReservaPage, {
+				  'item': item
+				});				
+			}else if(data.status == 401){
+				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
+				this.navCtrl.setRoot(LoginPage);				
+			}else{
+				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");	
+			}			
+		}).catch(e => {
+			this.loading.dismiss();
+		});
 	}
 
 	/**

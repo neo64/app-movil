@@ -14,9 +14,12 @@ import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { ConsultarCitas } from '../pages/ConsultarCitas/ConsultarCitas';
+
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { PedirCitaPreferenciasPage } from '../pages/pedir-cita-preferencias/pedir-cita-preferencias';
 import { PedirCitaElegirPage } from '../pages/pedir-cita-elegir/pedir-cita-elegir';
+import { PedirCitaReservaPage } from '../pages/pedir-cita-reserva/pedir-cita-reserva';
+
 import { TabConsultarCitas } from '../pages/tabConsultarCitas/tabConsultarCitas';
 import { TabHigienesPage } from '../pages/tab-higienes/tab-higienes';
 import { ChangePasswordPage } from '../pages/change-password/change-password';
@@ -83,6 +86,7 @@ import { ChartsModule } from 'ng2-charts';
 	PedirCitaPage,
 	PedirCitaPreferenciasPage,
 	PedirCitaElegirPage,
+	PedirCitaReservaPage,
     TabConsultarCitas,
     TabHigienesPage,
 	ConsultarCitasFuturasPage,
@@ -142,6 +146,7 @@ import { ChartsModule } from 'ng2-charts';
 	PedirCitaPage,
 	PedirCitaPreferenciasPage,
 	PedirCitaElegirPage,
+	PedirCitaReservaPage,
 	ConsultarCitasFuturasPage,
 	ChangePasswordPage,
 	PopoverPage,

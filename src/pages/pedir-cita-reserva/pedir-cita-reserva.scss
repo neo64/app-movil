@@ -1,0 +1,32 @@
+page-pedir-cita-reserva {
+
+	ion-slides {
+	    margin-top: 0px;
+	    height: auto;
+	}
+	
+	ion-title{
+		text-align:center;
+		margin-left: -15%;
+		z-index: 0;
+	}
+
+	.back-button.show-back-button{
+		z-index: 1111;
+	}
+
+	ion-icon{
+		color: map-get($colors, secondary);
+		font-size: 2em;		
+	}
+
+	.toolbar-background-md{
+		background: white;
+	}
+
+	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+		background-image: none !important; 
+		width: 0%;
+	}
+
+}

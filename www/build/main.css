@@ -44502,22 +44502,6 @@ page-pedir-cita-elegir ion-slides {
   height: auto;
 }
 
-page-pedir-cita-elegir ion-slide {
-  padding: 0 60px;
-}
-
-page-pedir-cita-elegir .swiper-slide {
-  height: 80%;
-  padding: 0rem 6rem 0rem 4rem;
-}
-
-page-pedir-cita-elegir .slide-zoom {
-  text-align: center;
-  display: block;
-  width: 100%;
-  height: 100%;
-}
-
 page-pedir-cita-elegir ion-title {
   text-align: center;
   margin-left: -15%;
@@ -44544,6 +44528,15 @@ page-pedir-cita-elegir .header-md::after, page-pedir-cita-elegir .tabs-md[tabsPl
 
 page-pedir-cita-preferencias {
   fill: url(#fb-gradient);
+}
+
+page-pedir-cita-preferencias ion-slides {
+  height: 18%;
+}
+
+page-pedir-cita-preferencias swiper-wraper {
+  -webkit-transform: translate3d(49.5px, 0px, 0px);
+  transform: translate3d(49.5px, 0px, 0px);
 }
 
 page-pedir-cita-preferencias ion-title {
@@ -44603,6 +44596,35 @@ page-pedir-cita-preferencias .btn-large {
 
 page-pedir-cita-preferencias .active {
   fill: white;
+}
+
+page-pedir-cita-reserva ion-slides {
+  margin-top: 0px;
+  height: auto;
+}
+
+page-pedir-cita-reserva ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-pedir-cita-reserva .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-pedir-cita-reserva ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita-reserva .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita-reserva .header-md::after, page-pedir-cita-reserva .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita-reserva .footer-md::before, page-pedir-cita-reserva .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
 }
 
 page-plan-economico ion-title {

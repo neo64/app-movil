@@ -43,10 +43,6 @@ export class PedirCitaPage {
 		  'tto': this.ttoSelect
 		});
 	}
-
-
-
-
 	
 	/**
 	* 	Función que obtiene todos los tratamientos asignados
