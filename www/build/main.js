@@ -5055,11 +5055,11 @@ var map = {
 		23
 	],
 	"../pages/login-registro/login-registro.module": [
-		857,
+		856,
 		22
 	],
 	"../pages/login-tab/login-tab.module": [
-		856,
+		857,
 		21
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
@@ -5071,11 +5071,11 @@ var map = {
 		19
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
-		861,
+		860,
 		18
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		860,
+		861,
 		17
 	],
 	"../pages/mis-citas/mis-citas.module": [
@@ -5088,59 +5088,59 @@ var map = {
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
 		864,
-		2
+		14
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
 		865,
-		1
+		13
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
 		866,
-		7
-	],
-	"../pages/pedir-cita/pedir-cita.module": [
-		869,
 		12
 	],
-	"../pages/plan-economico-detail/plan-economico-detail.module": [
+	"../pages/pedir-cita/pedir-cita.module": [
 		867,
-		14
+		11
+	],
+	"../pages/plan-economico-detail/plan-economico-detail.module": [
+		868,
+		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
-		868,
-		13
+		869,
+		9
 	],
 	"../pages/popover/popover.module": [
 		870,
-		10
-	],
-	"../pages/presupuestos/presupuestos.module": [
-		877,
-		3
-	],
-	"../pages/profile/profile.module": [
-		871,
-		9
-	],
-	"../pages/recall-pasadas/recall-pasadas.module": [
-		872,
-		11
-	],
-	"../pages/recall/recall.module": [
-		873,
 		8
 	],
-	"../pages/sugerencias/sugerencias.module": [
-		874,
+	"../pages/presupuestos/presupuestos.module": [
+		871,
+		7
+	],
+	"../pages/profile/profile.module": [
+		872,
 		6
 	],
-	"../pages/tab-higienes/tab-higienes.module": [
-		875,
+	"../pages/recall-pasadas/recall-pasadas.module": [
+		873,
 		5
 	],
-	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
-		876,
+	"../pages/recall/recall.module": [
+		874,
 		4
+	],
+	"../pages/sugerencias/sugerencias.module": [
+		875,
+		3
+	],
+	"../pages/tab-higienes/tab-higienes.module": [
+		876,
+		2
+	],
+	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
+		877,
+		1
 	]
 };
 function webpackAsyncContext(req) {
@@ -6548,28 +6548,28 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-perfil/mi-perfil.module#MiPerfilPageModule', name: 'MiPerfilPage', segment: 'mi-perfil', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-preferencias/pedir-cita-preferencias.module#PedirCitaPreferenciasPageModule', name: 'PedirCitaPreferenciasPage', segment: 'pedir-cita-preferencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-reserva/pedir-cita-reserva.module#PedirCitaReservaPageModule', name: 'PedirCitaReservaPage', segment: 'pedir-cita-reserva', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] }
+                        { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] }
                     ]
                 }),
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_28__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
