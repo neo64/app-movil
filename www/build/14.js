@@ -1,14 +1,14 @@
 webpackJsonp([14],{
 
-/***/ 867:
+/***/ 864:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PlanEconomicoDetailPageModule", function() { return PlanEconomicoDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedirCitaElegirPageModule", function() { return PedirCitaElegirPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__ = __webpack_require__(231);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PlanEconomicoDetailPageModule = /** @class */ (function () {
-    function PlanEconomicoDetailPageModule() {
+var PedirCitaElegirPageModule = /** @class */ (function () {
+    function PedirCitaElegirPageModule() {
     }
-    PlanEconomicoDetailPageModule = __decorate([
+    PedirCitaElegirPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__plan_economico_detail__["a" /* PlanEconomicoDetailPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__["a" /* PedirCitaElegirPage */]),
             ],
         })
-    ], PlanEconomicoDetailPageModule);
-    return PlanEconomicoDetailPageModule;
+    ], PedirCitaElegirPageModule);
+    return PedirCitaElegirPageModule;
 }());
 
-//# sourceMappingURL=plan-economico-detail.module.js.map
+//# sourceMappingURL=pedir-cita-elegir.module.js.map
 
 /***/ })
 

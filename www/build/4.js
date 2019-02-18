@@ -1,18 +1,14 @@
 webpackJsonp([4],{
 
-<<<<<<< HEAD
-/***/ 876:
-=======
-/***/ 873:
->>>>>>> master
+/***/ 874:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabConsultarCitasModule", function() { return TabConsultarCitasModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecallPageModule", function() { return RecallPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recall__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -22,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabConsultarCitasModule = /** @class */ (function () {
-    function TabConsultarCitasModule() {
+var RecallPageModule = /** @class */ (function () {
+    function RecallPageModule() {
     }
-    TabConsultarCitasModule = __decorate([
+    RecallPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //TabConsultarCitas,
+            //RecallPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__["a" /* TabConsultarCitas */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__recall__["a" /* RecallPage */]),
             ],
         })
-    ], TabConsultarCitasModule);
-    return TabConsultarCitasModule;
+    ], RecallPageModule);
+    return RecallPageModule;
 }());
 
-//# sourceMappingURL=tabConsultarCitas.module.js.map
+//# sourceMappingURL=recall.module.js.map
 
 /***/ })
 
