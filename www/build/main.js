@@ -1,4 +1,4 @@
-webpackJsonp([31],{
+webpackJsonp([34],{
 
 /***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -7,11 +7,11 @@ webpackJsonp([31],{
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginRecibirPinPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_error_pin_login_error_pin__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_reenviar_login_reenviar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_reenviar_login_reenviar__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__ = __webpack_require__(68);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -171,7 +171,7 @@ var LoginRecibirPinPage = /** @class */ (function () {
     };
     LoginRecibirPinPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-recibir-pin',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-recibir-pin\login-recibir-pin.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Introduce el PIN</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<p  style="    margin: 2rem;">\n\n		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>\n\n	</p>\n\n	<br />\n\n	<ion-list>\n\n		<ion-item style=" width: 94%;">\n\n			<ion-label stacked>PIN</ion-label>\n\n			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>\n\n		</ion-item>\n\n		<p class="olvido">Nº de 6 dígitos</p>		\n\n	</ion-list>\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>\n\n	</div>\n\n	<ion-footer>\n\n		<p style="text-align: center;">\n\n			No lo he recibido.<br/>\n\n			<a (click)="reEnviarPIN()">Reenviar PIN</a>\n\n		</p>\n\n	</ion-footer>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-recibir-pin\login-recibir-pin.html"*/,
+            selector: 'page-login-recibir-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Introduce el PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p  style="    margin: 2rem;">\n		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>\n	</p>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>PIN</ion-label>\n			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>\n		</ion-item>\n		<p class="olvido">Nº de 6 dígitos</p>		\n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			No lo he recibido.<br/>\n			<a (click)="reEnviarPIN()">Reenviar PIN</a>\n		</p>\n	</ion-footer>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginRecibirPinPage);
@@ -190,7 +190,7 @@ var LoginRecibirPinPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_recall_recall__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(233);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -223,7 +223,7 @@ var TabHigienesPage = /** @class */ (function () {
     ], TabHigienesPage.prototype, "tabs", void 0);
     TabHigienesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-tab-higienes',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\tab-higienes\tab-higienes.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Higienes</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>       \n\n  <ion-tabs #myTab tabsPlacement="top" selectedIndex="1">\n\n    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>          \n\n    <ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>\n\n  </ion-tabs>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\tab-higienes\tab-higienes.html"*/,
+            selector: 'page-tab-higienes',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/tab-higienes/tab-higienes.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Higienes</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>       \n  <ion-tabs #myTab tabsPlacement="top" selectedIndex="1">\n    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>          \n    <ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>\n  </ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/tab-higienes/tab-higienes.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], TabHigienesPage);
@@ -241,10 +241,10 @@ var TabHigienesPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return InstruccionesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -444,7 +444,7 @@ var InstruccionesPage = /** @class */ (function () {
     };
     InstruccionesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-instrucciones',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\instrucciones\instrucciones.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Instrucciones</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- Gradiente -->\n\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient4" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n	<!-- Fin Gradiente -->\n\n    \n\n	\n\n    <div style=" margin: 2rem;">\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p> \n\n\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n\n		<div class="fb-card -v1">\n\n                <div class="left">\n\n                    <div class="avatar">\n\n                        <svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n\n                        	<g fill="url(#fb-shadow-gradient4)" stroke="none">\n\n                        		<defs>\n\n                        			<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n\n                        		</defs>\n\n                        		<clipPath id="b">\n\n                        			<use xlink:href="#a" overflow="visible"/>\n\n                        		</clipPath>\n\n                        		<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n\n                        	</g>\n\n                       	</svg>\n\n                    </div>\n\n                </div>\n\n                <div class="center">\n\n                    <div class="card_title">\n\n                        {{ card.nombre }}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                        {{ card.fecha }}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPdf(card.base64, card.idopc)">\n\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n                        </svg> \n\n                    </a>\n\n                </div>\n\n            </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\instrucciones\instrucciones.html"*/,
+            selector: 'page-instrucciones',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/instrucciones/instrucciones.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Instrucciones</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- Gradiente -->\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient4" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<!-- Fin Gradiente -->\n    \n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p> \n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n		<div class="fb-card -v1">\n                <div class="left">\n                    <div class="avatar">\n                        <svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n                        	<g fill="url(#fb-shadow-gradient4)" stroke="none">\n                        		<defs>\n                        			<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n                        		</defs>\n                        		<clipPath id="b">\n                        			<use xlink:href="#a" overflow="visible"/>\n                        		</clipPath>\n                        		<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n                        	</g>\n                       	</svg>\n                    </div>\n                </div>\n                <div class="center">\n                    <div class="card_title">\n                        {{ card.nombre }}\n                    </div>\n                    <div class="card_subtitle">\n                        {{ card.fecha }}\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPdf(card.base64, card.idopc)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/instrucciones/instrucciones.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], InstruccionesPage);
@@ -462,10 +462,10 @@ var InstruccionesPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsejosPersonalizadosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_consejos_detail_consejos_detail__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_consejos_detail_consejos_detail__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -581,7 +581,7 @@ var ConsejosPersonalizadosPage = /** @class */ (function () {
     };
     ConsejosPersonalizadosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-consejos-personalizados',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\consejos-personalizados\consejos-personalizados.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Consejos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	\n\n    <div style=" margin: 2rem;">\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p  style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n\n\n    <br />	 \n\n\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n\n		<div class="fb-card -v1">\n\n                <div class="left">\n\n                    <div class="avatar">\n\n                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" />\n\n                    </div>\n\n                </div>\n\n                <div class="center">\n\n                    <div class="card_title">\n\n                        {{ card.Tratamiento }}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                        {{ card.Doctor }}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card)">\n\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n                        </svg> \n\n                    </a>\n\n                </div>\n\n            </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\consejos-personalizados\consejos-personalizados.html"*/,
+            selector: 'page-consejos-personalizados',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/consejos-personalizados/consejos-personalizados.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Consejos</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p  style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n    <br />	 \n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n		<div class="fb-card -v1">\n                <div class="left">\n                    <div class="avatar">\n                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" />\n                    </div>\n                </div>\n                <div class="center">\n                    <div class="card_title">\n                        {{ card.Tratamiento }}\n                    </div>\n                    <div class="card_subtitle">\n                        {{ card.Doctor }}\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/consejos-personalizados/consejos-personalizados.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], ConsejosPersonalizadosPage);
@@ -599,7 +599,7 @@ var ConsejosPersonalizadosPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ProfilePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -745,7 +745,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\profile\profile.html"*/'<ion-header>\n\n	<ion-navbar color="primary">\n\n		<ion-title>Perfil</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- this fab is placed at bottom right -->\n\n	 <ion-fab bottom right #fab1>\n\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n\n	   			<g fill="white" stroke="none"> \n\n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n\n   				</g>\n\n   			</svg>	   	\n\n	   </button>	   \n\n	 </ion-fab>\n\n	<ion-list> \n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Email</ion-label>\n\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Nombre</ion-label>\n\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Apellidos</ion-label>\n\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>DNI</ion-label>\n\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Fecha nacimiento</ion-label>\n\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Dirección</ion-label>\n\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Localidad</ion-label>\n\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Provincia</ion-label>\n\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Teléfono móvil</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Teléfono fijo</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Alergias</ion-label>\n\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Medicacion</ion-label>\n\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>  \n\n	  </ion-item>\n\n	</ion-list>\n\n	<button ion-button (click)="setProfile()" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Actualizar datos</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/'<ion-header>\n	<ion-navbar color="primary">\n		<ion-title>Perfil</ion-title>\n	</ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<ion-list> \n	  <ion-item>\n		<ion-label color="primary" stacked>Email</ion-label>\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Nombre</ion-label>\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Apellidos</ion-label>\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>DNI</ion-label>\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Fecha nacimiento</ion-label>\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Dirección</ion-label>\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Localidad</ion-label>\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Provincia</ion-label>\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Teléfono móvil</ion-label>\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Teléfono fijo</ion-label>\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Alergias</ion-label>\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="primary" stacked>Medicacion</ion-label>\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input>\n	  </ion-item>\n	  <ion-item>  \n	  </ion-item>\n	</ion-list>\n	<button ion-button (click)="setProfile()" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Actualizar datos</button>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], ProfilePage);
@@ -763,10 +763,10 @@ var ProfilePage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PresupuestosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -985,7 +985,7 @@ var PresupuestosPage = /** @class */ (function () {
     };
     PresupuestosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-presupuestos',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\presupuestos\presupuestos.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Presupuestos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	\n\n    <div style=" margin: 2rem;">\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n\n        <div class="fb-card -v2">\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title">\n\n                        {{card.nomDoc}}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                        Estado: {{card.estado}}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <div class="card_subtitle">\n\n                       {{card.fecha}}\n\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class="card_separator">\n\n            </div>\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title -price">\n\n                        {{card.total}} €\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                        {{card.formaPago}}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <a class="fb-btn -rounded -bg-pink" (click)="createAndOpenPDF(card.html, card.NumPre)">\n\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n                        </svg> \n\n                    </a>\n\n                </div>\n\n            </div>\n\n        </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\presupuestos\presupuestos.html"*/,
+            selector: 'page-presupuestos',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/presupuestos/presupuestos.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Presupuestos</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n        <div class="fb-card -v2">\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title">\n                        {{card.nomDoc}}\n                    </div>\n                    <div class="card_subtitle">\n                        Estado: {{card.estado}}\n                    </div>\n                </div>\n                <div class="right">\n                    <div class="card_subtitle">\n                       {{card.fecha}}\n                    </div>\n                </div>\n            </div>\n            <div class="card_separator">\n            </div>\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title -price">\n                        {{card.total}} €\n                    </div>\n                    <div class="card_subtitle">\n                        {{card.formaPago}}\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="createAndOpenPDF(card.html, card.NumPre)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n        </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/presupuestos/presupuestos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], PresupuestosPage);
@@ -1003,10 +1003,10 @@ var PresupuestosPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocumentosContablesPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1244,7 +1244,7 @@ var DocumentosContablesPage = /** @class */ (function () {
     };
     DocumentosContablesPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-documentos-contables',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\documentos-contables\documentos-contables.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Documentos contables</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	\n\n	<div style=" margin: 2rem;">\n\n        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n\n        <div class="fb-card -v2">\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title">\n\n                        {{card.tipo}}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                       {{card.fecha}}\n\n                    </div>\n\n                </div>                \n\n            </div>\n\n            <div class="card_separator">\n\n            </div>\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title -price" style="    margin-top: 5%;">\n\n                        {{card.total}} €\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <a class="fb-btn -rounded -bg-pink" (click)="createAndOpenPDF(card.html, card.numDoc)">\n\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n                        </svg> \n\n                    </a>\n\n                </div>\n\n            </div>\n\n        </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\documentos-contables\documentos-contables.html"*/,
+            selector: 'page-documentos-contables',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Documentos contables</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n	<div style=" margin: 2rem;">\n        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n        <div class="fb-card -v2">\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title">\n                        {{card.tipo}}\n                    </div>\n                    <div class="card_subtitle">\n                       {{card.fecha}}\n                    </div>\n                </div>                \n            </div>\n            <div class="card_separator">\n            </div>\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title -price" style="    margin-top: 5%;">\n                        {{card.total}} €\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="createAndOpenPDF(card.html, card.numDoc)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n        </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/documentos-contables/documentos-contables.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], DocumentosContablesPage);
@@ -1262,8 +1262,8 @@ var DocumentosContablesPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabConsultarCitas; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(312);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(313);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1296,7 +1296,7 @@ var TabConsultarCitas = /** @class */ (function () {
     ], TabConsultarCitas.prototype, "tabs", void 0);
     TabConsultarCitas = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'tabConsultarCitas',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\tabConsultarCitas\tabConsultarCitas.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Citas</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>       \n\n	<ion-tabs #myTab tabsPlacement="top" selectedIndex="1">\n\n		<ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>					\n\n		<ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>\n\n	</ion-tabs>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\tabConsultarCitas\tabConsultarCitas.html"*/,
+            selector: 'tabConsultarCitas',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/tabConsultarCitas/tabConsultarCitas.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Citas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>       \n	<ion-tabs #myTab tabsPlacement="top" selectedIndex="1">\n		<ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>					\n		<ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>\n	</ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/tabConsultarCitas/tabConsultarCitas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], TabConsultarCitas);
@@ -1314,8 +1314,8 @@ var TabConsultarCitas = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginTabPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_input_login_input__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_registro_login_registro__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_login_input_login_input__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_registro_login_registro__ = __webpack_require__(229);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1351,7 +1351,7 @@ var LoginTabPage = /** @class */ (function () {
     ], LoginTabPage.prototype, "tabs", void 0);
     LoginTabPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-tab',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-tab\login-tab.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title></ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>       \n\n	<ion-tabs #myTab tabsPlacement="top" selectedIndex="{{ pageDefault }}">\n\n		<ion-tab [root]="tabLogin" tabTitle="Iniciar sesión" ></ion-tab>					\n\n		<ion-tab [root]="tabRegistro" tabTitle="Crear cuenta" ></ion-tab>\n\n	</ion-tabs>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-tab\login-tab.html"*/,
+            selector: 'page-login-tab',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-tab/login-tab.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title></ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>       \n	<ion-tabs #myTab tabsPlacement="top" selectedIndex="{{ pageDefault }}">\n		<ion-tab [root]="tabLogin" tabTitle="Iniciar sesión" ></ion-tab>					\n		<ion-tab [root]="tabRegistro" tabTitle="Crear cuenta" ></ion-tab>\n	</ion-tabs>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-tab/login-tab.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginTabPage);
@@ -1403,7 +1403,7 @@ var LoginErrorPinPage = /** @class */ (function () {
     };
     LoginErrorPinPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-error-pin',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-error-pin\login-error-pin.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Error al validar</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<p style=" margin: 2rem;">No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>\n\n	<br />\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>\n\n	</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-error-pin\login-error-pin.html"*/,
+            selector: 'page-login-error-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Error al validar</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style=" margin: 2rem;">No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginErrorPinPage);
@@ -1502,7 +1502,7 @@ var LoginYaRegistradoPage = /** @class */ (function () {
     };
     LoginYaRegistradoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-ya-registrado',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-ya-registrado\login-ya-registrado.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Ya estás registrado</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<p style="text-align: left;margin: 2rem;">Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupéraña.</p>\n\n	<br />\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bRecuperar" [class]="bRecuperar.class" (click)="openPage(bRecuperar.openPage,bRecuperar.tipo)"> </fb-button>\n\n		<p class="line"><span>o</span></p>\n\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n\n	</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-ya-registrado\login-ya-registrado.html"*/,
+            selector: 'page-login-ya-registrado',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ya estás registrado</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style="text-align: left;margin: 2rem;">Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupéraña.</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bRecuperar" [class]="bRecuperar.class" (click)="openPage(bRecuperar.openPage,bRecuperar.tipo)"> </fb-button>\n		<p class="line"><span>o</span></p>\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginYaRegistradoPage);
@@ -1520,12 +1520,12 @@ var LoginYaRegistradoPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MiSaludPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_tab_higienes_tab_higienes__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_instrucciones_instrucciones__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1666,7 +1666,7 @@ var MiSaludPage = /** @class */ (function () {
     };
     MiSaludPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-mi-salud',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mi-salud\mi-salud.html"*/'<div class="back"> \n\n	<ion-header no-border>\n\n  		<ion-navbar>\n\n    		<ion-buttons left>\n\n	    		<button ion-button menuToggle>\n\n	      			<ion-icon name="menu"></ion-icon>\n\n    			</button>\n\n    		</ion-buttons>\n\n\n\n    		<ion-title>Mi Salud</ion-title>\n\n\n\n  		</ion-navbar>\n\n	</ion-header>\n\n\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas Higienes</h1> \n\n\n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n\n  		<ion-slide class="slide" *ngFor="let card of cards">\n\n	    	<!-- <ion-row> -->\n\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n\n	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->\n\n	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n\n	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->\n\n	    			<!-- </ion-row> -->\n\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n\n	    				<!-- <ion-col>{{card.hora}}</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    		<!-- </ion-col> -->\n\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->\n\n	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->\n\n	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    		<!-- </ion-col> -->\n\n	    	<!-- </ion-row> -->\n\n			<div class="cardCita">\n\n				<div class="cardCita__left">\n\n					<div class="cardCita__date">\n\n						<div class="cardCita__day">\n\n							{{card.dia}}\n\n						</div>\n\n						<div class="cardCita__month">\n\n							{{card.mes}}\n\n						</div>\n\n					</div>\n\n					<div class="cardCita__hour">\n\n						{{card.hora}}\n\n					</div>\n\n				</div>\n\n				<div class="cardCita__right">\n\n					<div class="cardCita__tto tratamiento">\n\n						{{card.tratamiento}}\n\n					</div>\n\n					<div class="cardCita__dr">\n\n						<div class="cardCita__avatar">\n\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n\n						</div>\n\n						<div class="cardCita__drname">\n\n							{{card.doctor}}\n\n						</div>\n\n					</div>\n\n				</div>\n\n			</div>\n\n	  	</ion-slide>\n\n	</ion-slides>\n\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n\n  		<p> Actualmente no tienes citas </p>\n\n	</div>\n\n</div>\n\n\n\n<!-- Gradiente -->\n\n<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n<!-- Fin Gradiente -->\n\n\n\n<div class="menu">\n\n	<ion-row>\n\n		<h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">Mi Salud</h1>\n\n	</ion-row>\n\n	<ion-row class="square" >\n\n			<div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">\n\n				<ion-row *ngIf="i == 0">\n\n					<div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>\n\n						<fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n\n					</div>\n\n				</ion-row>\n\n				<ion-row *ngIf="i == 1">\n\n					<div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>\n\n						<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n\n					</div>\n\n				</ion-row>\n\n			</div>			\n\n	</ion-row>\n\n	\n\n</div>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mi-salud\mi-salud.html"*/,
+            selector: 'page-mi-salud',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/mi-salud/mi-salud.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Mi Salud</ion-title>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas Higienes</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n	    	<!-- <ion-row> -->\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->\n	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n	    				<!-- <ion-col>{{card.hora}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->\n	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->\n	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    	<!-- </ion-row> -->\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n<!-- Gradiente -->\n<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n<!-- Fin Gradiente -->\n\n<div class="menu">\n	<ion-row>\n		<h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">Mi Salud</h1>\n	</ion-row>\n	<ion-row class="square" >\n			<div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">\n				<ion-row *ngIf="i == 0">\n					<div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>\n						<fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n					</div>\n				</ion-row>\n				<ion-row *ngIf="i == 1">\n					<div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>\n						<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n					</div>\n				</ion-row>\n			</div>			\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/mi-salud/mi-salud.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], MiSaludPage);
@@ -1681,10 +1681,178 @@ var MiSaludPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaPreferenciasPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_elegir_pedir_cita_elegir__ = __webpack_require__(231);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var PedirCitaPreferenciasPage = /** @class */ (function () {
+    function PedirCitaPreferenciasPage(alertCtrl, events, loadingCtrl, restProvider, navCtrl, navParams) {
+        this.alertCtrl = alertCtrl;
+        this.events = events;
+        this.loadingCtrl = loadingCtrl;
+        this.restProvider = restProvider;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.bSiguiente = { name: 'Siguiente', svg: '', openPage: '', class: 'active login', tipo: '', gradiente: '' };
+        this.bAnterior = { name: 'Anterior', svg: '', openPage: '', class: 'login', tipo: '', gradiente: '' };
+        this.tituloSubtitulo = { titulo: "Elige tus preferencias", subtitulo: "de la cita" };
+        this.doctores = [];
+        this.diasSemana = [{ dia: "Lunes", class: "" }, { dia: "Martes", class: "" }, { dia: "Miércoles", class: "" }, { dia: "Jueves", class: "" }, { dia: "Viernes", class: "" }];
+        this.horasDia = [{ hora: "09:30", class: "" }, { hora: "10:00", class: "" }, { hora: "11:00", class: "" }, { hora: "12:00", class: "" }, { hora: "13:00", class: "" }, { hora: "14:00", class: "" }, { hora: "15:00", class: "" }, { hora: "16:00", class: "" }, { hora: "17:00", class: "" }, { hora: "18:00", class: "" }, { hora: "19:00", class: "" }, { hora: "20:00", class: "" },];
+        this.drSelect = "Sin preferencia";
+        this.diaSelect = [];
+        this.horaSelect = "09:30";
+        this.showLoading();
+        this.getDoctors(this.navParams.get('tto'));
+        this.events.publish("user:logged");
+    }
+    PedirCitaPreferenciasPage.prototype.selectDr = function (e) {
+        for (var x in this.doctores) {
+            if (this.doctores[x].IdUsu == e.IdUsu)
+                this.doctores[x].class = "active";
+            else
+                this.doctores[x].class = "";
+        }
+        this.drSelect = e.IdUsu;
+    };
+    PedirCitaPreferenciasPage.prototype.selectDia = function (e) {
+        for (var x in this.diasSemana) {
+            if (this.diasSemana[x].dia == e.dia) {
+                if (this.diasSemana[x].class == "active") {
+                    this.diasSemana[x].class = "";
+                    var index = this.diaSelect.indexOf(e.dia);
+                    if (index > -1) {
+                        this.diaSelect.splice(index, 1);
+                    }
+                }
+                else {
+                    this.diasSemana[x].class = "active";
+                    this.diaSelect.push(e.dia);
+                }
+            }
+        }
+    };
+    PedirCitaPreferenciasPage.prototype.selectHora = function (e) {
+        for (var x in this.horasDia) {
+            if (this.horasDia[x].hora == e.hora)
+                this.horasDia[x].class = "active";
+            else
+                this.horasDia[x].class = "";
+        }
+        this.horaSelect = e.hora;
+    };
+    PedirCitaPreferenciasPage.prototype.siguiente = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */], {
+            'tto': this.navParams.get('tto'),
+            'dr': this.drSelect,
+            'dia': this.diaSelect,
+            'hora': this.horaSelect,
+        });
+    };
+    PedirCitaPreferenciasPage.prototype.anterior = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */]);
+    };
+    /**
+    * 	Función que obtiene todos los doctores a los que se
+    *	les puede asignar una cita desde la aplicación móvil
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPreferenciasPage.prototype.getDoctors = function (e) {
+        var _this = this;
+        this.restProvider.getDoctors(e).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.doctores = data['data'];
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+        });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaPreferenciasPage.prototype.showLoading = function (cont) {
+        if (cont === void 0) { cont = 'Cargando información...'; }
+        this.loading = this.loadingCtrl.create({
+            content: cont
+        });
+        this.loading.present();
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    PedirCitaPreferenciasPage.prototype.showError = function (title, text) {
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: text,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    PedirCitaPreferenciasPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-pedir-cita-preferencias',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n    <p style=" margin: 0 0 0 4rem;">Elije el profesional</p>\n    <ion-slides slidesPerView="3.3" spaceBetween="18">\n  		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">\n  			<ion-row>\n	    		<button [class]="card.class + \' button\'">\n	    			<p><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>\n	    			<p [class]="card.class">{{ card.usuario }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 1rem 0 -2rem 4rem;">Preferencia de días</p>\n	<ion-slides slidesPerView="3.5" spaceBetween="18" >\n  		<ion-slide class="slide" *ngFor="let card of diasSemana" >\n  			<ion-row>\n	    		<button [class]="card.class + \' button\'" (click)="selectDia(card)" style="height: 100%;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" margin: 0rem 0 -2rem 4rem;">A partir de las:</p>\n	<ion-slides slidesPerView="3.5" spaceBetween="18" >\n  		<ion-slide class="slide" *ngFor="let card of horasDia" >\n  			<ion-row>\n	    		<button [class]="card.class + \' button\'" (click)="selectHora(card)" style="height: 100%;">\n	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.hora }}</p>\n	    		</button>	    		\n	    	</ion-row>\n	  	</ion-slide>\n	</ion-slides>\n\n	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">2 de 4</p>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-preferencias/pedir-cita-preferencias.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], PedirCitaPreferenciasPage);
+    return PedirCitaPreferenciasPage;
+}());
+
+//# sourceMappingURL=pedir-cita-preferencias.js.map
+
+/***/ }),
+
+/***/ 146:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PopoverPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1810,7 +1978,7 @@ var PopoverPage = /** @class */ (function () {
     };
     PopoverPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-popover',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\popover\popover.html"*/' <ion-list style="margin: 0;">\n\n      <button ion-item detail-none (click)="presentConfirm(\'confirmar\');"><i style="color:#81c784;margin-right:1rem;" class="fas fa-check"></i>  Confirmar cita</button>\n\n      <button ion-item detail-none (click)="presentConfirm(\'cambiar\');"><i style="color:#ffb74d;margin-right:1rem;" class="fas fa-exchange-alt"></i>  Cambiar cita</button>\n\n      <button ion-item detail-none (click)="presentConfirm(\'anular\');"><i style="color:#e57373;margin-right:1rem;" class="fas fa-ban"></i>  Anular cita</button>\n\n</ion-list>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\popover\popover.html"*/,
+            selector: 'page-popover',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/popover/popover.html"*/' <ion-list style="margin: 0;">\n      <button ion-item detail-none (click)="presentConfirm(\'confirmar\');"><i style="color:#81c784;margin-right:1rem;" class="fas fa-check"></i>  Confirmar cita</button>\n      <button ion-item detail-none (click)="presentConfirm(\'cambiar\');"><i style="color:#ffb74d;margin-right:1rem;" class="fas fa-exchange-alt"></i>  Cambiar cita</button>\n      <button ion-item detail-none (click)="presentConfirm(\'anular\');"><i style="color:#e57373;margin-right:1rem;" class="fas fa-ban"></i>  Anular cita</button>\n</ion-list>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/popover/popover.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["B" /* ViewController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], PopoverPage);
@@ -1821,20 +1989,20 @@ var PopoverPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 146:
+/***/ 147:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MiPerfilPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__profile_profile__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__change_password_change_password__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__change_password_change_password__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(64);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2091,7 +2259,7 @@ var MiPerfilPage = /** @class */ (function () {
     };
     MiPerfilPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-mi-perfil',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mi Perfil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	<div class="container">\n\n		<div class="perfil">\n\n			<div class="perfil__foto">\n\n				<img  *ngIf="data.Imagen" [src]="domSanitizer.bypassSecurityTrustUrl(data.Imagen)" style="object-fit:cover;" class="imageProfile">\n\n				<a class="btn -rounded -bg-pink editIcon" (click)="openChooseImage()" style="padding: 0.5rem;box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37);    color: transparent;"> \n\n					 <svg viewBox="0 0 400 400" width="512" xmlns="http://www.w3.org/2000/svg"> -->\n\n						 <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0" fill="#FFFFFF"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0" fill="#FFFFFF"/> \n\n					 </svg> \n\n				 </a>\n\n			</div>\n\n			<div class="perfil__datos">\n\n				<div class="perfil__dato" style="margin-top:0px;">\n\n					<ion-icon name="pin" class="leftIcon"></ion-icon>\n\n					<p class="pRight">{{ data.Direccion }} <br/> {{ data.CP }} - {{ data.Localidad }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="phone-portrait"></ion-icon>\n\n					<p class="pRight">{{ data.TelMovil }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="mail"></ion-icon>\n\n					<p class="pRight" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden; ">{{ data.Email }}</p>\n\n				</div>\n\n			</div>\n\n		</div>\n\n		<ion-row>\n\n			<ion-col>\n\n				<p class="nombre">{{ data.Nombre }} </p>\n\n				<p class="apellidos">{{ data.Apellidos }} </p>\n\n			</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col><hr /></ion-col>\n\n		</ion-row>\n\n	</div>\n\n	<ion-row class="h1">\n\n		<ion-col><h1 style="font-size: 2.4rem;"><b>Editar datos personales</b></h1></ion-col>\n\n	</ion-row>\n\n\n\n	<ion-row class="row30">\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="dPersonales" [class]="dPersonales.class" (click)="openPage(dPersonales.openPage,dPersonales.tipo)"></fb-button-icon></ion-col>\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="cPassword" [class]="cPassword.class" (click)="openPage(cPassword.openPage,cPassword.tipo)"></fb-button-icon></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/,
+            selector: 'page-mi-perfil',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/mi-perfil/mi-perfil.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mi Perfil</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	<div class="container">\n		<div class="perfil">\n			<div class="perfil__foto">\n				<img  *ngIf="data.Imagen" [src]="domSanitizer.bypassSecurityTrustUrl(data.Imagen)" style="object-fit:cover;" class="imageProfile">\n				<a class="btn -rounded -bg-pink editIcon" (click)="openChooseImage()" style="padding: 0.5rem;box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37);    color: transparent;"> \n					 <svg viewBox="0 0 400 400" width="512" xmlns="http://www.w3.org/2000/svg"> -->\n						 <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0" fill="#FFFFFF"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0" fill="#FFFFFF"/> \n					 </svg> \n				 </a>\n			</div>\n			<div class="perfil__datos">\n				<div class="perfil__dato" style="margin-top:0px;">\n					<ion-icon name="pin" class="leftIcon"></ion-icon>\n					<p class="pRight">{{ data.Direccion }} <br/> {{ data.CP }} - {{ data.Localidad }}</p>\n				</div>\n				<hr>\n				<div class="perfil__dato">\n					<ion-icon class="leftIcon" name="phone-portrait"></ion-icon>\n					<p class="pRight">{{ data.TelMovil }}</p>\n				</div>\n				<hr>\n				<div class="perfil__dato">\n					<ion-icon class="leftIcon" name="mail"></ion-icon>\n					<p class="pRight" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden; ">{{ data.Email }}</p>\n				</div>\n			</div>\n		</div>\n		<ion-row>\n			<ion-col>\n				<p class="nombre">{{ data.Nombre }} </p>\n				<p class="apellidos">{{ data.Apellidos }} </p>\n			</ion-col>\n		</ion-row>\n		<ion-row>\n			<ion-col><hr /></ion-col>\n		</ion-row>\n	</div>\n	<ion-row class="h1">\n		<ion-col><h1 style="font-size: 2.4rem;"><b>Editar datos personales</b></h1></ion-col>\n	</ion-row>\n\n	<ion-row class="row30">\n		<ion-col class="paddingBtn"><fb-button-icon [name]="dPersonales" [class]="dPersonales.class" (click)="openPage(dPersonales.openPage,dPersonales.tipo)"></fb-button-icon></ion-col>\n		<ion-col class="paddingBtn"><fb-button-icon [name]="cPassword" [class]="cPassword.class" (click)="openPage(cPassword.openPage,cPassword.tipo)"></fb-button-icon></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/mi-perfil/mi-perfil.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], MiPerfilPage);
@@ -2102,19 +2270,19 @@ var MiPerfilPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 147:
+/***/ 148:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MisDocumentosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_plan_economico_plan_economico__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_plan_economico_plan_economico__ = __webpack_require__(235);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_presupuestos_presupuestos__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_documentos_contables_documentos_contables__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2255,7 +2423,7 @@ var MisDocumentosPage = /** @class */ (function () {
     };
     MisDocumentosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-mis-documentos',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mis-documentos\mis-documentos.html"*/'<div class="back"> \n\n	<ion-header no-border>\n\n  		<ion-navbar>\n\n    		<ion-buttons left>\n\n	    		<button ion-button menuToggle>\n\n	      			<ion-icon name="menu"></ion-icon>\n\n    			</button>\n\n    		</ion-buttons>\n\n\n\n    		<ion-title>Mis Documentos</ion-title>\n\n\n\n  		</ion-navbar>\n\n	</ion-header>\n\n\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Presupuestos</h1> \n\n\n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n\n  		<ion-slide class="slide" *ngFor="let card of cards">\n\n	    	<!-- <ion-row> -->\n\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n\n	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->\n\n	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n\n	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->\n\n	    			<!-- </ion-row> -->\n\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n\n	    				<!-- <ion-col>{{card.ano}}</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    		<!-- </ion-col> -->\n\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.Titulo}}</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;">	    				 -->\n\n	    				<!-- <ion-col col-12 class="doctor" style="margin-top: 5%;">Importe: {{card.Total}}€</ion-col> -->\n\n	    			<!-- </ion-row> -->\n\n	    		<!-- </ion-col> -->\n\n	    	<!-- </ion-row> -->\n\n			<div class="cardCita">\n\n				<div class="cardCita__left">\n\n					<div class="cardCita__date">\n\n						<div class="cardCita__day">\n\n							{{card.dia}}\n\n						</div>\n\n						<div class="cardCita__month">\n\n							{{card.mes}}\n\n						</div>\n\n					</div>\n\n					<div class="cardCita__hour">\n\n						{{card.ano}}\n\n					</div>\n\n				</div>\n\n				<div class="cardCita__right">\n\n					<div class="cardCita__tto tratamiento">\n\n						{{card.Titulo}}\n\n					</div>\n\n					<div class="cardCita__dr">\n\n						<div class="cardCita__drname">\n\n							Forma de pago: {{card.formaPago}}\n\n						</div>\n\n					</div>\n\n					<div class="cardCita__dr">\n\n						<div class="cardCita__drname">\n\n							Importe: {{card.Total}}€\n\n						</div>\n\n					</div>\n\n				</div>\n\n			</div>\n\n	  	</ion-slide>\n\n	</ion-slides>\n\n</div>\n\n\n\n<!-- Gradiente -->\n\n<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n<!-- Fin Gradiente -->\n\n\n\n<div class="menu">\n\n	<ion-row>\n\n		<h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">Mis documentos</h1>\n\n	</ion-row>\n\n	<ion-row class="square" >\n\n			<div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">\n\n				<ion-row *ngIf="i == 0">\n\n					<div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>\n\n						<fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n\n					</div>\n\n				</ion-row>\n\n				<ion-row *ngIf="i == 1">\n\n					<div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>\n\n						<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n\n					</div>\n\n				</ion-row>\n\n			</div>			\n\n	</ion-row>\n\n	\n\n</div>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mis-documentos\mis-documentos.html"*/,
+            selector: 'page-mis-documentos',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/mis-documentos/mis-documentos.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Mis Documentos</ion-title>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Presupuestos</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n	    	<!-- <ion-row> -->\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->\n	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n	    				<!-- <ion-col>{{card.ano}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.Titulo}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;">	    				 -->\n	    				<!-- <ion-col col-12 class="doctor" style="margin-top: 5%;">Importe: {{card.Total}}€</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    	<!-- </ion-row> -->\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.ano}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.Titulo}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__drname">\n							Forma de pago: {{card.formaPago}}\n						</div>\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__drname">\n							Importe: {{card.Total}}€\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n</div>\n\n<!-- Gradiente -->\n<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n<!-- Fin Gradiente -->\n\n<div class="menu">\n	<ion-row>\n		<h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">Mis documentos</h1>\n	</ion-row>\n	<ion-row class="square" >\n			<div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">\n				<ion-row *ngIf="i == 0">\n					<div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>\n						<fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n					</div>\n				</ion-row>\n				<ion-row *ngIf="i == 1">\n					<div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>\n						<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n					</div>\n				</ion-row>\n			</div>			\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/mis-documentos/mis-documentos.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], MisDocumentosPage);
@@ -2266,7 +2434,7 @@ var MisDocumentosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 148:
+/***/ 149:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2274,7 +2442,7 @@ var MisDocumentosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pedir_cita_pedir_cita__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pedir_cita_pedir_cita__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_recall_recall__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -2311,7 +2479,7 @@ var MisCitasPage = /** @class */ (function () {
     };
     MisCitasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-mis-citas',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mis-citas\mis-citas.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis citas</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content class="card-background-page" >\n\n	<!-- this fab is placed at bottom right -->\n\n	 <ion-fab bottom right #fab1>\n\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n\n	   			<g fill="white" stroke="none"> \n\n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n\n   				</g>\n\n   			</svg>	   	\n\n	   </button>	   \n\n	 </ion-fab>\n\n\n\n	<!-- Gradiente -->\n\n  	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient4" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n	<ion-list style="padding: 0rem 2rem 0rem 2rem;margin: -15px 0 16px !important;">\n\n		<ion-card detail-none (click)="openPage(\'citas\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n\n			<div style="width: 100%;    height: 100%;">\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<svg style="    height: 5rem;    margin: 3.5rem 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="url(#fb-shadow-gradient4)" stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n\n				</div>\n\n				<div style="width:50%;height:100%;float:left;">\n\n					<div class="card-title" >Citas</div>\n\n					<div class="card-subtitle">Revisa tus citas pasadas y futuras</div>\n\n				</div>\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n\n						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    margin: 4.5rem 0 0 .6rem;">\n\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n						</svg>\n\n					</span>\n\n				</div>\n\n			</div>\n\n		</ion-card>\n\n		<ion-card detail-none (click)="openPage(\'pedirCita\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n\n			<div style="width: 100%;    height: 100%;">\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<svg style="    height: 5rem;    margin: 3.5rem 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="url(#fb-shadow-gradient4)" stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n\n				</div>\n\n				<div style="width:50%;height:100%;float:left;">\n\n					<div class="card-title">Pedir cita</div>\n\n					<div class="card-subtitle">Aqui podrás pedir tu cita de higiene</div>\n\n				</div>\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n\n						<svg  xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    height: 5rem;    margin: 3.5rem 0;">\n\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n						</svg>\n\n					</span>\n\n				</div>\n\n			</div>\n\n		</ion-card>\n\n		<ion-card detail-none (click)="openPage(\'recall\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n\n			<div style="width: 100%;    height: 100%;">\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<svg style="    height: 5rem;    margin: 3.5rem 0;"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">\n\n						<defs>\n\n							<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n\n						</defs>\n\n						<clipPath id="b">\n\n							<use xlink:href="#a" overflow="visible"/>\n\n						</clipPath>\n\n						<g fill="url(#fb-shadow-gradient4)" stroke="none">\n\n							<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n\n						</g>\n\n					</svg>\n\n				</div>\n\n				<div style="width:50%;height:100%;float:left;">\n\n					<div class="card-title">Mis higienes</div>\n\n					<div class="card-subtitle">Aqui podrás consultar tus higienes</div>\n\n				</div>\n\n				<div style="width:25%;height:100%;float:left;">\n\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n\n						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    margin: 4.5rem 0 0 .6rem;">\n\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n						</svg>\n\n					</span>\n\n				</div>\n\n			</div>\n\n		</ion-card>\n\n	</ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mis-citas\mis-citas.html"*/,
+            selector: 'page-mis-citas',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/mis-citas/mis-citas.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis citas</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content class="card-background-page" >\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n\n	<!-- Gradiente -->\n  	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient4" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<ion-list style="padding: 0rem 2rem 0rem 2rem;margin: -15px 0 16px !important;">\n		<ion-card detail-none (click)="openPage(\'citas\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:25%;height:100%;float:left;">\n					<svg style="    height: 5rem;    margin: 3.5rem 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="url(#fb-shadow-gradient4)" stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n				</div>\n				<div style="width:50%;height:100%;float:left;">\n					<div class="card-title" >Citas</div>\n					<div class="card-subtitle">Revisa tus citas pasadas y futuras</div>\n				</div>\n				<div style="width:25%;height:100%;float:left;">\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    margin: 4.5rem 0 0 .6rem;">\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n						</svg>\n					</span>\n				</div>\n			</div>\n		</ion-card>\n		<ion-card detail-none (click)="openPage(\'pedirCita\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:25%;height:100%;float:left;">\n					<svg style="    height: 5rem;    margin: 3.5rem 0;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="url(#fb-shadow-gradient4)" stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n				</div>\n				<div style="width:50%;height:100%;float:left;">\n					<div class="card-title">Pedir cita</div>\n					<div class="card-subtitle">Aqui podrás pedir tu cita de higiene</div>\n				</div>\n				<div style="width:25%;height:100%;float:left;">\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n						<svg  xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    height: 5rem;    margin: 3.5rem 0;">\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n						</svg>\n					</span>\n				</div>\n			</div>\n		</ion-card>\n		<ion-card detail-none (click)="openPage(\'recall\')" style="height:12rem;margin: 15px 0px 15px 0px;width:100%;box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;">\n			<div style="width: 100%;    height: 100%;">\n				<div style="width:25%;height:100%;float:left;">\n					<svg style="    height: 5rem;    margin: 3.5rem 0;"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">\n						<defs>\n							<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n						</defs>\n						<clipPath id="b">\n							<use xlink:href="#a" overflow="visible"/>\n						</clipPath>\n						<g fill="url(#fb-shadow-gradient4)" stroke="none">\n							<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n						</g>\n					</svg>\n				</div>\n				<div style="width:50%;height:100%;float:left;">\n					<div class="card-title">Mis higienes</div>\n					<div class="card-subtitle">Aqui podrás consultar tus higienes</div>\n				</div>\n				<div style="width:25%;height:100%;float:left;">\n					<span style="    border-radius: 50%;      position: absolute;    width: 10px;    height: 10px;"> \n						<svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="    margin: 4.5rem 0 0 .6rem;">\n							<path fill="#ed7aad" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n						</svg>\n					</span>\n				</div>\n			</div>\n		</ion-card>\n	</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/mis-citas/mis-citas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], MisCitasPage);
@@ -2322,586 +2490,12 @@ var MisCitasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 149:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
-/* unused harmony export snapshotToArray */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(684);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_Firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(359);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(63);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-var ChatPage = /** @class */ (function () {
-    function ChatPage(file, fileOpener, photoViewer, actionSheetCtrl, plt, alertCtrl, restProvider, loadingCtrl, _CAMERA, element, vb, eventsCtrl, navCtrl, navParams) {
-        var _this = this;
-        this.file = file;
-        this.fileOpener = fileOpener;
-        this.photoViewer = photoViewer;
-        this.actionSheetCtrl = actionSheetCtrl;
-        this.plt = plt;
-        this.alertCtrl = alertCtrl;
-        this.restProvider = restProvider;
-        this.loadingCtrl = loadingCtrl;
-        this._CAMERA = _CAMERA;
-        this.element = element;
-        this.vb = vb;
-        this.eventsCtrl = eventsCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.data = { type: '', nickname: '', message: '' }; // Array con la información del mensaje 
-        this.chats = []; // Array con todos los mensajes
-        this.firstOpen = true; // Indica si es la primera vez que se abre el chat 
-        this.offStatus = false; // Controla si la vista está en primer plano.
-        this.showEmojiPicker = false; // Controla si los emoticonos estan en primer plano.
-        this.loadingPresented = false; // Controla si el Loading esta en primer plano.
-        this.menuData = ""; // Foto de perfil del usuario.
-        this.showLoading("Cargando conversación ...");
-        this.nickname = window.localStorage.getItem("idPac");
-        this.menuData = window.localStorage.getItem("urlPerfil");
-        this.data.type = 'message';
-        this.data.nickname = this.nickname;
-        // Compruebo si la fecha de expiración es posterior
-        // a la fecha actual del sistema, si es así redirijo
-        // a la página de home.
-        var timeNow = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
-        var mostrarError = false;
-        this.restProvider.getTimeServer().then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                timeNow = new Date(Number(data['timeStamp']));
-                if (timeNow.getDay() == 0 || timeNow.getDay() == 6) {
-                    mostrarError = true;
-                }
-                else if (timeNow.getDay() == 5) {
-                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 20) {
-                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
-                            mostrarError = false;
-                        }
-                        else if (timeNow.getHours() == 20 && timeNow.getMinutes() <= 0) {
-                            mostrarError = false;
-                        }
-                        else {
-                            mostrarError = true;
-                        }
-                    }
-                }
-                else {
-                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 21) {
-                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
-                            mostrarError = false;
-                        }
-                        else if (timeNow.getHours() == 21 && timeNow.getMinutes() <= 0) {
-                            mostrarError = false;
-                        }
-                        else {
-                            mostrarError = true;
-                        }
-                    }
-                }
-                if (mostrarError) {
-                    _this.showError("¡Atención!", "El horario de la clínica es: <br><br> L-J de 09:30 a 20:30 <br> V &nbsp&nbsp&nbspde 09:30 a 19:30");
-                    _this.navCtrl.pop();
-                }
-            }
-        });
-        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname).limitToLast(15).on('value', function (resp) {
-            _this.chats = [];
-            _this.chats = snapshotToArray(resp, _this.nickname, _this.vb, _this.firstOpen, _this.offStatus);
-            setTimeout(function () {
-                _this.firstOpen = false;
-                if (_this.offStatus === false) {
-                    if (_this.content != null) {
-                        _this.content.scrollToBottom(0);
-                        if (_this.loadingPresented) {
-                            _this.loadingPresented = false;
-                            _this.loading.dismiss();
-                        }
-                    }
-                }
-            });
-        });
-    }
-    ChatPage.prototype.printImage = function (base) {
-        var _this = this;
-        this.showLoading();
-        var writeDirectory = this.plt.is('ios') ? this.file.dataDirectory : this.file.externalDataDirectory;
-        var filename = "imageShow.jpg";
-        this.file.writeFile(writeDirectory, filename, this.convertBase64ToBlob(base, 'data:application/jpeg;base64'), { replace: true }).then(function () {
-            _this.photoViewer.show(writeDirectory + filename, '¿Compartir?', { share: true });
-            _this.loading.dismiss();
-        }).catch(function () {
-            console.error('Error writing pdf file');
-            _this.loading.dismiss();
-        });
-    };
-    ChatPage.prototype.convertBase64ToBlob = function (b64Data, contentType) {
-        contentType = contentType || '';
-        var sliceSize = 512;
-        b64Data = b64Data.replace(/^[^,]+,/, '');
-        b64Data = b64Data.replace(/\s/g, '');
-        var byteCharacters = window.atob(b64Data);
-        var byteArrays = [];
-        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
-            var slice = byteCharacters.slice(offset, offset + sliceSize);
-            var byteNumbers = new Array(slice.length);
-            for (var i = 0; i < slice.length; i++) {
-                byteNumbers[i] = slice.charCodeAt(i);
-            }
-            var byteArray = new Uint8Array(byteNumbers);
-            byteArrays.push(byteArray);
-        }
-        return new Blob(byteArrays, { type: contentType });
-    };
-    /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    ChatPage.prototype.showLoading = function (txt) {
-        if (txt === void 0) { txt = 'Cargando información...'; }
-        this.loading = this.loadingCtrl.create({
-            content: txt,
-            dismissOnPageChange: false
-        });
-        this.loading.present();
-        this.loadingPresented = true;
-    };
-    /**
-    * 	Función que redibuja el textarea
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    ChatPage.prototype.onFocus = function () {
-        this.showEmojiPicker = false;
-        this.content.resize();
-        this.scrollToBottom();
-    };
-    /**
-    * 	Función que selecciona si es desde galeria o camara
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.openChooseImage = function () {
-        var _this = this;
-        var actionSheet = this.actionSheetCtrl.create({
-            title: 'Elige una opción',
-            cssClass: 'action-sheets-basic-page',
-            buttons: [
-                {
-                    text: 'Camara',
-                    role: 'destructive',
-                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	          		
-                    handler: function () {
-                        _this.selectImage(1);
-                    }
-                },
-                {
-                    text: 'Galeria',
-                    role: 'destructive',
-                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	
-                    handler: function () {
-                        _this.selectImage(0);
-                    }
-                },
-            ]
-        });
-        actionSheet.present();
-    };
-    /**
-    * 	Función que envía una imagen a Firebase
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.selectImage = function (x) {
-        var _this = this;
-        this.showLoading("Enviando imagen ...");
-        return new Promise(function (resolve) {
-            var cameraOptions = {
-                sourceType: x,
-                destinationType: _this._CAMERA.DestinationType.DATA_URL,
-                quality: 100,
-                allowEdit: true,
-                correctOrientation: true,
-                saveToPhotoAlbum: true,
-                cameraDirection: 1,
-                encodingType: _this._CAMERA.EncodingType.JPEG,
-            };
-            _this._CAMERA.getPicture(cameraOptions).then(function (data) {
-                _this.cameraImage = "data:image/jpeg;base64," + data;
-                resolve(_this.cameraImage);
-                _this.restProvider.getTimeStamp().then(function (data) {
-                    __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(_this.nickname + "/" + data.timeStamp).set({
-                        type: "image",
-                        user: _this.data.nickname,
-                        message: _this.cameraImage,
-                        sendDate: new Date(Number(data.timeStamp)).toString(),
-                        read: false
-                    });
-                });
-                if (_this.loadingPresented) {
-                    _this.loadingPresented = false;
-                    _this.loading.dismiss();
-                }
-            }).catch(function (e) {
-                if (e == 20)
-                    _this.showError("ERROR", "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.");
-                else
-                    _this.loading.dismiss();
-            });
-        }).catch(function (e) {
-            _this.showError("ERROR", "Error al intentar enviar la imagen.");
-        });
-    };
-    /**
-    * 	Función que lleva la vista al final de la pantalla
-    *	para dar impresión de un chat.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.scrollToBottom = function () {
-        var _this = this;
-        setTimeout(function () {
-            if (_this.content.scrollToBottom) {
-                _this.content.scrollToBottom();
-            }
-        }, 400);
-    };
-    /**
-    * 	Función que controla si está abierto los emoticonos o el texarea
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.switchEmojiPicker = function () {
-        this.showEmojiPicker = !this.showEmojiPicker;
-        if (!this.showEmojiPicker) {
-            this.focus();
-        }
-        else {
-            this.setTextareaScroll();
-        }
-        this.content.resize();
-        this.scrollToBottom();
-    };
-    /**
-    * 	Función que muestra el textarea y cierra los emoticonos
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.setTextareaScroll = function () {
-        var textarea = this.messageInput.nativeElement;
-        textarea.scrollTop = textarea.scrollHeight;
-    };
-    /**
-    * 	Función que muestra los emoticonos y cierra el textarea
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.focus = function () {
-        if (this.messageInput && this.messageInput.nativeElement) {
-            this.messageInput.nativeElement.focus();
-        }
-    };
-    /**
-    * 	Función que envía un mensaje a Firebase
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.sendMessage = function () {
-        var _this = this;
-        if (this.data.message.trim() == "")
-            return;
-        this.restProvider.getTimeStamp().then(function (data) {
-            __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(_this.nickname + "/" + data.timeStamp).set({
-                type: _this.data.type,
-                user: _this.data.nickname,
-                message: _this.data.message,
-                sendDate: new Date(Number(data.timeStamp)).toString(),
-                read: false
-            });
-            _this.data.message = '';
-        });
-    };
-    /**
-    * 	Función que inicia la escucha con Firebase y
-    *	actualiza la última conexión del usuario.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.ionViewDidEnter = function () {
-        //console.log("ENTRA EN CHAT");
-        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
-            date: "Online",
-        });
-        this.eventsCtrl.publish('chat:load');
-    };
-    /**
-    * 	Función que desconecta la escucha con Firebase y
-    *	actualiza la última conexión del usuario.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    ChatPage.prototype.ionViewWillLeave = function () {
-        this.offStatus = true;
-        //console.log("SALE EN CHAT");
-        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
-            date: Date(),
-        });
-        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname).off();
-        this.eventsCtrl.publish('chat:unload');
-    };
-    /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChatPage.prototype.showError = function (title, text) {
-        this.loading.dismiss();
-        var alert = this.alertCtrl.create({
-            title: title,
-            subTitle: text,
-            buttons: ['OK']
-        });
-        alert.present();
-    };
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
-    ], ChatPage.prototype, "content", void 0);
-    __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('chat_input'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
-    ], ChatPage.prototype, "messageInput", void 0);
-    ChatPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-chat',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\chat\chat.html"*/'<ion-header>\n\n	<ion-navbar color="primary">\n\n		<ion-title>Chat</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n<ion-content padding class="bg">\n\n	<div class="page-chat" style="height: 100vh;display: flex; align-items: flex-end; flex-direction: column-reverse;">\n\n        <div class="message-wrap" style="width:100%; margin: -25rem 0;">\n\n            <div class="message" *ngFor="let msg of chats" [class.left]=" msg.user !== nickname " [class.right]=" msg.user === nickname ">\n\n                <div *ngIf="msg.user === nickname">\n\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="{{menuData}}"/>\n\n                </div>\n\n                <div *ngIf="msg.user !== nickname">\n\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="http://cfb2.ddns.net:4231/personal/{{msg.image}}.jpg"/>\n\n                </div>\n\n                <div class="msg-detail">\n\n                    <div class="msg-content">\n\n                        <p class="line-breaker ">\n\n                            {{msg.message}}\n\n                        </p>\n\n                        <div class="msg-info">\n\n                            <p>\n\n                                {{msg.sendDate | date:\'dd/MM/yyyy HH:mm\'}}\n\n                            </p>\n\n                        </div>\n\n                    </div>\n\n                </div>\n\n            </div>            \n\n        </div>\n\n    </div>\n\n</ion-content>\n\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n\n<form class="conversation-compose">\n\n    <div class="emoji" #chatBA >\n\n        <svg (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209">\n\n            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"></path>\n\n        </svg>\n\n    </div>\n\n    <input #chat_input class="input-msg" [(ngModel)]="data.message" name="message" (keyup.enter)="sendMessage()" (focusin)="onFocus()" placeholder="Escribe un mensaje">\n\n    <div class="photo" #chatBD (click)="openChooseImage()">\n\n        <i class="fas fa-camera"></i>\n\n    </div>\n\n        <button class="send" #chatBC (click)="sendMessage()">\n\n            <div class="circle">\n\n                <i class="far fa-arrow-alt-circle-right"></i>\n\n            </div>\n\n    </button>\n\n</form>\n\n<emoji-picker ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n\n</ion-footer>\n\n<!--\n\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n\n	<div class="input-wrap">\n\n		<button ion-button #chatBA clear icon-only item-right (click)="switchEmojiPicker()">\n\n			<ion-icon name="md-happy"></ion-icon>\n\n		</button>\n\n		<textarea #chat_input style="max-height: 3.5rem;" placeholder="Escribe un mensaje" [(ngModel)]="data.message" (keyup.enter)="sendMessage()"	(focusin)="onFocus()">	</textarea>\n\n		<button ion-button #chatBD clear icon-only item-right (click)="openChooseImage()">\n\n			<ion-icon name="ios-camera" ios="ios-camera" md="md-camera"></ion-icon>\n\n		</button>\n\n		<button ion-button #chatBC clear icon-only item-right (click)="sendMessage()">\n\n			<ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n\n		</button>	\n\n	</div>\n\n	<emoji-picker  ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n\n</ion-footer>-->'/*ion-inline-end:"C:\App-fb\appfb\src\pages\chat\chat.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__["a" /* PhotoViewer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
-    ], ChatPage);
-    return ChatPage;
-}());
-
-/**
-* 	Función que convierte la conversación en un
-*	array para poder dibujarlo en la plantilla.
-*
-* 	@param None
-*
-* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-* 	@return None
-*/
-var snapshotToArray = function (snapshot, nickname, vb, firstOpen, offStatus) {
-    var returnArr = [];
-    var lastElemenmt = "";
-    snapshot.forEach(function (childSnapshot) {
-        if (childSnapshot.key != "ultimaConexion") {
-            lastElemenmt = childSnapshot.val().user;
-            if (childSnapshot.val().user == "atPaciente") {
-                var updates = {};
-                updates[nickname + '/' + childSnapshot.key + '/read'] = true;
-                __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref().update(updates);
-            }
-            var item = childSnapshot.val();
-            item.key = childSnapshot.key;
-            returnArr.push(item);
-        }
-    });
-    if (!firstOpen && !offStatus && lastElemenmt == "atPaciente") {
-        //console.log("VIBRA - " + firstOpen);
-        vb.vibrate(500);
-    }
-    return returnArr;
-};
-//# sourceMappingURL=chat.js.map
-
-/***/ }),
-
-/***/ 150:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SugerenciasPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(72);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-/**
- * Generated class for the SugerenciasPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var SugerenciasPage = /** @class */ (function () {
-    function SugerenciasPage(loadingCtrl, alertCtrl, restProvider, navCtrl, navParams) {
-        this.loadingCtrl = loadingCtrl;
-        this.alertCtrl = alertCtrl;
-        this.restProvider = restProvider;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.data = {}; // Array para almacenar los valores de la sugerencia.
-        this.loadingPresented = false; // Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
-    }
-    SugerenciasPage.prototype.setSugerencia = function () {
-        var _this = this;
-        this.showLoading();
-        this.restProvider.setSugerencia(this.data).then(function (d) {
-            if (typeof d != "undefined" && d['status'] == 1) {
-                _this.showError("¡Bien!", d['data'], true);
-            }
-            else if (d.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + d['message'] + "<br/><br/>[Code: " + d['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-            console.log(e);
-        });
-    };
-    /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    SugerenciasPage.prototype.showLoading = function () {
-        this.loading = this.loadingCtrl.create({
-            content: 'Cargando información...',
-            dismissOnPageChange: true
-        });
-        this.loading.present();
-        this.loadingPresented = true;
-    };
-    /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    SugerenciasPage.prototype.showError = function (title, text, redirect) {
-        var _this = this;
-        if (redirect === void 0) { redirect = false; }
-        this.loading.dismiss();
-        var alert = this.alertCtrl.create({
-            title: title,
-            subTitle: text,
-            buttons: [{
-                    text: 'OK',
-                    role: 'OK',
-                    handler: function () {
-                        if (redirect)
-                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */]);
-                    }
-                }]
-        });
-        alert.present();
-    };
-    SugerenciasPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-sugerencias',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\sugerencias\sugerencias.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Sugerencias</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	<!-- this fab is placed at bottom right -->\n\n	 <ion-fab bottom right #fab1>\n\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n\n	   			<g fill="white" stroke="none"> \n\n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n\n   				</g>\n\n   			</svg>	   	\n\n	   </button>	   \n\n	 </ion-fab>\n\n	<ion-list>\n\n		<ion-item>\n\n			<ion-label color="primary" stacked>Escribe tu nombre</ion-label>\n\n			<ion-input [(ngModel)]="data.nombre" placeholder="Opcional"></ion-input>\n\n		</ion-item>\n\n		<ion-item>\n\n			<ion-label color="primary" stacked>Escribe tu email</ion-label>\n\n			<ion-input [(ngModel)]="data.email" placeholder="Opcional"></ion-input>\n\n		</ion-item>\n\n		<ion-item>\n\n			<ion-label color="primary" stacked>Escribe tu teléfono</ion-label>\n\n			<ion-input [(ngModel)]="data.movil" placeholder="Opcional"></ion-input>\n\n		</ion-item>\n\n		<ion-item>\n\n			<ion-label color="primary" stacked>Ayudanos a mejorar, gracias!</ion-label>\n\n			<ion-textarea [(ngModel)]="data.texto" rows="5" placeholder="Toca aquí para escribir"></ion-textarea>\n\n		</ion-item>\n\n		<ion-item>\n\n			<button ion-button large item-end color="secondary" (tap)="setSugerencia()">\n\n				Enviar\n\n			</button>\n\n		</ion-item>\n\n	</ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\sugerencias\sugerencias.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
-    ], SugerenciasPage);
-    return SugerenciasPage;
-}());
-
-//# sourceMappingURL=sugerencias.js.map
-
-/***/ }),
-
-/***/ 16:
+/***/ 15:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(312);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3350,12 +2944,12 @@ var RestProvider = /** @class */ (function () {
             return e;
         });
     };
-    RestProvider.prototype.searchCita = function (fecha, hora, doctor, tto, preferencias) {
+    RestProvider.prototype.searchCita = function (dia, hora, doctor, tto) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             _this.http.post(_this.apiUrl + '/buscarCitas', false, {
                 headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),
-                params: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpParams */]().set('fecha', fecha).set('hora', hora).set('idUsu', doctor).set('idOpc', tto).set('preferencias', preferencias)
+                params: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpParams */]().set('dia', dia).set('hora', hora).set('dr', doctor).set('tto', tto)
             })
                 .subscribe(function (res) {
                 resolve(res);
@@ -3367,12 +2961,11 @@ var RestProvider = /** @class */ (function () {
             return e;
         });
     };
-    RestProvider.prototype.getTratamientos = function (e) {
+    RestProvider.prototype.getTratamientos = function () {
         var _this = this;
         return new Promise(function (resolve, reject) {
             _this.http.post(_this.apiUrl + '/tratamientosPedirCita', false, {
                 headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),
-                params: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpParams */]().set('idUsu', e)
             })
                 .subscribe(function (res) {
                 resolve(res);
@@ -3417,11 +3010,12 @@ var RestProvider = /** @class */ (function () {
             return e;
         });
     };
-    RestProvider.prototype.getDoctors = function () {
+    RestProvider.prototype.getDoctors = function (e) {
         var _this = this;
         return new Promise(function (resolve, reject) {
             _this.http.post(_this.apiUrl + '/doctoresPedirCita', false, {
                 headers: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["c" /* HttpHeaders */]().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),
+                params: new __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["d" /* HttpParams */]().set('tto', e)
             })
                 .subscribe(function (res) {
                 resolve(res);
@@ -3531,16 +3125,590 @@ var RestProvider = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 150:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChatPage; });
+/* unused harmony export snapshotToArray */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(687);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_Firebase__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(64);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+var ChatPage = /** @class */ (function () {
+    function ChatPage(file, fileOpener, photoViewer, actionSheetCtrl, plt, alertCtrl, restProvider, loadingCtrl, _CAMERA, element, vb, eventsCtrl, navCtrl, navParams) {
+        var _this = this;
+        this.file = file;
+        this.fileOpener = fileOpener;
+        this.photoViewer = photoViewer;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.plt = plt;
+        this.alertCtrl = alertCtrl;
+        this.restProvider = restProvider;
+        this.loadingCtrl = loadingCtrl;
+        this._CAMERA = _CAMERA;
+        this.element = element;
+        this.vb = vb;
+        this.eventsCtrl = eventsCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.data = { type: '', nickname: '', message: '' }; // Array con la información del mensaje 
+        this.chats = []; // Array con todos los mensajes
+        this.firstOpen = true; // Indica si es la primera vez que se abre el chat 
+        this.offStatus = false; // Controla si la vista está en primer plano.
+        this.showEmojiPicker = false; // Controla si los emoticonos estan en primer plano.
+        this.loadingPresented = false; // Controla si el Loading esta en primer plano.
+        this.menuData = ""; // Foto de perfil del usuario.
+        this.showLoading("Cargando conversación ...");
+        this.nickname = window.localStorage.getItem("idPac");
+        this.menuData = window.localStorage.getItem("urlPerfil");
+        this.data.type = 'message';
+        this.data.nickname = this.nickname;
+        // Compruebo si la fecha de expiración es posterior
+        // a la fecha actual del sistema, si es así redirijo
+        // a la página de home.
+        var timeNow = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
+        var mostrarError = false;
+        this.restProvider.getTimeServer().then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                timeNow = new Date(Number(data['timeStamp']));
+                if (timeNow.getDay() == 0 || timeNow.getDay() == 6) {
+                    mostrarError = true;
+                }
+                else if (timeNow.getDay() == 5) {
+                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 20) {
+                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
+                            mostrarError = false;
+                        }
+                        else if (timeNow.getHours() == 20 && timeNow.getMinutes() <= 0) {
+                            mostrarError = false;
+                        }
+                        else {
+                            mostrarError = true;
+                        }
+                    }
+                }
+                else {
+                    if (timeNow.getHours() <= 9 || timeNow.getHours() >= 21) {
+                        if (timeNow.getHours() == 9 && timeNow.getMinutes() >= 0) {
+                            mostrarError = false;
+                        }
+                        else if (timeNow.getHours() == 21 && timeNow.getMinutes() <= 0) {
+                            mostrarError = false;
+                        }
+                        else {
+                            mostrarError = true;
+                        }
+                    }
+                }
+                if (mostrarError) {
+                    _this.showError("¡Atención!", "El horario de la clínica es: <br><br> L-J de 09:30 a 20:30 <br> V &nbsp&nbsp&nbspde 09:30 a 19:30");
+                    _this.navCtrl.pop();
+                }
+            }
+        });
+        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname).limitToLast(15).on('value', function (resp) {
+            _this.chats = [];
+            _this.chats = snapshotToArray(resp, _this.nickname, _this.vb, _this.firstOpen, _this.offStatus);
+            setTimeout(function () {
+                _this.firstOpen = false;
+                if (_this.offStatus === false) {
+                    if (_this.content != null) {
+                        _this.content.scrollToBottom(0);
+                        if (_this.loadingPresented) {
+                            _this.loadingPresented = false;
+                            _this.loading.dismiss();
+                        }
+                    }
+                }
+            });
+        });
+    }
+    ChatPage.prototype.printImage = function (base) {
+        var _this = this;
+        this.showLoading();
+        var writeDirectory = this.plt.is('ios') ? this.file.dataDirectory : this.file.externalDataDirectory;
+        var filename = "imageShow.jpg";
+        this.file.writeFile(writeDirectory, filename, this.convertBase64ToBlob(base, 'data:application/jpeg;base64'), { replace: true }).then(function () {
+            _this.photoViewer.show(writeDirectory + filename, '¿Compartir?', { share: true });
+            _this.loading.dismiss();
+        }).catch(function () {
+            console.error('Error writing pdf file');
+            _this.loading.dismiss();
+        });
+    };
+    ChatPage.prototype.convertBase64ToBlob = function (b64Data, contentType) {
+        contentType = contentType || '';
+        var sliceSize = 512;
+        b64Data = b64Data.replace(/^[^,]+,/, '');
+        b64Data = b64Data.replace(/\s/g, '');
+        var byteCharacters = window.atob(b64Data);
+        var byteArrays = [];
+        for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+            var slice = byteCharacters.slice(offset, offset + sliceSize);
+            var byteNumbers = new Array(slice.length);
+            for (var i = 0; i < slice.length; i++) {
+                byteNumbers[i] = slice.charCodeAt(i);
+            }
+            var byteArray = new Uint8Array(byteNumbers);
+            byteArrays.push(byteArray);
+        }
+        return new Blob(byteArrays, { type: contentType });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    ChatPage.prototype.showLoading = function (txt) {
+        if (txt === void 0) { txt = 'Cargando información...'; }
+        this.loading = this.loadingCtrl.create({
+            content: txt,
+            dismissOnPageChange: false
+        });
+        this.loading.present();
+        this.loadingPresented = true;
+    };
+    /**
+    * 	Función que redibuja el textarea
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    ChatPage.prototype.onFocus = function () {
+        this.showEmojiPicker = false;
+        this.content.resize();
+        this.scrollToBottom();
+    };
+    /**
+    * 	Función que selecciona si es desde galeria o camara
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.openChooseImage = function () {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Elige una opción',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+                {
+                    text: 'Camara',
+                    role: 'destructive',
+                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	          		
+                    handler: function () {
+                        _this.selectImage(1);
+                    }
+                },
+                {
+                    text: 'Galeria',
+                    role: 'destructive',
+                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	
+                    handler: function () {
+                        _this.selectImage(0);
+                    }
+                },
+            ]
+        });
+        actionSheet.present();
+    };
+    /**
+    * 	Función que envía una imagen a Firebase
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.selectImage = function (x) {
+        var _this = this;
+        this.showLoading("Enviando imagen ...");
+        return new Promise(function (resolve) {
+            var cameraOptions = {
+                sourceType: x,
+                destinationType: _this._CAMERA.DestinationType.DATA_URL,
+                quality: 100,
+                allowEdit: true,
+                correctOrientation: true,
+                saveToPhotoAlbum: true,
+                cameraDirection: 1,
+                encodingType: _this._CAMERA.EncodingType.JPEG,
+            };
+            _this._CAMERA.getPicture(cameraOptions).then(function (data) {
+                _this.cameraImage = "data:image/jpeg;base64," + data;
+                resolve(_this.cameraImage);
+                _this.restProvider.getTimeStamp().then(function (data) {
+                    __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(_this.nickname + "/" + data.timeStamp).set({
+                        type: "image",
+                        user: _this.data.nickname,
+                        message: _this.cameraImage,
+                        sendDate: new Date(Number(data.timeStamp)).toString(),
+                        read: false
+                    });
+                });
+                if (_this.loadingPresented) {
+                    _this.loadingPresented = false;
+                    _this.loading.dismiss();
+                }
+            }).catch(function (e) {
+                if (e == 20)
+                    _this.showError("ERROR", "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.");
+                else
+                    _this.loading.dismiss();
+            });
+        }).catch(function (e) {
+            _this.showError("ERROR", "Error al intentar enviar la imagen.");
+        });
+    };
+    /**
+    * 	Función que lleva la vista al final de la pantalla
+    *	para dar impresión de un chat.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.scrollToBottom = function () {
+        var _this = this;
+        setTimeout(function () {
+            if (_this.content.scrollToBottom) {
+                _this.content.scrollToBottom();
+            }
+        }, 400);
+    };
+    /**
+    * 	Función que controla si está abierto los emoticonos o el texarea
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.switchEmojiPicker = function () {
+        this.showEmojiPicker = !this.showEmojiPicker;
+        if (!this.showEmojiPicker) {
+            this.focus();
+        }
+        else {
+            this.setTextareaScroll();
+        }
+        this.content.resize();
+        this.scrollToBottom();
+    };
+    /**
+    * 	Función que muestra el textarea y cierra los emoticonos
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.setTextareaScroll = function () {
+        var textarea = this.messageInput.nativeElement;
+        textarea.scrollTop = textarea.scrollHeight;
+    };
+    /**
+    * 	Función que muestra los emoticonos y cierra el textarea
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.focus = function () {
+        if (this.messageInput && this.messageInput.nativeElement) {
+            this.messageInput.nativeElement.focus();
+        }
+    };
+    /**
+    * 	Función que envía un mensaje a Firebase
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.sendMessage = function () {
+        var _this = this;
+        if (this.data.message.trim() == "")
+            return;
+        this.restProvider.getTimeStamp().then(function (data) {
+            __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(_this.nickname + "/" + data.timeStamp).set({
+                type: _this.data.type,
+                user: _this.data.nickname,
+                message: _this.data.message,
+                sendDate: new Date(Number(data.timeStamp)).toString(),
+                read: false
+            });
+            _this.data.message = '';
+        });
+    };
+    /**
+    * 	Función que inicia la escucha con Firebase y
+    *	actualiza la última conexión del usuario.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.ionViewDidEnter = function () {
+        //console.log("ENTRA EN CHAT");
+        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
+            date: "Online",
+        });
+        this.eventsCtrl.publish('chat:load');
+    };
+    /**
+    * 	Función que desconecta la escucha con Firebase y
+    *	actualiza la última conexión del usuario.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    ChatPage.prototype.ionViewWillLeave = function () {
+        this.offStatus = true;
+        //console.log("SALE EN CHAT");
+        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname + "/ultimaConexion").set({
+            date: Date(),
+        });
+        __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref(this.nickname).off();
+        this.eventsCtrl.publish('chat:unload');
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChatPage.prototype.showError = function (title, text) {
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: text,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+    ], ChatPage.prototype, "content", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('chat_input'),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+    ], ChatPage.prototype, "messageInput", void 0);
+    ChatPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-chat',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/chat/chat.html"*/'<ion-header>\n	<ion-navbar color="primary">\n		<ion-title>Chat</ion-title>\n	</ion-navbar>\n</ion-header>\n<ion-content padding class="bg">\n	<div class="page-chat" style="height: 100vh;display: flex; align-items: flex-end; flex-direction: column-reverse;">\n        <div class="message-wrap" style="width:100%; margin: -25rem 0;">\n            <div class="message" *ngFor="let msg of chats" [class.left]=" msg.user !== nickname " [class.right]=" msg.user === nickname ">\n                <div *ngIf="msg.user === nickname">\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="{{menuData}}"/>\n                </div>\n                <div *ngIf="msg.user !== nickname">\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="http://cfb2.ddns.net:4231/personal/{{msg.image}}.jpg"/>\n                </div>\n                <div class="msg-detail">\n                    <div class="msg-content">\n                        <p class="line-breaker ">\n                            {{msg.message}}\n                        </p>\n                        <div class="msg-info">\n                            <p>\n                                {{msg.sendDate | date:\'dd/MM/yyyy HH:mm\'}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>            \n        </div>\n    </div>\n</ion-content>\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n<form class="conversation-compose">\n    <div class="emoji" #chatBA >\n        <svg (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209">\n            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"></path>\n        </svg>\n    </div>\n    <input #chat_input class="input-msg" [(ngModel)]="data.message" name="message" (keyup.enter)="sendMessage()" (focusin)="onFocus()" placeholder="Escribe un mensaje">\n    <div class="photo" #chatBD (click)="openChooseImage()">\n        <i class="fas fa-camera"></i>\n    </div>\n        <button class="send" #chatBC (click)="sendMessage()">\n            <div class="circle">\n                <i class="far fa-arrow-alt-circle-right"></i>\n            </div>\n    </button>\n</form>\n<emoji-picker ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n</ion-footer>\n<!--\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n	<div class="input-wrap">\n		<button ion-button #chatBA clear icon-only item-right (click)="switchEmojiPicker()">\n			<ion-icon name="md-happy"></ion-icon>\n		</button>\n		<textarea #chat_input style="max-height: 3.5rem;" placeholder="Escribe un mensaje" [(ngModel)]="data.message" (keyup.enter)="sendMessage()"	(focusin)="onFocus()">	</textarea>\n		<button ion-button #chatBD clear icon-only item-right (click)="openChooseImage()">\n			<ion-icon name="ios-camera" ios="ios-camera" md="md-camera"></ion-icon>\n		</button>\n		<button ion-button #chatBC clear icon-only item-right (click)="sendMessage()">\n			<ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n		</button>	\n	</div>\n	<emoji-picker  ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n</ion-footer>-->'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/chat/chat.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__["a" /* PhotoViewer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], ChatPage);
+    return ChatPage;
+}());
+
+/**
+* 	Función que convierte la conversación en un
+*	array para poder dibujarlo en la plantilla.
+*
+* 	@param None
+*
+* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+* 	@return None
+*/
+var snapshotToArray = function (snapshot, nickname, vb, firstOpen, offStatus) {
+    var returnArr = [];
+    var lastElemenmt = "";
+    snapshot.forEach(function (childSnapshot) {
+        if (childSnapshot.key != "ultimaConexion") {
+            lastElemenmt = childSnapshot.val().user;
+            if (childSnapshot.val().user == "atPaciente") {
+                var updates = {};
+                updates[nickname + '/' + childSnapshot.key + '/read'] = true;
+                __WEBPACK_IMPORTED_MODULE_2_Firebase__["database"]().ref().update(updates);
+            }
+            var item = childSnapshot.val();
+            item.key = childSnapshot.key;
+            returnArr.push(item);
+        }
+    });
+    if (!firstOpen && !offStatus && lastElemenmt == "atPaciente") {
+        //console.log("VIBRA - " + firstOpen);
+        vb.vibrate(500);
+    }
+    return returnArr;
+};
+//# sourceMappingURL=chat.js.map
+
+/***/ }),
+
+/***/ 151:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SugerenciasPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(63);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+/**
+ * Generated class for the SugerenciasPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var SugerenciasPage = /** @class */ (function () {
+    function SugerenciasPage(loadingCtrl, alertCtrl, restProvider, navCtrl, navParams) {
+        this.loadingCtrl = loadingCtrl;
+        this.alertCtrl = alertCtrl;
+        this.restProvider = restProvider;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.data = {}; // Array para almacenar los valores de la sugerencia.
+        this.loadingPresented = false; // Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
+    }
+    SugerenciasPage.prototype.setSugerencia = function () {
+        var _this = this;
+        this.showLoading();
+        this.restProvider.setSugerencia(this.data).then(function (d) {
+            if (typeof d != "undefined" && d['status'] == 1) {
+                _this.showError("¡Bien!", d['data'], true);
+            }
+            else if (d.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + d['message'] + "<br/><br/>[Code: " + d['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+            console.log(e);
+        });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    SugerenciasPage.prototype.showLoading = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Cargando información...',
+            dismissOnPageChange: true
+        });
+        this.loading.present();
+        this.loadingPresented = true;
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    SugerenciasPage.prototype.showError = function (title, text, redirect) {
+        var _this = this;
+        if (redirect === void 0) { redirect = false; }
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: text,
+            buttons: [{
+                    text: 'OK',
+                    role: 'OK',
+                    handler: function () {
+                        if (redirect)
+                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */]);
+                    }
+                }]
+        });
+        alert.present();
+    };
+    SugerenciasPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-sugerencias',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/sugerencias/sugerencias.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Sugerencias</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<ion-list>\n		<ion-item>\n			<ion-label color="primary" stacked>Escribe tu nombre</ion-label>\n			<ion-input [(ngModel)]="data.nombre" placeholder="Opcional"></ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label color="primary" stacked>Escribe tu email</ion-label>\n			<ion-input [(ngModel)]="data.email" placeholder="Opcional"></ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label color="primary" stacked>Escribe tu teléfono</ion-label>\n			<ion-input [(ngModel)]="data.movil" placeholder="Opcional"></ion-input>\n		</ion-item>\n		<ion-item>\n			<ion-label color="primary" stacked>Ayudanos a mejorar, gracias!</ion-label>\n			<ion-textarea [(ngModel)]="data.texto" rows="5" placeholder="Toca aquí para escribir"></ion-textarea>\n		</ion-item>\n		<ion-item>\n			<button ion-button large item-end color="secondary" (tap)="setSugerencia()">\n				Enviar\n			</button>\n		</ion-item>\n	</ion-list>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/sugerencias/sugerencias.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], SugerenciasPage);
+    return SugerenciasPage;
+}());
+
+//# sourceMappingURL=sugerencias.js.map
+
+/***/ }),
+
 /***/ 18:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_change_password_change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_change_password_change_password__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_tab_login_tab__ = __webpack_require__(141);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -3703,7 +3871,7 @@ var LoginPage = /** @class */ (function () {
     };
     LoginPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login\login.html"*/'<ion-content padding>\n\n	<div>\n\n		<h1>Bienvenido a <span>F&B</span></h1>\n\n	</div>\n\n	<div style="    text-align: center;">\n\n		<img src="assets/imgs/logo.png" style="width: 75%;">\n\n	</div>\n\n</ion-content>\n\n<ion-footer>\n\n	<div class="buttons">\n\n		<fb-button [name]="bCrearCuenta" [class]="bCrearCuenta.class" (click)="openPage(bCrearCuenta.openPage,bCrearCuenta.tipo)"> </fb-button>\n\n		<p class="line"><span>o</span></p>\n\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n\n		<p>\n\n			<a href="https://www.clinicaferrusbratos.com/aviso-legal/">Terminos de servicio</a>\n\n		</p>\n\n	</div>\n\n</ion-footer>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login\login.html"*/,
+            selector: 'page-login',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/'<ion-content padding>\n	<div>\n		<h1>Bienvenido a <span>F&B</span></h1>\n	</div>\n	<div style="    text-align: center;">\n		<img src="assets/imgs/logo.png" style="width: 75%;">\n	</div>\n</ion-content>\n<ion-footer>\n	<div class="buttons">\n		<fb-button [name]="bCrearCuenta" [class]="bCrearCuenta.class" (click)="openPage(bCrearCuenta.openPage,bCrearCuenta.tipo)"> </fb-button>\n		<p class="line"><span>o</span></p>\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n		<p>\n			<a href="https://www.clinicaferrusbratos.com/aviso-legal/">Terminos de servicio</a>\n		</p>\n	</div>\n</ion-footer>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login/login.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["q" /* LoadingController */]])
     ], LoginPage);
@@ -3714,15 +3882,15 @@ var LoginPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 227:
+/***/ 228:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginInputPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_home_home__ = __webpack_require__(63);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3828,7 +3996,7 @@ var LoginInputPage = /** @class */ (function () {
     };
     LoginInputPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-input',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-input\login-input.html"*/'<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<br />\n\n	<ion-list>\n\n		<ion-item style=" width: 94%;">\n\n			<ion-label stacked>DNI</ion-label>\n\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n\n		</ion-item>		\n\n		<ion-item>\n\n			<ion-label stacked>Contraseña</ion-label>\n\n			<ion-input type="password" [(ngModel)]="registerCredentials.password"></ion-input>\n\n		</ion-item>	\n\n	</ion-list>\n\n	<p class="olvido">¿Olvidaste tu contraseña?</p>\n\n	<br />\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bIniciar" [class]="bIniciar.class" (click)="login()"></fb-button>\n\n	</div>\n\n	<ion-footer>\n\n		<p style="text-align: center;">\n\n			Todavía no tienes cuenta.<br/>\n\n			<a (click)="goTab(1)">Registrate</a>\n\n		</p>\n\n	</ion-footer>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-input\login-input.html"*/,
+            selector: 'page-login-input',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/'<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n		</ion-item>		\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input type="password" [(ngModel)]="registerCredentials.password"></ion-input>\n		</ion-item>	\n	</ion-list>\n	<p class="olvido">¿Olvidaste tu contraseña?</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bIniciar" [class]="bIniciar.class" (click)="login()"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			Todavía no tienes cuenta.<br/>\n			<a (click)="goTab(1)">Registrate</a>\n		</p>\n	</ion-footer>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginInputPage);
@@ -3839,18 +4007,18 @@ var LoginInputPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 228:
+/***/ 229:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LoginRegistroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_error_pin_login_error_pin__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(314);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -3958,7 +4126,7 @@ var LoginRegistroPage = /** @class */ (function () {
     };
     LoginRegistroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-registro',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-registro\login-registro.html"*/'<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<br />\n\n	<ion-list>\n\n		<ion-item style=" width: 94%;">\n\n			<ion-label stacked>DNI</ion-label>\n\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n\n		</ion-item>		\n\n	</ion-list>\n\n	<p class="olvido">DNI con letra incluida</p>\n\n	<br />\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-registro\login-registro.html"*/,
+            selector: 'page-login-registro',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/'<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n		</ion-item>		\n	</ion-list>\n	<p class="olvido">DNI con letra incluida</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__["a" /* AndroidPermissions */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginRegistroPage);
@@ -3969,7 +4137,7 @@ var LoginRegistroPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 229:
+/***/ 230:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4017,7 +4185,7 @@ var LoginReenviarPage = /** @class */ (function () {
     };
     LoginReenviarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-reenviar',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\login-reenviar\login-reenviar.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Reenviar PIN</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<p style="    margin: 2rem;">Te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span></p>\n\n	<p style="    margin: 2rem;">Si no reconoces este número o no es tu teléfono actual, llamanos al <span (click)="callClinica()">91 768 18 12</span> para que podamos gestionarle el alta en la aplicación</p>\n\n	<br />\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bReenviar" [class]="bReenviar.class" (click)="reenviar()"></fb-button>\n\n	</div>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\login-reenviar\login-reenviar.html"*/,
+            selector: 'page-login-reenviar',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Reenviar PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style="    margin: 2rem;">Te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span></p>\n	<p style="    margin: 2rem;">Si no reconoces este número o no es tu teléfono actual, llamanos al <span (click)="callClinica()">91 768 18 12</span> para que podamos gestionarle el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bReenviar" [class]="bReenviar.class" (click)="reenviar()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginReenviarPage);
@@ -4028,17 +4196,228 @@ var LoginReenviarPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 230:
+/***/ 231:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaElegirPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_reserva_pedir_cita_reserva__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+// Para aceptar HTML desde la API
+
+var PedirCitaElegirPage = /** @class */ (function () {
+    function PedirCitaElegirPage(domSanitizer, alertCtrl, events, loadingCtrl, restProvider, navCtrl, navParams) {
+        this.domSanitizer = domSanitizer;
+        this.alertCtrl = alertCtrl;
+        this.events = events;
+        this.loadingCtrl = loadingCtrl;
+        this.restProvider = restProvider;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.bSiguiente = { name: 'Siguiente', svg: '', openPage: '', class: 'active login', tipo: '', gradiente: '' };
+        this.bAnterior = { name: 'Anterior', svg: '', openPage: '', class: 'login', tipo: '', gradiente: '' };
+        this.tituloSubtitulo = { titulo: "Elige tu cita", subtitulo: "de la cita" };
+        this.citasBuscador = [];
+        this.showLoading();
+        this.searchCita(this.navParams.get('dia'), this.navParams.get('hora'), this.navParams.get('dr'), this.navParams.get('tto'));
+        this.events.publish("user:logged");
+    }
+    PedirCitaElegirPage.prototype.anterior = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */], {
+            'tto': this.navParams.get('tto')
+        });
+    };
+    /**
+* 	Función que obtiene todas las citas disponibles
+* 	en la agenda ( conectada con el buscador )
+*
+* 	@param None
+*
+* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+* 	@return None
+*/
+    PedirCitaElegirPage.prototype.searchCita = function (dia, hora, dr, tto) {
+        var _this = this;
+        this.restProvider.searchCita(dia, hora, dr, tto).then(function (data) {
+            //console.log(data);
+            if (typeof data != "undefined" && data['status'] == 1) {
+                if (JSON.parse(data['data']).length > 0) {
+                    _this.citasBuscador = JSON.parse(data['data']);
+                }
+                else {
+                }
+                _this.loading.dismiss();
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+            console.log(e);
+        });
+    };
+    /**
+    * 	Función que envía un E-mail a recepción para que estas
+    *	inserten la cita desde el buscador.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaElegirPage.prototype.solicitarCita = function (item) {
+        var _this = this;
+        this.showLoading('Solicitando cita ...');
+        this.restProvider.solicitarCita(item.fecha, item.hora, item.usuario, item.tratamiento).then(function (data) {
+            if (typeof data != "undefined" && data['status'] == 1) {
+                _this.loading.dismiss();
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */], {
+                    'item': item
+                });
+            }
+            else if (data.status == 401) {
+                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
+            }
+            else {
+                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(function (e) {
+            _this.loading.dismiss();
+        });
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    PedirCitaElegirPage.prototype.showLoading = function (cont) {
+        if (cont === void 0) { cont = 'Cargando información...'; }
+        this.loading = this.loadingCtrl.create({
+            content: cont
+        });
+        this.loading.present();
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    PedirCitaElegirPage.prototype.showError = function (title, text) {
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            message: text,
+            buttons: ['OK']
+        });
+        alert.present();
+    };
+    PedirCitaElegirPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-pedir-cita-elegir',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Elige tu cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n   \n    <ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true">\n    <ion-slide *ngFor="let item of citasBuscador">\n      <div class="fb-card -vcita -gradient">\n          <div class="card_row">\n              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n                      {{item.diaSemana}}\n                  </div>\n                  <div class="card_time -white">\n                      {{item.dia}}\n                      <span>\n                      {{item.mes}}\n                      </span>\n                  </div>\n                  <div class="card_subtitle -white" style="font-size:1rem;">\n                      {{item.ano}}\n                  </div>\n              </div>\n              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n                      <div class="card_time -white">\n                          {{item.hora}}\n                          <span style="display:inline;">\n                              H\n                          </span>\n                      </div>\n                      <div class="card_subtitle -white">\n                          Duración:\n                          <span>\n                              {{item.Duracion}}\'\n                          </span>\n                      </div>\n                  </div>\n              </div>\n          </div>\n          <div class="card_content -bg-white">\n              <div class="card_row">\n                  <div>\n                      <div class="card_label">\n                          Tratamiento\n                      </div>\n                      <div class="card_title">\n                         {{item.tratamiento}}\n                      </div>\n                  </div>\n              </div>\n              <div class="card_separator">\n              </div>\n              <div class="card_row">\n                  <div class="left">\n                      <div class="card_label">\n                          Profesional\n                      </div>\n                      <div class="card_container">\n                          <div class="avatar">\n                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n                          </div>\n                          <div class="card_title">\n                             {{item.usuario}}\n                          </div>\n                      </div>\n                  </div>\n                  <div class="right">\n                      <div class="card_label">\n                          Estado de la cita\n                      </div>\n                      <div class="card_estado">\n                          <a class="fb-btn -pill -confirmar" (click)="solicitarCita(item);">\n                            Reservar    \n                          </a>\n                      </div>\n                  </div>\n              </div>\n          </div>\n      </div>\n    </ion-slide>\n  </ion-slides>\n\n    <p style=" text-align: center; margin: 2rem 0 0rem 0; font-size: 1rem;">3 de 4</p>\n\n    <ion-row style="max-height: 9%;    display: flex;    width: 50%;    margin: 0 auto;">\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-elegir/pedir-cita-elegir.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], PedirCitaElegirPage);
+    return PedirCitaElegirPage;
+}());
+
+//# sourceMappingURL=pedir-cita-elegir.js.map
+
+/***/ }),
+
+/***/ 232:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaReservaPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__ = __webpack_require__(21);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+// Para aceptar HTML desde la API
+
+var PedirCitaReservaPage = /** @class */ (function () {
+    function PedirCitaReservaPage(navCtrl, navParams, domSanitizer) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.domSanitizer = domSanitizer;
+        this.tituloSubtitulo = { titulo: "Cita reservada", subtitulo: "" };
+        this.citasBuscador = [];
+        this.bInicio = { name: 'Volver a inicio', svg: '', openPage: '', class: 'active login', tipo: '', gradiente: '' };
+        this.citasBuscador.push(this.navParams.get('item'));
+    }
+    PedirCitaReservaPage.prototype.inicio = function () {
+        this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_home_home__["a" /* HomePage */]);
+    };
+    PedirCitaReservaPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-pedir-cita-reserva',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Cita reservada</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Lonncontrary to popula</p>\n\n    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">\n	    <ion-slide *ngFor="let item of citasBuscador">\n	      <div class="fb-card -vcita -gradient">\n	          <div class="card_row">\n	              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n	                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n	                      {{item.diaSemana}}\n	                  </div>\n	                  <div class="card_time -white">\n	                      {{item.dia}}\n	                      <span>\n	                      {{item.mes}}\n	                      </span>\n	                  </div>\n	                  <div class="card_subtitle -white" style="font-size:1rem;">\n	                      {{item.ano}}\n	                  </div>\n	              </div>\n	              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n	                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n	                      <div class="card_time -white">\n	                          {{item.hora}}\n	                          <span style="display:inline;">\n	                              H\n	                          </span>\n	                      </div>\n	                      <div class="card_subtitle -white">\n	                          Duración:\n	                          <span>\n	                              {{item.Duracion}}\'\n	                          </span>\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	          <div class="card_content -bg-white">\n	              <div class="card_row">\n	                  <div>\n	                      <div class="card_label">\n	                          Tratamiento\n	                      </div>\n	                      <div class="card_title">\n	                         {{item.tratamiento}}\n	                      </div>\n	                  </div>\n	              </div>\n	              <div class="card_separator">\n	              </div>\n	              <div class="card_row">\n	                  <div class="left">\n	                      <div class="card_label">\n	                          Profesional\n	                      </div>\n	                      <div class="card_container">\n	                          <div class="avatar">\n	                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n	                          </div>\n	                          <div class="card_title">\n	                             {{item.usuario}}\n	                          </div>\n	                      </div>\n	                  </div>\n	                  <div class="right">\n	                      <div class="card_label">\n	                          Estado de la cita\n	                      </div>\n	                      <div class="card_estado">\n	                          Reservada\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	      </div>\n	    </ion-slide>\n 	</ion-slides>\n\n 	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">4 de 4</p>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">\n		<ion-col><fb-button [name]="bInicio" [class]="bInicio.class" (click)="inicio()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
+    ], PedirCitaReservaPage);
+    return PedirCitaReservaPage;
+}());
+
+//# sourceMappingURL=pedir-cita-reserva.js.map
+
+/***/ }),
+
+/***/ 233:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecallPasadasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4147,7 +4526,7 @@ var RecallPasadasPage = /** @class */ (function () {
     };
     RecallPasadasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-recall-pasadas',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\recall-pasadas\recall-pasadas.html"*/'<ion-content padding>\n\n	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaPasada == true">\n\n		<ion-slide *ngFor="let item of recall">\n\n			<div class="fb-card -vcita -gradient">\n\n			    <div class="card_row">\n\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n\n			                {{item.diaSemana}}\n\n			            </div>\n\n			            <div class="card_time -white">\n\n			                {{item.dia}}\n\n			                <span>\n\n			                {{item.mes}}\n\n			                </span>\n\n			            </div>\n\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n\n			                {{item.ano}}\n\n			            </div>\n\n			        </div>\n\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n\n			                <div class="card_time -white">\n\n			                    {{item.hora}}\n\n			                    <span style="display:inline;">\n\n			                        H\n\n			                    </span>\n\n			                </div>\n\n			                <div class="card_subtitle -white">\n\n			                    Duración:\n\n			                    <span>\n\n			                        {{item.Duracion}}\'\n\n			                    </span>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			    <div class="card_content -bg-white">\n\n			        <div class="card_row">\n\n			            <div>\n\n			                <div class="card_label">\n\n			                    Tratamiento\n\n			                </div>\n\n			                <div class="card_title">\n\n			                   {{item.tratamiento}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Profesional\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n\n			                    </div>\n\n			                    <div class="card_title">\n\n			                       {{item.usuario}}\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Estado de la cita\n\n			                </div>\n\n			                <div class="card_estado">\n\n			                     {{item.situacion}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			</div>\n\n		</ion-slide>\n\n	</ion-slides>\n\n	<div padding *ngIf="infoR.fechaPasada != true">\n\n		<fb-titulo-subtitulo [info]="infoR" ></fb-titulo-subtitulo>\n\n		<p>{{infoR.texto}}</p>\n\n		<br />\n\n		<p style=" max-height: 10rem;">\n\n			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>\n\n		</p>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\recall-pasadas\recall-pasadas.html"*/,
+            selector: 'page-recall-pasadas',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/recall-pasadas/recall-pasadas.html"*/'<ion-content padding>\n	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaPasada == true">\n		<ion-slide *ngFor="let item of recall">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<div padding *ngIf="infoR.fechaPasada != true">\n		<fb-titulo-subtitulo [info]="infoR" ></fb-titulo-subtitulo>\n		<p>{{infoR.texto}}</p>\n		<br />\n		<p style=" max-height: 10rem;">\n			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>\n		</p>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/recall-pasadas/recall-pasadas.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], RecallPasadasPage);
@@ -4158,14 +4537,14 @@ var RecallPasadasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 231:
+/***/ 234:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsejosDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4192,7 +4571,7 @@ var ConsejosDetailPage = /** @class */ (function () {
     };
     ConsejosDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-consejos-detail',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\consejos-detail\consejos-detail.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Consejo de {{data.Doctor}}</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n	<ion-row style=" margin: 2rem;">\n\n		<ion-col col-8 style="padding-top:4rem;">\n\n			<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n		</ion-col>\n\n		<ion-col col-4>\n\n			<img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(data.Img)" style="width:80%;border-radius:50%;"/>\n\n		</ion-col>\n\n	</ion-row>\n\n\n\n	<p style=" margin: 2rem;"><b>{{ data.Fecha }}</b></p>\n\n\n\n	<p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)" style=" margin: 2rem;"></p>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\consejos-detail\consejos-detail.html"*/,
+            selector: 'page-consejos-detail',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/consejos-detail/consejos-detail.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Consejo de {{data.Doctor}}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<ion-row style=" margin: 2rem;">\n		<ion-col col-8 style="padding-top:4rem;">\n			<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n		</ion-col>\n		<ion-col col-4>\n			<img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(data.Img)" style="width:80%;border-radius:50%;"/>\n		</ion-col>\n	</ion-row>\n\n	<p style=" margin: 2rem;"><b>{{ data.Fecha }}</b></p>\n\n	<p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)" style=" margin: 2rem;"></p>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/consejos-detail/consejos-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], ConsejosDetailPage);
@@ -4203,16 +4582,16 @@ var ConsejosDetailPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 232:
+/***/ 235:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlanEconomicoPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(236);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4352,7 +4731,7 @@ var PlanEconomicoPage = /** @class */ (function () {
     };
     PlanEconomicoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-plan-economico',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\plan-economico\plan-economico.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Domiciliaciones</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	\n\n    <div style=" margin: 2rem;">\n\n    	<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n    \n\n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n\n        <div class="fb-card -v2">\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title">\n\n                        {{card.numplan}} - {{card.titulo}}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                       {{card.cuotas}}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <div class="card_subtitle">\n\n                       {{card.fecha}}\n\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div class="card_separator">\n\n            </div>\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title -price">\n\n                        {{card.importe}} €\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                        pendiente: {{card.pendiente}} €\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card.numplan)">\n\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n                        </svg> \n\n                    </a>\n\n                </div>\n\n            </div>\n\n        </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\plan-economico\plan-economico.html"*/,
+            selector: 'page-plan-economico',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/plan-economico/plan-economico.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Domiciliaciones</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n    <div style=" margin: 2rem;">\n    	<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n    \n	<div *ngFor="let card of cards" style=" margin: 2rem;">\n        <div class="fb-card -v2">\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title">\n                        {{card.numplan}} - {{card.titulo}}\n                    </div>\n                    <div class="card_subtitle">\n                       {{card.cuotas}}\n                    </div>\n                </div>\n                <div class="right">\n                    <div class="card_subtitle">\n                       {{card.fecha}}\n                    </div>\n                </div>\n            </div>\n            <div class="card_separator">\n            </div>\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title -price">\n                        {{card.importe}} €\n                    </div>\n                    <div class="card_subtitle">\n                        pendiente: {{card.pendiente}} €\n                    </div>\n                </div>\n                <div class="right">\n                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card.numplan)">\n                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n                        </svg> \n                    </a>\n                </div>\n            </div>\n        </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/plan-economico/plan-economico.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], PlanEconomicoPage);
@@ -4363,14 +4742,14 @@ var PlanEconomicoPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 233:
+/***/ 236:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PlanEconomicoDetailPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -4561,7 +4940,7 @@ var PlanEconomicoDetailPage = /** @class */ (function () {
     };
     PlanEconomicoDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-plan-economico-detail',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\plan-economico-detail\plan-economico-detail.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mis Domiciliaciones</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	\n\n	<div style=" margin: 2rem;">\n\n     <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n\n\n    <div class="card_container" style=" margin: 2rem;">\n\n	    <div class="fb-card -vgraph">\n\n	        <div style="padding:0.5rem;">\n\n	            <div class="card_subtitle">\n\n	                Pagado\n\n	            </div>\n\n	            <div class="card_title">\n\n	                 {{ importes.pagado }}€\n\n	            </div>\n\n	        </div>\n\n	        <div class="card_graph">\n\n	        	<canvas baseChart width="300" height="400"\n\n                  [datasets]="lineChartDataPagado"\n\n                  [options]="lineChartOptions"\n\n                  [colors]="lineChartColorsPagado"\n\n                  [chartType]="lineChartType"></canvas>\n\n	        </div>\n\n	    </div>\n\n	    <div class="fb-card -vgraph -bg-pink-light">\n\n	        <div style="padding:0.5rem;">\n\n	            <div class="card_subtitle -white">\n\n	                Pendiente\n\n	            </div>\n\n	            <div class="card_title -white">\n\n	               {{ importes.pendiente }}€\n\n	            </div>\n\n	        </div>\n\n	        <div class="card_graph">\n\n	            <canvas baseChart width="300" height="400"\n\n                  [datasets]="lineChartDataPendiente"\n\n                  [options]="lineChartOptions"\n\n                  [colors]="lineChartColorsPendiente"\n\n                  [chartType]="lineChartType"></canvas>\n\n	        </div>\n\n	    </div>\n\n	    <div class="fb-card -vgraph">\n\n	        <div style="padding:0.5rem;">\n\n	            <div class="card_subtitle">\n\n	                Total\n\n	            </div>\n\n	            <div class="card_title">\n\n	                {{ importes.total }}€\n\n	            </div>\n\n	        </div>\n\n	        <div class="card_graph">\n\n	            <canvas baseChart width="300" height="400"\n\n                  [datasets]="lineChartDataTotal"\n\n                  [options]="lineChartOptions"\n\n                  [colors]="lineChartColorsTotal"\n\n                  [chartType]="lineChartType"></canvas>\n\n	        </div>\n\n	    </div>\n\n    </div>\n\n\n\n    <div class="fb-card -v3" style=" margin: 2rem;">\n\n    	<div *ngFor="let card of cards ; let i=last; let j=index">\n\n            <div class="card_row">\n\n                <div class="left">\n\n                    <div class="card_title -grey-medium">\n\n                        {{ card.numcuota }}\n\n                    </div>\n\n                </div>\n\n                <div class="center">\n\n                    <div class="card_title">\n\n                         {{ card.fecha }}\n\n                    </div>\n\n                    <div class="card_subtitle">\n\n                         {{ card.pagado }}\n\n                    </div>\n\n                </div>\n\n                <div class="right">\n\n                    <div class="card_title -blue" *ngIf="card.pagado == \'Pagado\'">\n\n                         {{ card.importe }} €\n\n                    </div>\n\n                    <div class="card_title -pink" *ngIf="card.pagado != \'Pagado\'">\n\n                         {{ card.importe }} €\n\n                    </div>\n\n                </div>\n\n            </div>\n\n            <div *ngIf="!i" class="card_separator">            	\n\n            </div>\n\n        </div>\n\n	</div>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\plan-economico-detail\plan-economico-detail.html"*/,
+            selector: 'page-plan-economico-detail',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/plan-economico-detail/plan-economico-detail.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Mis Domiciliaciones</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n	\n	<div style=" margin: 2rem;">\n     <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>\n\n    <div class="card_container" style=" margin: 2rem;">\n	    <div class="fb-card -vgraph">\n	        <div style="padding:0.5rem;">\n	            <div class="card_subtitle">\n	                Pagado\n	            </div>\n	            <div class="card_title">\n	                 {{ importes.pagado }}€\n	            </div>\n	        </div>\n	        <div class="card_graph">\n	        	<canvas baseChart width="300" height="400"\n                  [datasets]="lineChartDataPagado"\n                  [options]="lineChartOptions"\n                  [colors]="lineChartColorsPagado"\n                  [chartType]="lineChartType"></canvas>\n	        </div>\n	    </div>\n	    <div class="fb-card -vgraph -bg-pink-light">\n	        <div style="padding:0.5rem;">\n	            <div class="card_subtitle -white">\n	                Pendiente\n	            </div>\n	            <div class="card_title -white">\n	               {{ importes.pendiente }}€\n	            </div>\n	        </div>\n	        <div class="card_graph">\n	            <canvas baseChart width="300" height="400"\n                  [datasets]="lineChartDataPendiente"\n                  [options]="lineChartOptions"\n                  [colors]="lineChartColorsPendiente"\n                  [chartType]="lineChartType"></canvas>\n	        </div>\n	    </div>\n	    <div class="fb-card -vgraph">\n	        <div style="padding:0.5rem;">\n	            <div class="card_subtitle">\n	                Total\n	            </div>\n	            <div class="card_title">\n	                {{ importes.total }}€\n	            </div>\n	        </div>\n	        <div class="card_graph">\n	            <canvas baseChart width="300" height="400"\n                  [datasets]="lineChartDataTotal"\n                  [options]="lineChartOptions"\n                  [colors]="lineChartColorsTotal"\n                  [chartType]="lineChartType"></canvas>\n	        </div>\n	    </div>\n    </div>\n\n    <div class="fb-card -v3" style=" margin: 2rem;">\n    	<div *ngFor="let card of cards ; let i=last; let j=index">\n            <div class="card_row">\n                <div class="left">\n                    <div class="card_title -grey-medium">\n                        {{ card.numcuota }}\n                    </div>\n                </div>\n                <div class="center">\n                    <div class="card_title">\n                         {{ card.fecha }}\n                    </div>\n                    <div class="card_subtitle">\n                         {{ card.pagado }}\n                    </div>\n                </div>\n                <div class="right">\n                    <div class="card_title -blue" *ngIf="card.pagado == \'Pagado\'">\n                         {{ card.importe }} €\n                    </div>\n                    <div class="card_title -pink" *ngIf="card.pagado != \'Pagado\'">\n                         {{ card.importe }} €\n                    </div>\n                </div>\n            </div>\n            <div *ngIf="!i" class="card_separator">            	\n            </div>\n        </div>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/plan-economico-detail/plan-economico-detail.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], PlanEconomicoDetailPage);
@@ -4572,7 +4951,7 @@ var PlanEconomicoDetailPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 234:
+/***/ 237:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4606,7 +4985,7 @@ var EmojiProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 267:
+/***/ 270:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -4619,136 +4998,148 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 267;
+webpackEmptyAsyncContext.id = 270;
 
 /***/ }),
 
-/***/ 308:
+/***/ 311:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/acceso-resultados/acceso-resultados.module": [
-		841,
+		844,
 		0
 	],
 	"../pages/change-password/change-password.module": [
-		842,
-		30
+		845,
+		33
 	],
 	"../pages/chat/chat.module": [
-		870,
-		29
+		846,
+		32
 	],
 	"../pages/consejos-detail/consejos-detail.module": [
-		843,
-		28
+		847,
+		31
 	],
 	"../pages/consejos-personalizados/consejos-personalizados.module": [
-		844,
-		27
+		848,
+		30
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
-		845,
-		26
+		849,
+		29
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		846,
-		25
+		850,
+		28
 	],
 	"../pages/instrucciones/instrucciones.module": [
-		847,
-		24
+		851,
+		27
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
-		849,
-		23
+		852,
+		26
 	],
 	"../pages/login-input/login-input.module": [
-		848,
-		22
+		853,
+		25
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
-		850,
-		21
+		854,
+		24
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
-		851,
-		20
+		855,
+		23
 	],
 	"../pages/login-registro/login-registro.module": [
-		852,
-		19
+		857,
+		22
 	],
 	"../pages/login-tab/login-tab.module": [
-		853,
-		18
+		856,
+		21
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
-		854,
-		17
+		858,
+		20
 	],
 	"../pages/login/login.module": [
-		855,
-		16
+		859,
+		19
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
-		871,
-		15
+		861,
+		18
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		857,
-		14
+		860,
+		17
 	],
 	"../pages/mis-citas/mis-citas.module": [
-		856,
-		13
+		862,
+		16
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
-		858,
+		863,
+		15
+	],
+	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
+		864,
+		14
+	],
+	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
+		865,
+		13
+	],
+	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
+		866,
 		12
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
-		860,
+		869,
 		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		859,
+		867,
 		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
-		861,
+		868,
 		9
 	],
 	"../pages/popover/popover.module": [
-		862,
+		870,
 		8
 	],
 	"../pages/presupuestos/presupuestos.module": [
-		863,
+		877,
 		7
 	],
 	"../pages/profile/profile.module": [
-		866,
+		871,
 		6
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
-		864,
+		872,
 		5
 	],
 	"../pages/recall/recall.module": [
-		865,
+		873,
 		4
 	],
 	"../pages/sugerencias/sugerencias.module": [
-		867,
+		874,
 		3
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
-		868,
+		875,
 		2
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
-		869,
+		876,
 		1
 	]
 };
@@ -4763,22 +5154,22 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 308;
+webpackAsyncContext.id = 311;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 312:
+/***/ 315:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsultarCitas; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tab_higienes_tab_higienes__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pedir_cita_pedir_cita__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -4946,7 +5337,7 @@ var ConsultarCitas = /** @class */ (function () {
     };
     ConsultarCitas = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\ConsultarCitas\ConsultarCitas.html"*/'<ion-content>\n\n	<ion-slides spaceBetween="-75">\n\n		<ion-slide *ngFor="let item of citas">\n\n			<div class="fb-card -vcita -gradient">\n\n			    <div class="card_row">\n\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n\n			                {{item.diaSemana}}\n\n			            </div>\n\n			            <div class="card_time -white">\n\n			                {{item.dia}}\n\n			                <span>\n\n			                {{item.mes}}\n\n			                </span>\n\n			            </div>\n\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n\n			                {{item.ano}}\n\n			            </div>\n\n			        </div>\n\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n\n			                <div class="card_time -white">\n\n			                    {{item.hora}}\n\n			                    <span style="display:inline;">\n\n			                        H\n\n			                    </span>\n\n			                </div>\n\n			                <div class="card_subtitle -white">\n\n			                    Duración:\n\n			                    <span>\n\n			                        {{item.Duracion}}\'\n\n			                    </span>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			    <div class="card_content -bg-white">\n\n			        <div class="card_row">\n\n			            <div>\n\n			                <div class="card_label">\n\n			                    Tratamiento\n\n			                </div>\n\n			                <div class="card_title">\n\n			                   {{item.tratamiento}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Profesional\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n\n			                    </div>\n\n			                    <div class="card_title">\n\n			                       {{item.usuario}}\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Estado de la cita\n\n			                </div>\n\n			                <div class="card_estado">\n\n			                     {{item.situacion}}\n\n			                </div>\n\n			            </div>\n\n			        </div>			        \n\n			    </div>\n\n			</div>\n\n		</ion-slide>\n\n	</ion-slides>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\ConsultarCitas\ConsultarCitas.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/'<ion-content>\n	<ion-slides spaceBetween="-75">\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>			        \n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/ConsultarCitas/ConsultarCitas.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], ConsultarCitas);
@@ -4957,19 +5348,19 @@ var ConsultarCitas = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 313:
+/***/ 316:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConsultarCitasFuturasPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_popover_popover__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(191);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_popover_popover__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tab_higienes_tab_higienes__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pedir_cita_pedir_cita__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5267,7 +5658,7 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
     };
     ConsultarCitasFuturasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-list',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\consultar-citas-futuras\consultar-citas-futuras.html"*/'<ion-content>\n\n	<ion-slides spaceBetween="-75">\n\n		<ion-slide *ngFor="let item of citas">\n\n			<div class="fb-card -vcita -gradient">\n\n			    <div class="card_row">\n\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n\n			                {{item.diaSemana}}\n\n			            </div>\n\n			            <div class="card_time -white">\n\n			                {{item.dia}}\n\n			                <span>\n\n			                {{item.mes}}\n\n			                </span>\n\n			            </div>\n\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n\n			                {{item.ano}}\n\n			            </div>\n\n			        </div>\n\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n\n			                <div class="card_time -white">\n\n			                    {{item.hora}}\n\n			                    <span style="display:inline;">\n\n			                        H\n\n			                    </span>\n\n			                </div>\n\n			                <div class="card_subtitle -white">\n\n			                    Duración:\n\n			                    <span>\n\n			                        {{item.Duracion}}\'\n\n			                    </span>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			    <div class="card_content -bg-white">\n\n			        <div class="card_row">\n\n			            <div>\n\n			                <div class="card_label">\n\n			                    Tratamiento\n\n			                </div>\n\n			                <div class="card_title">\n\n			                   {{item.tratamiento}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Profesional\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n\n			                    </div>\n\n			                    <div class="card_title">\n\n			                       {{item.usuario}}\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Estado de la cita\n\n			                </div>\n\n			                <div class="card_estado">\n\n			                     {{item.situacion}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Dirección\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n			                        </svg> \n\n			                    </div>\n\n			                    <div class="card_subtitle">\n\n			                        Calle de Caleruega, 67\n\n			                        <br />\n\n			                        3ª Planta A\n\n			                        <br />\n\n			                        28033 - Madrid\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Calendario\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n			                        </svg> \n\n			                    </div>\n\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n\n			                        Haz\n\n			                        <span class="-pink">\n\n			                            click\n\n			                        </span>\n\n			                        para añadir\n\n			                        <br />\n\n			                            la cita a tu calendario\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div style="width:100%;">\n\n			                <div class="card_label" style="margin-top:1rem;">\n\n			                    Gestiona tu cita\n\n			                </div>\n\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Anular\n\n			                    </a>\n\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Confirmar\n\n			                    </a>			                    \n\n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Cambiar\n\n			                    </a>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			</div>\n\n		</ion-slide>\n\n	</ion-slides>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\consultar-citas-futuras\consultar-citas-futuras.html"*/
+            selector: 'page-list',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/'<ion-content>\n	<ion-slides spaceBetween="-75">\n		<ion-slide *ngFor="let item of citas">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Dirección\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle">\n			                        Calle de Caleruega, 67\n			                        <br />\n			                        3ª Planta A\n			                        <br />\n			                        28033 - Madrid\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Calendario\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n			                        Haz\n			                        <span class="-pink">\n			                            click\n			                        </span>\n			                        para añadir\n			                        <br />\n			                            la cita a tu calendario\n			                    </div>\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div style="width:100%;">\n			                <div class="card_label" style="margin-top:1rem;">\n			                    Gestiona tu cita\n			                </div>\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n			                        Anular\n			                    </a>\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n			                        Confirmar\n			                    </a>			                    \n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n			                        Cambiar\n			                    </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>\n		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/consultar-citas-futuras/consultar-citas-futuras.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */]])
     ], ConsultarCitasFuturasPage);
@@ -5278,15 +5669,16 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 52:
+/***/ 48:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PedirCitaPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(145);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5300,6 +5692,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var PedirCitaPage = /** @class */ (function () {
     function PedirCitaPage(alertCtrl, events, loadingCtrl, restProvider, navCtrl, navParams) {
         this.alertCtrl = alertCtrl;
@@ -5308,16 +5701,12 @@ var PedirCitaPage = /** @class */ (function () {
         this.restProvider = restProvider;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
-        this.show = true; // Variable de tipo Booleano que cuando "true" ha obtenido citas del buscador.
-        this.isDrSelected = false; // Variable de tipo Booleano que detecta si se ha seleccionado un doctor o no.
-        this.doctores = []; // Array donde se almacenan todos los Drs.
         this.tratamientos = []; // Array donde se almacenan todos los tratamientos asociados a ese doctor.
-        this.citasBuscador = []; // Array donde se almacenan todas las citas que ha devuelto el buscador.
-        this.ttoSelect = ""; // String donde se almacena el tratamiento seleccionado.
-        this.bSiguiente = { name: 'Siguiente', svg: '', openPage: 'PedirCita', class: 'active login', tipo: 'page', gradiente: '' };
+        this.ttoSelect = "HIGREC"; // String donde se almacena el tratamiento seleccionado.
+        this.bSiguiente = { name: 'Siguiente', svg: '', openPage: '', class: 'active login', tipo: '', gradiente: '' };
         this.tituloSubtitulo = { titulo: "Elige el tratamiento", subtitulo: "de la cita" };
         this.showLoading();
-        this.getTratamientos(false);
+        this.getTratamientos();
         this.events.publish("user:logged");
     }
     PedirCitaPage.prototype.selectTto = function (e) {
@@ -5330,49 +5719,9 @@ var PedirCitaPage = /** @class */ (function () {
         this.ttoSelect = e.IdOpc;
     };
     PedirCitaPage.prototype.siguiente = function () {
-        alert("voy a la siguiente página con el tto:" + this.ttoSelect);
-    };
-    /**
-    * 	Función que obtiene todas las citas disponibles
-    * 	en la agenda ( conectada con el buscador )
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.searchCita = function (formulario) {
-        var _this = this;
-        this.citasBuscador = []; // Limpio las citas anteriores por si se pulsa el botón dos veces.
-        console.log(formulario);
-        this.restProvider.searchCita(formulario.form.value.date, formulario.form.value.hour, formulario.form.value.dr, formulario.form.value.tto.IdOpc, formulario.form.value.dias).then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                if (JSON.parse(data['data']).length > 0) {
-                    _this.citasBuscador = JSON.parse(data['data']);
-                    _this.show = true;
-                    _this.ttoSelect = formulario.form.value.tto.Descripcio;
-                }
-                else {
-                    _this.show = false;
-                }
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
-            console.log(e);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */], {
+            'tto': this.ttoSelect
         });
-    };
-    PedirCitaPage.prototype.drSeleccionado = function (e) {
-        this.isDrSelected = true;
-        this.showLoading();
-        this.getTratamientos(e);
     };
     /**
     * 	Función que obtiene todos los tratamientos asignados
@@ -5383,10 +5732,9 @@ var PedirCitaPage = /** @class */ (function () {
     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
     * 	@return None
     */
-    PedirCitaPage.prototype.getTratamientos = function (e) {
+    PedirCitaPage.prototype.getTratamientos = function () {
         var _this = this;
-        this.restProvider.getTratamientos(e).then(function (data) {
-            console.log(data);
+        this.restProvider.getTratamientos().then(function (data) {
             if (typeof data != "undefined" && data['status'] == 1) {
                 _this.tratamientos = data['data'];
                 _this.loading.dismiss();
@@ -5401,33 +5749,6 @@ var PedirCitaPage = /** @class */ (function () {
         }).catch(function (e) {
             _this.loading.dismiss();
             console.log(e);
-        });
-    };
-    /**
-    * 	Función que obtiene todos los doctores a los que se
-    *	les puede asignar una cita desde la aplicación móvil
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    PedirCitaPage.prototype.getDoctors = function () {
-        var _this = this;
-        this.restProvider.getDoctors().then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-                _this.doctores = data['data'];
-                _this.loading.dismiss();
-            }
-            else if (data.status == 401) {
-                _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_3__pages_login_login__["a" /* LoginPage */]);
-            }
-            else {
-                _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-            }
-        }).catch(function (e) {
-            _this.loading.dismiss();
         });
     };
     /**
@@ -5494,7 +5815,7 @@ var PedirCitaPage = /** @class */ (function () {
     };
     PedirCitaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\pedir-cita\pedir-cita.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Pedir nueva cita</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- Gradiente -->\n\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n	<!-- Fin Gradiente -->    \n\n	\n\n    <div style=" margin: 2rem;">\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p> \n\n\n\n    <div class="row" id="listadoTratamientos">\n\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n\n		</div>\n\n	</div>\n\n\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">\n\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\pedir-cita\pedir-cita.html"*/,
+            selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- Gradiente -->\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<!-- Fin Gradiente -->    \n	\n    <div style=" margin: 2rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <div class="row" id="listadoTratamientos">\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n		</div>\n	</div>\n\n	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>\n\n	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaPage);
@@ -5505,15 +5826,55 @@ var PedirCitaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 538:
+/***/ 541:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponentModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(764);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+var EmojiPickerComponentModule = /** @class */ (function () {
+    function EmojiPickerComponentModule() {
+    }
+    EmojiPickerComponentModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */],
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */]
+            ]
+        })
+    ], EmojiPickerComponentModule);
+    return EmojiPickerComponentModule;
+}());
+
+//# sourceMappingURL=emoji-picker.module.js.map
+
+/***/ }),
+
+/***/ 542:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DocFirmadosPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__ = __webpack_require__(64);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_login__ = __webpack_require__(18);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -5690,7 +6051,7 @@ var DocFirmadosPage = /** @class */ (function () {
     };
     DocFirmadosPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-doc-firmados',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\doc-firmados\doc-firmados.html"*/'<ion-header no-border>\n\n  <ion-navbar color="primary">\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Documentos administrativos</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- this fab is placed at bottom right -->\n\n	 <ion-fab bottom right #fab1>\n\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n\n	   			<g fill="white" stroke="none"> \n\n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n\n   				</g>\n\n   			</svg>	   	\n\n	   </button>	   \n\n	 </ion-fab>\n\n	<ion-list>	  \n\n		<button ion-item style="margin:0" *ngFor="let doc of docs" (click)="openPdf(doc.url)">		\n\n		<ion-avatar item-start>\n\n		  <i class="{{doc.icono}}" style="font-size: 4rem;color:#81a7d4;"></i>\n\n		</ion-avatar>		\n\n		<h2>{{doc.nombre}}</h2>    \n\n		<p>{{doc.descripcion}}</p>		\n\n	  </button>	  \n\n	</ion-list>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\doc-firmados\doc-firmados.html"*/,
+            selector: 'page-doc-firmados',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/doc-firmados/doc-firmados.html"*/'<ion-header no-border>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Documentos administrativos</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- this fab is placed at bottom right -->\n	 <ion-fab bottom right #fab1>\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n	   			<g fill="white" stroke="none"> \n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n   				</g>\n   			</svg>	   	\n	   </button>	   \n	 </ion-fab>\n	<ion-list>	  \n		<button ion-item style="margin:0" *ngFor="let doc of docs" (click)="openPdf(doc.url)">		\n		<ion-avatar item-start>\n		  <i class="{{doc.icono}}" style="font-size: 4rem;color:#81a7d4;"></i>\n		</ion-avatar>		\n		<h2>{{doc.nombre}}</h2>    \n		<p>{{doc.descripcion}}</p>		\n	  </button>	  \n	</ion-list>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/doc-firmados/doc-firmados.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], DocFirmadosPage);
@@ -5701,53 +6062,13 @@ var DocFirmadosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 539:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponentModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(761);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var EmojiPickerComponentModule = /** @class */ (function () {
-    function EmojiPickerComponentModule() {
-    }
-    EmojiPickerComponentModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */],
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */]),
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_2__emoji_picker__["a" /* EmojiPickerComponent */]
-            ]
-        })
-    ], EmojiPickerComponentModule);
-    return EmojiPickerComponentModule;
-}());
-
-//# sourceMappingURL=emoji-picker.module.js.map
-
-/***/ }),
-
-/***/ 540:
+/***/ 543:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(541);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(655);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(544);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(658);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -5755,432 +6076,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 655:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(24);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(778);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(358);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(779);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(312);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_tab_higienes_tab_higienes__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_change_password_change_password__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(313);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__ionic_native_calendar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_popover_popover__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_chat_chat__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_instrucciones_instrucciones__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_doc_firmados_doc_firmados__ = __webpack_require__(538);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_profile_profile__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__providers_emoji_emoji__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__components_emoji_picker_emoji_picker_module__ = __webpack_require__(539);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_sugerencias_sugerencias__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_mi_salud_mi_salud__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_mi_perfil_mi_perfil__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_mis_citas_mis_citas__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_mis_documentos_mis_documentos__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_login_input_login_input__ = __webpack_require__(227);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_login_registro_login_registro__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_login_tab_login_tab__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_login_error_pin_login_error_pin__ = __webpack_require__(142);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_login_reenviar_login_reenviar__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_recall_recall__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_consejos_detail_consejos_detail__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_documentos_contables_documentos_contables__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_presupuestos_presupuestos__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_plan_economico_plan_economico__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__ionic_native_status_bar__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__ionic_native_splash_screen__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__ionic_native_fcm__ = __webpack_require__(402);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__ionic_native_camera__ = __webpack_require__(192);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49_ionic_img_viewer__ = __webpack_require__(786);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__ionic_native_file__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__ionic_native_file_opener__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__ionic_native_photo_viewer__ = __webpack_require__(359);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__components_fb_button_icon_fb_button_icon__ = __webpack_require__(793);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__components_fb_button_fb_button__ = __webpack_require__(794);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(795);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__ionic_native_call_number__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_charts__ = __webpack_require__(796);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_57_ng2_charts__);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-var AppModule = /** @class */ (function () {
-    function AppModule() {
-    }
-    AppModule = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
-            declarations: [
-                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_popover_popover__["a" /* PopoverPage */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_36__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_37__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_41__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_login_input_login_input__["a" /* LoginInputPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_login_tab_login_tab__["a" /* LoginTabPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
-                __WEBPACK_IMPORTED_MODULE_35__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_chat_chat__["a" /* ChatPage */],
-                __WEBPACK_IMPORTED_MODULE_53__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
-                __WEBPACK_IMPORTED_MODULE_55__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */],
-                __WEBPACK_IMPORTED_MODULE_54__components_fb_button_fb_button__["a" /* FbButtonComponent */]
-            ],
-            imports: [
-                __WEBPACK_IMPORTED_MODULE_57_ng2_charts__["ChartsModule"],
-                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_23__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
-                __WEBPACK_IMPORTED_MODULE_49_ionic_img_viewer__["a" /* IonicImageViewerModule */],
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {
-                    backButtonText: '',
-                    backButtonIcon: 'ios-arrow-back',
-                    iconMode: 'md'
-                }, {
-                    links: [
-                        { loadChildren: '../pages/acceso-resultados/acceso-resultados.module#AccesoResultadosPageModule', name: 'AccesoResultadosPage', segment: 'acceso-resultados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mi-perfil/mi-perfil.module#MiPerfilPageModule', name: 'MiPerfilPage', segment: 'mi-perfil', priority: 'low', defaultHistory: [] }
-                    ]
-                }),
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_25__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
-            ],
-            exports: [
-                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */]
-            ],
-            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* IonicApp */]],
-            entryComponents: [
-                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
-                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_popover_popover__["a" /* PopoverPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_27__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_28__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_36__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_37__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_41__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_login_input_login_input__["a" /* LoginInputPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_login_tab_login_tab__["a" /* LoginTabPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
-                __WEBPACK_IMPORTED_MODULE_35__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_21__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_chat_chat__["a" /* ChatPage */]
-            ],
-            providers: [
-                __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__["a" /* AndroidPermissions */],
-                __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */],
-                __WEBPACK_IMPORTED_MODULE_52__ionic_native_photo_viewer__["a" /* PhotoViewer */],
-                __WEBPACK_IMPORTED_MODULE_47__ionic_native_fcm__["a" /* FCM */],
-                __WEBPACK_IMPORTED_MODULE_22__providers_emoji_emoji__["a" /* EmojiProvider */],
-                __WEBPACK_IMPORTED_MODULE_44__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_45__ionic_native_splash_screen__["a" /* SplashScreen */],
-                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_46__providers_rest_rest__["a" /* RestProvider */],
-                __WEBPACK_IMPORTED_MODULE_16__ionic_native_calendar__["a" /* Calendar */],
-                __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */],
-                __WEBPACK_IMPORTED_MODULE_50__ionic_native_file__["a" /* File */],
-                __WEBPACK_IMPORTED_MODULE_48__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_51__ionic_native_file_opener__["a" /* FileOpener */],
-                __WEBPACK_IMPORTED_MODULE_56__ionic_native_call_number__["a" /* CallNumber */]
-            ]
-        })
-    ], AppModule);
-    return AppModule;
-}());
-
-//# sourceMappingURL=app.module.js.map
-
-/***/ }),
-
-/***/ 67:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangePasswordPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(72);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-var ChangePasswordPage = /** @class */ (function () {
-    function ChangePasswordPage(events, loadingCtrl, restProvider, alertCtrl, navCtrl, navParams) {
-        this.events = events;
-        this.loadingCtrl = loadingCtrl;
-        this.restProvider = restProvider;
-        this.alertCtrl = alertCtrl;
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.isFirst = false; // Indica si es la primera vez que entra en la App, y debe cambiar la contraseña
-        this.data = { /*pass1: '', */ pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
-        this.bGuardar = { name: 'Guardar contraseña', svg: '', openPage: 'Login', class: 'active login', tipo: 'page', gradiente: '' };
-        this.tituloSubtitulo = { titulo: "Crea tu contraseña", subtitulo: "para acceder a la App" };
-        this.isFirst = navParams.get('first');
-        this.events.publish("user:logged");
-    }
-    /**
-    * 	Función actualiza la contraseña del usuario, si es
-    *	la primera vez que entra mostrará el mensaje de que
-    *	es obligatorio cambiarla.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChangePasswordPage.prototype.actualizarPass = function () {
-        var _this = this;
-        this.showLoading(); // Mostramos el ProgressBar al iniciar la aplicación
-        if ( /*this.data.pass1 == "" || */this.data.pass2 == "" || this.data.pass3 == "") {
-            this.showError("ERROR", "Los campos no pueden estar vacios.");
-            return;
-            //}else if (this.data.pass1 == this.data.pass2){
-            //	this.showError("ERROR","La nueva contraseña no puede ser igual que la anterior.");	
-            //	return;
-        }
-        else if (this.data.pass3 != this.data.pass2) {
-            this.showError("ERROR", "La nuevas nuevas contraseñas deben ser iguales.");
-            return;
-        }
-        else {
-            this.restProvider.actualizarPass(/*this.data.pass1,*/ this.data.pass2, this.data.pass3).then(function (data) {
-                if (typeof data != "undefined" && data['status'] == 1) {
-                    if (data['error'] == 0) {
-                        _this.showError("¡Bien!", "La contraseña ha sido cambiada con éxito", true);
-                    }
-                    else {
-                        _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-                    }
-                }
-                else if (data.status == 401) {
-                    _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
-                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */]);
-                }
-                else {
-                    _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-                }
-            });
-        }
-    };
-    /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
-    ChangePasswordPage.prototype.showLoading = function () {
-        this.loading = this.loadingCtrl.create({
-            content: 'Cargando información...',
-            dismissOnPageChange: true
-        });
-        this.loading.present();
-    };
-    /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
-    ChangePasswordPage.prototype.showError = function (title, text, redirect) {
-        var _this = this;
-        if (redirect === void 0) { redirect = false; }
-        this.loading.dismiss();
-        var alert = this.alertCtrl.create({
-            title: title,
-            subTitle: text,
-            buttons: [{
-                    text: 'OK',
-                    role: 'OK',
-                    handler: function () {
-                        if (redirect)
-                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_home_home__["a" /* HomePage */]);
-                    }
-                }]
-        });
-        alert.present();
-    };
-    ChangePasswordPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-change-password',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\change-password\change-password.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Crear contraseña</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n\n\n	<div style="    margin: 2rem;">\n\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n	</div>\n\n	<ion-list> \n\n		<!--<ion-item>\n\n			<ion-label color="primary" stacked>Contraseña antigua</ion-label>\n\n			<ion-input [(ngModel)]="data.pass1" type="password" placeholder="Contraseña antigua"></ion-input>\n\n		</ion-item>  -->\n\n		<ion-item>\n\n			<ion-label stacked>Contraseña</ion-label>\n\n			<ion-input [(ngModel)]="data.pass2" type="password" ></ion-input>\n\n		</ion-item>  \n\n		<ion-item>\n\n			<ion-label stacked>Repita contraseña</ion-label>\n\n			<ion-input [(ngModel)]="data.pass3" type="password" ></ion-input>\n\n		</ion-item>    \n\n	</ion-list>\n\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n\n		<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="actualizarPass()"> </fb-button>\n\n	</div>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\change-password\change-password.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
-    ], ChangePasswordPage);
-    return ChangePasswordPage;
-}());
-
-//# sourceMappingURL=change-password.js.map
-
-/***/ }),
-
-/***/ 72:
+/***/ 63:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6189,22 +6085,22 @@ var ChangePasswordPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mi_salud_mi_salud__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mi_perfil_mi_perfil__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mis_documentos_mis_documentos__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mis_citas_mis_citas__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__chat_chat__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sugerencias_sugerencias__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__change_password_change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mi_perfil_mi_perfil__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__mis_documentos_mis_documentos__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__mis_citas_mis_citas__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__chat_chat__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__sugerencias_sugerencias__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__change_password_change_password__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__profile_profile__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pedir_cita_pedir_cita__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pedir_cita_pedir_cita__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__documentos_contables_documentos_contables__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__presupuestos_presupuestos__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__recall_recall__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__consejos_personalizados_consejos_personalizados__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__instrucciones_instrucciones__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ionic_native_call_number__ = __webpack_require__(124);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6436,7 +6332,7 @@ var HomePage = /** @class */ (function () {
     ], HomePage.prototype, "slides", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\home\home.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n	    	<!-- <ion-row> -->\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n	    			<!-- <ion-row style="color: white;"> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 4rem;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 2.35rem;">{{card.mes}}</ion-col></ion-row> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n	    				<!-- <ion-col>{{card.hora}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->\n	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->\n	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    	<!-- </ion-row> -->\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n\n<div class="menu">\n	<ion-row style="display:flex;align-items:center;">\n		<h1 col-9 style="padding:0px;margin-bottom: 0;margin-top:0;font-weight: bold;">Menú</h1>\n		<p col-3 style="text-align:right;padding:0px;font-size:1.3rem;margin:0px;" (click)="next()">Ver más</p>\n	</ion-row>\n	<ion-row class="square">\n		<ion-slides #slides pager>\n			<div *ngFor="let c of cardsMenu; let i=index">\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>\n							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>\n							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n			</div>			\n		</ion-slides>	\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n	    	<!-- <ion-row> -->\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n	    			<!-- <ion-row style="color: white;"> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 4rem;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 2.35rem;">{{card.mes}}</ion-col></ion-row> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n	    				<!-- <ion-col>{{card.hora}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->\n	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->\n	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    	<!-- </ion-row> -->\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n\n<div class="menu">\n	<ion-row style="display:flex;align-items:center;">\n		<h1 col-9 style="padding:0px;margin-bottom: 0;margin-top:0;font-weight: bold;">Menú</h1>\n		<p col-3 style="text-align:right;padding:0px;font-size:1.3rem;margin:0px;" (click)="next()">Ver más</p>\n	</ion-row>\n	<ion-row class="square">\n		<ion-slides #slides pager>\n			<div *ngFor="let c of cardsMenu; let i=index">\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>\n							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>\n							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n			</div>			\n		</ion-slides>	\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_20__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_19__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_18__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], HomePage);
@@ -6447,6 +6343,446 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
+/***/ 658:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(312);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(781);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(361);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(314);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(782);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_elegir_pedir_cita_elegir__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_reserva_pedir_cita_reserva__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_tab_higienes_tab_higienes__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_change_password_change_password__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__ionic_native_calendar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_popover_popover__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_chat_chat__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_instrucciones_instrucciones__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_doc_firmados_doc_firmados__ = __webpack_require__(542);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_profile_profile__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__providers_emoji_emoji__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__components_emoji_picker_emoji_picker_module__ = __webpack_require__(541);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_sugerencias_sugerencias__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_mi_salud_mi_salud__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_mi_perfil_mi_perfil__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_mis_citas_mis_citas__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_mis_documentos_mis_documentos__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_login_input_login_input__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_login_registro_login_registro__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_login_tab_login_tab__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_login_error_pin_login_error_pin__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_login_reenviar_login_reenviar__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_recall_recall__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_consejos_detail_consejos_detail__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_documentos_contables_documentos_contables__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_presupuestos_presupuestos__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_plan_economico_plan_economico__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__ionic_native_status_bar__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__ionic_native_splash_screen__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__ionic_native_fcm__ = __webpack_require__(405);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__ionic_native_camera__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52_ionic_img_viewer__ = __webpack_require__(789);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ionic_native_file__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ionic_native_file_opener__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__ionic_native_photo_viewer__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__components_fb_button_icon_fb_button_icon__ = __webpack_require__(796);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__components_fb_button_fb_button__ = __webpack_require__(797);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(798);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__ionic_native_call_number__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ng2_charts__ = __webpack_require__(799);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_60_ng2_charts__);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var AppModule = /** @class */ (function () {
+    function AppModule() {
+    }
+    AppModule = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["NgModule"])({
+            declarations: [
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_39__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_41__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_43__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_44__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_login_input_login_input__["a" /* LoginInputPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_login_tab_login_tab__["a" /* LoginTabPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
+                __WEBPACK_IMPORTED_MODULE_45__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_56__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
+                __WEBPACK_IMPORTED_MODULE_58__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */],
+                __WEBPACK_IMPORTED_MODULE_57__components_fb_button_fb_button__["a" /* FbButtonComponent */]
+            ],
+            imports: [
+                __WEBPACK_IMPORTED_MODULE_60_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
+                __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_26__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_52_ionic_img_viewer__["a" /* IonicImageViewerModule */],
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {
+                    backButtonText: '',
+                    backButtonIcon: 'ios-arrow-back',
+                    iconMode: 'md'
+                }, {
+                    links: [
+                        { loadChildren: '../pages/acceso-resultados/acceso-resultados.module#AccesoResultadosPageModule', name: 'AccesoResultadosPage', segment: 'acceso-resultados', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mi-perfil/mi-perfil.module#MiPerfilPageModule', name: 'MiPerfilPage', segment: 'mi-perfil', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-preferencias/pedir-cita-preferencias.module#PedirCitaPreferenciasPageModule', name: 'PedirCitaPreferenciasPage', segment: 'pedir-cita-preferencias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-reserva/pedir-cita-reserva.module#PedirCitaReservaPageModule', name: 'PedirCitaReservaPage', segment: 'pedir-cita-reserva', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] }
+                    ]
+                }),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_28__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
+            ],
+            exports: [
+                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */]
+            ],
+            bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["m" /* IonicApp */]],
+            entryComponents: [
+                __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
+                __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
+                __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
+                __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_11__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
+                __WEBPACK_IMPORTED_MODULE_12__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_28__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_22__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_29__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_39__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_41__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_43__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_44__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_45__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_login_input_login_input__["a" /* LoginInputPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_login_tab_login_tab__["a" /* LoginTabPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_chat_chat__["a" /* ChatPage */]
+            ],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__["a" /* AndroidPermissions */],
+                __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */],
+                __WEBPACK_IMPORTED_MODULE_55__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+                __WEBPACK_IMPORTED_MODULE_50__ionic_native_fcm__["a" /* FCM */],
+                __WEBPACK_IMPORTED_MODULE_25__providers_emoji_emoji__["a" /* EmojiProvider */],
+                __WEBPACK_IMPORTED_MODULE_47__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_48__ionic_native_splash_screen__["a" /* SplashScreen */],
+                { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* IonicErrorHandler */] },
+                __WEBPACK_IMPORTED_MODULE_49__providers_rest_rest__["a" /* RestProvider */],
+                __WEBPACK_IMPORTED_MODULE_19__ionic_native_calendar__["a" /* Calendar */],
+                __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */],
+                __WEBPACK_IMPORTED_MODULE_53__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_51__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_54__ionic_native_file_opener__["a" /* FileOpener */],
+                __WEBPACK_IMPORTED_MODULE_59__ionic_native_call_number__["a" /* CallNumber */]
+            ]
+        })
+    ], AppModule);
+    return AppModule;
+}());
+
+//# sourceMappingURL=app.module.js.map
+
+/***/ }),
+
+/***/ 68:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChangePasswordPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_home_home__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(18);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var ChangePasswordPage = /** @class */ (function () {
+    function ChangePasswordPage(events, loadingCtrl, restProvider, alertCtrl, navCtrl, navParams) {
+        this.events = events;
+        this.loadingCtrl = loadingCtrl;
+        this.restProvider = restProvider;
+        this.alertCtrl = alertCtrl;
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.isFirst = false; // Indica si es la primera vez que entra en la App, y debe cambiar la contraseña
+        this.data = { /*pass1: '', */ pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
+        this.bGuardar = { name: 'Guardar contraseña', svg: '', openPage: 'Login', class: 'active login', tipo: 'page', gradiente: '' };
+        this.tituloSubtitulo = { titulo: "Crea tu contraseña", subtitulo: "para acceder a la App" };
+        this.isFirst = navParams.get('first');
+        this.events.publish("user:logged");
+    }
+    /**
+    * 	Función actualiza la contraseña del usuario, si es
+    *	la primera vez que entra mostrará el mensaje de que
+    *	es obligatorio cambiarla.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChangePasswordPage.prototype.actualizarPass = function () {
+        var _this = this;
+        this.showLoading(); // Mostramos el ProgressBar al iniciar la aplicación
+        if ( /*this.data.pass1 == "" || */this.data.pass2 == "" || this.data.pass3 == "") {
+            this.showError("ERROR", "Los campos no pueden estar vacios.");
+            return;
+            //}else if (this.data.pass1 == this.data.pass2){
+            //	this.showError("ERROR","La nueva contraseña no puede ser igual que la anterior.");	
+            //	return;
+        }
+        else if (this.data.pass3 != this.data.pass2) {
+            this.showError("ERROR", "La nuevas nuevas contraseñas deben ser iguales.");
+            return;
+        }
+        else {
+            this.restProvider.actualizarPass(/*this.data.pass1,*/ this.data.pass2, this.data.pass3).then(function (data) {
+                if (typeof data != "undefined" && data['status'] == 1) {
+                    if (data['error'] == 0) {
+                        _this.showError("¡Bien!", "La contraseña ha sido cambiada con éxito", true);
+                    }
+                    else {
+                        _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+                    }
+                }
+                else if (data.status == 401) {
+                    _this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                    _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_4__pages_login_login__["a" /* LoginPage */]);
+                }
+                else {
+                    _this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+                }
+            });
+        }
+    };
+    /**
+    * 	Función que muestra el ProgressBar cuando alguna acción
+    *	se está ejecutando en primer plano.
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    * 	@return None
+    */
+    ChangePasswordPage.prototype.showLoading = function () {
+        this.loading = this.loadingCtrl.create({
+            content: 'Cargando información...',
+            dismissOnPageChange: true
+        });
+        this.loading.present();
+    };
+    /**
+    * 	Función que muestra una alerta con el titulo
+    *	y el texto pasado por parámetro.
+    *
+    * 	@param String Titulo de la alerta.
+    * 	@param String Texto de la alerta.
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ChangePasswordPage.prototype.showError = function (title, text, redirect) {
+        var _this = this;
+        if (redirect === void 0) { redirect = false; }
+        this.loading.dismiss();
+        var alert = this.alertCtrl.create({
+            title: title,
+            subTitle: text,
+            buttons: [{
+                    text: 'OK',
+                    role: 'OK',
+                    handler: function () {
+                        if (redirect)
+                            _this.navCtrl.setRoot(__WEBPACK_IMPORTED_MODULE_2__pages_home_home__["a" /* HomePage */]);
+                    }
+                }]
+        });
+        alert.present();
+    };
+    ChangePasswordPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-change-password',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Crear contraseña</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<ion-list> \n		<!--<ion-item>\n			<ion-label color="primary" stacked>Contraseña antigua</ion-label>\n			<ion-input [(ngModel)]="data.pass1" type="password" placeholder="Contraseña antigua"></ion-input>\n		</ion-item>  -->\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass2" type="password" ></ion-input>\n		</ion-item>  \n		<ion-item>\n			<ion-label stacked>Repita contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass3" type="password" ></ion-input>\n		</ion-item>    \n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="actualizarPass()"> </fb-button>\n	</div>\n</ion-content>\n\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+    ], ChangePasswordPage);
+    return ChangePasswordPage;
+}());
+
+//# sourceMappingURL=change-password.js.map
+
+/***/ }),
+
 /***/ 76:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -6454,12 +6790,12 @@ var HomePage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RecallPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_calendar__ = __webpack_require__(191);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_popover_popover__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_pedir_cita__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_calendar__ = __webpack_require__(192);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_popover_popover__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6666,7 +7002,7 @@ var RecallPage = /** @class */ (function () {
     };
     RecallPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-recall',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\recall\recall.html"*/'<ion-content padding>\n\n	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaFutura == true">\n\n		<ion-slide *ngFor="let item of recall">\n\n			<div class="fb-card -vcita -gradient">\n\n			    <div class="card_row">\n\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n\n			                {{item.diaSemana}}\n\n			            </div>\n\n			            <div class="card_time -white">\n\n			                {{item.dia}}\n\n			                <span>\n\n			                {{item.mes}}\n\n			                </span>\n\n			            </div>\n\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n\n			                {{item.ano}}\n\n			            </div>\n\n			        </div>\n\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n\n			                <div class="card_time -white">\n\n			                    {{item.hora}}\n\n			                    <span style="display:inline;">\n\n			                        H\n\n			                    </span>\n\n			                </div>\n\n			                <div class="card_subtitle -white">\n\n			                    Duración:\n\n			                    <span>\n\n			                        {{item.Duracion}}\'\n\n			                    </span>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			    <div class="card_content -bg-white">\n\n			        <div class="card_row">\n\n			            <div>\n\n			                <div class="card_label">\n\n			                    Tratamiento\n\n			                </div>\n\n			                <div class="card_title">\n\n			                   {{item.tratamiento}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Profesional\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n\n			                    </div>\n\n			                    <div class="card_title">\n\n			                       {{item.usuario}}\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Estado de la cita\n\n			                </div>\n\n			                <div class="card_estado">\n\n			                     {{item.situacion}}\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div class="left">\n\n			                <div class="card_label">\n\n			                    Dirección\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n			                        </svg> \n\n			                    </div>\n\n			                    <div class="card_subtitle">\n\n			                        Calle de Caleruega, 67\n\n			                        <br />\n\n			                        3ª Planta A\n\n			                        <br />\n\n			                        28033 - Madrid\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			            <div class="right">\n\n			                <div class="card_label">\n\n			                    Calendario\n\n			                </div>\n\n			                <div class="card_container">\n\n			                    <div class="avatar">\n\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n\n			                        </svg> \n\n			                    </div>\n\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n\n			                        Haz\n\n			                        <span class="-pink">\n\n			                            click\n\n			                        </span>\n\n			                        para añadir\n\n			                        <br />\n\n			                            la cita a tu calendario\n\n			                    </div>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			        <div class="card_separator">\n\n			        </div>\n\n			        <div class="card_row">\n\n			            <div style="width:100%;">\n\n			                <div class="card_label" style="margin-top:1rem;">\n\n			                    Gestiona tu cita\n\n			                </div>\n\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Anular\n\n			                    </a>\n\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Confirmar\n\n			                    </a>			                    \n\n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n\n			                        Cambiar\n\n			                    </a>\n\n			                </div>\n\n			            </div>\n\n			        </div>\n\n			    </div>\n\n			</div>\n\n		</ion-slide>\n\n	</ion-slides>\n\n	<div padding *ngIf="infoR.fechaFutura != true">\n\n		<fb-titulo-subtitulo [info]="infoR" ></fb-titulo-subtitulo>\n\n		<p>{{infoR.texto}}</p>\n\n		<br />\n\n		<p style=" max-height: 10rem;">\n\n			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>\n\n		</p>\n\n	</div>\n\n	<ion-footer padding *ngIf="infoR.Footer == true">\n\n	<div class="fb-card -v4">\n\n	    <div class="left">\n\n	        <div class="avatar">\n\n	        	\n\n	        	<!-- Gradiente -->\n\n				<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n				<!-- Fin Gradiente -->\n\n\n\n	            <svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n\n	            	<g fill="url(#fb-shadow-gradient3)" stroke="none">\n\n	            		<defs>\n\n	            			<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n\n	            		</defs>\n\n	            		<clipPath id="b">\n\n	            			<use xlink:href="#a" overflow="visible"/>\n\n	            		</clipPath>\n\n	            		<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n\n	            		</g>\n\n	            	</svg>\n\n	        </div>\n\n	    </div>\n\n	    <div class="center" style="justify-content: space-evenly;">\n\n	        <div class="card_title">\n\n	            {{infoR.tituloFooter}}\n\n	        </div>\n\n	        <div class="card_subtitle">\n\n	           {{infoR.subTituloFooter}}\n\n	        </div>\n\n	    </div>\n\n	    <div class="right">\n\n	        <div class="card_time">\n\n	            {{infoR.mesesFooter}}\n\n	            <span>\n\n	                meses\n\n	            </span>\n\n	        </div>\n\n	    </div>\n\n	</div>\n\n	</ion-footer>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\recall\recall.html"*/,
+            selector: 'page-recall',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/'<ion-content padding>\n	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaFutura == true">\n		<ion-slide *ngFor="let item of recall">\n			<div class="fb-card -vcita -gradient">\n			    <div class="card_row">\n			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n			            <div class="card_subtitle -white" style="font-size: 1.4rem;">\n			                {{item.diaSemana}}\n			            </div>\n			            <div class="card_time -white">\n			                {{item.dia}}\n			                <span>\n			                {{item.mes}}\n			                </span>\n			            </div>\n			            <div class="card_subtitle -white" style="font-size:1rem;">\n			                {{item.ano}}\n			            </div>\n			        </div>\n			        <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n			            <div style="display:flex;flex-direction:column;align-items: flex-end;">\n			                <div class="card_time -white">\n			                    {{item.hora}}\n			                    <span style="display:inline;">\n			                        H\n			                    </span>\n			                </div>\n			                <div class="card_subtitle -white">\n			                    Duración:\n			                    <span>\n			                        {{item.Duracion}}\'\n			                    </span>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			    <div class="card_content -bg-white">\n			        <div class="card_row">\n			            <div>\n			                <div class="card_label">\n			                    Tratamiento\n			                </div>\n			                <div class="card_title">\n			                   {{item.tratamiento}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Profesional\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n			                    </div>\n			                    <div class="card_title">\n			                       {{item.usuario}}\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Estado de la cita\n			                </div>\n			                <div class="card_estado">\n			                     {{item.situacion}}\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div class="left">\n			                <div class="card_label">\n			                    Dirección\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle">\n			                        Calle de Caleruega, 67\n			                        <br />\n			                        3ª Planta A\n			                        <br />\n			                        28033 - Madrid\n			                    </div>\n			                </div>\n			            </div>\n			            <div class="right">\n			                <div class="card_label">\n			                    Calendario\n			                </div>\n			                <div class="card_container">\n			                    <div class="avatar">\n			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">\n			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>\n			                        </svg> \n			                    </div>\n			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">\n			                        Haz\n			                        <span class="-pink">\n			                            click\n			                        </span>\n			                        para añadir\n			                        <br />\n			                            la cita a tu calendario\n			                    </div>\n			                </div>\n			            </div>\n			        </div>\n			        <div class="card_separator">\n			        </div>\n			        <div class="card_row">\n			            <div style="width:100%;">\n			                <div class="card_label" style="margin-top:1rem;">\n			                    Gestiona tu cita\n			                </div>\n			                <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">\n			                    <a class="fb-btn -pill -anular" (click)="presentConfirm(\'anular\', item.fechaDecimal, item.horaDecimal);">\n			                        Anular\n			                    </a>\n			                    <a *ngIf="item.confirmar == \'0\'" class="fb-btn -pill -confirmar" (click)="presentConfirm(\'confirmar\', item.fechaDecimal, item.horaDecimal);">\n			                        Confirmar\n			                    </a>			                    \n			                    <a class="fb-btn -pill -cambiar" (click)="presentConfirm(\'cambiar\', item.fechaDecimal, item.horaDecimal);">\n			                        Cambiar\n			                    </a>\n			                </div>\n			            </div>\n			        </div>\n			    </div>\n			</div>\n		</ion-slide>\n	</ion-slides>\n	<div padding *ngIf="infoR.fechaFutura != true">\n		<fb-titulo-subtitulo [info]="infoR" ></fb-titulo-subtitulo>\n		<p>{{infoR.texto}}</p>\n		<br />\n		<p style=" max-height: 10rem;">\n			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>\n		</p>\n	</div>\n	<ion-footer padding *ngIf="infoR.Footer == true">\n	<div class="fb-card -v4">\n	    <div class="left">\n	        <div class="avatar">\n	        	\n	        	<!-- Gradiente -->\n				<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n				<!-- Fin Gradiente -->\n\n	            <svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n	            	<g fill="url(#fb-shadow-gradient3)" stroke="none">\n	            		<defs>\n	            			<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n	            		</defs>\n	            		<clipPath id="b">\n	            			<use xlink:href="#a" overflow="visible"/>\n	            		</clipPath>\n	            		<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/>\n	            		</g>\n	            	</svg>\n	        </div>\n	    </div>\n	    <div class="center" style="justify-content: space-evenly;">\n	        <div class="card_title">\n	            {{infoR.tituloFooter}}\n	        </div>\n	        <div class="card_subtitle">\n	           {{infoR.subTituloFooter}}\n	        </div>\n	    </div>\n	    <div class="right">\n	        <div class="card_time">\n	            {{infoR.mesesFooter}}\n	            <span>\n	                meses\n	            </span>\n	        </div>\n	    </div>\n	</div>\n	</ion-footer>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/recall/recall.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_7__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_5__ionic_native_calendar__["a" /* Calendar */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["w" /* PopoverController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], RecallPage);
@@ -6677,14 +7013,14 @@ var RecallPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 761:
+/***/ 764:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export EMOJI_PICKER_VALUE_ACCESSOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(237);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(43);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6727,7 +7063,7 @@ var EmojiPickerComponent = /** @class */ (function () {
     EmojiPickerComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'emoji-picker',
-            providers: [EMOJI_PICKER_VALUE_ACCESSOR],template:/*ion-inline-start:"C:\App-fb\appfb\src\components\emoji-picker\emoji-picker.html"*/'<!-- Generated template for the EmojiPickerComponent component -->\n\n<div class="emoji-picker">\n\n  <div class="emoji-items">\n\n    <ion-slides pager>\n\n\n\n      <ion-slide *ngFor="let items of emojiArr">\n\n        <span class="emoji-item"\n\n              (click)="setValue(item)"\n\n              *ngFor="let item of items">\n\n          {{item}}\n\n        </span>\n\n      </ion-slide>\n\n\n\n    </ion-slides>\n\n  </div>\n\n</div>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\components\emoji-picker\emoji-picker.html"*/
+            providers: [EMOJI_PICKER_VALUE_ACCESSOR],template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/emoji-picker/emoji-picker.html"*/'<!-- Generated template for the EmojiPickerComponent component -->\n<div class="emoji-picker">\n  <div class="emoji-items">\n    <ion-slides pager>\n\n      <ion-slide *ngFor="let items of emojiArr">\n        <span class="emoji-item"\n              (click)="setValue(item)"\n              *ngFor="let item of items">\n          {{item}}\n        </span>\n      </ion-slide>\n\n    </ion-slides>\n  </div>\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/emoji-picker/emoji-picker.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__["a" /* EmojiProvider */]])
     ], EmojiPickerComponent);
@@ -6738,36 +7074,36 @@ var EmojiPickerComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 779:
+/***/ 782:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(400);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(401);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(403);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(404);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(15);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_mi_salud_mi_salud__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_mi_perfil_mi_perfil__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_mis_documentos_mis_documentos__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mis_citas_mis_citas__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_mi_perfil_mi_perfil__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_mis_documentos_mis_documentos__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_mis_citas_mis_citas__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_change_password_change_password__ = __webpack_require__(68);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_profile_profile__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_pedir_cita__ = __webpack_require__(52);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_pedir_cita__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_documentos_contables_documentos_contables__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_presupuestos_presupuestos__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_recall_recall__ = __webpack_require__(76);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_instrucciones_instrucciones__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(780);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(783);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(402);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(405);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7084,7 +7420,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"C:\App-fb\appfb\src\app\app.html"*/'<ion-menu [content]="content">\n\n	<ion-content>\n\n		<div class="imgTop">\n\n			<div class="imgPerfilDiv">\n\n				<img onError="this.src=\'assets/imgs/person.png\';this.style.background=\'white\';this.style.borderRadius=\'50%\';this.style.border=\'2rem solid white;\'" src="https://ui-avatars.com/api/?name={{ menuData.nombre }} {{ menuData.inicial }}&size=256&rounded=true&background={{ menuData.color }}" class="imgPerfil" />\n\n				<p class="pPerfil" >{{ menuData.nombre }} {{ menuData.apellidos }}</p>\n\n				<p class="iPerfil"><i>{{ menuData.email }}</i></p>\n\n			</div>\n\n		</div>\n\n		<ion-list>\n\n			<button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">\n\n				<i class="{{p.icon}} {{p.color}} marginRight" aria-hidden="true"></i> {{p.title}}\n\n			</button>\n\n			<button menuClose ion-item detail-none (click)="clickLogout()">\n\n				<i class="fas fa-sign-out-alt marginRight primary" aria-hidden="true"></i>  Salir\n\n			</button>\n\n		</ion-list>\n\n	</ion-content>\n\n</ion-menu>\n\n\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"C:\App-fb\appfb\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/'<ion-menu [content]="content">\n	<ion-content>\n		<div class="imgTop">\n			<div class="imgPerfilDiv">\n				<img onError="this.src=\'assets/imgs/person.png\';this.style.background=\'white\';this.style.borderRadius=\'50%\';this.style.border=\'2rem solid white;\'" src="https://ui-avatars.com/api/?name={{ menuData.nombre }} {{ menuData.inicial }}&size=256&rounded=true&background={{ menuData.color }}" class="imgPerfil" />\n				<p class="pPerfil" >{{ menuData.nombre }} {{ menuData.apellidos }}</p>\n				<p class="iPerfil"><i>{{ menuData.email }}</i></p>\n			</div>\n		</div>\n		<ion-list>\n			<button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">\n				<i class="{{p.icon}} {{p.color}} marginRight" aria-hidden="true"></i> {{p.title}}\n			</button>\n			<button menuClose ion-item detail-none (click)="clickLogout()">\n				<i class="fas fa-sign-out-alt marginRight primary" aria-hidden="true"></i>  Salir\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__["a" /* FCM */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], MyApp);
@@ -7095,13 +7431,13 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 793:
+/***/ 796:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FbButtonIconComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(21);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7153,7 +7489,7 @@ var FbButtonIconComponent = /** @class */ (function () {
     ], FbButtonIconComponent.prototype, "name", void 0);
     FbButtonIconComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'fb-button-icon',template:/*ion-inline-start:"C:\App-fb\appfb\src\components\fb-button-icon\fb-button-icon.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n\n<button [class]="name.class">\n\n	<p *ngIf="name.svg == \'citas\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n\n	</p>\n\n\n\n	<p *ngIf="name.svg == \'perfil\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n\n	</p>\n\n	\n\n	<p *ngIf="name.svg == \'chat\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n\n	</p>\n\n\n\n	<p *ngIf="name.svg == \'salud\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n\n			<g  stroke="none">\n\n				<defs>\n\n					<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n\n				</defs>\n\n				<clipPath id="b">\n\n					<use xlink:href="#a" overflow="visible"/>\n\n				</clipPath>\n\n				<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)" />\n\n			</g>\n\n		</svg>\n\n	</p>\n\n\n\n	<p *ngIf="name.svg == \'documentos\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M47.5 26.8H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M21.7 20.6H32c.6 0 1-.5 1-1 0-.6-.5-1-1-1H21.7c-.6 0-1 .5-1 1-.1.6.4 1 1 1zm0 0M47.5 35.1H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M47.5 43.4H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm0 0M47.5 51.6H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0"/><path d="M51.6 16.1V1H7.2v56.8h5.2V63h44.4V21.2l-5.2-5.1zm-9.3-6.4l10.9 10.9H42.3V9.7zm-33 46.1V3.1h40.3V14l-7.8-7.8H12.4v49.6H9.3zm5.1 5.1V8.2h25.8v14.5h14.5v38.2H14.4zm0 0"/></g></svg>\n\n	</p>\n\n\n\n	<p *ngIf="name.svg == \'preguntas\'">\n\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M32 .8C14.8.8.8 14.8.8 32s14 31.2 31.2 31.2 31.2-14 31.2-31.2S49.2.8 32 .8zm0 60C16.1 60.8 3.2 47.9 3.2 32S16.1 3.2 32 3.2 60.8 16.1 60.8 32 47.9 60.8 32 60.8zm0 0"/><path d="M32 45.2c-.7 0-1.2.5-1.2 1.2v2.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2v-2.4c0-.7-.5-1.2-1.2-1.2zm0 0M32.1 11.6H32c-2.5 0-4.9 1-6.7 2.8-1.8 1.8-2.9 4.2-2.9 6.8 0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-1.9.8-3.8 2.1-5.1 1.4-1.4 3.2-2.1 5.2-2.1 3.8.1 7 3.3 7.1 7.1 0 2.5-1.2 4.8-3.3 6.2-3.2 2.1-5.1 5.7-5.1 9.7v3.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V37c0-3.2 1.5-6.1 4-7.7 2.8-1.8 4.4-4.9 4.4-8.2-.1-5.2-4.3-9.4-9.5-9.5zm0 0"/></g></svg>\n\n	</p>\n\n\n\n	<p [class]="name.class" >{{ name.name }}</p>\n\n</button>'/*ion-inline-end:"C:\App-fb\appfb\src\components\fb-button-icon\fb-button-icon.html"*/
+            selector: 'fb-button-icon',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n<button [class]="name.class">\n	<p *ngIf="name.svg == \'citas\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n	</p>\n\n	<p *ngIf="name.svg == \'perfil\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n	</p>\n	\n	<p *ngIf="name.svg == \'chat\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'salud\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n			<g  stroke="none">\n				<defs>\n					<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n				</defs>\n				<clipPath id="b">\n					<use xlink:href="#a" overflow="visible"/>\n				</clipPath>\n				<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)" />\n			</g>\n		</svg>\n	</p>\n\n	<p *ngIf="name.svg == \'documentos\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M47.5 26.8H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M21.7 20.6H32c.6 0 1-.5 1-1 0-.6-.5-1-1-1H21.7c-.6 0-1 .5-1 1-.1.6.4 1 1 1zm0 0M47.5 35.1H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M47.5 43.4H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm0 0M47.5 51.6H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0"/><path d="M51.6 16.1V1H7.2v56.8h5.2V63h44.4V21.2l-5.2-5.1zm-9.3-6.4l10.9 10.9H42.3V9.7zm-33 46.1V3.1h40.3V14l-7.8-7.8H12.4v49.6H9.3zm5.1 5.1V8.2h25.8v14.5h14.5v38.2H14.4zm0 0"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'preguntas\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M32 .8C14.8.8.8 14.8.8 32s14 31.2 31.2 31.2 31.2-14 31.2-31.2S49.2.8 32 .8zm0 60C16.1 60.8 3.2 47.9 3.2 32S16.1 3.2 32 3.2 60.8 16.1 60.8 32 47.9 60.8 32 60.8zm0 0"/><path d="M32 45.2c-.7 0-1.2.5-1.2 1.2v2.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2v-2.4c0-.7-.5-1.2-1.2-1.2zm0 0M32.1 11.6H32c-2.5 0-4.9 1-6.7 2.8-1.8 1.8-2.9 4.2-2.9 6.8 0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-1.9.8-3.8 2.1-5.1 1.4-1.4 3.2-2.1 5.2-2.1 3.8.1 7 3.3 7.1 7.1 0 2.5-1.2 4.8-3.3 6.2-3.2 2.1-5.1 5.7-5.1 9.7v3.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V37c0-3.2 1.5-6.1 4-7.7 2.8-1.8 4.4-4.9 4.4-8.2-.1-5.2-4.3-9.4-9.5-9.5zm0 0"/></g></svg>\n	</p>\n\n	<p [class]="name.class" >{{ name.name }}</p>\n</button>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]])
     ], FbButtonIconComponent);
@@ -7164,7 +7500,7 @@ var FbButtonIconComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 794:
+/***/ 797:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7195,7 +7531,7 @@ var FbButtonComponent = /** @class */ (function () {
     ], FbButtonComponent.prototype, "name", void 0);
     FbButtonComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'fb-button',template:/*ion-inline-start:"C:\App-fb\appfb\src\components\fb-button\fb-button.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n\n<button [class]="name.class">\n\n	<p [class]="name.class">{{ name.name }}</p>\n\n</button>'/*ion-inline-end:"C:\App-fb\appfb\src\components\fb-button\fb-button.html"*/
+            selector: 'fb-button',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-button/fb-button.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n<button [class]="name.class">\n	<p [class]="name.class">{{ name.name }}</p>\n</button>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-button/fb-button.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], FbButtonComponent);
@@ -7206,7 +7542,7 @@ var FbButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 795:
+/***/ 798:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7237,7 +7573,7 @@ var FbTituloSubtituloComponent = /** @class */ (function () {
     ], FbTituloSubtituloComponent.prototype, "object", void 0);
     FbTituloSubtituloComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'fb-titulo-subtitulo',template:/*ion-inline-start:"C:\App-fb\appfb\src\components\fb-titulo-subtitulo\fb-titulo-subtitulo.html"*/'\n\n  <h1>{{ object.titulo }}</h1>\n\n  <h2>{{ object.subtitulo }}</h2>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\components\fb-titulo-subtitulo\fb-titulo-subtitulo.html"*/
+            selector: 'fb-titulo-subtitulo',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-titulo-subtitulo/fb-titulo-subtitulo.html"*/'\n  <h1>{{ object.titulo }}</h1>\n  <h2>{{ object.subtitulo }}</h2>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-titulo-subtitulo/fb-titulo-subtitulo.html"*/
         }),
         __metadata("design:paramtypes", [])
     ], FbTituloSubtituloComponent);
@@ -7248,258 +7584,258 @@ var FbTituloSubtituloComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 822:
+/***/ 825:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 414,
-	"./af.js": 414,
-	"./ar": 415,
-	"./ar-dz": 416,
-	"./ar-dz.js": 416,
-	"./ar-kw": 417,
-	"./ar-kw.js": 417,
-	"./ar-ly": 418,
-	"./ar-ly.js": 418,
-	"./ar-ma": 419,
-	"./ar-ma.js": 419,
-	"./ar-sa": 420,
-	"./ar-sa.js": 420,
-	"./ar-tn": 421,
-	"./ar-tn.js": 421,
-	"./ar.js": 415,
-	"./az": 422,
-	"./az.js": 422,
-	"./be": 423,
-	"./be.js": 423,
-	"./bg": 424,
-	"./bg.js": 424,
-	"./bm": 425,
-	"./bm.js": 425,
-	"./bn": 426,
-	"./bn.js": 426,
-	"./bo": 427,
-	"./bo.js": 427,
-	"./br": 428,
-	"./br.js": 428,
-	"./bs": 429,
-	"./bs.js": 429,
-	"./ca": 430,
-	"./ca.js": 430,
-	"./cs": 431,
-	"./cs.js": 431,
-	"./cv": 432,
-	"./cv.js": 432,
-	"./cy": 433,
-	"./cy.js": 433,
-	"./da": 434,
-	"./da.js": 434,
-	"./de": 435,
-	"./de-at": 436,
-	"./de-at.js": 436,
-	"./de-ch": 437,
-	"./de-ch.js": 437,
-	"./de.js": 435,
-	"./dv": 438,
-	"./dv.js": 438,
-	"./el": 439,
-	"./el.js": 439,
-	"./en-au": 440,
-	"./en-au.js": 440,
-	"./en-ca": 441,
-	"./en-ca.js": 441,
-	"./en-gb": 442,
-	"./en-gb.js": 442,
-	"./en-ie": 443,
-	"./en-ie.js": 443,
-	"./en-il": 444,
-	"./en-il.js": 444,
-	"./en-nz": 445,
-	"./en-nz.js": 445,
-	"./eo": 446,
-	"./eo.js": 446,
-	"./es": 447,
-	"./es-do": 448,
-	"./es-do.js": 448,
-	"./es-us": 449,
-	"./es-us.js": 449,
-	"./es.js": 447,
-	"./et": 450,
-	"./et.js": 450,
-	"./eu": 451,
-	"./eu.js": 451,
-	"./fa": 452,
-	"./fa.js": 452,
-	"./fi": 453,
-	"./fi.js": 453,
-	"./fo": 454,
-	"./fo.js": 454,
-	"./fr": 455,
-	"./fr-ca": 456,
-	"./fr-ca.js": 456,
-	"./fr-ch": 457,
-	"./fr-ch.js": 457,
-	"./fr.js": 455,
-	"./fy": 458,
-	"./fy.js": 458,
-	"./gd": 459,
-	"./gd.js": 459,
-	"./gl": 460,
-	"./gl.js": 460,
-	"./gom-latn": 461,
-	"./gom-latn.js": 461,
-	"./gu": 462,
-	"./gu.js": 462,
-	"./he": 463,
-	"./he.js": 463,
-	"./hi": 464,
-	"./hi.js": 464,
-	"./hr": 465,
-	"./hr.js": 465,
-	"./hu": 466,
-	"./hu.js": 466,
-	"./hy-am": 467,
-	"./hy-am.js": 467,
-	"./id": 468,
-	"./id.js": 468,
-	"./is": 469,
-	"./is.js": 469,
-	"./it": 470,
-	"./it.js": 470,
-	"./ja": 471,
-	"./ja.js": 471,
-	"./jv": 472,
-	"./jv.js": 472,
-	"./ka": 473,
-	"./ka.js": 473,
-	"./kk": 474,
-	"./kk.js": 474,
-	"./km": 475,
-	"./km.js": 475,
-	"./kn": 476,
-	"./kn.js": 476,
-	"./ko": 477,
-	"./ko.js": 477,
-	"./ku": 478,
-	"./ku.js": 478,
-	"./ky": 479,
-	"./ky.js": 479,
-	"./lb": 480,
-	"./lb.js": 480,
-	"./lo": 481,
-	"./lo.js": 481,
-	"./lt": 482,
-	"./lt.js": 482,
-	"./lv": 483,
-	"./lv.js": 483,
-	"./me": 484,
-	"./me.js": 484,
-	"./mi": 485,
-	"./mi.js": 485,
-	"./mk": 486,
-	"./mk.js": 486,
-	"./ml": 487,
-	"./ml.js": 487,
-	"./mn": 488,
-	"./mn.js": 488,
-	"./mr": 489,
-	"./mr.js": 489,
-	"./ms": 490,
-	"./ms-my": 491,
-	"./ms-my.js": 491,
-	"./ms.js": 490,
-	"./mt": 492,
-	"./mt.js": 492,
-	"./my": 493,
-	"./my.js": 493,
-	"./nb": 494,
-	"./nb.js": 494,
-	"./ne": 495,
-	"./ne.js": 495,
-	"./nl": 496,
-	"./nl-be": 497,
-	"./nl-be.js": 497,
-	"./nl.js": 496,
-	"./nn": 498,
-	"./nn.js": 498,
-	"./pa-in": 499,
-	"./pa-in.js": 499,
-	"./pl": 500,
-	"./pl.js": 500,
-	"./pt": 501,
-	"./pt-br": 502,
-	"./pt-br.js": 502,
-	"./pt.js": 501,
-	"./ro": 503,
-	"./ro.js": 503,
-	"./ru": 504,
-	"./ru.js": 504,
-	"./sd": 505,
-	"./sd.js": 505,
-	"./se": 506,
-	"./se.js": 506,
-	"./si": 507,
-	"./si.js": 507,
-	"./sk": 508,
-	"./sk.js": 508,
-	"./sl": 509,
-	"./sl.js": 509,
-	"./sq": 510,
-	"./sq.js": 510,
-	"./sr": 511,
-	"./sr-cyrl": 512,
-	"./sr-cyrl.js": 512,
-	"./sr.js": 511,
-	"./ss": 513,
-	"./ss.js": 513,
-	"./sv": 514,
-	"./sv.js": 514,
-	"./sw": 515,
-	"./sw.js": 515,
-	"./ta": 516,
-	"./ta.js": 516,
-	"./te": 517,
-	"./te.js": 517,
-	"./tet": 518,
-	"./tet.js": 518,
-	"./tg": 519,
-	"./tg.js": 519,
-	"./th": 520,
-	"./th.js": 520,
-	"./tl-ph": 521,
-	"./tl-ph.js": 521,
-	"./tlh": 522,
-	"./tlh.js": 522,
-	"./tr": 523,
-	"./tr.js": 523,
-	"./tzl": 524,
-	"./tzl.js": 524,
-	"./tzm": 525,
-	"./tzm-latn": 526,
-	"./tzm-latn.js": 526,
-	"./tzm.js": 525,
-	"./ug-cn": 527,
-	"./ug-cn.js": 527,
-	"./uk": 528,
-	"./uk.js": 528,
-	"./ur": 529,
-	"./ur.js": 529,
-	"./uz": 530,
-	"./uz-latn": 531,
-	"./uz-latn.js": 531,
-	"./uz.js": 530,
-	"./vi": 532,
-	"./vi.js": 532,
-	"./x-pseudo": 533,
-	"./x-pseudo.js": 533,
-	"./yo": 534,
-	"./yo.js": 534,
-	"./zh-cn": 535,
-	"./zh-cn.js": 535,
-	"./zh-hk": 536,
-	"./zh-hk.js": 536,
-	"./zh-tw": 537,
-	"./zh-tw.js": 537
+	"./af": 417,
+	"./af.js": 417,
+	"./ar": 418,
+	"./ar-dz": 419,
+	"./ar-dz.js": 419,
+	"./ar-kw": 420,
+	"./ar-kw.js": 420,
+	"./ar-ly": 421,
+	"./ar-ly.js": 421,
+	"./ar-ma": 422,
+	"./ar-ma.js": 422,
+	"./ar-sa": 423,
+	"./ar-sa.js": 423,
+	"./ar-tn": 424,
+	"./ar-tn.js": 424,
+	"./ar.js": 418,
+	"./az": 425,
+	"./az.js": 425,
+	"./be": 426,
+	"./be.js": 426,
+	"./bg": 427,
+	"./bg.js": 427,
+	"./bm": 428,
+	"./bm.js": 428,
+	"./bn": 429,
+	"./bn.js": 429,
+	"./bo": 430,
+	"./bo.js": 430,
+	"./br": 431,
+	"./br.js": 431,
+	"./bs": 432,
+	"./bs.js": 432,
+	"./ca": 433,
+	"./ca.js": 433,
+	"./cs": 434,
+	"./cs.js": 434,
+	"./cv": 435,
+	"./cv.js": 435,
+	"./cy": 436,
+	"./cy.js": 436,
+	"./da": 437,
+	"./da.js": 437,
+	"./de": 438,
+	"./de-at": 439,
+	"./de-at.js": 439,
+	"./de-ch": 440,
+	"./de-ch.js": 440,
+	"./de.js": 438,
+	"./dv": 441,
+	"./dv.js": 441,
+	"./el": 442,
+	"./el.js": 442,
+	"./en-au": 443,
+	"./en-au.js": 443,
+	"./en-ca": 444,
+	"./en-ca.js": 444,
+	"./en-gb": 445,
+	"./en-gb.js": 445,
+	"./en-ie": 446,
+	"./en-ie.js": 446,
+	"./en-il": 447,
+	"./en-il.js": 447,
+	"./en-nz": 448,
+	"./en-nz.js": 448,
+	"./eo": 449,
+	"./eo.js": 449,
+	"./es": 450,
+	"./es-do": 451,
+	"./es-do.js": 451,
+	"./es-us": 452,
+	"./es-us.js": 452,
+	"./es.js": 450,
+	"./et": 453,
+	"./et.js": 453,
+	"./eu": 454,
+	"./eu.js": 454,
+	"./fa": 455,
+	"./fa.js": 455,
+	"./fi": 456,
+	"./fi.js": 456,
+	"./fo": 457,
+	"./fo.js": 457,
+	"./fr": 458,
+	"./fr-ca": 459,
+	"./fr-ca.js": 459,
+	"./fr-ch": 460,
+	"./fr-ch.js": 460,
+	"./fr.js": 458,
+	"./fy": 461,
+	"./fy.js": 461,
+	"./gd": 462,
+	"./gd.js": 462,
+	"./gl": 463,
+	"./gl.js": 463,
+	"./gom-latn": 464,
+	"./gom-latn.js": 464,
+	"./gu": 465,
+	"./gu.js": 465,
+	"./he": 466,
+	"./he.js": 466,
+	"./hi": 467,
+	"./hi.js": 467,
+	"./hr": 468,
+	"./hr.js": 468,
+	"./hu": 469,
+	"./hu.js": 469,
+	"./hy-am": 470,
+	"./hy-am.js": 470,
+	"./id": 471,
+	"./id.js": 471,
+	"./is": 472,
+	"./is.js": 472,
+	"./it": 473,
+	"./it.js": 473,
+	"./ja": 474,
+	"./ja.js": 474,
+	"./jv": 475,
+	"./jv.js": 475,
+	"./ka": 476,
+	"./ka.js": 476,
+	"./kk": 477,
+	"./kk.js": 477,
+	"./km": 478,
+	"./km.js": 478,
+	"./kn": 479,
+	"./kn.js": 479,
+	"./ko": 480,
+	"./ko.js": 480,
+	"./ku": 481,
+	"./ku.js": 481,
+	"./ky": 482,
+	"./ky.js": 482,
+	"./lb": 483,
+	"./lb.js": 483,
+	"./lo": 484,
+	"./lo.js": 484,
+	"./lt": 485,
+	"./lt.js": 485,
+	"./lv": 486,
+	"./lv.js": 486,
+	"./me": 487,
+	"./me.js": 487,
+	"./mi": 488,
+	"./mi.js": 488,
+	"./mk": 489,
+	"./mk.js": 489,
+	"./ml": 490,
+	"./ml.js": 490,
+	"./mn": 491,
+	"./mn.js": 491,
+	"./mr": 492,
+	"./mr.js": 492,
+	"./ms": 493,
+	"./ms-my": 494,
+	"./ms-my.js": 494,
+	"./ms.js": 493,
+	"./mt": 495,
+	"./mt.js": 495,
+	"./my": 496,
+	"./my.js": 496,
+	"./nb": 497,
+	"./nb.js": 497,
+	"./ne": 498,
+	"./ne.js": 498,
+	"./nl": 499,
+	"./nl-be": 500,
+	"./nl-be.js": 500,
+	"./nl.js": 499,
+	"./nn": 501,
+	"./nn.js": 501,
+	"./pa-in": 502,
+	"./pa-in.js": 502,
+	"./pl": 503,
+	"./pl.js": 503,
+	"./pt": 504,
+	"./pt-br": 505,
+	"./pt-br.js": 505,
+	"./pt.js": 504,
+	"./ro": 506,
+	"./ro.js": 506,
+	"./ru": 507,
+	"./ru.js": 507,
+	"./sd": 508,
+	"./sd.js": 508,
+	"./se": 509,
+	"./se.js": 509,
+	"./si": 510,
+	"./si.js": 510,
+	"./sk": 511,
+	"./sk.js": 511,
+	"./sl": 512,
+	"./sl.js": 512,
+	"./sq": 513,
+	"./sq.js": 513,
+	"./sr": 514,
+	"./sr-cyrl": 515,
+	"./sr-cyrl.js": 515,
+	"./sr.js": 514,
+	"./ss": 516,
+	"./ss.js": 516,
+	"./sv": 517,
+	"./sv.js": 517,
+	"./sw": 518,
+	"./sw.js": 518,
+	"./ta": 519,
+	"./ta.js": 519,
+	"./te": 520,
+	"./te.js": 520,
+	"./tet": 521,
+	"./tet.js": 521,
+	"./tg": 522,
+	"./tg.js": 522,
+	"./th": 523,
+	"./th.js": 523,
+	"./tl-ph": 524,
+	"./tl-ph.js": 524,
+	"./tlh": 525,
+	"./tlh.js": 525,
+	"./tr": 526,
+	"./tr.js": 526,
+	"./tzl": 527,
+	"./tzl.js": 527,
+	"./tzm": 528,
+	"./tzm-latn": 529,
+	"./tzm-latn.js": 529,
+	"./tzm.js": 528,
+	"./ug-cn": 530,
+	"./ug-cn.js": 530,
+	"./uk": 531,
+	"./uk.js": 531,
+	"./ur": 532,
+	"./ur.js": 532,
+	"./uz": 533,
+	"./uz-latn": 534,
+	"./uz-latn.js": 534,
+	"./uz.js": 533,
+	"./vi": 535,
+	"./vi.js": 535,
+	"./x-pseudo": 536,
+	"./x-pseudo.js": 536,
+	"./yo": 537,
+	"./yo.js": 537,
+	"./zh-cn": 538,
+	"./zh-cn.js": 538,
+	"./zh-hk": 539,
+	"./zh-hk.js": 539,
+	"./zh-tw": 540,
+	"./zh-tw.js": 540
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -7515,9 +7851,9 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 822;
+webpackContext.id = 825;
 
 /***/ })
 
-},[540]);
+},[543]);
 //# sourceMappingURL=main.js.map

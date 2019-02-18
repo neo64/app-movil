@@ -1,14 +1,14 @@
 webpackJsonp([22],{
 
-/***/ 848:
+/***/ 857:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginInputPageModule", function() { return LoginInputPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginRegistroPageModule", function() { return LoginRegistroPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_input__ = __webpack_require__(227);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_registro__ = __webpack_require__(229);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LoginInputPageModule = /** @class */ (function () {
-    function LoginInputPageModule() {
+var LoginRegistroPageModule = /** @class */ (function () {
+    function LoginRegistroPageModule() {
     }
-    LoginInputPageModule = __decorate([
+    LoginRegistroPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__login_input__["a" /* LoginInputPage */],
+                __WEBPACK_IMPORTED_MODULE_2__login_registro__["a" /* LoginRegistroPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_input__["a" /* LoginInputPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_registro__["a" /* LoginRegistroPage */]),
             ],
         })
-    ], LoginInputPageModule);
-    return LoginInputPageModule;
+    ], LoginRegistroPageModule);
+    return LoginRegistroPageModule;
 }());
 
-//# sourceMappingURL=login-input.module.js.map
+//# sourceMappingURL=login-registro.module.js.map
 
 /***/ })
 
