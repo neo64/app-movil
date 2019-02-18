@@ -42578,6 +42578,18 @@ body {
   letter-spacing: 1.5px;
 }
 
+@media screen and (min-width: 321px) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media screen and (min-width: 376px) {
+  html {
+    font-size: 75%;
+  }
+}
+
 .fb-card {
   margin: 1.5rem 0;
   padding: 1.2rem 1rem;
@@ -43300,8 +43312,9 @@ fb-button-icon button {
   border-radius: 6px;
   -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
-  height: -webkit-fill-available;
   width: 100%;
+  height: 100%;
+  padding: 1rem 0.5rem 0.5rem;
 }
 
 fb-button-icon button.active {
@@ -43312,12 +43325,16 @@ fb-button-icon button.active {
 fb-button-icon p {
   color: black;
   font-weight: 400;
-  font-size: 1.2rem;
-  margin-top: 5%;
+  font-size: 1rem;
+  margin: 0;
 }
 
 fb-button-icon p.active {
   color: white;
+}
+
+fb-button-icon p:nth-child(2) {
+  margin-top: 0.5rem;
 }
 
 fb-button-icon .btn-large {
@@ -43646,14 +43663,42 @@ page-documentos-contables .toolbar-background-md {
   background: white;
 }
 
+page-home {
+  background-color: white;
+}
+
 page-home .back {
-  margin: -25%;
-  height: 70%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 55vh;
+  position: relative;
   background: linear-gradient(150deg, #81a8d9 20%, #f3a7c9 100%);
-  border-radius: 50% / 25%;
-  padding: 25% 10% 0% 35%;
-  -webkit-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+  padding: 10% 5% 5% 5%;
+}
+
+page-home .back::after {
+  background-image: url("../assets/imgs/curva.png");
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  position: absolute;
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
 }
 
 page-home ion-header .toolbar {
@@ -43677,21 +43722,25 @@ page-home ion-button {
 }
 
 page-home ion-slides {
-  margin-top: 0px;
-  height: 200px;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: auto;
 }
 
 page-home ion-slide {
-  padding: 0 60px;
+  margin-bottom: 2rem;
 }
 
-page-home .swiper-slide {
-  height: 80%;
-  margin-top: 2%;
+page-home .swiper-container {
+  overflow: visible;
 }
 
 page-home .swiper-container-horizontal > .swiper-pagination-bullets {
-  bottom: 0;
+  bottom: -10px;
 }
 
 page-home .square .swiper-pagination-bullet-active {
@@ -43708,20 +43757,12 @@ page-home .bar-button-menutoggle-md {
   color: white;
 }
 
-page-home .square {
-  height: 10rem;
-}
-
 page-home .tratamiento {
-  color: white;
-  font-size: 2.5rem;
-  margin-top: 6%;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  text-align: left;
 }
 
 page-home .doctor {
@@ -43749,6 +43790,146 @@ page-home .button {
 
 page-home .cien {
   width: 100%;
+}
+
+page-home .menu {
+  padding: 0 5%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 45vh;
+}
+
+page-home .cardCita {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 23vh;
+  color: white;
+}
+
+page-home .cardCita__left {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 25%;
+  -ms-flex: 0 25%;
+  flex: 0 25%;
+  padding: 1.5rem 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 6px 0 0 6px;
+}
+
+page-home .cardCita__right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 75%;
+  -ms-flex: 1 75%;
+  flex: 1 75%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem 1rem 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+page-home .cardCita__day {
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 3rem;
+}
+
+page-home .cardCita__month {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+page-home .cardCita__hour {
+  color: white;
+  font-size: 1.5rem;
+}
+
+page-home .cardCita__tto {
+  letter-spacing: 3px;
+}
+
+page-home .cardCita__dr {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-home .cardCita__avatar {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 27%;
+  -ms-flex: 0 27%;
+  flex: 0 27%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+page-home .cardCita__drname {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 73%;
+  -ms-flex: 1 73%;
+  flex: 1 73%;
+  font-size: 1.5rem;
+  text-align: left;
+  margin-left: 1rem;
 }
 
 page-instrucciones ion-title {

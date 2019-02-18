@@ -1,38 +1,35 @@
 fb-button-icon {
-	
-	button{
-		background: white;
-		border-radius: 6px;
-		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
-		height: -webkit-fill-available;
-		width: 100%;
-
-		&.active{
-			background: map-get($colors, pink-dark);
-			color: white;
-		}
-	}
-	
-	p{
-		color: black;
-		font-weight: 400;
-    	font-size: 1.2rem;
-    	margin-top: 5%;
-    	&.active{
-			color: white;
-		}
-	}
-
-	.btn-large{
-    	font-size: 1.6rem;
-    	margin-top: 2rem;
-    	line-height: 1.8rem;
-	}
-
-	fill: url(#fb-gradient);
-
-	.active{
-		fill: white;
-	}
-
+  button {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .12) !important;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0.5rem 0.5rem;
+    &.active {
+      background: map-get($colors, pink-dark);
+      color: white;
+    }
+  }
+  p {
+    color: black;
+    font-weight: 400;
+    font-size: 1rem;
+    margin: 0;
+    &.active {
+      color: white;
+    }
+  }
+  p:nth-child(2) {
+    margin-top: 0.5rem;
+  }
+  .btn-large {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    line-height: 1.8rem;
+  }
+  fill: url(#fb-gradient);
+  .active {
+    fill: white;
+  }
 }
