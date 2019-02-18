@@ -5100,6 +5100,7 @@ var map = {
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
 		869,
+<<<<<<< HEAD
 		12
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
@@ -5109,6 +5110,17 @@ var map = {
 	"../pages/plan-economico/plan-economico.module": [
 		868,
 		13
+=======
+		11
+	],
+	"../pages/plan-economico-detail/plan-economico-detail.module": [
+		867,
+		10
+	],
+	"../pages/plan-economico/plan-economico.module": [
+		868,
+		9
+>>>>>>> master
 	],
 	"../pages/popover/popover.module": [
 		870,
@@ -5116,6 +5128,7 @@ var map = {
 	],
 	"../pages/presupuestos/presupuestos.module": [
 		877,
+<<<<<<< HEAD
 		3
 	],
 	"../pages/profile/profile.module": [
@@ -5141,6 +5154,33 @@ var map = {
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
 		876,
 		4
+=======
+		7
+	],
+	"../pages/profile/profile.module": [
+		871,
+		6
+	],
+	"../pages/recall-pasadas/recall-pasadas.module": [
+		872,
+		5
+	],
+	"../pages/recall/recall.module": [
+		873,
+		4
+	],
+	"../pages/sugerencias/sugerencias.module": [
+		874,
+		3
+	],
+	"../pages/tab-higienes/tab-higienes.module": [
+		875,
+		2
+	],
+	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
+		876,
+		1
+>>>>>>> master
 	]
 };
 function webpackAsyncContext(req) {
