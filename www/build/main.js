@@ -4396,7 +4396,7 @@ var PedirCitaReservaPage = /** @class */ (function () {
     };
     PedirCitaReservaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-pedir-cita-reserva',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Cita reservada</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Lonncontrary to popula</p>\n\n    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">\n	    <ion-slide *ngFor="let item of citasBuscador">\n	      <div class="fb-card -vcita -gradient">\n	          <div class="card_row">\n	              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n	                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n	                      {{item.diaSemana}}\n	                  </div>\n	                  <div class="card_time -white">\n	                      {{item.dia}}\n	                      <span>\n	                      {{item.mes}}\n	                      </span>\n	                  </div>\n	                  <div class="card_subtitle -white" style="font-size:1rem;">\n	                      {{item.ano}}\n	                  </div>\n	              </div>\n	              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n	                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n	                      <div class="card_time -white">\n	                          {{item.hora}}\n	                          <span style="display:inline;">\n	                              H\n	                          </span>\n	                      </div>\n	                      <div class="card_subtitle -white">\n	                          Duración:\n	                          <span>\n	                              {{item.Duracion}}\'\n	                          </span>\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	          <div class="card_content -bg-white">\n	              <div class="card_row">\n	                  <div>\n	                      <div class="card_label">\n	                          Tratamiento\n	                      </div>\n	                      <div class="card_title">\n	                         {{item.tratamiento}}\n	                      </div>\n	                  </div>\n	              </div>\n	              <div class="card_separator">\n	              </div>\n	              <div class="card_row">\n	                  <div class="left">\n	                      <div class="card_label">\n	                          Profesional\n	                      </div>\n	                      <div class="card_container">\n	                          <div class="avatar">\n	                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n	                          </div>\n	                          <div class="card_title">\n	                             {{item.usuario}}\n	                          </div>\n	                      </div>\n	                  </div>\n	                  <div class="right">\n	                      <div class="card_label">\n	                          Estado de la cita\n	                      </div>\n	                      <div class="card_estado">\n	                          Reservada\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	      </div>\n	    </ion-slide>\n 	</ion-slides>\n\n 	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">4 de 4</p>\n\n	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">\n		<ion-col><fb-button [name]="bInicio" [class]="bInicio.class" (click)="inicio()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/,
+            selector: 'page-pedir-cita-reserva',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Cita reservada</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n	\n	<div style=" margin: 4rem;">\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Lonncontrary to popula</p>\n\n    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">\n	    <ion-slide *ngFor="let item of citasBuscador">\n	      <div class="fb-card -vcita -gradient">\n	          <div class="card_row">\n	              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">\n	                  <div class="card_subtitle -white" style="font-size: 1.4rem;">\n	                      {{item.diaSemana}}\n	                  </div>\n	                  <div class="card_time -white">\n	                      {{item.dia}}\n	                      <span>\n	                      {{item.mes}}\n	                      </span>\n	                  </div>\n	                  <div class="card_subtitle -white" style="font-size:1rem;">\n	                      {{item.ano}}\n	                  </div>\n	              </div>\n	              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">\n	                  <div style="display:flex;flex-direction:column;align-items: flex-end;">\n	                      <div class="card_time -white">\n	                          {{item.hora}}\n	                          <span style="display:inline;">\n	                              H\n	                          </span>\n	                      </div>\n	                      <div class="card_subtitle -white">\n	                          Duración:\n	                          <span>\n	                              {{item.Duracion}}\'\n	                          </span>\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	          <div class="card_content -bg-white">\n	              <div class="card_row">\n	                  <div>\n	                      <div class="card_label">\n	                          Tratamiento\n	                      </div>\n	                      <div class="card_title">\n	                         {{item.tratamiento}}\n	                      </div>\n	                  </div>\n	              </div>\n	              <div class="card_separator">\n	              </div>\n	              <div class="card_row">\n	                  <div class="left">\n	                      <div class="card_label">\n	                          Profesional\n	                      </div>\n	                      <div class="card_container">\n	                          <div class="avatar">\n	                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />\n	                          </div>\n	                          <div class="card_title">\n	                             {{item.usuario}}\n	                          </div>\n	                      </div>\n	                  </div>\n	                  <div class="right">\n	                      <div class="card_label">\n	                          Estado de la cita\n	                      </div>\n	                      <div class="card_estado">\n	                          Reservada\n	                      </div>\n	                  </div>\n	              </div>\n	          </div>\n	      </div>\n	    </ion-slide>\n 	</ion-slides>\n\n 	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">4 de 4</p>\n\n	<ion-row style="max-height: 9%;    display: flex;    width: 50%;    margin: 0 auto;">\n		<ion-col><fb-button [name]="bInicio" [class]="bInicio.class" (click)="inicio()" ></fb-button></ion-col>\n	</ion-row>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita-reserva/pedir-cita-reserva.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_3__angular_platform_browser__["c" /* DomSanitizer */]])
     ], PedirCitaReservaPage);
@@ -5088,59 +5088,59 @@ var map = {
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
 		864,
-		14
+		2
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
 		865,
-		13
+		1
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
 		866,
-		12
+		7
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
 		869,
-		11
+		12
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
 		867,
-		10
+		14
 	],
 	"../pages/plan-economico/plan-economico.module": [
 		868,
-		9
+		13
 	],
 	"../pages/popover/popover.module": [
 		870,
-		8
+		10
 	],
 	"../pages/presupuestos/presupuestos.module": [
 		877,
-		7
+		3
 	],
 	"../pages/profile/profile.module": [
 		871,
-		6
+		9
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
 		872,
-		5
+		11
 	],
 	"../pages/recall/recall.module": [
 		873,
-		4
+		8
 	],
 	"../pages/sugerencias/sugerencias.module": [
 		874,
-		3
+		6
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
 		875,
-		2
+		5
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
 		876,
-		1
+		4
 	]
 };
 function webpackAsyncContext(req) {

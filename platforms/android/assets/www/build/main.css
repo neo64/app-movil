@@ -43291,6 +43291,10 @@ fb-button .login {
   color: #38383b;
 }
 
+fb-button-icon {
+  fill: url(#fb-gradient);
+}
+
 fb-button-icon button {
   background: white;
   border-radius: 6px;
@@ -43320,6 +43324,10 @@ fb-button-icon .btn-large {
   font-size: 1.6rem;
   margin-top: 2rem;
   line-height: 1.8rem;
+}
+
+fb-button-icon .active {
+  fill: white;
 }
 
 fb-titulo-subtitulo h1 {
@@ -43582,6 +43590,10 @@ page-consejos-detail ion-title {
   z-index: 0;
 }
 
+page-consejos-detail .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-consejos-detail ion-icon {
   color: #f3a7c9;
   font-size: 2em;
@@ -43595,6 +43607,10 @@ page-consejos-personalizados ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-consejos-personalizados .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-consejos-personalizados ion-icon {
@@ -43615,6 +43631,10 @@ page-documentos-contables ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-documentos-contables .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-documentos-contables ion-icon {
@@ -43735,6 +43755,10 @@ page-instrucciones ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-instrucciones .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-instrucciones ion-icon {
@@ -44194,6 +44218,7 @@ page-mi-salud .back {
 
 page-mi-salud .back-button.show-back-button {
   color: white;
+  z-index: 1111;
 }
 
 page-mi-salud ion-header .toolbar {
@@ -44348,6 +44373,7 @@ page-mis-documentos .back {
 
 page-mis-documentos .back-button.show-back-button {
   color: white;
+  z-index: 1111;
 }
 
 page-mis-documentos ion-header .toolbar {
@@ -44447,30 +44473,146 @@ page-mis-documentos .cien {
   width: 100%;
 }
 
-page-pedir-cita .card-md p {
-  font-size: 20px;
-}
-
-page-pedir-cita .left {
-  text-align: left;
-}
-
-page-pedir-cita .center {
+page-pedir-cita ion-title {
   text-align: center;
+  margin-left: -15%;
+  z-index: 0;
 }
 
-page-pedir-cita .right {
-  text-align: right;
+page-pedir-cita .back-button.show-back-button {
+  z-index: 1111;
 }
 
-page-pedir-cita ion-select {
-  max-width: 70%;
+page-pedir-cita ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita .header-md::after, page-pedir-cita .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita .footer-md::before, page-pedir-cita .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-pedir-cita-elegir ion-slides {
+  margin-top: 0px;
+  height: auto;
+}
+
+page-pedir-cita-elegir ion-slide {
+  padding: 0 60px;
+}
+
+page-pedir-cita-elegir .swiper-slide {
+  height: 80%;
+  padding: 0rem 6rem 0rem 4rem;
+}
+
+page-pedir-cita-elegir .slide-zoom {
+  text-align: center;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+page-pedir-cita-elegir ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-pedir-cita-elegir .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-pedir-cita-elegir ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita-elegir .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita-elegir .header-md::after, page-pedir-cita-elegir .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita-elegir .footer-md::before, page-pedir-cita-elegir .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-pedir-cita-preferencias {
+  fill: url(#fb-gradient);
+}
+
+page-pedir-cita-preferencias ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-pedir-cita-preferencias .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-pedir-cita-preferencias ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-pedir-cita-preferencias .toolbar-background-md {
+  background: white;
+}
+
+page-pedir-cita-preferencias .header-md::after, page-pedir-cita-preferencias .tabs-md[tabsPlacement="top"] > .tabbar::after, page-pedir-cita-preferencias .footer-md::before, page-pedir-cita-preferencias .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-pedir-cita-preferencias .button {
+  background: white;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
+  height: -webkit-fill-available;
+  width: 100%;
+}
+
+page-pedir-cita-preferencias .button.active {
+  background: #ed7aad;
+  color: white;
+}
+
+page-pedir-cita-preferencias p {
+  color: black;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 5%;
+}
+
+page-pedir-cita-preferencias p.active {
+  color: white;
+}
+
+page-pedir-cita-preferencias .btn-large {
+  font-size: 1.6rem;
+  margin-top: 2rem;
+  line-height: 1.8rem;
+}
+
+page-pedir-cita-preferencias .active {
+  fill: white;
 }
 
 page-plan-economico ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-plan-economico .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-plan-economico ion-icon {
@@ -44488,6 +44630,10 @@ page-plan-economico-detail ion-title {
   z-index: 0;
 }
 
+page-plan-economico-detail .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-plan-economico-detail ion-icon {
   color: #f3a7c9;
   font-size: 2em;
@@ -44501,6 +44647,10 @@ page-presupuestos ion-title {
   text-align: center;
   margin-left: -15%;
   z-index: 0;
+}
+
+page-presupuestos .back-button.show-back-button {
+  z-index: 1111;
 }
 
 page-presupuestos ion-icon {

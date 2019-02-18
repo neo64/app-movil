@@ -1,14 +1,14 @@
 webpackJsonp([12],{
 
-/***/ 866:
+/***/ 869:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedirCitaReservaPageModule", function() { return PedirCitaReservaPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedirCitaPageModule", function() { return PedirCitaPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedir_cita_reserva__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedir_cita__ = __webpack_require__(48);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PedirCitaReservaPageModule = /** @class */ (function () {
-    function PedirCitaReservaPageModule() {
+var PedirCitaPageModule = /** @class */ (function () {
+    function PedirCitaPageModule() {
     }
-    PedirCitaReservaPageModule = __decorate([
+    PedirCitaPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
+            //PedirCitaPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedir_cita_reserva__["a" /* PedirCitaReservaPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedir_cita__["a" /* PedirCitaPage */]),
             ],
         })
-    ], PedirCitaReservaPageModule);
-    return PedirCitaReservaPageModule;
+    ], PedirCitaPageModule);
+    return PedirCitaPageModule;
 }());
 
-//# sourceMappingURL=pedir-cita-reserva.module.js.map
+//# sourceMappingURL=pedir-cita.module.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([1],{
 
-/***/ 876:
+/***/ 865:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabConsultarCitasModule", function() { return TabConsultarCitasModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedirCitaPreferenciasPageModule", function() { return PedirCitaPreferenciasPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedir_cita_preferencias__ = __webpack_require__(145);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabConsultarCitasModule = /** @class */ (function () {
-    function TabConsultarCitasModule() {
+var PedirCitaPreferenciasPageModule = /** @class */ (function () {
+    function PedirCitaPreferenciasPageModule() {
     }
-    TabConsultarCitasModule = __decorate([
+    PedirCitaPreferenciasPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //TabConsultarCitas,
+                __WEBPACK_IMPORTED_MODULE_2__pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__["a" /* TabConsultarCitas */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */]),
             ],
         })
-    ], TabConsultarCitasModule);
-    return TabConsultarCitasModule;
+    ], PedirCitaPreferenciasPageModule);
+    return PedirCitaPreferenciasPageModule;
 }());
 
-//# sourceMappingURL=tabConsultarCitas.module.js.map
+//# sourceMappingURL=pedir-cita-preferencias.module.js.map
 
 /***/ })
 

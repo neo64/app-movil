@@ -1,14 +1,14 @@
 webpackJsonp([28],{
 
-/***/ 844:
+/***/ 848:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsejosDetailPageModule", function() { return ConsejosDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DocFirmadosPageModule", function() { return DocFirmadosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__consejos_detail__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__doc_firmados__ = __webpack_require__(541);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ConsejosDetailPageModule = /** @class */ (function () {
-    function ConsejosDetailPageModule() {
+var DocFirmadosPageModule = /** @class */ (function () {
+    function DocFirmadosPageModule() {
     }
-    ConsejosDetailPageModule = __decorate([
+    DocFirmadosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__consejos_detail__["a" /* ConsejosDetailPage */],
+            //DocFirmadosPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__consejos_detail__["a" /* ConsejosDetailPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__doc_firmados__["a" /* DocFirmadosPage */]),
             ],
         })
-    ], ConsejosDetailPageModule);
-    return ConsejosDetailPageModule;
+    ], DocFirmadosPageModule);
+    return DocFirmadosPageModule;
 }());
 
-//# sourceMappingURL=consejos-detail.module.js.map
+//# sourceMappingURL=doc-firmados.module.js.map
 
 /***/ })
 
