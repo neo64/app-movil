@@ -1,108 +1,177 @@
 page-home {
-	
-	.back{
-		margin: -25%;
-    	height: 70%;
-    	background: linear-gradient(150deg, map-get($colors, primary) 20%, map-get($colors, secondary) 100%);
-    	border-radius: 50% / 25%;
-    	padding: 25% 10% 0% 35%;
-    	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
-	}
-
-	ion-header {
-  		.toolbar {
-    		position: absolute;
-    		.toolbar-background {
-      			background: transparent;
-    		}
-    		.toolbar-title {
-      			color: white;
-    		}
-  		}
-	}
-
-	ion-title {
-		text-align:center;
-	}
-
-	ion-button{
-		color:white;
-	}
-
-	ion-slides {
-	    margin-top: 0px;
-	    height: 200px;
-	}
-
-	ion-slide {
-	    padding: 0 60px;
-	}
-
-	.swiper-slide{
-		height: 80%;
-		margin-top: 2%;
-	}
-
-	.swiper-container-horizontal > .swiper-pagination-bullets {
-	    bottom: 0;
-	}
-
-	.square .swiper-pagination-bullet-active {
-	    background: map-get($colors, secondary);
-	    opacity: 1;
-	}
-
-	.swiper-pagination-bullet-active {
-	    background: white;
-	    opacity: 1;
-	}
-
-	.bar-button-menutoggle-md {
-	    color: white;
-	}
-
-	.square{
-		height: 10rem;
-	}
-
-	.tratamiento{
-		color:white;
-		font-size: 2.5rem;    
-		margin-top: 6%;       
-	    overflow: hidden;
-    	text-overflow: ellipsis;
-    	display: -webkit-box;
-    	-webkit-line-clamp: 2;
-    	-webkit-box-orient: vertical;
-    	text-align: left;
-
-	}
-
-	.doctor{
-		color:white; 
-		max-height: 5rem;   
-	    overflow: hidden;
-    	text-overflow: ellipsis;
-    	display: -webkit-box;
-    	-webkit-line-clamp: 2;
-    	-webkit-box-orient: vertical;
-    	text-align: left;
-
-	}
-
-	.tratamiento:first-letter {
-	    text-transform: uppercase;
-	}
-
-	.button{
-		background: white;
-		border-radius: 2rem;
-		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
-		height: -webkit-fill-available;
-	}
-
-	.cien{
-		width: 100%;
-	}
-
+  background-color: white;
+  .back {
+    //margin: -25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 55vh;
+    position: relative;
+    background: linear-gradient(150deg, map-get($colors, primary) 20%, map-get($colors, secondary) 100%); //border-radius: 50% / 25%;
+    padding: 10% 5% 5% 5%; //box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) !important;
+    &::after {
+      background-image: url('../assets/imgs/curva.png');
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: bottom center;
+    }
+  }
+  ion-header {
+    .toolbar {
+      position: absolute;
+      .toolbar-background {
+        background: transparent;
+      }
+      .toolbar-title {
+        color: white;
+      }
+    }
+  }
+  ion-title {
+    text-align: center;
+  }
+  ion-button {
+    color: white;
+  }
+  ion-slides {
+    //margin-top: 0px;
+    //height: 200px;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    height: auto;
+  }
+  ion-slide {
+    //padding: 0 60px;
+    margin-bottom: 2rem;
+  }
+  .swiper-slide {
+    // height: 80%;
+    //margin-top: 2%;
+    //padding: 0 20px;
+  }
+  .swiper-container {
+    overflow: visible;
+  }
+  .swiper-container-horizontal > .swiper-pagination-bullets {
+    bottom: -10px;
+  }
+  .square .swiper-pagination-bullet-active {
+    background: map-get($colors, secondary);
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    background: white;
+    opacity: 1;
+  }
+  .bar-button-menutoggle-md {
+    color: white;
+  }
+  .square {
+    //height: 10rem;
+  }
+  .tratamiento {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .doctor {
+    color: white;
+    max-height: 5rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-align: left;
+  }
+  .tratamiento:first-letter {
+    text-transform: uppercase;
+  }
+  .button {
+    background: white;
+    border-radius: 2rem;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .12) !important;
+    height: -webkit-fill-available;
+  }
+  .cien {
+    width: 100%;
+  }
+  .menu {
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 45vh;
+  }
+  .cardCita {
+    background-color: hsla(0, 0%, 100%, 0.3);
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    height: 23vh;
+    color: white;
+    &__left {
+      flex: 0 25%;
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background-color: rgba(255, 255, 255, 0.15);
+      border-radius: 6px 0 0 6px;
+    }
+    &__right {
+      flex: 1 75%;
+      display: flex;
+      padding: 1.5rem 1rem 0.5rem;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    &__date {}
+    &__day {
+      font-size: 3.5rem;
+      font-weight: bold;
+      line-height: 3rem;
+    }
+    &__month {
+      font-size: 1.5rem;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+    }
+    &__hour {
+      color: white;
+      font-size: 1.5rem;
+    }
+    &__tto {
+      letter-spacing: 3px;
+    }
+    &__dr {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    &__avatar {
+      flex: 0 27%;
+      display: flex;
+      align-items: center;
+    }
+    &__drname {
+      flex: 1 73%;
+      font-size: 1.5rem;
+      text-align: left;
+      margin-left: 1rem;
+    }
+  }
 }

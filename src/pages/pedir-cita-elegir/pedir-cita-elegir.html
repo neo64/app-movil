@@ -7,15 +7,16 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-	<div style=" margin: 2rem;">
+	<div style=" margin: 4rem;">
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
 
-    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
+    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
 
-    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">
+   
+    <ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true">
     <ion-slide *ngFor="let item of citasBuscador">
       <div class="fb-card -vcita -gradient">
           <div class="card_row">
@@ -93,9 +94,9 @@
     </ion-slide>
   </ion-slides>
 
-    <p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">3 de 4</p>
+    <p style=" text-align: center; margin: 2rem 0 0rem 0; font-size: 1rem;">3 de 4</p>
 
-    <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
+    <ion-row style="max-height: 9%;    display: flex;    width: 50%;    margin: 0 auto;">
 		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>
 	</ion-row>
 
