@@ -1,14 +1,14 @@
 webpackJsonp([8],{
 
-/***/ 870:
+/***/ 873:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PopoverPageModule", function() { return PopoverPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RecallPageModule", function() { return RecallPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__popover__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__recall__ = __webpack_require__(76);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PopoverPageModule = /** @class */ (function () {
-    function PopoverPageModule() {
+var RecallPageModule = /** @class */ (function () {
+    function RecallPageModule() {
     }
-    PopoverPageModule = __decorate([
+    RecallPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //PopoverPage,
+            //RecallPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__popover__["a" /* PopoverPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__recall__["a" /* RecallPage */]),
             ],
         })
-    ], PopoverPageModule);
-    return PopoverPageModule;
+    ], RecallPageModule);
+    return RecallPageModule;
 }());
 
-//# sourceMappingURL=popover.module.js.map
+//# sourceMappingURL=recall.module.js.map
 
 /***/ })
 
