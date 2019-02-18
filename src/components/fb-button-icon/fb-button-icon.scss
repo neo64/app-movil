@@ -4,7 +4,6 @@ fb-button-icon {
     border-radius: 6px;
     box-shadow: 0 3px 20px rgba(0, 0, 0, .12) !important;
     width: 100%;
-    height: 100%;
     padding: 1rem 0.5rem 0.5rem;
     &.active {
       background: map-get($colors, pink-dark);
@@ -24,8 +23,9 @@ fb-button-icon {
     margin-top: 0.5rem;
   }
   .btn-large {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin-top: 2rem;
+    padding: 1rem 0.5rem;
     line-height: 1.8rem;
   }
   fill: url(#fb-gradient);

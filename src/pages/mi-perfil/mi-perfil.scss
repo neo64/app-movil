@@ -1,110 +1,104 @@
 page-mi-perfil {
-
-	ion-title{
-		text-align:center;
-		margin-left: -15%;
-		z-index: 0;
-	}
-
-	.back-button.show-back-button{
-		z-index: 1111;
-	}
-
-	ion-icon{
-		color: map-get($colors, secondary);
-		font-size: 2em;		
-	}
-
-	hr{
-		margin-right: -30%;
-    	margin-left: 20%;
-	}
-
-	.pLeft{
-		margin-top: 0.4rem;
-    	float: left;
-    	max-width: 75%;
-	}
-
-	.pRight{
-		margin-top: 0.4rem;
-    	float: right;
-    	margin-left: 5%;
-    	max-width: 75%;
-	}
-
-	.leftIcon{
-		float: left;
-		margin-left: 5%;
-	}
-
-	.editIcon{
-	    background: white;
-	    position: absolute;
-	    top: 85%;
-    	left: 85%;
-	    border-radius: 50%;
-	    padding: 1rem;
-	    border: 1px solid;
-	}
-
-	.rightIcon{
-		float: right;
-	}
-
-	.h1{
-		    margin-top: 5%;
-	}
-
-	.toolbar-background-md{
-		background: white;
-	}
-
-	.imageProfile{
-		width:100%;
-		height:20rem;
-		border-radius: 1rem;
-	}
-
-	.right{
-		text-align: right;
-	}
-
-	.email{
-		text-overflow:ellipsis;
-  		white-space:nowrap; 
-  		overflow:hidden; 
-	}
-
-	.paddingBtn{
-		padding: 0rem 1.5rem 4rem 1.5rem;
-	}
-
-	.nombre{
-		font-size: 4rem;
-    	margin: 0;
-	}
-
-	.apellidos{
-		font-size: 3rem;
-    	margin: 5% 0 0 10%;
-	}
-
-	.row30{
-	    height: 30%;
-	    margin-top: -2rem;
-	}
-
-	.btn.-rounded {
-	    display: flex;
-	    justify-content: center;
-	    width: 30px;
-	    height: 30px;
-	    border-radius: 50%;
-	}
-
-	.-bg-pink {
-	    background-color: #ed7aad !important;
-	}
-
+  .container {
+    height: 53vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .perfil {
+    display: flex;
+    &__foto {
+      flex: 1 40%;
+      position: relative;
+    }
+    &__datos {
+      flex: 0 60%;
+      margin-left: 2rem;
+      width: 60%;
+    }
+    &__dato {
+      display: flex;
+      margin: 1.5rem 0;
+      align-items: center;
+      & .lefticon {
+        flex: 0 10%;
+      }
+      & .pRight {
+        flex: 1 90%;
+        margin: 0;
+        margin-left: 0.5rem;
+        text-align: right;
+      }
+    }
+  }
+  ion-title {
+    text-align: center;
+    margin-left: -15%;
+    z-index: 0;
+  }
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+  ion-icon {
+    color: map-get($colors, pink-dark);
+    font-size: 2em;
+  }
+  hr {
+    margin-right: -30%;
+    margin-left: 20%;
+    height: 1px!important;
+  }
+  .editIcon {
+    background: white;
+    position: absolute;
+    bottom: 12px;
+    right: -12px;
+    border-radius: 50%;
+    padding: 1rem;
+    border: 1px solid;
+  }
+  .h1 {
+    margin-top: 5%;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
+  .imageProfile {
+    width: 100%;
+    height: 15rem;
+    border-radius: 1rem;
+  }
+  .right {
+    text-align: right;
+  }
+  .email {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .paddingBtn {
+    padding: 0rem 1.5rem 4rem 1.5rem;
+  }
+  .nombre {
+    font-size: 3rem;
+    margin: 0;
+  }
+  .apellidos {
+    font-size: 2rem;
+    margin: 5% 0 0 10%;
+  }
+  .row30 {
+    height: 30%;
+    margin-top: -2rem;
+  }
+  .btn.-rounded {
+    display: flex;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  .-bg-pink {
+    background-color: #ed7aad !important;
+  }
 }
