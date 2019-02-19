@@ -644,3 +644,47 @@ p {
     margin-left: 1rem;
   }
 }
+
+/*
+ * Custom Icons
+ */
+
+ion-icon {
+  &[class*="fb-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  } // custom icons
+  &[class*="fb-user"] {
+    mask-image: url(../assets/icon/user.svg);
+  }
+  &[class*="fb-mail"] {
+    mask-image: url(../assets/icon/lnr-envelope.svg);
+  }
+  &[class*="fb-dni"] {
+    mask-image: url(../assets/icon/lnr-license.svg);
+  }
+  &[class*="fb-calendar"] {
+    mask-image: url(../assets/icon/lnr-calendar-full.svg);
+  }
+  &[class*="fb-telephone"] {
+    mask-image: url(../assets/icon/lnr-phone-handset.svg);
+  }
+  &[class*="fb-location"] {
+    mask-image: url(../assets/icon/placeholder.svg);
+  }
+  &[class*="fb-phone"] {
+    mask-image: url(../assets/icon/lnr-smartphone.svg);
+  }
+  &[class*="fb-plus-linear"] {
+    mask-image: url(../assets/icon/lnr-plus-circle.svg);
+  }
+  &[class*="fb-alarm"] {
+    mask-image: url(../assets/icon/lnr-alarm.svg);
+  }
+}

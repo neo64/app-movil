@@ -745,7 +745,7 @@ var ProfilePage = /** @class */ (function () {
     };
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\profile\profile.html"*/'<ion-header>\n\n	<ion-navbar color="primary">\n\n		<ion-title>Perfil</ion-title>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- this fab is placed at bottom right -->\n\n	 <ion-fab bottom right #fab1>\n\n	   <button ion-fab (click)="openPage(\'Chat\', \'page\')" >\n\n	   		<svg style="    width: 60%;    height: 60%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">\n\n	   			<g fill="white" stroke="none"> \n\n	   				<path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/>\n\n	   				<path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/>\n\n   				</g>\n\n   			</svg>	   	\n\n	   </button>	   \n\n	 </ion-fab>\n\n	<ion-list> \n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Email</ion-label>\n\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Nombre</ion-label>\n\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Apellidos</ion-label>\n\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>DNI</ion-label>\n\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Fecha nacimiento</ion-label>\n\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Dirección</ion-label>\n\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Localidad</ion-label>\n\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Provincia</ion-label>\n\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Teléfono móvil</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Teléfono fijo</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Alergias</ion-label>\n\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="primary" stacked>Medicacion</ion-label>\n\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input>\n\n	  </ion-item>\n\n	  <ion-item>  \n\n	  </ion-item>\n\n	</ion-list>\n\n	<button ion-button (click)="setProfile()" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Actualizar datos</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\profile\profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\profile\profile.html"*/'<ion-header no-border>\n\n  		<ion-navbar>\n\n    		<ion-buttons left>\n\n	    		<button ion-button menuToggle>\n\n	      			<ion-icon name="menu"></ion-icon>\n\n    			</button>\n\n    		</ion-buttons>\n\n\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n\n\n    		<ion-buttons right>\n\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n\n	      			<ion-icon name="call"></ion-icon>\n\n	    		</button>\n\n    		</ion-buttons>\n\n\n\n  		</ion-navbar>\n\n	</ion-header>\n\n\n\n<ion-content padding>\n\n	<ion-list> \n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Nombre</ion-label>\n\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Apellidos</ion-label>\n\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Email</ion-label>\n\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input><ion-icon name="fb-mail" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>DNI</ion-label>\n\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Fecha nacimiento</ion-label>\n\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input><ion-icon name="fb-calendar" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Dirección</ion-label>\n\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Localidad</ion-label>\n\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Provincia</ion-label>\n\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Teléfono móvil</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input><ion-icon name="fb-phone" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Teléfono fijo</ion-label>\n\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input><ion-icon name="fb-telephone" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Alergias</ion-label>\n\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input><ion-icon name="fb-alarm" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>\n\n		<ion-label color="grey-medium" stacked>Medicacion</ion-label>\n\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input><ion-icon name="fb-plus-linear" item-right></ion-icon>\n\n	  </ion-item>\n\n	  <ion-item>  \n\n	  </ion-item>\n\n	</ion-list>\n\n	<button ion-button (click)="setProfile()" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Guardar cambios</button>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\App-fb\appfb\src\pages\profile\profile.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], ProfilePage);
@@ -2091,7 +2091,7 @@ var MiPerfilPage = /** @class */ (function () {
     };
     MiPerfilPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-mi-perfil',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mi Perfil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	<div class="container">\n\n		<div class="perfil">\n\n			<div class="perfil__foto">\n\n				<img  *ngIf="data.Imagen" [src]="domSanitizer.bypassSecurityTrustUrl(data.Imagen)" style="object-fit:cover;" class="imageProfile">\n\n				<a class="btn -rounded -bg-pink editIcon" (click)="openChooseImage()" style="padding: 0.5rem;box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37);    color: transparent;"> \n\n					 <svg viewBox="0 0 400 400" width="512" xmlns="http://www.w3.org/2000/svg"> -->\n\n						 <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0" fill="#FFFFFF"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0" fill="#FFFFFF"/> \n\n					 </svg> \n\n				 </a>\n\n			</div>\n\n			<div class="perfil__datos">\n\n				<div class="perfil__dato" style="margin-top:0px;">\n\n					<ion-icon name="pin" class="leftIcon"></ion-icon>\n\n					<p class="pRight">{{ data.Direccion }} <br/> {{ data.CP }} - {{ data.Localidad }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="phone-portrait"></ion-icon>\n\n					<p class="pRight">{{ data.TelMovil }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="mail"></ion-icon>\n\n					<p class="pRight" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden; ">{{ data.Email }}</p>\n\n				</div>\n\n			</div>\n\n		</div>\n\n		<ion-row>\n\n			<ion-col>\n\n				<p class="nombre">{{ data.Nombre }} </p>\n\n				<p class="apellidos">{{ data.Apellidos }} </p>\n\n			</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col><hr /></ion-col>\n\n		</ion-row>\n\n	</div>\n\n	<ion-row class="h1">\n\n		<ion-col><h1 style="font-size: 2.4rem;"><b>Editar datos personales</b></h1></ion-col>\n\n	</ion-row>\n\n\n\n	<ion-row class="row30">\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="dPersonales" [class]="dPersonales.class" (click)="openPage(dPersonales.openPage,dPersonales.tipo)"></fb-button-icon></ion-col>\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="cPassword" [class]="cPassword.class" (click)="openPage(cPassword.openPage,cPassword.tipo)"></fb-button-icon></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/,
+            selector: 'page-mi-perfil',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/'<ion-header no-border>\n\n  <ion-navbar>\n\n    <button ion-button menuToggle>\n\n      <ion-icon name="menu"></ion-icon>\n\n    </button>\n\n    <ion-title>Mi Perfil</ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content padding>\n\n	<div class="container">\n\n		<div class="perfil">\n\n			<div class="perfil__foto">\n\n				<img  *ngIf="data.Imagen" [src]="domSanitizer.bypassSecurityTrustUrl(data.Imagen)" style="object-fit:cover;" class="imageProfile">\n\n				<a class="btn -rounded -bg-pink editIcon" (click)="openChooseImage()" style="padding: 0.5rem;box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37);    color: transparent;"> \n\n					 <svg viewBox="0 0 400 400" width="512" xmlns="http://www.w3.org/2000/svg"> -->\n\n						 <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0" fill="#FFFFFF"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0" fill="#FFFFFF"/> \n\n					 </svg> \n\n				 </a>\n\n			</div>\n\n			<div class="perfil__datos">\n\n				<div class="perfil__dato" style="margin-top:0px;">\n\n					<ion-icon class="leftIcon" name="fb-location" item-right></ion-icon>\n\n					<p class="pRight">{{ data.Direccion }} <br/> {{ data.CP }} - {{ data.Localidad }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="fb-phone" item-right></ion-icon>\n\n					<p class="pRight">{{ data.TelMovil }}</p>\n\n				</div>\n\n				<hr>\n\n				<div class="perfil__dato">\n\n					<ion-icon class="leftIcon" name="fb-mail" item-right></ion-icon>\n\n					<p class="pRight" style="text-overflow:ellipsis;white-space:nowrap;overflow:hidden; ">{{ data.Email }}</p>\n\n				</div>\n\n			</div>\n\n		</div>\n\n		<ion-row>\n\n			<ion-col>\n\n				<p class="nombre">{{ data.Nombre }} </p>\n\n				<p class="apellidos">{{ data.Apellidos }} </p>\n\n			</ion-col>\n\n		</ion-row>\n\n		<ion-row>\n\n			<ion-col><hr /></ion-col>\n\n		</ion-row>\n\n	</div>\n\n	<ion-row class="h1">\n\n		<ion-col><h1 style="font-size: 2.4rem;"><b>Editar datos personales</b></h1></ion-col>\n\n	</ion-row>\n\n\n\n	<ion-row class="row30">\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="dPersonales" [class]="dPersonales.class" (click)="openPage(dPersonales.openPage,dPersonales.tipo)"></fb-button-icon></ion-col>\n\n		<ion-col class="paddingBtn"><fb-button-icon [name]="cPassword" [class]="cPassword.class" (click)="openPage(cPassword.openPage,cPassword.tipo)"></fb-button-icon></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\mi-perfil\mi-perfil.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_6__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], MiPerfilPage);
@@ -4648,11 +4648,11 @@ var map = {
 		27
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
-		845,
+		846,
 		26
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		846,
+		845,
 		25
 	],
 	"../pages/instrucciones/instrucciones.module": [
@@ -4660,11 +4660,11 @@ var map = {
 		24
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
-		849,
+		848,
 		23
 	],
 	"../pages/login-input/login-input.module": [
-		848,
+		849,
 		22
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
@@ -4676,15 +4676,15 @@ var map = {
 		20
 	],
 	"../pages/login-registro/login-registro.module": [
-		852,
+		854,
 		19
 	],
 	"../pages/login-tab/login-tab.module": [
-		853,
+		852,
 		18
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
-		854,
+		853,
 		17
 	],
 	"../pages/login/login.module": [
@@ -4696,11 +4696,11 @@ var map = {
 		15
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		857,
+		856,
 		14
 	],
 	"../pages/mis-citas/mis-citas.module": [
-		856,
+		857,
 		13
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
@@ -4708,11 +4708,11 @@ var map = {
 		12
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
-		860,
+		859,
 		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		859,
+		860,
 		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
@@ -4728,15 +4728,15 @@ var map = {
 		7
 	],
 	"../pages/profile/profile.module": [
-		866,
+		864,
 		6
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
-		864,
+		865,
 		5
 	],
 	"../pages/recall/recall.module": [
-		865,
+		866,
 		4
 	],
 	"../pages/sugerencias/sugerencias.module": [
@@ -5943,28 +5943,28 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] },
