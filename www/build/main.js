@@ -5048,6 +5048,7 @@ var FaqPage = /** @class */ (function () {
     FaqPage.prototype.getFaq = function () {
         var _this = this;
         this.restProvider.getFaq().then(function (data) {
+            console.log(data);
             if (typeof data != "undefined" && data['status'] == 1) {
                 _this.faq = data['data'];
                 _this.loading.dismiss();
@@ -5149,25 +5150,9 @@ var FaqDetailPage = /** @class */ (function () {
         this.getFaqDetail(this.navParams.get('categoria'));
         this.events.publish("user:logged");
     }
-    /**
-    * 	Función que pone la primera letra en mayuscula
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
     FaqDetailPage.prototype.capitalizeFirstLetter = function (string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
-    /**
-    * 	Función que abre y cierra los cards
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
     FaqDetailPage.prototype.expandItem = function (item) {
         this.faq.map(function (listItem) {
             if (item == listItem) {
@@ -5191,6 +5176,7 @@ var FaqDetailPage = /** @class */ (function () {
     FaqDetailPage.prototype.getFaqDetail = function (c) {
         var _this = this;
         this.restProvider.getFaqDetail(c).then(function (data) {
+            console.log(data);
             if (typeof data != "undefined" && data['status'] == 1) {
                 _this.faq = data['data'];
                 _this.loading.dismiss();
@@ -5331,128 +5317,128 @@ var map = {
 		32
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
-		860,
+		852,
 		31
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		854,
+		853,
 		30
 	],
 	"../pages/faq-detail/faq-detail.module": [
-		852,
-		29
+		854,
+		2
 	],
 	"../pages/faq/faq.module": [
-		853,
-		28
+		855,
+		1
 	],
 	"../pages/instrucciones/instrucciones.module": [
-		855,
-		27
+		856,
+		29
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
-		856,
-		26
+		857,
+		28
 	],
 	"../pages/login-input/login-input.module": [
-		857,
-		25
+		858,
+		27
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
-		858,
-		24
+		859,
+		26
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
-		859,
-		23
+		860,
+		25
 	],
 	"../pages/login-registro/login-registro.module": [
 		861,
-		22
+		24
 	],
 	"../pages/login-tab/login-tab.module": [
 		862,
-		21
+		23
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
 		863,
-		20
+		22
 	],
 	"../pages/login/login.module": [
 		864,
-		19
+		21
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
 		865,
-		18
+		20
 	],
 	"../pages/mi-salud/mi-salud.module": [
 		866,
-		17
+		19
 	],
 	"../pages/mis-citas/mis-citas.module": [
 		867,
-		16
+		18
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
 		868,
-		15
+		17
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
 		869,
-		14
+		16
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
 		870,
-		13
+		15
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
 		871,
-		12
+		14
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
 		872,
-		11
+		13
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
 		873,
-		10
+		12
 	],
 	"../pages/plan-economico/plan-economico.module": [
 		874,
-		9
+		11
 	],
 	"../pages/popover/popover.module": [
 		875,
-		8
+		10
 	],
 	"../pages/presupuestos/presupuestos.module": [
 		876,
-		7
+		9
 	],
 	"../pages/profile/profile.module": [
 		877,
-		6
+		8
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
 		878,
-		5
+		7
 	],
 	"../pages/recall/recall.module": [
 		879,
-		4
+		6
 	],
 	"../pages/sugerencias/sugerencias.module": [
 		880,
-		3
+		5
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
 		881,
-		2
+		4
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
 		882,
-		1
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -6866,15 +6852,15 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/faq-detail/faq-detail.module#FaqDetailPageModule', name: 'FaqDetailPage', segment: 'faq-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/faq/faq.module#FaqPageModule', name: 'FaqPage', segment: 'faq', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
