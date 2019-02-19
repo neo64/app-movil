@@ -1,14 +1,18 @@
 webpackJsonp([32],{
 
+<<<<<<< HEAD:www/build/30.js
+/***/ 848:
+=======
 /***/ 844:
+>>>>>>> Jesus:platforms/android/assets/www/build/32.js
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChangePasswordPageModule", function() { return ChangePasswordPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ConsejosPersonalizadosPageModule", function() { return ConsejosPersonalizadosPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__change_password__ = __webpack_require__(67);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__consejos_personalizados__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +22,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var ChangePasswordPageModule = /** @class */ (function () {
-    function ChangePasswordPageModule() {
+var ConsejosPersonalizadosPageModule = /** @class */ (function () {
+    function ConsejosPersonalizadosPageModule() {
     }
-    ChangePasswordPageModule = __decorate([
+    ConsejosPersonalizadosPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //ChangePasswordPage,
+            //ConsejosPersonalizadosPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__change_password__["a" /* ChangePasswordPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__consejos_personalizados__["a" /* ConsejosPersonalizadosPage */]),
             ],
         })
-    ], ChangePasswordPageModule);
-    return ChangePasswordPageModule;
+    ], ConsejosPersonalizadosPageModule);
+    return ConsejosPersonalizadosPageModule;
 }());
 
-//# sourceMappingURL=change-password.module.js.map
+//# sourceMappingURL=consejos-personalizados.module.js.map
 
 /***/ })
 
