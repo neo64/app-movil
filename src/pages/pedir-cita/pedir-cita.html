@@ -12,11 +12,11 @@
 	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>
 	<!-- Fin Gradiente -->    
 	
-    <div style=" margin: 2rem;">
+    <div>
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
 
-    <p style=" margin: 2rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p> 
+    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
 
     <div class="row" id="listadoTratamientos">
 	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">
@@ -24,7 +24,9 @@
 		</div>
 	</div>
 
-	<ion-row style="max-height: 9%;    display: flex;    margin: 2rem 2rem 0 2rem;">
+	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>
+
+	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
 		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>
 	</ion-row>
 </ion-content>

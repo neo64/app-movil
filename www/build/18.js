@@ -1,14 +1,14 @@
 webpackJsonp([18],{
 
-/***/ 852:
+/***/ 877:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginTabPageModule", function() { return LoginTabPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MiPerfilPageModule", function() { return MiPerfilPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_tab__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mi_perfil__ = __webpack_require__(147);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LoginTabPageModule = /** @class */ (function () {
-    function LoginTabPageModule() {
+var MiPerfilPageModule = /** @class */ (function () {
+    function MiPerfilPageModule() {
     }
-    LoginTabPageModule = __decorate([
+    MiPerfilPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__login_tab__["a" /* LoginTabPage */],
+            //MiPerfilPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_tab__["a" /* LoginTabPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mi_perfil__["a" /* MiPerfilPage */]),
             ],
         })
-    ], LoginTabPageModule);
-    return LoginTabPageModule;
+    ], MiPerfilPageModule);
+    return MiPerfilPageModule;
 }());
 
-//# sourceMappingURL=login-tab.module.js.map
+//# sourceMappingURL=mi-perfil.module.js.map
 
 /***/ })
 

@@ -442,12 +442,12 @@ export class RestProvider {
 		});
 	}
 	
-	searchCita(fecha, hora, doctor, tto, preferencias){
+	searchCita(dia, hora, doctor, tto){
 		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/buscarCitas', false, {
 				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
-				params: new HttpParams().set('fecha', fecha).set('hora', hora).set('idUsu', doctor).set('idOpc', tto).set('preferencias', preferencias)	
+				params: new HttpParams().set('dia', dia).set('hora', hora).set('dr', doctor).set('tto', tto)
 			})
 			.subscribe(res => {	
 				resolve(res);
@@ -460,12 +460,11 @@ export class RestProvider {
 		});
 	}
 	
-	getTratamientos(e){
+	getTratamientos(){
 		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/tratamientosPedirCita', false, {
-				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
-				params: new HttpParams().set('idUsu', e)			
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),			
 			})
 			.subscribe(res => {	
 				resolve(res);
@@ -513,11 +512,12 @@ export class RestProvider {
 		});
 	}
 	
-	getDoctors(){
+	getDoctors(e){
 		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/doctoresPedirCita', false, {
-				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),				
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams().set('tto', e)
 			})
 			.subscribe(res => {	
 				resolve(res);
