@@ -4,6 +4,10 @@ page-pedir-cita-elegir {
 	    height: auto;
 	}
 
+	.swiper-slide, .swiper-wrapper  {
+		transform: translate3d(49.5px, 0px, 0px);
+	}	
+
 	ion-title{
 		text-align:center;
 		margin-left: -15%;
