@@ -1,0 +1,23 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Preguntas frecuentes</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+
+	<div style=" margin: 2rem;">
+        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+    </div>
+
+    <p style=" margin: 2rem;">Contrary to popular belief/opinion. be very cold.</p>
+
+    <div class="row" id="listadoFaq">
+	    <div *ngFor="let f of faq" col-6 style="height:12rem;">
+			<fb-button-icon [name]="f" [class]="f.class" (click)="siguiente(f)"> </fb-button-icon>
+		</div>
+	</div>
+
+</ion-content>

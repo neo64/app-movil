@@ -61,6 +61,9 @@ import {
 import {
     InstruccionesPage
 } from '../instrucciones/instrucciones';
+import {
+    FaqPage
+} from '../faq/faq';
 // Proveedor de API
 import {
     RestProvider
@@ -143,6 +146,7 @@ export class HomePage {
             else if (page == "PedirCita") this.navCtrl.push(PedirCitaPage);
             else if (page == "ConsejosPersonalizados") this.navCtrl.push(ConsejosPersonalizadosPage);
             else if (page == "Instrucciones") this.navCtrl.push(InstruccionesPage);
+            else if (page == "PreguntasFrecuentes") this.navCtrl.push(FaqPage);
             else this.presentToast("La página no está disponible.");
         } else if (tipo == "web") {
             window.open(page, '_system', 'location=yes');
