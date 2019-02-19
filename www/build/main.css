@@ -43394,6 +43394,19 @@ emoji-picker .emoji-picker .emoji-items .emoji-item {
   margin-bottom: 10px;
 }
 
+expandable .expand-wrapper {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+
+expandable .collapsed {
+  height: 0 !important;
+}
+
+expandable p {
+  white-space: normal;
+}
+
 fb-button button {
   background: white;
   border-radius: 2px;
@@ -43786,6 +43799,67 @@ page-documentos-contables ion-icon {
 
 page-documentos-contables .toolbar-background-md {
   background: white;
+}
+
+page-faq ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-faq .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-faq ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-faq .toolbar-background-md {
+  background: white;
+}
+
+page-faq .header-md::after, page-faq .tabs-md[tabsPlacement="top"] > .tabbar::after, page-faq .footer-md::before, page-faq .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-faq-detail ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-faq-detail .back-button.show-back-button {
+  z-index: 1111;
+}
+
+page-faq-detail ion-icon {
+  color: #f3a7c9;
+  font-size: 2em;
+}
+
+page-faq-detail .toolbar-background-md {
+  background: white;
+}
+
+page-faq-detail .header-md::after, page-faq-detail .tabs-md[tabsPlacement="top"] > .tabbar::after, page-faq-detail .footer-md::before, page-faq-detail .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+  background-image: none !important;
+  width: 0%;
+}
+
+page-faq-detail .collaps {
+  color: #ed7aad;
+  padding: 0 0 1rem;
+}
+
+page-faq-detail .item-inner {
+  padding: 0 !important;
+}
+
+page-faq-detail .label-md {
+  margin: 13px 0px 13px 0;
 }
 
 page-home {
