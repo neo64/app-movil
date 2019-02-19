@@ -1,14 +1,14 @@
 webpackJsonp([3],{
 
-/***/ 882:
+/***/ 880:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TabConsultarCitasModule", function() { return TabConsultarCitasModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SugerenciasPageModule", function() { return SugerenciasPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sugerencias__ = __webpack_require__(151);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var TabConsultarCitasModule = /** @class */ (function () {
-    function TabConsultarCitasModule() {
+var SugerenciasPageModule = /** @class */ (function () {
+    function SugerenciasPageModule() {
     }
-    TabConsultarCitasModule = __decorate([
+    SugerenciasPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-            //TabConsultarCitas,
+            //SugerenciasPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__tabConsultarCitas__["a" /* TabConsultarCitas */])
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__sugerencias__["a" /* SugerenciasPage */]),
             ],
         })
-    ], TabConsultarCitasModule);
-    return TabConsultarCitasModule;
+    ], SugerenciasPageModule);
+    return SugerenciasPageModule;
 }());
 
-//# sourceMappingURL=tabConsultarCitas.module.js.map
+//# sourceMappingURL=sugerencias.module.js.map
 
 /***/ })
 

@@ -1,14 +1,14 @@
 webpackJsonp([16],{
 
-/***/ 869:
+/***/ 867:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PedirCitaElegirPageModule", function() { return PedirCitaElegirPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MisCitasPageModule", function() { return MisCitasPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mis_citas__ = __webpack_require__(149);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var PedirCitaElegirPageModule = /** @class */ (function () {
-    function PedirCitaElegirPageModule() {
+var MisCitasPageModule = /** @class */ (function () {
+    function MisCitasPageModule() {
     }
-    PedirCitaElegirPageModule = __decorate([
+    MisCitasPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
+            //MisCitasPage,
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__pedir_cita_elegir__["a" /* PedirCitaElegirPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__mis_citas__["a" /* MisCitasPage */]),
             ],
         })
-    ], PedirCitaElegirPageModule);
-    return PedirCitaElegirPageModule;
+    ], MisCitasPageModule);
+    return MisCitasPageModule;
 }());
 
-//# sourceMappingURL=pedir-cita-elegir.module.js.map
+//# sourceMappingURL=mis-citas.module.js.map
 
 /***/ })
 

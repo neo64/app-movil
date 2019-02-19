@@ -1,14 +1,14 @@
 webpackJsonp([25],{
 
-/***/ 860:
+/***/ 858:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginReenviarPageModule", function() { return LoginReenviarPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginInputPageModule", function() { return LoginInputPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_reenviar__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__login_input__ = __webpack_require__(228);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var LoginReenviarPageModule = /** @class */ (function () {
-    function LoginReenviarPageModule() {
+var LoginInputPageModule = /** @class */ (function () {
+    function LoginInputPageModule() {
     }
-    LoginReenviarPageModule = __decorate([
+    LoginInputPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__login_reenviar__["a" /* LoginReenviarPage */],
+                __WEBPACK_IMPORTED_MODULE_2__login_input__["a" /* LoginInputPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_reenviar__["a" /* LoginReenviarPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__login_input__["a" /* LoginInputPage */]),
             ],
         })
-    ], LoginReenviarPageModule);
-    return LoginReenviarPageModule;
+    ], LoginInputPageModule);
+    return LoginInputPageModule;
 }());
 
-//# sourceMappingURL=login-reenviar.module.js.map
+//# sourceMappingURL=login-input.module.js.map
 
 /***/ })
 

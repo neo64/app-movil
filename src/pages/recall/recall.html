@@ -1,13 +1,13 @@
-<ion-content padding>
-	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaFutura == true">
+<ion-content>
+	<ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="infoR.fechaFutura == true">
 		<ion-slide *ngFor="let item of recall">
 			<div class="fb-card -vcita -gradient">
-			    <div class="card_row">
+			    <div class="card_row" style="margin-bottom: 1rem;">
 			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
-			            <div class="card_subtitle -white" style="font-size: 1.4rem;">
+			            <div class="card_subtitle -white" style="font-size: 1rem;">
 			                {{item.diaSemana}}
 			            </div>
-			            <div class="card_time -white">
+			            <div class="card_time -white" style="font-size:3.2rem;">
 			                {{item.dia}}
 			                <span>
 			                {{item.mes}}
@@ -79,13 +79,10 @@
 			                </div>
 			                <div class="card_container">
 			                    <div class="avatar">
-			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
-			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
-			                        </svg> 
+			                        <ion-icon name="fb-location" item-right></ion-icon> 
 			                    </div>
 			                    <div class="card_subtitle">
-			                        Calle de Caleruega, 67
-			                        <br />
+			                        C/Caleruega, 67
 			                        3ª Planta A
 			                        <br />
 			                        28033 - Madrid
@@ -98,9 +95,7 @@
 			                </div>
 			                <div class="card_container">
 			                    <div class="avatar">
-			                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
-			                            <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
-			                        </svg> 
+			                        <ion-icon name="fb-calendar" item-right></ion-icon>
 			                    </div>
 			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">
 			                        Haz
@@ -108,8 +103,7 @@
 			                            click
 			                        </span>
 			                        para añadir
-			                        <br />
-			                            la cita a tu calendario
+			                        la cita a tu calendario
 			                    </div>
 			                </div>
 			            </div>

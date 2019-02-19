@@ -78,7 +78,7 @@ body {
 }
 
 .fb-card {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 2.5rem;
   padding: 1.2rem 1rem;
   background-color: map-get($colors, white);
   border-radius: 10px;
@@ -147,10 +147,19 @@ body {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 0 1rem;
+      padding: 0 3vw;
     }
     .avatar {
       width: 40px;
+      & svg {
+        width: 100%;
+      }
+    }
+    & .card_title {
+      font-size: 1.5rem;
+    }
+    & .card_subtitle {
+      font-size: 1.2rem;
     }
   }
   /*
@@ -166,7 +175,13 @@ body {
       justify-content: flex-end;
     }
     .-price {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+    }
+    & .card_title {
+      margin-bottom: 0.5rem;
+    }
+    & .card_row {
+      padding: 0;
     }
   }
   &.-v3 {
@@ -207,6 +222,7 @@ body {
       margin-right: -1rem;
       margin-bottom: -1.2rem;
       padding: 1rem 1rem;
+      border-radius: 0px 0px 10px 10px;
     }
     & .card_label {
       text-transform: uppercase;
@@ -215,9 +231,13 @@ body {
       color: map-get($colors, grey-medium);
       margin-bottom: 0.6rem;
     }
+    & .card_row {
+      padding: 0;
+    }
     & .card_title {
       font-weight: normal;
       text-align: left;
+      margin-bottom: 5%;
     }
     & .card_subtitle {
       margin-top: 0;
@@ -256,6 +276,14 @@ body {
       & svg {
         fill: map-get($colors, pink-dark);
       }
+      & .icon {
+        width: 2rem!important;
+      }
+    }
+    @media screen and (max-width: 320px) {
+      & .avatar:nth-child(1) {
+        display: none;
+      }
     }
     & .card_container {
       display: flex;
@@ -285,10 +313,10 @@ body {
     & .card_subtitle {
       margin-top: 0;
       margin-bottom: 0.5rem;
-      font-size: 1.6rem;
+      font-size: 1.45rem;
     }
     & .card_title {
-      font-size: 1.5rem;
+      font-size: 1.15rem;
     }
     & .card_graph {
       border-radius: 0 0 10px 10px;
@@ -340,7 +368,7 @@ body {
     &.-confirmar {
       background-color: #2ED573;
       padding: 0.7rem 0.7rem;
-      font-size: 0.9rem;
+      font-size: 1.4rem;
       box-shadow: 4px 10px 41px 0px rgba(46, 213, 115, 0.37);
     }
   }
@@ -642,5 +670,58 @@ p {
     font-size: 1.5rem;
     text-align: left;
     margin-left: 1rem;
+  }
+}
+
+/*
+ * Custom Icons
+ */
+
+ion-icon {
+  &[class*="fb-"] {
+    // Instead of using the font-based icons
+    // We're applying SVG masks
+    mask-size: contain;
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    background: currentColor;
+    width: 1em;
+    height: 1em;
+  } // custom icons
+  &[class*="fb-user"] {
+    mask-image: url(../assets/icon/user.svg);
+  }
+  &[class*="fb-mail"] {
+    mask-image: url(../assets/icon/lnr-envelope.svg);
+  }
+  &[class*="fb-dni"] {
+    mask-image: url(../assets/icon/lnr-license.svg);
+  }
+  &[class*="fb-calendar"] {
+    mask-image: url(../assets/icon/lnr-calendar-full.svg);
+  }
+  &[class*="fb-telephone"] {
+    mask-image: url(../assets/icon/lnr-phone-handset.svg);
+  }
+  &[class*="fb-location"] {
+    mask-image: url(../assets/icon/placeholder.svg);
+  }
+  &[class*="fb-phone"] {
+    mask-image: url(../assets/icon/lnr-smartphone.svg);
+  }
+  &[class*="fb-plus-linear"] {
+    mask-image: url(../assets/icon/lnr-plus-circle.svg);
+  }
+  &[class*="fb-alarm"] {
+    mask-image: url(../assets/icon/lnr-alarm.svg);
+  }
+  &[class*="fb-password"] {
+    mask-image: url(../assets/icon/lnr-lock.svg);
+  }
+}
+
+@media screen and (min-width: 321px) {
+  [padding] .scroll-content {
+    padding: 3rem!important;
   }
 }
