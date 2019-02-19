@@ -1,8 +1,21 @@
-<ion-header>
-	<ion-navbar color="primary">
-		<ion-title>Chat</ion-title>
-	</ion-navbar>
-</ion-header>
+	<ion-header no-border>
+  		<ion-navbar>
+    		<ion-buttons left>
+	    		<button ion-button menuToggle>
+	      			<ion-icon name="menu"></ion-icon>
+    			</button>
+    		</ion-buttons>
+
+    		<ion-title>Ferrus & Bratos</ion-title>
+
+    		<ion-buttons right>
+	    		<button ion-button style="font-size: 2rem;color:black;margin-right:1rem;" (click)="callClinica()">
+	      			<ion-icon name="call"></ion-icon>
+	    		</button>
+    		</ion-buttons>
+
+  		</ion-navbar>
+	</ion-header>
 <ion-content padding class="bg">
 	<div class="page-chat" style="height: 100vh;display: flex; align-items: flex-end; flex-direction: column-reverse;">
         <div class="message-wrap" style="width:100%; margin: -25rem 0;">

@@ -1,13 +1,13 @@
 <ion-content padding>
-	<ion-slides spaceBetween="-75" *ngIf="infoR.fechaPasada == true">
+	<ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="infoR.fechaPasada == true">
 		<ion-slide *ngFor="let item of recall">
 			<div class="fb-card -vcita -gradient">
 			    <div class="card_row">
 			        <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
-			            <div class="card_subtitle -white" style="font-size: 1.4rem;">
+			            <div class="card_subtitle -white" style="font-size: 1rem;">
 			                {{item.diaSemana}}
 			            </div>
-			            <div class="card_time -white">
+			            <div class="card_time -white" style="font-size:3.2rem;">
 			                {{item.dia}}
 			                <span>
 			                {{item.mes}}
