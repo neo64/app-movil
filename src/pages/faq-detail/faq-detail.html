@@ -10,12 +10,17 @@
 
 	<div style=" margin: 2rem;">
         <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
+  </div>
 
 	<div (click)="expandItem(item)" ion-item no-lines class="fb-card" *ngFor="let item of faq" style=" padding: .8rem 2rem;">
-    	<p style=" white-space: normal;" [class.collaps]="item.expanded">{{ item.pregunta }}</p>    
-    	<expandable [expandHeight]="auto" [expanded]="item.expanded" [respuesta]="item.respuesta">
-    	</expandable>
-  	</div>
+  	<p style=" white-space: normal;" [class.collaps]="item.expanded">
+      {{ item.pregunta }} 
+    </p>    
+  	<expandable 
+      [expandHeight]="auto" 
+      [expanded]="item.expanded" 
+      [respuesta]="item.respuesta">
+  	</expandable>
+	</div>
 
 </ion-content>
