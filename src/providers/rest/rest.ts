@@ -150,6 +150,39 @@ export class RestProvider {
 		});
 	}
 
+	getFaq(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getFaq', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
+	getFaqDetail(c){
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/getFaqDetail', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+				params: new HttpParams().set('categoria', c)					
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
+
 	getInstrucciones(){		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/getInstrucciones', false, {
