@@ -5048,6 +5048,7 @@ var FaqPage = /** @class */ (function () {
     FaqPage.prototype.getFaq = function () {
         var _this = this;
         this.restProvider.getFaq().then(function (data) {
+            console.log(data);
             if (typeof data != "undefined" && data['status'] == 1) {
                 _this.faq = data['data'];
                 _this.loading.dismiss();
@@ -5099,12 +5100,11 @@ var FaqPage = /** @class */ (function () {
         });
         alert.present();
     };
-    var _a, _b, _c, _d, _e, _f;
     FaqPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-faq',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/faq/faq.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Preguntas frecuentes</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div style=" margin: 2rem;">\n        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p style=" margin: 2rem;">Contrary to popular belief/opinion. be very cold.</p>\n\n    <div class="row" id="listadoFaq">\n	    <div *ngFor="let f of faq" col-6 style="height:12rem;">\n			<fb-button-icon [name]="f" [class]="f.class" (click)="siguiente(f)"> </fb-button-icon>\n		</div>\n	</div>\n\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/faq/faq.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], FaqPage);
     return FaqPage;
 }());
@@ -5150,25 +5150,9 @@ var FaqDetailPage = /** @class */ (function () {
         this.getFaqDetail(this.navParams.get('categoria'));
         this.events.publish("user:logged");
     }
-    /**
-    * 	Función que pone la primera letra en mayuscula
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
     FaqDetailPage.prototype.capitalizeFirstLetter = function (string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
     };
-    /**
-    * 	Función que abre y cierra los cards
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
     FaqDetailPage.prototype.expandItem = function (item) {
         this.faq.map(function (listItem) {
             if (item == listItem) {
@@ -5192,6 +5176,7 @@ var FaqDetailPage = /** @class */ (function () {
     FaqDetailPage.prototype.getFaqDetail = function (c) {
         var _this = this;
         this.restProvider.getFaqDetail(c).then(function (data) {
+            console.log(data);
             if (typeof data != "undefined" && data['status'] == 1) {
                 _this.faq = data['data'];
                 _this.loading.dismiss();
@@ -5243,12 +5228,11 @@ var FaqDetailPage = /** @class */ (function () {
         });
         alert.present();
     };
-    var _a, _b, _c, _d, _e, _f;
     FaqDetailPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-faq-detail',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/faq-detail/faq-detail.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Preguntas frecuentes</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div style=" margin: 2rem;">\n        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n	<div (click)="expandItem(item)" ion-item no-lines class="fb-card" *ngFor="let item of faq" style=" padding: .8rem 2rem;">\n    	<p style=" white-space: normal;" [class.collaps]="item.expanded">{{ item.pregunta }}</p>    \n    	<expandable [expandHeight]="auto" [expanded]="item.expanded" [respuesta]="item.respuesta">\n    	</expandable>\n  	</div>\n\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/faq-detail/faq-detail.html"*/,
+            selector: 'page-faq-detail',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/faq-detail/faq-detail.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Preguntas frecuentes</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div style=" margin: 2rem;">\n        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n  </div>\n\n	<div (click)="expandItem(item)" ion-item no-lines class="fb-card" *ngFor="let item of faq" style=" padding: .8rem 2rem;">\n  	<p style=" white-space: normal;" [class.collaps]="item.expanded">\n      {{ item.pregunta }} \n    </p>    \n  	<expandable \n      [expandHeight]="auto" \n      [expanded]="item.expanded" \n      [respuesta]="item.respuesta">\n  	</expandable>\n	</div>\n\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/faq-detail/faq-detail.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], FaqDetailPage);
     return FaqDetailPage;
 }());
@@ -5342,119 +5326,119 @@ var map = {
 	],
 	"../pages/faq-detail/faq-detail.module": [
 		854,
-		29
+		2
 	],
 	"../pages/faq/faq.module": [
 		855,
-		28
+		1
 	],
 	"../pages/instrucciones/instrucciones.module": [
 		856,
-		27
+		29
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
 		857,
-		26
+		28
 	],
 	"../pages/login-input/login-input.module": [
 		858,
-		25
+		27
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
 		859,
-		24
+		26
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
 		860,
-		23
+		25
 	],
 	"../pages/login-registro/login-registro.module": [
 		861,
-		22
+		24
 	],
 	"../pages/login-tab/login-tab.module": [
 		862,
-		21
+		23
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
 		863,
-		20
+		22
 	],
 	"../pages/login/login.module": [
 		864,
-		19
+		21
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
 		865,
-		18
+		20
 	],
 	"../pages/mi-salud/mi-salud.module": [
 		866,
-		17
+		19
 	],
 	"../pages/mis-citas/mis-citas.module": [
 		867,
-		16
+		18
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
 		868,
-		15
+		17
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
 		869,
-		14
+		16
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
 		870,
-		13
+		15
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
 		871,
-		12
+		14
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
 		872,
-		11
+		13
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
 		873,
-		10
+		12
 	],
 	"../pages/plan-economico/plan-economico.module": [
 		874,
-		9
+		11
 	],
 	"../pages/popover/popover.module": [
 		875,
-		8
+		10
 	],
 	"../pages/presupuestos/presupuestos.module": [
 		876,
-		7
+		9
 	],
 	"../pages/profile/profile.module": [
 		877,
-		6
+		8
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
 		878,
-		5
+		7
 	],
 	"../pages/recall/recall.module": [
 		879,
-		4
+		6
 	],
 	"../pages/sugerencias/sugerencias.module": [
 		880,
-		3
+		5
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
 		881,
-		2
+		4
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
 		882,
-		1
+		3
 	]
 };
 function webpackAsyncContext(req) {
@@ -7956,7 +7940,7 @@ var ExpandableComponent = /** @class */ (function () {
     ], ExpandableComponent.prototype, "respuesta", void 0);
     ExpandableComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'expandable',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/expandable/expandable.html"*/'<p #expandWrapper class=\'expand-wrapper\' [class.collapsed]="!expanded" [innerHTML]="respuesta">\n</p>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/expandable/expandable.html"*/
+            selector: 'expandable',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/expandable/expandable.html"*/'<p #expandWrapper class=\'expand-wrapper\' [class.collapsed]="!expanded" [innerHTML]="respuesta"></p>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/expandable/expandable.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_core__["Renderer"]])
     ], ExpandableComponent);
