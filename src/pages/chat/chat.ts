@@ -108,7 +108,6 @@ export class ChatPage {
 	public checkFileExistence(fileName: string) {
 	    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
 	            this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
-					this.base64 		= result;
 					this.menuData 		= result;
 				}, (err) => {
 					//console.log(err);

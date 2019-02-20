@@ -718,10 +718,95 @@ ion-icon {
   &[class*="fb-password"] {
     mask-image: url(../assets/icon/lnr-lock.svg);
   }
+  &[class*="fb-home"] {
+    mask-image: url(../assets/icon/lnr-home.svg);
+  }
+  &[class*="fb-heart"] {
+    mask-image: url(../assets/icon/lnr-heart.svg);
+  }
+  &[class*="fb-documents"] {
+    mask-image: url(../assets/icon/documents.svg);
+  }
+  &[class*="fb-profile"] {
+    mask-image: url(../assets/icon/user-plus.svg);
+  }
+  &[class*="fb-chat"] {
+    mask-image: url(../assets/icon/bubble-question.svg);
+  }
+  &[class*="fb-suggest"] {
+    mask-image: url(../assets/icon/thumbs-up.svg);
+  }
+  &[class*="fb-exit"] {
+    mask-image: url(../assets/icon/lnr-exit.svg);
+  }
+  &[class*="fb-pin"] {
+    mask-image: url(../assets/icon/pushpin.svg);
+  }
 }
 
 @media screen and (min-width: 321px) {
   [padding] .scroll-content {
     padding: 3rem!important;
+  }
+}
+
+/*
+ * Menu
+ */
+
+ion-menu {
+  & ion-content {
+    background-color: map-get($colors, black)!important;
+  }
+  & .scroll-content {
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  & .item {
+    padding-left: 0!important;
+    background-color: map-get($colors, black)!important;
+    color: map-get($colors, white)!important;
+    border: none!important;
+    letter-spacing: 2px!important;
+  }
+  & .item-inner {
+    border-bottom: none!important;
+  }
+  & ion-label i {
+    margin-right: 2rem;
+  }
+  & ion-icon {
+    width: 2rem!important;
+    min-width: inherit!important;
+  }
+}
+
+.imgPerfilDiv {
+  display: flex;
+  & img {
+    width: 5rem;
+    height: 100%;
+  }
+  & .container {
+    margin-left: 2rem;
+    margin-left: 2rem;
+    width: 70%;
+    & .pPerfil {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      color: map-get($colors, white)!important;
+    }
+    & .iPerfil {
+      font-size: 1rem;
+      margin-top: 0;
+      color: map-get($colors, grey-light)!important;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
   }
 }

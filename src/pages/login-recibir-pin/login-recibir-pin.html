@@ -8,17 +8,17 @@
 </ion-header>
 
 <ion-content padding>
-	<div style="    margin: 2rem;">
+	<div>
 		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
 	</div>
-	<p  style="    margin: 2rem;">
+	<p>
 		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>
 	</p>
 	<br />
 	<ion-list>
-		<ion-item style=" width: 94%;">
+		<ion-item>
 			<ion-label stacked>PIN</ion-label>
-			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>
+			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input><ion-icon name="fb-pin" item-right></ion-icon>
 		</ion-item>
 		<p class="olvido">Nº de 6 dígitos</p>		
 	</ion-list>

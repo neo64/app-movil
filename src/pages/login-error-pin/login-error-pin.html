@@ -8,10 +8,10 @@
 </ion-header>
 
 <ion-content padding>
-	<div style="    margin: 2rem;">
+	<div>
 		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
 	</div>
-	<p style=" margin: 2rem;">No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>
+	<p>No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>
 	<br />
 	<div style="max-height:5rem; width: 80%; margin: 0 auto;">
 		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>

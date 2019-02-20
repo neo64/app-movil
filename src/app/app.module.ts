@@ -137,7 +137,8 @@ import { ChartsModule } from 'ng2-charts';
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
       backButtonIcon: 'ios-arrow-back',
-      iconMode: 'md'
+      iconMode: 'md',
+      mode: 'md',
     }),
 	IonicPageModule.forChild (MiSaludPage),	
   ],
