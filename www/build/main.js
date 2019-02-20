@@ -82,7 +82,9 @@ var LoginRecibirPinPage = /** @class */ (function () {
                 window.localStorage.setItem("token", d['data']['token']);
                 window.localStorage.setItem("expires", d['data']['expires']);
                 _this.events.publish("user:logged");
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__["a" /* ChangePasswordPage */]);
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__["a" /* ChangePasswordPage */], {
+                    'first': true,
+                });
             }
             else if (typeof d != "undefined" && d['status'] == 2) {
                 if (!auto)
@@ -171,7 +173,7 @@ var LoginRecibirPinPage = /** @class */ (function () {
     };
     LoginRecibirPinPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-recibir-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Introduce el PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p  style="    margin: 2rem;">\n		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>\n	</p>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>PIN</ion-label>\n			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>\n		</ion-item>\n		<p class="olvido">Nº de 6 dígitos</p>		\n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			No lo he recibido.<br/>\n			<a (click)="reEnviarPIN()">Reenviar PIN</a>\n		</p>\n	</ion-footer>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/,
+            selector: 'page-login-recibir-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Introduce el PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p>\n		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>\n	</p>\n	<br />\n	<ion-list>\n		<ion-item>\n			<ion-label stacked>PIN</ion-label>\n			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input><ion-icon name="fb-pin" item-right></ion-icon>\n		</ion-item>\n		<p class="olvido">Nº de 6 dígitos</p>		\n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			No lo he recibido.<br/>\n			<a (click)="reEnviarPIN()">Reenviar PIN</a>\n		</p>\n	</ion-footer>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginRecibirPinPage);
@@ -2071,7 +2073,7 @@ var LoginErrorPinPage = /** @class */ (function () {
     };
     LoginErrorPinPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-error-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Error al validar</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style=" margin: 2rem;">No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/,
+            selector: 'page-login-error-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Error al validar</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p>No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-error-pin/login-error-pin.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginErrorPinPage);
@@ -2170,7 +2172,7 @@ var LoginYaRegistradoPage = /** @class */ (function () {
     };
     LoginYaRegistradoPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-ya-registrado',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ya estás registrado</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style="text-align: left;margin: 2rem;">Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupéraña.</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bRecuperar" [class]="bRecuperar.class" (click)="openPage(bRecuperar.openPage,bRecuperar.tipo)"> </fb-button>\n		<p class="line"><span>o</span></p>\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/,
+            selector: 'page-login-ya-registrado',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ya estás registrado</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style="text-align: left;">Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupéraña.</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bRecuperar" [class]="bRecuperar.class" (click)="openPage(bRecuperar.openPage,bRecuperar.tipo)"> </fb-button>\n		<p class="line"><span>o</span></p>\n		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-ya-registrado/login-ya-registrado.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginYaRegistradoPage);
@@ -4029,7 +4031,7 @@ var LoginInputPage = /** @class */ (function () {
     };
     LoginInputPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-input',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/'<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n		</ion-item>		\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input type="password" [(ngModel)]="registerCredentials.password"></ion-input>\n		</ion-item>	\n	</ion-list>\n	<p class="olvido">¿Olvidaste tu contraseña?</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bIniciar" [class]="bIniciar.class" (click)="login()"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			Todavía no tienes cuenta.<br/>\n			<a (click)="goTab(1)">Registrate</a>\n		</p>\n	</ion-footer>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/,
+            selector: 'page-login-input',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/'<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item>\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n		</ion-item>		\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input type="password" [(ngModel)]="registerCredentials.password"></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>	\n	</ion-list>\n	<p class="olvido">¿Olvidaste tu contraseña?</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bIniciar" [class]="bIniciar.class" (click)="login()"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			Todavía no tienes cuenta.<br/>\n			<a (click)="goTab(1)">Registrate</a>\n		</p>\n	</ion-footer>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-input/login-input.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginInputPage);
@@ -4159,7 +4161,7 @@ var LoginRegistroPage = /** @class */ (function () {
     };
     LoginRegistroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-registro',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/'<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>\n		</ion-item>		\n	</ion-list>\n	<p class="olvido">DNI con letra incluida</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/,
+            selector: 'page-login-registro',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/'<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<br />\n	<ion-list>\n		<ion-item>\n			<ion-label stacked>DNI</ion-label>\n			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>\n		</ion-item>		\n	</ion-list>\n	<p class="olvido">DNI con letra incluida</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>\n	</div>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-registro/login-registro.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__["a" /* AndroidPermissions */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], LoginRegistroPage);
@@ -4218,7 +4220,7 @@ var LoginReenviarPage = /** @class */ (function () {
     };
     LoginReenviarPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-login-reenviar',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Reenviar PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p style="    margin: 2rem;">Te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span></p>\n	<p style="    margin: 2rem;">Si no reconoces este número o no es tu teléfono actual, llamanos al <span (click)="callClinica()">91 768 18 12</span> para que podamos gestionarle el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bReenviar" [class]="bReenviar.class" (click)="reenviar()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/,
+            selector: 'page-login-reenviar',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Reenviar PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p>Te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span></p>\n	<p>Si no reconoces este número o no es tu teléfono actual, llamanos al <span (click)="callClinica()">91 768 18 12</span> para que podamos gestionarle el alta en la aplicación</p>\n	<br />\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bReenviar" [class]="bReenviar.class" (click)="reenviar()"></fb-button>\n	</div>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-reenviar/login-reenviar.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], LoginReenviarPage);
@@ -6648,7 +6650,7 @@ var HomePage = /** @class */ (function () {
     ], HomePage.prototype, "slides", void 0);
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-home',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n	    	<!-- <ion-row> -->\n	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->\n	    			<!-- <ion-row style="color: white;"> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 4rem;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->\n	    				<!-- <ion-row style=""><ion-col style="font-size: 2.35rem;">{{card.mes}}</ion-col></ion-row> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->\n	    				<!-- <ion-col>{{card.hora}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->\n	    			<!-- <ion-row style="margin-top: -4%;"> -->\n	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->\n	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->\n	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->\n	    			<!-- </ion-row> -->\n	    		<!-- </ion-col> -->\n	    	<!-- </ion-row> -->\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n\n<div class="menu">\n	<ion-row style="display:flex;align-items:center;">\n		<h1 col-9 style="padding:0px;margin-bottom: 0;margin-top:0;font-weight: bold;">Menú</h1>\n		<p col-3 style="text-align:right;padding:0px;font-size:1.3rem;margin:0px;" (click)="next()">Ver más</p>\n	</ion-row>\n	<ion-row class="square">\n		<ion-slides #slides pager>\n			<div *ngFor="let c of cardsMenu; let i=index">\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>\n							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>\n							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n			</div>			\n		</ion-slides>	\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="fb-telephone"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards">\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n\n<div class="menu">\n	<ion-row style="display:flex;align-items:center;">\n		<h1 col-9 style="padding:0px;margin-bottom: 0;margin-top:0;font-weight: bold;">Menú</h1>\n		<p col-3 style="text-align:right;padding:0px;font-size:1.3rem;margin:0px;" (click)="next()">Ver más</p>\n	</ion-row>\n	<ion-row class="square">\n		<ion-slides #slides pager>\n			<div *ngFor="let c of cardsMenu; let i=index">\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>\n							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">\n					<ion-row style="padding:4%;">\n						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>\n							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n			</div>			\n		</ion-slides>	\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/home/home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_21__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["z" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_19__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]])
     ], HomePage);
@@ -7007,8 +7009,11 @@ var ChangePasswordPage = /** @class */ (function () {
         this.isFirst = false; // Indica si es la primera vez que entra en la App, y debe cambiar la contraseña
         this.data = { /*pass1: '', */ pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
         this.bGuardar = { name: 'Guardar contraseña', svg: '', openPage: 'Login', class: 'active login', tipo: 'page', gradiente: '' };
-        this.tituloSubtitulo = { titulo: "Crea tu contraseña", subtitulo: "para acceder a la App" };
+        this.tituloSubtitulo = { titulo: "Cambia tu contraseña", subtitulo: "para acceder a la App" };
         this.isFirst = navParams.get('first');
+        if (this.isFirst) {
+            this.tituloSubtitulo.titulo = "Crea tu contraseña";
+        }
         this.events.publish("user:logged");
     }
     /**
@@ -7099,11 +7104,12 @@ var ChangePasswordPage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f;
     ChangePasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-change-password',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Crear contraseña</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<ion-list> \n		<!--<ion-item>\n			<ion-label color="primary" stacked>Contraseña antigua</ion-label>\n			<ion-input [(ngModel)]="data.pass1" type="password" placeholder="Contraseña antigua"></ion-input>\n		</ion-item>  -->\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass2" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>  \n		<ion-item>\n			<ion-label stacked>Repita contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass3" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>    \n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="actualizarPass()"> </fb-button>\n	</div>\n</ion-content>\n\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
     ], ChangePasswordPage);
     return ChangePasswordPage;
 }());
@@ -7489,15 +7495,42 @@ var MyApp = /** @class */ (function () {
         this.menuData = new Array();
         this.initializeApp();
         // used for an example of ngFor and navigation
-        this.pages = [
-            { title: 'Inicio', icon: 'fa fa-home', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */] },
-            { title: 'Mi salud', icon: 'fas fa-heartbeat', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_7__pages_mi_salud_mi_salud__["a" /* MiSaludPage */] },
-            { title: 'Mis citas', icon: 'fas fa-calendar-alt', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_10__pages_mis_citas_mis_citas__["a" /* MisCitasPage */] },
-            { title: 'Mis documentos', icon: 'fas fa-file-alt', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_9__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */] },
-            { title: 'Mi perfil', icon: 'fas fa-user', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_8__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */] },
-            { title: 'Chat', icon: 'fas fa-comments', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__["a" /* ChatPage */] },
-            { title: 'Sugerencias', icon: 'fas fa-thumbs-up', color: 'primary', component: __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */] }
-        ];
+        this.pages = [{
+                title: 'Inicio',
+                icon: 'fb-home',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */]
+            }, {
+                title: 'Mi salud',
+                icon: 'fb-heart',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_7__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]
+            }, {
+                title: 'Mis citas',
+                icon: 'fb-calendar',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_10__pages_mis_citas_mis_citas__["a" /* MisCitasPage */]
+            }, {
+                title: 'Mis documentos',
+                icon: 'fb-documents',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_9__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */]
+            }, {
+                title: 'Mi perfil',
+                icon: 'fb-profile',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_8__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */]
+            }, {
+                title: 'Chat',
+                icon: 'fb-chat',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_11__pages_chat_chat__["a" /* ChatPage */]
+            }, {
+                title: 'Sugerencias',
+                icon: 'fb-suggest',
+                color: 'primary',
+                component: __WEBPACK_IMPORTED_MODULE_12__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */]
+            }];
     }
     MyApp.prototype.initializeApp = function () {
         var _this = this;
@@ -7532,14 +7565,14 @@ var MyApp = /** @class */ (function () {
         __WEBPACK_IMPORTED_MODULE_22_firebase__["initializeApp"](config);
     };
     /**
-    * 	Función que muestra el ProgressBar cuando alguna acción
-    *	se está ejecutando en primer plano.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función que muestra el ProgressBar cuando alguna acción
+     *	se está ejecutando en primer plano.
+     *
+     * 	@param None
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.showLoading = function () {
         this.loading = this.loadingCtrl.create({
             content: 'Cargando información...',
@@ -7548,66 +7581,62 @@ var MyApp = /** @class */ (function () {
         this.loading.present();
     };
     /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
+     * 	Función que muestra una alerta con el titulo
+     *	y el texto pasado por parámetro.
+     *
+     * 	@param String Titulo de la alerta.
+     * 	@param String Texto de la alerta.
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     *
+     */
     MyApp.prototype.showError = function (title, text, textButton, page) {
         var _this = this;
         var alert = this.alertCtrl.create({
             title: title,
             subTitle: text,
-            buttons: [
-                {
+            buttons: [{
                     text: 'Cancelar',
                     role: 'Cancelar',
-                    handler: function () {
-                    }
-                },
-                {
+                    handler: function () { }
+                }, {
                     text: textButton,
                     role: textButton,
                     handler: function () {
-                        setTimeout(function () { _this.openPageStrig(page, false); }, 500);
+                        setTimeout(function () {
+                            _this.openPageStrig(page, false);
+                        }, 500);
                     }
-                }
-            ]
+                }]
         });
         alert.present();
     };
     /**
-    * 	Función que almacena el token de Firebase para las notificaciones.
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función que almacena el token de Firebase para las notificaciones.
+     *
+     * 	@param None
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.enviarTokenNotifications = function (token) {
         var _this = this;
         this.restProvider.enviarTokenNotifications(token).then(function (data) {
-            if (typeof data != "undefined" && data['status'] == 1) {
-            }
-            else if (data.status == 401) {
-            }
+            if (typeof data != "undefined" && data['status'] == 1) { }
+            else if (data.status == 401) { }
             else {
                 _this.showErrorAPI("ERROR", data['message']);
             }
         });
     };
     /**
-    * 	Función que muestra el header del menú lateral
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función que muestra el header del menú lateral
+     *
+     * 	@param None
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.getDataMenu = function () {
         var _this = this;
         this.restProvider.getMenuData().then(function (data) {
@@ -7625,14 +7654,14 @@ var MyApp = /** @class */ (function () {
         });
     };
     /**
-    * 	Función que abre una página
-    *
-    * 	@param Pagina	String Nombre de la página.
-    * 	@param Tipo		Si es rootPage o no.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función que abre una página
+     *
+     * 	@param Pagina	String Nombre de la página.
+     * 	@param Tipo		Si es rootPage o no.
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.openPageStrig = function (page, tipo) {
         if (tipo) {
             if (page == "MiSalud")
@@ -7700,14 +7729,14 @@ var MyApp = /** @class */ (function () {
         }
     };
     /**
-    * 	Función que abre una página, si es la Home, la envía
-    *	como la página raiz.
-    *
-    * 	@param Pagina Page nombre de la página
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función que abre una página, si es la Home, la envía
+     *	como la página raiz.
+     *
+     * 	@param Pagina Page nombre de la página
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.openPage = function (page) {
         if (page.title == "Inicio")
             this.nav.setRoot(page.component);
@@ -7715,27 +7744,27 @@ var MyApp = /** @class */ (function () {
             this.nav.push(page.component);
     };
     /**
-    * 	Función desloguea la aplicación y envía a LoginPage
-    *
-    * 	@param None
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    * 	@return None
-    */
+     * 	Función desloguea la aplicación y envía a LoginPage
+     *
+     * 	@param None
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None
+     */
     MyApp.prototype.clickLogout = function () {
         this.restProvider.logout();
         this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_login_login__["a" /* LoginPage */]);
     };
     /**
-    * 	Función que muestra una alerta con el titulo
-    *	y el texto pasado por parámetro.
-    *
-    * 	@param String Titulo de la alerta.
-    * 	@param String Texto de la alerta.
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
+     * 	Función que muestra una alerta con el titulo
+     *	y el texto pasado por parámetro.
+     *
+     * 	@param String Titulo de la alerta.
+     * 	@param String Texto de la alerta.
+     *
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     *
+     */
     MyApp.prototype.showErrorAPI = function (title, text) {
         var alert = this.alertCtrl.create({
             title: title,
@@ -7749,7 +7778,7 @@ var MyApp = /** @class */ (function () {
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["r" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/'<ion-menu [content]="content">\n	<ion-content>\n		<div class="imgTop">\n			<div class="imgPerfilDiv">\n				<img onError="this.src=\'assets/imgs/person.png\';this.style.background=\'white\';this.style.borderRadius=\'50%\';this.style.border=\'2rem solid white;\'" src="https://ui-avatars.com/api/?name={{ menuData.nombre }} {{ menuData.inicial }}&size=256&rounded=true&background={{ menuData.color }}" class="imgPerfil" />\n				<p class="pPerfil" >{{ menuData.nombre }} {{ menuData.apellidos }}</p>\n				<p class="iPerfil"><i>{{ menuData.email }}</i></p>\n			</div>\n		</div>\n		<ion-list>\n			<button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">\n				<i class="{{p.icon}} {{p.color}} marginRight" aria-hidden="true"></i> {{p.title}}\n			</button>\n			<button menuClose ion-item detail-none (click)="clickLogout()">\n				<i class="fas fa-sign-out-alt marginRight primary" aria-hidden="true"></i>  Salir\n			</button>\n		</ion-list>\n	</ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/'<ion-menu [content]="content">\n	<ion-content>\n		<div class="imgTop">\n			<div class="imgPerfilDiv">\n				<img onError="this.src=\'assets/imgs/person.png\';this.style.borderRadius=\'50%\';" src="https://ui-avatars.com/api/?name={{ menuData.nombre }} {{ menuData.inicial }}&size=256&rounded=true&background={{ menuData.color }}" class="imgPerfil" />\n				<div class="container">\n				<p class="pPerfil" >{{ menuData.nombre }} {{ menuData.apellidos }}</p>\n				<p class="iPerfil"><i>{{ menuData.email }}</i></p>\n				</div>\n			</div>\n		</div>\n		<ion-list>\n			<button menuClose ion-item detail-none *ngFor="let p of pages" (click)="openPage(p)">\n				<!-- <i class="{{p.icon}} {{p.color}} marginRight" aria-hidden="true"></i> {{p.title}} -->\n				<ion-icon name="{{p.icon}}" item-left></ion-icon> {{p.title}}\n			</button>\n			<button menuClose ion-item detail-none (click)="clickLogout()">\n				<ion-icon name="fb-exit" item-left></ion-icon> Salir\n			</button>\n		</ion-list>\n		<button>Ayuda</button>\n	</ion-content>\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/app/app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__["a" /* FCM */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
     ], MyApp);
@@ -7788,37 +7817,13 @@ var FbButtonIconComponent = /** @class */ (function () {
     function FbButtonIconComponent(domSanitizer) {
         this.domSanitizer = domSanitizer;
     }
-    FbButtonIconComponent.prototype.ngOnInit = function () {
-        this.selectSVG(this.name);
-    };
-    FbButtonIconComponent.prototype.selectSVG = function (name) {
-        var color = '';
-        if (name.class.includes('active'))
-            color = 'white';
-        else
-            color = 'url(#' + name.gradiente + ')';
-        if (name.svg == 'citas')
-            this.svg = '';
-        else if (name.svg == 'chat')
-            this.svg = '<svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="' + color + '" class="' + name.class + '" stroke="none"> <path d="M51.1 34.1V11.2c0-3.2-2.6-5.8-5.8-5.8H6.6C3.4 5.4.8 8 .8 11.2v22.9c0 3.2 2.6 5.8 5.8 5.8h1.6v6.9c0 1.3 1 2.3 2.3 2.3.7 0 1.3-.3 1.7-.8l7.3-8.4h25.8c3.2 0 5.8-2.6 5.8-5.8zm-32.3 2.7c-.5 0-.9.2-1.2.5l-6.3 7.3v-6.3c0-.9-.7-1.6-1.6-1.6H6.6c-1.5 0-2.6-1.2-2.6-2.6V11.2c0-1.5 1.2-2.6 2.6-2.6h38.7c1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6H18.8zm0 0"/> <path d="M51.7 57.7c.4.5 1.1.8 1.7.8.3 0 .5-.1.8-.2.9-.3 1.5-1.2 1.5-2.2v-6.9h1.6c3.2 0 5.8-2.6 5.8-5.8V20.7c0-3.2-2.6-5.8-5.8-5.8-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6 1.5 0 2.6 1.2 2.6 2.6v22.9c0 1.5-1.2 2.6-2.6 2.6h-3.2c-.9 0-1.6.7-1.6 1.6V54l-6.3-7.3c-.3-.3-.7-.5-1.2-.5H21.7c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h22.7l7.3 8.3zm0 0M27.8 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M34 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0M21.6 23.2c0 1-.8 1.9-1.9 1.9-1 0-1.9-.8-1.9-1.9 0-1 .8-1.9 1.9-1.9 1.1.1 1.9.9 1.9 1.9zm0 0"/> </g> </svg>';
-        else if (name.svg == 'perfil')
-            this.svg = '<svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="' + color + '" class="' + name.class + '" stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>';
-        else if (name.svg == 'salud')
-            this.svg = '<svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="' + color + '" class="' + name.class + '" stroke="none"><defs><path id="a" d="M.5 2h63.7v60.4H.5z"/></defs><clipPath id="b"><use xlink:href="#a" overflow="visible"/></clipPath><path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)"/><g></svg>';
-        else if (name.svg == 'documentos')
-            this.svg = '<svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="' + color + '" class="' + name.class + '" stroke="none"><path d="M47.5 26.8H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M21.7 20.6H32c.6 0 1-.5 1-1 0-.6-.5-1-1-1H21.7c-.6 0-1 .5-1 1-.1.6.4 1 1 1zm0 0M47.5 35.1H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M47.5 43.4H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm0 0M47.5 51.6H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0"/><path d="M51.6 16.1V1H7.2v56.8h5.2V63h44.4V21.2l-5.2-5.1zm-9.3-6.4l10.9 10.9H42.3V9.7zm-33 46.1V3.1h40.3V14l-7.8-7.8H12.4v49.6H9.3zm5.1 5.1V8.2h25.8v14.5h14.5v38.2H14.4zm0 0"/></g></svg>';
-        else if (name.svg == 'preguntas')
-            this.svg = '<svg style="height: 4rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g fill="' + color + '" class="' + name.class + '" stroke="none"><path d="M32 .8C14.8.8.8 14.8.8 32s14 31.2 31.2 31.2 31.2-14 31.2-31.2S49.2.8 32 .8zm0 60C16.1 60.8 3.2 47.9 3.2 32S16.1 3.2 32 3.2 60.8 16.1 60.8 32 47.9 60.8 32 60.8zm0 0"/><path d="M32 45.2c-.7 0-1.2.5-1.2 1.2v2.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2v-2.4c0-.7-.5-1.2-1.2-1.2zm0 0M32.1 11.6H32c-2.5 0-4.9 1-6.7 2.8-1.8 1.8-2.9 4.2-2.9 6.8 0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-1.9.8-3.8 2.1-5.1 1.4-1.4 3.2-2.1 5.2-2.1 3.8.1 7 3.3 7.1 7.1 0 2.5-1.2 4.8-3.3 6.2-3.2 2.1-5.1 5.7-5.1 9.7v3.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V37c0-3.2 1.5-6.1 4-7.7 2.8-1.8 4.4-4.9 4.4-8.2-.1-5.2-4.3-9.4-9.5-9.5zm0 0"/></g></svg>';
-        else
-            this.svg = '';
-    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Input"])('name'),
         __metadata("design:type", Object)
     ], FbButtonIconComponent.prototype, "name", void 0);
     FbButtonIconComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'fb-button-icon',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n<button [class]="name.class">\n	<p *ngIf="name.svg == \'citas\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g stroke="none"> <path d="M16.9 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.3h-4.2v-4.2h4.2v4.2zm0 0M27.3 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.3H22v-4.2h4.2v4.2zm0 0M37.7 22.1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.3h-4.2v-4.2h4.2v4.2zm0 0M41.8 30.4H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2v-4.2h4.2v4.2zm0 0M27.3 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22v-4.2h4.2v4.2zm0 0M37.7 32.5h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2v-4.2h4.2v4.2zm0 0M41.8 40.8H48c.6 0 1-.5 1-1v-6.2c0-.6-.5-1-1-1h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.4 1 1 1zm1.1-6.2H47v4.2h-4.2v-4.2zm0 0M16.9 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1 6.2h-4.2V45h4.2v4.1zm0 0M27.3 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.4-1-1-1zm-1.1 6.2H22V45h4.2v4.1zm0 0"/><defs><path id="SVGID_1_" d="M3.4 1.4h57.2v61.3H3.4z"/></defs><clipPath id="SVGID_2_"><use xlink:href="#SVGID_1_" overflow="visible"/></clipPath><path class="st0" d="M37.7 42.9h-6.2c-.6 0-1 .5-1 1v6.2c0 .6.5 1 1 1h6.2c.6 0 1-.5 1-1v-6.2c0-.5-.5-1-1-1zm-1.1 6.2h-4.2V45h4.2v4.1zm0 0"/><path class="st0" d="M55.3 43.3V6.6c0-.6-.5-1-1-1h-5.2v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1-1.7 0-3.1 1.4-3.1 3.1v1h-2.1v-1c0-1.7-1.4-3.1-3.1-3.1s-3.2 1.3-3.2 3v1H4.4c-.6 0-1 .5-1 1v49.8c0 .6.5 1 1 1h36.7c2.9 5 9.2 6.7 14.2 3.8 5-2.9 6.7-9.2 3.8-14.2-.9-1.4-2.2-2.7-3.8-3.6zM44.9 4.5c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1 .6 0 1 .5 1 1v4.2c0 .6-.5 1-1 1-.6 0-1-.5-1-1V4.5zm-8.3 0c0-.6.5-1 1-1s1 .5 1 1v4.2c0 .6-.5 1-1 1s-1-.5-1-1V4.5zM5.5 7.6h4.2v1c0 1.7 1.4 3.1 3.1 3.1s3.1-1.4 3.1-3.1v-1H18v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h2.1v1c0 1.7 1.4 3.1 3.1 3.1 1.7 0 3.1-1.4 3.1-3.1v-1h4.2v8.3H5.5V7.6zm0 47.8V18h47.8v24.4c-5.5-1.7-11.3 1.3-13 6.8-.6 2-.6 4.2 0 6.2H5.5zm44.6 5.2c-4.6 0-8.3-3.7-8.3-8.3s3.7-8.3 8.3-8.3c4.6 0 8.3 3.7 8.3 8.3 0 4.5-3.7 8.2-8.3 8.3zm0 0"/><path d="M53.6 48.3l-4.5 3.6-2.5-2.5c-.4-.4-1.1-.4-1.5 0-.4.4-.4 1.1 0 1.5l3.1 3.1c.4.4 1 .4 1.4.1l5.2-4.2c.4-.4.5-1 .2-1.5-.3-.4-.9-.4-1.4-.1zm0 0"></path> </g> </svg>\n	</p>\n\n	<p *ngIf="name.svg == \'perfil\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n	</p>\n	\n	<p *ngIf="name.svg == \'chat\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"> <path d="M63.2 32C63.2 14.8 49.2.8 32 .8S.8 14.8.8 32c0 9.5 4.3 18 11 23.7.1.1.2.2.3.2 5.4 4.5 12.3 7.2 20 7.2 7.5 0 14.4-2.7 19.8-7.1.3-.1.6-.3.7-.6 6.4-5.7 10.6-14 10.6-23.4zM3.7 32C3.7 16.4 16.4 3.7 32 3.7S60.3 16.4 60.3 32c0 7.6-3 14.5-8 19.6-.8-3.7-3.2-10.1-10.5-14.2 1.7-2.1 2.6-4.8 2.6-7.6 0-6.8-5.6-12.4-12.4-12.4-6.8 0-12.4 5.6-12.4 12.4 0 2.9 1 5.5 2.6 7.6-7.4 4.1-9.8 10.5-10.5 14.2-4.9-5-8-12-8-19.6zm18.8-2.1c0-5.2 4.3-9.5 9.5-9.5s9.5 4.3 9.5 9.5-4.3 9.5-9.5 9.5-9.5-4.3-9.5-9.5zm-8.2 24.2c.2-2.3 1.4-10.1 10-14.5 2.1 1.7 4.8 2.6 7.6 2.6 2.9 0 5.6-1 7.7-2.7 8.5 4.4 9.9 12 10.1 14.5-4.9 3.9-11.1 6.3-17.7 6.3-6.7 0-12.8-2.3-17.7-6.2zm0 0"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'salud\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n			<g  stroke="none">\n				<defs>\n					<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n				</defs>\n				<clipPath id="b">\n					<use xlink:href="#a" overflow="visible"/>\n				</clipPath>\n				<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)" />\n			</g>\n		</svg>\n	</p>\n\n	<p *ngIf="name.svg == \'documentos\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M47.5 26.8H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M21.7 20.6H32c.6 0 1-.5 1-1 0-.6-.5-1-1-1H21.7c-.6 0-1 .5-1 1-.1.6.4 1 1 1zm0 0M47.5 35.1H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0M47.5 43.4H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1 0-.6-.4-1-1-1zm0 0M47.5 51.6H21.7c-.6 0-1 .5-1 1 0 .6.5 1 1 1h25.8c.6 0 1-.5 1-1s-.4-1-1-1zm0 0"/><path d="M51.6 16.1V1H7.2v56.8h5.2V63h44.4V21.2l-5.2-5.1zm-9.3-6.4l10.9 10.9H42.3V9.7zm-33 46.1V3.1h40.3V14l-7.8-7.8H12.4v49.6H9.3zm5.1 5.1V8.2h25.8v14.5h14.5v38.2H14.4zm0 0"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'preguntas\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g  stroke="none"><path d="M32 .8C14.8.8.8 14.8.8 32s14 31.2 31.2 31.2 31.2-14 31.2-31.2S49.2.8 32 .8zm0 60C16.1 60.8 3.2 47.9 3.2 32S16.1 3.2 32 3.2 60.8 16.1 60.8 32 47.9 60.8 32 60.8zm0 0"/><path d="M32 45.2c-.7 0-1.2.5-1.2 1.2v2.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2v-2.4c0-.7-.5-1.2-1.2-1.2zm0 0M32.1 11.6H32c-2.5 0-4.9 1-6.7 2.8-1.8 1.8-2.9 4.2-2.9 6.8 0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2c0-1.9.8-3.8 2.1-5.1 1.4-1.4 3.2-2.1 5.2-2.1 3.8.1 7 3.3 7.1 7.1 0 2.5-1.2 4.8-3.3 6.2-3.2 2.1-5.1 5.7-5.1 9.7v3.4c0 .7.5 1.2 1.2 1.2s1.2-.5 1.2-1.2V37c0-3.2 1.5-6.1 4-7.7 2.8-1.8 4.4-4.9 4.4-8.2-.1-5.2-4.3-9.4-9.5-9.5zm0 0"/></g></svg>\n	</p>\n\n	<p [class]="name.class" >{{ name.name }}</p>\n</button>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/
+            selector: 'fb-button-icon',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/'<!-- Generated template for the FbButtonIconComponent component -->\n<button [class]="name.class">\n	<p *ngIf="name.svg == \'citas\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M59 6h-8V4.4c0-.9-.7-1.6-1.6-1.6-.9 0-1.6.7-1.6 1.6V6H16.1V4.4c0-.9-.7-1.6-1.6-1.6-.9 0-1.6.7-1.6 1.6V6H5C2.4 6 .2 8.1.2 10.8v44.4C.3 57.9 2.4 60 5 60h54c2.6 0 4.8-2.1 4.8-4.8V10.8C63.8 8.2 61.6 6 59 6zM5 9.2h7.9V14c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6V9.2h31.8V14c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6V9.2H59c.9 0 1.6.7 1.6 1.6v7.9H3.4v-7.9c0-.9.7-1.6 1.6-1.6zm54 47.6H5c-.9 0-1.6-.7-1.6-1.6V21.9h57.2v33.3c0 .9-.7 1.6-1.6 1.6z"/><path d="M24.1 31.4h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6-.1.9-.8 1.6-1.6 1.6zM33.6 31.4h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM43.1 31.4h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM52.6 31.4h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM14.5 37.8h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM24.1 37.8h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.8 1.6-1.6 1.6zM33.6 37.8h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM43.1 37.8h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM52.6 37.8h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM14.5 44.1h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM24.1 44.1h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6-.1.9-.8 1.6-1.6 1.6zM33.6 44.1h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM43.1 44.1h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM52.6 44.1h-3.2c-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6 0 .9-.7 1.6-1.6 1.6zM14.5 50.5h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM24.1 50.5h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.8 1.6-1.6 1.6zM33.6 50.5h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM43.1 50.5h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6zM52.6 50.5h-3.2c-.9 0-1.6-.7-1.6-1.6s.7-1.6 1.6-1.6h3.2c.9 0 1.6.7 1.6 1.6s-.7 1.6-1.6 1.6z"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'perfil\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M30.4 35.3c-9.6 0-17.5-7.8-17.5-17.5S20.8.4 30.4.4s17.5 7.8 17.5 17.5S40 35.3 30.4 35.3zm0-31.7c-7.9 0-14.3 6.4-14.3 14.3s6.4 14.3 14.3 14.3 14.3-6.4 14.3-14.3S38.3 3.6 30.4 3.6zm6.4 60.3H5c-2.6 0-4.8-2.1-4.8-4.8 0-.2 0-5.3 3.9-10.5 2.2-3 5.3-5.4 9.1-7 4.6-2.1 10.4-3.1 17.2-3.1 1.1 0 2.2 0 3.3.1.9.1 1.5.8 1.5 1.7-.1.9-.8 1.5-1.7 1.5-1-.1-2-.1-3.1-.1-11.1 0-19.2 3-23.6 8.8-3.3 4.3-3.4 8.7-3.4 8.7 0 .9.7 1.6 1.6 1.6h31.7c.9 0 1.6.7 1.6 1.6 0 .8-.7 1.5-1.5 1.5zm12.7 0c-7.9 0-14.3-6.4-14.3-14.3s6.4-14.3 14.3-14.3 14.3 6.4 14.3 14.3-6.5 14.3-14.3 14.3zm0-25.4c-6.1 0-11.1 5-11.1 11.1s5 11.1 11.1 11.1 11.1-5 11.1-11.1-5-11.1-11.1-11.1zm6.3 9.5H51v-4.8c0-.9-.7-1.6-1.6-1.6-.9 0-1.6.7-1.6 1.6V48H43c-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6h4.8V56c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6v-4.8h4.8c.9 0 1.6-.7 1.6-1.6s-.7-1.6-1.6-1.6z"/></g></svg>\n	</p>\n	\n	<p *ngIf="name.svg == \'chat\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> <g stroke="none"> <path d="M2 60.9c-.8 0-1.4-.5-1.6-1.2-.2-.7.1-1.5.8-1.9 5.6-3.4 8-8.3 8.8-10.6C3.9 42.5.4 36 .4 29.2c0-3.4.9-6.8 2.6-9.9 1.6-3 3.9-5.7 6.9-8 6-4.6 13.9-7.2 22.3-7.2s16.3 2.6 22.3 7.2c2.9 2.3 5.3 5 6.9 8 1.7 3.1 2.6 6.5 2.6 9.9s-.9 6.8-2.6 9.9c-1.6 3-3.9 5.7-6.9 8-6 4.6-13.9 7.2-22.3 7.2-3.4 0-6.8-.4-10.1-1.3-1.4 1-4.1 2.6-7.3 4.2-5.1 2.5-9.4 3.7-12.8 3.7zM32 7.5c-15.7 0-28.4 9.7-28.4 21.7 0 6.1 3.4 11.9 9.2 16 .6.4.8 1.1.7 1.8-.4 1.5-1.7 5.5-5.3 9.3 4.3-1.5 9-4.2 12.5-6.5.4-.3.9-.4 1.4-.2 3.2.9 6.5 1.4 9.9 1.4 15.7 0 28.4-9.7 28.4-21.7S47.7 7.5 32 7.5zm0 30c-.9 0-1.7-.7-1.7-1.7v-6.7c0-.9.7-1.7 1.7-1.7 2.8 0 5-2.2 5-5s-2.2-5-5-5-5 2.2-5 5c0 .9-.7 1.7-1.7 1.7s-1.7-.7-1.7-1.7c0-4.6 3.7-8.3 8.3-8.3s8.3 3.7 8.3 8.3c0 4-2.9 7.4-6.7 8.2v5.2c.2 1-.6 1.7-1.5 1.7zm0 6.7c-.4 0-.9-.2-1.2-.5s-.5-.7-.5-1.2c0-.4.2-.9.5-1.2.3-.3.7-.5 1.2-.5.4 0 .9.2 1.2.5.3.3.5.7.5 1.2 0 .4-.2.9-.5 1.2-.3.3-.7.5-1.2.5z"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'salud\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"> \n			<g  stroke="none">\n				<defs>\n					<path id="a" d="M.5 2h63.7v60.4H.5z"/>\n				</defs>\n				<clipPath id="b">\n					<use xlink:href="#a" overflow="visible"/>\n				</clipPath>\n				<path d="M63.5 19.8c-1-10.2-8.1-17.5-17.1-17.5-6 0-11.5 3.2-14.5 8.4-3.1-5.2-8.3-8.4-14.2-8.4-9 0-16.2 7.4-17.1 17.5-.1.5-.4 2.8.5 6.6C2.4 31.9 5.5 37 9.9 41l22 19.9L54.2 41c4.4-4 7.4-9 8.7-14.6.9-3.8.6-6.2.6-6.6zm-2.9 6c-1.2 5.1-4 9.7-8 13.3L31.8 57.7 11.5 39.2c-4-3.7-6.8-8.3-8-13.3-.9-3.7-.5-5.7-.5-5.8V20c.8-8.9 7-15.3 14.7-15.3 5.7 0 10.7 3.5 13.1 9.1l1.1 2.6 1.1-2.6c2.3-5.5 7.6-9.1 13.4-9.1 7.7 0 13.9 6.4 14.7 15.4 0 .1.3 2.1-.5 5.7zm0 0" clip-path="url(#b)" />\n			</g>\n		</svg>\n	</p>\n\n	<p *ngIf="name.svg == \'documentos\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M53.8 64H10.4c-2.8 0-5-2.2-5-5V5.5c0-2.8 2.2-5 5-5h43.4c2.8 0 5 2.2 5 5V59c0 2.8-2.2 5-5 5zM10.4 3.8c-.9 0-1.7.7-1.7 1.7V59c0 .9.7 1.7 1.7 1.7h43.4c.9 0 1.7-.7 1.7-1.7V5.5c0-.9-.7-1.7-1.7-1.7H10.4zm30.1 10.1H17.1c-.9 0-1.7-.7-1.7-1.7 0-.9.7-1.7 1.7-1.7h23.4c.9 0 1.7.7 1.7 1.7-.1.9-.8 1.7-1.7 1.7zm6.6 6.7h-30c-.9 0-1.7-.7-1.7-1.7s.7-1.7 1.7-1.7h30.1c.9 0 1.7.7 1.7 1.7s-.8 1.7-1.8 1.7zm0 6.6h-30c-.9 0-1.7-.7-1.7-1.7s.7-1.7 1.7-1.7h30.1c.9 0 1.7.7 1.7 1.7s-.8 1.7-1.8 1.7zm-13.3 6.7H17.1c-.9 0-1.7-.7-1.7-1.7 0-.9.7-1.7 1.7-1.7h16.7c.9 0 1.7.7 1.7 1.7-.1 1-.8 1.7-1.7 1.7zm13.3 13.4h-30c-.9 0-1.7-.7-1.7-1.7 0-.9.7-1.7 1.7-1.7h30.1c.9 0 1.7.7 1.7 1.7-.1.9-.8 1.7-1.8 1.7zM40.5 54H17.1c-.9 0-1.7-.7-1.7-1.7 0-.9.7-1.7 1.7-1.7h23.4c.9 0 1.7.7 1.7 1.7-.1.9-.8 1.7-1.7 1.7z"/></g></svg>\n	</p>\n\n	<p *ngIf="name.svg == \'preguntas\'">\n	<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M16.3 36H3.6c-.5 0-1-.4-1-1V3.9c0-.5.4-1 1-1h48.3L43.8 11c-.2.2-.3.4-.3.7v12.7h1.9V12.1l9.4-9.4c.2-.2.3-.4.3-.7 0-.5-.4-1-1-1H3.6C2 1 .7 2.3.7 3.9v31.2C.7 36.7 2 38 3.6 38h12.7v-2z"/><path d="M60.1 26.3h-39c-1.6 0-2.9 1.3-2.9 2.9v23l-9.4 9.4c-.2.2-.3.4-.3.7 0 .5.4 1 1 1h50.6c1.6 0 2.9-1.3 2.9-2.9V29.2c0-1.6-1.3-2.9-2.9-2.9zm1 34.1c0 .5-.4 1-1 1H11.8l8.1-8.1c.2-.2.3-.4.3-.7V29.2c0-.5.4-1 1-1h38.9c.5 0 1 .4 1 1v31.2zM33.8 23.4v-7.8c0-4.8-3.9-8.8-8.8-8.8-4.8 0-8.8 3.9-8.8 8.8v9.7h1.9v-5.8h13.6v3.9h2.1zm-15.6-5.9v-1.9c0-3.8 3.1-6.8 6.8-6.8s6.8 3.1 6.8 6.8v1.9H18.2z"/><path d="M49.4 47.7v-5.8c0-4.8-3.9-8.8-8.8-8.8-4.8 0-8.8 3.9-8.8 8.8v5.8c0 4.8 3.9 8.8 8.8 8.8 1.5 0 2.8-.4 4.1-1 1.4.6 3.3 1 5.7 1v-1.9c-1.5 0-2.7-.2-3.7-.4 1.6-1.7 2.7-4 2.7-6.5zm-8.8 6.8c-3.8 0-6.8-3.1-6.8-6.8v-5.8c0-3.8 3.1-6.8 6.8-6.8 3.8 0 6.8 3.1 6.8 6.8v5.8c0 2.3-1.1 4.3-2.9 5.5-2.9-1.7-3-4.4-3-4.6h-2c0 .1.1 3.3 2.9 5.6-.5.2-1.1.3-1.8.3zM4.6 29.2v3.9c0 .5.4 1 1 1h3.9v-1.9h-3v-2.9H4.6zM57.2 57.5h-2.9v1.9h3.9c.5 0 1-.4 1-1v-3.9h-1.9v3z"/></g></svg>\n	</p>\n	\n	<p *ngIf="name.svg == \'web\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M10.2 12.5c0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6.9 0 1.6.7 1.6 1.6zm6.3 0c0 .9-.7 1.6-1.6 1.6-.9 0-1.6-.7-1.6-1.6 0-.9.7-1.6 1.6-1.6.9 0 1.6.7 1.6 1.6zm6.2 0c0 .9-.7 1.6-1.6 1.6s-1.6-.7-1.6-1.6c0-.9.7-1.6 1.6-1.6s1.6.7 1.6 1.6zm35.8-7.8h-53C3 4.7.9 6.8.9 9.3v37.4c0 .9.7 1.6 1.6 1.6S4 47.6 4 46.7V20.2h23.4c2.6 0 4.7-2.1 4.7-4.7 0-.9.7-1.6 1.6-1.6h15.6c.9 0 1.6.7 1.6 1.6 0 2.6 2.1 4.7 4.7 4.7h4.7V56c0 .9-.7 1.6-1.6 1.6H14.9c-.9 0-1.6.7-1.6 1.6 0 .9.7 1.6 1.6 1.6h43.6c2.6 0 4.7-2.1 4.7-4.7V9.3c0-2.5-2.1-4.6-4.7-4.6zm-3.1 12.4c-.9 0-1.6-.7-1.6-1.6 0-2.6-2.1-4.7-4.7-4.7H33.6c-2.6 0-4.7 2.1-4.7 4.7 0 .9-.7 1.6-1.6 1.6H4V9.3c0-.9.7-1.6 1.6-1.6h53c.9 0 1.6.7 1.6 1.6v7.8h-4.8zM24.2 35.8h-9.3c-.9 0-1.6.7-1.6 1.6S14 39 14.9 39h5.6l-16 16c-.6.6-.6 1.6 0 2.2.3.3.7.5 1.1.5.4 0 .8-.2 1.1-.5l16-16v5.6c0 .9.7 1.6 1.6 1.6.9 0 1.6-.7 1.6-1.6v-9.3c-.1-1-.8-1.7-1.7-1.7z"/></g></svg>\n	</p>\n	<p *ngIf="name.svg == \'comollegar\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M32.4 63.4c-.5 0-.9-.2-1.2-.6-.2-.2-4.4-5.7-8.7-13.7-2.5-4.7-4.6-9.4-6-13.8-1.8-5.6-2.8-10.8-2.8-15.6C13.7 9.4 22.1 1 32.4 1s18.7 8.4 18.7 18.7c0 4.8-.9 10.1-2.8 15.6-1.5 4.4-3.5 9.1-6 13.8-4.3 8-8.6 13.5-8.7 13.7-.3.4-.7.6-1.2.6zm0-59.3c-8.6 0-15.6 7-15.6 15.6 0 10.2 4.6 20.8 8.4 27.9 2.8 5.2 5.6 9.4 7.2 11.6 1.6-2.2 4.4-6.4 7.2-11.6 3.8-7.1 8.4-17.8 8.4-27.9 0-8.6-7-15.6-15.6-15.6z"/><path d="M32.4 29.1c-5.2 0-9.4-4.2-9.4-9.4s4.2-9.4 9.4-9.4 9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm0-15.6c-3.4 0-6.2 2.8-6.2 6.2S29 26 32.4 26s6.2-2.8 6.2-6.2-2.8-6.3-6.2-6.3z"/></g></svg>\n	</p>\n	<p *ngIf="name.svg == \'sugerencias\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M61 35.6c1.4-1.6 2.2-4.3 2.2-6.8 0-1.7-.4-3.1-1-4.2-.9-1.4-2.3-2.2-4-2.2H50C54.4 14.1 55.5 8 53.2 4 51.6 1.2 48.7.2 46.8.2c-.8 0-1.5.6-1.6 1.4-.6 4.2-3.7 9.1-8.7 13.6-4.7 4.3-10.6 7.8-16.6 9.8-.8-1.6-2.4-2.7-4.3-2.7H6.2c-2.6 0-4.7 2.1-4.7 4.7v28.3c0 2.6 2.1 4.7 4.7 4.7h9.4c2 0 3.7-1.2 4.4-3 6.2.8 8.5 2 10.8 3.2 2.8 1.5 5.5 2.9 14.2 2.9 2.3 0 4.4-.6 6-1.7 1.6-1 2.6-2.5 2.9-4.2 1.3-.5 2.4-1.7 3.2-3.4.8-1.7 1.4-3.9 1.4-5.5 0-.3 0-.6-.1-.9.8-.6 1.5-1.5 2.1-2.7.9-1.7 1.4-3.9 1.4-5.8 0-1.3-.2-2.4-.7-3.3-.1.1-.1 0-.2 0zM15.6 56.9H6.1c-.9 0-1.6-.7-1.6-1.6V27c0-.9.7-1.6 1.6-1.6h9.4c.9 0 1.6.7 1.6 1.6v28.3c.1.9-.6 1.6-1.5 1.6zm43.6-24.3c-.5 1-1 1.3-1.2 1.3-.9 0-1.6.7-1.6 1.6s.7 1.6 1.6 1.6c.1 0 .2 0 .4.2.2.4.3 1 .3 1.8 0 1.4-.4 3.1-1 4.4-.6 1.3-1.3 1.7-1.5 1.7-.9 0-1.6.7-1.6 1.6 0 .6.3 1 .7 1.3.1 1-.4 3.7-1.6 5.4-.5.7-.9 1-1.3 1-.9 0-1.6.7-1.6 1.6 0 2.8-3.1 4-5.9 4-7.9 0-10.1-1.2-12.7-2.6-2.4-1.3-5.1-2.7-11.9-3.6V28.2c6.6-2.2 13.1-5.9 18.3-10.6 5-4.5 8.3-9.4 9.4-13.9.9.3 1.8.9 2.4 1.9 1.1 1.9 1.8 6.6-4.7 17.5-.3.5-.3 1.1 0 1.6s.8.8 1.4.8h11c.6 0 1 .2 1.4.7.4.6.6 1.5.6 2.6-.1 1.3-.4 2.7-.9 3.8z"/></g></svg>\n	</p>\n	<p *ngIf="name.svg == \'pedircita\'">\n		<svg style="height: 3rem; margin: 0 0 -1rem;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g stroke="none"><path d="M58.8 6.6H51V5c0-.9-.7-1.6-1.6-1.6s-1.6.8-1.6 1.6v1.6H16.4V5c0-.9-.7-1.6-1.6-1.6s-1.5.8-1.5 1.6v1.6H5.5C2.9 6.6.8 8.7.8 11.3v43.9c0 2.6 2.1 4.7 4.7 4.7h53.3c2.6 0 4.7-2.1 4.7-4.7V11.3c0-2.6-2.1-4.7-4.7-4.7zM5.5 9.7h7.8v4.7c0 .9.7 1.6 1.6 1.6s1.6-.7 1.6-1.6V9.7h31.4v4.7c0 .9.7 1.6 1.6 1.6s1.6-.7 1.6-1.6V9.7h7.8c.9 0 1.6.7 1.6 1.6v7.8H3.9v-7.8c0-.9.7-1.6 1.6-1.6zm53.3 47.1H5.5c-.9 0-1.6-.7-1.6-1.6V22.3h56.5v32.9c0 .9-.7 1.6-1.6 1.6zm-31.4-7.9c-.4 0-.8-.2-1.1-.5L20 42.2c-.6-.6-.6-1.6 0-2.2s1.6-.6 2.2 0l5.2 5.2L42 30.6c.6-.6 1.6-.6 2.2 0s.6 1.6 0 2.2L28.5 48.5c-.3.3-.7.4-1.1.4z"/></g></svg>\n	</p>\n\n	<p [class]="name.class" >{{ name.name }}</p>\n</button>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/components/fb-button-icon/fb-button-icon.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["c" /* DomSanitizer */]])
     ], FbButtonIconComponent);
