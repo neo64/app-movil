@@ -43677,6 +43677,16 @@ page-change-password ion-icon {
   margin-right: 0 !important;
 }
 
+page-change-password ion-title {
+  text-align: center;
+  margin-left: -15%;
+  z-index: 0;
+}
+
+page-change-password .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-change-password .toolbar-background-md {
   background: white;
 }
@@ -44565,8 +44575,10 @@ page-mi-perfil hr {
 page-mi-perfil .editIcon {
   background: white;
   position: absolute;
-  bottom: 5px;
-  left: -12px;
+  /*bottom: 5px;
+    left: -12px;*/
+  bottom: 15%;
+  left: -10%;
   border-radius: 50%;
   padding: 1rem;
   border: 1px solid;

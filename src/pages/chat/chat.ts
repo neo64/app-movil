@@ -34,11 +34,12 @@ export class ChatPage {
 	loadingPresented 	= false;	// Controla si el Loading esta en primer plano.
 	menuData 			= "";		// Foto de perfil del usuario.
 
-	constructor(private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
+	constructor( private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
 		
 		this.showLoading("Cargando conversación ...");	
 		this.nickname 		= window.localStorage.getItem("idPac");
 		this.menuData 		= window.localStorage.getItem("urlPerfil");
+		this.checkFileExistence("fyb.jpeg");
 		this.data.type 		= 'message';
 		this.data.nickname 	= this.nickname;
 
@@ -103,6 +104,19 @@ export class ChatPage {
 			});
 		}); 
 	}
+
+	public checkFileExistence(fileName: string) {
+	    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
+	            this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
+					this.base64 		= result;
+					this.menuData 		= result;
+				}, (err) => {
+					//console.log(err);
+				});
+	    }, (error) => {
+	        //console.log(error);
+	    })
+  	}
 
 
 	printImage(base){

@@ -82,7 +82,9 @@ var LoginRecibirPinPage = /** @class */ (function () {
                 window.localStorage.setItem("token", d['data']['token']);
                 window.localStorage.setItem("expires", d['data']['expires']);
                 _this.events.publish("user:logged");
-                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__["a" /* ChangePasswordPage */]);
+                _this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pages_change_password_change_password__["a" /* ChangePasswordPage */], {
+                    'first': true,
+                });
             }
             else if (typeof d != "undefined" && d['status'] == 2) {
                 if (!auto)
@@ -169,11 +171,12 @@ var LoginRecibirPinPage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f, _g;
     LoginRecibirPinPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-login-recibir-pin',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Introduce el PIN</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<div style="    margin: 2rem;">\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<p  style="    margin: 2rem;">\n		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>\n	</p>\n	<br />\n	<ion-list>\n		<ion-item style=" width: 94%;">\n			<ion-label stacked>PIN</ion-label>\n			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>\n		</ion-item>\n		<p class="olvido">Nº de 6 dígitos</p>		\n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>\n	</div>\n	<ion-footer>\n		<p style="text-align: center;">\n			No lo he recibido.<br/>\n			<a (click)="reEnviarPIN()">Reenviar PIN</a>\n		</p>\n	</ion-footer>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/login-recibir-pin/login-recibir-pin.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _g || Object])
     ], LoginRecibirPinPage);
     return LoginRecibirPinPage;
 }());
@@ -601,6 +604,9 @@ var ConsejosPersonalizadosPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__ = __webpack_require__(193);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -614,8 +620,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
 var ProfilePage = /** @class */ (function () {
-    function ProfilePage(events, alertCtrl, restProvider, navCtrl, loadingCtrl) {
+    function ProfilePage(domSanitizer, _CAMERA, actionSheetCtrl, file, events, alertCtrl, restProvider, navCtrl, loadingCtrl) {
+        this.domSanitizer = domSanitizer;
+        this._CAMERA = _CAMERA;
+        this.actionSheetCtrl = actionSheetCtrl;
+        this.file = file;
         this.events = events;
         this.alertCtrl = alertCtrl;
         this.restProvider = restProvider;
@@ -623,10 +636,97 @@ var ProfilePage = /** @class */ (function () {
         this.loadingCtrl = loadingCtrl;
         this.data = {}; // Array para almacenar los valores del perfil.
         this.loadingPresented = false; // Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
+        this.bGuardar = { name: 'GUARDAR CAMBIOS', svg: '', openPage: '', class: 'active btn-large', tipo: 'page', gradiente: 'fb-gradient' };
+        this.checkFileExistence("fyb.jpeg");
         this.showLoading(); // Mostramos el ProgressBar al iniciar la aplicación
         this.getProfile(); // Llamada a la funcion para obtener el perfil del paciente
         this.events.publish("user:logged");
     }
+    ProfilePage.prototype.checkFileExistence = function (fileName) {
+        var _this = this;
+        return this.file.checkFile(this.file.externalRootDirectory, fileName).then(function () {
+            _this.file.readAsDataURL(_this.file.externalRootDirectory, fileName).then(function (result) {
+                _this.existe = true;
+                _this.base64 = result;
+                _this.data.Imagen = result;
+            }, function (err) {
+                //console.log(err);
+            });
+        }, function (error) {
+            //console.log(error);
+        });
+    };
+    /**
+* 	Función que envía una imagen a Firebase
+*
+* 	@param None
+*
+* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+*
+*/
+    ProfilePage.prototype.selectImage = function (x) {
+        var _this = this;
+        this.showLoading("Guardando imagen ...");
+        return new Promise(function (resolve) {
+            var cameraOptions = {
+                sourceType: x,
+                destinationType: _this._CAMERA.DestinationType.DATA_URL,
+                quality: 50,
+                allowEdit: true,
+                correctOrientation: true,
+                saveToPhotoAlbum: true,
+                cameraDirection: 1,
+                encodingType: _this._CAMERA.EncodingType.JPEG,
+            };
+            _this._CAMERA.getPicture(cameraOptions).then(function (data) {
+                _this.writeFile('data:image/jpeg;base64,' + data, "", "fyb.jpeg");
+            }).catch(function (e) {
+                if (e == 20) {
+                    _this.showError("ERROR", "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.");
+                }
+                else {
+                    _this.showError("ERROR", e);
+                    _this.loading.dismiss();
+                }
+            });
+        }).catch(function (e) {
+            _this.showError("ERROR", "Error al intentar enviar la imagen.");
+        });
+    };
+    /*
+    * 	Función que selecciona si es desde galeria o camara
+    *
+    * 	@param None
+    *
+    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+    *
+    */
+    ProfilePage.prototype.openChooseImage = function () {
+        var _this = this;
+        var actionSheet = this.actionSheetCtrl.create({
+            title: 'Elige una opción',
+            cssClass: 'action-sheets-basic-page',
+            buttons: [
+                {
+                    text: 'Camara',
+                    role: 'destructive',
+                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	          		
+                    handler: function () {
+                        _this.selectImage(1);
+                    }
+                },
+                {
+                    text: 'Galeria',
+                    role: 'destructive',
+                    //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,	
+                    handler: function () {
+                        _this.selectImage(0);
+                    }
+                },
+            ]
+        });
+        actionSheet.present();
+    };
     /**
     * 	Función que actualiza los datos personales
     *	del paciente y envía un correo a citas@...
@@ -669,7 +769,9 @@ var ProfilePage = /** @class */ (function () {
         var _this = this;
         this.restProvider.getProfile().then(function (data) {
             if (typeof data != "undefined" && data['status'] == 1) {
-                _this.setValues(data['data']);
+                if (_this.existe)
+                    data['data']['Imagen'] = _this.base64;
+                _this.data = data['data'];
                 _this.loading.dismiss();
             }
             else if (data.status == 401) {
@@ -743,11 +845,12 @@ var ProfilePage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j;
     ProfilePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-profile',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/'<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n<ion-content padding>\n	<ion-list> \n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Nombre</ion-label>\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Apellidos</ion-label>\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Email</ion-label>\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input><ion-icon name="fb-mail" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>DNI</ion-label>\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Fecha nacimiento</ion-label>\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input><ion-icon name="fb-calendar" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Dirección</ion-label>\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Localidad</ion-label>\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Provincia</ion-label>\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Teléfono móvil</ion-label>\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input><ion-icon name="fb-phone" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Teléfono fijo</ion-label>\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input><ion-icon name="fb-telephone" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Alergias</ion-label>\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input><ion-icon name="fb-alarm" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Medicacion</ion-label>\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input><ion-icon name="fb-plus-linear" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>  \n	  </ion-item>\n	</ion-list>\n	<button ion-button (click)="setProfile()" block style="margin-top: 1rem;"><i style="margin-right: 0.5rem;" class="fas fa-pen"></i>  Guardar cambios</button>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/,
+            selector: 'page-profile',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/'<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n<ion-content padding>\n	<div class="perfil__foto">\n		<img  *ngIf="data.Imagen" [src]="domSanitizer.bypassSecurityTrustUrl(data.Imagen)" style="object-fit:cover;" class="imageProfile">\n		<a class="btn -rounded -bg-pink editIcon" (click)="openChooseImage()" style="padding: 0.5rem;box-shadow: 4px 10px 41px 0px rgba(237, 122, 173, 0.37);    color: transparent;"> \n			 <svg viewBox="0 0 400 400" width="512" xmlns="http://www.w3.org/2000/svg"> -->\n				 <path d="m370.589844 250.972656c-5.523438 0-10 4.476563-10 10v88.789063c-.019532 16.5625-13.4375 29.984375-30 30h-280.589844c-16.5625-.015625-29.980469-13.4375-30-30v-260.589844c.019531-16.558594 13.4375-29.980469 30-30h88.789062c5.523438 0 10-4.476563 10-10 0-5.519531-4.476562-10-10-10h-88.789062c-27.601562.03125-49.96875 22.398437-50 50v260.59375c.03125 27.601563 22.398438 49.96875 50 50h280.589844c27.601562-.03125 49.96875-22.398437 50-50v-88.792969c0-5.523437-4.476563-10-10-10zm0 0" fill="#FFFFFF"/><path d="m376.628906 13.441406c-17.574218-17.574218-46.066406-17.574218-63.640625 0l-178.40625 178.40625c-1.222656 1.222656-2.105469 2.738282-2.566406 4.402344l-23.460937 84.699219c-.964844 3.472656.015624 7.191406 2.5625 9.742187 2.550781 2.546875 6.269531 3.527344 9.742187 2.566406l84.699219-23.464843c1.664062-.460938 3.179687-1.34375 4.402344-2.566407l178.402343-178.410156c17.546875-17.585937 17.546875-46.054687 0-63.640625zm-220.257812 184.90625 146.011718-146.015625 47.089844 47.089844-146.015625 146.015625zm-9.40625 18.875 37.621094 37.625-52.039063 14.417969zm227.257812-142.546875-10.605468 10.605469-47.09375-47.09375 10.609374-10.605469c9.761719-9.761719 25.589844-9.761719 35.351563 0l11.738281 11.734375c9.746094 9.773438 9.746094 25.589844 0 35.359375zm0 0" fill="#FFFFFF"/> \n			 </svg> \n		 </a>\n	</div>\n	<ion-list> \n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Nombre</ion-label>\n		<ion-input type="text" placeholder="Nombre" [(ngModel)]="data.Nombre"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Apellidos</ion-label>\n		<ion-input type="text" placeholder="Apellidos" [(ngModel)]="data.Apellidos"></ion-input><ion-icon name="fb-user" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Email</ion-label>\n		<ion-input type="Email" placeholder="Email"  [(ngModel)]="data.Email"></ion-input><ion-icon name="fb-mail" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>DNI</ion-label>\n		<ion-input type="text" placeholder="DNI" [(ngModel)]="data.DNI"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Fecha nacimiento</ion-label>\n		<ion-input type="text" placeholder="Fecha nacimiento" [(ngModel)]="data.FecNacim"></ion-input><ion-icon name="fb-calendar" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Dirección</ion-label>\n		<ion-input type="text" placeholder="Dirección" [(ngModel)]="data.Direccion"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Localidad</ion-label>\n		<ion-input type="text" placeholder="Localidad" [(ngModel)]="data.Localidad"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Provincia</ion-label>\n		<ion-input type="text" placeholder="Provincia" [(ngModel)]="data.Provincia"></ion-input><ion-icon name="fb-location" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Teléfono móvil</ion-label>\n		<ion-input type="number" placeholder="Teléfono móvil" [(ngModel)]="data.TelMovil"></ion-input><ion-icon name="fb-phone" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Teléfono fijo</ion-label>\n		<ion-input type="number" placeholder="Teléfono fijo" [(ngModel)]="data.Tel1"></ion-input><ion-icon name="fb-telephone" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Alergias</ion-label>\n		<ion-input type="text" placeholder="Alergias" [(ngModel)]="data.Alergias"></ion-input><ion-icon name="fb-alarm" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>\n		<ion-label color="grey-medium" stacked>Medicacion</ion-label>\n		<ion-input type="text" placeholder="Medicacion" [(ngModel)]="data.Medicacion"></ion-input><ion-icon name="fb-plus-linear" item-right></ion-icon>\n	  </ion-item>\n	  <ion-item>  \n	  </ion-item>\n	</ion-list>\n	<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="setProfile()"></fb-button>\n</ion-content>\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/profile/profile.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser__["c" /* DomSanitizer */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_camera__["a" /* Camera */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_file__["a" /* File */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _j || Object])
     ], ProfilePage);
     return ProfilePage;
 }());
@@ -3220,6 +3323,7 @@ var ChatPage = /** @class */ (function () {
         this.showLoading("Cargando conversación ...");
         this.nickname = window.localStorage.getItem("idPac");
         this.menuData = window.localStorage.getItem("urlPerfil");
+        this.checkFileExistence("fyb.jpeg");
         this.data.type = 'message';
         this.data.nickname = this.nickname;
         // Compruebo si la fecha de expiración es posterior
@@ -3282,6 +3386,19 @@ var ChatPage = /** @class */ (function () {
             });
         });
     }
+    ChatPage.prototype.checkFileExistence = function (fileName) {
+        var _this = this;
+        return this.file.checkFile(this.file.externalRootDirectory, fileName).then(function () {
+            _this.file.readAsDataURL(_this.file.externalRootDirectory, fileName).then(function (result) {
+                _this.base64 = result;
+                _this.menuData = result;
+            }, function (err) {
+                //console.log(err);
+            });
+        }, function (error) {
+            //console.log(error);
+        });
+    };
     ChatPage.prototype.printImage = function (base) {
         var _this = this;
         this.showLoading();
@@ -3563,19 +3680,20 @@ var ChatPage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r;
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Content */]) === "function" && _a || Object)
     ], ChatPage.prototype, "content", void 0);
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])('chat_input'),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"])
+        __metadata("design:type", typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _b || Object)
     ], ChatPage.prototype, "messageInput", void 0);
     ChatPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-chat',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/chat/chat.html"*/'	<ion-header no-border>\n  		<ion-navbar>\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button style="font-size: 2rem;color:black;margin-right:1rem;" (click)="callClinica()">\n	      			<ion-icon name="call"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n<ion-content padding class="bg">\n	<div class="page-chat" style="height: 100vh;display: flex; align-items: flex-end; flex-direction: column-reverse;">\n        <div class="message-wrap" style="width:100%; margin: -25rem 0;">\n            <div class="message" *ngFor="let msg of chats" [class.left]=" msg.user !== nickname " [class.right]=" msg.user === nickname ">\n                <div *ngIf="msg.user === nickname">\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="{{menuData}}"/>\n                </div>\n                <div *ngIf="msg.user !== nickname">\n                    <img class="user-img" onerror="this.src=\'assets/imgs/person.png\';" src="http://cfb2.ddns.net:4231/personal/{{msg.image}}.jpg"/>\n                </div>\n                <div class="msg-detail">\n                    <div class="msg-content">\n                        <p class="line-breaker ">\n                            {{msg.message}}\n                        </p>\n                        <div class="msg-info">\n                            <p>\n                                {{msg.sendDate | date:\'dd/MM/yyyy HH:mm\'}}\n                            </p>\n                        </div>\n                    </div>\n                </div>\n            </div>            \n        </div>\n    </div>\n</ion-content>\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n<form class="conversation-compose">\n    <div class="emoji" #chatBA >\n        <svg (click)="switchEmojiPicker()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" id="smiley" x="3147" y="3209">\n            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.153 11.603c.795 0 1.44-.88 1.44-1.962s-.645-1.96-1.44-1.96c-.795 0-1.44.88-1.44 1.96s.645 1.965 1.44 1.965zM5.95 12.965c-.027-.307-.132 5.218 6.062 5.55 6.066-.25 6.066-5.55 6.066-5.55-6.078 1.416-12.13 0-12.13 0zm11.362 1.108s-.67 1.96-5.05 1.96c-3.506 0-5.39-1.165-5.608-1.96 0 0 5.912 1.055 10.658 0zM11.804 1.01C5.61 1.01.978 6.034.978 12.23s4.826 10.76 11.02 10.76S23.02 18.424 23.02 12.23c0-6.197-5.02-11.22-11.216-11.22zM12 21.355c-5.273 0-9.38-3.886-9.38-9.16 0-5.272 3.94-9.547 9.214-9.547a9.548 9.548 0 0 1 9.548 9.548c0 5.272-4.11 9.16-9.382 9.16zm3.108-9.75c.795 0 1.44-.88 1.44-1.963s-.645-1.96-1.44-1.96c-.795 0-1.44.878-1.44 1.96s.645 1.963 1.44 1.963z" fill="#7d8489"></path>\n        </svg>\n    </div>\n    <input #chat_input class="input-msg" [(ngModel)]="data.message" name="message" (keyup.enter)="sendMessage()" (focusin)="onFocus()" placeholder="Escribe un mensaje">\n    <div class="photo" #chatBD (click)="openChooseImage()">\n        <i class="fas fa-camera"></i>\n    </div>\n        <button class="send" #chatBC (click)="sendMessage()">\n            <div class="circle">\n                <i class="far fa-arrow-alt-circle-right"></i>\n            </div>\n    </button>\n</form>\n<emoji-picker ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n</ion-footer>\n<!--\n<ion-footer no-border [style.height]="showEmojiPicker ? \'255px\' : \'55px\'">\n	<div class="input-wrap">\n		<button ion-button #chatBA clear icon-only item-right (click)="switchEmojiPicker()">\n			<ion-icon name="md-happy"></ion-icon>\n		</button>\n		<textarea #chat_input style="max-height: 3.5rem;" placeholder="Escribe un mensaje" [(ngModel)]="data.message" (keyup.enter)="sendMessage()"	(focusin)="onFocus()">	</textarea>\n		<button ion-button #chatBD clear icon-only item-right (click)="openChooseImage()">\n			<ion-icon name="ios-camera" ios="ios-camera" md="md-camera"></ion-icon>\n		</button>\n		<button ion-button #chatBC clear icon-only item-right (click)="sendMessage()">\n			<ion-icon name="ios-send" ios="ios-send" md="md-send"></ion-icon>\n		</button>	\n	</div>\n	<emoji-picker  ngDefaultControl [(ngModel)]="data.message"></emoji-picker>\n</ion-footer>-->'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/chat/chat.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */], __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */], __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__["a" /* PhotoViewer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"], __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__["a" /* File */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__["a" /* FileOpener */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__["a" /* PhotoViewer */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__["a" /* PhotoViewer */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _f || Object, typeof (_g = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["v" /* Platform */]) === "function" && _g || Object, typeof (_h = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _h || Object, typeof (_j = typeof __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__["a" /* RestProvider */]) === "function" && _j || Object, typeof (_k = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _k || Object, typeof (_l = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__["a" /* Camera */]) === "function" && _l || Object, typeof (_m = typeof __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_core__["ElementRef"]) === "function" && _m || Object, typeof (_o = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__["a" /* Vibration */]) === "function" && _o || Object, typeof (_p = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _p || Object, typeof (_q = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _q || Object, typeof (_r = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _r || Object])
     ], ChatPage);
     return ChatPage;
 }());
@@ -5311,11 +5429,11 @@ webpackEmptyAsyncContext.id = 272;
 
 var map = {
 	"../pages/acceso-resultados/acceso-resultados.module": [
-		847,
+		848,
 		0
 	],
 	"../pages/change-password/change-password.module": [
-		848,
+		847,
 		35
 	],
 	"../pages/chat/chat.module": [
@@ -5399,27 +5517,27 @@ var map = {
 		15
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
-		869,
+		870,
 		14
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
-		870,
+		869,
 		13
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
-		871,
+		872,
 		12
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
-		872,
+		871,
 		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		873,
+		874,
 		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
-		874,
+		873,
 		9
 	],
 	"../pages/popover/popover.module": [
@@ -5990,7 +6108,8 @@ var ConsultarCitasFuturasPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__ = __webpack_require__(12);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_login__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_chat_chat__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(145);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6000,6 +6119,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -6022,6 +6142,10 @@ var PedirCitaPage = /** @class */ (function () {
         this.events.publish("user:logged");
     }
     PedirCitaPage.prototype.selectTto = function (e) {
+        if (e.IdOpc == "OTRO") {
+            this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_chat_chat__["a" /* ChatPage */]);
+            return;
+        }
         for (var x in this.tratamientos) {
             if (this.tratamientos[x].IdOpc == e.IdOpc)
                 this.tratamientos[x].class = "active";
@@ -6031,7 +6155,7 @@ var PedirCitaPage = /** @class */ (function () {
         this.ttoSelect = e.IdOpc;
     };
     PedirCitaPage.prototype.siguiente = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */], {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */], {
             'tto': this.ttoSelect
         });
     };
@@ -6125,11 +6249,12 @@ var PedirCitaPage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f;
     PedirCitaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-pedir-cita',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Pedir nueva cita</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n	<!-- Gradiente -->\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n	<!-- Fin Gradiente -->    \n	\n    <div>\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n    </div>\n\n    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n    <div class="row" id="listadoTratamientos">\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n		</div>\n	</div>\n\n	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>\n\n	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n	</ion-row>\n</ion-content>'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/pedir-cita/pedir-cita.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
     ], PedirCitaPage);
     return PedirCitaPage;
 }());
@@ -6861,8 +6986,8 @@ var AppModule = /** @class */ (function () {
                     iconMode: 'md'
                 }, {
                     links: [
-                        { loadChildren: '../pages/acceso-resultados/acceso-resultados.module#AccesoResultadosPageModule', name: 'AccesoResultadosPage', segment: 'acceso-resultados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/acceso-resultados/acceso-resultados.module#AccesoResultadosPageModule', name: 'AccesoResultadosPage', segment: 'acceso-resultados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
@@ -6883,12 +7008,12 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-preferencias/pedir-cita-preferencias.module#PedirCitaPreferenciasPageModule', name: 'PedirCitaPreferenciasPage', segment: 'pedir-cita-preferencias', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedir-cita-reserva/pedir-cita-reserva.module#PedirCitaReservaPageModule', name: 'PedirCitaReservaPage', segment: 'pedir-cita-reserva', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-reserva/pedir-cita-reserva.module#PedirCitaReservaPageModule', name: 'PedirCitaReservaPage', segment: 'pedir-cita-reserva', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
@@ -7007,8 +7132,11 @@ var ChangePasswordPage = /** @class */ (function () {
         this.isFirst = false; // Indica si es la primera vez que entra en la App, y debe cambiar la contraseña
         this.data = { /*pass1: '', */ pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
         this.bGuardar = { name: 'Guardar contraseña', svg: '', openPage: 'Login', class: 'active login', tipo: 'page', gradiente: '' };
-        this.tituloSubtitulo = { titulo: "Crea tu contraseña", subtitulo: "para acceder a la App" };
+        this.tituloSubtitulo = { titulo: "Cambia tu contraseña", subtitulo: "para acceder a la App" };
         this.isFirst = navParams.get('first');
+        if (this.isFirst) {
+            this.tituloSubtitulo.titulo = "Crea tu contraseña";
+        }
         this.events.publish("user:logged");
     }
     /**
@@ -7099,11 +7227,12 @@ var ChangePasswordPage = /** @class */ (function () {
         });
         alert.present();
     };
+    var _a, _b, _c, _d, _e, _f;
     ChangePasswordPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
-            selector: 'page-change-password',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Crear contraseña</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<ion-list> \n		<!--<ion-item>\n			<ion-label color="primary" stacked>Contraseña antigua</ion-label>\n			<ion-input [(ngModel)]="data.pass1" type="password" placeholder="Contraseña antigua"></ion-input>\n		</ion-item>  -->\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass2" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>  \n		<ion-item>\n			<ion-label stacked>Repita contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass3" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>    \n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="actualizarPass()"> </fb-button>\n	</div>\n</ion-content>\n\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/,
+            selector: 'page-change-password',template:/*ion-inline-start:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/'<ion-header no-border>\n  <ion-navbar>\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>{{ tituloSubtitulo.titulo }}</ion-title>\n  </ion-navbar>\n</ion-header>\n<ion-content padding>\n\n	<div>\n		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n	</div>\n	<ion-list> \n		<!--<ion-item>\n			<ion-label color="primary" stacked>Contraseña antigua</ion-label>\n			<ion-input [(ngModel)]="data.pass1" type="password" placeholder="Contraseña antigua"></ion-input>\n		</ion-item>  -->\n		<ion-item>\n			<ion-label stacked>Contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass2" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>  \n		<ion-item>\n			<ion-label stacked>Repita contraseña</ion-label>\n			<ion-input [(ngModel)]="data.pass3" type="password" ></ion-input><ion-icon name="fb-password" item-right></ion-icon>\n		</ion-item>    \n	</ion-list>\n	<div style="max-height:5rem; width: 80%; margin: 0 auto;">\n		<fb-button [name]="bGuardar" [class]="bGuardar.class" (click)="actualizarPass()"> </fb-button>\n	</div>\n</ion-content>\n\n'/*ion-inline-end:"/Users/Usuario/Desktop/appMobile/src/pages/change-password/change-password.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__providers_rest_rest__["a" /* RestProvider */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
     ], ChangePasswordPage);
     return ChangePasswordPage;
 }());

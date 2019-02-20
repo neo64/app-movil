@@ -15,11 +15,14 @@ export class ChangePasswordPage {
 	loading: 	Loading;	// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	data 		= { /*pass1: '', */pass2: '', pass3: '' }; // Array con las tres contraseñas (antigua, 2 nuevas)
 	bGuardar 	= {name : 'Guardar contraseña', svg: '', openPage : 'Login', class : 'active login', tipo : 'page', gradiente: ''};
-	tituloSubtitulo  = {titulo : "Crea tu contraseña", subtitulo: "para acceder a la App"};
+	tituloSubtitulo  = {titulo : "Cambia tu contraseña", subtitulo: "para acceder a la App"};
 
 
 	constructor(public events: Events, private loadingCtrl: LoadingController,public restProvider: RestProvider, private alertCtrl: AlertController, public navCtrl: NavController, public navParams: NavParams) {
 		this.isFirst = navParams.get('first');
+		if(this.isFirst){
+			this.tituloSubtitulo.titulo = "Crea tu contraseña";
+		}
 		this.events.publish("user:logged");
 	}
 	

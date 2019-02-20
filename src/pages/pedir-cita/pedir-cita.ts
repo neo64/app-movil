@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, Loading, AlertController, LoadingController, NavParams, Events } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
+import { ChatPage } from '../../pages/chat/chat';
 import { PedirCitaPreferenciasPage } from '../../pages/pedir-cita-preferencias/pedir-cita-preferencias';
 
 @IonicPage()
@@ -26,7 +27,12 @@ export class PedirCitaPage {
 		this.events.publish("user:logged");
 	}
 
-	selectTto(e){		
+	selectTto(e){
+
+		if(e.IdOpc == "OTRO"){
+			this.navCtrl.push(ChatPage);
+			return;
+		}		
 
 		for (var x in this.tratamientos){
 			if(this.tratamientos[x].IdOpc == e.IdOpc)
