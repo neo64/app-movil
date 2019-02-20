@@ -7,6 +7,13 @@ tabConsultarCitas {
   .back-button.show-back-button {
     z-index: 1111;
   }
+  .tab-button {
+    padding: 0 10px!important;
+    min-height: 5.6rem!important;
+  }
+  .tabbar {
+    border: none!important;
+  }
   ion-icon {
     color: map-get($colors, secondary);
     font-size: 2em;
@@ -14,11 +21,11 @@ tabConsultarCitas {
   .toolbar-background-md {
     background: white;
   }
-  .tabs-md .tab-button[aria-selected=true] {
+  ion-tabs .tab-button[aria-selected=true] {
     border-bottom: 2px solid map-get($colors, pink-dark);
-    color: map-get($colors, black);
+    color: map-get($colors, black)!important;
   }
-  .tabs-md .tab-button {
+  ion-tabs .tab-button {
     border-bottom: 2px solid map-get($colors, grey);
     color: map-get($colors, grey);
     padding-top: 5% !important;

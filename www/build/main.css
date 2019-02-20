@@ -43762,6 +43762,10 @@ page-list .botonMas {
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0), 0 3px 1px -2px rgba(0, 0, 0, 0), 0 1px 5px 0 rgba(0, 0, 0, 0);
 }
 
+page-change-password .back-button.show-back-button {
+  z-index: 1111;
+}
+
 page-change-password ion-title {
   text-align: center;
   margin-left: -15%;
@@ -45572,6 +45576,15 @@ tabConsultarCitas .back-button.show-back-button {
   z-index: 1111;
 }
 
+tabConsultarCitas .tab-button {
+  padding: 0 10px !important;
+  min-height: 5.6rem !important;
+}
+
+tabConsultarCitas .tabbar {
+  border: none !important;
+}
+
 tabConsultarCitas ion-icon {
   color: #f3a7c9;
   font-size: 2em;
@@ -45581,12 +45594,12 @@ tabConsultarCitas .toolbar-background-md {
   background: white;
 }
 
-tabConsultarCitas .tabs-md .tab-button[aria-selected=true] {
+tabConsultarCitas ion-tabs .tab-button[aria-selected=true] {
   border-bottom: 2px solid #ed7aad;
-  color: #38383b;
+  color: #38383b !important;
 }
 
-tabConsultarCitas .tabs-md .tab-button {
+tabConsultarCitas ion-tabs .tab-button {
   border-bottom: 2px solid #e1e1e1;
   color: #e1e1e1;
   padding-top: 5% !important;
