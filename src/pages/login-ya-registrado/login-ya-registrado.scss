@@ -1,61 +1,59 @@
 page-login-ya-registrado {
-
-	ion-title{
-		text-align:center;
-		margin-left: -15%;
-		z-index: 0;
-	}
-
-	ion-icon{
-		color: map-get($colors, secondary);
-		font-size: 2em;		
-	}
-
-	.toolbar-background-md{
-		background: white;
-	}
-
-	.olvido{
-	    text-align: right;
-    	color: map-get($colors, pink-dark);
-		padding-right: 6%;
-	}
-
-	span{
-		color: map-get($colors, pink-dark);
-	}
-
-	.footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
-	    height: 0px;
-	}
-
-	p{
-		text-align: center;
-		color: map-get($colors, grey-medium);
-		line-height: 20px;
-		letter-spacing: 1.5px;
-	}
-
-	p.line {
-	    position: relative;
-	    z-index: 1;
-
-	    &:before {
-	        border-top: 1px solid map-get($colors, grey);
-	        content:"";
-	        margin: 0 auto; /* this centers the line to the full width specified */
-	        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
-	        top: 50%; left: 0; right: 0; bottom: 0;
-	        width: 95%;
-	        z-index: -1;
-	    }
-
-	    span { 
-	        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
-	        background: #fff; 
-	        padding: 0 15px; 
-	        color: map-get($colors, grey-medium);
-	    }
-	}
-
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+  ion-title {
+    text-align: center;
+    margin-left: -15%;
+    z-index: 0;
+  }
+  ion-icon {
+    color: map-get($colors, secondary);
+    font-size: 2em;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
+  .olvido {
+    text-align: right;
+    color: map-get($colors, pink-dark);
+    padding-right: 6%;
+  }
+  span {
+    color: map-get($colors, pink-dark);
+  }
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 0px;
+  }
+  p {
+    text-align: center;
+    color: map-get($colors, grey-medium);
+    line-height: 20px;
+    letter-spacing: 1.5px;
+  }
+  p.line {
+    position: relative;
+    z-index: 1;
+    &:before {
+      border-top: 1px solid map-get($colors, grey);
+      content: "";
+      margin: 0 auto;
+      /* this centers the line to the full width specified */
+      position: absolute;
+      /* positioning must be absolute here, and relative positioning must be applied to the parent */
+      top: 50%;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 95%;
+      z-index: -1;
+    }
+    span {
+      /* to hide the lines from behind the text, you have to set the background color the same as the container */
+      background: #fff;
+      padding: 0 15px;
+      color: map-get($colors, grey-medium);
+    }
+  }
 }
