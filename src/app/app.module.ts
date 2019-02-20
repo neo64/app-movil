@@ -15,6 +15,9 @@ import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
 import { ConsultarCitas } from '../pages/ConsultarCitas/ConsultarCitas';
 
+import { FaqPage } from '../pages/faq/faq';
+import { FaqDetailPage } from '../pages/faq-detail/faq-detail';
+
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { PedirCitaPreferenciasPage } from '../pages/pedir-cita-preferencias/pedir-cita-preferencias';
 import { PedirCitaElegirPage } from '../pages/pedir-cita-elegir/pedir-cita-elegir';
@@ -73,6 +76,7 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
 import { FbButtonIconComponent } from '../components/fb-button-icon/fb-button-icon';
 import { FbButtonComponent } from '../components/fb-button/fb-button';
 import { FbTituloSubtituloComponent } from '../components/fb-titulo-subtitulo/fb-titulo-subtitulo';
+import { ExpandableComponent } from '../components/expandable/expandable';
 
 import { CallNumber } from '@ionic-native/call-number';
 
@@ -119,7 +123,10 @@ import { ChartsModule } from 'ng2-charts';
 	ChatPage,
 	FbButtonIconComponent,
 	FbTituloSubtituloComponent,
-	FbButtonComponent
+	ExpandableComponent,
+	FbButtonComponent,
+	FaqPage,
+	FaqDetailPage
   ],
   imports: [
   	ChartsModule,
@@ -176,7 +183,9 @@ import { ChartsModule } from 'ng2-charts';
 	LoginReenviarPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
-	ChatPage
+	ChatPage,
+	FaqPage,
+	FaqDetailPage
   ],
   providers: [
   	AndroidPermissions,
