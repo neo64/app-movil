@@ -76,7 +76,9 @@ export class LoginRecibirPinPage {
 
 				this.events.publish("user:logged");	
 
-				this.navCtrl.push(ChangePasswordPage);
+				this.navCtrl.push(ChangePasswordPage, {
+					'first' : true,
+				});
 			}else if(typeof d != "undefined" && d['status'] == 2){
 				if(!auto)
 					this.showError("ERROR","El código introducido es incorrecto."); 	

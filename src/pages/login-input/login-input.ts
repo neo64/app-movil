@@ -5,6 +5,7 @@ import { RestProvider } from '../../providers/rest/rest';
 
 import { HomePage } from '../../pages/home/home';
 
+import { LoginOlvidoPage } from '../../pages/login-olvido/login-olvido';
 
 /**
  * Generated class for the LoginInputPage page.
@@ -27,6 +28,10 @@ export class LoginInputPage {
 
 	constructor(private app : App, public events: Events, public nav: NavController, public navParams: NavParams, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 	
+	}
+
+	goToOlvido(){
+		this.app.getRootNav().push(LoginOlvidoPage);
 	}
 
 	goTab(n){

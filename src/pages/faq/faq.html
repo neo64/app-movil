@@ -15,9 +15,8 @@
     <p style=" margin: 2rem;">Contrary to popular belief/opinion. be very cold.</p>
 
     <div class="row" id="listadoFaq">
-	    <div *ngFor="let f of faq" col-6 style="height:12rem;">
+	    <div *ngFor="let f of faq" col-6 >
 			<fb-button-icon [name]="f" [class]="f.class" (click)="siguiente(f)"> </fb-button-icon>
 		</div>
 	</div>
-
 </ion-content>

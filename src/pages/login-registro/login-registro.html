@@ -1,12 +1,12 @@
 <ion-content padding>
-	<div style="    margin: 2rem;">
+	<div>
 		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
 	</div>
 	<br />
 	<ion-list>
-		<ion-item style=" width: 94%;">
+		<ion-item>
 			<ion-label stacked>DNI</ion-label>
-			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input>
+			<ion-input type="text" [(ngModel)]="registerCredentials.email"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>
 		</ion-item>		
 	</ion-list>
 	<p class="olvido">DNI con letra incluida</p>

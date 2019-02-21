@@ -48,8 +48,6 @@ export class LoginRegistroPage {
 			alert("Debes rellenar el campo DNI");
 			return;
 		}
-
-		//this.app.getRootNav().push(LoginRecibirPinPage, { dni: dni });		
 		
 		this.showLoading();
 		this.restProvider.checkDNI(dni).then(data => {

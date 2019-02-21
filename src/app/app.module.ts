@@ -48,6 +48,7 @@ import { LoginRecibirPinPage } from '../pages/login-recibir-pin/login-recibir-pi
 import { LoginErrorPinPage } from '../pages/login-error-pin/login-error-pin';
 import { LoginYaRegistradoPage } from '../pages/login-ya-registrado/login-ya-registrado';
 import { LoginReenviarPage } from '../pages/login-reenviar/login-reenviar';
+import { LoginOlvidoPage } from '../pages/login-olvido/login-olvido';
 
 
 import { RecallPage } from '../pages/recall/recall';
@@ -111,6 +112,7 @@ import { ChartsModule } from 'ng2-charts';
 	LoginErrorPinPage,
 	LoginYaRegistradoPage,
 	LoginReenviarPage,
+	LoginOlvidoPage,
 	PlanEconomicoPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
@@ -137,7 +139,8 @@ import { ChartsModule } from 'ng2-charts';
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
       backButtonIcon: 'ios-arrow-back',
-      iconMode: 'md'
+      iconMode: 'md',
+      mode: 'md',
     }),
 	IonicPageModule.forChild (MiSaludPage),	
   ],
@@ -180,6 +183,7 @@ import { ChartsModule } from 'ng2-charts';
 	LoginErrorPinPage,
 	LoginYaRegistradoPage,
 	LoginReenviarPage,
+	LoginOlvidoPage,
 	PlanEconomicoDetailPage,
 	ProfilePage,
 	ChatPage,

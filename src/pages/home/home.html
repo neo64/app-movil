@@ -11,7 +11,7 @@
 
     		<ion-buttons right>
 	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">
-	      			<ion-icon name="call"></ion-icon>
+	      			<ion-icon name="fb-telephone"></ion-icon>
 	    		</button>
     		</ion-buttons>
 
@@ -21,27 +21,7 @@
 	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> 
 
 	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >
-  		<ion-slide class="slide" *ngFor="let card of cards">
-	    	<!-- <ion-row> -->
-	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->
-	    			<!-- <ion-row style="color: white;"> -->
-	    				<!-- <ion-row style=""><ion-col style="font-size: 4rem;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->
-	    				<!-- <ion-row style=""><ion-col style="font-size: 2.35rem;">{{card.mes}}</ion-col></ion-row> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->
-	    				<!-- <ion-col>{{card.hora}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->
-	    			<!-- <ion-row style="margin-top: -4%;"> -->
-	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->
-	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->
-	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    	<!-- </ion-row> -->
+  		<ion-slide class="slide" *ngFor="let card of cards; let i = index" (click)="goToCitas(i)" >
 			<div class="cardCita">
 				<div class="cardCita__left">
 					<div class="cardCita__date">
