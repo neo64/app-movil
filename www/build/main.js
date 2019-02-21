@@ -2707,12 +2707,11 @@ var PedirCitaPreferenciasPage = /** @class */ (function () {
         if (page == "chat")
             this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__pages_chat_chat__["a" /* ChatPage */]);
     };
-    var _a, _b, _c, _d, _e, _f;
     PedirCitaPreferenciasPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-pedir-cita-preferencias',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\pedir-cita-preferencias\pedir-cita-preferencias.html"*/'<ion-header no-border>\n\n	<ion-navbar>\n\n		<ion-title>Pedir nueva cita</ion-title>\n\n		  <ion-buttons right>\n\n			<button ion-button (click)="openPage(\'chat\')">\n\n				<ion-icon name="fb-chat"></ion-icon>\n\n			</button>\n\n		</ion-buttons>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n	<div>\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary</p> \n\n    <p>Elije el profesional</p>\n\n    <ion-slides id="persona" slidesPerView="3.5" spaceBetween="12">\n\n  		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">\n\n  			<ion-row>\n\n	    		<button [class]="card.class + \' button\'">\n\n	    			<p class="avatarslide"><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;"/></p>\n\n	    			<p class="nameslidep">{{ card.usuario }}</p>\n\n	    		</button>	    		\n\n	    	</ion-row>\n\n	  	</ion-slide>\n\n	</ion-slides>\n\n\n\n	<p style=" margin: 1rem 0 -2rem 0;">Preferencia de días</p>\n\n	<ion-slides slidesPerView="3.5" spaceBetween="12" >\n\n  		<ion-slide class="slide" *ngFor="let card of diasSemana" >\n\n  			<ion-row>\n\n	    		<button [class]="card.class + \' button\'" (click)="selectDia(card)" style="height: 100%;">\n\n	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.dia }}</p>\n\n	    		</button>	    		\n\n	    	</ion-row>\n\n	  	</ion-slide>\n\n	</ion-slides>\n\n\n\n	<p style=" margin: 0rem 0 -2rem 0;">A partir de las:</p>\n\n	<ion-slides slidesPerView="3.5" spaceBetween="12" >\n\n  		<ion-slide class="slide" *ngFor="let card of horasDia" >\n\n  			<ion-row>\n\n	    		<button [class]="card.class + \' button\'" (click)="selectHora(card)" style="height: 100%;">\n\n	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.hora }}</p>\n\n	    		</button>	    		\n\n	    	</ion-row>\n\n	  	</ion-slide>\n\n	</ion-slides>\n\n\n\n	<p style=" text-align: center; margin:0; font-size: 1rem;">2 de 4</p>\n\n\n\n	<ion-row style="max-height: 9%;    display: flex;">\n\n		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>\n\n		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\pedir-cita-preferencias\pedir-cita-preferencias.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaPreferenciasPage);
     return PedirCitaPreferenciasPage;
 }());
@@ -5610,7 +5609,7 @@ var map = {
 		31
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		854,
+		853,
 		30
 	],
 	"../pages/faq-detail/faq-detail.module": [
@@ -5618,7 +5617,7 @@ var map = {
 		29
 	],
 	"../pages/faq/faq.module": [
-		853,
+		854,
 		28
 	],
 	"../pages/instrucciones/instrucciones.module": [
@@ -5626,19 +5625,19 @@ var map = {
 		27
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
-		856,
+		858,
 		26
 	],
 	"../pages/login-input/login-input.module": [
-		857,
+		856,
 		25
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
-		859,
+		857,
 		24
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
-		858,
+		859,
 		23
 	],
 	"../pages/login-registro/login-registro.module": [
@@ -5662,11 +5661,11 @@ var map = {
 		18
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		865,
+		864,
 		17
 	],
 	"../pages/mis-citas/mis-citas.module": [
-		864,
+		865,
 		16
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
@@ -5674,11 +5673,11 @@ var map = {
 		15
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
-		867,
+		868,
 		14
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
-		868,
+		867,
 		13
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
@@ -5690,7 +5689,7 @@ var map = {
 		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		872,
+		873,
 		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
@@ -5698,7 +5697,7 @@ var map = {
 		9
 	],
 	"../pages/popover/popover.module": [
-		873,
+		872,
 		8
 	],
 	"../pages/presupuestos/presupuestos.module": [
@@ -5714,19 +5713,19 @@ var map = {
 		5
 	],
 	"../pages/recall/recall.module": [
-		876,
+		877,
 		4
 	],
 	"../pages/sugerencias/sugerencias.module": [
-		879,
+		876,
 		3
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
-		877,
+		878,
 		2
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
-		878,
+		879,
 		1
 	]
 };
@@ -6413,12 +6412,11 @@ var PedirCitaPage = /** @class */ (function () {
         if (page == "chat")
             this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__pages_chat_chat__["a" /* ChatPage */]);
     };
-    var _a, _b, _c, _d, _e, _f;
     PedirCitaPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-pedir-cita',template:/*ion-inline-start:"C:\App-fb\appfb\src\pages\pedir-cita\pedir-cita.html"*/'<ion-header no-border>\n\n	<ion-navbar>\n\n		<ion-title>Pedir nueva cita</ion-title>\n\n		  <ion-buttons right>\n\n			<button ion-button (click)="openPage(\'chat\')">\n\n				<ion-icon name="fb-chat"></ion-icon>\n\n			</button>\n\n		</ion-buttons>\n\n	</ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n	<!-- Gradiente -->\n\n	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>\n\n	<!-- Fin Gradiente -->    \n\n	\n\n    <div>\n\n	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>\n\n    </div>\n\n\n\n    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> \n\n\n\n    <div class="row" id="listadoTratamientos">\n\n	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">\n\n			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>\n\n		</div>\n\n	</div>\n\n\n\n	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>\n\n\n\n	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">\n\n		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>\n\n	</ion-row>\n\n</ion-content>'/*ion-inline-end:"C:\App-fb\appfb\src\pages\pedir-cita\pedir-cita.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */]) === "function" && _e || Object, typeof (_f = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]) === "function" && _f || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_2__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["s" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavParams */]])
     ], PedirCitaPage);
     return PedirCitaPage;
 }());
@@ -7157,33 +7155,33 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/faq-detail/faq-detail.module#FaqDetailPageModule', name: 'FaqDetailPage', segment: 'faq-detail', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/faq/faq.module#FaqPageModule', name: 'FaqPage', segment: 'faq', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/faq/faq.module#FaqPageModule', name: 'FaqPage', segment: 'faq', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/instrucciones/instrucciones.module#InstruccionesPageModule', name: 'InstruccionesPage', segment: 'instrucciones', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-input/login-input.module#LoginInputPageModule', name: 'LoginInputPage', segment: 'login-input', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-error-pin/login-error-pin.module#LoginErrorPinPageModule', name: 'LoginErrorPinPage', segment: 'login-error-pin', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/mis-citas/mis-citas.module#MisCitasPageModule', name: 'MisCitasPage', segment: 'mis-citas', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mis-documentos/mis-documentos.module#MisDocumentosPageModule', name: 'MisDocumentosPage', segment: 'mis-documentos', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-preferencias/pedir-cita-preferencias.module#PedirCitaPreferenciasPageModule', name: 'PedirCitaPreferenciasPage', segment: 'pedir-cita-preferencias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/pedir-cita-elegir/pedir-cita-elegir.module#PedirCitaElegirPageModule', name: 'PedirCitaElegirPage', segment: 'pedir-cita-elegir', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita-reserva/pedir-cita-reserva.module#PedirCitaReservaPageModule', name: 'PedirCitaReservaPage', segment: 'pedir-cita-reserva', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/pedir-cita/pedir-cita.module#PedirCitaPageModule', name: 'PedirCitaPage', segment: 'pedir-cita', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/plan-economico/plan-economico.module#PlanEconomicoPageModule', name: 'PlanEconomicoPage', segment: 'plan-economico', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/popover/popover.module#PopoverPageModule', name: 'PopoverPage', segment: 'popover', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/plan-economico-detail/plan-economico-detail.module#PlanEconomicoDetailPageModule', name: 'PlanEconomicoDetailPage', segment: 'plan-economico-detail', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-perfil/mi-perfil.module#MiPerfilPageModule', name: 'MiPerfilPage', segment: 'mi-perfil', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] }
