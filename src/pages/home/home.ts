@@ -119,6 +119,13 @@ export class HomePage {
         if (this.slides.isEnd()) this.slides.slidePrev();
         else this.slides.slideNext();
     }
+
+    goToCitas(i){
+        this.navCtrl.push(TabConsultarCitas, {
+            'tab' : i
+        });
+    }
+
     /**
      * 	Función que abre una página o una web dependiendo
      *	de los parámetros que se les introduzca.

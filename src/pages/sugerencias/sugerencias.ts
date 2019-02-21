@@ -20,7 +20,9 @@ export class SugerenciasPage {
 	data: any = {}; 			// Array para almacenar los valores de la sugerencia.
 	loading: Loading;			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	loadingPresented = false;	// Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
-	
+	bEnviar 	= {name : 'Enviar', svg: '', openPage : 'PedirCita', class : 'active login', tipo : 'page', gradiente: ''};
+
+
 	constructor(private loadingCtrl: LoadingController, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, public navParams: NavParams) {
 	
 	}

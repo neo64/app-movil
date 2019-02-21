@@ -4,6 +4,10 @@ page-chat {
   		background: map-get($colors, grey-light);
   	}
 
+  	ion-title{
+  		text-align: center;
+  	}
+
 	/* Compose */
 
 	.conversation-compose {

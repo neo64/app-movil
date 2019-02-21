@@ -43,6 +43,10 @@ export class ChatPage {
 		this.data.type 		= 'message';
 		this.data.nickname 	= this.nickname;
 
+		if(this.navParams.get("message")){
+			this.showError("¡Atención!", this.navParams.get("message"));
+		}
+
 		// Compruebo si la fecha de expiración es posterior
 		// a la fecha actual del sistema, si es así redirijo
 		// a la página de home.
@@ -417,7 +421,10 @@ export class ChatPage {
 	* 	
 	*/
 	showError(title,text) {
-		this.loading.dismiss();
+		if(this.loadingPresented){
+			this.loadingPresented = false;
+			this.loading.dismiss();
+		}
 		let alert = this.alertCtrl.create({
 			title: title,
 			subTitle: text,

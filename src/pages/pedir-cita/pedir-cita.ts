@@ -30,7 +30,9 @@ export class PedirCitaPage {
 	selectTto(e){
 
 		if(e.IdOpc == "OTRO"){
-			this.navCtrl.push(ChatPage);
+			this.navCtrl.push(ChatPage, {
+				message : "Escríbenos con el tratamiento que deseas pedir cita."
+			});
 			return;
 		}		
 

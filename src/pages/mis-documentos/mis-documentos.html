@@ -15,7 +15,7 @@
 	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Presupuestos</h1> 
 
 	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >
-  		<ion-slide class="slide" *ngFor="let card of cards">
+  		<ion-slide class="slide" *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.NumPre)">
 	    	<!-- <ion-row> -->
 	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->
 	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->

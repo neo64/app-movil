@@ -18,7 +18,7 @@
 				<ion-icon name="fb-exit" item-left></ion-icon> Salir
 			</button>
 		</ion-list>
-		<button>Ayuda</button>
+		<fb-button [name]="bAyuda" [class]="bAyuda.class" (click)="openPageStrig(bAyuda.openPage,bAyuda.tipo);menuCtrl.toggle();"></fb-button>
 	</ion-content>
 </ion-menu>
 

@@ -8,7 +8,8 @@ import {
     Events,
     AlertController,
     Loading,
-    LoadingController
+    LoadingController,
+    MenuController
 } from 'ionic-angular';
 import {
     StatusBar
@@ -100,7 +101,10 @@ export class MyApp {
     } > ;
     menuData = new Array();
     loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
-    constructor(private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
+    bAyuda   = {name : 'Ayuda', svg: '', openPage : 'Chat', class : 'active', tipo : false, gradiente: ''};
+
+
+    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [{
@@ -113,6 +117,11 @@ export class MyApp {
             icon: 'fb-heart',
             color: 'primary',
             component: MiSaludPage
+        }, {
+            title: 'Pedir cita',
+            icon: 'fb-pedircita',
+            color: 'primary',
+            component: PedirCitaPage
         }, {
             title: 'Mis citas',
             icon: 'fb-calendar',

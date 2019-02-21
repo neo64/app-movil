@@ -1,12 +1,11 @@
 import { Component, ViewChild} from '@angular/core';
-import { App, NavController, Loading, ToastController, LoadingController, Platform, PopoverController, AlertController, Events  } from 'ionic-angular';
+import { App, NavController, Loading, ToastController, NavParams, LoadingController, Platform, PopoverController, AlertController, Events, Slides  } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { PopoverPage } from '../../pages/popover/popover';
 import { Calendar } from '@ionic-native/calendar';
 
 import { TabHigienesPage } from '../tab-higienes/tab-higienes';
 import { PedirCitaPage } from '../pedir-cita/pedir-cita';
-
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -25,10 +24,12 @@ export class ConsultarCitasFuturasPage {
 	fecha 		= "";			// Fecha que será obtenida por parámetro
 	hora 		= "";			// Hora que será obtenida por parámetro
 
+  	@ViewChild('slidesCitas') slides: Slides;
+
 	bHigienes 	= {name : 'MIS HIGIENES', svg: '', openPage : 'Higiene', class : '', tipo : 'page', gradiente: ''};
 	bPedirCita 	= {name : 'PEDIR CITA', svg: '', openPage : 'PedirCita', class : 'active', tipo : 'page', gradiente: ''};
 	
-	constructor(private app : App, private toastCtrl: ToastController, private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public popoverCtrl: PopoverController, private calendar: Calendar,  public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private plt: Platform) {
+	constructor(public navParams: NavParams, private app : App, private toastCtrl: ToastController, private domSanitizer: DomSanitizer, public events: Events, private alertCtrl: AlertController, public popoverCtrl: PopoverController, private calendar: Calendar,  public navCtrl: NavController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private plt: Platform) {
 		this.showLoading();
 		this.getCitas();
 		
@@ -42,6 +43,13 @@ export class ConsultarCitasFuturasPage {
 		
 		this.events.publish("user:logged");
 	}
+
+
+	goToSlide() {
+		setTimeout(()=> {
+        	this.slides.slideTo(this.navParams.data);
+		}, 500);		   
+    }
 
 	/**
 	* 	Función que abre una página o una web dependiendo
@@ -225,6 +233,7 @@ export class ConsultarCitasFuturasPage {
 						this.citas.push(data['data'][key]);
 					}
 				}
+				this.goToSlide();
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");

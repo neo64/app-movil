@@ -6,8 +6,14 @@ import { LoginPage } from '../../pages/login/login';
 import { PresupuestosPage } from '../../pages/presupuestos/presupuestos';
 import { DocumentosContablesPage } from '../../pages/documentos-contables/documentos-contables';
 
+import { FileOpener } from '@ionic-native/file-opener';
+import { File } from '@ionic-native/file';
+
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
+
+declare var cordova:any;
+
 
 @IonicPage()
 @Component({
@@ -19,10 +25,109 @@ export class MisDocumentosPage {
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
 
-	constructor(private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+	constructor(private file: File, private fileOpener: FileOpener, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getCardsMisDocumentos();
 		this.events.publish("user:logged");
+	}
+
+	/**
+	* 	Función que crea un PDF a partir de un HTML y lo muestra.
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	createAndOpenPDF(html,numDoc){
+		document.addEventListener('deviceready', () => {
+			cordova.plugins.pdf.htmlToPDF({
+					data: html,
+					documentSize: "A4",
+					landscape: "portrait",
+					type: "base64"
+				},
+				(sucess) => this.openPdf(sucess, numDoc),
+				(error) => console.log('error:', error));
+		});
+	}
+
+		/**
+	* 	Función que almacena el archivo PDF en el sistema,
+	*	y a continuación abre el visor para verlo.
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	openPdf(base64, numDoc){		
+				
+		if(base64 == ""){
+			this.presentToast("No es posible abrir el documento.");
+		}else{
+			
+			this.showLoading();			
+			var blob 		= this.b64toBlob(base64, 'application/pdf');			
+			var name 		= "Presupuesto"+numDoc+".pdf";					
+			let directory 	= this.file.dataDirectory;
+				
+			// Guardo el fichero en la memoria del dispositivo
+			this.file.writeFile(directory, name , blob).then(_ => {
+				// Leo el fichero desde la memoria del dispositivo
+				this.fileOpener.open(directory + name, 'application/pdf').then(() => {
+						this.loading.dismiss()
+					}
+				).catch(e => {
+						alert('Error abriendo el archivo');
+						this.loading.dismiss();
+					}
+				);
+			}).catch(err => {
+				// Si ocurre que el fichero ya existe, lo leo de la memoria del dispositivo
+				if(err.code == 12){
+					this.fileOpener.open(directory + name, 'application/pdf').then(() => {
+							this.loading.dismiss()
+						}
+					).catch(e => {
+							alert('Error abriendo el archivo');
+							this.loading.dismiss();
+						}
+					);
+				}else{
+					this.showError("ERROR " + err.code, err.message);
+				}
+			});	
+		}
+	}
+
+		/**
+	* 	Función que convierte a Blob una cadena en Base64
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	@return None 
+	*/ 
+	b64toBlob(b64Data, contentType, sliceSize = 512) {
+		contentType = contentType || '';
+		sliceSize = sliceSize || 512;
+		
+		var byteCharacters = atob(b64Data);
+		var byteArrays = [];
+
+		for (var offset = 0; offset < byteCharacters.length; offset += sliceSize) {
+			var slice = byteCharacters.slice(offset, offset + sliceSize);
+			var byteNumbers = new Array(slice.length);
+			for (var i = 0; i < slice.length; i++) {
+				byteNumbers[i] = slice.charCodeAt(i);
+			}
+			var byteArray = new Uint8Array(byteNumbers);
+			byteArrays.push(byteArray);
+		}
+
+		var blob = new Blob(byteArrays, {type: contentType});
+		return blob;
 	}
 	
 	openPage(page, tipo) {

@@ -1,4 +1,5 @@
-<ion-content>
+<ion-content padding>
+
 	<ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="infoR.fechaFutura == true">
 		<ion-slide *ngFor="let item of recall">
 			<div class="fb-card -vcita -gradient">
@@ -140,7 +141,7 @@
 			<fb-button-icon [name]="botonPedirCita" [class]="botonPedirCita.class" (click)="openPage(botonPedirCita.openPage,botonPedirCita.tipo)"> </fb-button-icon>
 		</p>
 	</div>
-	<ion-footer padding *ngIf="infoR.Footer == true">
+	<div *ngIf="infoR.Footer == true">
 	<div class="fb-card -v4">
 	    <div class="left">
 	        <div class="avatar">
@@ -179,5 +180,5 @@
 	        </div>
 	    </div>
 	</div>
-	</ion-footer>
+	</div>
 </ion-content>

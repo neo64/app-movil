@@ -1,8 +1,69 @@
 page-sugerencias {
-	.list-md .item-block .item-inner {
-		margin-right: 16px;
-	}
-	.list-md > .item-block:last-child ion-label, .list-md > .item-block:last-child .item-inner, .list-md > .item-wrapper:last-child ion-label, .list-md > .item-wrapper:last-child .item-inner{
-		margin-right: 0;
-	}
+  
+  ion-title {
+    text-align: center;
+    margin-left: -15%;
+    z-index: 0;
+  }
+  ion-icon {
+    color: map-get($colors, secondary);
+    font-size: 2em;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
+  .olvido {
+    text-align: right;
+    color: map-get($colors, pink-dark);
+    padding-right: 6%;
+  }
+
+  .label-md {
+    margin: 13px 0px 13px 0;
+}
+
+  span {
+    color: map-get($colors, pink-dark);
+  }
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 0px;
+  }
+
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+
+  .item-inner {
+    padding-right: 0!important;
+  }
+  .scroll-content {
+    padding: 3rem!important;
+  }
+  .text-input {
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+  }
+  .item-md {
+    padding-right: 16px;
+  }
+  ion-item {
+    padding: 0!important;
+    border: none!important;
+    margin: 0!important;
+  }
+  .olvido {
+    text-align: right;
+    color: map-get($colors, pink-dark);
+    padding-right: 6%;
+  }
+  .list-md .item-input:last-child {
+    border-bottom: 1px solid #dedede!important;
+    padding-left: 0px;
+    margin-left: 16px;
+  }
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    height: 0px;
+  }
 }

@@ -1,0 +1,26 @@
+<ion-header no-border>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Recuperar contraseña</ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+	<div>
+		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+	</div>
+	<p style="text-align: left;">Introduce tu DNI y nos pondremos en contacto contigo para recuperar tu contraseña.</p>
+	<br />
+	<ion-list>
+		<ion-item>
+			<ion-label stacked>DNI</ion-label>
+			<ion-input type="text" [(ngModel)]="registerCredentials.dni"></ion-input><ion-icon name="fb-dni" item-right></ion-icon>
+		</ion-item>		
+	</ion-list>
+	<p class="olvido">DNI con letra incluida</p>
+	<br />
+	<div style="max-height:5rem; width: 80%; margin: 0 auto;">
+		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>
+	</div>
+</ion-content>
