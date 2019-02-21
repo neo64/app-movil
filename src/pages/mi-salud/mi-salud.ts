@@ -5,6 +5,7 @@ import { TabHigienesPage } from '../../pages/tab-higienes/tab-higienes';
 import { LoginPage } from '../../pages/login/login';
 import { InstruccionesPage } from '../../pages/instrucciones/instrucciones';
 import { ConsejosPersonalizadosPage } from '../../pages/consejos-personalizados/consejos-personalizados';
+import { ChatPage } from '../../pages/chat/chat';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -35,6 +36,8 @@ export class MiSaludPage {
 				this.navCtrl.push(ConsejosPersonalizadosPage);
 			else if(page == "Instrucciones")
 				this.navCtrl.push(InstruccionesPage);		
+			else if(page=="chat")
+				this.navCtrl.push(ChatPage);
 			else
 				this.presentToast("La página no está disponible.");
 		}else if(tipo == "web"){

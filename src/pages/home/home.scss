@@ -3,7 +3,7 @@ page-home {
   .back {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     height: 55vh;
     position: relative;
     background: linear-gradient(150deg, map-get($colors, primary) 20%, map-get($colors, secondary) 100%); //border-radius: 50% / 25%;
@@ -50,15 +50,11 @@ page-home {
     margin-right: -50vw;
     height: auto;
   }
-  ion-slide {
-    //padding: 0 60px;
-    margin-bottom: 2rem;
-  }
   .swiper-container {
     overflow: visible;
   }
   .swiper-container-horizontal > .swiper-pagination-bullets {
-    bottom: -10px;
+    bottom: -25px;
   }
   .square .swiper-pagination-bullet-active {
     background: map-get($colors, secondary);
@@ -104,7 +100,7 @@ page-home {
     padding: 0 5%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: 42vh;
+    justify-content: space-evenly;
+    height: 40vh;
   }
 }

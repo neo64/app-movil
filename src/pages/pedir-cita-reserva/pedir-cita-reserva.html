@@ -1,19 +1,21 @@
 <ion-header no-border>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Cita reservada</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Cita Reservada</ion-title>
+		  <ion-buttons right>
+			<button ion-button (click)="openPage('chat')">
+				<ion-icon name="fb-chat"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 	
-	<div style=" margin: 4rem;">
+	<div>
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
 
-    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Lonncontrary to popula</p>
+    <p>Contrary to popular belief/opinion. Del Lonncontrary to popula</p>
 
     <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">
 	    <ion-slide *ngFor="let item of citasBuscador">

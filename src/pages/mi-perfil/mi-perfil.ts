@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController } from 'ionic-angular';
+import { ChatPage } from '../../pages/chat/chat';
 
 // Proveedor de API
 import { RestProvider } from '../../providers/rest/rest';
@@ -49,6 +50,8 @@ export class MiPerfilPage {
 	openPage(page,) {
 		if(page == "perfil")
 			this.navCtrl.push(ProfilePage);
+		else if(page=="chat")
+			this.navCtrl.push(ChatPage);
 		else
 			this.navCtrl.push(ChangePasswordPage);		
 	}

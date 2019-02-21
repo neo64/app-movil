@@ -1,34 +1,38 @@
 page-pedir-cita-elegir {
-	ion-slides {
-	    margin-top: 0px;
-	    height: auto;
-	}
-
-	.swiper-slide, .swiper-wrapper  {
-		transform: translate3d(49.5px, 0px, 0px);
-	}	
-
-	ion-title{
-		text-align:center;
-		margin-left: -15%;
-		z-index: 0;
-	}
-
-	.back-button.show-back-button{
-		z-index: 1111;
-	}
-
-	ion-icon{
-		color: map-get($colors, secondary);
-		font-size: 2em;		
-	}
-
-	.toolbar-background-md{
-		background: white;
-	}
-
-	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
-		background-image: none !important; 
-		width: 0%;
-	}
+  ion-slides {
+    margin-top: 0px;
+    height: auto;
+  }
+  .swiper-wrapper {
+    transform: translate3d(2rem, 0px, 0px);
+  }
+  ion-title {
+    text-align: center;
+    z-index: 0;
+  }
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+  ion-icon {
+    color: map-get($colors, secondary);
+    font-size: 2em;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
+  .header-md::after,
+  .tabs-md[tabsPlacement="top"] > .tabbar::after,
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none !important;
+    width: 0%;
+  }
+  ion-slides {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }

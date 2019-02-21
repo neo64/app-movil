@@ -1,14 +1,12 @@
 <div class="back"> 
 	<ion-header no-border>
-  		<ion-navbar>
-    		<ion-buttons left>
-	    		<button ion-button menuToggle>
-	      			<ion-icon name="menu"></ion-icon>
-    			</button>
-    		</ion-buttons>
-
+		<ion-navbar class="navWhite">
     		<ion-title>Mi Salud</ion-title>
-
+    		<ion-buttons right>
+	    		<button ion-button (click)="openPage('chat','page')">
+	      			<ion-icon name="fb-chat"></ion-icon>
+	    		</button>
+    		</ion-buttons>
   		</ion-navbar>
 	</ion-header>
 
@@ -16,26 +14,6 @@
 
 	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >
   		<ion-slide class="slide" *ngFor="let card of cards">
-	    	<!-- <ion-row> -->
-	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->
-	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->
-	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->
-	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->
-	    				<!-- <ion-col>{{card.hora}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->
-	    			<!-- <ion-row style="margin-top: -4%;"> -->
-	    				<!-- <ion-col text-wrap class="tratamiento">{{card.tratamiento}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;"> -->
-	    				<!-- <ion-col col-3><img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;margin-top: 20%;" /></ion-col> -->
-	    				<!-- <ion-col col-9 class="doctor" style="margin-top: 5%;">{{card.doctor}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    	<!-- </ion-row> -->
 			<div class="cardCita">
 				<div class="cardCita__left">
 					<div class="cardCita__date">

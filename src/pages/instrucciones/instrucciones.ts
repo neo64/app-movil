@@ -4,6 +4,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { FileOpener } from '@ionic-native/file-opener';
 import { File } from '@ionic-native/file';
+import { ChatPage } from '../../pages/chat/chat';
 
 /**
  * Generated class for the InstruccionesPage page.
@@ -201,6 +202,13 @@ export class InstruccionesPage {
 			closeButtonText: 'OK'
 		});
 		toast.present();
+	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 
 }

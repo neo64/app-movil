@@ -4,6 +4,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { ConsejosDetailPage } from '../../pages/consejos-detail/consejos-detail';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ChatPage } from '../../pages/chat/chat';
 
 @IonicPage()
 @Component({
@@ -32,10 +33,14 @@ export class ConsejosPersonalizadosPage {
 	* 	@return None 
 	*/ 
 	openPage(info) {
-		this.navCtrl.push(ConsejosDetailPage, {
-		  'data': info
-		});
+		if(info=="chat")
+			this.navCtrl.push(ChatPage);
+		else
+			this.navCtrl.push(ConsejosDetailPage, {
+			  'data': info
+			});
 	}
+
 	
 	/**
 	* 	Función que obtiene las tarjetas para la página

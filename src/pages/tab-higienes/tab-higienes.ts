@@ -4,6 +4,7 @@ import { Tabs, Events, NavController } from 'ionic-angular';
 import { RecallPage } from '../../pages/recall/recall';
 import { RecallPasadasPage } from '../../pages/recall-pasadas/recall-pasadas';
 import { LoginPage } from '../../pages/login/login';
+import { ChatPage } from '../../pages/chat/chat';
 
 @IonicPage()
 @Component({
@@ -21,5 +22,12 @@ export class TabHigienesPage {
 		events.subscribe("user:Unauthorized", () => {
 			this.navCtrl.setRoot(LoginPage);
 		});
+	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 }

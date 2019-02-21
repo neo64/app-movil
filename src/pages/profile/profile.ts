@@ -6,6 +6,7 @@ import { LoginPage } from '../../pages/login/login';
 import { File } from '@ionic-native/file'; 
 import { DomSanitizer } from '@angular/platform-browser';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ChatPage } from '../../pages/chat/chat';
 
 
 @IonicPage()
@@ -20,7 +21,8 @@ export class ProfilePage {
 	loading: Loading;			// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	loadingPresented = false;	// Variable de tipo booleano para saber si el ProgressBar está o no ejecutandose.
 	bGuardar = {name : 'GUARDAR CAMBIOS', 	svg: '', openPage : '', class : 'active btn-large', tipo : 'page', gradiente: 'fb-gradient'};
-
+	existe 		= false;
+	base64 		= "";
 
 	constructor(private domSanitizer: DomSanitizer, private _CAMERA : Camera, public actionSheetCtrl: ActionSheetController, private file: File, public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
 		this.checkFileExistence("fyb.jpeg");
@@ -43,7 +45,57 @@ export class ProfilePage {
 	    })
   	}
 
-  		/**
+  	public getContentType(base64Data: any) {  
+        let block = base64Data.split(";");  
+        let contentType = block[0].split(":")[1];  
+        return contentType;  
+    }
+
+  	//here is the method is used to convert base64 data to blob data  
+    public base64toBlob(b64Data, contentType) {  
+        contentType = contentType || '';  
+        var sliceSize = 512;  
+        let byteCharacters = atob(b64Data.replace(/^data:image\/(png|jpeg|jpg);base64,/, ''));  
+        let byteArrays = [];  
+        for (let offset = 0; offset < byteCharacters.length; offset += sliceSize) {  
+            let slice = byteCharacters.slice(offset, offset + sliceSize);  
+            let byteNumbers = new Array(slice.length);  
+            for (let i = 0; i < slice.length; i++) {  
+                byteNumbers[i] = slice.charCodeAt(i);  
+            }  
+            var byteArray = new Uint8Array(byteNumbers);  
+            byteArrays.push(byteArray);  
+        }  
+        let blob = new Blob(byteArrays, {  
+            type: contentType  
+        });  
+        return blob;  
+    } 
+
+  	/**
+	* 	Función que guarda la imagen de perfil en el teléfono
+	*
+	* 	@param None
+	* 
+	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
+	* 	
+	*/
+    public writeFile(base64Data: any, folderName: string, fileName: any) {  
+        let contentType = this.getContentType(base64Data);  
+        let DataBlob 	= this.base64toBlob(base64Data, contentType);  
+        let filePath 	= this.file.externalRootDirectory + folderName;  
+        
+        this.file.writeFile(filePath, fileName, DataBlob, contentType).then((success) => {  
+            //console.log("File Writed Successfully", success);  
+            //console.log(filePath + fileName);
+            this.data.Imagen = base64Data;
+            this.loading.dismiss();
+        }).catch((err) => {  
+            //console.log("Error Occured While Writing File", err);  
+        })  
+    }
+
+    /**
 	* 	Función que envía una imagen a Firebase
 	*
 	* 	@param None
@@ -212,9 +264,9 @@ export class ProfilePage {
 	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
 	* 	@return None 
 	*/ 
-	showLoading() {
+	showLoading(t = 'Cargando información...') {
 		this.loading = this.loadingCtrl.create({
-			content: 'Cargando información...',			
+			content: t,			
 			dismissOnPageChange: true
 		});
 		this.loading.present();
@@ -239,5 +291,12 @@ export class ProfilePage {
 			buttons: ['OK']
 		});
 		alert.present();
+	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 }

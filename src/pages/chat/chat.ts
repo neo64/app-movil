@@ -10,7 +10,9 @@ import { PhotoViewer } from '@ionic-native/photo-viewer';
 
 import { FileOpener } from '@ionic-native/file-opener';
 import { File } from '@ionic-native/file';
-
+import {
+    CallNumber
+} from '@ionic-native/call-number';
 
 @IonicPage()
 @Component({
@@ -34,7 +36,7 @@ export class ChatPage {
 	loadingPresented 	= false;	// Controla si el Loading esta en primer plano.
 	menuData 			= "";		// Foto de perfil del usuario.
 
-	constructor( private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
+	constructor(private callNumber: CallNumber, private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
 		
 		this.showLoading("Cargando conversación ...");	
 		this.nickname 		= window.localStorage.getItem("idPac");
@@ -104,11 +106,20 @@ export class ChatPage {
 			});
 		}); 
 	}
-
+	 /**
+     * 	Función que abre la aplicación de llamadas para
+     *	efectuar una llamada a la clínica
+     * 
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	
+     */
+    callClinica() {
+        this.callNumber.callNumber("+34917681812", true).catch(err => console.log('Error launching dialer', err));
+    }
+	
 	public checkFileExistence(fileName: string) {
 	    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
 	            this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
-					this.base64 		= result;
 					this.menuData 		= result;
 				}, (err) => {
 					//console.log(err);

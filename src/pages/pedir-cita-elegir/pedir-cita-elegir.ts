@@ -5,6 +5,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { PedirCitaPreferenciasPage } from '../../pages/pedir-cita-preferencias/pedir-cita-preferencias';
 import { PedirCitaReservaPage } from '../../pages/pedir-cita-reserva/pedir-cita-reserva';
+import { ChatPage } from '../../pages/chat/chat';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -131,6 +132,13 @@ export class PedirCitaElegirPage {
 			buttons: ['OK']
 		});
 		alert.present();
+	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 
 }

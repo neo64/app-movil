@@ -5,6 +5,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { PedirCitaPage } from '../../pages/pedir-cita/pedir-cita';
 import { PedirCitaElegirPage } from '../../pages/pedir-cita-elegir/pedir-cita-elegir';
+import { ChatPage } from '../../pages/chat/chat';
 
 @IonicPage()
 @Component({
@@ -36,10 +37,15 @@ export class PedirCitaPreferenciasPage {
 		for (var x in this.doctores){
 			if(this.doctores[x].IdUsu == e.IdUsu)
 				this.doctores[x].class = "active";
+			else if (this.doctores[x].IdUsu == "Sin preferencia")
+				this.doctores[x].class = "sinpreferencia";
 			else
 				this.doctores[x].class = "";
+			if (this.doctores[x].IdUsu == "Sin preferencia" && this.doctores[x].IdUsu == e.IdUsu)
+				this.doctores[x].class = "sinpreferencia active";
 		}
 		this.drSelect = e.IdUsu;
+		console.log(e.IdUsu);
 	}
 
 	selectDia(e){
@@ -142,5 +148,13 @@ export class PedirCitaPreferenciasPage {
 		});
 		alert.present();
 	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
+	}
+
 
 }

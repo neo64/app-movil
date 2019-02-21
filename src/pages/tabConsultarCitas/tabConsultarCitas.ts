@@ -4,6 +4,7 @@ import { Tabs, Events, NavController } from 'ionic-angular';
 import { ConsultarCitas } from '../../pages/ConsultarCitas/ConsultarCitas';
 import { ConsultarCitasFuturasPage } from '../../pages/consultar-citas-futuras/consultar-citas-futuras';
 import { LoginPage } from '../../pages/login/login';
+import { ChatPage } from '../../pages/chat/chat';
 
 @IonicPage()
 @Component({
@@ -21,5 +22,9 @@ export class TabConsultarCitas {
 		events.subscribe("user:Unauthorized", () => {
 			this.navCtrl.setRoot(LoginPage);
 		});
-	}		  
+	}	
+	openPage(page,) {
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+	}	
  }

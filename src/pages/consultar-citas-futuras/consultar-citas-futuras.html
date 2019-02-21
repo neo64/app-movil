@@ -7,7 +7,7 @@
 			            <div class="card_subtitle -white" style="font-size: 1rem;">
 			                {{item.diaSemana}}
 			            </div>
-			            <div class="card_time -white" style="font-size:3.2rem;">
+			            <div class="card_time -white" style="font-size:3rem;">
 			                {{item.dia}}
 			                <span>
 			                {{item.mes}}
@@ -63,7 +63,7 @@
 			            </div>
 			            <div class="right">
 			                <div class="card_label">
-			                    Estado de la cita
+			                    Estado
 			                </div>
 			                <div class="card_estado">
 			                     {{item.situacion}}
@@ -132,7 +132,7 @@
 			</div>
 		</ion-slide>
 	</ion-slides>
-	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 2rem 0 2rem;">
+	<ion-row style="display: flex;    margin: 0rem 2rem 0 2rem;">
 		<ion-col><fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)"></fb-button></ion-col>
 		<ion-col><fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)"></fb-button></ion-col>
 	</ion-row>

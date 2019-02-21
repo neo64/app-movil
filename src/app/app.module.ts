@@ -136,7 +136,7 @@ import { ChartsModule } from 'ng2-charts';
 	IonicImageViewerModule,
     IonicModule.forRoot(MyApp, {
       backButtonText: '',
-      backButtonIcon: 'ios-arrow-back',
+      backButtonIcon: 'fb-left',
       iconMode: 'md',
 	  mode: 'md',
     }),

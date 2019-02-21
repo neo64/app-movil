@@ -40,4 +40,22 @@ page-profile {
     box-shadow: inset 0 -0px 0 0 #81a7d4;
     border-bottom: 0 solid #dedede;
   }
+  .perfil__foto {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    & .btn.-rounded {
+      display: flex;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+    }
+    & img {
+      height: 30vh;
+    }
+  }
 }

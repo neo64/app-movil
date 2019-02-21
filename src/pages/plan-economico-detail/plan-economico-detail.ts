@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, Events, NavParams, LoadingController, AlertController, Loading, ToastController } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
+import { ChatPage } from '../../pages/chat/chat';
 
 /**
  * Generated class for the PlanEconomicoDetailPage page.
@@ -194,6 +195,13 @@ export class PlanEconomicoDetailPage {
 			closeButtonText: 'OK'
 		});
 		toast.present();
+	}
+	
+		openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 
 }

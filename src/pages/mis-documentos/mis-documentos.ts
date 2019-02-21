@@ -5,6 +5,7 @@ import { PlanEconomicoPage } from '../../pages/plan-economico/plan-economico';
 import { LoginPage } from '../../pages/login/login';
 import { PresupuestosPage } from '../../pages/presupuestos/presupuestos';
 import { DocumentosContablesPage } from '../../pages/documentos-contables/documentos-contables';
+import { ChatPage } from '../../pages/chat/chat';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -32,7 +33,9 @@ export class MisDocumentosPage {
 			else if(page == "Contables")
 				this.navCtrl.push(DocumentosContablesPage);
 			else if(page == "Domiciliaciones")
-				this.navCtrl.push(PlanEconomicoPage);		
+				this.navCtrl.push(PlanEconomicoPage);
+			else if(page=="chat")
+				this.navCtrl.push(ChatPage);			
 			else
 				this.presentToast("La página " + page + " no está disponible.");
 		}else if(tipo == "web"){
