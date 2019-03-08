@@ -3,6 +3,7 @@ import { IonicPage, NavController, Events, LoadingController, AlertController, L
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { PlanEconomicoDetailPage } from '../../pages/plan-economico-detail/plan-economico-detail';
+import { ChatPage } from '../../pages/chat/chat';
 
 /**
  * Generated class for the PlanEconomicoPage page.
@@ -38,9 +39,16 @@ export class PlanEconomicoPage {
 	* 	@return None 
 	*/ 
 	openPage(info) {
-		this.navCtrl.push(PlanEconomicoDetailPage, {
-		  'data': info
-		});
+		if(info=="chat")
+			this.navCtrl.push(ChatPage);
+		else 
+			this.navCtrl.push(PlanEconomicoDetailPage, {
+			  'data': info
+			});
+
+
+		
+
 	}
 
 	/**

@@ -38,7 +38,10 @@ export class PedirCitaPage {
 
 		for (var x in this.tratamientos){
 			if(this.tratamientos[x].IdOpc == e.IdOpc)
-				this.tratamientos[x].class = "active";
+				//this.tratamientos[x].class = "active";
+			    this.navCtrl.push(PedirCitaPreferenciasPage,{
+				  'tto': this.ttoSelect
+				});
 			else
 				this.tratamientos[x].class = "";
 		}
@@ -138,5 +141,12 @@ export class PedirCitaPage {
 			buttons: ['OK']
 		});
 		alert.present();
+	}
+	
+		openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 }

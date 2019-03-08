@@ -4,6 +4,7 @@ import { Tabs, Events, NavController, NavParams } from 'ionic-angular';
 import { ConsultarCitas } from '../../pages/ConsultarCitas/ConsultarCitas';
 import { ConsultarCitasFuturasPage } from '../../pages/consultar-citas-futuras/consultar-citas-futuras';
 import { LoginPage } from '../../pages/login/login';
+import { ChatPage } from '../../pages/chat/chat';
 
 @IonicPage()
 @Component({
@@ -25,4 +26,10 @@ export class TabConsultarCitas {
 
 		this.activeCard = this.navParams.get('tab');
 	}		  
+	
+	openPage(page,) {
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+	}	
+
  }

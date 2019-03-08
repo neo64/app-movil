@@ -1,11 +1,17 @@
 tabConsultarCitas {
   ion-title {
     text-align: center;
-    margin-left: -15%;
     z-index: 0;
   }
   .back-button.show-back-button {
     z-index: 1111;
+  }
+  .tab-button {
+    padding: 0 10px!important;
+    min-height: 3rem!important;
+  }
+  .tabbar {
+    border: none!important;
   }
   ion-icon {
     color: map-get($colors, secondary);
@@ -14,19 +20,17 @@ tabConsultarCitas {
   .toolbar-background-md {
     background: white;
   }
-  .tabs-md .tab-button[aria-selected=true] {
+  ion-tabs .tab-button[aria-selected=true] {
     border-bottom: 2px solid map-get($colors, pink-dark);
-    color: map-get($colors, black);
+    color: map-get($colors, black)!important;
   }
-  .tabs-md .tab-button {
+  ion-tabs .tab-button {
     border-bottom: 2px solid map-get($colors, grey);
-    color: map-get($colors, grey);
-    padding-top: 5% !important;
+    color: map-get($colors, grey); //padding-top: 5% !important;
   }
   .tabbar {
     padding: 0rem 4rem 0rem 4rem;
-    background: white !important;
-    margin-top: -6%;
+    background: white !important; //margin-top: -6%;
   }
   .header-md::after,
   .tabs-md[tabsPlacement="top"] > .tabbar::after,
@@ -54,5 +58,16 @@ tabConsultarCitas {
     display: block;
     width: 100%;
     height: 100%;
+  }
+  ion-tab .ion-page ion-content .scroll-content {
+    margin-top: 3rem!important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  @media screen and (min-height: 750px) {
+    .tabbar {
+      margin-top: 3rem;
+    }
   }
 }

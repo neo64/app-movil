@@ -1,16 +1,15 @@
 <div class="back"> 
 	<ion-header no-border>
-  		<ion-navbar>
+  		<ion-navbar class="navWhite">
     		<ion-buttons left>
 	    		<button ion-button menuToggle>
 	      			<ion-icon name="menu"></ion-icon>
     			</button>
     		</ion-buttons>
-
     		<ion-title>Ferrus & Bratos</ion-title>
 
     		<ion-buttons right>
-	    		<button ion-button style="font-size: 2rem;color:white;margin-right:1rem;" (click)="callClinica()">
+	    		<button ion-button (click)="callClinica()">
 	      			<ion-icon name="fb-telephone"></ion-icon>
 	    		</button>
     		</ion-buttons>
@@ -18,7 +17,7 @@
   		</ion-navbar>
 	</ion-header>
 
-	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Próximas citas</h1> 
+	<h1 style="margin-bottom:0rem;color:white;font-weight:bold;">Próximas citas</h1> 
 
 	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >
   		<ion-slide class="slide" *ngFor="let card of cards; let i = index" (click)="goToCitas(i)" >
@@ -67,14 +66,14 @@
 		<ion-slides #slides pager>
 			<div *ngFor="let c of cardsMenu; let i=index">
 				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">
-					<ion-row style="padding:4%;">
+					<ion-row style="padding:0 4%;">
 						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>
 							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
 						</div>
 					</ion-row>
 				</ion-slide>
 				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">
-					<ion-row style="padding:4%;">
+					<ion-row style="padding:0 4%;">
 						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>
 							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
 						</div>

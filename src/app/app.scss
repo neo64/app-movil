@@ -71,14 +71,26 @@ body {
   }
 }
 
-@media screen and (min-width: 376px) {
+@media screen and (min-width: 321px) and (max-height:640px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (min-width: 376px) and (min-height: 641px) {
   html {
     font-size: 75%;
   }
 }
 
 .fb-card {
-  margin: 1.5rem 0 2.5rem;
+  margin: 1.5rem 0 1.5rem;
   padding: 1.2rem 1rem;
   background-color: map-get($colors, white);
   border-radius: 10px;
@@ -280,7 +292,8 @@ body {
         width: 2rem!important;
       }
     }
-    @media screen and (max-width: 320px) {
+    @media screen and (max-width: 320px),
+    screen and (max-height: 640px) {
       & .avatar:nth-child(1) {
         display: none;
       }
@@ -289,7 +302,7 @@ body {
       display: flex;
       & .card_title {
         margin-left: 1rem;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         text-align: left;
       }
       & .card_subtitle {
@@ -302,7 +315,7 @@ body {
       padding: 0.7rem 0 0.7rem 0.7rem;
       border-left: 3px solid map-get($colors, pink-dark);
       color: map-get($colors, grey-dark);
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       text-align: left;
     }
   }
@@ -313,7 +326,7 @@ body {
     & .card_subtitle {
       margin-top: 0;
       margin-bottom: 0.5rem;
-      font-size: 1.45rem;
+      font-size: 1.3rem;
     }
     & .card_title {
       font-size: 1.15rem;
@@ -742,6 +755,12 @@ ion-icon {
   &[class*="fb-pin"] {
     mask-image: url(../assets/icon/pushpin.svg);
   }
+  &[class*="fb-left"] {
+    mask-image: url(../assets/icon/left.svg);
+  }
+  &[class*="fb-pedircita"] {
+    mask-image: url(../assets/icon/calendar-check.svg);
+  }
 }
 
 @media screen and (min-width: 321px) {
@@ -808,5 +827,43 @@ ion-menu {
       white-space: nowrap;
       overflow: hidden;
     }
+  }
+}
+
+/*
+ * Header
+ */
+
+.toolbar {
+  & .title {
+    margin-bottom: 0;
+    text-align: center;
+  }
+  & ion-icon {
+    width: 2.2rem;
+    height: 100%!important;
+    color: map-get($colors, pink)!important;
+  }
+  & .toolbar-title {
+    font-size: 1.7rem!important;
+  }
+  & ion-buttons {
+    min-width: 44px;
+    margin: 0 6px;
+    padding: 0 5px;
+  }
+  & .bar-button-menutoggle-md {
+    margin: 0;
+    padding: 0;
+    & ion-icon {
+      width: inherit;
+    }
+  }
+}
+
+.navWhite {
+  & .title,
+  & ion-icon {
+    color: map-get($colors, white)!important;
   }
 }

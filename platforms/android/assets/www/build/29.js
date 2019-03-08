@@ -1,14 +1,14 @@
 webpackJsonp([29],{
 
-/***/ 854:
+/***/ 856:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FaqDetailPageModule", function() { return FaqDetailPageModule; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FaqPageModule", function() { return FaqPageModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__faq_detail__ = __webpack_require__(238);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__faq__ = __webpack_require__(238);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -18,23 +18,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var FaqDetailPageModule = /** @class */ (function () {
-    function FaqDetailPageModule() {
+var FaqPageModule = /** @class */ (function () {
+    function FaqPageModule() {
     }
-    FaqDetailPageModule = __decorate([
+    FaqPageModule = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             declarations: [
-                __WEBPACK_IMPORTED_MODULE_2__faq_detail__["a" /* FaqDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_2__faq__["a" /* FaqPage */],
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__faq_detail__["a" /* FaqDetailPage */]),
+                __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_2__faq__["a" /* FaqPage */]),
             ],
         })
-    ], FaqDetailPageModule);
-    return FaqDetailPageModule;
+    ], FaqPageModule);
+    return FaqPageModule;
 }());
 
-//# sourceMappingURL=faq-detail.module.js.map
+//# sourceMappingURL=faq.module.js.map
 
 /***/ })
 

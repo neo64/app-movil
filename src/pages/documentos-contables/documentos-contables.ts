@@ -4,6 +4,7 @@ import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 import { FileOpener } from '@ionic-native/file-opener';
 import { File } from '@ionic-native/file';
+import { ChatPage } from '../../pages/chat/chat';
 
 declare var cordova:any;
 
@@ -239,6 +240,14 @@ export class DocumentosContablesPage {
 			closeButtonText: 'OK'
 		});
 		toast.present();
+	}
+	
+		
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 
 }

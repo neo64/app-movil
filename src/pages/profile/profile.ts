@@ -6,6 +6,7 @@ import { LoginPage } from '../../pages/login/login';
 import { File } from '@ionic-native/file'; 
 import { DomSanitizer } from '@angular/platform-browser';
 import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ChatPage } from '../../pages/chat/chat';
 
 
 @IonicPage()
@@ -290,5 +291,12 @@ export class ProfilePage {
 			buttons: ['OK']
 		});
 		alert.present();
+	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
 	}
 }

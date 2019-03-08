@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
-
+import { ChatPage } from '../../pages/chat/chat';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -25,5 +25,12 @@ export class PedirCitaReservaPage {
   	inicio(){
   		this.navCtrl.setRoot(HomePage);
   	}
+	
+	openPage(page,) {
+
+		if(page=="chat")
+			this.navCtrl.push(ChatPage);
+
+	}
 
 }

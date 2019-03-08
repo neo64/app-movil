@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { TabConsultarCitas } from '../tabConsultarCitas/tabConsultarCitas';
 import { PedirCitaPage } from '../pedir-cita/pedir-cita';
 import { RecallPage } from '../../pages/recall/recall';
+import { ChatPage } from '../../pages/chat/chat';
 
 /**
  * Generated class for the MisCitasPage page.
@@ -27,6 +28,8 @@ export class MisCitasPage {
 			this.navCtrl.push(TabConsultarCitas);
 		else if(page == "pedirCita")
 			this.navCtrl.push(PedirCitaPage);
+		else if(page=="chat")
+			this.navCtrl.push(ChatPage);
 		else
 			this.navCtrl.push(RecallPage);
 	}

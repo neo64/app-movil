@@ -33,7 +33,6 @@ page-mi-perfil {
   }
   ion-title {
     text-align: center;
-    margin-left: -15%;
     z-index: 0;
   }
   .back-button.show-back-button {
@@ -102,5 +101,8 @@ page-mi-perfil {
   }
   .-bg-pink {
     background-color: #ed7aad !important;
+  }
+  [padding] .scroll-content {
+    padding: 0 3rem!important;
   }
 }

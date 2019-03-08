@@ -1,70 +1,100 @@
 page-pedir-cita-preferencias {
-
-	ion-slides {
-	    height: 18%;
-	}
-
-	.swiper-slide, .swiper-wrapper  {
-		transform: translate3d(49.5px, 0px, 0px);
-	}	
-
-	ion-title{
-		text-align:center;
-		margin-left: -15%;
-		z-index: 0;
-	}
-
-	.back-button.show-back-button{
-		z-index: 1111;
-	}
-
-	ion-icon{
-		color: map-get($colors, secondary);
-		font-size: 2em;		
-	}
-
-	.toolbar-background-md{
-		background: white;
-	}
-
-	.header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
-		background-image: none !important; 
-		width: 0%;
-	}
-	
-	.button{
-		background: white;
-		border-radius: 6px;
-		box-shadow: 0 3px 20px rgba(0,0,0,.12) !important;
-		height: -webkit-fill-available;
-		width: 100%;
-
-		&.active{
-			background: map-get($colors, pink-dark);
-			color: white;
-		}
-	}
-	
-	p{
-		color: black;
-		font-weight: 400;
-    	font-size: 1.2rem;
-    	margin-top: 5%;
-    	&.active{
-			color: white;
-		}
-	}
-
-	.btn-large{
-    	font-size: 1.6rem;
-    	margin-top: 2rem;
-    	line-height: 1.8rem;
-	}
-
-	fill: url(#fb-gradient);
-
-	.active{
-		fill: white;
-	}
-	
+  ion-slides {
+    height: 18%;
+  }
+  .swiper-container {
+    overflow: inherit;
+  }
+  .swiper-wrapper {
+    transform: translate3d(2rem, 0px, 0px);
+  }
+  ion-title {
+    text-align: center;
+    z-index: 0;
+  }
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+  ion-icon {
+    color: map-get($colors, secondary);
+    font-size: 2em;
+  }
+  ion-slide p {
+    margin-bottom: 0rem;
+    margin-top: 0;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
+  .avatarslide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nameslidep {
+    white-space: pre-wrap;
+    margin-top: 0.3rem;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+  .header-md::after,
+  .tabs-md[tabsPlacement="top"] > .tabbar::after,
+  .footer-md::before,
+  .tabs-md[tabsPlacement="bottom"] > .tabbar::before {
+    background-image: none !important;
+    width: 0%;
+  }
+  .sinpreferencia {
+    padding: 2.1rem 0.4rem!important;
+    white-space: pre-wrap;
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+  }
+  .button {
+    background: white;
+    border-radius: 6px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .12) !important;
+    height: -webkit-fill-available;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 0.7rem 1.2rem;
+    &.active {
+      background: map-get($colors, pink-dark);
+      box-shadow: 0 3px 20px rgba(237, 122, 173, 0.5) !important;
+      & p {
+        color: white!important;
+      }
+    }
+  }
+  [padding] .scroll-content {
+    padding-top: 1rem!important;
+  }
+  p {
+    color: black;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 5%;
+    &.active {
+      color: white;
+    }
+  }
+  .btn-large {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    line-height: 1.8rem;
+  }
+  fill: url(#fb-gradient);
+  .active {
+    fill: white;
+  }
+  ion-slides {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+  }
 }

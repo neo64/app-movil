@@ -1,9 +1,11 @@
 <ion-header no-border>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <ion-title>Mis Consejos</ion-title>
+	  <ion-buttons right>
+		<button ion-button (click)="openPage('chat')">
+			<ion-icon name="fb-chat"></ion-icon>
+		</button>
+	</ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>

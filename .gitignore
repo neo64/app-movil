@@ -9,16 +9,12 @@
 log.txt
 *.sublime-project
 *.sublime-workspace
+.sourcemaps/*
 .vscode/
 npm-debug.log*
 node_modules/
 www/build/
-platforms/
-<<<<<<< HEAD
-
-=======
->>>>>>> 87a127a9eaed631216355fa0c5115048f470604f
-
+platforms/*
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate

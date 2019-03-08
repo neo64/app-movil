@@ -1,20 +1,16 @@
 page-instrucciones {
-	ion-title{
-		text-align:center;
-		margin-left: -15%;
-		z-index: 0;
-	}
-
-	.back-button.show-back-button{
-		z-index: 1111;
-	}
-
-	ion-icon{
-		color: map-get($colors, secondary);
-		font-size: 2em;		
-	}
-
-	.toolbar-background-md{
-		background: white;
-	}
+  ion-title {
+    text-align: center;
+    z-index: 0;
+  }
+  .back-button.show-back-button {
+    z-index: 1111;
+  }
+  ion-icon {
+    color: map-get($colors, secondary);
+    font-size: 2em;
+  }
+  .toolbar-background-md {
+    background: white;
+  }
 }

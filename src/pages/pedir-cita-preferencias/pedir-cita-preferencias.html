@@ -1,56 +1,58 @@
 <ion-header no-border>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Pedir nueva cita</ion-title>
-  </ion-navbar>
+	<ion-navbar>
+		<ion-title>Pedir nueva cita</ion-title>
+		  <ion-buttons right>
+			<button ion-button (click)="openPage('chat')">
+				<ion-icon name="fb-chat"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-	<div style=" margin: 4rem;">
+	<div>
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
 
-    <p style=" margin: 4rem;">Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popula</p> 
-    <p style=" margin: 0 0 0 4rem;">Elije el profesional</p>
-    <ion-slides slidesPerView="3.3" spaceBetween="18">
+    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary</p> 
+    <p>Elije el profesional</p>
+    <ion-slides id="persona" slidesPerView="3.5" spaceBetween="12">
   		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">
   			<ion-row>
 	    		<button [class]="card.class + ' button'">
-	    			<p><img src="{{card.Img}}" style="border-radius: 50%;width: 50%;"/></p>
-	    			<p [class]="card.class">{{ card.usuario }}</p>
+	    			<p class="avatarslide"><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;"/></p>
+	    			<p class="nameslidep">{{ card.usuario }}</p>
 	    		</button>	    		
 	    	</ion-row>
 	  	</ion-slide>
 	</ion-slides>
 
-	<p style=" margin: 1rem 0 -2rem 4rem;">Preferencia de días</p>
-	<ion-slides slidesPerView="3.5" spaceBetween="18" >
+	<p style=" margin: 1rem 0 -2rem 0;">Preferencia de días</p>
+	<ion-slides slidesPerView="3.5" spaceBetween="12" >
   		<ion-slide class="slide" *ngFor="let card of diasSemana" >
   			<ion-row>
 	    		<button [class]="card.class + ' button'" (click)="selectDia(card)" style="height: 100%;">
-	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.dia }}</p>
+	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.dia }}</p>
 	    		</button>	    		
 	    	</ion-row>
 	  	</ion-slide>
 	</ion-slides>
 
-	<p style=" margin: 0rem 0 -2rem 4rem;">A partir de las:</p>
-	<ion-slides slidesPerView="3.5" spaceBetween="18" >
+	<p style=" margin: 0rem 0 -2rem 0;">A partir de las:</p>
+	<ion-slides slidesPerView="3.5" spaceBetween="12" >
   		<ion-slide class="slide" *ngFor="let card of horasDia" >
   			<ion-row>
 	    		<button [class]="card.class + ' button'" (click)="selectHora(card)" style="height: 100%;">
-	    			<p [class]="card.class" style="margin-top: 13%;">{{ card.hora }}</p>
+	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.hora }}</p>
 	    		</button>	    		
 	    	</ion-row>
 	  	</ion-slide>
 	</ion-slides>
 
-	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">2 de 4</p>
+	<p style=" text-align: center; margin:0; font-size: 1rem;">2 de 4</p>
 
-	<ion-row style="max-height: 9%;    display: flex;    margin: 0rem 1rem 0 1rem">
+	<ion-row style="max-height: 9%;    display: flex;">
 		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>
 		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
 	</ion-row>
