@@ -77,7 +77,18 @@
     },
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "com.ferrusbratos.app"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    }
+  }
 }

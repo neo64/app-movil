@@ -93,11 +93,11 @@
 			                <div class="card_label">
 			                    Calendario
 			                </div>
-			                <div class="card_container">
+			                <div class="card_container" (click)="addEvent(item.timestampINI,item.timestampFIN)">
 			                    <div class="avatar">
 			                        <ion-icon name="fb-calendar" item-right></ion-icon>
 			                    </div>
-			                    <div class="card_subtitle" (click)="addEvent(item.timestampINI,item.timestampFIN)">
+			                    <div class="card_subtitle">
 			                        Haz
 			                        <span class="-pink">
 			                            click

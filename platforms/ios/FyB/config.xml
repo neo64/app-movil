@@ -151,4 +151,13 @@
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlayWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
+    <feature name="ActionSheet">
+        <param name="ios-package" value="ActionSheet" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="LaunchNavigator">
+        <param name="ios-package" value="LaunchNavigatorPlugin" />
+    </feature>
 </widget>

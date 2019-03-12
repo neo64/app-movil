@@ -126,7 +126,7 @@ export class MyApp {
             title: 'Mis citas',
             icon: 'fb-calendar',
             color: 'primary',
-            component: MisCitasPage
+            component: TabConsultarCitas
         }, {
             title: 'Mis documentos',
             icon: 'fb-documents',

@@ -70,7 +70,19 @@
     },
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "com.ferrusbratos.app"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
+      "OKHTTP_VERSION": "3.12.0",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    }
+  }
 }

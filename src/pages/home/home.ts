@@ -64,6 +64,9 @@ import {
 import {
     FaqPage
 } from '../faq/faq';
+import {
+    ComollegarPage
+} from '../comollegar/comollegar';
 // Proveedor de API
 import {
     RestProvider
@@ -154,6 +157,7 @@ export class HomePage {
             else if (page == "ConsejosPersonalizados") this.navCtrl.push(ConsejosPersonalizadosPage);
             else if (page == "Instrucciones") this.navCtrl.push(InstruccionesPage);
             else if (page == "PreguntasFrecuentes") this.navCtrl.push(FaqPage);
+            else if (page == "ComoLlegar") this.navCtrl.push(ComoLlegar);
             else this.presentToast("La página no está disponible.");
         } else if (tipo == "web") {
             window.open(page, '_system', 'location=yes');

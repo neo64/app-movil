@@ -63,7 +63,7 @@
     <name>FyB</name>
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.5.57:8101" />
     <access origin="http://cfb2.ddns.net:4231" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -74,6 +74,7 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="http://cfb2.ddns.net:4231" />
     <allow-navigation href="*" />
+    <allow-navigation href="http://192.168.5.57:8101" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -106,4 +107,13 @@
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlayWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
+    <feature name="ActionSheet">
+        <param name="android-package" value="nl.xservices.plugins.actionsheet.ActionSheet" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="LaunchNavigator">
+        <param name="android-package" value="uk.co.workingedge.phonegap.plugin.LaunchNavigatorPlugin" />
+    </feature>
 </widget>

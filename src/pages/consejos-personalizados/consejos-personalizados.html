@@ -13,8 +13,14 @@
     <div>
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
-
-    <p>Contrary to popular belief/opinion. Del Longman Dictionary of Contemporary Englishcontrary to popular belief/opinioncontrary to popular belief/opinionused to say that something is true even though people believe the opposite Contrary to popular belief, a desert can be very cold.</p>
+    <div *ngIf="cards?.length > 0; else notCards">
+        <p>Tu especialista quiere hacerte llegar una serie de recomendaciones personalizadas. Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.
+    </p>
+    </div>
+    <ng-template #notCards>
+        <p>De momento, no necesitas seguir ninguna recomendación especial.
+        </p>
+    </ng-template>
 
     <br />	 
 

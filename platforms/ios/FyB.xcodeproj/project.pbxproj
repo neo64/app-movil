@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		006AAFD51DBF4F0FA5B27EA2 /* ReaderContentTile.m in Sources */ = {isa = PBXBuildFile; fileRef = 60BF57BB94A244CE8D258840 /* ReaderContentTile.m */; };
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
@@ -133,6 +132,16 @@
 		F7CD6026CEE2499DAA1D1F06 /* ReaderThumbView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DDBB61D69E741F98A3A9977 /* ReaderThumbView.m */; };
 		FC033895BBAB4E8093D378C2 /* Reader-Email.png in Resources */ = {isa = PBXBuildFile; fileRef = C19EBB6F60F046578DA5FA4B /* Reader-Email.png */; };
 		FC1C1136EACC4932B90C0180 /* Reader-Thumbs.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D88D4A2ADA346E0B665ABFB /* Reader-Thumbs.png */; };
+		56E947312E4141E7AE077FB5 /* ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = ADEE9E4A0A484417B54E8536 /* ActionSheet.m */; };
+		D064FFF9E7534079846872AF /* CDVNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = F0D6881C07FE425592C197AA /* CDVNotification.m */; };
+		76108DD734DD4821974C89B6 /* CDVNotification.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 63CA233D6E364F77B01815C2 /* CDVNotification.bundle */; };
+		FBACE77037E947AE9B05402C /* LaunchNavigatorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E92B14E44C41B58DD5F070 /* LaunchNavigatorPlugin.m */; };
+		FED460B72207468A8DAB2A8C /* WE_CordovaLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = E2E967D3EDA84791A7EFC808 /* WE_CordovaLogger.m */; };
+		A18C54375206492DB2922568 /* LN_LaunchNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = 22AEBEA664D64897B09D8DE3 /* LN_LaunchNavigator.m */; };
+		F278C2EC2FBF4659AAA84185 /* LN_Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486D42E1212434EBF46C4A9 /* LN_Reachability.m */; };
+		76C61EC8F84E4234BFE47D11 /* WE_Logger.m in Sources */ = {isa = PBXBuildFile; fileRef = C3746403A9454D28A36284D9 /* WE_Logger.m */; };
+		263F570E6B8F471C9B92477E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E844B3801A73465DBE324E0C /* MapKit.framework */; };
+		9714250716914790B34FF8DE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68C98CEA44D14E01B1681789 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -371,6 +380,23 @@
 		FC26702E98624D5DA425EF67 /* CDVJpegHeaderWriter.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVJpegHeaderWriter.m; path = "cordova-plugin-camera/CDVJpegHeaderWriter.m"; sourceTree = "<group>"; };
 		FD9001023A644415ABC5E5A1 /* CDVExif.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVExif.h; path = "cordova-plugin-camera/CDVExif.h"; sourceTree = "<group>"; };
 		FF7FA672BA434BE0BC4DE41F /* FileOpener2.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = FileOpener2.h; path = "cordova-plugin-file-opener2/FileOpener2.h"; sourceTree = "<group>"; };
+		ADEE9E4A0A484417B54E8536 /* ActionSheet.m */ = {isa = PBXFileReference; name = "ActionSheet.m"; path = "cordova-plugin-actionsheet/ActionSheet.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E4AEBD848E5F4D4096DC174E /* ActionSheet.h */ = {isa = PBXFileReference; name = "ActionSheet.h"; path = "cordova-plugin-actionsheet/ActionSheet.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		F0D6881C07FE425592C197AA /* CDVNotification.m */ = {isa = PBXFileReference; name = "CDVNotification.m"; path = "cordova-plugin-dialogs/CDVNotification.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		9CD5C2C5958148B695C7D752 /* CDVNotification.h */ = {isa = PBXFileReference; name = "CDVNotification.h"; path = "cordova-plugin-dialogs/CDVNotification.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		63CA233D6E364F77B01815C2 /* CDVNotification.bundle */ = {isa = PBXFileReference; name = "CDVNotification.bundle"; path = "CDVNotification.bundle"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.plug-in; explicitFileType = undefined; includeInIndex = 0; };
+		46E92B14E44C41B58DD5F070 /* LaunchNavigatorPlugin.m */ = {isa = PBXFileReference; name = "LaunchNavigatorPlugin.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LaunchNavigatorPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		E2E967D3EDA84791A7EFC808 /* WE_CordovaLogger.m */ = {isa = PBXFileReference; name = "WE_CordovaLogger.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/WE_CordovaLogger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		22AEBEA664D64897B09D8DE3 /* LN_LaunchNavigator.m */ = {isa = PBXFileReference; name = "LN_LaunchNavigator.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_LaunchNavigator.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8486D42E1212434EBF46C4A9 /* LN_Reachability.m */ = {isa = PBXFileReference; name = "LN_Reachability.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_Reachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		C3746403A9454D28A36284D9 /* WE_Logger.m */ = {isa = PBXFileReference; name = "WE_Logger.m"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/WE_Logger.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		591F6A05EF384F5FAB504E64 /* LaunchNavigatorPlugin.h */ = {isa = PBXFileReference; name = "LaunchNavigatorPlugin.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LaunchNavigatorPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		AD3ABCC2899F43E6926FCF61 /* WE_CordovaLogger.h */ = {isa = PBXFileReference; name = "WE_CordovaLogger.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/WE_CordovaLogger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		C6F3DD67544544F28648D551 /* LN_LaunchNavigator.h */ = {isa = PBXFileReference; name = "LN_LaunchNavigator.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_LaunchNavigator.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		5B1051F49575405398FE9FE0 /* LN_Reachability.h */ = {isa = PBXFileReference; name = "LN_Reachability.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/LN_Reachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		B32B0E101CA34374A8CAF837 /* WE_Logger.h */ = {isa = PBXFileReference; name = "WE_Logger.h"; path = "uk.co.workingedge.phonegap.plugin.launchnavigator/WE_Logger.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		E844B3801A73465DBE324E0C /* MapKit.framework */ = {isa = PBXFileReference; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		68C98CEA44D14E01B1681789 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -403,6 +429,8 @@
 				D60F1986064844AABA8ADC47 /* Security.framework in Frameworks */,
 				8AB94650DF5C40829A85BBFD /* WebKit.framework in Frameworks */,
 				ECA9FFF5BE764E26B0CD1303 /* AudioToolbox.framework in Frameworks */,
+				263F570E6B8F471C9B92477E /* MapKit.framework in Frameworks */,
+				9714250716914790B34FF8DE /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -491,6 +519,7 @@
 				507AE4C13A2747448F752FFF /* SDVReader-SinglePage.png */,
 				38C82DAA81444670B969D286 /* SDVReader-SinglePage@2x.png */,
 				DF03E94117BE4018AAB41FC2 /* GoogleService-Info.plist */,
+				63CA233D6E364F77B01815C2 /* CDVNotification.bundle */,
 			);
 			name = Resources;
 			path = FyB/Resources;
@@ -523,6 +552,8 @@
 				D09242DD8F1C4EF1948306CE /* Security.framework */,
 				1A048462351A476095931651 /* WebKit.framework */,
 				5016C677BDA04358B7EB3923 /* AudioToolbox.framework */,
+				E844B3801A73465DBE324E0C /* MapKit.framework */,
+				68C98CEA44D14E01B1681789 /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -690,6 +721,20 @@
 				5F062D6EE08742CBA70A33A0 /* CDVVibration.h */,
 				8CD45CBD9FB14A449698A04A /* CFCallNumber.m */,
 				B5EF4C71970740AD965BDAB5 /* CFCallNumber.h */,
+				ADEE9E4A0A484417B54E8536 /* ActionSheet.m */,
+				E4AEBD848E5F4D4096DC174E /* ActionSheet.h */,
+				F0D6881C07FE425592C197AA /* CDVNotification.m */,
+				9CD5C2C5958148B695C7D752 /* CDVNotification.h */,
+				46E92B14E44C41B58DD5F070 /* LaunchNavigatorPlugin.m */,
+				E2E967D3EDA84791A7EFC808 /* WE_CordovaLogger.m */,
+				22AEBEA664D64897B09D8DE3 /* LN_LaunchNavigator.m */,
+				8486D42E1212434EBF46C4A9 /* LN_Reachability.m */,
+				C3746403A9454D28A36284D9 /* WE_Logger.m */,
+				591F6A05EF384F5FAB504E64 /* LaunchNavigatorPlugin.h */,
+				AD3ABCC2899F43E6926FCF61 /* WE_CordovaLogger.h */,
+				C6F3DD67544544F28648D551 /* LN_LaunchNavigator.h */,
+				5B1051F49575405398FE9FE0 /* LN_Reachability.h */,
+				B32B0E101CA34374A8CAF837 /* WE_Logger.h */,
 			);
 			name = Plugins;
 			path = FyB/Plugins;
@@ -819,6 +864,7 @@
 				BC1253790A35479AAD9464B2 /* SDVReader-SinglePage.png in Resources */,
 				0C7A0782D305452FA70846E2 /* SDVReader-SinglePage@2x.png in Resources */,
 				D51269276A9D4D359539D046 /* GoogleService-Info.plist in Resources */,
+				76108DD734DD4821974C89B6 /* CDVNotification.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,6 +965,13 @@
 				90797BC9D73F4A41BE823013 /* CDVStatusBar.m in Sources */,
 				96C44B7299744DA7AD7D5B2B /* CDVVibration.m in Sources */,
 				2B4DDFBC5C6B4EF495CA42C0 /* CFCallNumber.m in Sources */,
+				56E947312E4141E7AE077FB5 /* ActionSheet.m in Sources */,
+				D064FFF9E7534079846872AF /* CDVNotification.m in Sources */,
+				FBACE77037E947AE9B05402C /* LaunchNavigatorPlugin.m in Sources */,
+				FED460B72207468A8DAB2A8C /* WE_CordovaLogger.m in Sources */,
+				A18C54375206492DB2922568 /* LN_LaunchNavigator.m in Sources */,
+				F278C2EC2FBF4659AAA84185 /* LN_Reachability.m in Sources */,
+				76C61EC8F84E4234BFE47D11 /* WE_Logger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
