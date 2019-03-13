@@ -17,7 +17,7 @@ import { ConsultarCitas } from '../pages/ConsultarCitas/ConsultarCitas';
 
 import { FaqPage } from '../pages/faq/faq';
 import { FaqDetailPage } from '../pages/faq-detail/faq-detail';
-import { ComoLlegarPage } from '../pages/comollegar/comollegar';
+import { ComollegarPage } from '../pages/comollegar/comollegar';
 
 import { PedirCitaPage } from '../pages/pedir-cita/pedir-cita';
 import { PedirCitaPreferenciasPage } from '../pages/pedir-cita-preferencias/pedir-cita-preferencias';
@@ -191,7 +191,7 @@ import { ChartsModule } from 'ng2-charts';
 	ChatPage,
 	FaqPage,
 	FaqDetailPage,
-	ComoLlegarPage
+	ComollegarPage
   ],
   providers: [
   	AndroidPermissions,
