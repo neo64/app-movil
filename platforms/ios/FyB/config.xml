@@ -72,13 +72,22 @@
     <feature name="CallNumber">
         <param name="ios-package" value="CFCallNumber" />
     </feature>
+    <feature name="ActionSheet">
+        <param name="ios-package" value="ActionSheet" />
+    </feature>
+    <feature name="Notification">
+        <param name="ios-package" value="CDVNotification" />
+    </feature>
+    <feature name="LaunchNavigator">
+        <param name="ios-package" value="LaunchNavigatorPlugin" />
+    </feature>
     <feature name="pdfService">
         <param name="ios-package" value="PDFGenerator" />
     </feature>
     <name>FyB</name>
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://169.254.213.56:8109" />
     <access origin="http://cfb2.ddns.net:4231" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -89,6 +98,12 @@
     <allow-intent href="geo:*" />
     <allow-navigation href="http://cfb2.ddns.net:4231" />
     <allow-navigation href="*" />
+    <allow-navigation href="http://192.168.5.57:8101" />
+    <allow-navigation href="http://192.168.5.57:8102" />
+    <allow-navigation href="http://192.168.5.57:8103" />
+    <allow-navigation href="http://192.168.5.57:8107" />
+    <allow-navigation href="http://192.168.5.57:8108" />
+    <allow-navigation href="http://169.254.213.56:8109" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
     <icon height="57" src="resources/ios/icon/icon.png" width="57" />
@@ -151,13 +166,4 @@
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlayWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
-    <feature name="ActionSheet">
-        <param name="ios-package" value="ActionSheet" />
-    </feature>
-    <feature name="Notification">
-        <param name="ios-package" value="CDVNotification" />
-    </feature>
-    <feature name="LaunchNavigator">
-        <param name="ios-package" value="LaunchNavigatorPlugin" />
-    </feature>
 </widget>

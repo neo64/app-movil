@@ -3,7 +3,7 @@
     <name>FyB</name>
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
-    <content src="index.html" />
+    <content original-src="index.html" src="http://192.168.5.57:8100" />
     <access origin="http://cfb2.ddns.net:4231" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -112,8 +112,6 @@
     <plugin name="cordova-plugin-file-transfer" spec="^1.7.1" />
     <plugin name="cordova-plugin-sms" spec="1.0.5" />
     <plugin name="cordova-plugin-android-permissions" spec="1.0.0" />
-    <engine name="android" spec="6.3.0" />
-    <engine name="ios" spec="4.5.5" />
     <allow-navigation href="http://192.168.5.57:8101" />
     <allow-navigation href="http://192.168.5.57:8102" />
     <allow-navigation href="http://192.168.5.57:8103" />
@@ -123,4 +121,10 @@
         <variable name="LOCATION_USAGE_DESCRIPTION" value="This app requires access to your location for navigation purposes" />
     </plugin>
     <allow-navigation href="http://192.168.5.57:8107" />
+    <allow-navigation href="http://192.168.5.57:8108" />
+    <allow-navigation href="http://169.254.213.56:8109" />
+    <allow-navigation href="http://192.168.5.57:8112" />
+    <allow-navigation href="http://192.168.5.57:8100" />
+    <engine name="android" spec="6.3.0" />
+    <engine name="ios" spec="4.5.5" />
 </widget>

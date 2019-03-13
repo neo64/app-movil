@@ -72,7 +72,7 @@
     <name>FyB</name>
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
-    <content original-src="index.html" src="http://192.168.5.57:8107" />
+    <content original-src="index.html" src="http://192.168.5.57:8100" />
     <access origin="http://cfb2.ddns.net:4231" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -87,6 +87,10 @@
     <allow-navigation href="http://192.168.5.57:8102" />
     <allow-navigation href="http://192.168.5.57:8103" />
     <allow-navigation href="http://192.168.5.57:8107" />
+    <allow-navigation href="http://192.168.5.57:8108" />
+    <allow-navigation href="http://169.254.213.56:8109" />
+    <allow-navigation href="http://192.168.5.57:8112" />
+    <allow-navigation href="http://192.168.5.57:8100" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />

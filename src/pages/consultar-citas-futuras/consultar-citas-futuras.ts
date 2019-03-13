@@ -6,6 +6,7 @@ import { Calendar } from '@ionic-native/calendar';
 
 import { TabHigienesPage } from '../tab-higienes/tab-higienes';
 import { PedirCitaPage } from '../pedir-cita/pedir-cita';
+import { ComollegarPage } from '../comollegar/comollegar';
 
 // Para aceptar HTML desde la API
 import { DomSanitizer } from '@angular/platform-browser';
@@ -66,7 +67,9 @@ export class ConsultarCitasFuturasPage {
 			if(page == "Higiene")
 				this.app.getRootNav().push(TabHigienesPage);				
 			else if(page == "PedirCita")
-				this.app.getRootNav().push(PedirCitaPage);			
+				this.app.getRootNav().push(PedirCitaPage);	
+			else if(page == "Comollegar")
+				this.app.getRootNav().push(ComollegarPage);		
 			else
 				this.presentToast("La página no está disponible.");			
 		}else if(tipo == "web"){

@@ -21,10 +21,12 @@ export class ComollegarPage {
   }
 
   ionViewDidLoad() {
+  	//Capturo la página anterior
+  	var PagePrevious = this.navCtrl.last();
   	//Abro la App de navegación del dispositivo
   	this.navigate();
-  	//Retorno a la home
-  	this.navCtrl.popToRoot();
+  	//Retorno a la página anterior
+  	this.navCtrl.pop(PagePrevious);
     console.log('ionViewDidLoad ComollegarPage');
   }
 
@@ -39,5 +41,7 @@ navigate(){
             error => console.log('Error launching navigator: ' + error)
     );
   }
+
+
 
 }
