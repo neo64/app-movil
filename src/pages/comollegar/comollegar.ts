@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/ngx';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/';
 
 
 /**
@@ -21,7 +21,10 @@ export class ComollegarPage {
   }
 
   ionViewDidLoad() {
+  	//Abro la App de navegación del dispositivo
   	this.navigate();
+  	//Retorno a la home
+  	this.navCtrl.popToRoot();
     console.log('ionViewDidLoad ComollegarPage');
   }
 
@@ -30,10 +33,10 @@ navigate(){
       start: "",
     };
 
-    this.launchNavigator.navigate("Caleruega 87, Madrid", options)
+    this.launchNavigator.navigate("Caleruega 67, Madrid, ES")
         .then(
-            success => alert('Launched navigator'),
-            error => alert('Error launching navigator: ' + error)
+            success => console.log('Launched navigator'),
+            error => console.log('Error launching navigator: ' + error)
     );
   }
 

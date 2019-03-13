@@ -180,13 +180,10 @@
   "uk.co.workingedge.phonegap.plugin.launchnavigator": {
     "source": {
       "type": "registry",
-      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator@5.0.4"
+      "id": "uk.co.workingedge.phonegap.plugin.launchnavigator@3"
     },
     "is_top_level": true,
-    "variables": {
-      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
-      "OKHTTP_VERSION": "3.12.0"
-    }
+    "variables": {}
   },
   "cordova-plugin-actionsheet": {
     "source": {
