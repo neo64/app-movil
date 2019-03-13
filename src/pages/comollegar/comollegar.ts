@@ -18,26 +18,23 @@ import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-na
 export class ComollegarPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
-  	this.start="";
-  	this.destination = "Caleruega 67, Madrid, ES";
   }
 
   ionViewDidLoad() {
+  	this.navigate();
     console.log('ionViewDidLoad ComollegarPage');
   }
 
+navigate(){
+    let options: LaunchNavigatorOptions = {
+      start: "",
+    };
 
-
-	navigate(){
-	    let options: LaunchNavigatorOptions = {
-	      start: this.start
-	    };
-
-	    this.launchNavigator.navigate(this.destination, options)
-	        .then(
-	            success => alert('Launched navigator'),
-	            error => alert('Error launching navigator: ' + error)
-	    );
-	  }
+    this.launchNavigator.navigate("Caleruega 87, Madrid", options)
+        .then(
+            success => alert('Launched navigator'),
+            error => alert('Error launching navigator: ' + error)
+    );
+  }
 
 }

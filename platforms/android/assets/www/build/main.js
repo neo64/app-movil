@@ -1,4 +1,4 @@
-webpackJsonp([37],{
+webpackJsonp([38],{
 
 /***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -997,7 +997,7 @@ var PresupuestosPage = /** @class */ (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RestProvider; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(315);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_common_http__ = __webpack_require__(316);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1932,8 +1932,8 @@ var DocumentosContablesPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabConsultarCitas; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(364);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(365);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(366);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_login__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_chat_chat__ = __webpack_require__(20);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -3600,12 +3600,12 @@ var LoginPage = /** @class */ (function () {
 /* unused harmony export snapshotToArray */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(690);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase__ = __webpack_require__(691);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_Firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_Firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(362);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_vibration__ = __webpack_require__(363);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_camera__ = __webpack_require__(137);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__providers_rest_rest__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_photo_viewer__ = __webpack_require__(364);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_file_opener__ = __webpack_require__(69);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_file__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ionic_native_call_number__ = __webpack_require__(97);
@@ -4383,7 +4383,7 @@ var LoginReenviarPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(77);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_login_error_pin_login_error_pin__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(317);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(318);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -5560,6 +5560,62 @@ var FaqDetailPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ComollegarPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator_ngx__ = __webpack_require__(768);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+/**
+ * Generated class for the ComollegarPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ComollegarPage = /** @class */ (function () {
+    function ComollegarPage(navCtrl, navParams, launchNavigator) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.launchNavigator = launchNavigator;
+    }
+    ComollegarPage.prototype.ionViewDidLoad = function () {
+        this.navigate();
+        console.log('ionViewDidLoad ComollegarPage');
+    };
+    ComollegarPage.prototype.navigate = function () {
+        var options = {
+            start: "",
+        };
+        this.launchNavigator.navigate("Caleruega 87, Madrid", options)
+            .then(function (success) { return alert('Launched navigator'); }, function (error) { return alert('Error launching navigator: ' + error); });
+    };
+    ComollegarPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'page-comollegar',template:/*ion-inline-start:"/Users/isaaccubas/WEBS/App-fb/appfb/src/pages/comollegar/comollegar.html"*/'<!--\n  Generated template for the ComollegarPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>comollegar</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n	HI\n\n</ion-content>'/*ion-inline-end:"/Users/isaaccubas/WEBS/App-fb/appfb/src/pages/comollegar/comollegar.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["u" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_launch_navigator_ngx__["a" /* LaunchNavigator */]])
+    ], ComollegarPage);
+    return ComollegarPage;
+}());
+
+//# sourceMappingURL=comollegar.js.map
+
+/***/ }),
+
+/***/ 241:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiProvider; });
 var EmojiProvider = /** @class */ (function () {
     function EmojiProvider() {
@@ -5590,7 +5646,7 @@ var EmojiProvider = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 273:
+/***/ 274:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -5603,160 +5659,164 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 273;
+webpackEmptyAsyncContext.id = 274;
 
 /***/ }),
 
-/***/ 314:
+/***/ 315:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
 	"../pages/acceso-resultados/acceso-resultados.module": [
-		848,
+		850,
 		0
 	],
 	"../pages/change-password/change-password.module": [
-		849,
-		36
+		851,
+		37
 	],
 	"../pages/chat/chat.module": [
-		850,
+		852,
+		36
+	],
+	"../pages/comollegar/comollegar.module": [
+		854,
 		35
 	],
 	"../pages/consejos-detail/consejos-detail.module": [
-		851,
+		853,
 		34
 	],
 	"../pages/consejos-personalizados/consejos-personalizados.module": [
-		852,
+		855,
 		33
 	],
 	"../pages/doc-firmados/doc-firmados.module": [
-		853,
+		856,
 		32
 	],
 	"../pages/documentos-contables/documentos-contables.module": [
-		854,
+		857,
 		31
 	],
 	"../pages/faq-detail/faq-detail.module": [
-		855,
+		858,
 		30
 	],
 	"../pages/faq/faq.module": [
-		856,
+		859,
 		29
 	],
 	"../pages/instrucciones/instrucciones.module": [
-		857,
+		860,
 		28
 	],
 	"../pages/login-error-pin/login-error-pin.module": [
-		858,
+		861,
 		27
 	],
 	"../pages/login-input/login-input.module": [
-		859,
+		862,
 		26
 	],
 	"../pages/login-olvido/login-olvido.module": [
-		860,
+		863,
 		25
 	],
 	"../pages/login-recibir-pin/login-recibir-pin.module": [
-		861,
+		864,
 		24
 	],
 	"../pages/login-reenviar/login-reenviar.module": [
-		862,
+		865,
 		23
 	],
 	"../pages/login-registro/login-registro.module": [
-		863,
+		866,
 		22
 	],
 	"../pages/login-tab/login-tab.module": [
-		864,
+		868,
 		21
 	],
 	"../pages/login-ya-registrado/login-ya-registrado.module": [
-		865,
+		867,
 		20
 	],
 	"../pages/login/login.module": [
-		866,
+		869,
 		19
 	],
 	"../pages/mi-perfil/mi-perfil.module": [
-		867,
+		870,
 		18
 	],
 	"../pages/mi-salud/mi-salud.module": [
-		868,
+		871,
 		17
 	],
 	"../pages/mis-citas/mis-citas.module": [
-		869,
+		872,
 		16
 	],
 	"../pages/mis-documentos/mis-documentos.module": [
-		870,
+		873,
 		15
 	],
 	"../pages/pedir-cita-elegir/pedir-cita-elegir.module": [
-		871,
+		874,
 		14
 	],
 	"../pages/pedir-cita-preferencias/pedir-cita-preferencias.module": [
-		872,
+		875,
 		13
 	],
 	"../pages/pedir-cita-reserva/pedir-cita-reserva.module": [
-		873,
+		876,
 		12
 	],
 	"../pages/pedir-cita/pedir-cita.module": [
-		874,
+		877,
 		11
 	],
 	"../pages/plan-economico-detail/plan-economico-detail.module": [
-		875,
+		878,
 		10
 	],
 	"../pages/plan-economico/plan-economico.module": [
-		876,
+		879,
 		9
 	],
 	"../pages/popover/popover.module": [
-		877,
+		880,
 		8
 	],
 	"../pages/presupuestos/presupuestos.module": [
-		878,
+		881,
 		7
 	],
 	"../pages/profile/profile.module": [
-		879,
+		882,
 		6
 	],
 	"../pages/recall-pasadas/recall-pasadas.module": [
-		880,
+		883,
 		5
 	],
 	"../pages/recall/recall.module": [
-		881,
+		885,
 		4
 	],
 	"../pages/sugerencias/sugerencias.module": [
-		882,
+		884,
 		3
 	],
 	"../pages/tab-higienes/tab-higienes.module": [
-		883,
+		886,
 		2
 	],
 	"../pages/tabConsultarCitas/tabConsultarCitas.module": [
-		884,
+		887,
 		1
 	]
 };
@@ -5771,12 +5831,12 @@ function webpackAsyncContext(req) {
 webpackAsyncContext.keys = function webpackAsyncContextKeys() {
 	return Object.keys(map);
 };
-webpackAsyncContext.id = 314;
+webpackAsyncContext.id = 315;
 module.exports = webpackAsyncContext;
 
 /***/ }),
 
-/***/ 364:
+/***/ 365:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5965,7 +6025,7 @@ var ConsultarCitas = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 365:
+/***/ 366:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6470,14 +6530,14 @@ var PedirCitaPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 544:
+/***/ 545:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponentModule; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(767);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__emoji_picker__ = __webpack_require__(769);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6510,7 +6570,7 @@ var EmojiPickerComponentModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 545:
+/***/ 546:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6706,13 +6766,13 @@ var DocFirmadosPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 546:
+/***/ 547:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(547);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(661);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(548);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(662);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -6744,9 +6804,10 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__consejos_personalizados_consejos_personalizados__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__instrucciones_instrucciones__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__faq_faq__ = __webpack_require__(238);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__providers_rest_rest__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_call_number__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__comollegar_comollegar__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__providers_rest_rest__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__angular_platform_browser__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_call_number__ = __webpack_require__(97);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -6767,6 +6828,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 // Páginas de navegación
+
 
 
 
@@ -6879,6 +6941,8 @@ var HomePage = /** @class */ (function () {
                 this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_17__instrucciones_instrucciones__["a" /* InstruccionesPage */]);
             else if (page == "PreguntasFrecuentes")
                 this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_18__faq_faq__["a" /* FaqPage */]);
+            else if (page == "Comollegar")
+                this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_19__comollegar_comollegar__["a" /* ComollegarPage */]);
             else
                 this.presentToast("La página no está disponible.");
         }
@@ -6987,7 +7051,7 @@ var HomePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'page-home',template:/*ion-inline-start:"/Users/isaaccubas/WEBS/App-fb/appfb/src/pages/home/home.html"*/'<div class="back"> \n	<ion-header no-border>\n  		<ion-navbar class="navWhite">\n    		<ion-buttons left>\n	    		<button ion-button menuToggle>\n	      			<ion-icon name="menu"></ion-icon>\n    			</button>\n    		</ion-buttons>\n    		<ion-title>Ferrus & Bratos</ion-title>\n\n    		<ion-buttons right>\n	    		<button ion-button (click)="callClinica()">\n	      			<ion-icon name="fb-telephone"></ion-icon>\n	    		</button>\n    		</ion-buttons>\n\n  		</ion-navbar>\n	</ion-header>\n\n	<h1 style="margin-bottom:0rem;color:white;font-weight:bold;">Próximas citas</h1> \n\n	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >\n  		<ion-slide class="slide" *ngFor="let card of cards; let i = index" (click)="goToCitas(i)" >\n			<div class="cardCita">\n				<div class="cardCita__left">\n					<div class="cardCita__date">\n						<div class="cardCita__day">\n							{{card.dia}}\n						</div>\n						<div class="cardCita__month">\n							{{card.mes}}\n						</div>\n					</div>\n					<div class="cardCita__hour">\n						{{card.hora}}\n					</div>\n				</div>\n				<div class="cardCita__right">\n					<div class="cardCita__tto tratamiento">\n						{{card.tratamiento}}\n					</div>\n					<div class="cardCita__dr">\n						<div class="cardCita__avatar">\n							<img [src]="domSanitizer.bypassSecurityTrustUrl(card.imagen)" style=" border-radius: 50%;"/>\n						</div>\n						<div class="cardCita__drname">\n							{{card.doctor}}\n						</div>\n					</div>\n				</div>\n			</div>\n	  	</ion-slide>\n	</ion-slides>\n	<div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">\n  		<p> Actualmente no tienes citas </p>\n	</div>\n</div>\n\n\n<div class="menu">\n	<ion-row style="display:flex;align-items:center;">\n		<h1 col-9 style="padding:0px;margin-bottom: 0;margin-top:0;font-weight: bold;">Menú</h1>\n		<p col-3 style="text-align:right;padding:0px;font-size:1.3rem;margin:0px;" (click)="next()">Ver más</p>\n	</ion-row>\n	<ion-row class="square">\n		<ion-slides #slides pager>\n			<div *ngFor="let c of cardsMenu; let i=index">\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 0">\n					<ion-row style="padding:0 4%;">\n						<div *ngFor="let c of cardsMenu| slice:0:6 ; let j=index" col-4>\n							<fb-button-icon *ngIf="j<6" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n				<ion-slide class="slide" style="padding:0" *ngIf="i == 5">\n					<ion-row style="padding:0 4%;">\n						<div *ngFor="let c of cardsMenu | slice:6; let j=index" col-4>\n							<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>\n						</div>\n					</ion-row>\n				</ion-slide>\n			</div>			\n		</ion-slides>	\n	</ion-row>\n	\n</div>\n'/*ion-inline-end:"/Users/isaaccubas/WEBS/App-fb/appfb/src/pages/home/home.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_21__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_20__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["A" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_19__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_22__ionic_native_call_number__["a" /* CallNumber */], __WEBPACK_IMPORTED_MODULE_21__angular_platform_browser__["c" /* DomSanitizer */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["A" /* ToastController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* Events */], __WEBPACK_IMPORTED_MODULE_20__providers_rest_rest__["a" /* RestProvider */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["q" /* LoadingController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["t" /* NavController */]])
     ], HomePage);
     return HomePage;
 }());
@@ -6996,7 +7060,7 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 661:
+/***/ 662:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7004,75 +7068,77 @@ var HomePage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(315);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(784);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(362);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(317);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(785);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(316);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__ = __webpack_require__(363);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__ = __webpack_require__(318);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__app_component__ = __webpack_require__(787);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_login_login__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_home_home__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__ = __webpack_require__(365);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__pages_faq_faq__ = __webpack_require__(238);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_faq_detail_faq_detail__ = __webpack_require__(239);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_pedir_cita__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(147);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_elegir_pedir_cita_elegir__ = __webpack_require__(232);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_reserva_pedir_cita_reserva__ = __webpack_require__(233);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tab_higienes_tab_higienes__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_change_password_change_password__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(365);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ionic_native_calendar__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_popover_popover__ = __webpack_require__(148);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_chat_chat__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_instrucciones_instrucciones__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_doc_firmados_doc_firmados__ = __webpack_require__(545);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_profile_profile__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__providers_emoji_emoji__ = __webpack_require__(240);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__components_emoji_picker_emoji_picker_module__ = __webpack_require__(544);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_sugerencias_sugerencias__ = __webpack_require__(152);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_mi_salud_mi_salud__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_mi_perfil_mi_perfil__ = __webpack_require__(149);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_mis_citas_mis_citas__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_mis_documentos_mis_documentos__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_login_input_login_input__ = __webpack_require__(228);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_login_registro_login_registro__ = __webpack_require__(231);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_login_tab_login_tab__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(77);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_login_error_pin_login_error_pin__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_login_reenviar_login_reenviar__ = __webpack_require__(230);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_login_olvido_login_olvido__ = __webpack_require__(229);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_recall_recall__ = __webpack_require__(78);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(234);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_consejos_detail_consejos_detail__ = __webpack_require__(235);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_documentos_contables_documentos_contables__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_presupuestos_presupuestos__ = __webpack_require__(109);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_plan_economico_plan_economico__ = __webpack_require__(236);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(237);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__ionic_native_status_bar__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__ionic_native_splash_screen__ = __webpack_require__(407);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__providers_rest_rest__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__ionic_native_fcm__ = __webpack_require__(408);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ionic_native_camera__ = __webpack_require__(137);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55_ionic_img_viewer__ = __webpack_require__(792);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56__ionic_native_file__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__ionic_native_file_opener__ = __webpack_require__(69);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__ionic_native_photo_viewer__ = __webpack_require__(363);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__components_fb_button_icon_fb_button_icon__ = __webpack_require__(799);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_fb_button_fb_button__ = __webpack_require__(800);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(801);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_expandable_expandable__ = __webpack_require__(802);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__ionic_native_call_number__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_charts__ = __webpack_require__(803);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_64_ng2_charts__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_comollegar_comollegar__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_pedir_cita__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_preferencias_pedir_cita_preferencias__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_elegir_pedir_cita_elegir__ = __webpack_require__(232);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_pedir_cita_reserva_pedir_cita_reserva__ = __webpack_require__(233);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_tabConsultarCitas_tabConsultarCitas__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_tab_higienes_tab_higienes__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_change_password_change_password__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_consultar_citas_futuras_consultar_citas_futuras__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__ionic_native_calendar__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_popover_popover__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_chat_chat__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_instrucciones_instrucciones__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_doc_firmados_doc_firmados__ = __webpack_require__(546);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_profile_profile__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__providers_emoji_emoji__ = __webpack_require__(241);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__components_emoji_picker_emoji_picker_module__ = __webpack_require__(545);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_sugerencias_sugerencias__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__pages_mi_salud_mi_salud__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_mi_perfil_mi_perfil__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_mis_citas_mis_citas__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__pages_mis_documentos_mis_documentos__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__pages_login_input_login_input__ = __webpack_require__(228);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__pages_login_registro_login_registro__ = __webpack_require__(231);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__pages_login_tab_login_tab__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__pages_login_recibir_pin_login_recibir_pin__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__pages_login_error_pin_login_error_pin__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__pages_login_ya_registrado_login_ya_registrado__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__pages_login_reenviar_login_reenviar__ = __webpack_require__(230);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__pages_login_olvido_login_olvido__ = __webpack_require__(229);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__pages_recall_recall__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__pages_recall_pasadas_recall_pasadas__ = __webpack_require__(234);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_45__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_46__pages_consejos_detail_consejos_detail__ = __webpack_require__(235);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_47__pages_documentos_contables_documentos_contables__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_48__pages_presupuestos_presupuestos__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_plan_economico__ = __webpack_require__(236);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_50__pages_plan_economico_detail_plan_economico_detail__ = __webpack_require__(237);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_51__ionic_native_status_bar__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_52__ionic_native_splash_screen__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_53__providers_rest_rest__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_54__ionic_native_fcm__ = __webpack_require__(409);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_55__ionic_native_camera__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_56_ionic_img_viewer__ = __webpack_require__(794);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_57__ionic_native_file__ = __webpack_require__(54);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__ionic_native_file_opener__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__ionic_native_photo_viewer__ = __webpack_require__(364);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__components_fb_button_icon_fb_button_icon__ = __webpack_require__(801);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__components_fb_button_fb_button__ = __webpack_require__(802);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_62__components_fb_titulo_subtitulo_fb_titulo_subtitulo__ = __webpack_require__(803);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_63__components_expandable_expandable__ = __webpack_require__(804);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_64__ionic_native_call_number__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65_ng2_charts__ = __webpack_require__(805);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_65_ng2_charts___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_65_ng2_charts__);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -7147,54 +7213,55 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_popover_popover__["a" /* PopoverPage */],
                 __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
-                __WEBPACK_IMPORTED_MODULE_44__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_45__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_login_input_login_input__["a" /* LoginInputPage */],
-                __WEBPACK_IMPORTED_MODULE_36__pages_login_tab_login_tab__["a" /* LoginTabPage */],
-                __WEBPACK_IMPORTED_MODULE_35__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
-                __WEBPACK_IMPORTED_MODULE_37__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
-                __WEBPACK_IMPORTED_MODULE_41__pages_login_olvido_login_olvido__["a" /* LoginOlvidoPage */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_chat_chat__["a" /* ChatPage */],
-                __WEBPACK_IMPORTED_MODULE_59__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
-                __WEBPACK_IMPORTED_MODULE_61__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */],
-                __WEBPACK_IMPORTED_MODULE_62__components_expandable_expandable__["a" /* ExpandableComponent */],
-                __WEBPACK_IMPORTED_MODULE_60__components_fb_button_fb_button__["a" /* FbButtonComponent */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_43__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_44__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_45__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_47__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_48__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_login_input_login_input__["a" /* LoginInputPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_login_tab_login_tab__["a" /* LoginTabPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
+                __WEBPACK_IMPORTED_MODULE_39__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
+                __WEBPACK_IMPORTED_MODULE_41__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_login_olvido_login_olvido__["a" /* LoginOlvidoPage */],
+                __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_50__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_60__components_fb_button_icon_fb_button_icon__["a" /* FbButtonIconComponent */],
+                __WEBPACK_IMPORTED_MODULE_62__components_fb_titulo_subtitulo_fb_titulo_subtitulo__["a" /* FbTituloSubtituloComponent */],
+                __WEBPACK_IMPORTED_MODULE_63__components_expandable_expandable__["a" /* ExpandableComponent */],
+                __WEBPACK_IMPORTED_MODULE_61__components_fb_button_fb_button__["a" /* FbButtonComponent */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_faq_faq__["a" /* FaqPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_faq_detail_faq_detail__["a" /* FaqDetailPage */]
+                __WEBPACK_IMPORTED_MODULE_12__pages_faq_detail_faq_detail__["a" /* FaqDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_comollegar_comollegar__["a" /* ComollegarPage */]
             ],
             imports: [
-                __WEBPACK_IMPORTED_MODULE_64_ng2_charts__["ChartsModule"],
+                __WEBPACK_IMPORTED_MODULE_65_ng2_charts__["ChartsModule"],
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["b" /* HttpClientModule */],
-                __WEBPACK_IMPORTED_MODULE_28__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
-                __WEBPACK_IMPORTED_MODULE_55_ionic_img_viewer__["a" /* IonicImageViewerModule */],
+                __WEBPACK_IMPORTED_MODULE_29__components_emoji_picker_emoji_picker_module__["a" /* EmojiPickerComponentModule */],
+                __WEBPACK_IMPORTED_MODULE_56_ionic_img_viewer__["a" /* IonicImageViewerModule */],
                 __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["o" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_7__app_component__["a" /* MyApp */], {
                     backButtonText: '',
                     backButtonIcon: 'fb-left',
@@ -7206,6 +7273,7 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/change-password/change-password.module#ChangePasswordPageModule', name: 'ChangePasswordPage', segment: 'change-password', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/chat/chat.module#ChatPageModule', name: 'ChatPage', segment: 'chat', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-detail/consejos-detail.module#ConsejosDetailPageModule', name: 'ConsejosDetailPage', segment: 'consejos-detail', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/comollegar/comollegar.module#ComollegarPageModule', name: 'ComollegarPage', segment: 'comollegar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/consejos-personalizados/consejos-personalizados.module#ConsejosPersonalizadosPageModule', name: 'ConsejosPersonalizadosPage', segment: 'consejos-personalizados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/doc-firmados/doc-firmados.module#DocFirmadosPageModule', name: 'DocFirmadosPage', segment: 'doc-firmados', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/documentos-contables/documentos-contables.module#DocumentosContablesPageModule', name: 'DocumentosContablesPage', segment: 'documentos-contables', priority: 'low', defaultHistory: [] },
@@ -7218,8 +7286,8 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/login-recibir-pin/login-recibir-pin.module#LoginRecibirPinPageModule', name: 'LoginRecibirPinPage', segment: 'login-recibir-pin', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-reenviar/login-reenviar.module#LoginReenviarPageModule', name: 'LoginReenviarPage', segment: 'login-reenviar', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-registro/login-registro.module#LoginRegistroPageModule', name: 'LoginRegistroPage', segment: 'login-registro', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login-ya-registrado/login-ya-registrado.module#LoginYaRegistradoPageModule', name: 'LoginYaRegistradoPage', segment: 'login-ya-registrado', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/login-tab/login-tab.module#LoginTabPageModule', name: 'LoginTabPage', segment: 'login-tab', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-perfil/mi-perfil.module#MiPerfilPageModule', name: 'MiPerfilPage', segment: 'mi-perfil', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/mi-salud/mi-salud.module#MiSaludPageModule', name: 'MiSaludPage', segment: 'mi-salud', priority: 'low', defaultHistory: [] },
@@ -7235,13 +7303,13 @@ var AppModule = /** @class */ (function () {
                         { loadChildren: '../pages/presupuestos/presupuestos.module#PresupuestosPageModule', name: 'PresupuestosPage', segment: 'presupuestos', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/recall-pasadas/recall-pasadas.module#RecallPasadasPageModule', name: 'RecallPasadasPage', segment: 'recall-pasadas', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/sugerencias/sugerencias.module#SugerenciasPageModule', name: 'SugerenciasPage', segment: 'sugerencias', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/recall/recall.module#RecallPageModule', name: 'RecallPage', segment: 'recall', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tab-higienes/tab-higienes.module#TabHigienesPageModule', name: 'TabHigienesPage', segment: 'tab-higienes', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/tabConsultarCitas/tabConsultarCitas.module#TabConsultarCitasModule', name: 'TabConsultarCitas', segment: 'tabConsultarCitas', priority: 'low', defaultHistory: [] }
                     ]
                 }),
-                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_30__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
+                __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["p" /* IonicPageModule */].forChild(__WEBPACK_IMPORTED_MODULE_31__pages_mi_salud_mi_salud__["a" /* MiSaludPage */]),
             ],
             exports: [
                 __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */]
@@ -7252,59 +7320,60 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_8__pages_login_login__["a" /* LoginPage */],
                 __WEBPACK_IMPORTED_MODULE_9__pages_home_home__["a" /* HomePage */],
                 __WEBPACK_IMPORTED_MODULE_10__pages_ConsultarCitas_ConsultarCitas__["a" /* ConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_13__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
-                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
-                __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
-                __WEBPACK_IMPORTED_MODULE_20__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
-                __WEBPACK_IMPORTED_MODULE_19__pages_change_password_change_password__["a" /* ChangePasswordPage */],
-                __WEBPACK_IMPORTED_MODULE_22__pages_popover_popover__["a" /* PopoverPage */],
-                __WEBPACK_IMPORTED_MODULE_17__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
-                __WEBPACK_IMPORTED_MODULE_18__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
-                __WEBPACK_IMPORTED_MODULE_25__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
-                __WEBPACK_IMPORTED_MODULE_30__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
-                __WEBPACK_IMPORTED_MODULE_24__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
-                __WEBPACK_IMPORTED_MODULE_31__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
-                __WEBPACK_IMPORTED_MODULE_32__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
-                __WEBPACK_IMPORTED_MODULE_33__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
-                __WEBPACK_IMPORTED_MODULE_29__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
-                __WEBPACK_IMPORTED_MODULE_42__pages_recall_recall__["a" /* RecallPage */],
-                __WEBPACK_IMPORTED_MODULE_43__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
-                __WEBPACK_IMPORTED_MODULE_44__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
-                __WEBPACK_IMPORTED_MODULE_45__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_46__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
-                __WEBPACK_IMPORTED_MODULE_47__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
-                __WEBPACK_IMPORTED_MODULE_48__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
-                __WEBPACK_IMPORTED_MODULE_34__pages_login_input_login_input__["a" /* LoginInputPage */],
-                __WEBPACK_IMPORTED_MODULE_35__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
-                __WEBPACK_IMPORTED_MODULE_36__pages_login_tab_login_tab__["a" /* LoginTabPage */],
-                __WEBPACK_IMPORTED_MODULE_37__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
-                __WEBPACK_IMPORTED_MODULE_38__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
-                __WEBPACK_IMPORTED_MODULE_39__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
-                __WEBPACK_IMPORTED_MODULE_40__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
-                __WEBPACK_IMPORTED_MODULE_41__pages_login_olvido_login_olvido__["a" /* LoginOlvidoPage */],
-                __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
-                __WEBPACK_IMPORTED_MODULE_26__pages_profile_profile__["a" /* ProfilePage */],
-                __WEBPACK_IMPORTED_MODULE_23__pages_chat_chat__["a" /* ChatPage */],
+                __WEBPACK_IMPORTED_MODULE_14__pages_pedir_cita_pedir_cita__["a" /* PedirCitaPage */],
+                __WEBPACK_IMPORTED_MODULE_15__pages_pedir_cita_preferencias_pedir_cita_preferencias__["a" /* PedirCitaPreferenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_16__pages_pedir_cita_elegir_pedir_cita_elegir__["a" /* PedirCitaElegirPage */],
+                __WEBPACK_IMPORTED_MODULE_17__pages_pedir_cita_reserva_pedir_cita_reserva__["a" /* PedirCitaReservaPage */],
+                __WEBPACK_IMPORTED_MODULE_21__pages_consultar_citas_futuras_consultar_citas_futuras__["a" /* ConsultarCitasFuturasPage */],
+                __WEBPACK_IMPORTED_MODULE_20__pages_change_password_change_password__["a" /* ChangePasswordPage */],
+                __WEBPACK_IMPORTED_MODULE_23__pages_popover_popover__["a" /* PopoverPage */],
+                __WEBPACK_IMPORTED_MODULE_18__pages_tabConsultarCitas_tabConsultarCitas__["a" /* TabConsultarCitas */],
+                __WEBPACK_IMPORTED_MODULE_19__pages_tab_higienes_tab_higienes__["a" /* TabHigienesPage */],
+                __WEBPACK_IMPORTED_MODULE_26__pages_doc_firmados_doc_firmados__["a" /* DocFirmadosPage */],
+                __WEBPACK_IMPORTED_MODULE_31__pages_mi_salud_mi_salud__["a" /* MiSaludPage */],
+                __WEBPACK_IMPORTED_MODULE_25__pages_instrucciones_instrucciones__["a" /* InstruccionesPage */],
+                __WEBPACK_IMPORTED_MODULE_32__pages_mi_perfil_mi_perfil__["a" /* MiPerfilPage */],
+                __WEBPACK_IMPORTED_MODULE_33__pages_mis_citas_mis_citas__["a" /* MisCitasPage */],
+                __WEBPACK_IMPORTED_MODULE_34__pages_mis_documentos_mis_documentos__["a" /* MisDocumentosPage */],
+                __WEBPACK_IMPORTED_MODULE_30__pages_sugerencias_sugerencias__["a" /* SugerenciasPage */],
+                __WEBPACK_IMPORTED_MODULE_43__pages_recall_recall__["a" /* RecallPage */],
+                __WEBPACK_IMPORTED_MODULE_44__pages_recall_pasadas_recall_pasadas__["a" /* RecallPasadasPage */],
+                __WEBPACK_IMPORTED_MODULE_45__pages_consejos_personalizados_consejos_personalizados__["a" /* ConsejosPersonalizadosPage */],
+                __WEBPACK_IMPORTED_MODULE_46__pages_consejos_detail_consejos_detail__["a" /* ConsejosDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_47__pages_documentos_contables_documentos_contables__["a" /* DocumentosContablesPage */],
+                __WEBPACK_IMPORTED_MODULE_48__pages_presupuestos_presupuestos__["a" /* PresupuestosPage */],
+                __WEBPACK_IMPORTED_MODULE_49__pages_plan_economico_plan_economico__["a" /* PlanEconomicoPage */],
+                __WEBPACK_IMPORTED_MODULE_35__pages_login_input_login_input__["a" /* LoginInputPage */],
+                __WEBPACK_IMPORTED_MODULE_36__pages_login_registro_login_registro__["a" /* LoginRegistroPage */],
+                __WEBPACK_IMPORTED_MODULE_37__pages_login_tab_login_tab__["a" /* LoginTabPage */],
+                __WEBPACK_IMPORTED_MODULE_38__pages_login_recibir_pin_login_recibir_pin__["a" /* LoginRecibirPinPage */],
+                __WEBPACK_IMPORTED_MODULE_39__pages_login_error_pin_login_error_pin__["a" /* LoginErrorPinPage */],
+                __WEBPACK_IMPORTED_MODULE_40__pages_login_ya_registrado_login_ya_registrado__["a" /* LoginYaRegistradoPage */],
+                __WEBPACK_IMPORTED_MODULE_41__pages_login_reenviar_login_reenviar__["a" /* LoginReenviarPage */],
+                __WEBPACK_IMPORTED_MODULE_42__pages_login_olvido_login_olvido__["a" /* LoginOlvidoPage */],
+                __WEBPACK_IMPORTED_MODULE_50__pages_plan_economico_detail_plan_economico_detail__["a" /* PlanEconomicoDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_27__pages_profile_profile__["a" /* ProfilePage */],
+                __WEBPACK_IMPORTED_MODULE_24__pages_chat_chat__["a" /* ChatPage */],
                 __WEBPACK_IMPORTED_MODULE_11__pages_faq_faq__["a" /* FaqPage */],
-                __WEBPACK_IMPORTED_MODULE_12__pages_faq_detail_faq_detail__["a" /* FaqDetailPage */]
+                __WEBPACK_IMPORTED_MODULE_12__pages_faq_detail_faq_detail__["a" /* FaqDetailPage */],
+                __WEBPACK_IMPORTED_MODULE_13__pages_comollegar_comollegar__["a" /* ComollegarPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_android_permissions__["a" /* AndroidPermissions */],
                 __WEBPACK_IMPORTED_MODULE_4__ionic_native_native_storage__["a" /* NativeStorage */],
-                __WEBPACK_IMPORTED_MODULE_58__ionic_native_photo_viewer__["a" /* PhotoViewer */],
-                __WEBPACK_IMPORTED_MODULE_53__ionic_native_fcm__["a" /* FCM */],
-                __WEBPACK_IMPORTED_MODULE_27__providers_emoji_emoji__["a" /* EmojiProvider */],
-                __WEBPACK_IMPORTED_MODULE_50__ionic_native_status_bar__["a" /* StatusBar */],
-                __WEBPACK_IMPORTED_MODULE_51__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_59__ionic_native_photo_viewer__["a" /* PhotoViewer */],
+                __WEBPACK_IMPORTED_MODULE_54__ionic_native_fcm__["a" /* FCM */],
+                __WEBPACK_IMPORTED_MODULE_28__providers_emoji_emoji__["a" /* EmojiProvider */],
+                __WEBPACK_IMPORTED_MODULE_51__ionic_native_status_bar__["a" /* StatusBar */],
+                __WEBPACK_IMPORTED_MODULE_52__ionic_native_splash_screen__["a" /* SplashScreen */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["ErrorHandler"], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["n" /* IonicErrorHandler */] },
-                __WEBPACK_IMPORTED_MODULE_52__providers_rest_rest__["a" /* RestProvider */],
-                __WEBPACK_IMPORTED_MODULE_21__ionic_native_calendar__["a" /* Calendar */],
+                __WEBPACK_IMPORTED_MODULE_53__providers_rest_rest__["a" /* RestProvider */],
+                __WEBPACK_IMPORTED_MODULE_22__ionic_native_calendar__["a" /* Calendar */],
                 __WEBPACK_IMPORTED_MODULE_5__ionic_native_vibration__["a" /* Vibration */],
-                __WEBPACK_IMPORTED_MODULE_56__ionic_native_file__["a" /* File */],
-                __WEBPACK_IMPORTED_MODULE_54__ionic_native_camera__["a" /* Camera */],
-                __WEBPACK_IMPORTED_MODULE_57__ionic_native_file_opener__["a" /* FileOpener */],
-                __WEBPACK_IMPORTED_MODULE_63__ionic_native_call_number__["a" /* CallNumber */]
+                __WEBPACK_IMPORTED_MODULE_57__ionic_native_file__["a" /* File */],
+                __WEBPACK_IMPORTED_MODULE_55__ionic_native_camera__["a" /* Camera */],
+                __WEBPACK_IMPORTED_MODULE_58__ionic_native_file_opener__["a" /* FileOpener */],
+                __WEBPACK_IMPORTED_MODULE_64__ionic_native_call_number__["a" /* CallNumber */]
             ]
         })
     ], AppModule);
@@ -7458,14 +7527,14 @@ var ChangePasswordPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 767:
+/***/ 769:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export EMOJI_PICKER_VALUE_ACCESSOR */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EmojiPickerComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(240);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__providers_emoji_emoji__ = __webpack_require__(241);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(44);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7933,15 +8002,15 @@ var RecallPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 785:
+/***/ 787:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(406);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(407);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(408);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__providers_rest_rest__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_login_login__ = __webpack_require__(17);
@@ -7960,9 +8029,9 @@ var RecallPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_recall_recall__ = __webpack_require__(78);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_consejos_personalizados_consejos_personalizados__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_instrucciones_instrucciones__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(786);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase__ = __webpack_require__(788);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22_firebase___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_22_firebase__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(408);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__ionic_native_fcm__ = __webpack_require__(409);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -8320,7 +8389,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 799:
+/***/ 801:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8365,7 +8434,7 @@ var FbButtonIconComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 800:
+/***/ 802:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8407,7 +8476,7 @@ var FbButtonComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 801:
+/***/ 803:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8449,7 +8518,7 @@ var FbTituloSubtituloComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 802:
+/***/ 804:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8501,258 +8570,258 @@ var ExpandableComponent = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 829:
+/***/ 831:
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./af": 420,
-	"./af.js": 420,
-	"./ar": 421,
-	"./ar-dz": 422,
-	"./ar-dz.js": 422,
-	"./ar-kw": 423,
-	"./ar-kw.js": 423,
-	"./ar-ly": 424,
-	"./ar-ly.js": 424,
-	"./ar-ma": 425,
-	"./ar-ma.js": 425,
-	"./ar-sa": 426,
-	"./ar-sa.js": 426,
-	"./ar-tn": 427,
-	"./ar-tn.js": 427,
-	"./ar.js": 421,
-	"./az": 428,
-	"./az.js": 428,
-	"./be": 429,
-	"./be.js": 429,
-	"./bg": 430,
-	"./bg.js": 430,
-	"./bm": 431,
-	"./bm.js": 431,
-	"./bn": 432,
-	"./bn.js": 432,
-	"./bo": 433,
-	"./bo.js": 433,
-	"./br": 434,
-	"./br.js": 434,
-	"./bs": 435,
-	"./bs.js": 435,
-	"./ca": 436,
-	"./ca.js": 436,
-	"./cs": 437,
-	"./cs.js": 437,
-	"./cv": 438,
-	"./cv.js": 438,
-	"./cy": 439,
-	"./cy.js": 439,
-	"./da": 440,
-	"./da.js": 440,
-	"./de": 441,
-	"./de-at": 442,
-	"./de-at.js": 442,
-	"./de-ch": 443,
-	"./de-ch.js": 443,
-	"./de.js": 441,
-	"./dv": 444,
-	"./dv.js": 444,
-	"./el": 445,
-	"./el.js": 445,
-	"./en-au": 446,
-	"./en-au.js": 446,
-	"./en-ca": 447,
-	"./en-ca.js": 447,
-	"./en-gb": 448,
-	"./en-gb.js": 448,
-	"./en-ie": 449,
-	"./en-ie.js": 449,
-	"./en-il": 450,
-	"./en-il.js": 450,
-	"./en-nz": 451,
-	"./en-nz.js": 451,
-	"./eo": 452,
-	"./eo.js": 452,
-	"./es": 453,
-	"./es-do": 454,
-	"./es-do.js": 454,
-	"./es-us": 455,
-	"./es-us.js": 455,
-	"./es.js": 453,
-	"./et": 456,
-	"./et.js": 456,
-	"./eu": 457,
-	"./eu.js": 457,
-	"./fa": 458,
-	"./fa.js": 458,
-	"./fi": 459,
-	"./fi.js": 459,
-	"./fo": 460,
-	"./fo.js": 460,
-	"./fr": 461,
-	"./fr-ca": 462,
-	"./fr-ca.js": 462,
-	"./fr-ch": 463,
-	"./fr-ch.js": 463,
-	"./fr.js": 461,
-	"./fy": 464,
-	"./fy.js": 464,
-	"./gd": 465,
-	"./gd.js": 465,
-	"./gl": 466,
-	"./gl.js": 466,
-	"./gom-latn": 467,
-	"./gom-latn.js": 467,
-	"./gu": 468,
-	"./gu.js": 468,
-	"./he": 469,
-	"./he.js": 469,
-	"./hi": 470,
-	"./hi.js": 470,
-	"./hr": 471,
-	"./hr.js": 471,
-	"./hu": 472,
-	"./hu.js": 472,
-	"./hy-am": 473,
-	"./hy-am.js": 473,
-	"./id": 474,
-	"./id.js": 474,
-	"./is": 475,
-	"./is.js": 475,
-	"./it": 476,
-	"./it.js": 476,
-	"./ja": 477,
-	"./ja.js": 477,
-	"./jv": 478,
-	"./jv.js": 478,
-	"./ka": 479,
-	"./ka.js": 479,
-	"./kk": 480,
-	"./kk.js": 480,
-	"./km": 481,
-	"./km.js": 481,
-	"./kn": 482,
-	"./kn.js": 482,
-	"./ko": 483,
-	"./ko.js": 483,
-	"./ku": 484,
-	"./ku.js": 484,
-	"./ky": 485,
-	"./ky.js": 485,
-	"./lb": 486,
-	"./lb.js": 486,
-	"./lo": 487,
-	"./lo.js": 487,
-	"./lt": 488,
-	"./lt.js": 488,
-	"./lv": 489,
-	"./lv.js": 489,
-	"./me": 490,
-	"./me.js": 490,
-	"./mi": 491,
-	"./mi.js": 491,
-	"./mk": 492,
-	"./mk.js": 492,
-	"./ml": 493,
-	"./ml.js": 493,
-	"./mn": 494,
-	"./mn.js": 494,
-	"./mr": 495,
-	"./mr.js": 495,
-	"./ms": 496,
-	"./ms-my": 497,
-	"./ms-my.js": 497,
-	"./ms.js": 496,
-	"./mt": 498,
-	"./mt.js": 498,
-	"./my": 499,
-	"./my.js": 499,
-	"./nb": 500,
-	"./nb.js": 500,
-	"./ne": 501,
-	"./ne.js": 501,
-	"./nl": 502,
-	"./nl-be": 503,
-	"./nl-be.js": 503,
-	"./nl.js": 502,
-	"./nn": 504,
-	"./nn.js": 504,
-	"./pa-in": 505,
-	"./pa-in.js": 505,
-	"./pl": 506,
-	"./pl.js": 506,
-	"./pt": 507,
-	"./pt-br": 508,
-	"./pt-br.js": 508,
-	"./pt.js": 507,
-	"./ro": 509,
-	"./ro.js": 509,
-	"./ru": 510,
-	"./ru.js": 510,
-	"./sd": 511,
-	"./sd.js": 511,
-	"./se": 512,
-	"./se.js": 512,
-	"./si": 513,
-	"./si.js": 513,
-	"./sk": 514,
-	"./sk.js": 514,
-	"./sl": 515,
-	"./sl.js": 515,
-	"./sq": 516,
-	"./sq.js": 516,
-	"./sr": 517,
-	"./sr-cyrl": 518,
-	"./sr-cyrl.js": 518,
-	"./sr.js": 517,
-	"./ss": 519,
-	"./ss.js": 519,
-	"./sv": 520,
-	"./sv.js": 520,
-	"./sw": 521,
-	"./sw.js": 521,
-	"./ta": 522,
-	"./ta.js": 522,
-	"./te": 523,
-	"./te.js": 523,
-	"./tet": 524,
-	"./tet.js": 524,
-	"./tg": 525,
-	"./tg.js": 525,
-	"./th": 526,
-	"./th.js": 526,
-	"./tl-ph": 527,
-	"./tl-ph.js": 527,
-	"./tlh": 528,
-	"./tlh.js": 528,
-	"./tr": 529,
-	"./tr.js": 529,
-	"./tzl": 530,
-	"./tzl.js": 530,
-	"./tzm": 531,
-	"./tzm-latn": 532,
-	"./tzm-latn.js": 532,
-	"./tzm.js": 531,
-	"./ug-cn": 533,
-	"./ug-cn.js": 533,
-	"./uk": 534,
-	"./uk.js": 534,
-	"./ur": 535,
-	"./ur.js": 535,
-	"./uz": 536,
-	"./uz-latn": 537,
-	"./uz-latn.js": 537,
-	"./uz.js": 536,
-	"./vi": 538,
-	"./vi.js": 538,
-	"./x-pseudo": 539,
-	"./x-pseudo.js": 539,
-	"./yo": 540,
-	"./yo.js": 540,
-	"./zh-cn": 541,
-	"./zh-cn.js": 541,
-	"./zh-hk": 542,
-	"./zh-hk.js": 542,
-	"./zh-tw": 543,
-	"./zh-tw.js": 543
+	"./af": 421,
+	"./af.js": 421,
+	"./ar": 422,
+	"./ar-dz": 423,
+	"./ar-dz.js": 423,
+	"./ar-kw": 424,
+	"./ar-kw.js": 424,
+	"./ar-ly": 425,
+	"./ar-ly.js": 425,
+	"./ar-ma": 426,
+	"./ar-ma.js": 426,
+	"./ar-sa": 427,
+	"./ar-sa.js": 427,
+	"./ar-tn": 428,
+	"./ar-tn.js": 428,
+	"./ar.js": 422,
+	"./az": 429,
+	"./az.js": 429,
+	"./be": 430,
+	"./be.js": 430,
+	"./bg": 431,
+	"./bg.js": 431,
+	"./bm": 432,
+	"./bm.js": 432,
+	"./bn": 433,
+	"./bn.js": 433,
+	"./bo": 434,
+	"./bo.js": 434,
+	"./br": 435,
+	"./br.js": 435,
+	"./bs": 436,
+	"./bs.js": 436,
+	"./ca": 437,
+	"./ca.js": 437,
+	"./cs": 438,
+	"./cs.js": 438,
+	"./cv": 439,
+	"./cv.js": 439,
+	"./cy": 440,
+	"./cy.js": 440,
+	"./da": 441,
+	"./da.js": 441,
+	"./de": 442,
+	"./de-at": 443,
+	"./de-at.js": 443,
+	"./de-ch": 444,
+	"./de-ch.js": 444,
+	"./de.js": 442,
+	"./dv": 445,
+	"./dv.js": 445,
+	"./el": 446,
+	"./el.js": 446,
+	"./en-au": 447,
+	"./en-au.js": 447,
+	"./en-ca": 448,
+	"./en-ca.js": 448,
+	"./en-gb": 449,
+	"./en-gb.js": 449,
+	"./en-ie": 450,
+	"./en-ie.js": 450,
+	"./en-il": 451,
+	"./en-il.js": 451,
+	"./en-nz": 452,
+	"./en-nz.js": 452,
+	"./eo": 453,
+	"./eo.js": 453,
+	"./es": 454,
+	"./es-do": 455,
+	"./es-do.js": 455,
+	"./es-us": 456,
+	"./es-us.js": 456,
+	"./es.js": 454,
+	"./et": 457,
+	"./et.js": 457,
+	"./eu": 458,
+	"./eu.js": 458,
+	"./fa": 459,
+	"./fa.js": 459,
+	"./fi": 460,
+	"./fi.js": 460,
+	"./fo": 461,
+	"./fo.js": 461,
+	"./fr": 462,
+	"./fr-ca": 463,
+	"./fr-ca.js": 463,
+	"./fr-ch": 464,
+	"./fr-ch.js": 464,
+	"./fr.js": 462,
+	"./fy": 465,
+	"./fy.js": 465,
+	"./gd": 466,
+	"./gd.js": 466,
+	"./gl": 467,
+	"./gl.js": 467,
+	"./gom-latn": 468,
+	"./gom-latn.js": 468,
+	"./gu": 469,
+	"./gu.js": 469,
+	"./he": 470,
+	"./he.js": 470,
+	"./hi": 471,
+	"./hi.js": 471,
+	"./hr": 472,
+	"./hr.js": 472,
+	"./hu": 473,
+	"./hu.js": 473,
+	"./hy-am": 474,
+	"./hy-am.js": 474,
+	"./id": 475,
+	"./id.js": 475,
+	"./is": 476,
+	"./is.js": 476,
+	"./it": 477,
+	"./it.js": 477,
+	"./ja": 478,
+	"./ja.js": 478,
+	"./jv": 479,
+	"./jv.js": 479,
+	"./ka": 480,
+	"./ka.js": 480,
+	"./kk": 481,
+	"./kk.js": 481,
+	"./km": 482,
+	"./km.js": 482,
+	"./kn": 483,
+	"./kn.js": 483,
+	"./ko": 484,
+	"./ko.js": 484,
+	"./ku": 485,
+	"./ku.js": 485,
+	"./ky": 486,
+	"./ky.js": 486,
+	"./lb": 487,
+	"./lb.js": 487,
+	"./lo": 488,
+	"./lo.js": 488,
+	"./lt": 489,
+	"./lt.js": 489,
+	"./lv": 490,
+	"./lv.js": 490,
+	"./me": 491,
+	"./me.js": 491,
+	"./mi": 492,
+	"./mi.js": 492,
+	"./mk": 493,
+	"./mk.js": 493,
+	"./ml": 494,
+	"./ml.js": 494,
+	"./mn": 495,
+	"./mn.js": 495,
+	"./mr": 496,
+	"./mr.js": 496,
+	"./ms": 497,
+	"./ms-my": 498,
+	"./ms-my.js": 498,
+	"./ms.js": 497,
+	"./mt": 499,
+	"./mt.js": 499,
+	"./my": 500,
+	"./my.js": 500,
+	"./nb": 501,
+	"./nb.js": 501,
+	"./ne": 502,
+	"./ne.js": 502,
+	"./nl": 503,
+	"./nl-be": 504,
+	"./nl-be.js": 504,
+	"./nl.js": 503,
+	"./nn": 505,
+	"./nn.js": 505,
+	"./pa-in": 506,
+	"./pa-in.js": 506,
+	"./pl": 507,
+	"./pl.js": 507,
+	"./pt": 508,
+	"./pt-br": 509,
+	"./pt-br.js": 509,
+	"./pt.js": 508,
+	"./ro": 510,
+	"./ro.js": 510,
+	"./ru": 511,
+	"./ru.js": 511,
+	"./sd": 512,
+	"./sd.js": 512,
+	"./se": 513,
+	"./se.js": 513,
+	"./si": 514,
+	"./si.js": 514,
+	"./sk": 515,
+	"./sk.js": 515,
+	"./sl": 516,
+	"./sl.js": 516,
+	"./sq": 517,
+	"./sq.js": 517,
+	"./sr": 518,
+	"./sr-cyrl": 519,
+	"./sr-cyrl.js": 519,
+	"./sr.js": 518,
+	"./ss": 520,
+	"./ss.js": 520,
+	"./sv": 521,
+	"./sv.js": 521,
+	"./sw": 522,
+	"./sw.js": 522,
+	"./ta": 523,
+	"./ta.js": 523,
+	"./te": 524,
+	"./te.js": 524,
+	"./tet": 525,
+	"./tet.js": 525,
+	"./tg": 526,
+	"./tg.js": 526,
+	"./th": 527,
+	"./th.js": 527,
+	"./tl-ph": 528,
+	"./tl-ph.js": 528,
+	"./tlh": 529,
+	"./tlh.js": 529,
+	"./tr": 530,
+	"./tr.js": 530,
+	"./tzl": 531,
+	"./tzl.js": 531,
+	"./tzm": 532,
+	"./tzm-latn": 533,
+	"./tzm-latn.js": 533,
+	"./tzm.js": 532,
+	"./ug-cn": 534,
+	"./ug-cn.js": 534,
+	"./uk": 535,
+	"./uk.js": 535,
+	"./ur": 536,
+	"./ur.js": 536,
+	"./uz": 537,
+	"./uz-latn": 538,
+	"./uz-latn.js": 538,
+	"./uz.js": 537,
+	"./vi": 539,
+	"./vi.js": 539,
+	"./x-pseudo": 540,
+	"./x-pseudo.js": 540,
+	"./yo": 541,
+	"./yo.js": 541,
+	"./zh-cn": 542,
+	"./zh-cn.js": 542,
+	"./zh-hk": 543,
+	"./zh-hk.js": 543,
+	"./zh-tw": 544,
+	"./zh-tw.js": 544
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -8768,9 +8837,9 @@ webpackContext.keys = function webpackContextKeys() {
 };
 webpackContext.resolve = webpackContextResolve;
 module.exports = webpackContext;
-webpackContext.id = 829;
+webpackContext.id = 831;
 
 /***/ })
 
-},[546]);
+},[547]);
 //# sourceMappingURL=main.js.map

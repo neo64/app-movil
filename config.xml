@@ -120,4 +120,6 @@
         <variable name="OKHTTP_VERSION" value="3.12.0" />
         <variable name="LOCATION_USAGE_DESCRIPTION" value="This app requires access to your location for navigation purposes" />
     </plugin>
+    <allow-navigation href="http://192.168.5.57:8102" />
+    <allow-navigation href="http://192.168.5.57:8103" />
 </widget>
