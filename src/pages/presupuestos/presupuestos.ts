@@ -42,9 +42,11 @@ export class PresupuestosPage {
 	* 	@return None 
 	*/ 
 	createAndOpenPDF(html,numDoc){
+		html = fromUTF8String(html);
 		document.addEventListener('deviceready', () => {
 			cordova.plugins.pdf.htmlToPDF({
 					data: html,
+					//data: "<html><h1>Atención un €</h1></html>",
 					documentSize: "A4",
 					landscape: "portrait",
 					type: "base64"

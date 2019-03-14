@@ -25,6 +25,7 @@ export class MisDocumentosPage {
 	loading: 	Loading; 		// Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
 	cards 		= new Array();	// Array donde se almacenan los objetos del tipo card descargados del servidor.
 	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
+	cardsPresup = new Array(); // Array donde se guardan los presupuestos en html para las cards
 
 	constructor(private file: File, private fileOpener: FileOpener, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
@@ -169,17 +170,54 @@ export class MisDocumentosPage {
 					this.cardsMenu.push(data['data']['menu'][j]);
 				}				
 				this.loading.dismiss();
+				
+
+				this.restProvider.getPresupuestos().then(data => {
+					if(typeof data != "undefined" &&  data['status'] == 1){				
+						
+						
+						for (var key in data['data']) {
+							this.cardsPresup.push(data['data'][key]);
+				
+						}
+
+						//Uno los 2 cards
+						for (var i in this.cards){
+							for(var j in this.cardsPresup){
+								if (this.cards[i].NumPre == this.cardsPresup[j].NumPre){
+									this.cards[i].html = this.cardsPresup[j].html
+								}
+							}
+						}
+						
+						this.loading.dismiss();
+						
+					}else if(data.status == 401){
+						this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
+						this.navCtrl.setRoot(LoginPage);				
+					}else{
+						this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");						
+					}			
+				}).catch(e => {
+					this.loading.dismiss();
+					console.log(e);
+				});	
+
+
+				console.log(this);
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
 			}else{
 				this.showError("¡Atención!","<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");						
-			}			
+			}		
 		}).catch(e => {
 			this.loading.dismiss();
 			console.log(e);
-		});		
+		});	
 	}
+
+
 	
 	/**
 	* 	Función que muestra un Toast con la información
