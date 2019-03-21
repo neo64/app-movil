@@ -157,7 +157,10 @@ export class MyApp {
             //Notifications
             if (this.platform.is('cordova')) {
                 this.fcm.subscribeToTopic('all');
+                //Pido un token a firebase
                 this.fcm.getToken().then(token => {
+                    //alert(token);
+                    //Compruebo si el token esta en la bbdd y si no lo guarda
                     this.enviarTokenNotifications(token);
                 })
                 this.fcm.onNotification().subscribe(data => {

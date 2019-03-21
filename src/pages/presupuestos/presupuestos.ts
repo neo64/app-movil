@@ -42,7 +42,9 @@ export class PresupuestosPage {
 	* 	@return None 
 	*/ 
 	createAndOpenPDF(html,numDoc){
-		html = fromUTF8String(html);
+		var iconv = require('iconv-lite');
+		//html = iconv.encode(html,'utf8');
+		html = iconv.decode(html,'utf8');
 		document.addEventListener('deviceready', () => {
 			cordova.plugins.pdf.htmlToPDF({
 					data: html,

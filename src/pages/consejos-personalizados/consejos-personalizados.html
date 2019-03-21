@@ -25,7 +25,7 @@
     <br />	 
 
 	<div *ngFor="let card of cards">
-		<div class="fb-card -v1">
+		<div class="fb-card -v1" (click)="openPage(card)">
                 <div class="left">
                     <div class="avatar">
                         <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" />
@@ -40,7 +40,7 @@
                     </div>
                 </div>
                 <div class="right">
-                    <a class="fb-btn -rounded -bg-pink" (click)="openPage(card)">
+                    <a class="fb-btn -rounded -bg-pink">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
                             <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
                         </svg> 

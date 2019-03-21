@@ -765,7 +765,9 @@ ion-icon {
 
 @media screen and (min-width: 321px) {
   [padding] .scroll-content {
-    padding: 3rem!important;
+    padding-top: 3rem!important;
+    padding-left: 3rem!important;
+    padding-right: 3rem!important;
   }
 }
 
@@ -866,4 +868,8 @@ ion-menu {
   & ion-icon {
     color: map-get($colors, white)!important;
   }
+}
+
+.scroll-content{
+  padding-bottom:0!important;
 }

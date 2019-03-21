@@ -91,6 +91,8 @@
     <allow-navigation href="http://169.254.213.56:8109" />
     <allow-navigation href="http://192.168.5.57:8112" />
     <allow-navigation href="http://192.168.5.57:8100" />
+    <allow-navigation href="http://192.168.5.57:8104" />
+    <allow-navigation href="http://192.168.5.57:8105" />
     <allow-intent href="market:*" />
     <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
     <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
@@ -123,4 +125,6 @@
     <preference name="orientation" value="portrait" />
     <preference name="StatusBarOverlayWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
+    <preference name="KeyboardResize" value="false" />
+    <preference name="KeyboardResizeMode" value="ionic" />
 </widget>
