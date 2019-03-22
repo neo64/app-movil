@@ -79,6 +79,8 @@ import {
 import {
     CallNumber
 } from '@ionic-native/call-number';
+
+
 @Component({
     selector: 'page-home',
     templateUrl: 'home.html'
@@ -96,11 +98,51 @@ export class HomePage {
         tipo: 'page',
         gradiente: ''
     };
-    constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+    constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController,) {
         //this.showLoading();
         this.getCardsHome();
         this.events.publish("user:logged");
+        //this.badge.set(10);
+        //this.setBadgets(5);
+
     }
+
+    /*async getBadgets(){
+        try {
+            let badgeAmount = await this.badge.get();
+            console.log(badgeAmount);
+        }
+        catch(e){
+            console.log(e);
+        }
+    }
+
+    async setBadgets(badgeNumber: number){
+        try {
+            let badges = await this.badge.set(badgeNumber);
+            console.log(badges);
+        }
+        catch(e){
+            console.log(e);
+        }
+    }
+
+    async requestPermission() {
+        try {
+            let hasPermission = await this.badge.hasPermission();
+            console.log(hasPermission);
+            if(!hasPermission){
+                let permission = await this.badge.registerPermission();
+                console.log(permission);    
+            }
+
+        }
+        catch(e){
+            console.log(e);
+        }
+    }*/
+
+
     /**
      * 	Función que abre la aplicación de llamadas para
      *	efectuar una llamada a la clínica

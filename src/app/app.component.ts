@@ -80,6 +80,9 @@ import * as firebase from 'firebase';
 import {
     FCM
 } from '@ionic-native/fcm';
+
+import { Badge } from '@ionic-native/badge/ngx';
+
 const config = {
     apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
     authDomain: '785325583727-viu7ei21dmm7svdg0umpbnp851hlt4lr.apps.googleusercontent.com',
@@ -104,7 +107,7 @@ export class MyApp {
     bAyuda   = {name : 'Ayuda', svg: '', openPage : 'Chat', class : 'active', tipo : false, gradiente: ''};
 
 
-    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
+    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [{
@@ -154,6 +157,13 @@ export class MyApp {
             this.events.subscribe("user:logged", () => {
                 this.getDataMenu();
             });
+            //Badges
+            this.badge.hasPermission().then(function(result) {
+                this.badge.set(5);
+            }, function(error) {
+                alert(error);
+            });
+
             //Notifications
             if (this.platform.is('cordova')) {
                 this.fcm.subscribeToTopic('all');
