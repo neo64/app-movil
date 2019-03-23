@@ -67,7 +67,7 @@ import { RestProvider } from '../providers/rest/rest';
 
 import { FCM } from '@ionic-native/fcm';
 import { Camera } from '@ionic-native/camera';
-import { Badge } from '@ionic-native/badge/ngx';
+import { Badge } from '@ionic-native/badge';
 
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 

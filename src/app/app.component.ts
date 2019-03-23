@@ -81,7 +81,7 @@ import {
     FCM
 } from '@ionic-native/fcm';
 
-import { Badge } from '@ionic-native/badge/ngx';
+import { Badge } from '@ionic-native/badge';
 
 const config = {
     apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
@@ -158,11 +158,15 @@ export class MyApp {
                 this.getDataMenu();
             });
             //Badges
-            this.badge.hasPermission().then(function(result) {
-                this.badge.set(5);
-            }, function(error) {
-                alert(error);
-            });
+            //this.badge.hasPermission().then(function(result) {
+                let badge = this.badge.set(5);
+                console.log(badge);
+            //}, function(error) {
+            //    alert(error);
+            //});
+
+
+       
 
             //Notifications
             if (this.platform.is('cordova')) {
@@ -360,4 +364,5 @@ export class MyApp {
         });
         alert.present();
     }
+
 }

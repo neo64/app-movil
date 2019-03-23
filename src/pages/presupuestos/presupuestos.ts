@@ -6,7 +6,9 @@ import { FileOpener } from '@ionic-native/file-opener';
 import { File } from '@ionic-native/file';
 import { ChatPage } from '../../pages/chat/chat';
 
+
 declare var cordova:any;
+declare var require: any
 
 /**
  * Generated class for the DocumentosContablesPage page.
@@ -43,7 +45,7 @@ export class PresupuestosPage {
 	*/ 
 	createAndOpenPDF(html,numDoc){
 		var iconv = require('iconv-lite');
-		//html = iconv.encode(html,'utf8');
+		html = iconv.encode(html,'utf8');
 		html = iconv.decode(html,'utf8');
 		document.addEventListener('deviceready', () => {
 			cordova.plugins.pdf.htmlToPDF({
