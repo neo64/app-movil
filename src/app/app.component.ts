@@ -81,7 +81,7 @@ import {
     FCM
 } from '@ionic-native/fcm';
 
-import { Badge } from '@ionic-native/badge';
+//import { Badge } from '@ionic-native/badge';
 
 const config = {
     apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
@@ -106,8 +106,9 @@ export class MyApp {
     loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
     bAyuda   = {name : 'Ayuda', svg: '', openPage : 'Chat', class : 'active', tipo : false, gradiente: ''};
 
+    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
 
-    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
+    //constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [{
@@ -159,8 +160,8 @@ export class MyApp {
             });
             //Badges
             //this.badge.hasPermission().then(function(result) {
-                let badge = this.badge.set(5);
-                console.log(badge);
+                //let badge = this.badge.set(5);
+                //console.log(badge);
             //}, function(error) {
             //    alert(error);
             //});

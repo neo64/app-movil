@@ -67,7 +67,7 @@ import { RestProvider } from '../providers/rest/rest';
 
 import { FCM } from '@ionic-native/fcm';
 import { Camera } from '@ionic-native/camera';
-import { Badge } from '@ionic-native/badge';
+
 
 import { IonicImageViewerModule } from 'ionic-img-viewer';
 
@@ -85,7 +85,8 @@ import { CallNumber } from '@ionic-native/call-number';
 
 import { ChartsModule } from 'ng2-charts';
 
-import { LaunchNavigator } from '@ionic-native/launch-navigator/';
+//import { Badge } from '@ionic-native/badge';
+//import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 
 @NgModule({
   declarations: [
@@ -202,7 +203,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 	PhotoViewer,
 	FCM,
 	EmojiProvider,
-	Badge,
+	//Badge,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -213,7 +214,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 	Camera,
     FileOpener,
     CallNumber,
-    LaunchNavigator
+    //LaunchNavigator
   ]
 })
 export class AppModule {}

@@ -7,73 +7,74 @@
     "files": {}
   },
   "installed_plugins": {
+    "com-sarriaroman-photoviewer": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
     "cordova-android-support-gradle-release": {
       "ANDROID_SUPPORT_VERSION": "27.+",
-      "PACKAGE_NAME": "com.ferrusbratos.app"
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-pdf-generator": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-calendar": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-document-viewer": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-fcm": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-file-opener2": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-ionic-keyboard": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-nativestorage": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "com-sarriaroman-photoviewer": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-ios-camera-permissions": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "mx.ferreyra.callnumber": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
-    },
-    "cordova-plugin-sms": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-plugin-android-permissions": {
-      "PACKAGE_NAME": "com.ferrusbratos.app"
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
-      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
-      "OKHTTP_VERSION": "3.12.0",
+    "cordova-plugin-calendar": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-fcm": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file-opener2": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ionic-webview": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ios-camera-permissions": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "me.tonny.cordova.plugins.multidex": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "mx.ferreyra.callnumber": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },

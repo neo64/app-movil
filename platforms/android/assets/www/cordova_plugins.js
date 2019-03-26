@@ -1,6 +1,14 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
+    "id": "com-sarriaroman-photoviewer.PhotoViewer",
+    "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
+    "pluginId": "com-sarriaroman-photoviewer",
+    "clobbers": [
+      "PhotoViewer"
+    ]
+  },
+  {
     "id": "cordova-pdf-generator.pdf",
     "file": "plugins/cordova-pdf-generator/www/pdf.js",
     "pluginId": "cordova-pdf-generator",
@@ -8,6 +16,22 @@ module.exports = [
       "cordova.plugins.pdf",
       "pugin.pdf",
       "pdf"
+    ]
+  },
+  {
+    "id": "cordova-plugin-actionsheet.ActionSheet",
+    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+    "pluginId": "cordova-plugin-actionsheet",
+    "clobbers": [
+      "window.plugins.actionsheet"
+    ]
+  },
+  {
+    "id": "cordova-plugin-android-permissions.Permissions",
+    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+    "pluginId": "cordova-plugin-android-permissions",
+    "clobbers": [
+      "cordova.plugins.permissions"
     ]
   },
   {
@@ -56,6 +80,22 @@ module.exports = [
     "pluginId": "cordova-plugin-device",
     "clobbers": [
       "device"
+    ]
+  },
+  {
+    "id": "cordova-plugin-dialogs.notification",
+    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
+    ]
+  },
+  {
+    "id": "cordova-plugin-dialogs.notification_android",
+    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
     ]
   },
   {
@@ -281,6 +321,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-ionic-webview.IonicWebView",
+    "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
+    "pluginId": "cordova-plugin-ionic-webview",
+    "clobbers": [
+      "Ionic.WebView"
+    ]
+  },
+  {
     "id": "cordova-plugin-nativestorage.mainHandle",
     "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
     "pluginId": "cordova-plugin-nativestorage",
@@ -299,6 +347,14 @@ module.exports = [
     "pluginId": "cordova-plugin-nativestorage"
   },
   {
+    "id": "cordova-plugin-sms.SMS",
+    "file": "plugins/cordova-plugin-sms/www/SMS.js",
+    "pluginId": "cordova-plugin-sms",
+    "clobbers": [
+      "window.SMS"
+    ]
+  },
+  {
     "id": "cordova-plugin-splashscreen.SplashScreen",
     "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "pluginId": "cordova-plugin-splashscreen",
@@ -315,113 +371,42 @@ module.exports = [
     ]
   },
   {
-    "id": "com-sarriaroman-photoviewer.PhotoViewer",
-    "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
-    "pluginId": "com-sarriaroman-photoviewer",
-    "clobbers": [
-      "PhotoViewer"
-    ]
-  },
-  {
     "id": "mx.ferreyra.callnumber.CallNumber",
     "file": "plugins/mx.ferreyra.callnumber/www/CallNumber.js",
     "pluginId": "mx.ferreyra.callnumber",
     "clobbers": [
       "call"
     ]
-  },
-  {
-    "id": "cordova-plugin-sms.SMS",
-    "file": "plugins/cordova-plugin-sms/www/SMS.js",
-    "pluginId": "cordova-plugin-sms",
-    "clobbers": [
-      "window.SMS"
-    ]
-  },
-  {
-    "id": "cordova-plugin-android-permissions.Permissions",
-    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-    "pluginId": "cordova-plugin-android-permissions",
-    "clobbers": [
-      "cordova.plugins.permissions"
-    ]
-  },
-  {
-    "id": "cordova-plugin-actionsheet.ActionSheet",
-    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
-    "pluginId": "cordova-plugin-actionsheet",
-    "clobbers": [
-      "window.plugins.actionsheet"
-    ]
-  },
-  {
-    "id": "cordova-plugin-dialogs.notification",
-    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
-  },
-  {
-    "id": "cordova-plugin-dialogs.notification_android",
-    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
-  },
-  {
-    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
-    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
-    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-    "clobbers": [
-      "launchnavigator"
-    ]
-  },
-  {
-    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
-    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
-    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-    "clobbers": [
-      "localforage"
-    ]
-  },
-  {
-    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
-    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/android/launchnavigator.js",
-    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
-    "merges": [
-      "launchnavigator"
-    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
+  "com-sarriaroman-photoviewer": "1.1.18",
   "cordova-android-support-gradle-release": "1.4.4",
   "cordova-pdf-generator": "2.0.4",
+  "cordova-plugin-actionsheet": "2.3.3",
+  "cordova-plugin-android-permissions": "1.0.0",
   "cordova-plugin-calendar": "5.1.2",
   "cordova-plugin-camera": "4.0.3",
   "cordova-plugin-device": "2.0.2",
+  "cordova-plugin-dialogs": "2.0.1",
   "cordova-plugin-document-viewer": "0.9.10",
   "cordova-plugin-fcm": "2.1.2",
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-file-opener2": "2.0.19",
   "cordova-plugin-file-transfer": "1.7.1",
   "cordova-plugin-ionic-keyboard": "2.1.2",
+  "cordova-plugin-ionic-webview": "2.0.2",
+  "cordova-plugin-ios-camera-permissions": "1.2.0",
   "cordova-plugin-nativestorage": "2.3.2",
+  "cordova-plugin-sms": "1.0.5",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.3",
-  "com-sarriaroman-photoviewer": "1.1.18",
-  "cordova-plugin-ios-camera-permissions": "1.2.0",
-  "mx.ferreyra.callnumber": "0.0.2",
-  "cordova-plugin-sms": "1.0.5",
-  "cordova-plugin-android-permissions": "1.0.0",
-  "cordova-plugin-actionsheet": "2.3.3",
-  "cordova-plugin-dialogs": "2.0.1",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+  "me.tonny.cordova.plugins.multidex": "0.1.0",
+  "mx.ferreyra.callnumber": "0.0.2"
 };
 // BOTTOM OF METADATA
 });
