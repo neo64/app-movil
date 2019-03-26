@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-//import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/';
+import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-navigator/';
 
 
 /**
@@ -16,8 +16,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'comollegar.html',
 })
 export class ComollegarPage {
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  //constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
   }
 
   ionViewDidLoad() {
@@ -31,7 +31,7 @@ export class ComollegarPage {
   }
 
 navigate(){
-    /*let options: LaunchNavigatorOptions = {
+    let options: LaunchNavigatorOptions = {
       start: "",
     };
 
@@ -39,7 +39,7 @@ navigate(){
         .then(
             success => console.log('Launched navigator'),
             error => console.log('Error launching navigator: ' + error)
-    );*/
+    );
   }
 
 

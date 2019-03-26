@@ -86,7 +86,7 @@ import { CallNumber } from '@ionic-native/call-number';
 import { ChartsModule } from 'ng2-charts';
 
 //import { Badge } from '@ionic-native/badge';
-//import { LaunchNavigator } from '@ionic-native/launch-navigator/';
+import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 
 @NgModule({
   declarations: [
@@ -214,7 +214,7 @@ import { ChartsModule } from 'ng2-charts';
 	Camera,
     FileOpener,
     CallNumber,
-    //LaunchNavigator
+    LaunchNavigator
   ]
 })
 export class AppModule {}
