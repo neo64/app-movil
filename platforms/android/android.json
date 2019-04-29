@@ -229,6 +229,10 @@
             {
               "xml": "<feature name=\"IonicWebView\"><param name=\"android-package\" value=\"com.ionicframework.cordova.webview.IonicWebView\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"Badge\"><param name=\"android-package\" value=\"de.appplant.cordova.plugin.badge.Badge\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -315,6 +319,9 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
       "OKHTTP_VERSION": "3.12.0",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-badge": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
@@ -721,6 +728,14 @@
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-badge.Badge",
+      "file": "plugins/cordova-plugin-badge/www/badge.js",
+      "pluginId": "cordova-plugin-badge",
+      "clobbers": [
+        "cordova.plugins.notification.badge"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -749,6 +764,7 @@
     "cordova-plugin-whitelist": "1.3.3",
     "me.tonny.cordova.plugins.multidex": "0.1.0",
     "mx.ferreyra.callnumber": "0.0.2",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+    "cordova-plugin-badge": "0.8.8"
   }
 }

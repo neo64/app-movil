@@ -81,7 +81,7 @@ import {
     FCM
 } from '@ionic-native/fcm';
 
-//import { Badge } from '@ionic-native/badge';
+import { Badge } from '@ionic-native/badge';
 
 const config = {
     apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
@@ -106,9 +106,8 @@ export class MyApp {
     loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
     bAyuda   = {name : 'Ayuda', svg: '', openPage : 'Chat', class : 'active', tipo : false, gradiente: ''};
 
-    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController) {
 
-    //constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
+    constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
         this.initializeApp();
         // used for an example of ngFor and navigation
         this.pages = [{
@@ -158,16 +157,15 @@ export class MyApp {
             this.events.subscribe("user:logged", () => {
                 this.getDataMenu();
             });
-            //Badges
-            //this.badge.hasPermission().then(function(result) {
-                //let badge = this.badge.set(5);
-                //console.log(badge);
-            //}, function(error) {
-            //    alert(error);
-            //});
-
-
        
+                //Badges
+                //this.badge.hasPermission().then(function(result) {
+                    
+                 //   console.log(badge2);
+                 //   alert(badge2);
+                //}, function(error) {
+                  //  alert(error);
+                //});
 
             //Notifications
             if (this.platform.is('cordova')) {
@@ -178,23 +176,52 @@ export class MyApp {
                     //Compruebo si el token esta en la bbdd y si no lo guarda
                     this.enviarTokenNotifications(token);
                 })
+                //Pido permiso para setear los badges de las notificaciones
+                this.requestPermission();
+
                 this.fcm.onNotification().subscribe(data => {
+                    //Entra cuando el usuario hace tap en la notificacion
                     if (data.wasTapped) {
                         setTimeout(() => {
                             this.openPageStrig(data.click_action, true);
+                            let badge = this.badge.increase(1);
                         }, 300);
+                        
+                        alert("Recibido en background");
+                        console.log("Recibido en background");
                     } else {
-                        if (data.showDialog == "true") this.showError(data.title, data.subTitle, data.textButton, data.click_action);
+                        if (data.showDialog == "true") {
+                            this.showError(data.title, data.subTitle, data.textButton, data.click_action);
+                            console.log("Recibido en foreground");
+                        }
                     };
+                    alert("noti");
                 })
                 this.fcm.onTokenRefresh().subscribe(token => {
                     this.enviarTokenNotifications(token);
                 });
                 //end notifications.
+                
+                
+
             }
         });
         firebase.initializeApp(config);
     }
+
+    async requestPermission() {
+      try {
+        let hasPermission = await this.badge.hasPermission();
+        console.log(hasPermission);
+        if (!hasPermission) {
+          let permission = await this.badge.requestPermission();
+          console.log(permission);
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
     /**
      * 	Función que muestra el ProgressBar cuando alguna acción
      *	se está ejecutando en primer plano.

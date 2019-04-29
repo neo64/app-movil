@@ -25,6 +25,7 @@
     "@angular/platform-browser-dynamic": "4.4.6",
     "@angular/router": "4.4.6",
     "@ionic-native/android-permissions": "^4.20.0",
+    "@ionic-native/badge": "^4.20.0",
     "@ionic-native/calendar": "^4.12.0",
     "@ionic-native/call-number": "^4.19.0",
     "@ionic-native/camera": "^4.14.0",
@@ -52,10 +53,12 @@
     "com-sarriaroman-photoviewer": "1.1.18",
     "cordova-android": "^6.4.0",
     "cordova-android-support-gradle-release": "^1.4.4",
+    "cordova-ios": "4.5.5",
     "cordova-multidex": "git+https://github.com/jwall149/cordova-multidex.git",
     "cordova-pdf-generator": "^2.0.4",
     "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-android-permissions": "1.0.0",
+    "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-calendar": "^5.1.2",
     "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-device": "^2.0.2",
@@ -133,10 +136,12 @@
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {
         "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
         "OKHTTP_VERSION": "3.12.0"
-      }
+      },
+      "cordova-plugin-badge": {}
     },
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ],
     "config": {
       "ionic_copy": "./scripts/copy-custom-libs.js"

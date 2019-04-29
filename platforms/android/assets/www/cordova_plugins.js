@@ -401,6 +401,14 @@ module.exports = [
     "merges": [
       "launchnavigator"
     ]
+  },
+  {
+    "id": "cordova-plugin-badge.Badge",
+    "file": "plugins/cordova-plugin-badge/www/badge.js",
+    "pluginId": "cordova-plugin-badge",
+    "clobbers": [
+      "cordova.plugins.notification.badge"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -431,7 +439,8 @@ module.exports.metadata =
   "cordova-plugin-whitelist": "1.3.3",
   "me.tonny.cordova.plugins.multidex": "0.1.0",
   "mx.ferreyra.callnumber": "0.0.2",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+  "cordova-plugin-badge": "0.8.8"
 };
 // BOTTOM OF METADATA
 });

@@ -96,6 +96,7 @@ apply from: "com-sarriaroman-photoviewer/com-photoviewer.gradle"
 apply from: "cordova-android-support-gradle-release/com-cordova-android-support-gradle-release.gradle"
 apply from: "cordova-plugin-fcm/com-FCMPlugin.gradle"
 apply from: "me.tonny.cordova.plugins.multidex/com-build.gradle"
+apply from: "cordova-plugin-badge/com-badge.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

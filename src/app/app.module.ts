@@ -85,7 +85,7 @@ import { CallNumber } from '@ionic-native/call-number';
 
 import { ChartsModule } from 'ng2-charts';
 
-//import { Badge } from '@ionic-native/badge';
+import { Badge } from '@ionic-native/badge';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 
 @NgModule({
@@ -203,7 +203,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 	PhotoViewer,
 	FCM,
 	EmojiProvider,
-	//Badge,
+	Badge,
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},

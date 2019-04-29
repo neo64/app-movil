@@ -124,11 +124,12 @@
     <allow-navigation href="http://192.168.5.57:8100" />
     <allow-navigation href="http://192.168.5.57:8104" />
     <allow-navigation href="http://192.168.5.57:8105" />
-    <plugin name="cordova-plugin-badge" spec="0.8.8" />
     <allow-navigation href="http://192.168.1.137:8100" />
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="5.0.4">
         <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}" />
         <variable name="OKHTTP_VERSION" value="3.12.0" />
     </plugin>
     <engine name="android" spec="^6.4.0" />
+    <plugin name="cordova-plugin-badge" spec="0.8.8" />
+    <engine name="ios" spec="~4.5.5" />
 </widget>
