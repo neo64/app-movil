@@ -9,7 +9,7 @@
 log.txt
 *.sublime-project
 *.sublime-workspace
-.sourcemaps/*
+.sourcemaps/
 .vscode/
 npm-debug.log*
 node_modules/
