@@ -31,7 +31,7 @@
     "@ionic-native/camera": "^4.14.0",
     "@ionic-native/core": "~4.11.0",
     "@ionic-native/document-viewer": "^4.15.0",
-    "@ionic-native/fcm": "^4.14.0",
+    "@ionic-native/fcm": "^4.20.0",
     "@ionic-native/file": "^4.15.0",
     "@ionic-native/file-opener": "^4.15.0",
     "@ionic-native/file-transfer": "^4.19.0",
@@ -51,7 +51,7 @@
     "call-number": "1.0.1",
     "chart.js": "^2.7.3",
     "com-sarriaroman-photoviewer": "1.1.18",
-    "cordova-android": "^6.4.0",
+    "cordova-android": "^8.0.0",
     "cordova-android-support-gradle-release": "^1.4.4",
     "cordova-ios": "4.5.5",
     "cordova-multidex": "git+https://github.com/jwall149/cordova-multidex.git",
@@ -64,7 +64,7 @@
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-dialogs": "2.0.1",
     "cordova-plugin-document-viewer": "^0.9.10",
-    "cordova-plugin-fcm": "^2.1.2",
+    "cordova-plugin-fcm-with-dependecy-updated": "2.4.0",
     "cordova-plugin-file": "^6.0.1",
     "cordova-plugin-file-opener2": "^2.0.19",
     "cordova-plugin-file-transfer": "^1.7.1",
@@ -113,7 +113,6 @@
       "cordova-plugin-statusbar": {},
       "cordova-plugin-calendar": {},
       "cordova-plugin-vibration": {},
-      "cordova-plugin-fcm": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-file": {},
       "cordova-plugin-file-transfer": {},
@@ -137,10 +136,10 @@
         "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
         "OKHTTP_VERSION": "3.12.0"
       },
-      "cordova-plugin-badge": {}
+      "cordova-plugin-badge": {},
+      "cordova-plugin-fcm-with-dependecy-updated": {}
     },
     "platforms": [
-      "android",
       "ios"
     ],
     "config": {

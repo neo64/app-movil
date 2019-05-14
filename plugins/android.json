@@ -20,6 +20,9 @@
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
     "cordova-plugin-calendar": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
@@ -30,9 +33,6 @@
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-plugin-document-viewer": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-fcm": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-plugin-file": {
@@ -71,9 +71,6 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "me.tonny.cordova.plugins.multidex": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
     "mx.ferreyra.callnumber": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
@@ -82,7 +79,7 @@
       "OKHTTP_VERSION": "3.12.0",
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-badge": {
+    "cordova-plugin-fcm-with-dependecy-updated": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
