@@ -87,6 +87,8 @@ import { ChartsModule } from 'ng2-charts';
 
 import { Badge } from '@ionic-native/badge';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/';
+import { Firebase } from '@ionic-native/firebase/ngx';
+
 
 @NgModule({
   declarations: [
@@ -211,6 +213,7 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 	Calendar,
 	Vibration,
 	File,
+	Firebase,
 	Camera,
     FileOpener,
     CallNumber,

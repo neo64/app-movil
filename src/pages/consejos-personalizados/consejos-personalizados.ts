@@ -5,6 +5,7 @@ import { LoginPage } from '../../pages/login/login';
 import { ConsejosDetailPage } from '../../pages/consejos-detail/consejos-detail';
 import { DomSanitizer } from '@angular/platform-browser';
 import { ChatPage } from '../../pages/chat/chat';
+import { Badge } from '@ionic-native/badge';
 
 @IonicPage()
 @Component({
@@ -18,7 +19,7 @@ export class ConsejosPersonalizadosPage {
 	showCardError	= false;
 	tituloSubtitulo = {titulo : "Mis Consejos", subtitulo: "de los doctores"};
 
-	constructor(private domSanitizer: DomSanitizer, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+	constructor(private badge:Badge, private domSanitizer: DomSanitizer, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
 		this.showLoading();
 		this.getConsejosPersonalizados();
 		this.events.publish("user:logged");
@@ -63,7 +64,7 @@ export class ConsejosPersonalizadosPage {
 				if (typeof this.cards === 'undefined' || this.cards.length <= 0){
 					this.showCardError= true;
 				}
-				
+				this.badge.set(data['badge']);
 				this.loading.dismiss();
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");

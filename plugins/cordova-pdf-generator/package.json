@@ -1,28 +1,28 @@
 {
-  "_from": "cordova-pdf-generator",
-  "_id": "cordova-pdf-generator@2.0.4",
+  "_from": "cordova-pdf-generator@^2.0.4",
+  "_id": "cordova-pdf-generator@2.0.8",
   "_inBundle": false,
-  "_integrity": "sha1-xOz+1DoQIM7OeTfB/7KhCVaDq1U=",
+  "_integrity": "sha512-HIEWtypWERg8s5lpwOyhz71eq94e0XvbnTpaBUTneY1Tol3RHpsCvxniv5uN/MfrF9hi2e4FeTsGWzrZAeblTw==",
   "_location": "/cordova-pdf-generator",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "cordova-pdf-generator",
+    "raw": "cordova-pdf-generator@^2.0.4",
     "name": "cordova-pdf-generator",
     "escapedName": "cordova-pdf-generator",
-    "rawSpec": "",
+    "rawSpec": "^2.0.4",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^2.0.4"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-pdf-generator/-/cordova-pdf-generator-2.0.4.tgz",
-  "_shasum": "c4ecfed43a1020cece7937c1ffb2a1095683ab55",
-  "_spec": "cordova-pdf-generator",
-  "_where": "C:\\appMobile",
+  "_resolved": "https://registry.npmjs.org/cordova-pdf-generator/-/cordova-pdf-generator-2.0.8.tgz",
+  "_shasum": "2bc222d2f8958082e35ebfa6216567421d63edb4",
+  "_spec": "cordova-pdf-generator@^2.0.4",
+  "_where": "/Users/usuario/app",
   "author": {
     "name": "cesar"
   },
@@ -57,5 +57,5 @@
     "type": "git",
     "url": "git+https://github.com/cesarvr/pdf-generator.git"
   },
-  "version": "2.0.4"
+  "version": "2.0.8"
 }

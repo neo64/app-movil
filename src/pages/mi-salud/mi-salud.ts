@@ -23,9 +23,19 @@ export class MiSaludPage {
 	cardsMenu 	= new Array();	// Array donde se descargan los elementos del menú
 
 	constructor(private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController) {
+		this.events.publish("user:logged");
+	}
+
+	/*
+    * Función que se ejecuta cada vez que la página entra en 
+    * primer plano, entonces tengo que actualizar por si las notificaciones
+    * ya han sido leidas.
+    */
+   	ionViewWillEnter() {
+		this.cardsMenu = new Array();
+		this.cards = new Array();
 		this.showLoading();
 		this.getCardsMiSalud();
-		this.events.publish("user:logged");
 	}
 	
 	openPage(page, tipo) {

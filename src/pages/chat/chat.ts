@@ -7,12 +7,13 @@ import { Camera, CameraOptions } from '@ionic-native/camera';
 
 import { RestProvider } from '../../providers/rest/rest';
 import { PhotoViewer } from '@ionic-native/photo-viewer';
-
+import { LoginPage } from '../login/login';
 import { FileOpener } from '@ionic-native/file-opener';
 import { File } from '@ionic-native/file';
 import {
     CallNumber
 } from '@ionic-native/call-number';
+import { Badge } from '@ionic-native/badge';
 
 @IonicPage()
 @Component({
@@ -37,7 +38,7 @@ export class ChatPage {
 	menuData 			= "";		// Foto de perfil del usuario.
 	mostrarError        = false;    // Controla si estamos dentro del horario de la clinica
 
-	constructor(private callNumber: CallNumber, private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
+	constructor(private badge: Badge, private callNumber: CallNumber, private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
 		
 		this.showLoading("Cargando conversación ...");	
 		this.nickname 		= window.localStorage.getItem("idPac");
@@ -93,6 +94,21 @@ export class ChatPage {
 			}		
 					
 		});
+
+		this.restProvider.resetNotificationsChat().then(data => {
+            if (typeof data != "undefined" && data['status'] == 1) {
+				this.badge.set(parseInt(data['data']));
+				console.log("----> " + parseInt(data['data']));
+            } else if (data.status == 401) {
+                this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
+                this.navCtrl.setRoot(LoginPage);
+            } else {
+                //this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+            }
+        }).catch(e => {
+            //this.loading.dismiss();
+            console.log(e);
+        });
 		
 		firebase.database().ref(this.nickname).limitToLast(15).on('value', resp => {
 			this.chats = [];			
@@ -278,7 +294,7 @@ export class ChatPage {
 						message:	this.cameraImage,
 						sendDate:	new Date(Number(data.timeStamp)).toString(),
 						read: 		false
-					});	
+					});
 				});				
 				
 				if(this.loadingPresented){
@@ -431,7 +447,7 @@ export class ChatPage {
 			date:	Date(),
 		});
 		firebase.database().ref(this.nickname).off();
-		this.eventsCtrl.publish('chat:unload');		
+		this.eventsCtrl.publish('chat:unload');
 	}
 	
 	/**
@@ -487,7 +503,6 @@ export const snapshotToArray = (snapshot,nickname,vb,firstOpen, offStatus) => {
     });
 	
 	if(!firstOpen && !offStatus && lastElemenmt == "atPaciente"){
-		//console.log("VIBRA - " + firstOpen);
 		vb.vibrate(500);
 	}	
     

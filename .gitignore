@@ -14,7 +14,6 @@ log.txt
 npm-debug.log*
 node_modules/
 www/build/
-platforms/*
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate

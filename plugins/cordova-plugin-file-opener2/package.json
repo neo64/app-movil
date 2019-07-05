@@ -1,28 +1,28 @@
 {
-  "_from": "cordova-plugin-file-opener2",
-  "_id": "cordova-plugin-file-opener2@2.0.19",
+  "_from": "cordova-plugin-file-opener2@^2.0.19",
+  "_id": "cordova-plugin-file-opener2@2.2.0",
   "_inBundle": false,
-  "_integrity": "sha1-yjrhIlOVt3qx/lsgrMv+zGiOJJM=",
+  "_integrity": "sha512-qJydbRUsoVUXdhJ0b8RsR4y3dG0w4+jwdCKUx2VaZHk7ztMdWugjj+TQHg7Y6w4jiSSgenfDMosupEeQTdSEiQ==",
   "_location": "/cordova-plugin-file-opener2",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "range",
     "registry": true,
-    "raw": "cordova-plugin-file-opener2",
+    "raw": "cordova-plugin-file-opener2@^2.0.19",
     "name": "cordova-plugin-file-opener2",
     "escapedName": "cordova-plugin-file-opener2",
-    "rawSpec": "",
+    "rawSpec": "^2.0.19",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "^2.0.19"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/cordova-plugin-file-opener2/-/cordova-plugin-file-opener2-2.0.19.tgz",
-  "_shasum": "ca3ae1225395b77ab1fe5b20accbfecc688e2493",
-  "_spec": "cordova-plugin-file-opener2",
-  "_where": "C:\\fbApp\\fbApp",
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-file-opener2/-/cordova-plugin-file-opener2-2.2.0.tgz",
+  "_shasum": "f562f1b02a2a66c6c4dbfd9e3b5d861bd99efe41",
+  "_spec": "cordova-plugin-file-opener2@^2.0.19",
+  "_where": "/Users/usuario/app",
   "author": {
     "name": "pwlin05@gmail.com"
   },
@@ -41,12 +41,9 @@
   },
   "deprecated": false,
   "description": "A File Opener Plugin for Cordova. (The Original Version)",
-  "engines": [
-    {
-      "name": "cordova",
-      "version": ">=3.0.0"
-    }
-  ],
+  "engines": {
+    "cordova": ">=6.0.0"
+  },
   "homepage": "https://github.com/pwlin/cordova-plugin-file-opener2#readme",
   "keywords": [
     "ecosystem:cordova",
@@ -61,5 +58,5 @@
     "type": "git",
     "url": "git+https://github.com/pwlin/cordova-plugin-file-opener2.git"
   },
-  "version": "2.0.19"
+  "version": "2.2.0"
 }

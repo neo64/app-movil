@@ -79,6 +79,7 @@ import {
 import {
     CallNumber
 } from '@ionic-native/call-number';
+import { Badge } from '@ionic-native/badge';
 
 
 @Component({
@@ -98,50 +99,21 @@ export class HomePage {
         tipo: 'page',
         gradiente: ''
     };
-    constructor(private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController,) {
-        //this.showLoading();
-        this.getCardsHome();
+    constructor(private badge: Badge, private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController,) {
         this.events.publish("user:logged");
-        //this.badge.set(10);
-        //this.setBadgets(5);
-
     }
 
-    /*async getBadgets(){
-        try {
-            let badgeAmount = await this.badge.get();
-            console.log(badgeAmount);
-        }
-        catch(e){
-            console.log(e);
-        }
+    /*
+    * Función que se ejecuta cada vez que la página entra en 
+    * primer plano, entonces tengo que actualizar por si las notificaciones
+    * ya han sido leidas.
+    */
+    ionViewWillEnter() {
+        this.cardsMenu = new Array();
+        this.cards = new Array();
+        this.showLoading();
+        this.getCardsHome();
     }
-
-    async setBadgets(badgeNumber: number){
-        try {
-            let badges = await this.badge.set(badgeNumber);
-            console.log(badges);
-        }
-        catch(e){
-            console.log(e);
-        }
-    }
-
-    async requestPermission() {
-        try {
-            let hasPermission = await this.badge.hasPermission();
-            console.log(hasPermission);
-            if(!hasPermission){
-                let permission = await this.badge.registerPermission();
-                console.log(permission);    
-            }
-
-        }
-        catch(e){
-            console.log(e);
-        }
-    }*/
-
 
     /**
      * 	Función que abre la aplicación de llamadas para
@@ -240,6 +212,7 @@ export class HomePage {
         this.restProvider.getCardsHome().then(data => {
             if (typeof data != "undefined" && data['status'] == 1) {
                 if (data['data']['cards']) {
+                    console.log(data);
                     for (var i in data['data']['cards']) {
                         this.cards.push(data['data']['cards'][i]);
                     }
@@ -247,7 +220,8 @@ export class HomePage {
                 for (var j in data['data']['menu']) {
                     this.cardsMenu.push(data['data']['menu'][j]);
                 }
-                //this.loading.dismiss();
+                this.badge.set(data['badge']);
+                this.loading.dismiss();
             } else if (data.status == 401) {
                 this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
                 this.navCtrl.setRoot(LoginPage);
@@ -255,7 +229,7 @@ export class HomePage {
                 this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
             }
         }).catch(e => {
-            //this.loading.dismiss();
+            this.loading.dismiss();
             console.log(e);
         });
     }

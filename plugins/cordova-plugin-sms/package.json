@@ -1,19 +1,19 @@
 {
-  "_from": "cordova-plugin-sms",
+  "_from": "cordova-plugin-sms@1.0.5",
   "_id": "cordova-plugin-sms@1.0.5",
   "_inBundle": false,
   "_integrity": "sha1-ZkQJVMGfc+4+jjXlxxrhI/Q8t7I=",
   "_location": "/cordova-plugin-sms",
   "_phantomChildren": {},
   "_requested": {
-    "type": "tag",
+    "type": "version",
     "registry": true,
-    "raw": "cordova-plugin-sms",
+    "raw": "cordova-plugin-sms@1.0.5",
     "name": "cordova-plugin-sms",
     "escapedName": "cordova-plugin-sms",
-    "rawSpec": "",
+    "rawSpec": "1.0.5",
     "saveSpec": null,
-    "fetchSpec": "latest"
+    "fetchSpec": "1.0.5"
   },
   "_requiredBy": [
     "#USER",
@@ -21,8 +21,8 @@
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-sms/-/cordova-plugin-sms-1.0.5.tgz",
   "_shasum": "66440954c19f73ee3e8e35e5c71ae123f43cb7b2",
-  "_spec": "cordova-plugin-sms",
-  "_where": "/Users/Usuario/Desktop/appMobile",
+  "_spec": "cordova-plugin-sms@1.0.5",
+  "_where": "/Users/usuario/app",
   "author": {
     "name": "Raymond Xie",
     "email": "rjfun.mobile@gmail.com"

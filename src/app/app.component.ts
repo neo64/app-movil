@@ -77,15 +77,16 @@ import {
     InstruccionesPage
 } from '../pages/instrucciones/instrucciones';
 import * as firebase from 'firebase';
-import {
-    FCM
-} from '@ionic-native/fcm';
+
+import { FCM } from '@ionic-native/fcm';
 
 import { Badge } from '@ionic-native/badge';
 
+
 const config = {
-    apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
-    authDomain: '785325583727-viu7ei21dmm7svdg0umpbnp851hlt4lr.apps.googleusercontent.com',
+    //apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
+    apiKey: 'AIzaSyBhYeQ0XnvVRasP97VJEps_V1NRR9Daeng',
+    authDomain: '785325583727-dl8p7gblk74h1irgmang0knvena5puke.apps.googleusercontent.com',
     databaseURL: 'fbapp-8a8e5.firebaseio.com',
     projectId: 'fbapp-8a8e5',
     storageBucket: 'fbapp-8a8e5.appspot.com',
@@ -110,6 +111,7 @@ export class MyApp {
     constructor(public menuCtrl: MenuController, private alertCtrl: AlertController, private fcm: FCM, public events: Events, public platform: Platform, public restProvider: RestProvider, public statusBar: StatusBar, public splashScreen: SplashScreen, private loadingCtrl: LoadingController,private badge: Badge,) {
         this.initializeApp();
         // used for an example of ngFor and navigation
+
         this.pages = [{
             title: 'Inicio',
             icon: 'fb-home',
@@ -155,17 +157,9 @@ export class MyApp {
     initializeApp() {
         this.platform.ready().then(() => {
             this.events.subscribe("user:logged", () => {
-                this.getDataMenu();
-            });
-       
-                //Badges
-                //this.badge.hasPermission().then(function(result) {
-                    
-                 //   console.log(badge2);
-                 //   alert(badge2);
-                //}, function(error) {
-                  //  alert(error);
-                //});
+                //this.getDataMenu();
+            });                
+            
 
             //Notifications
             if (this.platform.is('cordova')) {
@@ -175,6 +169,7 @@ export class MyApp {
                     //alert(token);
                     //Compruebo si el token esta en la bbdd y si no lo guarda
                     this.enviarTokenNotifications(token);
+                    console.log("1.TOKEN = " , token);
                 })
                 //Pido permiso para setear los badges de las notificaciones
                 this.requestPermission();
@@ -183,44 +178,39 @@ export class MyApp {
                     //Entra cuando el usuario hace tap en la notificacion
                     if (data.wasTapped) {
                         setTimeout(() => {
-                            this.openPageStrig(data.click_action, true);
-                            let badge = this.badge.increase(1);
+                            this.openPageStrig(data.click_action, true);                            
                         }, 300);
-                        
-                        alert("Recibido en background");
                         console.log("Recibido en background");
                     } else {
                         if (data.showDialog == "true") {
                             this.showError(data.title, data.subTitle, data.textButton, data.click_action);
-                            console.log("Recibido en foreground");
                         }
+                        console.log("Recibido en foreground");
                     };
-                    alert("noti");
+                                    
                 })
                 this.fcm.onTokenRefresh().subscribe(token => {
                     this.enviarTokenNotifications(token);
+                    console.log("2.TOKEN = " , token);
                 });
                 //end notifications.
-                
-                
-
             }
         });
         firebase.initializeApp(config);
     }
 
+    
     async requestPermission() {
       try {
         let hasPermission = await this.badge.hasPermission();
-        console.log(hasPermission);
         if (!hasPermission) {
           let permission = await this.badge.requestPermission();
-          console.log(permission);
         }
       } catch (e) {
         console.error(e);
       }
     }
+    
 
     /**
      * 	Función que muestra el ProgressBar cuando alguna acción
