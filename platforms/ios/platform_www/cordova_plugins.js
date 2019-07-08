@@ -435,7 +435,7 @@ module.exports.metadata =
   "phonegap-plugin-push": "2.2.3",
   "cordova-plugin-cocoapod-supportx": "1.7.2",
   "cordova-plugin-androidx": "1.0.2",
-  "cordova-android-support-gradle-release": "3.0.1"
+  "cordova-android-firebase-gradle-release": "4.0.0"
 };
 // BOTTOM OF METADATA
 });

@@ -52,9 +52,8 @@
     "call-number": "1.0.1",
     "chart.js": "^2.7.3",
     "com-sarriaroman-photoviewer": "1.1.18",
-    "cordova-android": "6.3.0",
+    "cordova-android": "7.1.4",
     "cordova-android-firebase-gradle-release": "4.0.0",
-    "cordova-android-support-gradle-release": "^3.0.1",
     "cordova-custom-config": "^5.1.0",
     "cordova-ios": "4.5.5",
     "cordova-multidex": "git+https://github.com/jwall149/cordova-multidex.git",
@@ -148,10 +147,7 @@
         "ANDROID_SUPPORT_V13_VERSION": "27.+",
         "FCM_VERSION": "11.6.2"
       },
-      "cordova-plugin-fcm-with-dependecy-updated": {},
-      "cordova-android-support-gradle-release": {
-        "ANDROID_SUPPORT_VERSION": "27.0.0"
-      }
+      "cordova-plugin-fcm-with-dependecy-updated": {}
     },
     "platforms": [
       "android"
