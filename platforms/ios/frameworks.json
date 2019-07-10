@@ -2,7 +2,7 @@
     "EventKit.framework": 1,
     "EventKitUI.framework": 1,
     "ImageIO.framework": 2,
-    "CoreLocation.framework": 1,
+    "CoreLocation.framework": 2,
     "AVFoundation.framework": 1,
     "AudioToolbox.framework": 2,
     "UIKit.framework": 1,
@@ -15,5 +15,6 @@
     "libsqlite3.0.tbd": 1,
     "Security.framework": 1,
     "WebKit.framework": 1,
-    "PushKit.framework": 1
+    "MapKit.framework": 1,
+    "SystemConfiguration.framework": 1
 }

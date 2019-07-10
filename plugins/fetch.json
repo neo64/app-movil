@@ -26,16 +26,6 @@
   "cordova-plugin-ionic-webview": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-ionic-webview@^2.0.2"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
-    }
-  },
-  "cordova-plugin-ionic-keyboard": {
-    "source": {
-      "type": "registry",
       "id": "cordova-plugin-ionic-keyboard@^2.1.2"
     },
     "is_top_level": true,
@@ -52,31 +42,12 @@
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-statusbar@^2.4.2"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-calendar": {
-    "source": {
-      "type": "registry",
       "id": "cordova-plugin-calendar@^5.1.2"
     },
     "is_top_level": true,
-    "variables": {
-      "CALENDAR_USAGE_DESCRIPTION": " ",
-      "CONTACTS_USAGE_DESCRIPTION": " "
-    }
-  },
-  "cordova-plugin-vibration": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-vibration@~3.1.0"
-    },
-    "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-camera": {
+  "cordova-plugin-vibration": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-camera@^4.0.3"
@@ -109,16 +80,6 @@
     "variables": {}
   },
   "cordova-plugin-file-opener2": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-opener2@^2.0.19"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+"
-    }
-  },
-  "cordova-pdf-generator": {
     "source": {
       "type": "registry",
       "id": "cordova-pdf-generator@^2.0.4"
@@ -194,44 +155,9 @@
   "cordova-plugin-dialogs": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-dialogs@*"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-plugin-badge": {
-    "source": {
-      "type": "registry",
       "id": "cordova-plugin-badge@0.8.8"
     },
     "is_top_level": true,
-    "variables": {}
-  },
-  "phonegap-plugin-push": {
-    "source": {
-      "type": "registry",
-      "id": "phonegap-plugin-push@2.2.3"
-    },
-    "is_top_level": true,
-    "variables": {
-      "ANDROID_SUPPORT_V13_VERSION": "27.+",
-      "FCM_VERSION": "11.6.2"
-    }
-  },
-  "cordova-support-google-services": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-support-google-services@~1.1.0"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "phonegap-plugin-multidex": {
-    "source": {
-      "type": "registry",
-      "id": "phonegap-plugin-multidex@~1.0.0"
-    },
-    "is_top_level": false,
     "variables": {}
   },
   "cordova-plugin-fcm-with-dependecy-updated": {
@@ -242,83 +168,57 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-firebase": {
+  "cordova-android-support-gradle-release": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-firebase"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-firebasex": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-firebasex"
+      "id": "cordova-android-support-gradle-release"
     },
     "is_top_level": true,
     "variables": {
-      "IOS_MIN_VERSION": "9.0",
-      "IOS_FIREBASE_CORE_VERSION": "6.3.0",
-      "IOS_FIREBASE_AUTH_VERSION": "6.3.0",
-      "IOS_FIREBASE_MESSAGING_VERSION": "6.3.0",
-      "IOS_FIREBASE_PERFORMANCE_VERSION": "6.3.0",
-      "IOS_FIREBASE_REMOTECONFIG_VERSION": "6.3.0",
-      "IOS_FABRIC_VERSION": "1.9.0",
-      "IOS_CRASHLYTICS_VERSION": "3.12.0"
+      "ANDROID_SUPPORT_VERSION": "27.0.0"
     }
   },
-  "cordova-plugin-cocoapod-supportx": {
+  "cordova-plugin-ionic-keyboard": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-cocoapod-supportx@^1.7.2"
+      "id": "cordova-plugin-ionic-keyboard@^2.1.2"
     },
-    "is_top_level": false,
+    "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-androidx": {
+  "cordova-plugin-calendar": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-androidx@^1.0.2"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
-  "cordova-android-firebase-gradle-release": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-android-firebase-gradle-release"
+      "id": "cordova-plugin-calendar@^5.1.2"
     },
     "is_top_level": true,
     "variables": {
-      "FIREBASE_VERSION": "17.+",
-      "FIREBASE-CORE": "17.0.0",
-      "FIREBASE-ADS": "18.0.0",
-      "FIREBASE-ANALYTICS": "17.0.0",
-      "FIREBASE-APPINDEXING": "19.0.0",
-      "FIREBASE-AUTH": "18.0.0",
-      "FIREBASE-FIRESTORE": "20.0.0",
-      "FIREBASE-FUNCTIONS": "18.0.0",
-      "FIREBASE-MESSAGING": "19.0.0",
-      "FIREBASE-STORAGE": "18.0.0",
-      "FIREBASE-CRASH": "16.2.1",
-      "CRASHLYTICS": "2.10.1",
-      "FIREBASE-DYNAMIC-LINKS": "18.0.0",
-      "FIREBASE-INVITES": "17.0.0",
-      "FIREBASE-INAPPMESSAGING": "18.0.1",
-      "FIREBASE-INAPPMESSAGING-DISPLAY": "18.0.1",
-      "FIREBASE-ML-VISION": "21.0.0",
-      "FIREBASE-ML-VISION-IMAGE-LABEL-MODEL": "18.0.0",
-      "FIREBASE-ML-VISION-FACE-MODEL": "18.0.0",
-      "FIREBASE-ML-VISION-OBJECT-DETECTION-MODEL": "17.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-LANGUAGE-ID-MODEL": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-TRANSLATE-MODEL": "20.0.0",
-      "FIREBASE-ML-NATURAL-LANGUAGE-SMART-REPLY-MODEL": "20.0.0",
-      "FIREBASE-ML-MODEL-INTERPRETER": "20.0.0",
-      "FIREBASE-ML-VISION-AUTOML": "17.0.0",
-      "FIREBASE-PERF": "18.0.0",
-      "FIREBASE-DATABASE": "18.0.0",
-      "FIREBASE-CONFIG": "18.0.0"
+      "CALENDAR_USAGE_DESCRIPTION": " ",
+      "CONTACTS_USAGE_DESCRIPTION": " "
     }
+  },
+  "cordova-plugin-camera": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-camera@^4.0.3"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-pdf-generator": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-pdf-generator@^2.0.4"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-badge": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-badge@0.8.8"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }

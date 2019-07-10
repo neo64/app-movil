@@ -1,96 +1,6 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
   {
-    "id": "call-number.CallNumber",
-    "file": "plugins/call-number/www/CallNumber.js",
-    "pluginId": "call-number",
-    "clobbers": [
-      "call"
-    ]
-  },
-  {
-    "id": "com-sarriaroman-photoviewer.PhotoViewer",
-    "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
-    "pluginId": "com-sarriaroman-photoviewer",
-    "clobbers": [
-      "PhotoViewer"
-    ]
-  },
-  {
-    "id": "cordova-pdf-generator.pdf",
-    "file": "plugins/cordova-pdf-generator/www/pdf.js",
-    "pluginId": "cordova-pdf-generator",
-    "clobbers": [
-      "cordova.plugins.pdf",
-      "pugin.pdf",
-      "pdf"
-    ]
-  },
-  {
-    "id": "cordova-plugin-actionsheet.ActionSheet",
-    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
-    "pluginId": "cordova-plugin-actionsheet",
-    "clobbers": [
-      "window.plugins.actionsheet"
-    ]
-  },
-  {
-    "id": "cordova-plugin-android-permissions.Permissions",
-    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
-    "pluginId": "cordova-plugin-android-permissions",
-    "clobbers": [
-      "cordova.plugins.permissions"
-    ]
-  },
-  {
-    "id": "cordova-plugin-badge.Badge",
-    "file": "plugins/cordova-plugin-badge/www/badge.js",
-    "pluginId": "cordova-plugin-badge",
-    "clobbers": [
-      "cordova.plugins.notification.badge"
-    ]
-  },
-  {
-    "id": "cordova-plugin-calendar.Calendar",
-    "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
-    "pluginId": "cordova-plugin-calendar",
-    "clobbers": [
-      "Calendar"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.Camera",
-    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "Camera"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.CameraPopoverOptions",
-    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "CameraPopoverOptions"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.camera",
-    "file": "plugins/cordova-plugin-camera/www/Camera.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "navigator.camera"
-    ]
-  },
-  {
-    "id": "cordova-plugin-camera.CameraPopoverHandle",
-    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
-    "pluginId": "cordova-plugin-camera",
-    "clobbers": [
-      "CameraPopoverHandle"
-    ]
-  },
-  {
     "id": "cordova-plugin-device.device",
     "file": "plugins/cordova-plugin-device/www/device.js",
     "pluginId": "cordova-plugin-device",
@@ -99,36 +9,45 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-dialogs.notification",
-    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
-  },
-  {
-    "id": "cordova-plugin-dialogs.notification_android",
-    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
-    "pluginId": "cordova-plugin-dialogs",
-    "merges": [
-      "navigator.notification"
-    ]
-  },
-  {
-    "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
-    "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
-    "pluginId": "cordova-plugin-document-viewer",
+    "id": "cordova-plugin-splashscreen.SplashScreen",
+    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+    "pluginId": "cordova-plugin-splashscreen",
     "clobbers": [
-      "cordova.plugins.SitewaertsDocumentViewer",
-      "SitewaertsDocumentViewer"
+      "navigator.splashscreen"
     ]
   },
   {
-    "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
-    "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
-    "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
+    "id": "cordova-plugin-ionic-webview.IonicWebView",
+    "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
+    "pluginId": "cordova-plugin-ionic-webview",
     "clobbers": [
-      "FCMPlugin"
+      "Ionic.WebView"
+    ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.mainHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
+    "pluginId": "cordova-plugin-nativestorage",
+    "clobbers": [
+      "NativeStorage"
+    ]
+  },
+  {
+    "id": "cordova-plugin-nativestorage.LocalStorageHandle",
+    "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
+    "pluginId": "cordova-plugin-nativestorage"
+  },
+  {
+    "id": "cordova-plugin-nativestorage.NativeStorageError",
+    "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
+    "pluginId": "cordova-plugin-nativestorage"
+  },
+  {
+    "id": "cordova-plugin-statusbar.statusbar",
+    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+    "pluginId": "cordova-plugin-statusbar",
+    "clobbers": [
+      "window.StatusBar"
     ]
   },
   {
@@ -305,14 +224,6 @@ module.exports = [
     "runs": true
   },
   {
-    "id": "cordova-plugin-file-opener2.FileOpener2",
-    "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
-    "pluginId": "cordova-plugin-file-opener2",
-    "clobbers": [
-      "cordova.plugins.fileOpener2"
-    ]
-  },
-  {
     "id": "cordova-plugin-file-transfer.FileTransferError",
     "file": "plugins/cordova-plugin-file-transfer/www/FileTransferError.js",
     "pluginId": "cordova-plugin-file-transfer",
@@ -329,46 +240,37 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-firebase.FirebasePlugin",
-    "file": "plugins/cordova-plugin-firebase/www/firebase.js",
-    "pluginId": "cordova-plugin-firebase",
+    "id": "cordova-plugin-document-viewer.SitewaertsDocumentViewer",
+    "file": "plugins/cordova-plugin-document-viewer/www/sitewaertsdocumentviewer.js",
+    "pluginId": "cordova-plugin-document-viewer",
     "clobbers": [
-      "FirebasePlugin"
+      "cordova.plugins.SitewaertsDocumentViewer",
+      "SitewaertsDocumentViewer"
     ]
   },
   {
-    "id": "cordova-plugin-ionic-keyboard.keyboard",
-    "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
-    "pluginId": "cordova-plugin-ionic-keyboard",
+    "id": "cordova-plugin-file-opener2.FileOpener2",
+    "file": "plugins/cordova-plugin-file-opener2/www/plugins.FileOpener2.js",
+    "pluginId": "cordova-plugin-file-opener2",
     "clobbers": [
-      "window.Keyboard"
+      "cordova.plugins.fileOpener2"
     ]
   },
   {
-    "id": "cordova-plugin-ionic-webview.IonicWebView",
-    "file": "plugins/cordova-plugin-ionic-webview/src/www/util.js",
-    "pluginId": "cordova-plugin-ionic-webview",
+    "id": "com-sarriaroman-photoviewer.PhotoViewer",
+    "file": "plugins/com-sarriaroman-photoviewer/www/PhotoViewer.js",
+    "pluginId": "com-sarriaroman-photoviewer",
     "clobbers": [
-      "Ionic.WebView"
+      "PhotoViewer"
     ]
   },
   {
-    "id": "cordova-plugin-nativestorage.mainHandle",
-    "file": "plugins/cordova-plugin-nativestorage/www/mainHandle.js",
-    "pluginId": "cordova-plugin-nativestorage",
+    "id": "call-number.CallNumber",
+    "file": "plugins/call-number/www/CallNumber.js",
+    "pluginId": "call-number",
     "clobbers": [
-      "NativeStorage"
+      "call"
     ]
-  },
-  {
-    "id": "cordova-plugin-nativestorage.LocalStorageHandle",
-    "file": "plugins/cordova-plugin-nativestorage/www/LocalStorageHandle.js",
-    "pluginId": "cordova-plugin-nativestorage"
-  },
-  {
-    "id": "cordova-plugin-nativestorage.NativeStorageError",
-    "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
-    "pluginId": "cordova-plugin-nativestorage"
   },
   {
     "id": "cordova-plugin-sms.SMS",
@@ -379,27 +281,35 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-splashscreen.SplashScreen",
-    "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-    "pluginId": "cordova-plugin-splashscreen",
+    "id": "cordova-plugin-android-permissions.Permissions",
+    "file": "plugins/cordova-plugin-android-permissions/www/permissions.js",
+    "pluginId": "cordova-plugin-android-permissions",
     "clobbers": [
-      "navigator.splashscreen"
+      "cordova.plugins.permissions"
     ]
   },
   {
-    "id": "cordova-plugin-statusbar.statusbar",
-    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
-    "pluginId": "cordova-plugin-statusbar",
+    "id": "cordova-plugin-actionsheet.ActionSheet",
+    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+    "pluginId": "cordova-plugin-actionsheet",
     "clobbers": [
-      "window.StatusBar"
+      "window.plugins.actionsheet"
     ]
   },
   {
-    "id": "phonegap-plugin-push.PushNotification",
-    "file": "plugins/phonegap-plugin-push/www/push.js",
-    "pluginId": "phonegap-plugin-push",
-    "clobbers": [
-      "PushNotification"
+    "id": "cordova-plugin-dialogs.notification",
+    "file": "plugins/cordova-plugin-dialogs/www/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
+    ]
+  },
+  {
+    "id": "cordova-plugin-dialogs.notification_android",
+    "file": "plugins/cordova-plugin-dialogs/www/android/notification.js",
+    "pluginId": "cordova-plugin-dialogs",
+    "merges": [
+      "navigator.notification"
     ]
   },
   {
@@ -425,42 +335,111 @@ module.exports = [
     "merges": [
       "launchnavigator"
     ]
+  },
+  {
+    "id": "cordova-plugin-fcm-with-dependecy-updated.FCMPlugin",
+    "file": "plugins/cordova-plugin-fcm-with-dependecy-updated/www/FCMPlugin.js",
+    "pluginId": "cordova-plugin-fcm-with-dependecy-updated",
+    "clobbers": [
+      "FCMPlugin"
+    ]
+  },
+  {
+    "id": "cordova-plugin-ionic-keyboard.keyboard",
+    "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
+    "pluginId": "cordova-plugin-ionic-keyboard",
+    "clobbers": [
+      "window.Keyboard"
+    ]
+  },
+  {
+    "id": "cordova-plugin-calendar.Calendar",
+    "file": "plugins/cordova-plugin-calendar/www/Calendar.js",
+    "pluginId": "cordova-plugin-calendar",
+    "clobbers": [
+      "Calendar"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.Camera",
+    "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "Camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverOptions",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverOptions.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverOptions"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.camera",
+    "file": "plugins/cordova-plugin-camera/www/Camera.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "navigator.camera"
+    ]
+  },
+  {
+    "id": "cordova-plugin-camera.CameraPopoverHandle",
+    "file": "plugins/cordova-plugin-camera/www/CameraPopoverHandle.js",
+    "pluginId": "cordova-plugin-camera",
+    "clobbers": [
+      "CameraPopoverHandle"
+    ]
+  },
+  {
+    "id": "cordova-pdf-generator.pdf",
+    "file": "plugins/cordova-pdf-generator/www/pdf.js",
+    "pluginId": "cordova-pdf-generator",
+    "clobbers": [
+      "cordova.plugins.pdf",
+      "pugin.pdf",
+      "pdf"
+    ]
+  },
+  {
+    "id": "cordova-plugin-badge.Badge",
+    "file": "plugins/cordova-plugin-badge/www/badge.js",
+    "pluginId": "cordova-plugin-badge",
+    "clobbers": [
+      "cordova.plugins.notification.badge"
+    ]
   }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
-  "call-number": "0.0.2",
+  "cordova-plugin-whitelist": "1.3.4",
+  "cordova-plugin-device": "2.0.3",
+  "cordova-plugin-splashscreen": "5.0.3",
+  "cordova-plugin-ionic-webview": "2.5.1",
+  "cordova-plugin-nativestorage": "2.3.2",
+  "cordova-plugin-statusbar": "2.4.3",
+  "cordova-plugin-vibration": "3.1.1",
+  "cordova-plugin-file": "6.0.1",
+  "cordova-plugin-file-transfer": "1.7.1",
+  "cordova-plugin-document-viewer": "0.9.11",
+  "cordova-plugin-file-opener2": "2.2.1",
   "com-sarriaroman-photoviewer": "1.1.18",
-  "cordova-android-firebase-gradle-release": "4.0.0",
-  "cordova-pdf-generator": "2.0.8",
-  "cordova-plugin-actionsheet": "2.3.3",
+  "cordova-plugin-ios-camera-permissions": "1.2.0",
+  "call-number": "0.0.2",
+  "cordova-plugin-sms": "1.0.5",
   "cordova-plugin-android-permissions": "1.0.0",
-  "cordova-plugin-badge": "0.8.8",
+  "cordova-plugin-actionsheet": "2.3.3",
+  "cordova-plugin-dialogs": "2.0.2",
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+  "cordova-plugin-fcm-with-dependecy-updated": "2.4.0",
+  "cordova-android-support-gradle-release": "3.0.1",
+  "cordova-plugin-ionic-keyboard": "2.1.3",
   "cordova-plugin-calendar": "5.1.4",
   "cordova-plugin-camera": "4.0.3",
-  "cordova-plugin-cocoapod-supportx": "1.7.2",
-  "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-dialogs": "2.0.1",
-  "cordova-plugin-document-viewer": "0.9.11",
-  "cordova-plugin-fcm-with-dependecy-updated": "2.4.0",
-  "cordova-plugin-file": "6.0.1",
-  "cordova-plugin-file-opener2": "2.2.0",
-  "cordova-plugin-file-transfer": "1.7.1",
-  "cordova-plugin-firebase": "2.0.5",
-  "cordova-plugin-ionic-keyboard": "2.1.3",
-  "cordova-plugin-ionic-webview": "2.4.1",
-  "cordova-plugin-ios-camera-permissions": "1.2.0",
-  "cordova-plugin-nativestorage": "2.3.2",
-  "cordova-plugin-sms": "1.0.5",
-  "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-plugin-statusbar": "2.4.2",
-  "cordova-plugin-vibration": "3.1.0",
-  "cordova-plugin-whitelist": "1.3.3",
-  "cordova-support-google-services": "1.1.0",
-  "phonegap-plugin-multidex": "1.0.0",
-  "phonegap-plugin-push": "2.2.3",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+  "cordova-pdf-generator": "2.0.8",
+  "cordova-plugin-badge": "0.8.8"
 };
 // BOTTOM OF METADATA
 });

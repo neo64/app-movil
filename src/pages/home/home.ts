@@ -212,7 +212,6 @@ export class HomePage {
         this.restProvider.getCardsHome().then(data => {
             if (typeof data != "undefined" && data['status'] == 1) {
                 if (data['data']['cards']) {
-                    console.log(data);
                     for (var i in data['data']['cards']) {
                         this.cards.push(data['data']['cards'][i]);
                     }

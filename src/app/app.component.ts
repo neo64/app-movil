@@ -180,18 +180,15 @@ export class MyApp {
                         setTimeout(() => {
                             this.openPageStrig(data.click_action, true);                            
                         }, 300);
-                        console.log("Recibido en background");
                     } else {
                         if (data.showDialog == "true") {
                             this.showError(data.title, data.subTitle, data.textButton, data.click_action);
                         }
-                        console.log("Recibido en foreground");
                     };
                                     
                 })
                 this.fcm.onTokenRefresh().subscribe(token => {
                     this.enviarTokenNotifications(token);
-                    console.log("2.TOKEN = " , token);
                 });
                 //end notifications.
             }

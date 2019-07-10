@@ -8,7 +8,7 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:785325583727:android:1070a69c1fdb3e2d",
+        "mobilesdk_app_id": "1:785325583727:android:763bd20059f6634d",
         "android_client_info": {
           "package_name": "app.ferrusbratos.com"
         }
@@ -25,15 +25,21 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785325583727-viu7ei21dmm7svdg0umpbnp851hlt4lr.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "785325583727-dl8p7gblk74h1irgmang0knvena5puke.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "app.ferrusbratos.com",
+                "app_store_id": "1455350544"
+              }
+            }
+          ]
         }
       }
     }

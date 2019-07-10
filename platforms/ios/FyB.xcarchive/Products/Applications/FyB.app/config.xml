@@ -82,8 +82,8 @@
     <feature name="Vibration">
         <param name="ios-package" value="CDVVibration" />
     </feature>
-    <feature name="PushNotification">
-        <param name="ios-package" value="PushPlugin" />
+    <feature name="LaunchNavigator">
+        <param name="ios-package" value="LaunchNavigatorPlugin" />
     </feature>
     <feature name="pdfService">
         <param name="ios-package" value="PDFGenerator" />

@@ -395,11 +395,27 @@ module.exports = [
     ]
   },
   {
-    "id": "phonegap-plugin-push.PushNotification",
-    "file": "plugins/phonegap-plugin-push/www/push.js",
-    "pluginId": "phonegap-plugin-push",
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.Common",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/common.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
     "clobbers": [
-      "PushNotification"
+      "launchnavigator"
+    ]
+  },
+  {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LocalForage",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/localforage.v1.5.0.min.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "clobbers": [
+      "localforage"
+    ]
+  },
+  {
+    "id": "uk.co.workingedge.phonegap.plugin.launchnavigator.LaunchNavigator",
+    "file": "plugins/uk.co.workingedge.phonegap.plugin.launchnavigator/www/ios/launchnavigator.js",
+    "pluginId": "uk.co.workingedge.phonegap.plugin.launchnavigator",
+    "merges": [
+      "launchnavigator"
     ]
   }
 ];
@@ -408,13 +424,14 @@ module.exports.metadata =
 {
   "call-number": "0.0.2",
   "com-sarriaroman-photoviewer": "1.1.18",
+  "cordova-android-support-gradle-release": "3.0.1",
   "cordova-pdf-generator": "2.0.8",
   "cordova-plugin-actionsheet": "2.3.3",
   "cordova-plugin-android-permissions": "1.0.0",
   "cordova-plugin-badge": "0.8.8",
   "cordova-plugin-calendar": "5.1.4",
   "cordova-plugin-camera": "4.0.3",
-  "cordova-plugin-device": "2.0.2",
+  "cordova-plugin-device": "2.0.3",
   "cordova-plugin-dialogs": "2.0.1",
   "cordova-plugin-document-viewer": "0.9.11",
   "cordova-plugin-fcm-with-dependecy-updated": "2.4.0",
@@ -426,13 +443,11 @@ module.exports.metadata =
   "cordova-plugin-ios-camera-permissions": "1.2.0",
   "cordova-plugin-nativestorage": "2.3.2",
   "cordova-plugin-sms": "1.0.5",
-  "cordova-plugin-splashscreen": "5.0.2",
+  "cordova-plugin-splashscreen": "5.0.3",
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-vibration": "3.1.0",
-  "cordova-plugin-whitelist": "1.3.3",
-  "cordova-support-google-services": "1.1.0",
-  "phonegap-plugin-multidex": "1.0.0",
-  "phonegap-plugin-push": "2.2.3"
+  "cordova-plugin-whitelist": "1.3.4",
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
 };
 // BOTTOM OF METADATA
 });
