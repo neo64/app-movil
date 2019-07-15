@@ -38,12 +38,15 @@ export class ChangePasswordPage {
 	*/
 	actualizarPass(){		
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
-		if(/*this.data.pass1 == "" || */this.data.pass2 == "" || this.data.pass3 == ""){
+
+		if(!this.validatePassword(this.data.pass2)){
+			this.showError("¡Atención!","La contraseña debe incluir caracteres especiales, mayúsculas, minúsculas y números");
+			return;
+		}
+
+		if(this.data.pass2 == "" || this.data.pass3 == ""){
 			this.showError("ERROR","Los campos no pueden estar vacios.");	
 			return;
-		//}else if (this.data.pass1 == this.data.pass2){
-		//	this.showError("ERROR","La nueva contraseña no puede ser igual que la anterior.");	
-		//	return;
 		}else if (this.data.pass3 != this.data.pass2){
 			this.showError("ERROR","La nuevas nuevas contraseñas deben ser iguales.");	
 			return;
@@ -109,5 +112,42 @@ export class ChangePasswordPage {
 		alert.present();
 	}
 	
+	validatePassword(password) {
+                
+		// Do not show anything when the length of password is zero.
+		if (password.length === 0) {
+			return false;
+		}
+		// Create an array and push all possible values that you want in password
+		var matchedCase = new Array();
+		matchedCase.push("[$&+,:;=?@#|'<>.^*()%!-]"); // Special Charector
+		matchedCase.push("[A-Z]");      // Uppercase Alpabates
+		matchedCase.push("[0-9]");      // Numbers
+		matchedCase.push("[a-z]");     // Lowercase Alphabates
+
+		// Check the conditions
+		var ctr = 0;
+		for (var i = 0; i < matchedCase.length; i++) {
+			if (new RegExp(matchedCase[i]).test(password)) {
+				ctr++;
+			}
+		}
+
+		switch (ctr) {
+			case 0:
+				return false;
+			case 1:
+				return false;
+			case 2:
+				return false;
+			case 3:
+				return false;
+			case 4:
+				return true;
+			default:
+				return false;
+		}
+		
+	}
 	
 }

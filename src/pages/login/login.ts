@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import { RestProvider } from '../../providers/rest/rest';
-import { NavController, Loading, ToastController, IonicPage, LoadingController, AlertController, Events  } from 'ionic-angular';
+import { NavController, Loading, ToastController, IonicPage, LoadingController, AlertController, Events, Platform  } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
 import { ChangePasswordPage } from '../../pages/change-password/change-password';
 import { LoginTabPage } from '../../pages/login-tab/login-tab';
+import { FCM } from '@ionic-native/fcm';
 
 @IonicPage()
 @Component({
@@ -19,7 +20,7 @@ export class LoginPage {
 	bIniciarSesion 	= {name : 'Iniciar sesión', svg: '', openPage : 'Login', class : 'login', tipo : 'page', gradiente: ''};
 
 
-	constructor(private toastCtrl: ToastController, public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+	constructor(public platform: Platform, private fcm: FCM, private toastCtrl: ToastController, public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 				
 		var timeNow = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
 		var expires = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
@@ -39,7 +40,36 @@ export class LoginPage {
 				this.nav.setRoot(HomePage);	
 			}		
 		});
+
+		//Notifications
+        if (this.platform.is('cordova')) {
+			this.fcm.getToken().then(token => {
+				//alert(token);
+				//Compruebo si el token esta en la bbdd y si no lo guarda
+				this.enviarTokenNotifications(token);
+				console.log("1.TOKEN = " , token);
+			});
+			this.fcm.onTokenRefresh().subscribe(token => {
+				this.enviarTokenNotifications(token);
+			});
+		}
 	}
+
+	/**
+     * 	Función que almacena el token de Firebase para las notificaciones.
+     *
+     * 	@param None
+     * 
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None 
+     */
+    enviarTokenNotifications(token) {
+        this.restProvider.enviarTokenNotifications(token).then(data => {
+            if (typeof data != "undefined" && data['status'] == 1) {} else if (data.status == 401) {} else {
+                this.showError("ERROR", data['message']);
+            }
+        });
+    }
 
 	/**
 	* 	Función que abre una página o una web dependiendo
