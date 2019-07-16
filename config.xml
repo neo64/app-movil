@@ -135,6 +135,8 @@
         <variable name="ANDROID_SUPPORT_VERSION" value="27.0.0" />
     </plugin>
     <plugin name="call-number" spec="1.0.1" />
-    <engine name="android" spec="6.4.0" />
     <engine name="ios" spec="4.5.5" />
+    <engine name="android" spec="7.1.4" />
+    <allow-navigation href="http://192.168.5.58:8100" />
+    <allow-navigation href="http://192.168.5.58:8101" />
 </widget>

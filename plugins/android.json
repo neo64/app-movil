@@ -7,72 +7,23 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-ionic-webview": {
-      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-nativestorage": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-document-viewer": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-file-opener2": {
-      "ANDROID_SUPPORT_V4_VERSION": "27.+",
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "com-sarriaroman-photoviewer": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-ios-camera-permissions": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
     "call-number": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-sms": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-android-permissions": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
-      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
-      "OKHTTP_VERSION": "3.12.0",
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-fcm-with-dependecy-updated": {
+    "com-sarriaroman-photoviewer": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-android-support-gradle-release": {
       "ANDROID_SUPPORT_VERSION": "27.0.0",
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-ionic-keyboard": {
+    "cordova-pdf-generator": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-badge": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
     "cordova-plugin-calendar": {
@@ -81,10 +32,59 @@
     "cordova-plugin-camera": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-pdf-generator": {
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-badge": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-document-viewer": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-fcm-with-dependecy-updated": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file-opener2": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-file-transfer": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ionic-keyboard": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ionic-webview": {
+      "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-ios-camera-permissions": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-nativestorage": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-sms": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-vibration": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": {
+      "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
+      "OKHTTP_VERSION": "3.12.0",
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },

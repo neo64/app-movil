@@ -16,11 +16,11 @@
     </div>
 
     <p>A continuación, podrás elegir tus preferencias respecto al profesional que quieres que te atienda, el día de la semana y la franja horaria.</p> 
-    <p>Elije el profesional</p>
+    <p>Elige el profesional</p>
     <ion-slides id="persona" slidesPerView="3.5" spaceBetween="12">
   		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">
   			<ion-row>
-	    		<button [class]="card.class + ' button'">
+	    		<button [class]="card.class + ' button'" style="height: 100%;">
 	    			<p class="avatarslide"><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;"/></p>
 	    			<p class="nameslidep">{{ card.usuario }}</p>
 	    		</button>	    		
