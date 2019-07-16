@@ -49,7 +49,6 @@ export class PedirCitaElegirPage {
 	*/
 	searchCita(dia, hora, dr, tto) {		
 		this.restProvider.searchCita(dia, hora, dr, tto).then(data => {
-			//console.log(data);
 			if(typeof data != "undefined" &&  data['status'] == 1){
 				if(JSON.parse(data['data']).length > 0){
 					this.citasBuscador = JSON.parse(data['data']);
