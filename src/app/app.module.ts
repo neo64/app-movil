@@ -149,6 +149,9 @@ import { Firebase } from '@ionic-native/firebase/ngx';
       backButtonIcon: 'fb-left',
       iconMode: 'md',
 	  mode: 'md',
+	  scrollPadding: false,
+	  scrollAssist: true,
+	  autoFocusAssist: true
     }),
 	IonicPageModule.forChild (MiSaludPage),	
   ],

@@ -39,20 +39,7 @@ export class LoginPage {
 				this.events.publish("user:logged");	
 				this.nav.setRoot(HomePage);	
 			}		
-		});
-
-		//Notifications
-        if (this.platform.is('cordova')) {
-			this.fcm.getToken().then(token => {
-				//alert(token);
-				//Compruebo si el token esta en la bbdd y si no lo guarda
-				this.enviarTokenNotifications(token);
-				console.log("1.TOKEN = " , token);
-			});
-			this.fcm.onTokenRefresh().subscribe(token => {
-				this.enviarTokenNotifications(token);
-			});
-		}
+		});		
 	}
 
 	/**
@@ -142,7 +129,19 @@ export class LoginPage {
 				window.localStorage.setItem("token", data['token']);				
 				window.localStorage.setItem("expires", data['expires']);
 
-				this.events.publish("user:logged");					
+				this.events.publish("user:logged");
+				
+				//Notifications
+				if (this.platform.is('cordova')) {
+					this.fcm.getToken().then(token => {
+						//alert(token);
+						//Compruebo si el token esta en la bbdd y si no lo guarda
+						this.enviarTokenNotifications(token);
+					});
+					this.fcm.onTokenRefresh().subscribe(token => {
+						this.enviarTokenNotifications(token);
+					});
+				}
 	
 				if(data['isDefault'] == 1)
 					this.nav.push(ChangePasswordPage, {first: true});

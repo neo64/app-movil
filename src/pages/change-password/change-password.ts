@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, Loading, AlertController,LoadingController, Events } from 'ionic-angular';
-import { HomePage } from '../../pages/home/home';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 
@@ -105,7 +104,7 @@ export class ChangePasswordPage {
 				role: 'OK',
 				handler: () => {
 				  if(redirect)
-					this.navCtrl.setRoot(HomePage);  
+					this.navCtrl.setRoot(LoginPage);  
 				}
 			}]
 		});
