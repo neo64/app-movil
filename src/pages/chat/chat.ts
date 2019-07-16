@@ -44,7 +44,7 @@ export class ChatPage {
 		this.showLoading("Cargando conversación ...");	
 		this.nickname 		= window.localStorage.getItem("idPac");
 		this.menuData 		= window.localStorage.getItem("urlPerfil");
-		this.checkFileExistence("fyb.jpeg");
+		this.checkFileExistence(window.localStorage.getItem("idPac")+".jpeg");
 		this.data.type 		= 'message';
 		this.data.nickname 	= this.nickname;
 
@@ -71,7 +71,6 @@ export class ChatPage {
 		this.restProvider.resetNotificationsChat().then(data => {
             if (typeof data != "undefined" && data['status'] == 1) {
 				this.badge.set(parseInt(data['data']));
-				console.log("----> " + parseInt(data['data']));
             } else if (data.status == 401) {
                 this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
                 this.navCtrl.setRoot(LoginPage);

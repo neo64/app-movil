@@ -25,7 +25,7 @@ export class ProfilePage {
 	base64 		= "";
 
 	constructor(private domSanitizer: DomSanitizer, private _CAMERA : Camera, public actionSheetCtrl: ActionSheetController, private file: File, public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
-		this.checkFileExistence("fyb.jpeg");
+		this.checkFileExistence(window.localStorage.getItem("idPac")+".jpeg");
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
 		this.getProfile();		// Llamada a la funcion para obtener el perfil del paciente
 		this.events.publish("user:logged");
@@ -121,7 +121,7 @@ export class ProfilePage {
 			 };
 
 			this._CAMERA.getPicture(cameraOptions).then((data) => {			
-				this.writeFile('data:image/jpeg;base64,' + data, "", "fyb.jpeg");
+				this.writeFile('data:image/jpeg;base64,' + data, "", window.localStorage.getItem("idPac")+".jpeg");
 				
 			}).catch(e => {
 				if(e == 20){

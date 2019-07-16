@@ -20,9 +20,10 @@
                 </div>
                 <div class="msg-detail">
                     <div class="msg-content">
-                        <p class="line-breaker ">
+                        <p class="line-breaker" *ngIf="msg.type != 'image'">
                             {{msg.message}}
                         </p>
+                        <img *ngIf="msg.type == 'image'" src="{{msg.message}}" (click)="printImage(msg.message)" />
                         <div class="msg-info">
                             <p>
                                 {{msg.sendDate | date:'dd/MM/yyyy HH:mm'}}
