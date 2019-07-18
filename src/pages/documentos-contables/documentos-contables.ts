@@ -152,7 +152,7 @@ export class DocumentosContablesPage {
 			
 			this.showLoading();			
 			var blob 		= this.b64toBlob(base64, 'application/pdf');			
-			var name 		= "Documento"+numDoc+".pdf";					
+			var name 		= window.localStorage.getItem("idPac")+"_Documento"+numDoc+".pdf";					
 			let directory 	= this.file.dataDirectory;
 				
 			// Guardo el fichero en la memoria del dispositivo

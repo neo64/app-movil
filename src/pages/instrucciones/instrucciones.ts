@@ -114,7 +114,7 @@ export class InstruccionesPage {
 			
 			this.showLoading();			
 			var blob 		= this.b64toBlob(base64, 'application/pdf');			
-			var name 		= "Instrucciones"+numDoc+".pdf";					
+			var name 		= window.localStorage.getItem("idPac")+"_Instrucciones"+numDoc+".pdf";					
 			let directory 	= this.file.dataDirectory;
 				
 			// Guardo el fichero en la memoria del dispositivo
