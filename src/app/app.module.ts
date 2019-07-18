@@ -88,6 +88,7 @@ import { ChartsModule } from 'ng2-charts';
 import { Badge } from '@ionic-native/badge';
 import { LaunchNavigator } from '@ionic-native/launch-navigator/';
 import { Firebase } from '@ionic-native/firebase/ngx';
+import { Keyboard } from '@ionic-native/keyboard';
 
 
 @NgModule({
@@ -149,9 +150,8 @@ import { Firebase } from '@ionic-native/firebase/ngx';
       backButtonIcon: 'fb-left',
       iconMode: 'md',
 	  mode: 'md',
-	  scrollPadding: false,
-	  scrollAssist: true,
-	  autoFocusAssist: true
+	  scrollAssist: false, 
+	  autoFocusAssist: false
     }),
 	IonicPageModule.forChild (MiSaludPage),	
   ],
@@ -220,7 +220,8 @@ import { Firebase } from '@ionic-native/firebase/ngx';
 	Camera,
     FileOpener,
     CallNumber,
-    LaunchNavigator
+	LaunchNavigator,
+	Keyboard
   ]
 })
 export class AppModule {}
