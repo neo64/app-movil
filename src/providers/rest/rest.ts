@@ -134,6 +134,22 @@ export class RestProvider {
 			return e;
 		});
 	}
+
+	estaEnhorario(){		 				
+		return new Promise((resolve, reject) => {
+			this.http.post(this.apiUrl+'/estaEnhorario', false, {
+				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
+			})
+			.subscribe(res => {	
+				resolve(res);
+			}, (err) => {				
+				reject(err);
+			});
+		 }).catch(e => {
+			console.log(e);
+			return e;
+		});
+	}
 	
 	solicitarFactura(){		 				
 		return new Promise((resolve, reject) => {

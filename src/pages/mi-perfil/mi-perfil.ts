@@ -41,7 +41,7 @@ export class MiPerfilPage {
 	cPassword 	= {name : 'CAMBIAR CONTRASEÑA', svg: 'citas', 		openPage : 'password', 	class : 'btn-large', 		tipo : 'page', gradiente: 'fb-shadow-gradient1'};
 
 	constructor(private file: File, private _CAMERA : Camera, public actionSheetCtrl: ActionSheetController, private domSanitizer: DomSanitizer, private loadingCtrl: LoadingController, public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController) {
-		this.checkFileExistence("fyb.jpeg");
+		this.checkFileExistence(window.localStorage.getItem("idPac") + ".jpeg");
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
 		this.getProfile();		// Llamada a la funcion para obtener el perfil del paciente
 		this.events.publish("user:logged");
@@ -212,7 +212,7 @@ export class MiPerfilPage {
 			 };
 
 			this._CAMERA.getPicture(cameraOptions).then((data) => {			
-				this.writeFile('data:image/jpeg;base64,' + data, "", "fyb.jpeg");
+				this.writeFile('data:image/jpeg;base64,' + data, "", window.localStorage.getItem("idPac") + ".jpeg");
 				
 			}).catch(e => {
 				if(e == 20){

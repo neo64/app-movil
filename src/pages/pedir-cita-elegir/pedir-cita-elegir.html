@@ -15,7 +15,8 @@
 	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
     </div>
 
-    <p>Elige la cita que desees, y pulsa el botón reservar.</p> 
+    <p *ngIf="citasBuscador.length > 0">Elige la cita que desees, y pulsa el botón reservar.</p>
+    <p *ngIf="citasBuscador.length == 0">No hemos encontrado citas para los criterios de búsqueda.</p>
 
    
     <ion-slides slidesPerView="1.3" spaceBetween="18" centeredSlides="true">

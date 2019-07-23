@@ -71,7 +71,7 @@ export class MisDocumentosPage {
 			
 			this.showLoading();			
 			var blob 		= this.b64toBlob(base64, 'application/pdf');			
-			var name 		= "Presupuesto"+numDoc+".pdf";					
+			var name 		= window.localStorage.getItem("idPac")+"_Presupuesto"+numDoc+".pdf";					
 			let directory 	= this.file.dataDirectory;
 				
 			// Guardo el fichero en la memoria del dispositivo

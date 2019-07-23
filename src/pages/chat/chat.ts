@@ -37,13 +37,14 @@ export class ChatPage {
 	loadingPresented 	= false;	// Controla si el Loading esta en primer plano.
 	menuData 			= "";		// Foto de perfil del usuario.
 	mostrarError        = false;    // Controla si estamos dentro del horario de la clinica
+	mensajeError		= "El horario de la clínica es de Lunes a Jueves de 09:30 a 20:30 y Viernes de 09:30 a 19:30";
 
 	constructor(private badge: Badge, private callNumber: CallNumber, private file: File, private fileOpener: FileOpener, private photoViewer: PhotoViewer, public actionSheetCtrl: ActionSheetController, public plt: Platform, private alertCtrl: AlertController, public restProvider: RestProvider, private loadingCtrl: LoadingController, private _CAMERA : Camera, public element:ElementRef, public vb : Vibration, public eventsCtrl: Events, public navCtrl: NavController, public navParams: NavParams) {
 		
 		this.showLoading("Cargando conversación ...");	
 		this.nickname 		= window.localStorage.getItem("idPac");
 		this.menuData 		= window.localStorage.getItem("urlPerfil");
-		this.checkFileExistence("fyb.jpeg");
+		this.checkFileExistence(window.localStorage.getItem("idPac")+".jpeg");
 		this.data.type 		= 'message';
 		this.data.nickname 	= this.nickname;
 
@@ -56,41 +57,13 @@ export class ChatPage {
 		// a la página de home.
 		var timeNow 		= new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
 		this.mostrarError 	= false;
-		this.restProvider.getTimeServer().then(data => {
+		this.restProvider.estaEnhorario().then(data => {
 			
 			if(typeof data != "undefined" && data['status'] == 1){
-				timeNow = new Date(Number(data['timeStamp']));
-
-				//Controlo si estamos en horario de clínica y si no muestro mensaje de horario
-				//Si es sábado o domingo
-				if(timeNow.getDay() == 0 || timeNow.getDay() == 6){
+				if(data['estaEnHorario'] != "true")
 					this.mostrarError = true;
-				//Si es viernes
-				}else if(timeNow.getDay() == 5){
-					//Si estamos fuera de las 9:00 y las 20:00
-					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 20){
-						//Si son justo las 9 y + de 1min no muestro el mensaje
-						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 0){
-							this.mostrarError = false;
-						}else if(timeNow.getHours() == 20 && timeNow.getMinutes() <= 0){
-							this.mostrarError = false;
-						}else{
-							this.mostrarError = true;
-						}					
-					}
-				}else{
-					if(timeNow.getHours() <= 9 || timeNow.getHours() >= 21){
 
-						if(timeNow.getHours() == 9 && timeNow.getMinutes() >= 0){
-							this.mostrarError = false;
-						}else if(timeNow.getHours() == 21 && timeNow.getMinutes() <= 0){
-							this.mostrarError = false;
-						}else{
-							this.mostrarError = true;
-						}					
-					}
-				}
-				this.mostrarError = true;			
+				this.mensajeError = data['message'];		
 			}		
 					
 		});
@@ -98,7 +71,6 @@ export class ChatPage {
 		this.restProvider.resetNotificationsChat().then(data => {
             if (typeof data != "undefined" && data['status'] == 1) {
 				this.badge.set(parseInt(data['data']));
-				console.log("----> " + parseInt(data['data']));
             } else if (data.status == 401) {
                 this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
                 this.navCtrl.setRoot(LoginPage);
@@ -404,7 +376,7 @@ export class ChatPage {
 				firebase.database().ref(this.nickname + "/" + data.timeStamp+1).set ({
 					type:		this.data.type,
 					user:		"atPaciente",
-					message:	"¡Atención!,El horario de la clínica es: L-J de 09:30 a 20:30 V de 09:30 a 19:30",
+					message:	this.mensajeError,
 					sendDate:	new Date(Number(data.timeStamp)).toString(),
 					read: 		false
 				});
