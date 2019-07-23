@@ -20,7 +20,7 @@
                 </div>
                 <div class="msg-detail">
                     <div class="msg-content">
-                        <p class="line-breaker" *ngIf="msg.type != 'image'">
+                        <p class="line-breaker" *ngIf="msg.type != 'image'" style="word-break: break-all;">
                             {{msg.message}}
                         </p>
                         <img *ngIf="msg.type == 'image'" src="{{msg.message}}" (click)="printImage(msg.message)" />
