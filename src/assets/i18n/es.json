@@ -7,9 +7,23 @@
     "TITLE": "Crear contraseña",
     "CONTRASENA": "Contraseña",
     "REPETIR_CONTRASENA": "Repetir contraseña",
-    "TITULO": "Cambia tu contraseña6",
-    "SUBTITULO": "para acceder a la App6",
-    "CREA_TU_CONTRASENA": "Crea tu contraseña"
+    "TITULO": "Cambia tu contraseña",
+    "SUBTITULO": "para acceder a la App",
+    "CREA_TU_CONTRASENA": "Crea tu contraseña",
+    "GUARDAR_CONTRASENA": "Guardar contraseña"
+  },
+  "CHAT": {
+    "TITLE": "Ferrus & Bratos",
+    "CARGANDO_CONVERSACION": "Cargando Conversación ...",
+    "ATENCION": "¡Atención!",
+    "ELIGE_OPCION": "Elige una opción",
+    "CAMARA": "Camara",
+    "GALERIA": "Galeria",
+    "ENVIANDO_IMAGEN": "Enviando imagen ...",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR": "ERROR",
+    "ERROR_ENVIO_IMAGEN_PERMISOS": "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.",
+    "ERROR_ENVIO_IMAGEN": "Error al intentar enviar la imagen."
   },
 
   "HOME": {

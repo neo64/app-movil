@@ -23,7 +23,7 @@ export class ChangePasswordPage {
   loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
   data = { /*pass1: '', */ pass2: "", pass3: "" }; // Array con las tres contraseñas (antigua, 2 nuevas)
   bGuardar = {
-    name: "Guardar contraseña",
+    name: "",
     svg: "",
     openPage: "Login",
     class: "active login",
@@ -44,6 +44,9 @@ export class ChangePasswordPage {
     public navParams: NavParams,
     private translate: TranslateService
   ) {
+    this.bGuardar.name = translate.instant(
+      "CHANGE_PASSWORD.GUARDAR_CONTRASENA"
+    );
     this.tituloSubtitulo.titulo = translate.instant("CHANGE_PASSWORD.TITULO");
     this.tituloSubtitulo.subtitulo = translate.instant(
       "CHANGE_PASSWORD.SUBTITULO"

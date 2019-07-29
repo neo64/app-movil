@@ -7,9 +7,17 @@
     "TITLE": "Crear contraseña",
     "CONTRASENA": "Contraseña",
     "REPETIR_CONTRASENA": "Repetir contraseña",
-    "TITULO": "Cambia tu contraseña6",
-    "SUBTITULO": "para acceder a la App6",
-    "CREA_TU_CONTRASENA": "Crea tu contraseña"
+    "TITULO": "Cambia tu contraseña",
+    "SUBTITULO": "para acceder a la App",
+    "CREA_TU_CONTRASENA": "Crea tu contraseña",
+    "GUARDAR_CONTRASENA": "Guardar contraseña"
+  },
+  "CHAT": {
+    "TITLE": "Ferrus & Bratos",
+    "CARGANDO_CONVERSACION": "2Cargando Conversación ...",
+    "ATENCION": "¡Atención!",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ELIGE_OPCION": "Elige una opción"
   },
 
   "HOME": {
