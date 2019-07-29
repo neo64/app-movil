@@ -93,6 +93,7 @@ import { Firebase } from "@ionic-native/firebase/ngx";
 import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
+import { Keyboard } from "@ionic-native/keyboard";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -156,7 +157,9 @@ export function createTranslateLoader(http: HttpClient) {
       backButtonText: "",
       backButtonIcon: "fb-left",
       iconMode: "md",
-      mode: "md"
+      mode: "md",
+      scrollAssist: false,
+      autoFocusAssist: false
     }),
     TranslateModule.forRoot({
       loader: {
@@ -230,7 +233,8 @@ export function createTranslateLoader(http: HttpClient) {
     Camera,
     FileOpener,
     CallNumber,
-    LaunchNavigator
+    LaunchNavigator,
+    Keyboard
   ]
 })
 export class AppModule {}

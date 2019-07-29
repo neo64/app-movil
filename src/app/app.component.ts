@@ -36,6 +36,7 @@ import * as firebase from "firebase";
 import { FCM } from "@ionic-native/fcm";
 
 import { Badge } from "@ionic-native/badge";
+import { Keyboard } from "@ionic-native/keyboard";
 
 import { TranslateService } from "@ngx-translate/core";
 
@@ -72,6 +73,7 @@ export class MyApp {
   };
 
   constructor(
+    private keyboard: Keyboard,
     public menuCtrl: MenuController,
     private alertCtrl: AlertController,
     private fcm: FCM,
@@ -145,8 +147,23 @@ export class MyApp {
   initializeApp() {
     this.platform.ready().then(() => {
       this.events.subscribe("user:logged", () => {
-        //this.getDataMenu();
+        this.getDataMenu();
       });
+
+      if (this.platform.is("ios")) {
+        let appEl = <HTMLElement>document.getElementsByTagName("ION-APP")[0],
+          appElHeight = appEl.clientHeight;
+
+        this.keyboard.disableScroll(true);
+
+        window.addEventListener("native.keyboardshow", e => {
+          appEl.style.height = appElHeight - (<any>e).keyboardHeight + "px";
+        });
+
+        window.addEventListener("native.keyboardhide", () => {
+          appEl.style.height = "100%";
+        });
+      }
 
       //Notifications
       if (this.platform.is("cordova")) {

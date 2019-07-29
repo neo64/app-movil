@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { App, IonicPage, NavController, NavParams, Events, Loading, LoadingController, AlertController } from 'ionic-angular';
+import { App, IonicPage, NavController, NavParams, Events, Loading, LoadingController, AlertController, Platform } from 'ionic-angular';
 
 import { RestProvider } from '../../providers/rest/rest';
 
 import { HomePage } from '../../pages/home/home';
 
 import { LoginOlvidoPage } from '../../pages/login-olvido/login-olvido';
+import { FCM } from '@ionic-native/fcm';
+
 
 /**
  * Generated class for the LoginInputPage page.
@@ -26,7 +28,7 @@ export class LoginInputPage {
 	bIniciar 	= {name : 'Iniciar sesión', svg: '', openPage : 'PedirCita', class : 'active login', tipo : 'page', gradiente: ''};
 	registerCredentials = { email: '', password: '' };	// Array con los campos del formulario
 
-	constructor(private app : App, public events: Events, public nav: NavController, public navParams: NavParams, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+	constructor(public platform: Platform, private fcm: FCM,private app : App, public events: Events, public nav: NavController, public navParams: NavParams, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 	
 	}
 
@@ -37,6 +39,22 @@ export class LoginInputPage {
 	goTab(n){
 		this.nav.parent.select(n);
 	}
+
+	/**
+     * 	Función que almacena el token de Firebase para las notificaciones.
+     *
+     * 	@param None
+     * 
+     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+     * 	@return None 
+     */
+    enviarTokenNotifications(token) {
+        this.restProvider.enviarTokenNotifications(token).then(data => {
+            if (typeof data != "undefined" && data['status'] == 1) {} else if (data.status == 401) {} else {
+                this.showError("ERROR", data['message']);
+            }
+        });
+    }
 
 	/**
 	* 	Función que comprueba si el usuario y la contraseña
@@ -66,6 +84,19 @@ export class LoginInputPage {
 				window.localStorage.setItem("expires", data['expires']);
 
 				this.events.publish("user:logged");	
+
+				//Notifications
+				if (this.platform.is('cordova')) {
+					this.fcm.getToken().then(token => {
+						//alert(token);
+						//Compruebo si el token esta en la bbdd y si no lo guarda
+						this.enviarTokenNotifications(token);
+					});
+					this.fcm.onTokenRefresh().subscribe(token => {
+						this.enviarTokenNotifications(token);
+					});
+				}
+
 				this.app.getRootNav().setRoot(HomePage);
 				
 			}else{
