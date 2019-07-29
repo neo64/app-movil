@@ -3,26 +3,27 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Pruebas diagnosticas</ion-title>
+    <ion-title>{{ 'ACCESO_RESULTADOS.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
-<ion-list>
-  
-  <div ion-item *ngFor="let file of files">
-    
-    <ion-avatar item-start>
-      <img [src]="domSanitizer.bypassSecurityTrustUrl(file.url)" [ngStyle]="{'background-size': 'cover','border-radius': 'unset'}" imageViewer />
-    </ion-avatar>
-    
-    <h2 style="margin-top: 0rem; ">{{file.nombre}}</h2>    
-    <p>Pulsa para ver la imagen.</p>
-    
-  </div>
-  
-</ion-list>
+  <ion-list>
+
+    <div ion-item *ngFor="let file of files">
+
+      <ion-avatar item-start>
+        <img [src]="domSanitizer.bypassSecurityTrustUrl(file.url)"
+          [ngStyle]="{'background-size': 'cover','border-radius': 'unset'}" imageViewer />
+      </ion-avatar>
+
+      <h2 style="margin-top: 0rem; ">{{file.nombre}}</h2>
+      <p>{{ 'ACCESO_RESULTADOS.VER_IMAGEN' | translate }}</p>
+
+    </div>
+
+  </ion-list>
 
 </ion-content>

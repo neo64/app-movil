@@ -27,14 +27,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-actionsheet.ActionSheet",
-    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
-    "pluginId": "cordova-plugin-actionsheet",
-    "clobbers": [
-      "window.plugins.actionsheet"
-    ]
-  },
-  {
     "id": "cordova-plugin-android-permissions.Permissions",
     "file": "plugins/cordova-plugin-android-permissions/www/permissions-dummy.js",
     "pluginId": "cordova-plugin-android-permissions",
@@ -417,6 +409,14 @@ module.exports = [
     "merges": [
       "launchnavigator"
     ]
+  },
+  {
+    "id": "cordova-plugin-actionsheet.ActionSheet",
+    "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+    "pluginId": "cordova-plugin-actionsheet",
+    "clobbers": [
+      "window.plugins.actionsheet"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -426,7 +426,6 @@ module.exports.metadata =
   "com-sarriaroman-photoviewer": "1.1.18",
   "cordova-android-support-gradle-release": "3.0.1",
   "cordova-pdf-generator": "2.0.8",
-  "cordova-plugin-actionsheet": "2.3.3",
   "cordova-plugin-android-permissions": "1.0.0",
   "cordova-plugin-badge": "0.8.8",
   "cordova-plugin-calendar": "5.1.4",
@@ -447,7 +446,8 @@ module.exports.metadata =
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.4",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+  "cordova-plugin-actionsheet": "2.3.3"
 };
 // BOTTOM OF METADATA
 });

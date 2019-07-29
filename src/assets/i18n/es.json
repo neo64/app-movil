@@ -1,0 +1,25 @@
+{
+  "ACCESO_RESULTADOS": {
+    "TITLE": "Pruebas diagnosticas",
+    "VER_IMAGEN": "Pulsa para ver la imagen."
+  },
+  "CHANGE_PASSWORD": {
+    "TITLE": "Crear contraseña",
+    "CONTRASENA": "Contraseña",
+    "REPETIR_CONTRASENA": "Repetir contraseña",
+    "TITULO": "Cambia tu contraseña6",
+    "SUBTITULO": "para acceder a la App6",
+    "CREA_TU_CONTRASENA": "Crea tu contraseña"
+  },
+
+  "HOME": {
+    "TITLE": "Ferrus & Bratos",
+    "PROXIMAS_CITAS": "Próximas Citas",
+    "NO_TIENES_CITAS": "Actualmente no tienes citas",
+    "MENU": "Menú",
+    "VER_MAS": "Ver más",
+    "ERROR_SIN_SESION": "¡Atención!, Se ha perdido la sesión, por favor vuelva a iniciar."
+  },
+  "WELCOME": "Bienvenido",
+  "GREETING": "Hola, {{ value }}"
+}

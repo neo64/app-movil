@@ -4,5 +4,6 @@
     "cordova": {}
   },
   "type": "ionic-angular",
-  "id": "570bf17f"
+  "id": "570bf17f",
+  "app_id": ""
 }

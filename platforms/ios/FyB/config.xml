@@ -25,9 +25,6 @@
     <feature name="PhotoViewer">
         <param name="ios-package" value="PhotoViewer" />
     </feature>
-    <feature name="ActionSheet">
-        <param name="ios-package" value="ActionSheet" />
-    </feature>
     <feature name="Badge">
         <param name="ios-package" value="APPBadge" />
     </feature>
@@ -84,6 +81,9 @@
     </feature>
     <feature name="LaunchNavigator">
         <param name="ios-package" value="LaunchNavigatorPlugin" />
+    </feature>
+    <feature name="ActionSheet">
+        <param name="ios-package" value="ActionSheet" />
     </feature>
     <feature name="pdfService">
         <param name="ios-package" value="PDFGenerator" />

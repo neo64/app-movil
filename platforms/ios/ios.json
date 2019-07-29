@@ -17,10 +17,6 @@
               "count": 1
             },
             {
-              "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
-              "count": 1
-            },
-            {
               "xml": "<feature name=\"Badge\"><param name=\"ios-package\" value=\"APPBadge\" /></feature>",
               "count": 1
             },
@@ -114,6 +110,10 @@
             },
             {
               "xml": "<feature name=\"LaunchNavigator\"><param name=\"ios-package\" value=\"LaunchNavigatorPlugin\" /></feature>",
+              "count": 1
+            },
+            {
+              "xml": "<feature name=\"ActionSheet\"><param name=\"ios-package\" value=\"ActionSheet\" /></feature>",
               "count": 1
             }
           ],
@@ -218,9 +218,6 @@
     "cordova-pdf-generator": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-actionsheet": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
     "cordova-plugin-android-permissions": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
@@ -290,6 +287,9 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
       "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-actionsheet": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
   "dependent_plugins": {},
@@ -318,14 +318,6 @@
         "cordova.plugins.pdf",
         "pugin.pdf",
         "pdf"
-      ]
-    },
-    {
-      "id": "cordova-plugin-actionsheet.ActionSheet",
-      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
-      "pluginId": "cordova-plugin-actionsheet",
-      "clobbers": [
-        "window.plugins.actionsheet"
       ]
     },
     {
@@ -711,6 +703,14 @@
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-actionsheet.ActionSheet",
+      "file": "plugins/cordova-plugin-actionsheet/www/ActionSheet.js",
+      "pluginId": "cordova-plugin-actionsheet",
+      "clobbers": [
+        "window.plugins.actionsheet"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -718,7 +718,6 @@
     "com-sarriaroman-photoviewer": "1.1.18",
     "cordova-android-support-gradle-release": "3.0.1",
     "cordova-pdf-generator": "2.0.8",
-    "cordova-plugin-actionsheet": "2.3.3",
     "cordova-plugin-android-permissions": "1.0.0",
     "cordova-plugin-badge": "0.8.8",
     "cordova-plugin-calendar": "5.1.4",
@@ -739,6 +738,7 @@
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.4",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+    "cordova-plugin-actionsheet": "2.3.3"
   }
 }
