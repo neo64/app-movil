@@ -37,6 +37,7 @@ import { CallNumber } from "@ionic-native/call-number";
 import { Badge } from "@ionic-native/badge";
 
 import { TranslateService } from "@ngx-translate/core";
+import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
 
 @Component({
   selector: "page-home",
@@ -65,7 +66,8 @@ export class HomePage {
     private loadingCtrl: LoadingController,
     private alertCtrl: AlertController,
     public navCtrl: NavController,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private inAppBrowser: InAppBrowser
   ) {
     this.events.publish("user:logged");
   }
@@ -143,11 +145,21 @@ export class HomePage {
       else if (page == "Comollegar") this.navCtrl.push(ComollegarPage);
       else this.presentToast(this.translate.instant("HOME.ERROR_PAG_NO_DISPONIBLE"));
     } else if (tipo == "web") {
-      window.open(page, "_system", "location=yes");
+      //window.open(page, "_system", "location=yes");
+      this.openWebPage(page);
     } else {
       this.presentToast("La página '" + page + "' de tipo '" + tipo + "' no está disponible.");
     }
   }
+
+  openWebPage(url: string) {
+    const options: InAppBrowserOptions = {
+      location: "yes"
+    };
+
+    const browser = this.inAppBrowser.create(url, "_system", options);
+  }
+
   /**
      * 	Función que muestra un Toast con la información
      *	referente a la acción del usuario.

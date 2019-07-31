@@ -88,6 +88,9 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "LOCATION_USAGE_DESCRIPTION": "This app requires access to your location for navigation purposes",
       "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
   "dependent_plugins": {

@@ -417,6 +417,15 @@ module.exports = [
     "clobbers": [
       "window.plugins.actionsheet"
     ]
+  },
+  {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -447,7 +456,8 @@ module.exports.metadata =
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.4",
   "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
-  "cordova-plugin-actionsheet": "2.3.3"
+  "cordova-plugin-actionsheet": "2.3.3",
+  "cordova-plugin-inappbrowser": "3.1.0"
 };
 // BOTTOM OF METADATA
 });

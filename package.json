@@ -36,6 +36,7 @@
     "@ionic-native/file-opener": "^4.15.0",
     "@ionic-native/file-transfer": "^4.19.0",
     "@ionic-native/firebase": "^5.0.0-beta.14",
+    "@ionic-native/in-app-browser": "^4.20.0",
     "@ionic-native/keyboard": "^4.12.0",
     "@ionic-native/launch-navigator": "^4.20.0",
     "@ionic-native/native-storage": "^4.11.0",
@@ -74,6 +75,7 @@
     "cordova-plugin-file-opener2": "^2.0.19",
     "cordova-plugin-file-transfer": "^1.7.1",
     "cordova-plugin-firebase": "2.0.5",
+    "cordova-plugin-inappbrowser": "3.1.0",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
     "cordova-plugin-ionic-webview": "^2.0.2",
     "cordova-plugin-ios-camera-permissions": "1.2.0",
@@ -144,7 +146,8 @@
       "cordova-plugin-fcm-with-dependecy-updated": {},
       "cordova-android-support-gradle-release": {
         "ANDROID_SUPPORT_VERSION": "27.0.0"
-      }
+      },
+      "cordova-plugin-inappbrowser": {}
     },
     "platforms": [
       "ios",

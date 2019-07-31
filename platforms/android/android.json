@@ -91,6 +91,10 @@
             {
               "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"uk.co.workingedge.phonegap.plugin.LaunchNavigatorPlugin\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -321,6 +325,9 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
       "OKHTTP_VERSION": "3.12.0",
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
@@ -735,6 +742,15 @@
       "merges": [
         "launchnavigator"
       ]
+    },
+    {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -763,6 +779,7 @@
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.4",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
+    "cordova-plugin-inappbrowser": "3.1.0"
   }
 }

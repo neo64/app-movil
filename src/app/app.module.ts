@@ -1,11 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { ErrorHandler, NgModule } from "@angular/core";
-import {
-  IonicApp,
-  IonicErrorHandler,
-  IonicModule,
-  IonicPageModule
-} from "ionic-angular";
+import { IonicApp, IonicErrorHandler, IonicModule, IonicPageModule } from "ionic-angular";
 //import { HttpClientModule } from "@angular/common/http";
 import { NativeStorage } from "@ionic-native/native-storage";
 
@@ -94,6 +89,7 @@ import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { HttpClient, HttpClientModule } from "@angular/common/http";
 import { Keyboard } from "@ionic-native/keyboard";
+import { InAppBrowser } from "@ionic-native/in-app-browser";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, "./assets/i18n/", ".json");
@@ -234,7 +230,8 @@ export function createTranslateLoader(http: HttpClient) {
     FileOpener,
     CallNumber,
     LaunchNavigator,
-    Keyboard
+    Keyboard,
+    InAppBrowser
   ]
 })
 export class AppModule {}
