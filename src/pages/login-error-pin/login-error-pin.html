@@ -3,17 +3,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Error al validar</ion-title>
+    <ion-title>{{ 'LOGIN_ERROR_PIN.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<div>
-		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-	</div>
-	<p>No hemos podido validar tus datos, si eres paciente, porfavor llamanos al <span (click)="callClinica()">91 768 18 12</span> y te gestionamos el alta en la aplicación</p>
-	<br />
-	<div style="max-height:5rem; width: 80%; margin: 0 auto;">
-		<fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>
-	</div>
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+  <p>{{ 'LOGIN_ERROR_PIN.ERROR_PIN_1' | translate }} <span (click)="callClinica()">91 768 18
+      12</span> {{ 'LOGIN_ERROR_PIN.ERROR_PIN_2' | translate }}</p>
+  <br />
+  <div style="max-height:5rem; width: 80%; margin: 0 auto;">
+    <fb-button [name]="bLLamar" [class]="bLLamar.class" (click)="callClinica()"></fb-button>
+  </div>
 </ion-content>

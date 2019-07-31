@@ -3,30 +3,35 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Sugerencias</ion-title>
+    <ion-title>{{ 'SUGERENCIAS.TITLE' | translate }}
+    </ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
 
-	<ion-list>
-		<ion-item>
-			<ion-label stacked>Escribe tu nombre</ion-label>
-			<ion-input [(ngModel)]="data.nombre" placeholder="Opcional"></ion-input><ion-icon name="fb-user" item-right></ion-icon>
-		</ion-item>
-		<ion-item>
-			<ion-label stacked>Escribe tu email</ion-label>
-			<ion-input [(ngModel)]="data.email" placeholder="Opcional"></ion-input><ion-icon name="fb-mail" item-right></ion-icon>
-		</ion-item>
-		<ion-item>
-			<ion-label stacked>Escribe tu teléfono</ion-label>
-			<ion-input [(ngModel)]="data.movil" placeholder="Opcional"></ion-input><ion-icon name="fb-telephone" item-right></ion-icon>
-		</ion-item>
-		<ion-item>
-			<ion-label stacked>Ayudanos a mejorar, gracias!</ion-label>
-			<ion-textarea [(ngModel)]="data.texto" rows="5" placeholder="Escribe tu sugerencia. Por favor, cuéntanos tu propuesta o recomendación."></ion-textarea>
-		</ion-item>
-		<ion-item>
-			<fb-button [name]="bEnviar" [class]="bEnviar.class" (click)="setSugerencia()"></fb-button>
-		</ion-item>
-	</ion-list>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>{{ 'SUGERENCIAS.NOMBRE' | translate }}</ion-label>
+      <ion-input [(ngModel)]="data.nombre" placeholder="Opcional"></ion-input>
+      <ion-icon name="fb-user" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'SUGERENCIAS.MAIL' | translate }}</ion-label>
+      <ion-input [(ngModel)]="data.email" placeholder="Opcional"></ion-input>
+      <ion-icon name="fb-mail" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'SUGERENCIAS.TEF' | translate }}</ion-label>
+      <ion-input [(ngModel)]="data.movil" placeholder="Opcional"></ion-input>
+      <ion-icon name="fb-telephone" item-right></ion-icon>
+    </ion-item>
+    <ion-item>
+      <ion-label stacked>{{ 'SUGERENCIAS.AYUDANOS' | translate }}</ion-label>
+      <ion-textarea [(ngModel)]="data.texto" rows="5" placeholder="{{ 'SUGERENCIAS.SUGERENCIA' | translate }}">
+      </ion-textarea>
+    </ion-item>
+    <ion-item>
+      <fb-button [name]="bEnviar" [class]="bEnviar.class" (click)="setSugerencia()"></fb-button>
+    </ion-item>
+  </ion-list>
 </ion-content>

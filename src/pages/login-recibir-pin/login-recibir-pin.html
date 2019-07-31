@@ -3,32 +3,33 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Introduce el PIN</ion-title>
+    <ion-title>{{ 'LOGIN_RECIBIR_PIN.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<div>
-		<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-	</div>
-	<p>
-		Introduce el pin de 6 dígitos que te hemos enviado por {{ data.tipo }}: <span>{{ data.direccion }}</span>
-	</p>
-	<br />
-	<ion-list>
-		<ion-item>
-			<ion-label stacked>PIN</ion-label>
-			<ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input><ion-icon name="fb-pin" item-right></ion-icon>
-		</ion-item>
-		<p class="olvido">Nº de 6 dígitos</p>		
-	</ion-list>
-	<div style="max-height:5rem; width: 80%; margin: 0 auto;">
-		<fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>
-	</div>
-	<ion-footer>
-		<p style="text-align: center;">
-			No lo he recibido.<br/>
-			<a (click)="reEnviarPIN()">Reenviar PIN</a>
-		</p>
-	</ion-footer>
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+  <p>
+    {{ 'LOGIN_RECIBIR_PIN.INTRODUCE_PIN' | translate }} {{ data.tipo }}: <span>{{ data.direccion }}</span>
+  </p>
+  <br />
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>{{ 'LOGIN_RECIBIR_PIN.PIN' | translate }}</ion-label>
+      <ion-input type="number" [(ngModel)]="registerCredentials.digitos"></ion-input>
+      <ion-icon name="fb-pin" item-right></ion-icon>
+    </ion-item>
+    <p class="olvido">{{ 'LOGIN_RECIBIR_PIN.6_DIG' | translate }}</p>
+  </ion-list>
+  <div style="max-height:5rem; width: 80%; margin: 0 auto;">
+    <fb-button [name]="bCrear" [class]="bCrear.class" (click)="checkPIN(data.dni, false, false)"></fb-button>
+  </div>
+  <ion-footer>
+    <p style="text-align: center;">
+      {{ 'LOGIN_RECIBIR_PIN.NO_RECIBIDO' | translate }}<br />
+      <a (click)="reEnviarPIN()">{{ 'LOGIN_RECIBIR_PIN.REENVIAR_PIN' | translate }}</a>
+    </p>
+  </ion-footer>
 </ion-content>

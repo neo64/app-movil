@@ -1,51 +1,49 @@
 <ion-header no-border>
   <ion-navbar>
-    <ion-title>Mis Consejos</ion-title>
-	  <ion-buttons right>
-		<button ion-button (click)="openPage('chat')">
-			<ion-icon name="fb-chat"></ion-icon>
-		</button>
-	</ion-buttons>
+    <ion-title>{{ 'CONSEJOS_PERSONALIZADOS.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-	
-    <div>
-	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
-    <div *ngIf="cards?.length > 0; else notCards">
-        <p>Tu especialista quiere hacerte llegar una serie de recomendaciones personalizadas. Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.
-    </p>
-    </div>
-    <ng-template #notCards>
-        <p>De momento, no necesitas seguir ninguna recomendación especial.
-        </p>
-    </ng-template>
 
-    <br />	 
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+  <div *ngIf="cards?.length > 0; else notCards">
+    <p>{{ 'CONSEJOS_PERSONALIZADOS.CON_CONSEJO' | translate }}</p>
+  </div>
+  <ng-template #notCards>
+    <p>{{ 'CONSEJOS_PERSONALIZADOS.SIN_CONSEJO' | translate }}</p>
+  </ng-template>
 
-	<div *ngFor="let card of cards">
-		<div class="fb-card -v1" (click)="openPage(card)">
-                <div class="left">
-                    <div class="avatar">
-                        <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" />
-                    </div>
-                </div>
-                <div class="center">
-                    <div class="card_title">
-                        {{ card.Tratamiento }}
-                    </div>
-                    <div class="card_subtitle">
-                        {{ card.Doctor }}
-                    </div>
-                </div>
-                <div class="right">
-                    <a class="fb-btn -rounded -bg-pink">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
-                            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
-                        </svg> 
-                    </a>
-                </div>
-            </div>
-	</div>
+  <br />
+
+  <div *ngFor="let card of cards">
+    <div class="fb-card -v1" (click)="openPage(card)">
+      <div class="left">
+        <div class="avatar">
+          <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(card.Img)" />
+        </div>
+      </div>
+      <div class="center">
+        <div class="card_title">
+          {{ card.Tratamiento }}
+        </div>
+        <div class="card_subtitle">
+          {{ card.Doctor }}
+        </div>
+      </div>
+      <div class="right">
+        <a class="fb-btn -rounded -bg-pink">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" viewBox="0 0 42 42" style="margin: .5rem 0 0 1rem;">
+            <path fill="#fff" stroke="#fff" d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
 </ion-content>

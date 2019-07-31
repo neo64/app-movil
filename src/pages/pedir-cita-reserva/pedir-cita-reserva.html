@@ -1,102 +1,104 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Cita Reservada</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'PEDIR_CITA_RESERVA.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	
-	<div>
-	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
 
-    <p>Contrary to popular belief/opinion. Del Lonncontrary to popula</p>
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
 
-    <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">
-	    <ion-slide *ngFor="let item of citasBuscador">
-	      <div class="fb-card -vcita -gradient">
-	          <div class="card_row">
-	              <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
-	                  <div class="card_subtitle -white" style="font-size: 1.4rem;">
-	                      {{item.diaSemana}}
-	                  </div>
-	                  <div class="card_time -white">
-	                      {{item.dia}}
-	                      <span>
-	                      {{item.mes}}
-	                      </span>
-	                  </div>
-	                  <div class="card_subtitle -white" style="font-size:1rem;">
-	                      {{item.ano}}
-	                  </div>
-	              </div>
-	              <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">
-	                  <div style="display:flex;flex-direction:column;align-items: flex-end;">
-	                      <div class="card_time -white">
-	                          {{item.hora}}
-	                          <span style="display:inline;">
-	                              H
-	                          </span>
-	                      </div>
-	                      <div class="card_subtitle -white">
-	                          Duración:
-	                          <span>
-	                              {{item.Duracion}}'
-	                          </span>
-	                      </div>
-	                  </div>
-	              </div>
-	          </div>
-	          <div class="card_content -bg-white">
-	              <div class="card_row">
-	                  <div>
-	                      <div class="card_label">
-	                          Tratamiento
-	                      </div>
-	                      <div class="card_title">
-	                         {{item.tratamiento}}
-	                      </div>
-	                  </div>
-	              </div>
-	              <div class="card_separator">
-	              </div>
-	              <div class="card_row">
-	                  <div class="left">
-	                      <div class="card_label">
-	                          Profesional
-	                      </div>
-	                      <div class="card_container">
-	                          <div class="avatar">
-	                              <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />
-	                          </div>
-	                          <div class="card_title">
-	                             {{item.usuario}}
-	                          </div>
-	                      </div>
-	                  </div>
-	                  <div class="right">
-	                      <div class="card_label">
-	                          Estado de la cita
-	                      </div>
-	                      <div class="card_estado">
-	                          Reservada
-	                      </div>
-	                  </div>
-	              </div>
-	          </div>
-	      </div>
-	    </ion-slide>
- 	</ion-slides>
+  <p>{{ 'PEDIR_CITA_RESERVA.INTRO' | translate }}</p>
 
- 	<p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">4 de 4</p>
+  <ion-slides spaceBetween="20" slidesPerView="1.3" centeredSlides="true" centerInsufficientSlides="true">
+    <ion-slide *ngFor="let item of citasBuscador">
+      <div class="fb-card -vcita -gradient">
+        <div class="card_row">
+          <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
+            <div class="card_subtitle -white" style="font-size: 1.4rem;">
+              {{item.diaSemana}}
+            </div>
+            <div class="card_time -white">
+              {{item.dia}}
+              <span>
+                {{item.mes}}
+              </span>
+            </div>
+            <div class="card_subtitle -white" style="font-size:1rem;">
+              {{item.ano}}
+            </div>
+          </div>
+          <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">
+            <div style="display:flex;flex-direction:column;align-items: flex-end;">
+              <div class="card_time -white">
+                {{item.hora}}
+                <span style="display:inline;">
+                  H
+                </span>
+              </div>
+              <div class="card_subtitle -white">
+                {{ 'CONSULTAR_CITAS_FUTURAS.DURACION' | translate }}
+                <span>
+                  {{item.Duracion}}'
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card_content -bg-white">
+          <div class="card_row">
+            <div>
+              <div class="card_label">
+                {{ 'CONSULTAR_CITAS_FUTURAS.TRATAMIENTO' | translate }}
+              </div>
+              <div class="card_title">
+                {{item.tratamiento}}
+              </div>
+            </div>
+          </div>
+          <div class="card_separator">
+          </div>
+          <div class="card_row">
+            <div class="left">
+              <div class="card_label">
+                {{ 'CONSULTAR_CITAS_FUTURAS.PROFESIONAL' | translate }}
+              </div>
+              <div class="card_container">
+                <div class="avatar">
+                  <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />
+                </div>
+                <div class="card_title">
+                  {{item.usuario}}
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="card_label">
+                {{ 'CONSULTAR_CITAS_FUTURAS.ESTADO' | translate }}
+              </div>
+              <div class="card_estado">
+                {{ 'PEDIR_CITA_RESERVA.RESERVADA' | translate }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
 
-	<ion-row style="max-height: 9%;    display: flex;    width: 50%;    margin: 0 auto;">
-		<ion-col><fb-button [name]="bInicio" [class]="bInicio.class" (click)="inicio()" ></fb-button></ion-col>
-	</ion-row>
+  <p style=" text-align: center; margin: 2rem 0 0; font-size: 1rem;">4 de 4</p>
+
+  <ion-row style="max-height: 9%;    display: flex;    width: 50%;    margin: 0 auto;">
+    <ion-col>
+      <fb-button [name]="bInicio" [class]="bInicio.class" (click)="inicio()"></fb-button>
+    </ion-col>
+  </ion-row>
 
 </ion-content>

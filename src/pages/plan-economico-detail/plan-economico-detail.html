@@ -1,102 +1,93 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Mis Domiciliaciones</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'PLAN_ECONOMICO_DETAIL.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 <ion-content padding>
-	
-	<div>
-     <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
 
-    <p>A continuación, podrás tener acceso a todos tus pagos realizados y pendientes. De esta manera, tendrás la posibilidad de consultar en cualquier momento la información económica sobre tu tratamiento.</p>
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
 
-    <div class="card_container">
-	    <div class="fb-card -vgraph">
-	        <div style="padding:0.5rem;">
-	            <div class="card_subtitle">
-	                Pagado
-	            </div>
-	            <div class="card_title">
-	                 {{ importes.pagado }}€
-	            </div>
-	        </div>
-	        <div class="card_graph">
-	        	<canvas baseChart width="300" height="400"
-                  [datasets]="lineChartDataPagado"
-                  [options]="lineChartOptions"
-                  [colors]="lineChartColorsPagado"
-                  [chartType]="lineChartType"></canvas>
-	        </div>
-	    </div>
-	    <div class="fb-card -vgraph -bg-pink-light">
-	        <div style="padding:0.5rem;">
-	            <div class="card_subtitle -white">
-	                Pendiente
-	            </div>
-	            <div class="card_title -white">
-	               {{ importes.pendiente }}€
-	            </div>
-	        </div>
-	        <div class="card_graph">
-	            <canvas baseChart width="300" height="400"
-                  [datasets]="lineChartDataPendiente"
-                  [options]="lineChartOptions"
-                  [colors]="lineChartColorsPendiente"
-                  [chartType]="lineChartType"></canvas>
-	        </div>
-	    </div>
-	    <div class="fb-card -vgraph">
-	        <div style="padding:0.5rem;">
-	            <div class="card_subtitle">
-	                Total
-	            </div>
-	            <div class="card_title">
-	                {{ importes.total }}€
-	            </div>
-	        </div>
-	        <div class="card_graph">
-	            <canvas baseChart width="300" height="400"
-                  [datasets]="lineChartDataTotal"
-                  [options]="lineChartOptions"
-                  [colors]="lineChartColorsTotal"
-                  [chartType]="lineChartType"></canvas>
-	        </div>
-	    </div>
-    </div>
+  <p>{{ 'PLAN_ECONOMICO_DETAIL.INTRO' | translate }}</p>
 
-    <div class="fb-card -v3">
-    	<div *ngFor="let card of cards ; let i=last; let j=index">
-            <div class="card_row">
-                <div class="left">
-                    <div class="card_title -grey-medium">
-                        {{ card.numcuota }}
-                    </div>
-                </div>
-                <div class="center">
-                    <div class="card_title">
-                         {{ card.fecha }}
-                    </div>
-                    <div class="card_subtitle">
-                         {{ card.pagado }}
-                    </div>
-                </div>
-                <div class="right">
-                    <div class="card_title -blue" *ngIf="card.pagado == 'Pagado'">
-                         {{ card.importe }} €
-                    </div>
-                    <div class="card_title -pink" *ngIf="card.pagado != 'Pagado'">
-                         {{ card.importe }} €
-                    </div>
-                </div>
-            </div>
-            <div *ngIf="!i" class="card_separator">            	
-            </div>
+  <div class="card_container">
+    <div class="fb-card -vgraph">
+      <div style="padding:0.5rem;">
+        <div class="card_subtitle">
+          {{ 'PLAN_ECONOMICO_DETAIL.PAGADO' | translate }}
         </div>
-	</div>
+        <div class="card_title">
+          {{ importes.pagado }}€
+        </div>
+      </div>
+      <div class="card_graph">
+        <canvas baseChart width="300" height="400" [datasets]="lineChartDataPagado" [options]="lineChartOptions"
+          [colors]="lineChartColorsPagado" [chartType]="lineChartType"></canvas>
+      </div>
+    </div>
+    <div class="fb-card -vgraph -bg-pink-light">
+      <div style="padding:0.5rem;">
+        <div class="card_subtitle -white">
+          {{ 'PLAN_ECONOMICO_DETAIL.PENDIENTE' | translate }}
+        </div>
+        <div class="card_title -white">
+          {{ importes.pendiente }}€
+        </div>
+      </div>
+      <div class="card_graph">
+        <canvas baseChart width="300" height="400" [datasets]="lineChartDataPendiente" [options]="lineChartOptions"
+          [colors]="lineChartColorsPendiente" [chartType]="lineChartType"></canvas>
+      </div>
+    </div>
+    <div class="fb-card -vgraph">
+      <div style="padding:0.5rem;">
+        <div class="card_subtitle">
+          {{ 'PLAN_ECONOMICO_DETAIL.TOTAL' | translate }}
+        </div>
+        <div class="card_title">
+          {{ importes.total }}€
+        </div>
+      </div>
+      <div class="card_graph">
+        <canvas baseChart width="300" height="400" [datasets]="lineChartDataTotal" [options]="lineChartOptions"
+          [colors]="lineChartColorsTotal" [chartType]="lineChartType"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="fb-card -v3">
+    <div *ngFor="let card of cards ; let i=last; let j=index">
+      <div class="card_row">
+        <div class="left">
+          <div class="card_title -grey-medium">
+            {{ card.numcuota }}
+          </div>
+        </div>
+        <div class="center">
+          <div class="card_title">
+            {{ card.fecha }}
+          </div>
+          <div class="card_subtitle">
+            {{ card.pagado }}
+          </div>
+        </div>
+        <div class="right">
+          <div class="card_title -blue" *ngIf="card.pagado == 'Pagado'">
+            {{ card.importe }} €
+          </div>
+          <div class="card_title -pink" *ngIf="card.pagado != 'Pagado'">
+            {{ card.importe }} €
+          </div>
+        </div>
+      </div>
+      <div *ngIf="!i" class="card_separator">
+      </div>
+    </div>
+  </div>
 </ion-content>

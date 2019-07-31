@@ -1,18 +1,20 @@
 <ion-content padding>
-	<div>
-		<h1>Bienvenido a <span>F&B</span></h1>
-	</div>
-	<div style="    text-align: center;">
-		<img src="assets/imgs/logo.png" style="width: 75%;">
-	</div>
+  <div>
+    <h1>{{ 'LOGIN.TITLE' | translate }} <span>F&B</span></h1>
+  </div>
+  <div style="    text-align: center;">
+    <img src="assets/imgs/logo.png" style="width: 75%;">
+  </div>
 </ion-content>
 <ion-footer>
-	<div class="buttons">
-		<fb-button [name]="bCrearCuenta" [class]="bCrearCuenta.class" (click)="openPage(bCrearCuenta.openPage,bCrearCuenta.tipo)"> </fb-button>
-		<p class="line"><span>o</span></p>
-		<fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class" (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>
-		<p>
-			<a href="https://www.clinicaferrusbratos.com/aviso-legal/">Terminos de servicio</a>
-		</p>
-	</div>
+  <div class="buttons">
+    <fb-button [name]="bCrearCuenta" [class]="bCrearCuenta.class"
+      (click)="openPage(bCrearCuenta.openPage,bCrearCuenta.tipo)"> </fb-button>
+    <p class="line"><span>o</span></p>
+    <fb-button [name]="bIniciarSesion" [class]="bIniciarSesion.class"
+      (click)="openPage(bIniciarSesion.openPage,bIniciarSesion.tipo)"> </fb-button>
+    <p>
+      <a href="https://www.clinicaferrusbratos.com/aviso-legal/">{{ 'LOGIN.TERMINOS' | translate }}</a>
+    </p>
+  </div>
 </ion-footer>

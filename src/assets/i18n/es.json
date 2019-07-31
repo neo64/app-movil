@@ -1,4 +1,11 @@
 {
+  "GENERICAS": {
+    "ATENCION": "¡Atención!",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR": "ERROR ",
+    "CARGANDO_INFORMACION": "Cargando información...",
+    "ACCESO_DENEGADO": "Acceso denegado"
+  },
   "ACCESO_RESULTADOS": {
     "TITLE": "Pruebas diagnosticas",
     "VER_IMAGEN": "Pulsa para ver la imagen."
@@ -20,10 +27,76 @@
     "CAMARA": "Camara",
     "GALERIA": "Galeria",
     "ENVIANDO_IMAGEN": "Enviando imagen ...",
+    "HORARIO_DEFAULT": "El horario de la clínica es de Lunes a Jueves de 09:30 a 20:30 y Viernes de 09:30 a 19:30",
     "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
     "ERROR": "ERROR",
     "ERROR_ENVIO_IMAGEN_PERMISOS": "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.",
     "ERROR_ENVIO_IMAGEN": "Error al intentar enviar la imagen."
+  },
+  "CONSEJOS_DETAIL": {
+    "TITLE": "Consejo de"
+  },
+  "CONSEJOS_PERSONALIZADOS": {
+    "TITLE": "Mis Consejos",
+    "CON_CONSEJO": "Tu especialista quiere hacerte llegar una serie de recomendaciones personalizadas. Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.",
+    "SIN_CONSEJO": "De momento, no necesitas seguir ninguna recomendación especial.",
+    "TITULO": "Mis Consejos",
+    "CARGANDO_INFORMACION": "Cargando información...",
+    "SUBTITULO": "de los doctores",
+    "ATENCION": "¡Atención!",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar."
+  },
+  "CONSULTAR_CITAS_FUTURAS": {
+    "DURACION": "Duración:",
+    "TRATAMIENTO": "Tratamiento",
+    "PROFESIONAL": "Profesional",
+    "ESTADO": "Estado",
+    "DIRECCION": "Dirección",
+    "CALENDARIO": "Calendario",
+    "HAZ": "Haz",
+    "CLICK": "click",
+    "ANADIR_CITA": "para añadir la cita a tu calendario",
+    "GESTIONA_TU_CITA": "Gestiona tu cita",
+    "ANULAR": "Anular",
+    "CONFIRMAR": "Confirmar",
+    "CAMBIAR": "Cambiar",
+    "PAGINA_NO_DISPONIBLE": "La página no está disponible.",
+    "CONFIRMACION_REQUERIDA": "Confirmación requerida",
+    "QUIERES": "¿Quieres ",
+    "LA_CITA": " la cita?",
+    "GESTIONANDO_CITA": "Gestionando la cita ...",
+    "ANULADO_CITA": "Hemos anulado tu cita.",
+    "CAMBIADO_CITA": "Nos pondremos en contacto contigo para cambiar la cita.",
+    "CONFIRMADO_CITA": "Hemos confirmado tu cita.",
+    "INFORMACION": "Información",
+    "ATENCION": "¡Atención!",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR": "ERROR",
+    "ERROR_CITA": "Hubo un error al gestionar tu cita.",
+    "ERROR_CALENDARIO": "No ha sido posible añadir la cita al calendario."
+  },
+  "DOCUMENTOS_FIRMADOS": {
+    "TITLE": "Documentos administrativos",
+    "ERROR_DOC_CARGA": "El documento está firmado electronicamente y no es posible visualizarlo.",
+    "ERROR_ABRIENDO": "Error abriendo el archivo"
+  },
+  "DOCUMENTOS_CONTABLES": {
+    "TITLE": "Documentos Contables",
+    "CON_DOC": "A continuación, podrás tener acceso a todos tus documentos contables para consultarnos cuando desees.",
+    "SIN_DOC": "De momento, no disponemos de ningún documento contable. Si lo deseas, puedes consultar tus presupuestos",
+    "TITULO": "Documentos contables",
+    "SUBTITULO": "de tratamientos",
+    "ERROR_ABRIR_DOC": "No es posible abrir el documento.",
+    "ERROR_ABRIENDO_ARCHIVO": "Error abriendo el archivo"
+  },
+  "FAQ": {
+    "TITLE": "Preguntas Frecuentes",
+    "INTRO": "A continuación, podrás consultar las preguntas y respuestas más frecuentes acerca de nuestros tratamientos principales.",
+    "TITULO": "Preguntas frecuentes",
+    "SUBTITULO": "de tratamientos"
+  },
+  "FAQ_DETAIL": {
+    "TITULO": "Preguntas de "
   },
 
   "HOME": {
@@ -32,8 +105,198 @@
     "NO_TIENES_CITAS": "Actualmente no tienes citas",
     "MENU": "Menú",
     "VER_MAS": "Ver más",
-    "ERROR_SIN_SESION": "¡Atención!, Se ha perdido la sesión, por favor vuelva a iniciar."
+    "ERROR_SIN_SESION": "¡Atención!, Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR_PAG_NO_DISPONIBLE": "La página no está disponible."
   },
-  "WELCOME": "Bienvenido",
-  "GREETING": "Hola, {{ value }}"
+  "INSTRUCCIONES": {
+    "TITLE": "Mis Instrucciones",
+    "CON_INST": "A continuación, podrás consultar las instrucciones de tu tratamiento. Si tienes alguna pregunta, no dudes en ponerte en contacto con nosotros.",
+    "SIN_INST": "De momento, no necesitas seguir ninguna instrucción especial.",
+    "TITULO": "Mis Instrucciones",
+    "SUBTITULO": "de tratamiento",
+    "ERROR_ABRIR_DOC": "No es posible abrir el documento.",
+    "ERROR_ABRIENDO_ARCHIVO": "Error abriendo el archivo"
+  },
+  "LOGIN": {
+    "TITLE": "Bienvenido a",
+    "TERMINOS": "Terminos de servicio",
+    "PAGINA_NO_DISPONIBLE": "La página no está disponible.",
+    "ACCESO_DENEGADO": "Acceso denegado"
+  },
+  "LOGIN_ERROR_PIN": {
+    "TITLE": "Error al validar",
+    "ERROR_PIN_1": "No hemos podido validar tus datos, si eres paciente, porfavor llamanos al ",
+    "ERROR_PIN_2": " y te gestionamos el alta en la aplicación",
+    "TITULO": "Error validando",
+    "SUBTITULO": "el DNI introducido"
+  },
+  "LOGIN_INPUT": {
+    "DNI": "DNI",
+    "CONTRASENA": "Contraseña",
+    "OLVIDO_CONTRASENA": "¿Olvidaste tu contraseña?",
+    "SIN_CUENTA": "Todavía no tienes cuenta.",
+    "REGISTRATE": "Registrate",
+    "TITULO": "Inicia sesión",
+    "SUBTITULO": "en tu cuenta",
+    "ACCESO_DENEGADO": "Acceso denegado"
+  },
+  "LOGIN_OLVIDO": {
+    "TITLE": "Recuperar contraseña",
+    "INTRO": "Introduce tu DNI y nos pondremos en contacto contigo para recuperar tu contraseña.",
+    "DNI": "DNI",
+    "DNI_LETRA": "DNI con letra incluida",
+    "TITULO": "Recuperar contraseña",
+    "SUBTITULO": "introduce tu DNI",
+    "RELLENAR_DNI": "Debes rellenar el campo DNI"
+  },
+  "LOGIN_RECIBIR_PIN": {
+    "TITLE": "Introduce el PIN",
+    "INTRODUCE_PIN": "Introduce el pin de 6 dígitos que te hemos enviado por",
+    "PIN": "PIN",
+    "6_DIG": "Nº de 6 dígitos",
+    "NO_RECIBIDO": "No lo he recibido.",
+    "REENVIAR_PIN": "Reenviar PIN",
+    "TITULO": "Introduce el PIN",
+    "SUBTITULO": "que te acabamos de enviar",
+    "ERROR_CODIGO": "El código introducido es incorrecto"
+  },
+  "LOGIN_REENVIAR": {
+    "TITLE": "Reenviar PIN",
+    "TE_HEMOS_ENVIADO": "Te hemos enviado por",
+    "AVISO_1": "Si no reconoces este número o no es tu teléfono actual, llamanos al ",
+    "AVISO_2": "para que podamos gestionarle el alta en la aplicación",
+    "TITULO": "Reenviar PIN",
+    "SUBTITULO": "que no he recibido"
+  },
+  "LOGIN_REGISTRO": {
+    "TITULO": "Crea tu cuenta",
+    "SUBTITULO": "introduce tu DNI"
+  },
+  "LOGIN_YA_REGISTRADO": {
+    "TITLE": "Ya estás registrado",
+    "INTRO": "Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupérala.",
+    "TITULO": "Tu cuenta ya existe",
+    "SUBTITULO": "en nuestro sistema",
+    "PAGINA_NO_DISPONIBLE": "La página no está disponible."
+  },
+  "MI_PERFIL": {
+    "TITLE": "Mi Perfil",
+    "DATOS": "Editar datos personales",
+    "GUARDANDO_IMAGEN": "Guardando imagen ...",
+    "ERROR_ENVIO_IMG": "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.",
+    "ERROR_ENVIO_IMG2": "Error al intentar enviar la imagen."
+  },
+  "MI_SALUD": {
+    "TITLE": "Mi Salud",
+    "INTRO": "Próximas Higienes",
+    "SIN_CITAS": "Actualmente no tienes citas",
+    "ERROR_PAG_NO_DISPONIBLE": "La página no está disponible."
+  },
+  "MIS_CITAS": {
+    "TITLE": "Mis Citas",
+    "CITAS": "Citas",
+    "INTRO": "Revisa tus citas pasadas y futuras",
+    "PEDIR_CITA": "Pedir cita",
+    "AQUI_CITA": "Aqui podrás pedir tu cita de higiene",
+    "MIS_HIGIENES": "Mis higienes",
+    "AQUI_HIGIENES": "Aqui podrás consultar tus higienes"
+  },
+  "MIS_DOCUMENTOS": {
+    "TITLE": "Mis Documentos",
+    "PRESUPUESTOS": "Presupuestos",
+    "ERROR_ABRIR_DOC": "No es posible abrir el documento."
+  },
+  "PEDIR_CITA": {
+    "TITLE": "Pedir nueva cita",
+    "INTRO": "A continuación, podrás elegir cuando deseas concertar una visita para llevar a cabo tu tratamiento.",
+    "ESCRIBENOS": "Escríbenos con el tratamiento que deseas pedir cita.",
+    "SOLICITANDO_CITA": "Solicitando cita ..."
+  },
+  "PEDIR_CITA_ELEGIR": {
+    "TITLE": "Elige tu cita",
+    "CON_CITA": "Elige la cita que desees, y pulsa el botón reservar.",
+    "SIN_CITA": "No hemos encontrado citas para los criterios de búsqueda.",
+    "RESERVAR": "Reservar",
+    "TITULO": "Elige tu cita",
+    "SUBTITULO": "de la cita"
+  },
+  "PEDIR_CITA_PREFERENCIAS": {
+    "TITLE": "Pedir nueva cita",
+    "INTRO": "A continuación, podrás elegir tus preferencias respecto al profesional que quieres que te atienda, el día de la semana y la franja horaria.",
+    "PROFESIONAL": "Elige el profesional",
+    "PREFERENCIA_DIAS": "Preferencia de días",
+    "A_PARTIR": "A partir de las:"
+  },
+  "PEDIR_CITA_RESERVA": {
+    "TITLE": "Cita Reservada",
+    "INTRO": "Contrary to popular belief/opinion. Del Lonncontrary to popula",
+    "RESERVADA": "Reservada",
+    "TITULO": "Cita reservada",
+    "SUBTITULO": ""
+  },
+  "PLAN_ECONOMICO": {
+    "TITLE": "Mis domiciliaciones",
+    "CON_PLAN": "A continuación, podrás tener acceso a todas tus domiciliaciones para consultarlas cuando desees.",
+    "SIN_PLAN": "De momento, no existe ninguna domiciliación asociada a tu tratamiento.",
+    "PENDIENTE": "Pendiente",
+    "TITULO": "Mis Domiciliaciones",
+    "SUBTITULO": "de tratamientos"
+  },
+  "PLAN_ECONOMICO_DETAIL": {
+    "TITLE": "Mis domiciliaciones",
+    "INTRO": "A continuación, podrás tener acceso a todos tus pagos realizados y pendientes. De esta manera, tendrás la posibilidad de consultar en cualquier momento la información económica sobre tu tratamiento.",
+    "PAGADO": "Pagado",
+    "PENDIENTE": "Pendiente",
+    "TOTAL": "Total",
+    "TITULO": "Plan Económico",
+    "SUBTITULO": ""
+  },
+  "POPOVER": {
+    "CONFIRMACION_REQUERIDA": "Confirmación requerida",
+    "QUIERES": "¿Quieres ",
+    "LA_CITA": " la cita?",
+    "GESTIONANDO_CITA": "Gestionando la cita ...",
+    "ANULADO": "Hemos anulado tu cita.",
+    "CAMBIAR": "Nos pondremos en contacto contigo para cambiar la cita.",
+    "CONFIRMADO": "Hemos confirmado tu cita.",
+    "ERROR_CITA": "Hubo un error al gestionar tu cita."
+  },
+  "PRESUPUESTOS": {
+    "TITLE": "Mis Presupuestos",
+    "CON_PRESU": "A continuación, podrás tener acceso a todos tus presupuestos para consultarlos cuando desees.",
+    "SIN_PRESU": "De momento, no tienes ningún presupuesto.",
+    "ESTADO": "Estado",
+    "TITULO": "Mis Presupuestos",
+    "SUBTITULO": "de tratamientos",
+    "ERROR_DOC": "No es posible abrir el documento."
+  },
+  "PROFILE": {
+    "TITLE": "Mis Datos",
+    "NOMBRE": "Nombre",
+    "APELLIDOS": "Apellidos",
+    "EMAIL": "Email",
+    "DNI": "DNI",
+    "FECHA_NACIMIENTO": "Fecha nacimiento",
+    "DIRECCION": "Dirección",
+    "LOCALIDAD": "Localidad",
+    "PROVINCIA": "Provincia",
+    "TEL_MOVIL": "Teléfono móvil",
+    "TEL_FIJO": "Teléfono fijo",
+    "ALERGIAS": "Alergias",
+    "MEDICACION": "Medicación"
+  },
+  "RECALL": {
+    "ANADIR_CALENDARIO": "Añadiendo al calendario"
+  },
+  "SUGERENCIAS": {
+    "TITLE": "Sugerencias",
+    "NOMBRE": "Escribe tu nombre",
+    "MAIL": "Escribe tu email",
+    "TEF": "Escribe tu teléfono",
+    "AYUDANOS": "Ayudanos a mejorar, gracias!",
+    "SUGERENCIA": "Escribe tu sugerencia. Por favor, cuéntanos tu propuesta o recomendación."
+  },
+  "TAB_HIGIENES": {
+    "TITLE": "Higienes"
+  }
 }

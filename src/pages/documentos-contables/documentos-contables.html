@@ -1,53 +1,56 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Documentos Contables</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'DOCUMENTOS_CONTABLES.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 <ion-content padding>
-	
-	<div>
-        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
-    <div *ngIf="cards?.length > 0; else notCards">
-        <p>A continuación, podrás tener acceso a todos tus documentos contables para consultarnos cuando desees.</p>
-    </div>
-    <ng-template #notCards>
-        <p>De momento, no disponemos de ningún documento contable. Si lo deseas, puedes consultar tus presupuestos
-        </p>
-    </ng-template>
-	<div *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.numDoc)">
-        <div class="fb-card -v2">
-            <div class="card_row">
-                <div class="left">
-                    <div class="card_title">
-                        {{card.tipo}}
-                    </div>
-                    <div class="card_subtitle">
-                       {{card.fecha}}
-                    </div>
-                </div>                
-            </div>
-            <div class="card_separator">
-            </div>
-            <div class="card_row">
-                <div class="left">
-                    <div class="card_title -price" style="    margin-top: 5%;">
-                        {{card.total}} €
-                    </div>
-                </div>
-                <div class="right">
-                    <a class="fb-btn -rounded -bg-pink">
-                        <svg version="1.1" style="margin-left: 0.3rem;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
-						<path fill="#fff" d="M5 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l8.646-8.646-8.646-8.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l9 9c0.195 0.195 0.195 0.512 0 0.707l-9 9c-0.098 0.098-0.226 0.146-0.354 0.146z"></path>
-						</svg>
-                    </a>
-                </div>
-            </div>
+
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+  <div *ngIf="cards?.length > 0; else notCards">
+    <p>{{ 'DOCUMENTOS_CONTABLES.CON_DOC' | translate }}</p>
+  </div>
+  <ng-template #notCards>
+    <p>{{ 'DOCUMENTOS_CONTABLES.SIN_DOC' | translate }}
+    </p>
+  </ng-template>
+  <div *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.numDoc)">
+    <div class="fb-card -v2">
+      <div class="card_row">
+        <div class="left">
+          <div class="card_title">
+            {{card.tipo}}
+          </div>
+          <div class="card_subtitle">
+            {{card.fecha}}
+          </div>
         </div>
-	</div>
+      </div>
+      <div class="card_separator">
+      </div>
+      <div class="card_row">
+        <div class="left">
+          <div class="card_title -price" style="    margin-top: 5%;">
+            {{card.total}} €
+          </div>
+        </div>
+        <div class="right">
+          <a class="fb-btn -rounded -bg-pink">
+            <svg version="1.1" style="margin-left: 0.3rem;" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+              <path fill="#fff"
+                d="M5 20c-0.128 0-0.256-0.049-0.354-0.146-0.195-0.195-0.195-0.512 0-0.707l8.646-8.646-8.646-8.646c-0.195-0.195-0.195-0.512 0-0.707s0.512-0.195 0.707 0l9 9c0.195 0.195 0.195 0.512 0 0.707l-9 9c-0.098 0.098-0.226 0.146-0.354 0.146z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

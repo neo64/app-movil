@@ -35,24 +35,6 @@
         </div>
       </div>
     </div>
-    <div *ngIf="msg.user !== nickname">
-      <img class="user-img" onerror="this.src='assets/imgs/person.png';"
-        src="http://cfb2.ddns.net:4232/assets/img/personal/chat/{{msg.image}}.jpg" />
-    </div>
-    <div class="msg-detail">
-      <div class="msg-content">
-        <p class="line-breaker ">
-          {{msg.message}}
-        </p>
-        <div class="msg-info">
-          <p>
-            {{msg.sendDate | date:'dd/MM/yyyy HH:mm'}}
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
   </div>
 </ion-content>
 <ion-footer no-border [style.height]="showEmojiPicker ? '255px' : '55px'">

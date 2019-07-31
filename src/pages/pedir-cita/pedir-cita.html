@@ -1,34 +1,42 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Pedir nueva cita</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'PEDIR_CITA.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-	<!-- Gradiente -->
-	<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>
-	<!-- Fin Gradiente -->    
-	
-    <div>
-	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+  <!-- Gradiente -->
+  <svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+    <defs>
+      <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient5" x1="0" x2="100%" y1="0" y2="100%">
+        <stop offset="0" stop-color="#81a8d9"> </stop>
+        <stop offset="1" stop-color="#f3a7c9"> </stop>
+      </linearGradient>
+    </defs>
+  </svg>
+  <!-- Fin Gradiente -->
+
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+
+  <p>{{ 'PEDIR_CITA.INTRO' | translate }}</p>
+
+  <div class="row" id="listadoTratamientos">
+    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">
+      <fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>
     </div>
+  </div>
 
-    <p>A continuación, podrás elegir cuando deseas concertar una visita para llevar a cabo tu tratamiento.</p> 
+  <p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>
 
-    <div class="row" id="listadoTratamientos">
-	    <div *ngFor="let t of tratamientos" col-6 style="height:12rem;">
-			<fb-button-icon id="{{ t.IdOpc }}" [name]="t" [class]="t.class" (click)="selectTto(t)"> </fb-button-icon>
-		</div>
-	</div>
-
-	<p style=" text-align: center; margin: 2rem 0 -2rem 0; font-size: 1rem;">1 de 4</p>
-
-	<ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
-		<fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>
-	</ion-row>
+  <ion-row style="max-height: 9%; display: flex; margin: 2rem 0 0 0;">
+    <fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" style="width: 100%;"></fb-button>
+  </ion-row>
 </ion-content>

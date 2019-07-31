@@ -1,24 +1,24 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Preguntas Frecuentes</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'FAQ.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 <ion-content padding>
 
-	<div style=" margin: 2rem;">
-        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+  <div style=" margin: 2rem;">
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
+
+  <p style=" margin: 2rem;">{{ 'FAQ.INTRO' | translate }}</p>
+
+  <div class="row" id="listadoFaq">
+    <div *ngFor="let f of faq" col-6>
+      <fb-button-icon [name]="f" [class]="f.class" (click)="siguiente(f)"> </fb-button-icon>
     </div>
-
-    <p style=" margin: 2rem;">A continuación, podrás consultar las preguntas y respuestas más frecuentes acerca de nuestros tratamientos principales.</p>
-
-    <div class="row" id="listadoFaq">
-	    <div *ngFor="let f of faq" col-6 >
-			<fb-button-icon [name]="f" [class]="f.class" (click)="siguiente(f)"> </fb-button-icon>
-		</div>
-	</div>
+  </div>
 </ion-content>

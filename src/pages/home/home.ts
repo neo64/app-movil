@@ -133,23 +133,19 @@ export class HomePage {
       else if (page == "Higiene") this.navCtrl.push(RecallPage);
       else if (page == "Perfil") this.navCtrl.push(ProfilePage);
       else if (page == "Password") this.navCtrl.push(ChangePasswordPage);
-      else if (page == "DocContables")
-        this.navCtrl.push(DocumentosContablesPage);
+      else if (page == "DocContables") this.navCtrl.push(DocumentosContablesPage);
       else if (page == "DocPresupuestos") this.navCtrl.push(PresupuestosPage);
       else if (page == "Citas") this.navCtrl.push(TabConsultarCitas);
       else if (page == "PedirCita") this.navCtrl.push(PedirCitaPage);
-      else if (page == "ConsejosPersonalizados")
-        this.navCtrl.push(ConsejosPersonalizadosPage);
+      else if (page == "ConsejosPersonalizados") this.navCtrl.push(ConsejosPersonalizadosPage);
       else if (page == "Instrucciones") this.navCtrl.push(InstruccionesPage);
       else if (page == "PreguntasFrecuentes") this.navCtrl.push(FaqPage);
       else if (page == "Comollegar") this.navCtrl.push(ComollegarPage);
-      else this.presentToast("La página no está disponible.");
+      else this.presentToast(this.translate.instant("HOME.ERROR_PAG_NO_DISPONIBLE"));
     } else if (tipo == "web") {
       window.open(page, "_system", "location=yes");
     } else {
-      this.presentToast(
-        "La página '" + page + "' de tipo '" + tipo + "' no está disponible."
-      );
+      this.presentToast("La página '" + page + "' de tipo '" + tipo + "' no está disponible.");
     }
   }
   /**
@@ -198,8 +194,8 @@ export class HomePage {
           this.loading.dismiss();
         } else if (data.status == 401) {
           this.showError(
-            "¡Atención!",
-            "Se ha perdido la sesión, por favor vuelva a iniciar."
+            this.translate.instant("GENERICAS.ATENCION"),
+            this.translate.instant("GENERICAS.ERROR_SIN_SESION")
           );
           /*this.translate.get("HOME.ERROR_SIN_SESION").subscribe((res: string) => {
             this.loading.dismiss();
@@ -208,12 +204,8 @@ export class HomePage {
           this.navCtrl.setRoot(LoginPage);
         } else {
           this.showError(
-            "¡Atención!",
-            "<p>" +
-              data["message"] +
-              "<br/><br/>[Code: " +
-              data["code"] +
-              "]</p>"
+            this.translate.instant("GENERICAS.ATENCION"),
+            "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
           );
         }
       })
@@ -233,7 +225,7 @@ export class HomePage {
      */
   showLoading() {
     this.loading = this.loadingCtrl.create({
-      content: "Cargando información...",
+      content: this.translate.instant("GENERICAS.CARGANDO_INFORMACION"),
       dismissOnPageChange: false
     });
     this.loading.present();

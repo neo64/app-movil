@@ -3,22 +3,22 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Consejo de {{data.Doctor}}</ion-title>
+    <ion-title>{{ 'CONSEJOS_DETAIL.TITLE' | translate }} {{data.Doctor}}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
 
-	<ion-row>
-		<ion-col col-8 style="padding-top:4rem;">
-			<fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-		</ion-col>
-		<ion-col col-4>
-			<img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(data.Img)" style="width:80%;border-radius:50%;"/>
-		</ion-col>
-	</ion-row>
+  <ion-row>
+    <ion-col col-8 style="padding-top:4rem;">
+      <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+    </ion-col>
+    <ion-col col-4>
+      <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(data.Img)" style="width:80%;border-radius:50%;" />
+    </ion-col>
+  </ion-row>
 
-	<p><b>{{ data.Fecha }}</b></p>
+  <p><b>{{ data.Fecha }}</b></p>
 
-	<p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)"></p>
+  <p [innerHTML]="domSanitizer.bypassSecurityTrustHtml(data.Texto)"></p>
 
 </ion-content>

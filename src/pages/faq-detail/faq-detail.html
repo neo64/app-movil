@@ -3,24 +3,22 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Preguntas frecuentes</ion-title>
+    <ion-title>{{ 'FAQ.TITLE' | translate }}</ion-title>
   </ion-navbar>
 </ion-header>
 <ion-content padding>
 
-	<div style=" margin: 2rem;">
-        <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
+  <div style=" margin: 2rem;">
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
   </div>
 
-	<div (click)="expandItem(item)" ion-item no-lines class="fb-card" *ngFor="let item of faq" style=" padding: .8rem 2rem;">
-  	<p style=" white-space: normal;" [class.collaps]="item.expanded">
-      {{ item.pregunta }} 
-    </p>    
-  	<expandable 
-      [expandHeight]="auto" 
-      [expanded]="item.expanded" 
-      [respuesta]="item.respuesta">
-  	</expandable>
-	</div>
+  <div (click)="expandItem(item)" ion-item no-lines class="fb-card" *ngFor="let item of faq"
+    style=" padding: .8rem 2rem;">
+    <p style=" white-space: normal;" [class.collaps]="item.expanded">
+      {{ item.pregunta }}
+    </p>
+    <expandable [expandHeight]="auto" [expanded]="item.expanded" [respuesta]="item.respuesta">
+    </expandable>
+  </div>
 
 </ion-content>

@@ -44,7 +44,7 @@ export class ChatPage {
   loadingPresented = false; // Controla si el Loading esta en primer plano.
   menuData = ""; // Foto de perfil del usuario.
   mostrarError = false; // Controla si estamos dentro del horario de la clinica
-  mensajeError = "El horario de la clínica es de Lunes a Jueves de 09:30 a 20:30 y Viernes de 09:30 a 19:30";
+  mensajeError = "";
 
   constructor(
     private badge: Badge,
@@ -71,6 +71,7 @@ export class ChatPage {
     this.checkFileExistence("fyb.jpeg");
     this.data.type = "message";
     this.data.nickname = this.nickname;
+    this.mensajeError = translate.instant("CHAT.HORARIO_DEFAULT");
 
     if (this.navParams.get("message")) {
       this.showError(
@@ -100,8 +101,8 @@ export class ChatPage {
           this.badge.set(parseInt(data["data"]));
         } else if (data.status == 401) {
           this.showError(
-            "¡Atención!",
-            "Se ha perdido la sesión, por favor vuelva a iniciar."
+            translate.instant("CHAT.ATENCION"),
+            translate.instant("CHAT.ERROR_SIN_SESION")
           );
           this.navCtrl.setRoot(LoginPage);
         } else {
@@ -253,11 +254,11 @@ export class ChatPage {
 	*/
   openChooseImage() {
     let actionSheet = this.actionSheetCtrl.create({
-      title: "Elige una opción",
+      title: this.translate.instant("CHAT.ELIGE_OPCION"),
       cssClass: "action-sheets-basic-page",
       buttons: [
         {
-          text: "Camara",
+          text: this.translate.instant("CHAT.CAMARA"),
           role: "destructive",
           //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,
           handler: () => {
@@ -265,7 +266,7 @@ export class ChatPage {
           }
         },
         {
-          text: "Galeria",
+          text: this.translate.instant("CHAT.GALERIA"),
           role: "destructive",
           //icon: !this.plt.is('ios') ? 'ios-camera-outline' : null,
           handler: () => {
@@ -286,7 +287,7 @@ export class ChatPage {
 	*
 	*/
   selectImage(x): Promise<any> {
-    this.showLoading("Enviando imagen ...");
+    this.showLoading(this.translate.instant("CHAT.ENVIANDO_IMAGEN"));
 
     return new Promise(resolve => {
       let cameraOptions: CameraOptions = {
@@ -324,13 +325,16 @@ export class ChatPage {
         .catch(e => {
           if (e == 20)
             this.showError(
-              "ERROR",
-              "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes."
+              this.translate.instant("CHAT.ERROR"),
+              this.translate.instant("CHAT.ERROR_ENVIO_IMAGEN_PERMISOS")
             );
           else this.loading.dismiss();
         });
     }).catch(e => {
-      this.showError("ERROR", "Error al intentar enviar la imagen.");
+      this.showError(
+        this.translate.instant("CHAT.ERROR"),
+        this.translate.instant("CHAT.ERROR_ENVIO_IMAGEN")
+      );
     });
   }
 

@@ -1,17 +1,17 @@
 <ion-header no-border>
   <ion-navbar>
-    <ion-title>Mis Higienes</ion-title>
-	  <ion-buttons right>
-		<button ion-button (click)="openPage('chat')">
-			<ion-icon name="fb-chat"></ion-icon>
-		</button>
-	</ion-buttons>
+    <ion-title>{{ 'TAB_HIGIENES.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content>       
+<ion-content>
   <ion-tabs #myTab tabsPlacement="top" selectedIndex="1">
-    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas" ></ion-tab>          
-    <ion-tab [root]="tabFuturas" tabTitle="Futuras" ></ion-tab>
+    <ion-tab [root]="tabAnteriores" tabTitle="Pasadas"></ion-tab>
+    <ion-tab [root]="tabFuturas" tabTitle="Futuras"></ion-tab>
   </ion-tabs>
 </ion-content>

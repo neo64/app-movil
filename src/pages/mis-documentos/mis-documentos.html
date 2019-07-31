@@ -1,95 +1,105 @@
-<div class="back"> 
-	<ion-header no-border>
-  		<ion-navbar class="navWhite">
-    		<ion-title>Ferrus & Bratos</ion-title>
+<div class="back">
+  <ion-header no-border>
+    <ion-navbar class="navWhite">
+      <ion-title>{{ 'MIS_DOCUMENTOS.TITLE' | translate }}</ion-title>
 
-    		<ion-buttons right>
-	    		<button ion-button (click)="openPage('chat','page')">
-	      			<ion-icon name="fb-chat"></ion-icon>
-	    		</button>
-    		</ion-buttons>
+      <ion-buttons right>
+        <button ion-button (click)="openPage('chat','page')">
+          <ion-icon name="fb-chat"></ion-icon>
+        </button>
+      </ion-buttons>
 
-  		</ion-navbar>
-	</ion-header>
+    </ion-navbar>
+  </ion-header>
 
-	<h1 style="margin-bottom:1rem;color:white;font-weight:bold;">Presupuestos</h1> 
+  <h1 style="margin-bottom:1rem;color:white;font-weight:bold;">{{ 'MIS_DOCUMENTOS.PRESUPUESTOS' | translate }}</h1>
 
-	<ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0" >
-  		<ion-slide class="slide" *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.NumPre)">
-	    	<!-- <ion-row> -->
-	    		<!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->
-	    			<!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->
-	    				<!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->
-	    				<!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->
-	    				<!-- <ion-col>{{card.ano}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    		<!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->
-	    			<!-- <ion-row style="margin-top: -4%;"> -->
-	    				<!-- <ion-col text-wrap class="tratamiento">{{card.Titulo}}</ion-col> -->
-	    			<!-- </ion-row> -->
-	    			<!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;">	    				 -->
-	    				<!-- <ion-col col-12 class="doctor" style="margin-top: 5%;">Importe: {{card.Total}}€</ion-col> -->
-	    			<!-- </ion-row> -->
-	    		<!-- </ion-col> -->
-	    	<!-- </ion-row> -->
-			<div class="cardCita">
-				<div class="cardCita__left">
-					<div class="cardCita__date">
-						<div class="cardCita__day">
-							{{card.dia}}
-						</div>
-						<div class="cardCita__month">
-							{{card.mes}}
-						</div>
-					</div>
-					<div class="cardCita__hour">
-						{{card.ano}}
-					</div>
-				</div>
-				<div class="cardCita__right">
-					<div class="cardCita__tto tratamiento">
-						{{card.Titulo}}
-					</div>
-					<div class="cardCita__dr">
-						<div class="cardCita__drname">
-							{{card.formaPago}}
-						</div>
-					</div>
-					<div class="cardCita__dr">
-						<div class="cardCita__drname">
-							Importe: {{card.Total}}€
-						</div>
-					</div>
-				</div>
-			</div>
-	  	</ion-slide>
-	</ion-slides>
+  <ion-slides pager style="" slidesPerView="1.3" spaceBetween="18" centeredSlides="true" *ngIf="cards?.length > 0">
+    <ion-slide class="slide" *ngFor="let card of cards" (click)="createAndOpenPDF(card.html, card.NumPre)">
+      <!-- <ion-row> -->
+      <!-- <ion-col col-3 style="background-color: hsla(0, 0%, 100%, 0.3); height: 18rem;    border-radius: 6px 0 0 6px;"> -->
+      <!-- <ion-row style="position: fixed; top: 10%; color: white;"> -->
+      <!-- <ion-row style="width: 83%;"><ion-col style="font-size: 4rem;    margin: -15% 0px 0 -15%;font-weight: bold;">{{card.dia}}</ion-col></ion-row> -->
+      <!-- <ion-row style="width: 83%;margin-top: -1rem;"><ion-col style="    font-size: 2.35rem;    margin: -10% 0% 0% -15%;">{{card.mes}}</ion-col></ion-row> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row style="position: fixed; bottom: 5%; color: white;    width: 16%;"> -->
+      <!-- <ion-col>{{card.ano}}</ion-col> -->
+      <!-- </ion-row> -->
+      <!-- </ion-col> -->
+      <!-- <ion-col col-9 style="background-color: hsla(0, 0%, 100%, 0.2); height: 18rem;    border-radius: 0 6px 6px 0;"> -->
+      <!-- <ion-row style="margin-top: -4%;"> -->
+      <!-- <ion-col text-wrap class="tratamiento">{{card.Titulo}}</ion-col> -->
+      <!-- </ion-row> -->
+      <!-- <ion-row style="position: fixed; bottom: 3%; color: white; width: 52%;">	    				 -->
+      <!-- <ion-col col-12 class="doctor" style="margin-top: 5%;">Importe: {{card.Total}}€</ion-col> -->
+      <!-- </ion-row> -->
+      <!-- </ion-col> -->
+      <!-- </ion-row> -->
+      <div class="cardCita">
+        <div class="cardCita__left">
+          <div class="cardCita__date">
+            <div class="cardCita__day">
+              {{card.dia}}
+            </div>
+            <div class="cardCita__month">
+              {{card.mes}}
+            </div>
+          </div>
+          <div class="cardCita__hour">
+            {{card.ano}}
+          </div>
+        </div>
+        <div class="cardCita__right">
+          <div class="cardCita__tto tratamiento">
+            {{card.Titulo}}
+          </div>
+          <div class="cardCita__dr">
+            <div class="cardCita__drname">
+              {{card.formaPago}}
+            </div>
+          </div>
+          <div class="cardCita__dr">
+            <div class="cardCita__drname">
+              Importe: {{card.Total}}€
+            </div>
+          </div>
+        </div>
+      </div>
+    </ion-slide>
+  </ion-slides>
 </div>
 
 <!-- Gradiente -->
-<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"> <defs> <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%"> <stop offset="0" stop-color="#81a8d9"> </stop> <stop offset="1" stop-color="#f3a7c9"> </stop> </linearGradient> </defs> </svg>
+<svg enable-background="new 0 0 64 64" height="0px" viewBox="0 0 64 64" width="0px" x="0px" xml:space="preserve"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" id="fb-shadow-gradient3" x1="0" x2="100%" y1="0" y2="100%">
+      <stop offset="0" stop-color="#81a8d9"> </stop>
+      <stop offset="1" stop-color="#f3a7c9"> </stop>
+    </linearGradient>
+  </defs>
+</svg>
 <!-- Fin Gradiente -->
 
 <div class="menu">
-	<ion-row>
-		<h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">Mis documentos</h1>
-	</ion-row>
-	<ion-row class="square" >
-			<div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">
-				<ion-row *ngIf="i == 0">
-					<div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>
-						<fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
-					</div>
-				</ion-row>
-				<ion-row *ngIf="i == 1">
-					<div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>
-						<fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
-					</div>
-				</ion-row>
-			</div>			
-	</ion-row>
-	
+  <ion-row>
+    <h1 col-9 style="padding:0px;margin-bottom: 2rem;margin-top:0;font-weight: bold;">
+      {{ 'MIS_DOCUMENTOS.TITLE' | translate }}</h1>
+  </ion-row>
+  <ion-row class="square">
+    <div *ngFor="let c of cardsMenu; let i=index" style="width:100%;">
+      <ion-row *ngIf="i == 0">
+        <div *ngFor="let c of cardsMenu| slice:0:1 ; let j=index" col-12>
+          <fb-button-icon *ngIf="j<1" [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)">
+          </fb-button-icon>
+        </div>
+      </ion-row>
+      <ion-row *ngIf="i == 1">
+        <div *ngFor="let c of cardsMenu | slice:1; let j=index" col-6>
+          <fb-button-icon [name]="c" [class]="c.class" (click)="openPage(c.openPage,c.tipo)"> </fb-button-icon>
+        </div>
+      </ion-row>
+    </div>
+  </ion-row>
+
 </div>

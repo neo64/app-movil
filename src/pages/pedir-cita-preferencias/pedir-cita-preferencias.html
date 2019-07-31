@@ -1,59 +1,63 @@
 <ion-header no-border>
-	<ion-navbar>
-		<ion-title>Pedir nueva cita</ion-title>
-		  <ion-buttons right>
-			<button ion-button (click)="openPage('chat')">
-				<ion-icon name="fb-chat"></ion-icon>
-			</button>
-		</ion-buttons>
-	</ion-navbar>
+  <ion-navbar>
+    <ion-title>{{ 'PEDIR_CITA_PREFERENCIAS.TITLE' | translate }}</ion-title>
+    <ion-buttons right>
+      <button ion-button (click)="openPage('chat')">
+        <ion-icon name="fb-chat"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-	<div>
-	   <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo" ></fb-titulo-subtitulo>
-    </div>
+  <div>
+    <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>
+  </div>
 
-    <p>A continuación, podrás elegir tus preferencias respecto al profesional que quieres que te atienda, el día de la semana y la franja horaria.</p> 
-    <p>Elige el profesional</p>
-    <ion-slides id="persona" slidesPerView="3.5" spaceBetween="12">
-  		<ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">
-  			<ion-row>
-	    		<button [class]="card.class + ' button'" style="height: 100%;">
-	    			<p class="avatarslide"><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;"/></p>
-	    			<p class="nameslidep">{{ card.usuario }}</p>
-	    		</button>	    		
-	    	</ion-row>
-	  	</ion-slide>
-	</ion-slides>
+  <p>{{ 'PEDIR_CITA_PREFERENCIAS.INTRO' | translate }}</p>
+  <p>{{ 'PEDIR_CITA_PREFERENCIAS.PROFESIONAL' | translate }}</p>
+  <ion-slides id="persona" slidesPerView="3.5" spaceBetween="12">
+    <ion-slide class="slide" *ngFor="let card of doctores" (click)="selectDr(card)" style=" padding: 1rem 0 1rem 0;">
+      <ion-row>
+        <button [class]="card.class + ' button'" style="height: 100%;">
+          <p class="avatarslide"><img src="{{card.Img}}" style="border-radius: 50%;width: 40%;" /></p>
+          <p class="nameslidep">{{ card.usuario }}</p>
+        </button>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
 
-	<p style=" margin: 1rem 0 -2rem 0;">Preferencia de días</p>
-	<ion-slides slidesPerView="3.5" spaceBetween="12" >
-  		<ion-slide class="slide" *ngFor="let card of diasSemana" >
-  			<ion-row>
-	    		<button [class]="card.class + ' button'" (click)="selectDia(card)" style="height: 100%;">
-	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.dia }}</p>
-	    		</button>	    		
-	    	</ion-row>
-	  	</ion-slide>
-	</ion-slides>
+  <p style=" margin: 1rem 0 -2rem 0;">{{ 'PEDIR_CITA_PREFERENCIAS.PREFERENCIA_DIAS' | translate }}</p>
+  <ion-slides slidesPerView="3.5" spaceBetween="12">
+    <ion-slide class="slide" *ngFor="let card of diasSemana">
+      <ion-row>
+        <button [class]="card.class + ' button'" (click)="selectDia(card)" style="height: 100%;">
+          <p style="font-size:1.5rem;" [class]="card.class">{{ card.dia }}</p>
+        </button>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
 
-	<p style=" margin: 0rem 0 -2rem 0;">A partir de las:</p>
-	<ion-slides slidesPerView="3.5" spaceBetween="12" >
-  		<ion-slide class="slide" *ngFor="let card of horasDia" >
-  			<ion-row>
-	    		<button [class]="card.class + ' button'" (click)="selectHora(card)" style="height: 100%;">
-	    			<p style="font-size:1.5rem;" [class]="card.class">{{ card.hora }}</p>
-	    		</button>	    		
-	    	</ion-row>
-	  	</ion-slide>
-	</ion-slides>
+  <p style=" margin: 0rem 0 -2rem 0;">{{ 'PEDIR_CITA_PREFERENCIAS.A_PARTIR' | translate }}</p>
+  <ion-slides slidesPerView="3.5" spaceBetween="12">
+    <ion-slide class="slide" *ngFor="let card of horasDia">
+      <ion-row>
+        <button [class]="card.class + ' button'" (click)="selectHora(card)" style="height: 100%;">
+          <p style="font-size:1.5rem;" [class]="card.class">{{ card.hora }}</p>
+        </button>
+      </ion-row>
+    </ion-slide>
+  </ion-slides>
 
-	<p style=" text-align: center; margin:0; font-size: 1rem;">2 de 4</p>
+  <p style=" text-align: center; margin:0; font-size: 1rem;">2 de 4</p>
 
-	<ion-row style="max-height: 9%;    display: flex;">
-		<ion-col><fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()" ></fb-button></ion-col>
-		<ion-col><fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()" ></fb-button></ion-col>
-	</ion-row>
+  <ion-row style="max-height: 9%;    display: flex;">
+    <ion-col>
+      <fb-button [name]="bAnterior" [class]="bAnterior.class" (click)="anterior()"></fb-button>
+    </ion-col>
+    <ion-col>
+      <fb-button [name]="bSiguiente" [class]="bSiguiente.class" (click)="siguiente()"></fb-button>
+    </ion-col>
+  </ion-row>
 </ion-content>
