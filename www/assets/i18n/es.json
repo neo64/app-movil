@@ -1,13 +1,13 @@
 {
   "GENERICAS": {
     "ATENCION": "¡Atención!",
-    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión. Por favor, vuelve a iniciar.",
     "ERROR": "ERROR ",
     "CARGANDO_INFORMACION": "Cargando información...",
     "ACCESO_DENEGADO": "Acceso denegado"
   },
   "ACCESO_RESULTADOS": {
-    "TITLE": "Pruebas diagnosticas",
+    "TITLE": "Pruebas diagnósticas",
     "VER_IMAGEN": "Pulsa para ver la imagen."
   },
   "CHANGE_PASSWORD": {
@@ -21,16 +21,16 @@
   },
   "CHAT": {
     "TITLE": "Ferrus & Bratos",
-    "CARGANDO_CONVERSACION": "Cargando Conversación ...",
+    "CARGANDO_CONVERSACION": "Cargando conversación ...",
     "ATENCION": "¡Atención!",
     "ELIGE_OPCION": "Elige una opción",
-    "CAMARA": "Camara",
-    "GALERIA": "Galeria",
+    "CAMARA": "Cámara",
+    "GALERIA": "Galería",
     "ENVIANDO_IMAGEN": "Enviando imagen ...",
-    "HORARIO_DEFAULT": "El horario de la clínica es de Lunes a Jueves de 09:30 a 20:30 y Viernes de 09:30 a 19:30",
-    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "HORARIO_DEFAULT": "El horario de la clínica es de lunes a jueves de 09:30 a 20:30 y viernes de 09:30 a 19:30",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión. Por favor, vuelve a iniciar.",
     "ERROR": "ERROR",
-    "ERROR_ENVIO_IMAGEN_PERMISOS": "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.",
+    "ERROR_ENVIO_IMAGEN_PERMISOS": "Error al intentar enviar la imagen. No hay permisos para acceder a las imágenes.",
     "ERROR_ENVIO_IMAGEN": "Error al intentar enviar la imagen."
   },
   "CONSEJOS_DETAIL": {
@@ -70,19 +70,19 @@
     "CONFIRMADO_CITA": "Hemos confirmado tu cita.",
     "INFORMACION": "Información",
     "ATENCION": "¡Atención!",
-    "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar.",
+    "ERROR_SIN_SESION": "Se ha perdido la sesión. Por favor, vuelve a iniciar.",
     "ERROR": "ERROR",
     "ERROR_CITA": "Hubo un error al gestionar tu cita.",
     "ERROR_CALENDARIO": "No ha sido posible añadir la cita al calendario."
   },
   "DOCUMENTOS_FIRMADOS": {
     "TITLE": "Documentos administrativos",
-    "ERROR_DOC_CARGA": "El documento está firmado electronicamente y no es posible visualizarlo.",
-    "ERROR_ABRIENDO": "Error abriendo el archivo"
+    "ERROR_DOC_CARGA": "El documento está firmado electrónicamente y no es posible visualizarlo.",
+    "ERROR_ABRIENDO": "Error al abrir el archivo"
   },
   "DOCUMENTOS_CONTABLES": {
     "TITLE": "Documentos Contables",
-    "CON_DOC": "A continuación, podrás tener acceso a todos tus documentos contables para consultarnos cuando desees.",
+    "CON_DOC": "A continuación, podrás tener acceso a todos tus documentos contables para consultarlos cuando desees.",
     "SIN_DOC": "De momento, no disponemos de ningún documento contable. Si lo deseas, puedes consultar tus presupuestos",
     "TITULO": "Documentos contables",
     "SUBTITULO": "de tratamientos",
@@ -119,14 +119,14 @@
   },
   "LOGIN": {
     "TITLE": "Bienvenido a",
-    "TERMINOS": "Terminos de servicio",
+    "TERMINOS": "Términos de servicio",
     "PAGINA_NO_DISPONIBLE": "La página no está disponible.",
     "ACCESO_DENEGADO": "Acceso denegado"
   },
   "LOGIN_ERROR_PIN": {
     "TITLE": "Error al validar",
-    "ERROR_PIN_1": "No hemos podido validar tus datos, si eres paciente, porfavor llamanos al ",
-    "ERROR_PIN_2": " y te gestionamos el alta en la aplicación",
+    "ERROR_PIN_1": "No hemos podido validar tus datos. Si eres paciente, por favor, llámanos al ",
+    "ERROR_PIN_2": " y gestionaremos tu alta en la aplicación",
     "TITULO": "Error validando",
     "SUBTITULO": "el DNI introducido"
   },
@@ -135,7 +135,7 @@
     "CONTRASENA": "Contraseña",
     "OLVIDO_CONTRASENA": "¿Olvidaste tu contraseña?",
     "SIN_CUENTA": "Todavía no tienes cuenta.",
-    "REGISTRATE": "Registrate",
+    "REGISTRATE": "Regístrate",
     "TITULO": "Inicia sesión",
     "SUBTITULO": "en tu cuenta",
     "ACCESO_DENEGADO": "Acceso denegado"
@@ -163,7 +163,7 @@
   "LOGIN_REENVIAR": {
     "TITLE": "Reenviar PIN",
     "TE_HEMOS_ENVIADO": "Te hemos enviado por",
-    "AVISO_1": "Si no reconoces este número o no es tu teléfono actual, llamanos al ",
+    "AVISO_1": "Si no reconoces este número o no es tu teléfono actual, llámanos al ",
     "AVISO_2": "para que podamos gestionarle el alta en la aplicación",
     "TITULO": "Reenviar PIN",
     "SUBTITULO": "que no he recibido"
@@ -174,7 +174,7 @@
   },
   "LOGIN_YA_REGISTRADO": {
     "TITLE": "Ya estás registrado",
-    "INTRO": "Ya estás registrado en la aplicación, si has olvidado tu contraseña, recupérala.",
+    "INTRO": "Ya estás registrado en la aplicación. Si has olvidado tu contraseña, recupérala.",
     "TITULO": "Tu cuenta ya existe",
     "SUBTITULO": "en nuestro sistema",
     "PAGINA_NO_DISPONIBLE": "La página no está disponible."
@@ -208,8 +208,8 @@
   },
   "PEDIR_CITA": {
     "TITLE": "Pedir nueva cita",
-    "INTRO": "A continuación, podrás elegir cuando deseas concertar una visita para llevar a cabo tu tratamiento.",
-    "ESCRIBENOS": "Escríbenos con el tratamiento que deseas pedir cita.",
+    "INTRO": "A continuación, podrás elegir cuándo deseas concertar una visita para llevar a cabo tu tratamiento.",
+    "ESCRIBENOS": "Elige la cita que desees y pulsa el botón Reservar.",
     "SOLICITANDO_CITA": "Solicitando cita ..."
   },
   "PEDIR_CITA_ELEGIR": {
@@ -223,7 +223,7 @@
   "PEDIR_CITA_PREFERENCIAS": {
     "TITLE": "Pedir nueva cita",
     "INTRO": "A continuación, podrás elegir tus preferencias respecto al profesional que quieres que te atienda, el día de la semana y la franja horaria.",
-    "PROFESIONAL": "Elige el profesional",
+    "PROFESIONAL": "Elige al profesional",
     "PREFERENCIA_DIAS": "Preferencia de días",
     "A_PARTIR": "A partir de las:"
   },
@@ -293,7 +293,7 @@
     "NOMBRE": "Escribe tu nombre",
     "MAIL": "Escribe tu email",
     "TEF": "Escribe tu teléfono",
-    "AYUDANOS": "Ayudanos a mejorar, gracias!",
+    "AYUDANOS": "Ayúdanos a mejorar. ¡Gracias!",
     "SUGERENCIA": "Escribe tu sugerencia. Por favor, cuéntanos tu propuesta o recomendación."
   },
   "TAB_HIGIENES": {

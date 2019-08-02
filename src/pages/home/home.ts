@@ -38,6 +38,7 @@ import { Badge } from "@ionic-native/badge";
 
 import { TranslateService } from "@ngx-translate/core";
 import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
+import { StatusBar } from "@ionic-native/status-bar";
 
 @Component({
   selector: "page-home",
@@ -67,9 +68,14 @@ export class HomePage {
     private alertCtrl: AlertController,
     public navCtrl: NavController,
     private translate: TranslateService,
-    private inAppBrowser: InAppBrowser
+    private inAppBrowser: InAppBrowser,
+    private statusBar: StatusBar
   ) {
     this.events.publish("user:logged");
+    //Seteo el formato de la barra de estado
+    this.statusBar.overlaysWebView(false);
+    this.statusBar.backgroundColorByHexString("#81a8d9");
+    this.statusBar.show();
   }
 
   /*

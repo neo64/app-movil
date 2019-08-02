@@ -27,7 +27,7 @@
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="3000" />
     <preference name="orientation" value="portrait" />
-    <preference name="StatusBarOverlayWebView" value="true" />
+    <preference name="StatusBarOverlayWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
     <preference name="KeyboardResize" value="false" />
     <preference name="KeyboardResizeMode" value="ionic" />
