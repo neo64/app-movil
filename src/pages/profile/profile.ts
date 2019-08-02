@@ -228,7 +228,7 @@ export class ProfilePage {
       .setProfile(this.data)
       .then(d => {
         if (typeof d != "undefined" && d["status"] == 1) {
-          this.showError("¡Bien!", d["data"]);
+          this.showError(this.translate.instant("GENERICAS.ATENCION"), d["data"]);
           this.loading.dismiss();
         } else if (d.status == 401) {
           this.showError(

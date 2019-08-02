@@ -43,19 +43,13 @@ export class ChangePasswordPage {
     public navParams: NavParams,
     private translate: TranslateService
   ) {
-    this.bGuardar.name = translate.instant(
-      "CHANGE_PASSWORD.GUARDAR_CONTRASENA"
-    );
+    this.bGuardar.name = translate.instant("CHANGE_PASSWORD.GUARDAR_CONTRASENA");
     this.tituloSubtitulo.titulo = translate.instant("CHANGE_PASSWORD.TITULO");
-    this.tituloSubtitulo.subtitulo = translate.instant(
-      "CHANGE_PASSWORD.SUBTITULO"
-    );
+    this.tituloSubtitulo.subtitulo = translate.instant("CHANGE_PASSWORD.SUBTITULO");
 
     this.isFirst = navParams.get("first");
     if (this.isFirst) {
-      this.tituloSubtitulo.titulo = translate.instant(
-        "CHANGE_PASSWORD.CREA_TU_CONTRASENA"
-      );
+      this.tituloSubtitulo.titulo = translate.instant("CHANGE_PASSWORD.CREA_TU_CONTRASENA");
     }
     this.events.publish("user:logged");
   }
@@ -85,10 +79,7 @@ export class ChangePasswordPage {
       this.showError("ERROR", "Los campos no pueden estar vacios.");
       return;
     } else if (this.data.pass3 != this.data.pass2) {
-      this.showError(
-        "ERROR",
-        "La nuevas nuevas contraseñas deben ser iguales."
-      );
+      this.showError("ERROR", "La nuevas nuevas contraseñas deben ser iguales.");
       return;
     } else {
       this.restProvider
@@ -97,34 +88,23 @@ export class ChangePasswordPage {
           if (typeof data != "undefined" && data["status"] == 1) {
             if (data["error"] == 0) {
               this.showError(
-                "¡Bien!",
+                this.translate.instant("GENERICAS.ATENCION"),
                 "La contraseña ha sido cambiada con éxito",
                 true
               );
             } else {
               this.showError(
                 "¡Atención!",
-                "<p>" +
-                  data["message"] +
-                  "<br/><br/>[Code: " +
-                  data["code"] +
-                  "]</p>"
+                "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
               );
             }
           } else if (data.status == 401) {
-            this.showError(
-              "¡Atención!",
-              "Se ha perdido la sesión, por favor vuelva a iniciar."
-            );
+            this.showError("¡Atención!", "Se ha perdido la sesión, por favor vuelva a iniciar.");
             this.navCtrl.setRoot(LoginPage);
           } else {
             this.showError(
               "¡Atención!",
-              "<p>" +
-                data["message"] +
-                "<br/><br/>[Code: " +
-                data["code"] +
-                "]</p>"
+              "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
             );
           }
         });
