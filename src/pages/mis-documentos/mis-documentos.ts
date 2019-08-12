@@ -71,7 +71,7 @@ export class MisDocumentosPage {
 			
 			this.showLoading();			
 			var blob 		= this.b64toBlob(base64, 'application/pdf');			
-			var name 		= window.localStorage.getItem("idPac")+"_Presupuesto"+numDoc+".pdf";					
+			var name 		= window.localStorage.getItem("idPac") + "_Presupuesto" + numDoc + "_" + new Date().getTime() + ".pdf";
 			let directory 	= this.file.dataDirectory;
 				
 			// Guardo el fichero en la memoria del dispositivo
@@ -202,9 +202,6 @@ export class MisDocumentosPage {
 					this.loading.dismiss();
 					console.log(e);
 				});	
-
-
-				console.log(this);
 			}else if(data.status == 401){
 				this.showError("¡Atención!","Se ha perdido la sesión, por favor vuelva a iniciar.");
 				this.navCtrl.setRoot(LoginPage);				
