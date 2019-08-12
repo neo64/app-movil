@@ -80,6 +80,7 @@ import {
     CallNumber
 } from '@ionic-native/call-number';
 import { Badge } from '@ionic-native/badge';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 
 @Component({
@@ -99,8 +100,11 @@ export class HomePage {
         tipo: 'page',
         gradiente: ''
     };
-    constructor(private badge: Badge, private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController,) {
+    constructor(public menuCtrl: MenuController, private badge: Badge, private callNumber: CallNumber, private domSanitizer: DomSanitizer, private toastCtrl: ToastController, public events: Events, public restProvider: RestProvider, private loadingCtrl: LoadingController, private alertCtrl: AlertController, public navCtrl: NavController,) {
         this.events.publish("user:logged");
+
+        // Habilito de nuevo el menú cuando ya ha pasado el login
+		this.menuCtrl.enable(true, 'myMenu');
     }
 
     /*

@@ -5,6 +5,7 @@ import { HomePage } from '../../pages/home/home';
 import { ChangePasswordPage } from '../../pages/change-password/change-password';
 import { LoginTabPage } from '../../pages/login-tab/login-tab';
 import { FCM } from '@ionic-native/fcm';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 @IonicPage()
 @Component({
@@ -20,10 +21,13 @@ export class LoginPage {
 	bIniciarSesion 	= {name : 'Iniciar sesión', svg: '', openPage : 'Login', class : 'login', tipo : 'page', gradiente: ''};
 
 
-	constructor(public platform: Platform, private fcm: FCM, private toastCtrl: ToastController, public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
+	constructor(public menuCtrl: MenuController, public platform: Platform, private fcm: FCM, private toastCtrl: ToastController, public events: Events, private nav: NavController, public restProvider: RestProvider,private alertCtrl: AlertController, private loadingCtrl: LoadingController) {
 				
 		var timeNow = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
 		var expires = new Date(2100,12,31,23,59,59,0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
+
+		// Quito el menú lateral
+		this.menuCtrl.enable(false, 'myMenu');
 		
 		// Compruebo si la fecha de expiración es posterior
 		// a la fecha actual del sistema, si es así redirijo
