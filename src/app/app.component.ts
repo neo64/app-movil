@@ -186,7 +186,7 @@ export class MyApp {
                     //alert(token);
                     //Compruebo si el token esta en la bbdd y si no lo guarda
                     this.enviarTokenNotifications(token);
-                    console.log("1.TOKEN = " , token);
+                    //console.log("1.TOKEN = " , token);
                 })
                 //Pido permiso para setear los badges de las notificaciones
                 this.requestPermission();
@@ -195,7 +195,7 @@ export class MyApp {
                     //Entra cuando el usuario hace tap en la notificacion
                     if (data.wasTapped) {
                         setTimeout(() => {
-                            this.openPageStrig(data.click_action, true);                            
+                            this.openPageStrig(data.click_action, false);                            
                         }, 300);
                     } else {
                         if (data.showDialog == "true") {
