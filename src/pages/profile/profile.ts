@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController } from 'ionic-angular';
+import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController, Platform } from 'ionic-angular';
 import { RestProvider } from '../../providers/rest/rest';
 import { LoginPage } from '../../pages/login/login';
 
@@ -24,7 +24,7 @@ export class ProfilePage {
 	existe 		= false;
 	base64 		= "";
 
-	constructor(private domSanitizer: DomSanitizer, private _CAMERA : Camera, public actionSheetCtrl: ActionSheetController, private file: File, public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
+	constructor(private platform: Platform, private domSanitizer: DomSanitizer, private _CAMERA : Camera, public actionSheetCtrl: ActionSheetController, private file: File, public events: Events, private alertCtrl: AlertController, public restProvider: RestProvider, public navCtrl: NavController, private loadingCtrl: LoadingController) {
 		this.checkFileExistence(window.localStorage.getItem("idPac")+".jpeg");
 		this.showLoading(); 	// Mostramos el ProgressBar al iniciar la aplicación
 		this.getProfile();		// Llamada a la funcion para obtener el perfil del paciente
@@ -32,17 +32,31 @@ export class ProfilePage {
 	}
 
 	public checkFileExistence(fileName: string) {
-	    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
-	            this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
+		if (this.platform.is('ios')) {
+			return this.file.checkFile(this.file.dataDirectory, fileName).then(() => {
+				this.file.readAsDataURL(this.file.dataDirectory, fileName).then(result => {
 					this.existe 		= true;
 					this.base64 		= result;
 					this.data.Imagen 	= result;
 				}, (err) => {
 					//console.log(err);
 				});
-	    }, (error) => {
-	        //console.log(error);
-	    })
+			}, (error) => {
+				//console.log(error);
+			})
+		} else {
+			return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
+					this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
+						this.existe 		= true;
+						this.base64 		= result;
+						this.data.Imagen 	= result;
+					}, (err) => {
+						//console.log(err);
+					});
+			}, (error) => {
+				//console.log(error);
+			})
+		}
   	}
 
   	public getContentType(base64Data: any) {  
@@ -83,7 +97,13 @@ export class ProfilePage {
     public writeFile(base64Data: any, folderName: string, fileName: any) {  
         let contentType = this.getContentType(base64Data);  
         let DataBlob 	= this.base64toBlob(base64Data, contentType);  
-        let filePath 	= this.file.externalRootDirectory + folderName;  
+		let filePath 	= null;
+		
+		if (this.platform.is('ios')) {
+			filePath = this.file.dataDirectory + folderName;
+		} else {
+			filePath = this.file.externalRootDirectory + folderName;
+		}
         
         this.file.writeFile(filePath, fileName, DataBlob, contentType).then((success) => {  
             //console.log("File Writed Successfully", success);  
@@ -91,8 +111,10 @@ export class ProfilePage {
             this.data.Imagen = base64Data;
             this.loading.dismiss();
         }).catch((err) => {  
-            //console.log("Error Occured While Writing File", err);  
-        })  
+			this.showError("ERROR", "Error Occured While Writing File");
+			console.log(err);
+			this.loading.dismiss();         
+		})  
     }
 
     /**
@@ -122,7 +144,6 @@ export class ProfilePage {
 
 			this._CAMERA.getPicture(cameraOptions).then((data) => {			
 				this.writeFile('data:image/jpeg;base64,' + data, "", window.localStorage.getItem("idPac")+".jpeg");
-				
 			}).catch(e => {
 				if(e == 20){
 					this.showError("ERROR", "Error al intentar enviar la imagen, no hay permisos para acceder a las imagenes.");
