@@ -134,6 +134,7 @@
       </div>
     </ion-slide>
   </ion-slides>
+  <p *ngIf="citas.length == 0" style="text-align: center;">Actualmente no tienes citas</p>
   <ion-row style="display: flex;    margin: 0rem 2rem 0 2rem;">
     <ion-col>
       <fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)">

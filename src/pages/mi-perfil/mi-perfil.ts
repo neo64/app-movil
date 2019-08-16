@@ -1,14 +1,6 @@
-import { Component } from "@angular/core";
-import {
-  IonicPage,
-  NavController,
-  Loading,
-  LoadingController,
-  AlertController,
-  Events,
-  ActionSheetController
-} from "ionic-angular";
-import { ChatPage } from "../../pages/chat/chat";
+import { Component } from '@angular/core';
+import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController, Platform } from 'ionic-angular';
+import { ChatPage } from '../../pages/chat/chat';
 
 // Proveedor de API
 import { RestProvider } from "../../providers/rest/rest";
@@ -63,6 +55,7 @@ export class MiPerfilPage {
   };
 
   constructor(
+    private platform: Platform,
     private file: File,
     private _CAMERA: Camera,
     public actionSheetCtrl: ActionSheetController,
@@ -194,43 +187,56 @@ export class MiPerfilPage {
 	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
 	*
 	*/
-  public writeFile(base64Data: any, folderName: string, fileName: any) {
-    let contentType = this.getContentType(base64Data);
-    let DataBlob = this.base64toBlob(base64Data, contentType);
-    let filePath = this.file.externalRootDirectory + folderName;
+    public writeFile(base64Data: any, folderName: string, fileName: any) {  
+        let contentType = this.getContentType(base64Data);  
+        let DataBlob 	= this.base64toBlob(base64Data, contentType);  
+        let filePath 	= null;
+		
+		if (this.platform.is('ios')) {
+			filePath = this.file.dataDirectory + folderName;
+		} else {
+			filePath = this.file.externalRootDirectory + folderName;
+		}
 
-    this.file
-      .writeFile(filePath, fileName, DataBlob, contentType)
-      .then(success => {
-        //console.log("File Writed Successfully", success);
-        //console.log(filePath + fileName);
-        this.data.Imagen = base64Data;
-        this.loading.dismiss();
-      })
-      .catch(err => {
-        //console.log("Error Occured While Writing File", err);
-      });
-  }
+        this.file.writeFile(filePath, fileName, DataBlob, contentType).then((success) => {  
+            //console.log("File Writed Successfully", success);  
+            //console.log(filePath + fileName);
+            this.data.Imagen = base64Data;
+            this.loading.dismiss();
+        }).catch((err) => {  
+			this.showError("ERROR", "Error Occured While Writing File");
+			console.log(err);
+			this.loading.dismiss();  
+        })  
+    }
 
-  public checkFileExistence(fileName: string) {
-    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(
-      () => {
-        this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(
-          result => {
-            this.existe = true;
-            this.base64 = result;
-            this.data.Imagen = result;
-          },
-          err => {
-            //console.log(err);
-          }
-        );
-      },
-      error => {
-        //console.log(error);
-      }
-    );
-  }
+    public checkFileExistence(fileName: string) {
+		if (this.platform.is('ios')) {
+			return this.file.checkFile(this.file.dataDirectory, fileName).then(() => {
+				this.file.readAsDataURL(this.file.dataDirectory, fileName).then(result => {
+					this.existe 		= true;
+					this.base64 		= result;
+					this.data.Imagen 	= result;
+				}, (err) => {
+					//console.log(err);
+				});
+			}, (error) => {
+				//console.log(error);
+			})
+		} else {
+			return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
+					this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
+						this.existe 		= true;
+						this.base64 		= result;
+						this.data.Imagen 	= result;
+					}, (err) => {
+						//console.log(err);
+					});
+			}, (error) => {
+				//console.log(error);
+			})
+		}
+  	}
 
   /**
 	* 	Función que envía una imagen a Firebase
