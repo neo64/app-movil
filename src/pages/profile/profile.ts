@@ -1,16 +1,7 @@
-import { Component } from "@angular/core";
-import {
-  IonicPage,
-  NavController,
-  Loading,
-  LoadingController,
-  AlertController,
-  Events,
-  ActionSheetController
-} from "ionic-angular";
-import { RestProvider } from "../../providers/rest/rest";
-import { LoginPage } from "../../pages/login/login";
-
+import { Component } from '@angular/core';
+import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController, Platform } from 'ionic-angular';
+import { RestProvider } from '../../providers/rest/rest';
+import { LoginPage } from '../../pages/login/login';
 import { File } from "@ionic-native/file";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Camera, CameraOptions } from "@ionic-native/camera";
@@ -38,6 +29,7 @@ export class ProfilePage {
   base64 = "";
 
   constructor(
+    private platform: Platform, 
     private domSanitizer: DomSanitizer,
     private _CAMERA: Camera,
     public actionSheetCtrl: ActionSheetController,
@@ -56,24 +48,33 @@ export class ProfilePage {
   }
 
   public checkFileExistence(fileName: string) {
-    return this.file.checkFile(this.file.externalRootDirectory, fileName).then(
-      () => {
-        this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(
-          result => {
-            this.existe = true;
-            this.base64 = result;
-            this.data.Imagen = result;
-          },
-          err => {
-            //console.log(err);
-          }
-        );
-      },
-      error => {
-        //console.log(error);
-      }
-    );
+		if (this.platform.is('ios')) {
+			return this.file.checkFile(this.file.dataDirectory, fileName).then(() => {
+				this.file.readAsDataURL(this.file.dataDirectory, fileName).then(result => {
+					this.existe 		= true;
+					this.base64 		= result;
+					this.data.Imagen 	= result;
+				}, (err) => {
+					//console.log(err);
+				});
+			}, (error) => {
+				//console.log(error);
+			})
+		} else {
+			return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
+					this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
+						this.existe 		= true;
+						this.base64 		= result;
+						this.data.Imagen 	= result;
+					}, (err) => {
+						//console.log(err);
+					});
+			}, (error) => {
+				//console.log(error);
+			})
+		}
   }
+
 
   public getContentType(base64Data: any) {
     let block = base64Data.split(";");
@@ -110,23 +111,28 @@ export class ProfilePage {
 	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
 	*
 	*/
-  public writeFile(base64Data: any, folderName: string, fileName: any) {
-    let contentType = this.getContentType(base64Data);
-    let DataBlob = this.base64toBlob(base64Data, contentType);
-    let filePath = this.file.externalRootDirectory + folderName;
+  public writeFile(base64Data: any, folderName: string, fileName: any) {  
+    let contentType = this.getContentType(base64Data);  
+    let DataBlob 	= this.base64toBlob(base64Data, contentType);  
+let filePath 	= null;
 
-    this.file
-      .writeFile(filePath, fileName, DataBlob, contentType)
-      .then(success => {
-        //console.log("File Writed Successfully", success);
+if (this.platform.is('ios')) {
+  filePath = this.file.dataDirectory + folderName;
+} else {
+  filePath = this.file.externalRootDirectory + folderName;
+}
+    
+    this.file.writeFile(filePath, fileName, DataBlob, contentType).then((success) => {  
+        //console.log("File Writed Successfully", success);  
         //console.log(filePath + fileName);
         this.data.Imagen = base64Data;
         this.loading.dismiss();
-      })
-      .catch(err => {
-        //console.log("Error Occured While Writing File", err);
-      });
-  }
+    }).catch((err) => {  
+  this.showError("ERROR", "Error Occured While Writing File");
+  console.log(err);
+  this.loading.dismiss();         
+})  
+}
 
   /**
 	* 	Función que envía una imagen a Firebase
@@ -148,12 +154,12 @@ export class ProfilePage {
         correctOrientation: true,
         saveToPhotoAlbum: true,
         cameraDirection: 1,
-        encodingType: this._CAMERA.EncodingType.JPEG
+        encodingType: this._CAMERA.EncodingType.JPEG,
       };
 
       this._CAMERA
         .getPicture(cameraOptions)
-        .then(data => {
+        .then((data) => {
           this.writeFile(
             "data:image/jpeg;base64," + data,
             "",

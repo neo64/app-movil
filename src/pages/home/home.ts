@@ -33,8 +33,11 @@ import { RestProvider } from "../../providers/rest/rest";
 // Para aceptar HTML desde la API
 import { DomSanitizer } from "@angular/platform-browser";
 // Para abrir la aplicación de llamadas nativa.
-import { CallNumber } from "@ionic-native/call-number";
-import { Badge } from "@ionic-native/badge";
+import {
+    CallNumber
+} from '@ionic-native/call-number';
+import { Badge } from '@ionic-native/badge';
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 import { TranslateService } from "@ngx-translate/core";
 import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
@@ -45,19 +48,20 @@ import { StatusBar } from "@ionic-native/status-bar";
   templateUrl: "home.html"
 })
 export class HomePage {
-  @ViewChild("slides") slides: Slides;
+  @ViewChild('slides') slides: Slides;
   loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
   cards = new Array(); // Array donde se almacenan los objetos del tipo card descargados del servidor.
   cardsMenu = new Array(); // Array donde se descargan los elementos del menú
   bPedirCita = {
-    name: "PEDIR CITA",
-    svg: "",
-    openPage: "PedirCita",
-    class: "active",
-    tipo: "page",
-    gradiente: ""
+    name: 'PEDIR CITA',
+    svg: '',
+    openPage: 'PedirCita',
+    class: 'active',
+    tipo: 'page',
+    gradiente: ''
   };
   constructor(
+    public menuCtrl: MenuController, 
     private badge: Badge,
     private callNumber: CallNumber,
     private domSanitizer: DomSanitizer,
@@ -76,6 +80,8 @@ export class HomePage {
     this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString("#81a8d9");
     this.statusBar.show();
+            // Habilito de nuevo el menú cuando ya ha pasado el login
+		this.menuCtrl.enable(true, 'myMenu');
   }
 
   /*

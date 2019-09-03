@@ -92,7 +92,7 @@ export class MisDocumentosPage {
     } else {
       this.showLoading();
       var blob = this.b64toBlob(base64, "application/pdf");
-      var name = window.localStorage.getItem("idPac") + "_Presupuesto" + numDoc + ".pdf";
+      var name = window.localStorage.getItem("idPac") + "_Presupuesto" + numDoc + "_" + new Date().getTime() + ".pdf";
       let directory = this.file.dataDirectory;
 
       // Guardo el fichero en la memoria del dispositivo
@@ -211,7 +211,7 @@ export class MisDocumentosPage {
                       this.cards[i].html = this.cardsPresup[j].html;
                     }
                   }
-                  console.log(this.cards[i]);
+                  //console.log(this.cards[i]);
                 }
 
                 this.loading.dismiss();
@@ -233,7 +233,7 @@ export class MisDocumentosPage {
               console.log(e);
             });
 
-          console.log(this);
+          //console.log(this);
         } else if (data.status == 401) {
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),

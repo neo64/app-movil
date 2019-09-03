@@ -15,6 +15,7 @@ import { ChangePasswordPage } from "../../pages/change-password/change-password"
 import { LoginTabPage } from "../../pages/login-tab/login-tab";
 import { FCM } from "@ionic-native/fcm";
 import { TranslateService } from "@ngx-translate/core";
+import { MenuController } from 'ionic-angular/components/app/menu-controller';
 
 @IonicPage()
 @Component({
@@ -42,6 +43,7 @@ export class LoginPage {
   };
 
   constructor(
+    public menuCtrl: MenuController,
     public platform: Platform,
     private fcm: FCM,
     private toastCtrl: ToastController,
@@ -54,6 +56,9 @@ export class LoginPage {
   ) {
     var timeNow = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
     var expires = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
+
+    //Quito el menú lateral
+    this.menuCtrl.enable(false,'myMenu');
 
     // Compruebo si la fecha de expiración es posterior
     // a la fecha actual del sistema, si es así redirijo
