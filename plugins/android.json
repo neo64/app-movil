@@ -67,9 +67,6 @@
     "cordova-plugin-nativestorage": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
-    "cordova-plugin-sms": {
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },

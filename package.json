@@ -81,7 +81,6 @@
     "cordova-plugin-ios-camera-permissions": "1.2.0",
     "cordova-plugin-multidex": "^0.1.4",
     "cordova-plugin-nativestorage": "^2.3.2",
-    "cordova-plugin-sms": "1.0.5",
     "cordova-plugin-splashscreen": "^5.0.2",
     "cordova-plugin-statusbar": "^2.4.2",
     "cordova-plugin-vibration": "~3.1.0",
@@ -135,7 +134,6 @@
         "PHOTOLIBRARY_USAGE_DESCRIPTION": "This app needs read/write-access photo library access"
       },
       "mx.ferreyra.callnumber": {},
-      "cordova-plugin-sms": {},
       "cordova-plugin-android-permissions": {},
       "uk.co.workingedge.phonegap.plugin.launchnavigator": {
         "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",

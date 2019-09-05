@@ -91,9 +91,9 @@
   },
   "FAQ": {
     "TITLE": "Preguntas Frecuentes",
-    "INTRO": "A continuación, podrás consultar las preguntas y respuestas más frecuentes acerca de nuestros tratamientos principales.",
-    "TITULO": "Preguntas frecuentes",
-    "SUBTITULO": "de tratamientos"
+    "INTRO": "Aquí puedes consultar las preguntas más habituales acerca de nuestros procedimientos bucodentales",
+    "TITULO": "¿Tienes dudas sobre algún tratamiento?",
+    "SUBTITULO": ""
   },
   "FAQ_DETAIL": {
     "TITULO": "Preguntas de "
@@ -101,8 +101,8 @@
 
   "HOME": {
     "TITLE": "Ferrus & Bratos",
-    "PROXIMAS_CITAS": "Próximas Citas",
-    "NO_TIENES_CITAS": "Actualmente no tienes citas",
+    "PROXIMAS_CITAS": "Próximas citas",
+    "NO_TIENES_CITAS": "Actualmente no tienes ninguna cita pendiente",
     "MENU": "Menú",
     "VER_MAS": "Ver más",
     "ERROR_SIN_SESION": "¡Atención!, Se ha perdido la sesión, por favor vuelva a iniciar.",
@@ -214,24 +214,26 @@
   },
   "PEDIR_CITA_ELEGIR": {
     "TITLE": "Elige tu cita",
-    "CON_CITA": "Elige la cita que desees, y pulsa el botón reservar.",
-    "SIN_CITA": "No hemos encontrado citas para los criterios de búsqueda.",
-    "RESERVAR": "Reservar",
+    "CON_CITA": "Pulsa el botón solicitar, en la cita que quieras elegir.",
+    "SIN_CITA": "No hay citas disponibles para tus criterios de búsqueda. Prueba eligiendo otro día de la semana o franja horaria.",
+    "RESERVAR": "Solicitar",
     "TITULO": "Elige tu cita",
-    "SUBTITULO": "de la cita"
+    "SUBTITULO": "¿Qué día quieres venir?",
+    "TITULO_SIN_CITA": "Lo sentimos",
+    "SUBTITULO_SIN_CITA": ""
   },
   "PEDIR_CITA_PREFERENCIAS": {
     "TITLE": "Pedir nueva cita",
-    "INTRO": "A continuación, podrás elegir tus preferencias respecto al profesional que quieres que te atienda, el día de la semana y la franja horaria.",
-    "PROFESIONAL": "Elige al profesional",
-    "PREFERENCIA_DIAS": "Preferencia de días",
+    "INTRO": "Aquí podrás elegir qué profesional quieres que te atienda, el día de la semana y la franja horaria.",
+    "PROFESIONAL": "Profesional:",
+    "PREFERENCIA_DIAS": "Preferencia de días:",
     "A_PARTIR": "A partir de las:"
   },
   "PEDIR_CITA_RESERVA": {
-    "TITLE": "Cita Reservada",
-    "INTRO": "Contrary to popular belief/opinion. Del Lonncontrary to popula",
+    "TITLE": "Cita solicitada",
+    "INTRO": "Recibirás una notificación a la mayor brevedad posible cuando tu cita haya sido confirmada.",
     "RESERVADA": "Reservada",
-    "TITULO": "Cita reservada",
+    "TITULO": "Muchas gracias",
     "SUBTITULO": ""
   },
   "PLAN_ECONOMICO": {
@@ -262,12 +264,12 @@
     "ERROR_CITA": "Hubo un error al gestionar tu cita."
   },
   "PRESUPUESTOS": {
-    "TITLE": "Mis Presupuestos",
-    "CON_PRESU": "A continuación, podrás tener acceso a todos tus presupuestos para consultarlos cuando desees.",
+    "TITLE": "Mis presupuestos",
+    "CON_PRESU": "Aquí encontrarás todos tus presupuestos y podrás consultarlos cuando quieras.",
     "SIN_PRESU": "De momento, no tienes ningún presupuesto.",
     "ESTADO": "Estado",
-    "TITULO": "Mis Presupuestos",
-    "SUBTITULO": "de tratamientos",
+    "TITULO": "Mis presupuestos",
+    "SUBTITULO": "",
     "ERROR_DOC": "No es posible abrir el documento."
   },
   "PROFILE": {
@@ -290,11 +292,11 @@
   },
   "SUGERENCIAS": {
     "TITLE": "Sugerencias",
-    "NOMBRE": "Escribe tu nombre",
-    "MAIL": "Escribe tu email",
-    "TEF": "Escribe tu teléfono",
-    "AYUDANOS": "Ayúdanos a mejorar. ¡Gracias!",
-    "SUGERENCIA": "Escribe tu sugerencia. Por favor, cuéntanos tu propuesta o recomendación."
+    "NOMBRE": "Nombre:",
+    "MAIL": "Email:",
+    "TEF": "Teléfono:",
+    "AYUDANOS": "Escribe tu comentario:",
+    "SUGERENCIA": "Cuéntanos tu propuesta o recomendación."
   },
   "TAB_HIGIENES": {
     "TITLE": "Higienes"

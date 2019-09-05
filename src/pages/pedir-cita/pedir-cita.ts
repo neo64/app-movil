@@ -32,7 +32,7 @@ export class PedirCitaPage {
     tipo: "",
     gradiente: ""
   };
-  tituloSubtitulo = { titulo: "Elige el tratamiento", subtitulo: "de la cita" };
+  tituloSubtitulo = { titulo: "Elige el tratamiento", subtitulo: "que quieras" };
 
   constructor(
     private alertCtrl: AlertController,

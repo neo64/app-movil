@@ -355,14 +355,6 @@ module.exports = [
     "pluginId": "cordova-plugin-nativestorage"
   },
   {
-    "id": "cordova-plugin-sms.SMS",
-    "file": "plugins/cordova-plugin-sms/www/SMS.js",
-    "pluginId": "cordova-plugin-sms",
-    "clobbers": [
-      "window.SMS"
-    ]
-  },
-  {
     "id": "cordova-plugin-splashscreen.SplashScreen",
     "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
     "pluginId": "cordova-plugin-splashscreen",
@@ -450,7 +442,6 @@ module.exports.metadata =
   "cordova-plugin-ionic-webview": "2.4.1",
   "cordova-plugin-ios-camera-permissions": "1.2.0",
   "cordova-plugin-nativestorage": "2.3.2",
-  "cordova-plugin-sms": "1.0.5",
   "cordova-plugin-splashscreen": "5.0.3",
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-vibration": "3.1.0",

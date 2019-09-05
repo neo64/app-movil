@@ -33,7 +33,7 @@ export class PedirCitaPreferenciasPage {
     gradiente: ""
   };
   bAnterior = { name: "Anterior", svg: "", openPage: "", class: "login", tipo: "", gradiente: "" };
-  tituloSubtitulo = { titulo: "Elige tus preferencias", subtitulo: "de la cita" };
+  tituloSubtitulo = { titulo: "Elige tus preferencias", subtitulo: "para la higiene" };
   doctores = [];
   diasSemana = [
     { dia: "Lunes", class: "" },

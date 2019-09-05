@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-versionCode="1" id="app.ferrusbratos.com" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-versionCode="3" id="app.ferrusbratos.com" version="3" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FyB</name>
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
@@ -126,7 +126,6 @@
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="This app needs read/write-access photo library access" />
     </plugin>
     <plugin name="mx.ferreyra.callnumber" spec="0.0.2" />
-    <plugin name="cordova-plugin-sms" spec="1.0.5" />
     <plugin name="cordova-plugin-android-permissions" spec="1.0.0" />
     <plugin name="uk.co.workingedge.phonegap.plugin.launchnavigator" spec="5.0.4">
         <variable name="GOOGLE_API_KEY_FOR_ANDROID" value="{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}" />

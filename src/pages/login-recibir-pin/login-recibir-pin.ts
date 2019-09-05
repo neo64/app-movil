@@ -56,6 +56,7 @@ export class LoginRecibirPinPage {
     this.tituloSubtitulo.subtitulo = this.translate.instant("LOGIN_RECIBIR_PIN.SUBTITULO");
   }
 
+  /** Comento la funcionalidad de leer SMS automaticamente por problemas de permisos y la aprobacion de la app por parte de Google
   ReadListSMS() {
     let filter = {
       box: "inbox", // 'inbox' (default), 'sent', 'draft'
@@ -76,7 +77,7 @@ export class LoginRecibirPinPage {
         }
       );
     }
-  }
+  }*/
 
   detectCode(ListSms) {
     for (let data of ListSms) {
@@ -138,10 +139,10 @@ export class LoginRecibirPinPage {
         this.data = d["data"];
         this.loading.dismiss();
 
-        this.ReadListSMS();
+        /*this.ReadListSMS();
         this.interval = setInterval(() => {
           this.ReadListSMS();
-        }, 3000);
+        }, 3000);*/
       } else if (typeof d != "undefined" && d["status"] == 2) {
         this.navCtrl.push(LoginErrorPinPage).then(() => {
           const startIndex = this.navCtrl.getActive().index - 1;

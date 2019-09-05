@@ -57,7 +57,7 @@ export class LoginRegistroPage {
     this.tituloSubtitulo.subtitulo = this.translate.instant("LOGIN_REGISTRO.SUBTITULO");
   }
 
-  ionViewWillEnter() {
+  /*ionViewWillEnter() {
     this.androidPermissions
       .checkPermission(this.androidPermissions.PERMISSION.READ_SMS)
       .then(
@@ -67,7 +67,7 @@ export class LoginRegistroPage {
       );
 
     this.androidPermissions.requestPermissions([this.androidPermissions.PERMISSION.READ_SMS]);
-  }
+  }*/
 
   siguiente() {
     var dni = this.registerCredentials.email;

@@ -9,7 +9,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding [hidden]="ocultarPantalla">
 
   <div>
     <fb-titulo-subtitulo *ngIf="tituloSubtitulo" [info]="tituloSubtitulo"></fb-titulo-subtitulo>

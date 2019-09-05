@@ -92,7 +92,13 @@ export class MisDocumentosPage {
     } else {
       this.showLoading();
       var blob = this.b64toBlob(base64, "application/pdf");
-      var name = window.localStorage.getItem("idPac") + "_Presupuesto" + numDoc + "_" + new Date().getTime() + ".pdf";
+      var name =
+        window.localStorage.getItem("idPac") +
+        "_Presupuesto" +
+        numDoc +
+        "_" +
+        new Date().getTime() +
+        ".pdf";
       let directory = this.file.dataDirectory;
 
       // Guardo el fichero en la memoria del dispositivo
@@ -203,6 +209,7 @@ export class MisDocumentosPage {
                 for (var key in data["data"]) {
                   this.cardsPresup.push(data["data"][key]);
                 }
+                console.log(this.cardsPresup);
 
                 //Uno los 2 cards
                 for (var i in this.cards) {
@@ -211,7 +218,7 @@ export class MisDocumentosPage {
                       this.cards[i].html = this.cardsPresup[j].html;
                     }
                   }
-                  //console.log(this.cards[i]);
+                  console.log(this.cards[i]);
                 }
 
                 this.loading.dismiss();

@@ -51,7 +51,7 @@ export class SugerenciasPage {
       .setSugerencia(this.data)
       .then(d => {
         if (typeof d != "undefined" && d["status"] == 1) {
-          this.showError("¡Bien!", d["data"], true);
+          this.showError("Mensaje enviado", d["data"], true);
         } else if (d.status == 401) {
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),

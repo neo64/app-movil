@@ -40,6 +40,8 @@ export class PedirCitaElegirPage {
 
   citasBuscador = [];
 
+  ocultarPantalla = true;
+
   constructor(
     private domSanitizer: DomSanitizer,
     private alertCtrl: AlertController,
@@ -50,9 +52,9 @@ export class PedirCitaElegirPage {
     public navParams: NavParams,
     private translate: TranslateService
   ) {
-    this.tituloSubtitulo.titulo = this.translate.instant("PEDIR_CITA_ELEGIR.TITULO");
-    this.tituloSubtitulo.subtitulo = this.translate.instant("PEDIR_CITA_ELEGIR.SUBTITULO");
     this.showLoading();
+
+    console.log(this.ocultarPantalla);
     this.searchCita(
       this.navParams.get("dia"),
       this.navParams.get("hora"),
@@ -81,10 +83,19 @@ export class PedirCitaElegirPage {
     this.restProvider
       .searchCita(dia, hora, dr, tto)
       .then(data => {
+        this.ocultarPantalla = false;
         if (typeof data != "undefined" && data["status"] == 1) {
           if (JSON.parse(data["data"]).length > 0) {
             this.citasBuscador = JSON.parse(data["data"]);
+            this.tituloSubtitulo.titulo = this.translate.instant("PEDIR_CITA_ELEGIR.TITULO");
+            this.tituloSubtitulo.subtitulo = this.translate.instant("PEDIR_CITA_ELEGIR.SUBTITULO");
           } else {
+            this.tituloSubtitulo.titulo = this.translate.instant(
+              "PEDIR_CITA_ELEGIR.TITULO_SIN_CITA"
+            );
+            this.tituloSubtitulo.subtitulo = this.translate.instant(
+              "PEDIR_CITA_ELEGIR.SUBTITULO_SIN_CITA"
+            );
           }
           this.loading.dismiss();
         } else if (data.status == 401) {
