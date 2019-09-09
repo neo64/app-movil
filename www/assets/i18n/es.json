@@ -62,11 +62,11 @@
     "CAMBIAR": "Cambiar",
     "PAGINA_NO_DISPONIBLE": "La página no está disponible.",
     "CONFIRMACION_REQUERIDA": "Confirmación requerida",
-    "QUIERES": "¿Quieres ",
+    "QUIERES": "¿Estás seguro que quieres ",
     "LA_CITA": " la cita?",
     "GESTIONANDO_CITA": "Gestionando la cita ...",
-    "ANULADO_CITA": "Hemos anulado tu cita.",
-    "CAMBIADO_CITA": "Nos pondremos en contacto contigo para cambiar la cita.",
+    "ANULADO_CITA": "Hemos anulado tu cita. Si quieres pedir una nueva, puedes ponerte en contacto con nosotros a través del chat.",
+    "CAMBIADO_CITA": "Nos pondremos en contacto contigo a la mayor brevedad posible para gestionarte el cambio de cita.",
     "CONFIRMADO_CITA": "Hemos confirmado tu cita.",
     "INFORMACION": "Información",
     "ATENCION": "¡Atención!",
@@ -189,7 +189,7 @@
   "MI_SALUD": {
     "TITLE": "Mi Salud",
     "INTRO": "Próximas Higienes",
-    "SIN_CITAS": "Actualmente no tienes citas",
+    "SIN_CITAS": "Actualmente no tienes ninguna cita de higiene pendiente.",
     "ERROR_PAG_NO_DISPONIBLE": "La página no está disponible."
   },
   "MIS_CITAS": {
@@ -204,12 +204,13 @@
   "MIS_DOCUMENTOS": {
     "TITLE": "Mis Documentos",
     "PRESUPUESTOS": "Presupuestos",
-    "ERROR_ABRIR_DOC": "No es posible abrir el documento."
+    "ERROR_ABRIR_DOC": "No es posible abrir el documento.",
+    "SIN_PTOS": "Actualmente no tienes ningún presupuesto emitido"
   },
   "PEDIR_CITA": {
     "TITLE": "Pedir nueva cita",
     "INTRO": "A continuación, podrás elegir cuándo deseas concertar una visita para llevar a cabo tu tratamiento.",
-    "ESCRIBENOS": "Elige la cita que desees y pulsa el botón Reservar.",
+    "ESCRIBENOS": "Escríbenos y dinos que tratamiento necesitas y en que fecha y horario te vendría mejor.",
     "SOLICITANDO_CITA": "Solicitando cita ..."
   },
   "PEDIR_CITA_ELEGIR": {
@@ -285,7 +286,8 @@
     "TEL_MOVIL": "Teléfono móvil",
     "TEL_FIJO": "Teléfono fijo",
     "ALERGIAS": "Alergias",
-    "MEDICACION": "Medicación"
+    "MEDICACION": "Medicación",
+    "ENVIANDO_SOLICITUD": "Enviando solicitud..."
   },
   "RECALL": {
     "ANADIR_CALENDARIO": "Añadiendo al calendario"

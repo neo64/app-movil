@@ -75,7 +75,7 @@ export class ChatPage {
 
     if (this.navParams.get("message")) {
       this.showError(
-        translate.instant("CHAT.ATENCION"),
+        translate.instant("Pide tu cita a través del chat."),
         this.navParams.get("message")
       );
     }
@@ -116,13 +116,7 @@ export class ChatPage {
 
     firebase.database().ref(this.nickname).limitToLast(15).on("value", resp => {
       this.chats = [];
-      this.chats = snapshotToArray(
-        resp,
-        this.nickname,
-        this.vb,
-        this.firstOpen,
-        this.offStatus
-      );
+      this.chats = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
       setTimeout(() => {
         this.firstOpen = false;
         if (this.offStatus === false) {
@@ -506,13 +500,7 @@ export class ChatPage {
 * 	@author Jesús Río <jesusriobarrilero@gmail.com>
 * 	@return None
 */
-export const snapshotToArray = (
-  snapshot,
-  nickname,
-  vb,
-  firstOpen,
-  offStatus
-) => {
+export const snapshotToArray = (snapshot, nickname, vb, firstOpen, offStatus) => {
   let returnArr = [];
   let lastElemenmt = "";
 

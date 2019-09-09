@@ -115,6 +115,7 @@ export class ConsultarCitas {
     this.restProvider
       .getCitasPasadas()
       .then(data => {
+        this.loading.dismiss();
         if (typeof data != "undefined" && data["status"] == 1) {
           for (var key in data["data"]) {
             this.citas.push(data["data"][key]);

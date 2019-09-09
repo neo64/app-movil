@@ -67,6 +67,10 @@
       </div>
     </ion-slide>
   </ion-slides>
+  <div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 90%; margin:0 auto; display: block;">
+    <p style="font-size:1.5em;text-align:center;color:white;line-height: 2.5rem;">
+      {{ 'MIS_DOCUMENTOS.SIN_PTOS' | translate }} </p>
+  </div>
 </div>
 
 <!-- Gradiente -->

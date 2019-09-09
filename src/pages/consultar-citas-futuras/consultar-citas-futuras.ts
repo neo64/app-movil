@@ -15,6 +15,7 @@ import {
 import { RestProvider } from "../../providers/rest/rest";
 import { PopoverPage } from "../../pages/popover/popover";
 import { Calendar } from "@ionic-native/calendar";
+import { HomePage } from "../home/home";
 
 import { TabHigienesPage } from "../tab-higienes/tab-higienes";
 import { PedirCitaPage } from "../pedir-cita/pedir-cita";
@@ -91,15 +92,15 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que abre una página o una web dependiendo
-	*	de los parámetros que se les introduzca.
-	*
-	* 	@param String page a la que redirigir.
-	* 	@param String tipo si es pagina o web.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que abre una página o una web dependiendo
+   *	de los parámetros que se les introduzca.
+   *
+   * 	@param String page a la que redirigir.
+   * 	@param String tipo si es pagina o web.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
 
   openPage(page, tipo) {
     if (tipo === "page") {
@@ -116,15 +117,15 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
@@ -137,15 +138,15 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que muestra una alerta para confirmar o
-	*	anular la acción requerida.
-	*
-	* 	@param String Accion de gestión de la cita (Anulada, Cambio o Confirmada)
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
-  presentConfirm(action, fechaDecimal, horaDecimal) {
+   * 	Función que muestra una alerta para confirmar o
+   *	anular la acción requerida.
+   *
+   * 	@param String Accion de gestión de la cita (Anulada, Cambio o Confirmada)
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
+  presentConfirm(action, fechaDecimal, horaDecimal, item) {
     let alert = this.alertCtrl.create({
       title: this.translate.instant("CONSULTAR_CITAS_FUTURAS.CONFIRMACION_REQUERIDA"),
       message:
@@ -167,14 +168,14 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que muestra gestiona la cita haciendo
-	*	uso de la API del sistema
-	*
-	* 	@param String Tipo de gestión de la cita (Anulada, Cambio o Confirmada)
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra gestiona la cita haciendo
+   *	uso de la API del sistema
+   *
+   * 	@param String Tipo de gestión de la cita (Anulada, Cambio o Confirmada)
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   gestionarCita(tipo, fechaDecimal, horaDecimal) {
     var textoAlert = "";
 
@@ -189,7 +190,11 @@ export class ConsultarCitasFuturasPage {
       .gestionarCita(tipo, fechaDecimal, horaDecimal)
       .then(data => {
         if (typeof data != "undefined" && data["status"] == 1) {
-          this.showError(this.translate.instant("CONSULTAR_CITAS_FUTURAS.INFORMACION"), textoAlert);
+          //this.showError(this.translate.instant("CONSULTAR_CITAS_FUTURAS.INFORMACION"), textoAlert);
+          this.presentAlertConfirm(
+            this.translate.instant("CONSULTAR_CITAS_FUTURAS.INFORMACION"),
+            textoAlert
+          );
         } else if (data.status == 401) {
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),
@@ -211,14 +216,33 @@ export class ConsultarCitasFuturasPage {
       });
   }
 
+  presentAlertConfirm(title, text) {
+    this.loading.dismiss();
+    const alert = this.alertCtrl.create({
+      title: title,
+      message: text,
+      buttons: [
+        {
+          text: "Ok",
+          handler: () => {
+            //Recargo la Vista para que recarge las citas
+            this.navCtrl.setRoot(this.navCtrl.getActive().component);
+          }
+        }
+      ]
+    });
+
+    alert.present();
+  }
+
   /**
-	* 	Función que muestra un pop-up para gestionar la cita.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra un pop-up para gestionar la cita.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   presentPopover(myEvent, fecha, hora) {
     let popover = this.popoverCtrl.create(PopoverPage, { fecha: fecha, hora: hora });
     popover.present({
@@ -227,13 +251,13 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que añade al calendario una cita.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que añade al calendario una cita.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   addEvent(timestampINI, timestampFIN) {
     let dateINI = new Date(parseInt(timestampINI));
     let dateFIN = new Date(parseInt(timestampFIN));
@@ -268,25 +292,25 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que convierte los numeros a dos digitos
-	*
-	* 	@param Integer Número a convertir
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return Número de dos digitos
-	*/
+   * 	Función que convierte los numeros a dos digitos
+   *
+   * 	@param Integer Número a convertir
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return Número de dos digitos
+   */
   pad(a) {
     return (a < 10 ? "0" : "") + a;
   }
 
   /**
-	* 	Función que obtiene las citas futuras del paciente
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene las citas futuras del paciente
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   getCitas() {
     this.restProvider
       .getCitasFuturas()
@@ -322,14 +346,14 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(text = "Cargando información....") {
     this.loading = this.loadingCtrl.create({
@@ -340,15 +364,15 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
@@ -360,15 +384,15 @@ export class ConsultarCitasFuturasPage {
   }
 
   /**
-	* 	Función que detecta el movimiento del gesto y pasa
-	*	de una página a otra.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que detecta el movimiento del gesto y pasa
+   *	de una página a otra.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   swipe(e) {
     if (e.direction == "2") {
       this.app.getRootNav().parent.select(1);

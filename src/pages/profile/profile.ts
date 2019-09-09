@@ -1,7 +1,16 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, Loading, LoadingController, AlertController, Events, ActionSheetController, Platform } from 'ionic-angular';
-import { RestProvider } from '../../providers/rest/rest';
-import { LoginPage } from '../../pages/login/login';
+import { Component } from "@angular/core";
+import {
+  IonicPage,
+  NavController,
+  Loading,
+  LoadingController,
+  AlertController,
+  Events,
+  ActionSheetController,
+  Platform
+} from "ionic-angular";
+import { RestProvider } from "../../providers/rest/rest";
+import { LoginPage } from "../../pages/login/login";
 import { File } from "@ionic-native/file";
 import { DomSanitizer } from "@angular/platform-browser";
 import { Camera, CameraOptions } from "@ionic-native/camera";
@@ -29,7 +38,7 @@ export class ProfilePage {
   base64 = "";
 
   constructor(
-    private platform: Platform, 
+    private platform: Platform,
     private domSanitizer: DomSanitizer,
     private _CAMERA: Camera,
     public actionSheetCtrl: ActionSheetController,
@@ -48,33 +57,44 @@ export class ProfilePage {
   }
 
   public checkFileExistence(fileName: string) {
-		if (this.platform.is('ios')) {
-			return this.file.checkFile(this.file.dataDirectory, fileName).then(() => {
-				this.file.readAsDataURL(this.file.dataDirectory, fileName).then(result => {
-					this.existe 		= true;
-					this.base64 		= result;
-					this.data.Imagen 	= result;
-				}, (err) => {
-					//console.log(err);
-				});
-			}, (error) => {
-				//console.log(error);
-			})
-		} else {
-			return this.file.checkFile(this.file.externalRootDirectory, fileName).then(() => {
-					this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(result => {
-						this.existe 		= true;
-						this.base64 		= result;
-						this.data.Imagen 	= result;
-					}, (err) => {
-						//console.log(err);
-					});
-			}, (error) => {
-				//console.log(error);
-			})
-		}
+    if (this.platform.is("ios")) {
+      return this.file.checkFile(this.file.dataDirectory, fileName).then(
+        () => {
+          this.file.readAsDataURL(this.file.dataDirectory, fileName).then(
+            result => {
+              this.existe = true;
+              this.base64 = result;
+              this.data.Imagen = result;
+            },
+            err => {
+              //console.log(err);
+            }
+          );
+        },
+        error => {
+          //console.log(error);
+        }
+      );
+    } else {
+      return this.file.checkFile(this.file.externalRootDirectory, fileName).then(
+        () => {
+          this.file.readAsDataURL(this.file.externalRootDirectory, fileName).then(
+            result => {
+              this.existe = true;
+              this.base64 = result;
+              this.data.Imagen = result;
+            },
+            err => {
+              //console.log(err);
+            }
+          );
+        },
+        error => {
+          //console.log(error);
+        }
+      );
+    }
   }
-
 
   public getContentType(base64Data: any) {
     let block = base64Data.split(";");
@@ -104,44 +124,47 @@ export class ProfilePage {
   }
 
   /**
-	* 	Función que guarda la imagen de perfil en el teléfono
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
-  public writeFile(base64Data: any, folderName: string, fileName: any) {  
-    let contentType = this.getContentType(base64Data);  
-    let DataBlob 	= this.base64toBlob(base64Data, contentType);  
-let filePath 	= null;
+   * 	Función que guarda la imagen de perfil en el teléfono
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
+  public writeFile(base64Data: any, folderName: string, fileName: any) {
+    let contentType = this.getContentType(base64Data);
+    let DataBlob = this.base64toBlob(base64Data, contentType);
+    let filePath = null;
 
-if (this.platform.is('ios')) {
-  filePath = this.file.dataDirectory + folderName;
-} else {
-  filePath = this.file.externalRootDirectory + folderName;
-}
-    
-    this.file.writeFile(filePath, fileName, DataBlob, contentType).then((success) => {  
-        //console.log("File Writed Successfully", success);  
+    if (this.platform.is("ios")) {
+      filePath = this.file.dataDirectory + folderName;
+    } else {
+      filePath = this.file.externalRootDirectory + folderName;
+    }
+
+    this.file
+      .writeFile(filePath, fileName, DataBlob, contentType)
+      .then(success => {
+        //console.log("File Writed Successfully", success);
         //console.log(filePath + fileName);
         this.data.Imagen = base64Data;
         this.loading.dismiss();
-    }).catch((err) => {  
-  this.showError("ERROR", "Error Occured While Writing File");
-  console.log(err);
-  this.loading.dismiss();         
-})  
-}
+      })
+      .catch(err => {
+        this.showError("ERROR", "Error Occured While Writing File");
+        console.log(err);
+        this.loading.dismiss();
+      });
+  }
 
   /**
-	* 	Función que envía una imagen a Firebase
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que envía una imagen a Firebase
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   selectImage(x): Promise<any> {
     this.showLoading(this.translate.instant("MI_PERFIL.GUARDANDO_IMAGEN"));
 
@@ -154,12 +177,12 @@ if (this.platform.is('ios')) {
         correctOrientation: true,
         saveToPhotoAlbum: true,
         cameraDirection: 1,
-        encodingType: this._CAMERA.EncodingType.JPEG,
+        encodingType: this._CAMERA.EncodingType.JPEG
       };
 
       this._CAMERA
         .getPicture(cameraOptions)
-        .then((data) => {
+        .then(data => {
           this.writeFile(
             "data:image/jpeg;base64," + data,
             "",
@@ -186,13 +209,13 @@ if (this.platform.is('ios')) {
   }
 
   /*
-	* 	Función que selecciona si es desde galeria o camara
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que selecciona si es desde galeria o camara
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   openChooseImage() {
     let actionSheet = this.actionSheetCtrl.create({
       title: this.translate.instant("CHAT.ELIGE_OPCION"),
@@ -220,16 +243,17 @@ if (this.platform.is('ios')) {
   }
 
   /**
-	* 	Función que actualiza los datos personales
-	*	del paciente y envía un correo a citas@...
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que actualiza los datos personales
+   *	del paciente y envía un correo a citas@...
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   setProfile() {
+    this.showLoading(this.translate.instant("PROFILE.ENVIANDO_SOLICITUD"));
     this.restProvider
       .setProfile(this.data)
       .then(d => {
@@ -256,15 +280,15 @@ if (this.platform.is('ios')) {
   }
 
   /**
-	* 	Función que obtiene todos los datos personales del
-	*	paciente y los muestra en la interfaz, cada uno en
-	*	su campo correspondiente.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene todos los datos personales del
+   *	paciente y los muestra en la interfaz, cada uno en
+   *	su campo correspondiente.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getProfile() {
     this.restProvider
@@ -295,14 +319,14 @@ if (this.platform.is('ios')) {
   }
 
   /**
-	* 	Función que asigna los valores obtenidos en la petición
-	*	a cada campo correspondiente.
-	*
-	* 	@param Array Valores obtenidos de la petición al servidor.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que asigna los valores obtenidos en la petición
+   *	a cada campo correspondiente.
+   *
+   * 	@param Array Valores obtenidos de la petición al servidor.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   setValues(values) {
     this.data.Email = values.Email;
@@ -320,14 +344,14 @@ if (this.platform.is('ios')) {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(t = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
@@ -339,15 +363,15 @@ if (this.platform.is('ios')) {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

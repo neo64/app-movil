@@ -5,31 +5,32 @@
         <div class="card_row" style="margin-bottom: 1rem;">
           <div class="left" style="flex: 0;border:none;padding:0;align-items: center;">
             <div class="card_subtitle -white" style="font-size: 1rem;">
-              {{item.diaSemana}}
+              {{ item.diaSemana }}
             </div>
             <div class="card_time -white" style="font-size:3rem;">
-              {{item.dia}}
+              {{ item.dia }}
               <span>
-                {{item.mes}}
+                {{ item.mes }}
               </span>
             </div>
             <div class="card_subtitle -white" style="font-size:1rem;">
-              {{item.ano}}
+              {{ item.ano }}
             </div>
           </div>
-          <div class="right" style="flex: 1;align-items: flex-end;justify-content: center;padding:0;">
+          <div
+            class="right"
+            style="flex: 1;align-items: flex-end;justify-content: center;padding:0;"
+          >
             <div style="display:flex;flex-direction:column;align-items: flex-end;">
               <div class="card_time -white">
-                {{item.hora}}
+                {{ item.hora }}
                 <span style="display:inline;">
                   H
                 </span>
               </div>
               <div class="card_subtitle -white">
-                {{ 'CONSULTAR_CITAS_FUTURAS.DURACION' | translate }}
-                <span>
-                  {{item.Duracion}}'
-                </span>
+                {{ "CONSULTAR_CITAS_FUTURAS.DURACION" | translate }}
+                <span> {{ item.Duracion }}' </span>
               </div>
             </div>
           </div>
@@ -38,52 +39,49 @@
           <div class="card_row">
             <div>
               <div class="card_label">
-                {{ 'CONSULTAR_CITAS_FUTURAS.TRATAMIENTO' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.TRATAMIENTO" | translate }}
               </div>
               <div class="card_title">
-                {{item.tratamiento}}
+                {{ item.tratamiento }}
               </div>
             </div>
           </div>
-          <div class="card_separator">
-          </div>
+          <div class="card_separator"></div>
           <div class="card_row">
             <div class="left">
               <div class="card_label">
-                {{ 'CONSULTAR_CITAS_FUTURAS.PROFESIONAL' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.PROFESIONAL" | translate }}
               </div>
               <div class="card_container">
                 <div class="avatar">
                   <img alt="" [src]="domSanitizer.bypassSecurityTrustUrl(item.Img)" />
                 </div>
                 <div class="card_title">
-                  {{item.usuario}}
+                  {{ item.usuario }}
                 </div>
               </div>
             </div>
             <div class="right">
               <div class="card_label">
-                {{ 'CONSULTAR_CITAS_FUTURAS.ESTADO' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.ESTADO" | translate }}
               </div>
               <div class="card_estado">
-                {{item.situacion}}
+                {{ item.situacion }}
               </div>
             </div>
           </div>
-          <div class="card_separator">
-          </div>
+          <div class="card_separator"></div>
           <div class="card_row">
-            <div class="left" (click)="openPage('Comollegar','page')">
+            <div class="left" (click)="openPage('Comollegar', 'page')">
               <div class="card_label">
-                {{ 'CONSULTAR_CITAS_FUTURAS.DIRECCION' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.DIRECCION" | translate }}
               </div>
               <div class="card_container">
                 <div class="avatar">
                   <ion-icon name="fb-location" item-right></ion-icon>
                 </div>
                 <div class="card_subtitle">
-                  C/Caleruega, 67
-                  3ª Planta A
+                  C/Caleruega, 67 3ª Planta A
                   <br />
                   28033 - Madrid
                 </div>
@@ -91,41 +89,50 @@
             </div>
             <div class="right">
               <div class="card_label">
-                {{ 'CONSULTAR_CITAS_FUTURAS.CALENDARIO' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.CALENDARIO" | translate }}
               </div>
-              <div class="card_container" (click)="addEvent(item.timestampINI,item.timestampFIN)">
+              <div class="card_container" (click)="addEvent(item.timestampINI, item.timestampFIN)">
                 <div class="avatar">
                   <ion-icon name="fb-calendar" item-right></ion-icon>
                 </div>
                 <div class="card_subtitle">
-                  {{ 'CONSULTAR_CITAS_FUTURAS.HAZ' | translate }}
+                  {{ "CONSULTAR_CITAS_FUTURAS.HAZ" | translate }}
                   <span class="-pink">
-                    {{ 'CONSULTAR_CITAS_FUTURAS.CLICK' | translate }}
+                    {{ "CONSULTAR_CITAS_FUTURAS.CLICK" | translate }}
                   </span>
-                  {{ 'CONSULTAR_CITAS_FUTURAS.ANADIR_CITA' | translate }}
+                  {{ "CONSULTAR_CITAS_FUTURAS.ANADIR_CITA" | translate }}
                 </div>
               </div>
             </div>
           </div>
-          <div class="card_separator">
-          </div>
+          <div class="card_separator"></div>
           <div class="card_row">
             <div style="width:100%;">
               <div class="card_label" style="margin-top:1rem;">
-                {{ 'CONSULTAR_CITAS_FUTURAS.GESTIONA_TU_CITA' | translate }}
+                {{ "CONSULTAR_CITAS_FUTURAS.GESTIONA_TU_CITA" | translate }}
               </div>
-              <div class="card_container" style="display:flex;justify-content: space-evenly;align-items: center;">
-                <a class="fb-btn -pill -anular"
-                  (click)="presentConfirm('anular', item.fechaDecimal, item.horaDecimal);">
-                  {{ 'CONSULTAR_CITAS_FUTURAS.ANULAR' | translate }}
+              <div
+                class="card_container"
+                style="display:flex;justify-content: space-evenly;align-items: center;"
+              >
+                <a
+                  class="fb-btn -pill -anular"
+                  (click)="presentConfirm('anular', item.fechaDecimal, item.horaDecimal, item)"
+                >
+                  {{ "CONSULTAR_CITAS_FUTURAS.ANULAR" | translate }}
                 </a>
-                <a *ngIf="item.confirmar == '0'" class="fb-btn -pill -confirmar"
-                  (click)="presentConfirm('confirmar', item.fechaDecimal, item.horaDecimal);">
-                  {{ 'CONSULTAR_CITAS_FUTURAS.CONFIRMAR' | translate }}
+                <a
+                  *ngIf="item.confirmar == '0'"
+                  class="fb-btn -pill -confirmar"
+                  (click)="presentConfirm('confirmar', item.fechaDecimal, item.horaDecimal)"
+                >
+                  {{ "CONSULTAR_CITAS_FUTURAS.CONFIRMAR" | translate }}
                 </a>
-                <a class="fb-btn -pill -cambiar"
-                  (click)="presentConfirm('cambiar', item.fechaDecimal, item.horaDecimal);">
-                  {{ 'CONSULTAR_CITAS_FUTURAS.CAMBIAR' | translate }}
+                <a
+                  class="fb-btn -pill -cambiar"
+                  (click)="presentConfirm('cambiar', item.fechaDecimal, item.horaDecimal)"
+                >
+                  {{ "CONSULTAR_CITAS_FUTURAS.CAMBIAR" | translate }}
                 </a>
               </div>
             </div>
@@ -134,14 +141,29 @@
       </div>
     </ion-slide>
   </ion-slides>
-  <p *ngIf="citas.length == 0" style="text-align: center;">Actualmente no tienes citas</p>
+  <div
+    *ngIf="citas?.length <= 0"
+    style=" max-height: 10rem; max-width: 90%; margin:0 auto; display: block;"
+  >
+    <p style="font-size:1.5em;text-align:center;line-height: 2.5rem;">
+      {{ "HOME.NO_TIENES_CITAS" | translate }}
+    </p>
+  </div>
   <ion-row style="display: flex;    margin: 0rem 2rem 0 2rem;">
     <ion-col>
-      <fb-button [name]="bPedirCita" [class]="bPedirCita.class" (click)="openPage(bPedirCita.openPage,bPedirCita.tipo)">
+      <fb-button
+        [name]="bPedirCita"
+        [class]="bPedirCita.class"
+        (click)="openPage(bPedirCita.openPage, bPedirCita.tipo)"
+      >
       </fb-button>
     </ion-col>
     <ion-col>
-      <fb-button [name]="bHigienes" [class]="bHigienes.class" (click)="openPage(bHigienes.openPage,bHigienes.tipo)">
+      <fb-button
+        [name]="bHigienes"
+        [class]="bHigienes.class"
+        (click)="openPage(bHigienes.openPage, bHigienes.tipo)"
+      >
       </fb-button>
     </ion-col>
   </ion-row>

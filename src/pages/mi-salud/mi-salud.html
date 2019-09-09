@@ -44,8 +44,9 @@
       </div>
     </ion-slide>
   </ion-slides>
-  <div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 77%; display: block;">
-    <p> {{ 'MI_SALUD.SIN_CITAS' | translate }} </p>
+  <div *ngIf="cards?.length <= 0" style=" max-height: 10rem; max-width: 90%; margin:0 auto; display: block;">
+    <p style="font-size:1.5em;text-align:center;color:white;line-height: 2.5rem;">
+      {{ 'MI_SALUD.SIN_CITAS' | translate }} </p>
   </div>
 </div>
 
