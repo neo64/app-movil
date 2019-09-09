@@ -55,30 +55,38 @@ export class ChangePasswordPage {
   }
 
   /**
-	* 	Función actualiza la contraseña del usuario, si es
-	*	la primera vez que entra mostrará el mensaje de que
-	*	es obligatorio cambiarla.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función actualiza la contraseña del usuario, si es
+   *	la primera vez que entra mostrará el mensaje de que
+   *	es obligatorio cambiarla.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   actualizarPass() {
     this.showLoading(); // Mostramos el ProgressBar al iniciar la aplicación
 
-    if (!this.validatePassword(this.data.pass2)) {
-      this.showError(
-        "¡Atención!",
-        "La contraseña debe incluir caracteres especiales, mayúsculas, minúsculas y números"
-      );
+    if (this.data.pass2 === "") {
+      this.showError("ERROR", "El campo contraseña no puede estar vacio");
       return;
     }
 
-    if (this.data.pass2 == "" || this.data.pass3 == "") {
-      this.showError("ERROR", "Los campos no pueden estar vacios.");
+    if (this.data.pass3 === "") {
+      this.showError("ERROR", "El campo repetir contraseña no puede estar vacio");
       return;
-    } else if (this.data.pass3 != this.data.pass2) {
+    }
+
+    if (this.data.pass2.length < 8) {
+      this.showError("¡Atención!", "La contraseña debe tener un mínimo de 8 caracteres");
+      return;
+    }
+    if (!this.validatePassword(this.data.pass2)) {
+      this.showError("¡Atención!", "La contraseña debe incluir letras y números");
+      return;
+    }
+
+    if (this.data.pass3 != this.data.pass2) {
       this.showError("ERROR", "La nuevas nuevas contraseñas deben ser iguales.");
       return;
     } else {
@@ -112,14 +120,14 @@ export class ChangePasswordPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -130,15 +138,15 @@ export class ChangePasswordPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text, redirect = false) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
@@ -164,10 +172,10 @@ export class ChangePasswordPage {
     }
     // Create an array and push all possible values that you want in password
     var matchedCase = new Array();
-    matchedCase.push("[$&+,:;=?@#|'<>.^*()%!-]"); // Special Charector
-    matchedCase.push("[A-Z]"); // Uppercase Alpabates
+
+    //matchedCase.push("[A-Z]"); // Uppercase Alpabates
     matchedCase.push("[0-9]"); // Numbers
-    matchedCase.push("[a-z]"); // Lowercase Alphabates
+    matchedCase.push("[a-z,A-Z]"); // Alphabates
 
     // Check the conditions
     var ctr = 0;
@@ -183,10 +191,6 @@ export class ChangePasswordPage {
       case 1:
         return false;
       case 2:
-        return false;
-      case 3:
-        return false;
-      case 4:
         return true;
       default:
         return false;
