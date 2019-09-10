@@ -1,7 +1,4 @@
 page-pedir-cita-preferencias {
-  ion-slides {
-    height: 18%;
-  }
   .swiper-container {
     overflow: inherit;
   }
@@ -22,6 +19,9 @@ page-pedir-cita-preferencias {
   ion-slide p {
     margin-bottom: 0rem;
     margin-top: 0;
+  }
+  ion-slide {
+    padding: 0 !important;
   }
   .toolbar-background-md {
     background: white;
@@ -45,7 +45,7 @@ page-pedir-cita-preferencias {
     width: 0%;
   }
   .sinpreferencia {
-    padding: 2.1rem 0.4rem!important;
+    padding: 2.1rem 0.4rem !important;
     white-space: pre-wrap;
     font-size: 1.3rem;
     line-height: 1.4rem;
@@ -53,7 +53,7 @@ page-pedir-cita-preferencias {
   .button {
     background: white;
     border-radius: 6px;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, .12) !important;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.12) !important;
     height: -webkit-fill-available;
     width: 100%;
     overflow: hidden;
@@ -64,12 +64,12 @@ page-pedir-cita-preferencias {
       background: map-get($colors, pink-dark);
       box-shadow: 0 3px 20px rgba(237, 122, 173, 0.5) !important;
       & p {
-        color: white!important;
+        color: white !important;
       }
     }
   }
   [padding] .scroll-content {
-    padding-top: 1rem!important;
+    padding-top: 1rem !important;
   }
   p {
     color: black;
@@ -96,5 +96,7 @@ page-pedir-cita-preferencias {
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+    margin-bottom: 2.5rem;
+    height: auto;
   }
 }

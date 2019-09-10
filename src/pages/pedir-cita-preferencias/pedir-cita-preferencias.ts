@@ -54,11 +54,18 @@ export class PedirCitaPreferenciasPage {
     { hora: "17:00", class: "" },
     { hora: "18:00", class: "" },
     { hora: "19:00", class: "" },
-    { hora: "20:00", class: "" }
+    { hora: "19:30", class: "" }
+  ];
+  mesInicioBusqueda = [
+    { mes: "Hoy", class: "active", value: 0 },
+    { mes: "+1 mes", class: "", value: 1 },
+    { mes: "+2 mes", class: "", value: 2 },
+    { mes: "+3 mes", class: "", value: 3 }
   ];
 
   drSelect = "Sin preferencia";
   diaSelect = [];
+  mesSelect = 0;
   horaSelect = "09:30";
 
   constructor(
@@ -113,12 +120,21 @@ export class PedirCitaPreferenciasPage {
     this.horaSelect = e.hora;
   }
 
+  selectMes(e) {
+    for (var x in this.mesInicioBusqueda) {
+      if (this.mesInicioBusqueda[x].mes == e.mes) this.mesInicioBusqueda[x].class = "active";
+      else this.mesInicioBusqueda[x].class = "";
+    }
+    this.mesSelect = e.value;
+  }
+
   siguiente() {
     this.navCtrl.push(PedirCitaElegirPage, {
       tto: this.navParams.get("tto"),
       dr: this.drSelect,
       dia: this.diaSelect,
-      hora: this.horaSelect
+      hora: this.horaSelect,
+      mes: this.mesSelect
     });
   }
 
@@ -127,14 +143,14 @@ export class PedirCitaPreferenciasPage {
   }
 
   /**
-	* 	Función que obtiene todos los doctores a los que se
-	*	les puede asignar una cita desde la aplicación móvil
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene todos los doctores a los que se
+   *	les puede asignar una cita desde la aplicación móvil
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getDoctors(e) {
     this.restProvider
@@ -162,14 +178,14 @@ export class PedirCitaPreferenciasPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(cont = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
@@ -179,15 +195,15 @@ export class PedirCitaPreferenciasPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

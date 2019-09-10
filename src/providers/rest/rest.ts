@@ -508,12 +508,12 @@ export class RestProvider {
 		});
 	}
 	
-	searchCita(dia, hora, doctor, tto){
+	searchCita(dia, hora, doctor, tto, mes){
 		 				
 		return new Promise((resolve, reject) => {
 			this.http.post(this.apiUrl+'/buscarCitas', false, {
 				headers: new HttpHeaders().set('Authorization', 'Bearer ' + window.localStorage.getItem("token")),	
-				params: new HttpParams().set('dia', dia).set('hora', hora).set('dr', doctor).set('tto', tto)
+        params: new HttpParams().set('dia', dia).set('hora', hora).set('dr', doctor).set('tto', tto).set('mes', mes)
 			})
 			.subscribe(res => {	
 				resolve(res);

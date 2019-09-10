@@ -225,10 +225,11 @@
   },
   "PEDIR_CITA_PREFERENCIAS": {
     "TITLE": "Pedir nueva cita",
-    "INTRO": "Aquí podrás elegir qué profesional quieres que te atienda, el día de la semana y la franja horaria.",
+    "INTRO": "Elige tus preferencias de búsqueda para la cita.",
     "PROFESIONAL": "Profesional:",
     "PREFERENCIA_DIAS": "Preferencia de días:",
-    "A_PARTIR": "A partir de las:"
+    "A_PARTIR": "A partir de las:",
+    "MES": "Buscar a partir de:"
   },
   "PEDIR_CITA_RESERVA": {
     "TITLE": "Cita solicitada",

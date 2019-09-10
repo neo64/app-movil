@@ -59,7 +59,8 @@ export class PedirCitaElegirPage {
       this.navParams.get("dia"),
       this.navParams.get("hora"),
       this.navParams.get("dr"),
-      this.navParams.get("tto")
+      this.navParams.get("tto"),
+      this.navParams.get("mes")
     );
     this.events.publish("user:logged");
   }
@@ -71,17 +72,17 @@ export class PedirCitaElegirPage {
   }
 
   /**
-	* 	Función que obtiene todas las citas disponibles
-	* 	en la agenda ( conectada con el buscador )
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
-  searchCita(dia, hora, dr, tto) {
+   * 	Función que obtiene todas las citas disponibles
+   * 	en la agenda ( conectada con el buscador )
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
+  searchCita(dia, hora, dr, tto, mes) {
     this.restProvider
-      .searchCita(dia, hora, dr, tto)
+      .searchCita(dia, hora, dr, tto, mes)
       .then(data => {
         this.ocultarPantalla = false;
         if (typeof data != "undefined" && data["status"] == 1) {
@@ -118,14 +119,14 @@ export class PedirCitaElegirPage {
   }
 
   /**
-	* 	Función que envía un E-mail a recepción para que estas
-	*	inserten la cita desde el buscador.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que envía un E-mail a recepción para que estas
+   *	inserten la cita desde el buscador.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   solicitarCita(item) {
     this.showLoading("Solicitando cita ...");
@@ -153,14 +154,14 @@ export class PedirCitaElegirPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(cont = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
@@ -170,15 +171,15 @@ export class PedirCitaElegirPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
