@@ -287,7 +287,7 @@ export class ChatPage {
       let cameraOptions: CameraOptions = {
         sourceType: x,
         destinationType: this._CAMERA.DestinationType.DATA_URL,
-        quality: 100,
+        quality: 30,
         allowEdit: true,
         correctOrientation: true,
         saveToPhotoAlbum: true,

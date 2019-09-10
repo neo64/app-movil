@@ -5,6 +5,25 @@
   },
   "config_munge": {
     "files": {
+      "app/src/main/AndroidManifest.xml": {
+        "parents": {
+          "/manifest/application": [
+            {
+              "xml": "<application android:usesCleartextTraffic=\"true\" />",
+              "count": 1,
+              "mode": "merge",
+              "id": "config.xml",
+              "oldAttrib": {
+                "android:hardwareAccelerated": "true",
+                "android:icon": "@mipmap/icon",
+                "android:label": "@string/app_name",
+                "android:supportsRtl": "true",
+                "android:usesCleartextTraffic": "true"
+              }
+            }
+          ]
+        }
+      },
       "res/xml/config.xml": {
         "parents": {
           "/*": [
@@ -69,6 +88,10 @@
               "count": 1
             },
             {
+              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
+              "count": 1
+            },
+            {
               "xml": "<feature name=\"NativeStorage\"><param name=\"android-package\" value=\"NativeStorage\" /></feature>",
               "count": 1
             },
@@ -86,10 +109,6 @@
             },
             {
               "xml": "<feature name=\"LaunchNavigator\"><param name=\"android-package\" value=\"uk.co.workingedge.phonegap.plugin.LaunchNavigatorPlugin\" /></feature>",
-              "count": 1
-            },
-            {
-              "xml": "<feature name=\"InAppBrowser\"><param name=\"android-package\" value=\"org.apache.cordova.inappbrowser.InAppBrowser\" /></feature>",
               "count": 1
             }
           ]
@@ -208,25 +227,6 @@
             }
           ]
         }
-      },
-      "app/src/main/AndroidManifest.xml": {
-        "parents": {
-          "/manifest/application": [
-            {
-              "xml": "<application android:usesCleartextTraffic=\"true\" />",
-              "count": 1,
-              "mode": "merge",
-              "id": "config.xml",
-              "oldAttrib": {
-                "android:hardwareAccelerated": "true",
-                "android:icon": "@mipmap/icon",
-                "android:label": "@string/app_name",
-                "android:supportsRtl": "true",
-                "android:usesCleartextTraffic": "true"
-              }
-            }
-          ]
-        }
       }
     }
   },
@@ -281,6 +281,9 @@
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "app.ferrusbratos.com"
+    },
     "cordova-plugin-ionic-keyboard": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     },
@@ -309,9 +312,6 @@
     "uk.co.workingedge.phonegap.plugin.launchnavigator": {
       "GOOGLE_API_KEY_FOR_ANDROID": "{AIzaSyBblQTfb1wLA1lL9zMkVm2OTLc9dM59BtU}",
       "OKHTTP_VERSION": "3.12.0",
-      "PACKAGE_NAME": "app.ferrusbratos.com"
-    },
-    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "app.ferrusbratos.com"
     }
   },
@@ -646,6 +646,15 @@
       ]
     },
     {
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
+      "clobbers": [
+        "cordova.InAppBrowser.open",
+        "window.open"
+      ]
+    },
+    {
       "id": "cordova-plugin-ionic-keyboard.keyboard",
       "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
       "pluginId": "cordova-plugin-ionic-keyboard",
@@ -718,15 +727,6 @@
       "merges": [
         "launchnavigator"
       ]
-    },
-    {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
-      "clobbers": [
-        "cordova.InAppBrowser.open",
-        "window.open"
-      ]
     }
   ],
   "plugin_metadata": {
@@ -746,6 +746,7 @@
     "cordova-plugin-file": "6.0.1",
     "cordova-plugin-file-opener2": "2.2.0",
     "cordova-plugin-file-transfer": "1.7.1",
+    "cordova-plugin-inappbrowser": "3.1.0",
     "cordova-plugin-ionic-keyboard": "2.1.3",
     "cordova-plugin-ionic-webview": "2.4.1",
     "cordova-plugin-ios-camera-permissions": "1.2.0",
@@ -754,7 +755,6 @@
     "cordova-plugin-statusbar": "2.4.2",
     "cordova-plugin-vibration": "3.1.0",
     "cordova-plugin-whitelist": "1.3.4",
-    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
-    "cordova-plugin-inappbrowser": "3.1.0"
+    "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
   }
 }
