@@ -329,6 +329,15 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-inappbrowser.inappbrowser",
+    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+    "pluginId": "cordova-plugin-inappbrowser",
+    "clobbers": [
+      "cordova.InAppBrowser.open",
+      "window.open"
+    ]
+  },
+  {
     "id": "cordova-plugin-ionic-keyboard.keyboard",
     "file": "plugins/cordova-plugin-ionic-keyboard/www/android/keyboard.js",
     "pluginId": "cordova-plugin-ionic-keyboard",
@@ -361,14 +370,6 @@ module.exports = [
     "id": "cordova-plugin-nativestorage.NativeStorageError",
     "file": "plugins/cordova-plugin-nativestorage/www/NativeStorageError.js",
     "pluginId": "cordova-plugin-nativestorage"
-  },
-  {
-    "id": "cordova-plugin-sms.SMS",
-    "file": "plugins/cordova-plugin-sms/www/SMS.js",
-    "pluginId": "cordova-plugin-sms",
-    "clobbers": [
-      "window.SMS"
-    ]
   },
   {
     "id": "cordova-plugin-splashscreen.SplashScreen",
@@ -409,15 +410,6 @@ module.exports = [
     "merges": [
       "launchnavigator"
     ]
-  },
-  {
-    "id": "cordova-plugin-inappbrowser.inappbrowser",
-    "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-    "pluginId": "cordova-plugin-inappbrowser",
-    "clobbers": [
-      "cordova.InAppBrowser.open",
-      "window.open"
-    ]
   }
 ];
 module.exports.metadata = 
@@ -439,17 +431,16 @@ module.exports.metadata =
   "cordova-plugin-file": "6.0.1",
   "cordova-plugin-file-opener2": "2.2.0",
   "cordova-plugin-file-transfer": "1.7.1",
+  "cordova-plugin-inappbrowser": "3.1.0",
   "cordova-plugin-ionic-keyboard": "2.1.3",
   "cordova-plugin-ionic-webview": "2.4.1",
   "cordova-plugin-ios-camera-permissions": "1.2.0",
   "cordova-plugin-nativestorage": "2.3.2",
-  "cordova-plugin-sms": "1.0.5",
   "cordova-plugin-splashscreen": "5.0.3",
   "cordova-plugin-statusbar": "2.4.2",
   "cordova-plugin-vibration": "3.1.0",
   "cordova-plugin-whitelist": "1.3.4",
-  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4",
-  "cordova-plugin-inappbrowser": "3.1.0"
+  "uk.co.workingedge.phonegap.plugin.launchnavigator": "5.0.4"
 };
 // BOTTOM OF METADATA
 });
