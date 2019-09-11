@@ -114,30 +114,34 @@ export class ChatPage {
         console.log(e);
       });
 
-    firebase.database().ref(this.nickname).limitToLast(15).on("value", resp => {
-      this.chats = [];
-      this.chats = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
-      setTimeout(() => {
-        this.firstOpen = false;
-        if (this.offStatus === false) {
-          if (this.content != null) {
-            this.content.scrollToBottom(0);
-            if (this.loadingPresented) {
-              this.loadingPresented = false;
-              this.loading.dismiss();
+    firebase
+      .database()
+      .ref(this.nickname)
+      .limitToLast(15)
+      .on("value", resp => {
+        this.chats = [];
+        this.chats = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
+        setTimeout(() => {
+          this.firstOpen = false;
+          if (this.offStatus === false) {
+            if (this.content != null) {
+              this.content.scrollToBottom(0);
+              if (this.loadingPresented) {
+                this.loadingPresented = false;
+                this.loading.dismiss();
+              }
             }
           }
-        }
+        });
       });
-    });
   }
   /**
-    * 	Función que abre la aplicación de llamadas para
-    *	efectuar una llamada a la clínica
-    *
-    * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-    *
-    */
+   * 	Función que abre la aplicación de llamadas para
+   *	efectuar una llamada a la clínica
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   callClinica() {
     this.callNumber
       .callNumber("+34917681812", true)
@@ -207,14 +211,14 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   showLoading(txt = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
       content: txt,
@@ -225,13 +229,13 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que redibuja el textarea
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que redibuja el textarea
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   onFocus() {
     this.showEmojiPicker = false;
     this.content.resize();
@@ -239,13 +243,13 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que selecciona si es desde galeria o camara
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que selecciona si es desde galeria o camara
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   openChooseImage() {
     let actionSheet = this.actionSheetCtrl.create({
       title: this.translate.instant("CHAT.ELIGE_OPCION"),
@@ -273,13 +277,13 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que envía una imagen a Firebase
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que envía una imagen a Firebase
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   selectImage(x): Promise<any> {
     this.showLoading(this.translate.instant("CHAT.ENVIANDO_IMAGEN"));
 
@@ -302,13 +306,16 @@ export class ChatPage {
           resolve(this.cameraImage);
 
           this.restProvider.getTimeStamp().then(data => {
-            firebase.database().ref(this.nickname + "/" + data.timeStamp).set({
-              type: "image",
-              user: this.data.nickname,
-              message: this.cameraImage,
-              sendDate: new Date(Number(data.timeStamp)).toString(),
-              read: false
-            });
+            firebase
+              .database()
+              .ref(this.nickname + "/" + data.timeStamp)
+              .set({
+                type: "image",
+                user: this.data.nickname,
+                message: this.cameraImage,
+                sendDate: new Date(Number(data.timeStamp)).toString(),
+                read: false
+              });
           });
 
           if (this.loadingPresented) {
@@ -333,14 +340,14 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que lleva la vista al final de la pantalla
-	*	para dar impresión de un chat.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que lleva la vista al final de la pantalla
+   *	para dar impresión de un chat.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   scrollToBottom() {
     setTimeout(() => {
       if (this.content.scrollToBottom) {
@@ -350,13 +357,13 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que controla si está abierto los emoticonos o el texarea
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que controla si está abierto los emoticonos o el texarea
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   switchEmojiPicker() {
     this.showEmojiPicker = !this.showEmojiPicker;
     if (!this.showEmojiPicker) {
@@ -369,26 +376,26 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que muestra el textarea y cierra los emoticonos
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra el textarea y cierra los emoticonos
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   private setTextareaScroll() {
     const textarea = this.messageInput.nativeElement;
     textarea.scrollTop = textarea.scrollHeight;
   }
 
   /**
-	* 	Función que muestra los emoticonos y cierra el textarea
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra los emoticonos y cierra el textarea
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   private focus() {
     if (this.messageInput && this.messageInput.nativeElement) {
       this.messageInput.nativeElement.focus();
@@ -396,35 +403,50 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que envía un mensaje a Firebase
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que envía un mensaje a Firebase
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   sendMessage() {
     if (this.data.message.trim() == "") return;
     var message = this.data.message;
     //Envio el mensaje del paciente
     this.restProvider.getTimeStamp().then(data => {
-      firebase.database().ref(this.nickname + "/" + data.timeStamp).set({
-        type: this.data.type,
-        user: this.data.nickname,
-        message: message,
-        sendDate: new Date(Number(data.timeStamp)).toString(),
-        read: false
-      });
-
-      //Si estamos fuera de horario mando un mensaje auto con el horario
-      if (this.mostrarError) {
-        firebase.database().ref(this.nickname + "/" + data.timeStamp + 1).set({
+      firebase
+        .database()
+        .ref(this.nickname + "/" + data.timeStamp)
+        .set({
           type: this.data.type,
-          user: "atPaciente",
-          message: this.mensajeError,
+          user: this.data.nickname,
+          message: message,
           sendDate: new Date(Number(data.timeStamp)).toString(),
           read: false
         });
+
+      //Al enviar un mensaje seteo la variable mostrarEnListaChat a true para que aparezca en la lista de conversaciones
+      // Pendientes del back del chat
+      firebase
+        .database()
+        .ref(this.nickname + "/mostrarEnListaChat")
+        .set({
+          mostrar: true
+        });
+
+      //Si estamos fuera de horario mando un mensaje auto con el horario
+      if (this.mostrarError) {
+        firebase
+          .database()
+          .ref(this.nickname + "/" + data.timeStamp + 1)
+          .set({
+            type: this.data.type,
+            user: "atPaciente",
+            message: this.mensajeError,
+            sendDate: new Date(Number(data.timeStamp)).toString(),
+            read: false
+          });
         this.mostrarError = false;
       }
     });
@@ -432,51 +454,60 @@ export class ChatPage {
   }
 
   /**
-	* 	Función que inicia la escucha con Firebase y
-	*	actualiza la última conexión del usuario.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que inicia la escucha con Firebase y
+   *	actualiza la última conexión del usuario.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   ionViewDidEnter() {
     //console.log("ENTRA EN CHAT");
-    firebase.database().ref(this.nickname + "/ultimaConexion").set({
-      date: "Online"
-    });
+    firebase
+      .database()
+      .ref(this.nickname + "/ultimaConexion")
+      .set({
+        date: "Online"
+      });
     this.eventsCtrl.publish("chat:load");
   }
 
   /**
-	* 	Función que desconecta la escucha con Firebase y
-	*	actualiza la última conexión del usuario.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que desconecta la escucha con Firebase y
+   *	actualiza la última conexión del usuario.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   ionViewWillLeave() {
     this.offStatus = true;
     //console.log("SALE EN CHAT");
-    firebase.database().ref(this.nickname + "/ultimaConexion").set({
-      date: Date()
-    });
-    firebase.database().ref(this.nickname).off();
+    firebase
+      .database()
+      .ref(this.nickname + "/ultimaConexion")
+      .set({
+        date: Date()
+      });
+    firebase
+      .database()
+      .ref(this.nickname)
+      .off();
     this.eventsCtrl.publish("chat:unload");
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     if (this.loadingPresented) {
       this.loadingPresented = false;
@@ -492,25 +523,28 @@ export class ChatPage {
 }
 
 /**
-* 	Función que convierte la conversación en un
-*	array para poder dibujarlo en la plantilla.
-*
-* 	@param None
-*
-* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-* 	@return None
-*/
+ * 	Función que convierte la conversación en un
+ *	array para poder dibujarlo en la plantilla.
+ *
+ * 	@param None
+ *
+ * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+ * 	@return None
+ */
 export const snapshotToArray = (snapshot, nickname, vb, firstOpen, offStatus) => {
   let returnArr = [];
   let lastElemenmt = "";
 
   snapshot.forEach(childSnapshot => {
-    if (childSnapshot.key != "ultimaConexion") {
+    if (childSnapshot.key !== "ultimaConexion" && childSnapshot.key !== "mostrarEnListaChat") {
       lastElemenmt = childSnapshot.val().user;
       if (childSnapshot.val().user == "atPaciente") {
         var updates = {};
         updates[nickname + "/" + childSnapshot.key + "/read"] = true;
-        firebase.database().ref().update(updates);
+        firebase
+          .database()
+          .ref()
+          .update(updates);
       }
       let item = childSnapshot.val();
       item.key = childSnapshot.key;
