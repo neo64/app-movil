@@ -35,6 +35,7 @@ export class SugerenciasPage {
     tipo: "page",
     gradiente: ""
   };
+  error = false;
 
   constructor(
     private loadingCtrl: LoadingController,
@@ -46,6 +47,12 @@ export class SugerenciasPage {
   ) {}
 
   setSugerencia() {
+    if (!this.data.texto) {
+      this.error = true;
+      return;
+    } else {
+      this.error = false;
+    }
     this.showLoading();
     this.restProvider
       .setSugerencia(this.data)
@@ -72,14 +79,14 @@ export class SugerenciasPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -91,15 +98,15 @@ export class SugerenciasPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text, redirect = false) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
