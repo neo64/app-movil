@@ -23,6 +23,7 @@ import { File } from "@ionic-native/file";
 import { CallNumber } from "@ionic-native/call-number";
 import { Badge } from "@ionic-native/badge";
 import { TranslateService } from "@ngx-translate/core";
+import { Keyboard } from "@ionic-native/keyboard";
 
 @IonicPage()
 @Component({
@@ -63,7 +64,9 @@ export class ChatPage {
     public eventsCtrl: Events,
     public navCtrl: NavController,
     public navParams: NavParams,
-    private translate: TranslateService
+    private translate: TranslateService,
+    public platform: Platform,
+    private keyboard: Keyboard
   ) {
     this.showLoading(translate.instant("CHAT.CARGANDO_CONVERSACION"));
     this.nickname = window.localStorage.getItem("idPac");
@@ -78,6 +81,23 @@ export class ChatPage {
         translate.instant("Pide tu cita a través del chat."),
         this.navParams.get("message")
       );
+    }
+
+    //Si es ios setea correctamente el teclado del chat
+    // prettier-ignore
+    if (this.platform.is("ios")) {
+      let appEl = <HTMLElement>(document.getElementsByTagName("ION-APP")[0]),
+        appElHeight = appEl.clientHeight;
+
+      this.keyboard.disableScroll(true);
+
+      window.addEventListener("native.keyboardshow", e => {
+        appEl.style.height = (appElHeight - (<any>e).keyboardHeight) + "px";
+      });
+
+      window.addEventListener("native.keyboardhide", () => {
+        appEl.style.height = "100%";
+      });
     }
 
     // Compruebo si la fecha de expiración es posterior

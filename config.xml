@@ -30,7 +30,8 @@
     <preference name="StatusBarOverlayWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#81a8d9" />
     <preference name="KeyboardResize" value="false" />
-    <preference name="KeyboardResizeMode" value="ionic" />
+    <preference name="KeyboardResizeMode" value="native" />
+    <preference name="HideKeyboardFormAccessoryBar" value="true" />
     <platform name="android">
         <allow-intent href="market:*" />
         <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />

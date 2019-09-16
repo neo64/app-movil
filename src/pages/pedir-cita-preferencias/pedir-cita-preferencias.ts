@@ -58,9 +58,9 @@ export class PedirCitaPreferenciasPage {
   ];
   mesInicioBusqueda = [
     { mes: "Hoy", class: "active", value: 0 },
-    { mes: "+1 mes", class: "", value: 1 },
-    { mes: "+2 mes", class: "", value: 2 },
-    { mes: "+3 mes", class: "", value: 3 }
+    { mes: "1 mes", class: "", value: 1 },
+    { mes: "2 meses", class: "", value: 2 },
+    { mes: "3 meses", class: "", value: 3 }
   ];
 
   drSelect = "Sin preferencia";
@@ -77,6 +77,8 @@ export class PedirCitaPreferenciasPage {
     public navParams: NavParams,
     private translate: TranslateService
   ) {
+    this.horasDia.pop();
+    console.log(this.horasDia);
     this.showLoading();
     this.getDoctors(this.navParams.get("tto"));
     this.events.publish("user:logged");

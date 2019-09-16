@@ -53,13 +53,13 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que crea un PDF a partir de un HTML y lo muestra.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que crea un PDF a partir de un HTML y lo muestra.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   createAndOpenPDF(html, numDoc) {
     document.addEventListener("deviceready", () => {
@@ -77,14 +77,14 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que almacena el archivo PDF en el sistema,
-	*	y a continuación abre el visor para verlo.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que almacena el archivo PDF en el sistema,
+   *	y a continuación abre el visor para verlo.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   openPdf(base64, numDoc) {
     if (base64 == "") {
@@ -136,13 +136,13 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que convierte a Blob una cadena en Base64
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que convierte a Blob una cadena en Base64
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   b64toBlob(b64Data, contentType, sliceSize = 512) {
     contentType = contentType || "";
@@ -178,14 +178,14 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que obtiene las tarjetas para la página
-	*	Mi salud.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene las tarjetas para la página
+   *	Mi salud.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getCardsMisDocumentos() {
     this.restProvider
@@ -206,6 +206,7 @@ export class MisDocumentosPage {
             .getPresupuestos()
             .then(data => {
               if (typeof data != "undefined" && data["status"] == 1) {
+                console.log(data);
                 for (var key in data["data"]) {
                   this.cardsPresup.push(data["data"][key]);
                 }
@@ -261,15 +262,15 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
@@ -282,14 +283,14 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -300,15 +301,15 @@ export class MisDocumentosPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

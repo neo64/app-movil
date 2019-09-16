@@ -46,6 +46,9 @@
     "ATENCION": "¡Atención!",
     "ERROR_SIN_SESION": "Se ha perdido la sesión, por favor vuelva a iniciar."
   },
+  "CONSULTAR_CITAS": {
+    "SIN_CITAS_PASADAS": "Aún no has tenido niguna cita."
+  },
   "CONSULTAR_CITAS_FUTURAS": {
     "DURACION": "Duración:",
     "TRATAMIENTO": "Tratamiento",
@@ -83,7 +86,7 @@
   "DOCUMENTOS_CONTABLES": {
     "TITLE": "Documentos Contables",
     "CON_DOC": "A continuación, podrás tener acceso a todos tus documentos contables para consultarlos cuando desees.",
-    "SIN_DOC": "De momento, no disponemos de ningún documento contable. Si lo deseas, puedes consultar tus presupuestos",
+    "SIN_DOC": "De momento, no disponemos de ningún documento contable. Si lo deseas, puedes consultar tus presupuestos.",
     "TITULO": "Documentos contables",
     "SUBTITULO": "de tratamientos",
     "ERROR_ABRIR_DOC": "No es posible abrir el documento.",
@@ -210,7 +213,7 @@
   "PEDIR_CITA": {
     "TITLE": "Pedir nueva cita",
     "INTRO": "A continuación, podrás elegir cuándo deseas concertar una visita para llevar a cabo tu tratamiento.",
-    "ESCRIBENOS": "Escríbenos y dinos que tratamiento necesitas y en que fecha y horario te vendría mejor.",
+    "ESCRIBENOS": "Escríbenos y dinos qué tratamiento necesitas y en qué fecha y horario te vendría mejor.",
     "SOLICITANDO_CITA": "Solicitando cita ..."
   },
   "PEDIR_CITA_ELEGIR": {
@@ -234,7 +237,7 @@
   "PEDIR_CITA_RESERVA": {
     "TITLE": "Cita solicitada",
     "INTRO": "Recibirás una notificación a la mayor brevedad posible cuando tu cita haya sido confirmada.",
-    "RESERVADA": "Reservada",
+    "RESERVADA": "Solicitada",
     "TITULO": "Muchas gracias",
     "SUBTITULO": ""
   },

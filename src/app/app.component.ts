@@ -43,8 +43,7 @@ import { TranslateService } from "@ngx-translate/core";
 const config = {
   //apiKey: 'AIzaSyB5bclgiYwByWq8RVdei__gRO6PSKs2mWo',
   apiKey: "AIzaSyBhYeQ0XnvVRasP97VJEps_V1NRR9Daeng",
-  authDomain:
-    "785325583727-dl8p7gblk74h1irgmang0knvena5puke.apps.googleusercontent.com",
+  authDomain: "785325583727-dl8p7gblk74h1irgmang0knvena5puke.apps.googleusercontent.com",
   databaseURL: "fbapp-8a8e5.firebaseio.com",
   projectId: "fbapp-8a8e5",
   storageBucket: "fbapp-8a8e5.appspot.com"
@@ -150,21 +149,6 @@ export class MyApp {
         this.getDataMenu();
       });
 
-      if (this.platform.is("ios")) {
-        let appEl = <HTMLElement>document.getElementsByTagName("ION-APP")[0],
-          appElHeight = appEl.clientHeight;
-
-        this.keyboard.disableScroll(true);
-
-        window.addEventListener("native.keyboardshow", e => {
-          appEl.style.height = appElHeight - (<any>e).keyboardHeight + "px";
-        });
-
-        window.addEventListener("native.keyboardhide", () => {
-          appEl.style.height = "100%";
-        });
-      }
-
       //Notifications
       if (this.platform.is("cordova")) {
         this.fcm.subscribeToTopic("all");
@@ -186,15 +170,10 @@ export class MyApp {
             }, 300);
           } else {
             if (data.showDialog == "true") {
-              this.showError(
-                data.title,
-                data.subTitle,
-                data.textButton,
-                data.click_action
-              );
+              this.showError(data.title, data.subTitle, data.textButton, data.click_action);
             }
-          };
-        })
+          }
+        });
         this.fcm.onTokenRefresh().subscribe(token => {
           this.enviarTokenNotifications(token);
         });
@@ -216,14 +195,14 @@ export class MyApp {
   }
 
   /**
-     * 	Función que muestra el ProgressBar cuando alguna acción
-     *	se está ejecutando en primer plano.
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   showLoading() {
     this.loading = this.loadingCtrl.create({
       content: "Cargando información...",
@@ -232,15 +211,15 @@ export class MyApp {
     this.loading.present();
   }
   /**
-     * 	Función que muestra una alerta con el titulo
-     *	y el texto pasado por parámetro.
-     *
-     * 	@param String Titulo de la alerta.
-     * 	@param String Texto de la alerta.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text, textButton, page) {
     let alert = this.alertCtrl.create({
       title: title,
@@ -265,13 +244,13 @@ export class MyApp {
     alert.present();
   }
   /**
-     * 	Función que almacena el token de Firebase para las notificaciones.
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que almacena el token de Firebase para las notificaciones.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   enviarTokenNotifications(token) {
     this.restProvider.enviarTokenNotifications(token).then(data => {
       if (typeof data != "undefined" && data["status"] == 1) {
@@ -282,13 +261,13 @@ export class MyApp {
     });
   }
   /**
-     * 	Función que muestra el header del menú lateral
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que muestra el header del menú lateral
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   getDataMenu() {
     this.restProvider.getMenuData().then(data => {
       if (typeof data != "undefined" && data["status"] == 1) {
@@ -313,14 +292,14 @@ export class MyApp {
     });
   }
   /**
-     * 	Función que abre una página
-     *
-     * 	@param Pagina	String Nombre de la página.
-     * 	@param Tipo		Si es rootPage o no.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que abre una página
+   *
+   * 	@param Pagina	String Nombre de la página.
+   * 	@param Tipo		Si es rootPage o no.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   openPageStrig(page, tipo) {
     if (tipo) {
       if (page == "MiSalud") this.nav.setRoot(MiSaludPage);
@@ -332,13 +311,11 @@ export class MyApp {
       else if (page == "Higiene") this.nav.setRoot(RecallPage);
       else if (page == "Perfil") this.nav.setRoot(ProfilePage);
       else if (page == "Password") this.nav.setRoot(ChangePasswordPage);
-      else if (page == "DocContables")
-        this.nav.setRoot(DocumentosContablesPage);
+      else if (page == "DocContables") this.nav.setRoot(DocumentosContablesPage);
       else if (page == "DocPresupuestos") this.nav.setRoot(PresupuestosPage);
       else if (page == "Citas") this.nav.setRoot(TabConsultarCitas);
       else if (page == "PedirCita") this.nav.setRoot(PedirCitaPage);
-      else if (page == "ConsejosPersonalizados")
-        this.nav.setRoot(ConsejosPersonalizadosPage);
+      else if (page == "ConsejosPersonalizados") this.nav.setRoot(ConsejosPersonalizadosPage);
       else if (page == "Instrucciones") this.nav.setRoot(InstruccionesPage);
     } else {
       if (page == "MiSalud") this.nav.push(MiSaludPage);
@@ -354,46 +331,45 @@ export class MyApp {
       else if (page == "DocPresupuestos") this.nav.push(PresupuestosPage);
       else if (page == "Citas") this.nav.push(TabConsultarCitas);
       else if (page == "PedirCita") this.nav.push(PedirCitaPage);
-      else if (page == "ConsejosPersonalizados")
-        this.nav.push(ConsejosPersonalizadosPage);
+      else if (page == "ConsejosPersonalizados") this.nav.push(ConsejosPersonalizadosPage);
       else if (page == "Instrucciones") this.nav.push(InstruccionesPage);
     }
   }
   /**
-     * 	Función que abre una página, si es la Home, la envía
-     *	como la página raiz.
-     *
-     * 	@param Pagina Page nombre de la página
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que abre una página, si es la Home, la envía
+   *	como la página raiz.
+   *
+   * 	@param Pagina Page nombre de la página
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   openPage(page) {
     if (page.title == "Inicio") this.nav.setRoot(page.component);
     else this.nav.push(page.component);
   }
   /**
-     * 	Función desloguea la aplicación y envía a LoginPage
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función desloguea la aplicación y envía a LoginPage
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   clickLogout() {
     this.restProvider.logout();
     this.nav.setRoot(LoginPage);
   }
   /**
-     * 	Función que muestra una alerta con el titulo
-     *	y el texto pasado por parámetro.
-     *
-     * 	@param String Titulo de la alerta.
-     * 	@param String Texto de la alerta.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showErrorAPI(title, text) {
     let alert = this.alertCtrl.create({
       title: title,

@@ -59,15 +59,15 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que abre una página o una web dependiendo
-	*	de los parámetros que se les introduzca.
-	*
-	* 	@param String page a la que redirigir.
-	* 	@param String tipo si es pagina o web.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que abre una página o una web dependiendo
+   *	de los parámetros que se les introduzca.
+   *
+   * 	@param String page a la que redirigir.
+   * 	@param String tipo si es pagina o web.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
 
   openPage(page, tipo) {
     if (tipo === "page") {
@@ -83,15 +83,15 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
@@ -104,13 +104,13 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que obtiene las citas pasadas del paciente
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene las citas pasadas del paciente
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   getCitas() {
     this.restProvider
       .getCitasPasadas()
@@ -128,10 +128,10 @@ export class ConsultarCitas {
           );
           this.events.publish("user:Unauthorized");
         } else {
-          this.showError(
+          /*this.showError(
             this.translate.instant("CONSULTAR_CITAS_FUTURAS.ATENCION"),
             "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
-          );
+          );*/
         }
       })
       .catch(e => {
@@ -141,14 +141,14 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(text = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
@@ -159,15 +159,15 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
@@ -179,15 +179,15 @@ export class ConsultarCitas {
   }
 
   /**
-	* 	Función que detecta el movimiento del gesto y pasa
-	*	de una página a otra.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que detecta el movimiento del gesto y pasa
+   *	de una página a otra.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   swipe(e) {
     if (e.direction == "2") {
       this.navCtrl.parent.select(1);
