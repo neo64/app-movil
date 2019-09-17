@@ -77,8 +77,6 @@ export class PedirCitaPreferenciasPage {
     public navParams: NavParams,
     private translate: TranslateService
   ) {
-    this.horasDia.pop();
-    console.log(this.horasDia);
     this.showLoading();
     this.getDoctors(this.navParams.get("tto"));
     this.events.publish("user:logged");
@@ -110,6 +108,24 @@ export class PedirCitaPreferenciasPage {
           this.diasSemana[x].class = "active";
           this.diaSelect.push(e.dia);
         }
+      }
+    }
+
+    // funcionalidad para que si el viernes esta seleccionado elimine o no la última hora del formulario
+    let numeroDiasSeleccionados = this.diasSemana.filter(obj => obj.class === "active").length;
+    if (this.diasSemana[4].class === "active" && numeroDiasSeleccionados === 1) {
+      this.horasDia = this.horasDia.filter(obj => {
+        return obj.hora !== "19:30" && obj.hora !== "19:00";
+      });
+      this.horasDia.push({ hora: "18:30", class: "" });
+    } else {
+      let hora = this.horasDia.filter(obj => obj.hora === "19:30");
+      if (typeof hora === "undefined" || hora.length === 0) {
+        this.horasDia = this.horasDia.filter(obj => {
+          return obj.hora !== "18:30";
+        });
+        this.horasDia.push({ hora: "19:00", class: "" });
+        this.horasDia.push({ hora: "19:30", class: "" });
       }
     }
   }
