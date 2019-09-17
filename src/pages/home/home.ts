@@ -13,7 +13,6 @@ import { LoginPage } from "../login/login";
 import { MiSaludPage } from "../mi-salud/mi-salud";
 import { MiPerfilPage } from "../mi-perfil/mi-perfil";
 import { MisDocumentosPage } from "../mis-documentos/mis-documentos";
-import { MisCitasPage } from "../mis-citas/mis-citas";
 import { ChatPage } from "../chat/chat";
 import { SugerenciasPage } from "../sugerencias/sugerencias";
 // Páginas de navegación
@@ -33,11 +32,9 @@ import { RestProvider } from "../../providers/rest/rest";
 // Para aceptar HTML desde la API
 import { DomSanitizer } from "@angular/platform-browser";
 // Para abrir la aplicación de llamadas nativa.
-import {
-    CallNumber
-} from '@ionic-native/call-number';
-import { Badge } from '@ionic-native/badge';
-import { MenuController } from 'ionic-angular/components/app/menu-controller';
+import { CallNumber } from "@ionic-native/call-number";
+import { Badge } from "@ionic-native/badge";
+import { MenuController } from "ionic-angular/components/app/menu-controller";
 
 import { TranslateService } from "@ngx-translate/core";
 import { InAppBrowser, InAppBrowserOptions } from "@ionic-native/in-app-browser";
@@ -48,20 +45,20 @@ import { StatusBar } from "@ionic-native/status-bar";
   templateUrl: "home.html"
 })
 export class HomePage {
-  @ViewChild('slides') slides: Slides;
+  @ViewChild("slides") slides: Slides;
   loading: Loading; // Variable de tipo Loading para mostrar el ProgressBar cuando la página está cargando.
   cards = new Array(); // Array donde se almacenan los objetos del tipo card descargados del servidor.
   cardsMenu = new Array(); // Array donde se descargan los elementos del menú
   bPedirCita = {
-    name: 'PEDIR CITA',
-    svg: '',
-    openPage: 'PedirCita',
-    class: 'active',
-    tipo: 'page',
-    gradiente: ''
+    name: "PEDIR CITA",
+    svg: "",
+    openPage: "PedirCita",
+    class: "active",
+    tipo: "page",
+    gradiente: ""
   };
   constructor(
-    public menuCtrl: MenuController, 
+    public menuCtrl: MenuController,
     private badge: Badge,
     private callNumber: CallNumber,
     private domSanitizer: DomSanitizer,
@@ -80,15 +77,15 @@ export class HomePage {
     this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString("#81a8d9");
     this.statusBar.show();
-            // Habilito de nuevo el menú cuando ya ha pasado el login
-		this.menuCtrl.enable(true, 'myMenu');
+    // Habilito de nuevo el menú cuando ya ha pasado el login
+    this.menuCtrl.enable(true, "myMenu");
   }
 
   /*
-    * Función que se ejecuta cada vez que la página entra en
-    * primer plano, entonces tengo que actualizar por si las notificaciones
-    * ya han sido leidas.
-    */
+   * Función que se ejecuta cada vez que la página entra en
+   * primer plano, entonces tengo que actualizar por si las notificaciones
+   * ya han sido leidas.
+   */
   ionViewWillEnter() {
     this.cardsMenu = new Array();
     this.cards = new Array();
@@ -97,24 +94,24 @@ export class HomePage {
   }
 
   /**
-     * 	Función que abre la aplicación de llamadas para
-     *	efectuar una llamada a la clínica
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que abre la aplicación de llamadas para
+   *	efectuar una llamada a la clínica
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   callClinica() {
     this.callNumber
       .callNumber("+34917681812", true)
       .catch(err => console.log("Error launching dialer", err));
   }
   /**
-     * 	Función que mueve los elementos del menú en forma
-     *	de slider para poder albergar más elementos
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que mueve los elementos del menú en forma
+   *	de slider para poder albergar más elementos
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   next() {
     if (this.slides.isEnd()) this.slides.slidePrev();
     else this.slides.slideNext();
@@ -127,21 +124,20 @@ export class HomePage {
   }
 
   /**
-     * 	Función que abre una página o una web dependiendo
-     *	de los parámetros que se les introduzca.
-     *
-     * 	@param String page a la que redirigir.
-     * 	@param String tipo si es pagina o web.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que abre una página o una web dependiendo
+   *	de los parámetros que se les introduzca.
+   *
+   * 	@param String page a la que redirigir.
+   * 	@param String tipo si es pagina o web.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   openPage(page, tipo) {
     if (tipo === "page") {
       if (page == "MiSalud") this.navCtrl.push(MiSaludPage);
       else if (page == "MiPerfil") this.navCtrl.push(MiPerfilPage);
       else if (page == "MisDocumentos") this.navCtrl.push(MisDocumentosPage);
-      else if (page == "MisCitas") this.navCtrl.push(MisCitasPage);
       else if (page == "Chat") this.navCtrl.push(ChatPage);
       else if (page == "Sugerencias") this.navCtrl.push(SugerenciasPage);
       else if (page == "Higiene") this.navCtrl.push(RecallPage);
@@ -173,15 +169,15 @@ export class HomePage {
   }
 
   /**
-     * 	Función que muestra un Toast con la información
-     *	referente a la acción del usuario.
-     *
-     * 	@param String Titulo de la alerta.
-     * 	@param String Texto de la alerta.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
@@ -193,14 +189,14 @@ export class HomePage {
     toast.present();
   }
   /**
-     * 	Función que obtiene las tarjetas para la página
-     *	principal de la aplicación.
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que obtiene las tarjetas para la página
+   *	principal de la aplicación.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   getCardsHome() {
     this.restProvider
       .getCardsHome()
@@ -239,14 +235,14 @@ export class HomePage {
       });
   }
   /**
-     * 	Función que muestra el ProgressBar cuando alguna acción
-     *	se está ejecutando en primer plano.
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   showLoading() {
     this.loading = this.loadingCtrl.create({
       content: this.translate.instant("GENERICAS.CARGANDO_INFORMACION"),
@@ -255,15 +251,15 @@ export class HomePage {
     this.loading.present();
   }
   /**
-     * 	Función que muestra una alerta con el titulo
-     *	y el texto pasado por parámetro.
-     *
-     * 	@param String Titulo de la alerta.
-     * 	@param String Texto de la alerta.
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     *
-     */
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

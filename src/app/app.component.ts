@@ -17,7 +17,6 @@ import { LoginPage } from "../pages/login/login";
 import { MiSaludPage } from "../pages/mi-salud/mi-salud";
 import { MiPerfilPage } from "../pages/mi-perfil/mi-perfil";
 import { MisDocumentosPage } from "../pages/mis-documentos/mis-documentos";
-import { MisCitasPage } from "../pages/mis-citas/mis-citas";
 import { ChatPage } from "../pages/chat/chat";
 import { SugerenciasPage } from "../pages/sugerencias/sugerencias";
 // Páginas de navegación
@@ -305,7 +304,6 @@ export class MyApp {
       if (page == "MiSalud") this.nav.setRoot(MiSaludPage);
       else if (page == "MiPerfil") this.nav.setRoot(MiPerfilPage);
       else if (page == "MisDocumentos") this.nav.setRoot(MisDocumentosPage);
-      else if (page == "MisCitas") this.nav.setRoot(MisCitasPage);
       else if (page == "Chat") this.nav.setRoot(ChatPage);
       else if (page == "Sugerencias") this.nav.setRoot(SugerenciasPage);
       else if (page == "Higiene") this.nav.setRoot(RecallPage);
@@ -321,7 +319,6 @@ export class MyApp {
       if (page == "MiSalud") this.nav.push(MiSaludPage);
       else if (page == "MiPerfil") this.nav.push(MiPerfilPage);
       else if (page == "MisDocumentos") this.nav.push(MisDocumentosPage);
-      else if (page == "MisCitas") this.nav.push(MisCitasPage);
       else if (page == "Chat") this.nav.push(ChatPage);
       else if (page == "Sugerencias") this.nav.push(SugerenciasPage);
       else if (page == "Higiene") this.nav.push(RecallPage);

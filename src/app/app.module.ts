@@ -37,7 +37,6 @@ import { EmojiPickerComponentModule } from "../components/emoji-picker/emoji-pic
 import { SugerenciasPage } from "../pages/sugerencias/sugerencias";
 import { MiSaludPage } from "../pages/mi-salud/mi-salud";
 import { MiPerfilPage } from "../pages/mi-perfil/mi-perfil";
-import { MisCitasPage } from "../pages/mis-citas/mis-citas";
 import { MisDocumentosPage } from "../pages/mis-documentos/mis-documentos";
 
 import { LoginInputPage } from "../pages/login-input/login-input";
@@ -131,7 +130,6 @@ export function createTranslateLoader(http: HttpClient) {
     MiSaludPage,
     InstruccionesPage,
     MiPerfilPage,
-    MisCitasPage,
     MisDocumentosPage,
     SugerenciasPage,
     ChatPage,
@@ -186,7 +184,6 @@ export function createTranslateLoader(http: HttpClient) {
     MiSaludPage,
     InstruccionesPage,
     MiPerfilPage,
-    MisCitasPage,
     MisDocumentosPage,
     SugerenciasPage,
     RecallPage,
