@@ -6,9 +6,11 @@ import {
   Loading,
   AlertController,
   LoadingController,
-  Events
+  Events,
+  Platform
 } from "ionic-angular";
 import { RestProvider } from "../../providers/rest/rest";
+import { FCM } from "@ionic-native/fcm";
 import { LoginPage } from "../../pages/login/login";
 import { TranslateService } from "@ngx-translate/core";
 
@@ -39,6 +41,8 @@ export class ChangePasswordPage {
     private loadingCtrl: LoadingController,
     public restProvider: RestProvider,
     private alertCtrl: AlertController,
+    public platform: Platform,
+    private fcm: FCM,
     public navCtrl: NavController,
     public navParams: NavParams,
     private translate: TranslateService
@@ -95,6 +99,7 @@ export class ChangePasswordPage {
         .then(data => {
           if (typeof data != "undefined" && data["status"] == 1) {
             if (data["error"] == 0) {
+              //Si la contraseña se guarda bien llamo a show Error con el parametro true para que redirija a la pagina de login
               this.showError(
                 this.translate.instant("GENERICAS.ATENCION"),
                 "La contraseña ha sido cambiada con éxito",
@@ -157,12 +162,42 @@ export class ChangePasswordPage {
           text: "OK",
           role: "OK",
           handler: () => {
+            //Notifications
+            if (this.platform.is("cordova")) {
+              this.fcm.getToken().then(token => {
+                //alert(token);
+                //Compruebo si el token esta en la bbdd y si no lo guarda
+                this.enviarTokenNotifications(token);
+              });
+              this.fcm.onTokenRefresh().subscribe(token => {
+                this.enviarTokenNotifications(token);
+              });
+            }
+
             if (redirect) this.navCtrl.setRoot(LoginPage);
           }
         }
       ]
     });
     alert.present();
+  }
+
+  /**
+   * 	Función que almacena el token de Firebase para las notificaciones.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
+  enviarTokenNotifications(token) {
+    this.restProvider.enviarTokenNotifications(token).then(data => {
+      if (typeof data != "undefined" && data["status"] == 1) {
+      } else if (data.status == 401) {
+      } else {
+        this.showError("ERROR", data["message"]);
+      }
+    });
   }
 
   validatePassword(password) {

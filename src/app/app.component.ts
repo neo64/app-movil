@@ -144,6 +144,7 @@ export class MyApp {
   }
   initializeApp() {
     this.platform.ready().then(() => {
+      //Cuando se publique el evento user:logged la app carga los menus
       this.events.subscribe("user:logged", () => {
         this.getDataMenu();
       });

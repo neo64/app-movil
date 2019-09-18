@@ -15,7 +15,7 @@ import { ChangePasswordPage } from "../../pages/change-password/change-password"
 import { LoginTabPage } from "../../pages/login-tab/login-tab";
 import { FCM } from "@ionic-native/fcm";
 import { TranslateService } from "@ngx-translate/core";
-import { MenuController } from 'ionic-angular/components/app/menu-controller';
+import { MenuController } from "ionic-angular/components/app/menu-controller";
 
 @IonicPage()
 @Component({
@@ -58,7 +58,7 @@ export class LoginPage {
     var expires = new Date(2100, 12, 31, 23, 59, 59, 0); // Obtengo una fecha en el futuro por si la API no devuelve fecha.
 
     //Quito el menú lateral
-    this.menuCtrl.enable(false,'myMenu');
+    this.menuCtrl.enable(false, "myMenu");
 
     // Compruebo si la fecha de expiración es posterior
     // a la fecha actual del sistema, si es así redirijo
@@ -68,7 +68,6 @@ export class LoginPage {
         timeNow = new Date(Number(data["timeStamp"]));
         expires = new Date(Number(data["expires"]));
       }
-
       if (expires > timeNow) {
         this.events.publish("user:logged");
         this.nav.setRoot(HomePage);
@@ -77,13 +76,13 @@ export class LoginPage {
   }
 
   /**
-     * 	Función que almacena el token de Firebase para las notificaciones.
-     *
-     * 	@param None
-     *
-     * 	@author Jesús Río <jesusriobarrilero@gmail.com>
-     * 	@return None
-     */
+   * 	Función que almacena el token de Firebase para las notificaciones.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   enviarTokenNotifications(token) {
     this.restProvider.enviarTokenNotifications(token).then(data => {
       if (typeof data != "undefined" && data["status"] == 1) {
@@ -95,15 +94,15 @@ export class LoginPage {
   }
 
   /**
-	* 	Función que abre una página o una web dependiendo
-	*	de los parámetros que se les introduzca.
-	*
-	* 	@param String page a la que redirigir.
-	* 	@param String tipo si es pagina o web.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que abre una página o una web dependiendo
+   *	de los parámetros que se les introduzca.
+   *
+   * 	@param String page a la que redirigir.
+   * 	@param String tipo si es pagina o web.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
 
   openPage(page, tipo) {
     if (tipo === "page") {
@@ -118,15 +117,15 @@ export class LoginPage {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
@@ -139,19 +138,18 @@ export class LoginPage {
   }
 
   /**
-	* 	Función que comprueba si el usuario y la contraseña
-	*	son correctos.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que comprueba si el usuario y la contraseña
+   *	son correctos.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   public login() {
     var user = this.registerCredentials.email;
     var pass = this.registerCredentials.password;
-
     if (user == "" || pass == "") return;
 
     this.showLoading();
@@ -193,14 +191,14 @@ export class LoginPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -211,15 +209,15 @@ export class LoginPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
