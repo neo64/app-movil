@@ -226,7 +226,7 @@ export class MyApp {
       subTitle: text,
       buttons: [
         {
-          text: "Cancelar",
+          text: "Cerrar",
           role: "Cancelar",
           handler: () => {}
         },
