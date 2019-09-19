@@ -6,7 +6,8 @@ import {
   LoadingController,
   AlertController,
   Events,
-  Slides
+  Slides,
+  Platform
 } from "ionic-angular";
 import { LoginPage } from "../login/login";
 // Páginas del menú
@@ -61,6 +62,7 @@ export class HomePage {
     public menuCtrl: MenuController,
     private badge: Badge,
     private callNumber: CallNumber,
+    public platform: Platform,
     private domSanitizer: DomSanitizer,
     private toastCtrl: ToastController,
     public events: Events,
@@ -77,6 +79,15 @@ export class HomePage {
     this.statusBar.overlaysWebView(false);
     this.statusBar.backgroundColorByHexString("#81a8d9");
     this.statusBar.show();
+
+    //Detecto cuando la app vuelve del background y actualizo las cards para que los globos de notificaciones se actualicen
+    this.platform.resume.subscribe(() => {
+      this.cardsMenu = new Array();
+      this.cards = new Array();
+      this.showLoading();
+      this.getCardsHome();
+    });
+
     // Habilito de nuevo el menú cuando ya ha pasado el login
     this.menuCtrl.enable(true, "myMenu");
   }
