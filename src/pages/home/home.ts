@@ -75,10 +75,6 @@ export class HomePage {
     private statusBar: StatusBar
   ) {
     this.events.publish("user:logged");
-    //Seteo el formato de la barra de estado
-    this.statusBar.overlaysWebView(false);
-    this.statusBar.backgroundColorByHexString("#81a8d9");
-    this.statusBar.show();
 
     //Detecto cuando la app vuelve del background y actualizo las cards para que los globos de notificaciones se actualicen
     this.platform.resume.subscribe(() => {

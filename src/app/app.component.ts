@@ -144,6 +144,10 @@ export class MyApp {
   }
   initializeApp() {
     this.platform.ready().then(() => {
+      //Seteo el formato de la barra de estado
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.backgroundColorByHexString("#81a8d9");
+      this.statusBar.show();
       //Cuando se publique el evento user:logged la app carga los menus
       this.events.subscribe("user:logged", () => {
         this.getDataMenu();
