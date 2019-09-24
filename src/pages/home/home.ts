@@ -96,6 +96,7 @@ export class HomePage {
   ionViewWillEnter() {
     this.cardsMenu = new Array();
     this.cards = new Array();
+
     this.showLoading();
     this.getCardsHome();
   }

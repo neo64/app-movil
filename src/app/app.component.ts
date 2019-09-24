@@ -143,6 +143,7 @@ export class MyApp {
       }
     ];
   }
+
   initializeApp() {
     this.platform.ready().then(() => {
       //Seteo el formato de la barra de estado
@@ -226,27 +227,33 @@ export class MyApp {
    *
    */
   showError(title, text, textButton, page) {
-    let alert = this.alertCtrl.create({
-      title: title,
-      subTitle: text,
-      buttons: [
-        {
-          text: "Cerrar",
-          role: "Cancelar",
-          handler: () => {}
-        },
-        {
-          text: textButton,
-          role: textButton,
-          handler: () => {
-            setTimeout(() => {
-              this.openPageStrig(page, false);
-            }, 500);
+    let currentPage = this.nav.getActive();
+    //Si estoy en la pag de chat y la noti es para el chat no muestro la alerta
+    if (currentPage.name === "ChatPage" && page === "Chat") {
+      console.log("no muestro notificacion en 1er plano");
+    } else {
+      let alert = this.alertCtrl.create({
+        title: title,
+        subTitle: text,
+        buttons: [
+          {
+            text: "Cerrar",
+            role: "Cancelar",
+            handler: () => {}
+          },
+          {
+            text: textButton,
+            role: textButton,
+            handler: () => {
+              setTimeout(() => {
+                this.openPageStrig(page, false);
+              }, 500);
+            }
           }
-        }
-      ]
-    });
-    alert.present();
+        ]
+      });
+      alert.present();
+    }
   }
   /**
    * 	Función que almacena el token de Firebase para las notificaciones.
