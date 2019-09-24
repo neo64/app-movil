@@ -16,7 +16,12 @@
     <fb-button [name]="bCrear" [class]="bCrear.class" (click)="siguiente()"></fb-button>
   </div>
   <p>
-    * Esta aplicación sólo está disponible para pacientes de la clínica Ferrus&Bratos. Por lo que si
-    no lo eres no podras completar el registro de usuario.
+    * Esta aplicación sólo está disponible para pacientes de la clínica Ferrus&Bratos. Si no eres
+    paciente no podrás completar el proceso de registro.
+  </p>
+  <p style="text-align: center;">
+    <a href="https://www.clinicaferrusbratos.com/aviso-legal/">{{
+      "LOGIN.TERMINOS" | translate
+    }}</a>
   </p>
 </ion-content>

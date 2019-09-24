@@ -28,6 +28,7 @@ import { DocumentosContablesPage } from "../pages/documentos-contables/documento
 import { PresupuestosPage } from "../pages/presupuestos/presupuestos";
 import { RecallPage } from "../pages/recall/recall";
 import { RecallPasadasPage } from "../pages/recall-pasadas/recall-pasadas";
+import { TabHigienesPage } from "../pages/tab-higienes/tab-higienes";
 import { ConsejosPersonalizadosPage } from "../pages/consejos-personalizados/consejos-personalizados";
 import { InstruccionesPage } from "../pages/instrucciones/instrucciones";
 import * as firebase from "firebase";
@@ -320,6 +321,7 @@ export class MyApp {
       else if (page == "PedirCita") this.nav.setRoot(PedirCitaPage);
       else if (page == "ConsejosPersonalizados") this.nav.setRoot(ConsejosPersonalizadosPage);
       else if (page == "Instrucciones") this.nav.setRoot(InstruccionesPage);
+      else if (page == "Recall") this.nav.setRoot(TabHigienesPage);
     } else {
       if (page == "MiSalud") this.nav.push(MiSaludPage);
       else if (page == "MiPerfil") this.nav.push(MiPerfilPage);
@@ -335,6 +337,7 @@ export class MyApp {
       else if (page == "PedirCita") this.nav.push(PedirCitaPage);
       else if (page == "ConsejosPersonalizados") this.nav.push(ConsejosPersonalizadosPage);
       else if (page == "Instrucciones") this.nav.push(InstruccionesPage);
+      else if (page == "Recall") this.nav.setRoot(TabHigienesPage);
     }
   }
   /**
