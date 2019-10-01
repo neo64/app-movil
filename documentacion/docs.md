@@ -12,3 +12,8 @@
   Borramos en ese momento de la bbdd el token de notificación y el del usuario. En Android es inmediato en cuanto el usuario borra la app, pero en IOS pueden pasar unos dias hasta que APNS invalida el token y firebase devuelve el NotRegistered. https://clevertap.com/blog/track-app-uninstalls-effectively/
 
 - Cada vez que un usuario abre la app, esta llama a la api al método getTimeServer, este comprueba si el token esta o no expirado. Si no está expirado cambia la fecha de expiración a dentro de un mes. De tal manera que si un usuario es activo no le caduca el token.
+
+- la app recibe notificaciones:
+  - Cuando se da una cita desde el buscador.
+  - Cuando desde la app de confirmación se mandan los mensajes de confirmación
+  - Cuando el script de recall que envia 1 mes antes los mails.

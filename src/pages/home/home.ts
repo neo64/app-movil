@@ -78,10 +78,13 @@ export class HomePage {
 
     //Detecto cuando la app vuelve del background y actualizo las cards para que los globos de notificaciones se actualicen
     this.platform.resume.subscribe(() => {
-      this.cardsMenu = new Array();
-      this.cards = new Array();
-      this.showLoading();
-      this.getCardsHome();
+      let currentPage = this.navCtrl.getActive();
+      if (currentPage.name === "HomePage") {
+        this.cardsMenu = new Array();
+        this.cards = new Array();
+        this.showLoading();
+        this.getCardsHome();
+      }
     });
 
     // Habilito de nuevo el menú cuando ya ha pasado el login
