@@ -40,14 +40,14 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que almacena el archivo PDF en el sistema,
-	*	y a continuación abre el visor para verlo.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que almacena el archivo PDF en el sistema,
+   *	y a continuación abre el visor para verlo.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   openPdf(src) {
     if (src == "") {
@@ -78,13 +78,13 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que convierte a Blob una cadena en Base64
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que convierte a Blob una cadena en Base64
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   b64toBlob(b64Data, contentType, sliceSize = 512) {
     contentType = contentType || "";
@@ -108,14 +108,14 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que obtiene todos los documentos de la
-	*	carpeta del paciente y los documentos firmados electronicamente.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene todos los documentos de la
+   *	carpeta del paciente y los documentos firmados electronicamente.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getDocFirmados() {
     this.restProvider
@@ -133,6 +133,10 @@ export class DocFirmadosPage {
           );
           this.navCtrl.setRoot(LoginPage);
         } else {
+          if (data["message"] === "Http failure response for (unknown url): 0 Unknown Error") {
+            data["message"] =
+              "Se ha producido un error de conexión. Por favor, disculpa las molestias e inténtalo de nuevo más tarde.";
+          }
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),
             "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
@@ -146,14 +150,14 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -164,15 +168,15 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
@@ -184,15 +188,15 @@ export class DocFirmadosPage {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,

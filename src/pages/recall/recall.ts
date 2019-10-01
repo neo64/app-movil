@@ -168,6 +168,10 @@ export class RecallPage {
           );
           this.events.publish("user:Unauthorized");
         } else {
+          if (data["message"] === "Http failure response for (unknown url): 0 Unknown Error") {
+            data["message"] =
+              "Se ha producido un error de conexión. Por favor, disculpa las molestias e inténtalo de nuevo más tarde.";
+          }
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),
             "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
@@ -207,6 +211,10 @@ export class RecallPage {
           );
           this.navCtrl.setRoot(LoginPage);
         } else {
+          if (data["message"] === "Http failure response for (unknown url): 0 Unknown Error") {
+            data["message"] =
+              "Se ha producido un error de conexión. Por favor, disculpa las molestias e inténtalo de nuevo más tarde.";
+          }
           this.showError(
             this.translate.instant("GENERICAS.ATENCION"),
             "<p>" + data["message"] + "<br/><br/>[Code: " + data["code"] + "]</p>"
