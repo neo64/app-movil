@@ -13,6 +13,7 @@ import {
 import { RestProvider } from "../../providers/rest/rest";
 
 import { LoginErrorPinPage } from "../../pages/login-error-pin/login-error-pin";
+import { LoginPage } from "../../pages/login/login";
 import { LoginYaRegistradoPage } from "../../pages/login-ya-registrado/login-ya-registrado";
 import { LoginReenviarPage } from "../../pages/login-reenviar/login-reenviar";
 
@@ -135,6 +136,7 @@ export class LoginRecibirPinPage {
     this.showLoading();
 
     this.restProvider.sendPIN(dni).then(d => {
+      console.log(d);
       if (typeof d != "undefined" && d["status"] == 1) {
         this.data = d["data"];
         this.loading.dismiss();
@@ -155,6 +157,16 @@ export class LoginRecibirPinPage {
           this.navCtrl.remove(startIndex);
         });
         this.loading.dismiss();
+      } else if (typeof d != "undefined" && d["status"] == 4) {
+        this.navCtrl.push(LoginPage).then(() => {
+          const startIndex = this.navCtrl.getActive().index - 1;
+          this.navCtrl.remove(startIndex);
+        });
+        this.showError(
+          this.translate.instant("GENERICAS.ERROR") + d["code"],
+          this.translate.instant("LOGIN_RECIBIR_PIN.ERROR_PIN")
+        );
+        this.loading.dismiss();
       } else {
         if (typeof d["code"] != "undefined")
           this.showError(
@@ -171,14 +183,14 @@ export class LoginRecibirPinPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(dismiss = false) {
     this.loading = this.loadingCtrl.create({
@@ -189,15 +201,15 @@ export class LoginRecibirPinPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

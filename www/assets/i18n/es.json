@@ -2,7 +2,7 @@
   "GENERICAS": {
     "ATENCION": "¡Atención!",
     "ERROR_SIN_SESION": "Se ha perdido la sesión. Por favor, vuelve a iniciar.",
-    "ERROR": "ERROR ",
+    "ERROR": "Error ",
     "CARGANDO_INFORMACION": "Cargando información...",
     "ACCESO_DENEGADO": "Acceso denegado"
   },
@@ -124,7 +124,7 @@
     "TITLE": "Bienvenido a",
     "TERMINOS": "Términos de servicio",
     "PAGINA_NO_DISPONIBLE": "La página no está disponible.",
-    "ACCESO_DENEGADO": "Acceso denegado"
+    "ACCESO_DENEGADO": "No hemos podido validar tus datos. Por favor, comprueba que has escrito correctamente tu usuario y contraseña.<br><br> Si aún así no puedes acceder, ponte en contacto con nosotros en el 91 768 18 12.<br><br> Disculpa las molestias,"
   },
   "LOGIN_ERROR_PIN": {
     "TITLE": "Error al validar",
@@ -141,7 +141,8 @@
     "REGISTRATE": "Regístrate",
     "TITULO": "Inicia sesión",
     "SUBTITULO": "en tu cuenta",
-    "ACCESO_DENEGADO": "Acceso denegado"
+    "ERROR_CONEXION": "Ha ocurrido un error de conexión, por favor inténtalo más tarde.",
+    "ACCESO_DENEGADO": "No hemos podido validar tus datos. Por favor, comprueba que has escrito correctamente tu usuario y contraseña.<br><br> Si aún así no puedes acceder, ponte en contacto con nosotros en el 91 768 18 12.<br><br> Disculpa las molestias,"
   },
   "LOGIN_OLVIDO": {
     "TITLE": "Recuperar contraseña",
@@ -154,14 +155,15 @@
   },
   "LOGIN_RECIBIR_PIN": {
     "TITLE": "Introduce el PIN",
-    "INTRODUCE_PIN": "Introduce el pin de 6 dígitos que te hemos enviado por",
+    "INTRODUCE_PIN": "Introduce el pin de 6 dígitos que te hemos enviado ",
     "PIN": "PIN",
     "6_DIG": "Nº de 6 dígitos",
     "NO_RECIBIDO": "No lo he recibido.",
     "REENVIAR_PIN": "Reenviar PIN",
     "TITULO": "Introduce el PIN",
     "SUBTITULO": "que te acabamos de enviar",
-    "ERROR_CODIGO": "El código introducido es incorrecto"
+    "ERROR_CODIGO": "El código introducido es incorrecto",
+    "ERROR_PIN": "Por motivos de seguridad, nuestro sistema puede enviar un máximo de tres PIN cada 24 horas.<br><br> Dado que se ha superado el número de intentos, ahora mismo no podemos enviarte otro código. Por favor, ponte en contacto con nosotros en el 91 768 18 12 o inténtalo de nuevo en 24 horas. <br><br>Disculpa las molestias."
   },
   "LOGIN_REENVIAR": {
     "TITLE": "Reenviar PIN",

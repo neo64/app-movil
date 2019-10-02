@@ -79,6 +79,7 @@ export class LoginRegistroPage {
 
     this.showLoading();
     this.restProvider.checkDNI(dni).then(data => {
+      console.log(data);
       if (typeof data != "undefined" && data["status"] == 1) {
         this.app.getRootNav().push(LoginRecibirPinPage, { dni: dni });
         this.loading.dismiss();
@@ -92,26 +93,26 @@ export class LoginRegistroPage {
         if (typeof data["code"] != "undefined")
           this.showError(
             this.translate.instant("GENERICAS.ERROR") + data["code"],
-            this.translate.instant("LOGIN_INPUT.ACCESO_DENEGADO")
+            this.translate.instant("LOGIN_INPUT.ERROR_CONEXION")
           );
         else
           this.showError(
             this.translate.instant("GENERICAS.ERROR"),
-            this.translate.instant("LOGIN_INPUT.ACCESO_DENEGADO")
+            this.translate.instant("LOGIN_INPUT.ERROR_CONEXION")
           );
       }
     });
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -122,15 +123,15 @@ export class LoginRegistroPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
