@@ -61,13 +61,13 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que añade al calendario una cita.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que añade al calendario una cita.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   addEvent(timestampINI, timestampFIN) {
     this.showLoading(this.translate.instant("RECALL.ANADIR_CALENDARIO"));
 
@@ -79,7 +79,7 @@ export class RecallPage {
     let options = {
       calendarId: 1,
       calendarName: "Clínica Ferrus & Bratos",
-      url: "http://clinicaferrusbratos.com",
+      url: "https://clinicaferrusbratos.com",
       firstReminderMinutes: 15
     };
 
@@ -96,13 +96,13 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que muestra un pop-up para gestionar la cita.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra un pop-up para gestionar la cita.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
   presentPopover(myEvent, fecha, hora) {
     let popover = this.popoverCtrl.create(PopoverPage, { fecha: fecha, hora: hora });
     popover.present({
@@ -111,14 +111,14 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que muestra una alerta para confirmar o
-	*	anular la acción requerida.
-	*
-	* 	@param String Accion de gestión de la cita (Anulada, Cambio o Confirmada)
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta para confirmar o
+   *	anular la acción requerida.
+   *
+   * 	@param String Accion de gestión de la cita (Anulada, Cambio o Confirmada)
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentConfirm(action, fechaDecimal, horaDecimal) {
     let alert = this.alertCtrl.create({
       title: this.translate.instant("POPOVER.CONFIRMACION_REQUERIDA"),
@@ -141,14 +141,14 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que muestra gestiona la cita haciendo
-	*	uso de la API del sistema
-	*
-	* 	@param String Tipo de gestión de la cita (Anulada, Cambio o Confirmada)
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra gestiona la cita haciendo
+   *	uso de la API del sistema
+   *
+   * 	@param String Tipo de gestión de la cita (Anulada, Cambio o Confirmada)
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   gestionarCita(tipo, fechaDecimal, horaDecimal) {
     var textoAlert = "";
 
@@ -187,14 +187,14 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que obtiene las higienes y recall
-	*	del paciente
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene las higienes y recall
+   *	del paciente
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getRecall() {
     this.restProvider
@@ -236,14 +236,14 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading(txt = "Cargando información...") {
     this.loading = this.loadingCtrl.create({
@@ -254,15 +254,15 @@ export class RecallPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

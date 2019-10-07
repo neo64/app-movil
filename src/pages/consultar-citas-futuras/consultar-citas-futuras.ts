@@ -270,7 +270,7 @@ export class ConsultarCitasFuturasPage {
 
     let options = {
       calendarId: 1,
-      url: "http://clinicaferrusbratos.com",
+      url: "https://clinicaferrusbratos.com",
       firstReminderMinutes: 15
     };
 
