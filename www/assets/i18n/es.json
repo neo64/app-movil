@@ -4,7 +4,8 @@
     "ERROR_SIN_SESION": "Se ha perdido la sesión. Por favor, vuelve a iniciar.",
     "ERROR": "Error ",
     "CARGANDO_INFORMACION": "Cargando información...",
-    "ACCESO_DENEGADO": "Acceso denegado"
+    "ACCESO_DENEGADO": "Acceso denegado",
+    "EXCESO_PETICIONES": "Has realizado muchas peticiones en poco tiempo, y has sido bloqueado temporalmente por motivos de seguridad"
   },
   "ACCESO_RESULTADOS": {
     "TITLE": "Pruebas diagnósticas",

@@ -151,9 +151,9 @@ export class MyApp {
       this.statusBar.backgroundColorByHexString("#81a8d9");
       this.statusBar.show();
       //Cuando se publique el evento user:logged la app carga los menus
-      this.events.subscribe("user:logged", () => {
-        this.getDataMenu();
-      });
+      //this.events.subscribe("user:logged", () => {
+      this.getDataMenu();
+      //});
 
       //Notifications
       if (this.platform.is("cordova")) {
@@ -169,6 +169,7 @@ export class MyApp {
         this.requestPermission();
 
         this.fcm.onNotification().subscribe(data => {
+          this.getDataMenu();
           //Entra cuando el usuario hace tap en la notificacion
           if (data.wasTapped) {
             setTimeout(() => {

@@ -10,7 +10,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class RestProvider {
 
-	apiUrl = 'http://cfb2.ddns.net:4232/';
+	apiUrl = 'https://app.clinicaferrusbratos.com:4232/';
 	
 	constructor(public http: HttpClient) {
 

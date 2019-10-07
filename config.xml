@@ -4,7 +4,7 @@
     <description>Aplicación móvil oficial de Ferrus y Bratos</description>
     <author email="jesus@clinicaferrusbratos.com" href="http://clinicaferrusbratos.com">Clinica dental Ferrus y Bratos</author>
     <content src="index.html" />
-    <access origin="http://cfb2.ddns.net:4232" />
+    <access origin="https://app.clinicaferrusbratos.com:4232" />
     <access origin="https://play.googleapis.com" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -13,7 +13,7 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
-    <allow-navigation href="http://cfb2.ddns.net:4232" />
+    <allow-navigation href="https://app.clinicaferrusbratos.com:4232" />
     <allow-navigation href="https://play.googleapis.com" />
     <allow-navigation href="*" />
     <preference name="ScrollEnabled" value="false" />

@@ -96,6 +96,13 @@ export class PopoverPage {
             this.translate.instant("GENERICAS.ERROR_SIN_SESION")
           );
           this.navCtrl.setRoot(LoginPage);
+          //Bloqueado por muchas peticiones a la api
+        } else if (data.status == 429) {
+          this.showError(
+            this.translate.instant("GENERICAS.ATENCION"),
+            this.translate.instant("GENERICAS.EXCESO_PETICIONES")
+          );
+          this.navCtrl.setRoot(LoginPage);
         } else {
           if (data["message"] === "Http failure response for (unknown url): 0 Unknown Error") {
             data["message"] =
