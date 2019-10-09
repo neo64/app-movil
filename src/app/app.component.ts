@@ -150,10 +150,11 @@ export class MyApp {
       this.statusBar.overlaysWebView(false);
       this.statusBar.backgroundColorByHexString("#81a8d9");
       this.statusBar.show();
-      //Cuando se publique el evento user:logged la app carga los menus
-      //this.events.subscribe("user:logged", () => {
       this.getDataMenu();
-      //});
+      //Cuando se publique el evento user:logged la app carga los menus
+      this.events.subscribe("user:loginMenu", () => {
+        this.getDataMenu();
+      });
 
       //Notifications
       if (this.platform.is("cordova")) {

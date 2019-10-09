@@ -75,6 +75,7 @@ export class HomePage {
     private statusBar: StatusBar
   ) {
     this.events.publish("user:logged");
+    this.events.publish("user:loginMenu");
 
     //Detecto cuando la app vuelve del background y actualizo las cards para que los globos de notificaciones se actualicen
     this.platform.resume.subscribe(() => {

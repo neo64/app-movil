@@ -160,7 +160,6 @@ export class LoginPage {
         window.localStorage.setItem("expires", data["expires"]);
 
         this.events.publish("user:logged");
-
         //Notifications
         if (this.platform.is("cordova")) {
           this.fcm.getToken().then(token => {
