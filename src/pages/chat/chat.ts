@@ -47,12 +47,15 @@ export class ChatPage {
   menuData = ""; // Foto de perfil del usuario.
   mostrarError = false; // Controla si estamos dentro del horario de la clinica
   mensajeError = "";
-  numeroMensajesCargados = 15; //Controla el ultimo chat cargador para la paginación de chats
+  numeroMensajesCargados = 15; //controla el numero de mensajes de firebase cargados
   numeroMensajes = 0;
   todosMensajesCargados = false; //Boolean para detectar si se han cargado todos los mensajes del paciente de firebase o si todavia no
   messageContainer: HTMLElement;
   locked = false;
   lastCall = false;
+  cargarMensajesAntiguos = false; //Boolean para detectar si el usuario esta haciendo scroll hacia arriba y quiere cargar mensajes antiguos
+  alturaInicialChat = 0;
+  alturaFinalChat = 0;
 
   constructor(
     private badge: Badge,
@@ -121,41 +124,82 @@ export class ChatPage {
       }
     });
 
-    this.restProvider
-      .resetNotificationsChat()
-      .then(data => {
-        if (typeof data != "undefined" && data["status"] == 1) {
-          this.badge.set(parseInt(data["data"]));
-        } else if (data.status == 401) {
-          this.showError(
-            translate.instant("CHAT.ATENCION"),
-            translate.instant("CHAT.ERROR_SIN_SESION")
-          );
-          this.navCtrl.setRoot(LoginPage);
-        } else {
-          //this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
-        }
-      })
-      .catch(e => {
-        //this.loading.dismiss();
-        console.log(e);
-      });
+    this.cargoMensajesFirebase();
+  }
+
+  /**
+   * Funcion que carga los mensajes de firebase
+   */
+  cargoMensajesFirebase() {
+    //Si hay que cargar mensajes antiguos controlo la altura actual del chat
+    //PAra una vez que carguen los nuevos mensajes devolver el punto de scroll al inicial
+    if (this.cargarMensajesAntiguos) {
+      this.alturaInicialChat = this.pageChat.nativeElement.clientHeight;
+    }
 
     firebase
       .database()
       .ref(this.nickname)
       .limitToLast(this.numeroMensajesCargados)
       .on("value", resp => {
-        //Seteo el numero de mensajes devueltos
-        this.numeroMensajes = resp.numChildren();
-        this.chats = [];
-        this.chats = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
+        //Si la carga no es de mensajes antiguos
+        if (!this.cargarMensajesAntiguos) {
+          //Añado al array de chats los nuevos mensajes
+          this.chats = [];
+          this.chats = snapshotToArray(
+            resp,
+            this.nickname,
+            this.vb,
+            this.firstOpen,
+            this.offStatus
+          );
+        } else {
+          //Si la carga es de mensajes antiguos
+          if (resp.numChildren() > this.numeroMensajes) {
+            //Seteo el numero de mensajes devueltos
+            this.numeroMensajes = resp.numChildren();
+            /*let temp = snapshotToArray(
+              resp,
+              this.nickname,
+              this.vb,
+              this.firstOpen,
+              this.offStatus
+            );
+            temp.splice(this.numeroMensajesCargados - 15, 15);
+
+            //Le añado los nuevos mensajes al array de chats
+            this.chats.unshift(...temp);*/
+            this.chats = [];
+            this.chats = snapshotToArray(
+              resp,
+              this.nickname,
+              this.vb,
+              this.firstOpen,
+              this.offStatus
+            );
+          } else {
+            this.todosMensajesCargados = true;
+          }
+        }
 
         setTimeout(() => {
           this.firstOpen = false;
+
+          //Si la carga es de mensajes antiguos
+          if (this.cargarMensajesAntiguos) {
+            this.alturaFinalChat = this.pageChat.nativeElement.clientHeight;
+            let height = this.alturaFinalChat - this.alturaInicialChat;
+            //Hago el scroll al punto inicial
+            this.content.scrollTo(0, height, 0);
+            this.cargarMensajesAntiguos = false;
+          } else {
+            //Si es un mensaje unico hago el scroll al final del chat
+            this.cargarMensajesAntiguos = false;
+            this.content.scrollToBottom(0);
+          }
+
           if (this.offStatus === false) {
             if (this.content != null) {
-              this.content.scrollToBottom(0);
               if (this.loadingPresented) {
                 this.loadingPresented = false;
                 this.loading.dismiss();
@@ -177,56 +221,24 @@ export class ChatPage {
       if (evt.scrollTop < 20 && !this.todosMensajesCargados) {
         if (this.locked) return;
         this.locked = true;
-        //this.showLoading();
-        this.cargarMasMensajes();
+        this.showLoading();
+        //Aumento el numero de mensajes de firebase a mostrar en 15
+        this.numeroMensajesCargados += 15;
+        //Desconecto la sesión de firebase para que a partir de ahora cargue 15 mensajes mas
+        firebase
+          .database()
+          .ref(this.nickname)
+          .off();
+        //Activo el control de carga de mensajes antiguos
+        this.cargarMensajesAntiguos = true;
+        //llamo a la funcion de carga de mensajes de firebase
+        this.cargoMensajesFirebase();
+
         setTimeout(() => {
           this.locked = false;
         }, 1000);
       }
     }
-  }
-
-  /**
-   * Carga más mensajes en firebase
-   */
-  cargarMasMensajes() {
-    this.numeroMensajesCargados += 15;
-    const alturaInicialChat = this.pageChat.nativeElement.offsetHeight;
-
-    //Si ya se han cargado todos los mensajes no realizo más peticiones
-
-    firebase
-      .database()
-      .ref(this.nickname)
-      .limitToLast(this.numeroMensajesCargados)
-      .on("value", resp => {
-        //Si el numero de mensajes que devuelve firebase no es mayor que los que ya tenemos cargados no volvemos a llamar a firebase
-        if (resp.numChildren() > this.numeroMensajes) {
-          this.numeroMensajes = resp.numChildren();
-          //Creo un array temporal con la respuesta y elimino los chats ya cargados
-          let temp = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
-          temp.splice(this.numeroMensajesCargados - 15, 15);
-
-          //Le añado los nuevos mensajes al array de chats
-          this.chats.unshift(...temp);
-        } else {
-          this.todosMensajesCargados = true;
-        }
-        setTimeout(() => {
-          this.firstOpen = false;
-          if (this.offStatus === false) {
-            if (this.content != null) {
-              const alturaFinalChat = this.pageChat.nativeElement.offsetHeight;
-              let height = alturaFinalChat - alturaInicialChat;
-              this.content.scrollTo(0, height, 0);
-              if (this.loadingPresented) {
-                this.loadingPresented = false;
-                this.loading.dismiss();
-              }
-            }
-          }
-        });
-      });
   }
 
   /**
@@ -558,9 +570,6 @@ export class ChatPage {
    */
   ionViewDidEnter() {
     this.content.scrollToBottom(0);
-    //this.messageContainer = document.getElementById("page-chat");
-    //this.content.addEventListener("scroll", this.runOnScroll.bind(this));
-    console.log(this.messageContainer);
     firebase
       .database()
       .ref(this.nickname + "/ultimaConexion")
@@ -592,7 +601,27 @@ export class ChatPage {
       .database()
       .ref(this.nickname)
       .off();
+
     this.eventsCtrl.publish("chat:unload");
+    this.restProvider
+      .resetNotificationsChat()
+      .then(data => {
+        if (typeof data != "undefined" && data["status"] == 1) {
+          this.badge.set(parseInt(data["data"]));
+        } else if (data.status == 401) {
+          this.showError(
+            this.translate.instant("CHAT.ATENCION"),
+            this.translate.instant("CHAT.ERROR_SIN_SESION")
+          );
+          this.navCtrl.setRoot(LoginPage);
+        } else {
+          //this.showError("¡Atención!", "<p>" + data['message'] + "<br/><br/>[Code: " + data['code'] + "]</p>");
+        }
+      })
+      .catch(e => {
+        //this.loading.dismiss();
+        console.log(e);
+      });
   }
 
   /**

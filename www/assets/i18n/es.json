@@ -156,13 +156,13 @@
   },
   "LOGIN_RECIBIR_PIN": {
     "TITLE": "Introduce el PIN",
-    "INTRODUCE_PIN": "Introduce el pin de 6 dígitos que te hemos enviado ",
+    "INTRODUCE_PIN": "Introduce el último pin de 6 dígitos que hayas recibido: ",
     "PIN": "PIN",
     "6_DIG": "Nº de 6 dígitos",
     "NO_RECIBIDO": "No lo he recibido.",
     "REENVIAR_PIN": "Reenviar PIN",
     "TITULO": "Introduce el PIN",
-    "SUBTITULO": "que te acabamos de enviar",
+    "SUBTITULO": "que te hemos enviado",
     "ERROR_CODIGO": "El código introducido es incorrecto",
     "ERROR_PIN": "Por motivos de seguridad, nuestro sistema puede enviar un máximo de tres PIN cada 24 horas.<br><br> Dado que se ha superado el número de intentos, ahora mismo no podemos enviarte otro código. Por favor, ponte en contacto con nosotros en el 91 768 18 12 o inténtalo de nuevo en 24 horas. <br><br>Disculpa las molestias."
   },

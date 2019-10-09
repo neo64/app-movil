@@ -110,7 +110,7 @@ export class LoginRecibirPinPage {
       } else if (typeof d != "undefined" && d["status"] == 2) {
         if (!auto)
           this.showError(
-            this.translate.instant("GENERICAS.ERROR"),
+            this.translate.instant("GENERICAS.ERROR") + d["code"],
             this.translate.instant("LOGIN_RECIBIR_PIN.ERROR_CODIGO")
           );
       } else {
@@ -158,10 +158,12 @@ export class LoginRecibirPinPage {
         });
         this.loading.dismiss();
       } else if (typeof d != "undefined" && d["status"] == 4) {
-        this.navCtrl.push(LoginPage).then(() => {
+        //Si el nº de pins se ha superado
+        this.data = d["data"];
+        /*this.navCtrl.push(LoginPage).then(() => {
           const startIndex = this.navCtrl.getActive().index - 1;
           this.navCtrl.remove(startIndex);
-        });
+        });*/
         this.showError(
           this.translate.instant("GENERICAS.ERROR") + d["code"],
           this.translate.instant("LOGIN_RECIBIR_PIN.ERROR_PIN")

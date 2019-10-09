@@ -91,7 +91,7 @@ export class ChangePasswordPage {
     }
 
     if (this.data.pass3 != this.data.pass2) {
-      this.showError("ERROR", "La nuevas nuevas contraseñas deben ser iguales.");
+      this.showError("ERROR", "Las dos contraseñas deben ser iguales.");
       return;
     } else {
       this.restProvider
