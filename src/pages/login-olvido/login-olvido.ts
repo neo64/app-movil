@@ -12,6 +12,7 @@ import {
 import { RestProvider } from "../../providers/rest/rest";
 
 import { LoginRecibirPinPage } from "../../pages/login-recibir-pin/login-recibir-pin";
+import { LoginErrorPinPage } from "../../pages/login-error-pin/login-error-pin";
 import { TranslateService } from "@ngx-translate/core";
 
 @IonicPage()
@@ -57,6 +58,9 @@ export class LoginOlvidoPage {
       if (typeof data != "undefined" && (data["status"] == 1 || data["status"] == 3)) {
         this.navCtrl.push(LoginRecibirPinPage, { dni: dni });
         this.loading.dismiss();
+      } else if (typeof data != "undefined" && data["status"] == 2) {
+        this.navCtrl.push(LoginErrorPinPage);
+        this.loading.dismiss();
       } else {
         if (typeof data["code"] != "undefined")
           this.showError(
@@ -73,14 +77,14 @@ export class LoginOlvidoPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -91,15 +95,15 @@ export class LoginOlvidoPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({

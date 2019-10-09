@@ -8,12 +8,18 @@
     </ion-buttons>
   </ion-navbar>
 </ion-header>
-<ion-content padding class="bg">
+<ion-content (ionScroll)="scrolling($event)" padding class="bg">
   <div
+    #pageChat
     class="page-chat"
-    style="height: 100vh;display: flex; align-items: flex-end; flex-direction: column-reverse;"
+    style="display: flex; align-items: flex-end; flex-direction: column-reverse; position:relative;"
   >
-    <div class="message-wrap" style="width:100%; margin: -25rem 0;">
+    <div
+      id="messageContainer"
+      (ionScroll)="scrollEvent()"
+      class="message-wrap"
+      style="width:100%;overflow: auto;"
+    >
       <div
         class="message"
         *ngFor="let msg of chats"

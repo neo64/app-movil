@@ -33,6 +33,7 @@ import { Keyboard } from "@ionic-native/keyboard";
 export class ChatPage {
   @ViewChild(Content) content: Content;
   @ViewChild("chat_input") messageInput: ElementRef;
+  @ViewChild("pageChat") pageChat: any;
 
   data = { type: "", nickname: "", message: "" }; // Array con la información del mensaje
   chats = []; // Array con todos los mensajes
@@ -46,6 +47,12 @@ export class ChatPage {
   menuData = ""; // Foto de perfil del usuario.
   mostrarError = false; // Controla si estamos dentro del horario de la clinica
   mensajeError = "";
+  numeroMensajesCargados = 15; //Controla el ultimo chat cargador para la paginación de chats
+  numeroMensajes = 0;
+  todosMensajesCargados = false; //Boolean para detectar si se han cargado todos los mensajes del paciente de firebase o si todavia no
+  messageContainer: HTMLElement;
+  locked = false;
+  lastCall = false;
 
   constructor(
     private badge: Badge,
@@ -137,10 +144,13 @@ export class ChatPage {
     firebase
       .database()
       .ref(this.nickname)
-      .limitToLast(15)
+      .limitToLast(this.numeroMensajesCargados)
       .on("value", resp => {
+        //Seteo el numero de mensajes devueltos
+        this.numeroMensajes = resp.numChildren();
         this.chats = [];
         this.chats = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
+
         setTimeout(() => {
           this.firstOpen = false;
           if (this.offStatus === false) {
@@ -155,6 +165,70 @@ export class ChatPage {
         });
       });
   }
+  /**
+   * Detecta el nivel de scroll del chat y carga los mensajes si se ha llegado arriba del chat
+   * @param evt
+   */
+
+  scrolling(evt) {
+    //Si llegamos arriba del scroll y no hemos cargado todos los mensajes
+    // Volvemos a llamar a firebase para cargar mas mensajes
+    if (typeof evt.scrollTop !== "undefined") {
+      if (evt.scrollTop < 20 && !this.todosMensajesCargados) {
+        if (this.locked) return;
+        this.locked = true;
+        //this.showLoading();
+        this.cargarMasMensajes();
+        setTimeout(() => {
+          this.locked = false;
+        }, 1000);
+      }
+    }
+  }
+
+  /**
+   * Carga más mensajes en firebase
+   */
+  cargarMasMensajes() {
+    this.numeroMensajesCargados += 15;
+    const alturaInicialChat = this.pageChat.nativeElement.offsetHeight;
+
+    //Si ya se han cargado todos los mensajes no realizo más peticiones
+
+    firebase
+      .database()
+      .ref(this.nickname)
+      .limitToLast(this.numeroMensajesCargados)
+      .on("value", resp => {
+        //Si el numero de mensajes que devuelve firebase no es mayor que los que ya tenemos cargados no volvemos a llamar a firebase
+        if (resp.numChildren() > this.numeroMensajes) {
+          this.numeroMensajes = resp.numChildren();
+          //Creo un array temporal con la respuesta y elimino los chats ya cargados
+          let temp = snapshotToArray(resp, this.nickname, this.vb, this.firstOpen, this.offStatus);
+          temp.splice(this.numeroMensajesCargados - 15, 15);
+
+          //Le añado los nuevos mensajes al array de chats
+          this.chats.unshift(...temp);
+        } else {
+          this.todosMensajesCargados = true;
+        }
+        setTimeout(() => {
+          this.firstOpen = false;
+          if (this.offStatus === false) {
+            if (this.content != null) {
+              const alturaFinalChat = this.pageChat.nativeElement.offsetHeight;
+              let height = alturaFinalChat - alturaInicialChat;
+              this.content.scrollTo(0, height, 0);
+              if (this.loadingPresented) {
+                this.loadingPresented = false;
+                this.loading.dismiss();
+              }
+            }
+          }
+        });
+      });
+  }
+
   /**
    * 	Función que abre la aplicación de llamadas para
    *	efectuar una llamada a la clínica
@@ -483,7 +557,10 @@ export class ChatPage {
    *
    */
   ionViewDidEnter() {
-    //console.log("ENTRA EN CHAT");
+    this.content.scrollToBottom(0);
+    //this.messageContainer = document.getElementById("page-chat");
+    //this.content.addEventListener("scroll", this.runOnScroll.bind(this));
+    console.log(this.messageContainer);
     firebase
       .database()
       .ref(this.nickname + "/ultimaConexion")
