@@ -91,13 +91,13 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que crea un PDF a partir de un HTML y lo muestra.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que crea un PDF a partir de un HTML y lo muestra.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   createAndOpenPDF(html, numDoc) {
     document.addEventListener("deviceready", () => {
@@ -115,14 +115,14 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que obtiene las tarjetas para la página
-	*	de mis Documentos Contables
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que obtiene las tarjetas para la página
+   *	de mis Documentos Contables
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   getDocumentosContables() {
     this.restProvider
@@ -170,13 +170,13 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que convierte a Blob una cadena en Base64
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que convierte a Blob una cadena en Base64
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   b64toBlob(b64Data, contentType, sliceSize = 512) {
     contentType = contentType || "";
@@ -200,14 +200,14 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que almacena el archivo PDF en el sistema,
-	*	y a continuación abre el visor para verlo.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que almacena el archivo PDF en el sistema,
+   *	y a continuación abre el visor para verlo.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   openPdf(base64, numDoc) {
     if (base64 == "") {
@@ -215,7 +215,13 @@ export class DocumentosContablesPage {
     } else {
       this.showLoading();
       var blob = this.b64toBlob(base64, "application/pdf");
-      var name = window.localStorage.getItem("idPac") + "_Documento" + numDoc + ".pdf";
+      var name =
+        window.localStorage.getItem("idPac") +
+        "_Documento" +
+        numDoc +
+        "_" +
+        new Date().getTime() +
+        ".pdf";
       let directory = this.file.dataDirectory;
 
       // Guardo el fichero en la memoria del dispositivo
@@ -253,14 +259,14 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que muestra el ProgressBar cuando alguna acción
-	*	se está ejecutando en primer plano.
-	*
-	* 	@param None
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	* 	@return None
-	*/
+   * 	Función que muestra el ProgressBar cuando alguna acción
+   *	se está ejecutando en primer plano.
+   *
+   * 	@param None
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   * 	@return None
+   */
 
   showLoading() {
     this.loading = this.loadingCtrl.create({
@@ -271,15 +277,15 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que muestra una alerta con el titulo
-	*	y el texto pasado por parámetro.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra una alerta con el titulo
+   *	y el texto pasado por parámetro.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   showError(title, text) {
     this.loading.dismiss();
     let alert = this.alertCtrl.create({
@@ -291,15 +297,15 @@ export class DocumentosContablesPage {
   }
 
   /**
-	* 	Función que muestra un Toast con la información
-	*	referente a la acción del usuario.
-	*
-	* 	@param String Titulo de la alerta.
-	* 	@param String Texto de la alerta.
-	*
-	* 	@author Jesús Río <jesusriobarrilero@gmail.com>
-	*
-	*/
+   * 	Función que muestra un Toast con la información
+   *	referente a la acción del usuario.
+   *
+   * 	@param String Titulo de la alerta.
+   * 	@param String Texto de la alerta.
+   *
+   * 	@author Jesús Río <jesusriobarrilero@gmail.com>
+   *
+   */
   presentToast(txt) {
     let toast = this.toastCtrl.create({
       message: txt,
