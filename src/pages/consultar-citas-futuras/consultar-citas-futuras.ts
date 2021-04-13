@@ -266,7 +266,7 @@ export class ConsultarCitasFuturasPage {
     let dateINI = new Date(parseInt(timestampINI));
     let dateFIN = new Date(parseInt(timestampFIN));
     let titulo = "Cita en Clínica Dental Ferrus&Bratos";
-    let direccion = "C/ Caleruega 67 3ª Planta. 28033 Madrid";
+    let direccion = "C/ Caleruega 102 Planta Baja. 28033 Madrid";
 
     let options = {
       calendarId: 1,

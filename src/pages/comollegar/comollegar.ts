@@ -17,29 +17,29 @@ import { LaunchNavigator, LaunchNavigatorOptions } from '@ionic-native/launch-na
 })
 export class ComollegarPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private launchNavigator: LaunchNavigator) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private launchNavigator: LaunchNavigator) {
   }
 
   ionViewDidLoad() {
-  	//Capturo la página anterior
-  	var PagePrevious = this.navCtrl.last();
-  	//Abro la App de navegación del dispositivo
-  	this.navigate();
-  	//Retorno a la página anterior
-  	this.navCtrl.pop(PagePrevious);
+    //Capturo la página anterior
+    var PagePrevious = this.navCtrl.last();
+    //Abro la App de navegación del dispositivo
+    this.navigate();
+    //Retorno a la página anterior
+    this.navCtrl.pop(PagePrevious);
     console.log('ionViewDidLoad ComollegarPage');
   }
 
-navigate(){
+  navigate() {
     let options: LaunchNavigatorOptions = {
       start: "",
     };
 
-    this.launchNavigator.navigate("Caleruega 67, Madrid, ES")
-        .then(
-            success => console.log('Launched navigator'),
-            error => console.log('Error launching navigator: ' + error)
-    );
+    this.launchNavigator.navigate("Caleruega 102, Madrid, ES")
+      .then(
+        success => console.log('Launched navigator'),
+        error => console.log('Error launching navigator: ' + error)
+      );
   }
 
 
